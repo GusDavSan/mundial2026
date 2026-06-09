@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -363,17 +364,21 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
  
   <!-- PHASE: SF (Semis) -->
   <div class="phase-content" id="phase-sf">
-    <div class="ib"><strong>🏟 Semifinales:</strong> Los 4 finalistas. Los perdedores disputan el 3er y 4º puesto.</div>
+    <div class="ib"><strong>🏟 Semifinales:</strong> Introduce los resultados y pulsa <strong>"Actualizar 3º/4º"</strong> para ver los perdedores. Luego completa el partido de 3er puesto y pulsa "Ir a la Final".</div>
     <div class="ko-grid" id="sfGrid"></div>
-    <div style="margin-top:20px">
-      <div class="ch" style="border-radius:8px 8px 0 0;background:var(--s2);border:1px solid var(--border);border-bottom:none;padding:10px 16px;">
-        <span class="ct" style="color:var(--text2)">3er y 4º Puesto</span>
+    <div class="ab-between" style="padding:12px 0 4px">
+      <span></span>
+      <button class="btn bo" onclick="refreshThirdPlace()" style="border-color:var(--teal);color:var(--teal)">🔄 Actualizar 3º/4º Puesto</button>
+    </div>
+    <div style="margin-top:8px;background:var(--s1);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+      <div style="background:var(--s2);border-bottom:1px solid var(--border);padding:10px 16px;">
+        <span class="ct" style="color:var(--text2)">🥉 3er y 4º Puesto</span>
       </div>
-      <div class="ko-grid" id="p3Grid" style="border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;padding:12px;background:var(--s1);"></div>
+      <div style="padding:12px;" id="p3Grid"></div>
     </div>
     <div class="ab-between">
       <button class="btn bo bsm" onclick="switchPhase('qf')">← Volver a cuartos</button>
-      <button class="btn bg" onclick="saveKOPhase('sf')">💾 Guardar y continuar →</button>
+      <button class="btn bg" onclick="saveAndGoToFinal()">💾 Guardar y continuar a Final →</button>
     </div>
   </div>
  
@@ -849,23 +854,109 @@ function resolveSlot(slot, groupScores, thirds){
   return {name:slot,flag:'🏳️'};
 }
  
-function getWinner(ko,matchId){
-  const m=ko[matchId];
-  if(!m||m.s1===''||m.s2==='') return {name:`Ganador ${matchId}`,flag:'⚡'};
-  const s1=parseInt(m.s1),s2=parseInt(m.s2);
-  if(s1>s2) return m.t1||{name:'Equipo 1',flag:'🏳️'};
-  if(s2>s1) return m.t2||{name:'Equipo 2',flag:'🏳️'};
-  // Tie: use penalty winner if set, else use t1 as placeholder
-  return m.penWin==='t1'?(m.t1||{name:'Equipo 1',flag:'🏳️'}):(m.t2||{name:'Equipo 2',flag:'🏳️'});
+function getWinner(ko, matchId){
+  const m = ko[matchId];
+  if(!m) return {name:`Ganador ${matchId}`, flag:'⚡'};
+  // Must have both scores AND at least one team stored
+  if(m.s1===''||m.s2===''||m.s1===undefined||m.s2===undefined) return {name:`Ganador ${matchId}`, flag:'⚡'};
+  const s1=parseInt(m.s1), s2=parseInt(m.s2);
+  if(isNaN(s1)||isNaN(s2)) return {name:`Ganador ${matchId}`, flag:'⚡'};
+  const t1 = m.t1||{name:'Equipo 1', flag:'🏳️'};
+  const t2 = m.t2||{name:'Equipo 2', flag:'🏳️'};
+  if(s1>s2) return t1;
+  if(s2>s1) return t2;
+  // Draw — use penWin
+  if(m.penWin==='t1') return t1;
+  if(m.penWin==='t2') return t2;
+  return {name:`Ganador ${matchId}`, flag:'⚡'}; // tie, no pen selected yet
 }
  
-function getLoser(ko,matchId){
-  const m=ko[matchId];
-  if(!m||m.s1===''||m.s2==='') return {name:`Perdedor ${matchId}`,flag:'⚡'};
-  const s1=parseInt(m.s1),s2=parseInt(m.s2);
-  if(s1>s2) return m.t2||{name:'Equipo 2',flag:'🏳️'};
-  if(s2>s1) return m.t1||{name:'Equipo 1',flag:'🏳️'};
-  return m.penWin==='t1'?(m.t2||{name:'Equipo 2',flag:'🏳️'}):(m.t1||{name:'Equipo 1',flag:'🏳️'});
+function getLoser(ko, matchId){
+  const m = ko[matchId];
+  if(!m) return {name:`Perdedor ${matchId}`, flag:'⚡'};
+  if(m.s1===''||m.s2===''||m.s1===undefined||m.s2===undefined) return {name:`Perdedor ${matchId}`, flag:'⚡'};
+  const s1=parseInt(m.s1), s2=parseInt(m.s2);
+  if(isNaN(s1)||isNaN(s2)) return {name:`Perdedor ${matchId}`, flag:'⚡'};
+  const t1 = m.t1||{name:'Equipo 1', flag:'🏳️'};
+  const t2 = m.t2||{name:'Equipo 2', flag:'🏳️'};
+  if(s1>s2) return t2;
+  if(s2>s1) return t1;
+  // Draw — loser is the one who lost on pens
+  if(m.penWin==='t1') return t2;
+  if(m.penWin==='t2') return t1;
+  return {name:`Perdedor ${matchId}`, flag:'⚡'};
+}
+ 
+// Save semis scores+teams to storage, then rebuild 3rd place from fresh data
+function refreshThirdPlace(){
+  // 1. Save current semifinal inputs to storage
+  const ko = ld(K.ko, {});
+  document.querySelectorAll('#sfGrid [data-kid]').forEach(inp=>{
+    const parts = inp.dataset.kid.split('_');
+    const field = parts[parts.length-1];
+    const matchId = parts.slice(0,-1).join('_');
+    if(!ko[matchId]) ko[matchId]={};
+    ko[matchId][field] = inp.value;
+  });
+  // 2. Capture team refs from sfGrid
+  const sfEl = document.getElementById('sfGrid');
+  if(sfEl) sfEl.querySelectorAll('.ko-match').forEach(card=>{
+    const s1inp = card.querySelector('[data-kid$="_s1"]');
+    if(!s1inp) return;
+    const matchId = s1inp.dataset.kid.replace('_s1','');
+    if(!ko[matchId]) ko[matchId]={};
+    const teams = card.querySelectorAll('.ko-team-info');
+    if(teams[0]){ const nEl=teams[0].querySelector('[data-name]'),fEl=teams[0].querySelector('[data-flag]'); if(nEl) ko[matchId].t1={name:nEl.dataset.name,flag:fEl?.dataset.flag||'🏳️'}; }
+    if(teams[1]){ const nEl=teams[1].querySelector('[data-name]'),fEl=teams[1].querySelector('[data-flag]'); if(nEl) ko[matchId].t2={name:nEl.dataset.name,flag:fEl?.dataset.flag||'🏳️'}; }
+  });
+  sv(K.ko, ko);
+  // 3. Rebuild 3rd place with fresh data
+  const freshKo = ld(K.ko, {});
+  const l1 = getLoser(freshKo, 'sf_1');
+  const l2 = getLoser(freshKo, 'sf_2');
+  const p3saved = freshKo['p3']||{};
+  const p3El = document.getElementById('p3Grid');
+  if(p3El) p3El.innerHTML = renderKOMatch('p3','3er y 4º Puesto',l1,l2,p3saved.s1??'',p3saved.s2??'',p3saved.penWin||null);
+  toast('✓ 3er/4º puesto actualizado','ok');
+}
+ 
+function saveAndGoToFinal(){
+  // 1. Save all sf + p3 inputs
+  const ko = ld(K.ko, {});
+  document.querySelectorAll('#phase-sf [data-kid]').forEach(inp=>{
+    const parts = inp.dataset.kid.split('_');
+    const field = parts[parts.length-1];
+    const matchId = parts.slice(0,-1).join('_');
+    if(!ko[matchId]) ko[matchId]={};
+    ko[matchId][field] = inp.value;
+  });
+  // Capture team refs from both sfGrid and p3Grid
+  ['sfGrid','p3Grid'].forEach(gid=>{
+    const el = document.getElementById(gid);
+    if(!el) return;
+    el.querySelectorAll('.ko-match').forEach(card=>{
+      const s1inp = card.querySelector('[data-kid$="_s1"]');
+      if(!s1inp) return;
+      const matchId = s1inp.dataset.kid.replace('_s1','');
+      if(!ko[matchId]) ko[matchId]={};
+      const teams = card.querySelectorAll('.ko-team-info');
+      if(teams[0]){ const nEl=teams[0].querySelector('[data-name]'),fEl=teams[0].querySelector('[data-flag]'); if(nEl) ko[matchId].t1={name:nEl.dataset.name,flag:fEl?.dataset.flag||'🏳️'}; }
+      if(teams[1]){ const nEl=teams[1].querySelector('[data-name]'),fEl=teams[1].querySelector('[data-flag]'); if(nEl) ko[matchId].t2={name:nEl.dataset.name,flag:fEl?.dataset.flag||'🏳️'}; }
+    });
+  });
+  sv(K.ko, ko);
+  // 2. Build final from fresh storage
+  const freshKo = ld(K.ko, {});
+  const f1 = getWinner(freshKo, 'sf_1');
+  const f2 = getWinner(freshKo, 'sf_2');
+  const fsaved = freshKo['final']||{};
+  const finalEl = document.getElementById('finalMatchWrap');
+  if(finalEl) finalEl.innerHTML = renderKOMatch('final','Gran Final 🏆',f1,f2,fsaved.s1??'',fsaved.s2??'',fsaved.penWin||null);
+  updateChampion();
+  unlockPhase('final');
+  document.getElementById('pBtn-sf')?.classList.add('done');
+  switchPhase('final');
+  toast('✓ Guardado — Final desbloqueada','ok');
 }
  
 function renderKOMatch(id, label, t1, t2, s1, s2, penWin){
@@ -958,8 +1049,25 @@ function setPenWin(matchId, winner, btn){
 }
  
 function saveKOPhase(phase){
+  // sf and final now have their own dedicated functions
+  if(phase==='sf'){ saveAndGoToFinal(); return; }
+  if(phase==='final'){
+    const ko=ld(K.ko,{});
+    document.querySelectorAll('#phase-final [data-kid]').forEach(inp=>{
+      const parts=inp.dataset.kid.split('_');
+      const field=parts[parts.length-1];
+      const matchId=parts.slice(0,-1).join('_');
+      if(!ko[matchId]) ko[matchId]={};
+      ko[matchId][field]=inp.value;
+    });
+    captureTeamRefs(ko);
+    sv(K.ko,ko);
+    updateChampion();
+    document.getElementById('pBtn-final')?.classList.add('done');
+    toast('🏆 ¡Quiniela completa guardada!','ok');
+    return;
+  }
   const ko=ld(K.ko,{});
-  // 1. Collect scores from all visible inputs
   document.querySelectorAll('[data-kid]').forEach(inp=>{
     const parts=inp.dataset.kid.split('_');
     const field=parts[parts.length-1];
@@ -967,35 +1075,22 @@ function saveKOPhase(phase){
     if(!ko[matchId]) ko[matchId]={};
     ko[matchId][field]=inp.value;
   });
-  // 2. Capture team refs (using data-name/data-flag)
-  captureTeamRefs(ko, phase);
+  captureTeamRefs(ko);
   sv(K.ko,ko);
- 
-  const nextMap={r32:'r16',r16:'qf',qf:'sf',sf:'final',final:null};
+  const nextMap={r32:'r16',r16:'qf',qf:'sf'};
   const next=nextMap[phase];
- 
   if(next){
-    // Build the next phase
     buildKOPhase(next);
     unlockPhase(next);
     document.getElementById('pBtn-'+phase)?.classList.add('done');
     switchPhase(next);
-    // Special: after sf, also build 3rd place match inside sf phase
-    if(phase==='qf'){
-      // sf phase already has p3Grid built inside buildKOPhase('sf')
-    }
-    toast(`✓ Guardado — ${KO_PHASES[next]?.label||'Gran Final'} desbloqueada`,'ok');
-  } else {
-    // Final saved
-    updateChampion();
-    document.getElementById('pBtn-final')?.classList.add('done');
-    toast('🏆 ¡Quiniela completa guardada!','ok');
+    toast(`✓ Guardado — ${KO_PHASES[next]?.label||'siguiente ronda'} desbloqueada`,'ok');
   }
 }
  
-function captureTeamRefs(ko, phase){
+function captureTeamRefs(ko){
   const grids={r32:'r32Grid',r16:'r16Grid',qf:'qfGrid',sf:'sfGrid',final:'finalMatchWrap',p3:'p3Grid'};
-  Object.entries(grids).forEach(([p,gid])=>{
+  Object.entries(grids).forEach(([,gid])=>{
     const el=document.getElementById(gid);
     if(!el) return;
     el.querySelectorAll('.ko-match').forEach(card=>{
@@ -1004,18 +1099,17 @@ function captureTeamRefs(ko, phase){
       const matchId=s1inp.dataset.kid.replace('_s1','');
       if(!ko[matchId]) ko[matchId]={};
       const teams=card.querySelectorAll('.ko-team-info');
-      // Use data-name/data-flag to avoid pen-badge text pollution
       if(teams[0]){
-        const nameEl=teams[0].querySelector('[data-name]');
-        const flagEl=teams[0].querySelector('[data-flag]');
-        ko[matchId].t1={name:nameEl?.dataset.name||'',flag:flagEl?.dataset.flag||'🏳️'};
+        const nEl=teams[0].querySelector('[data-name]');
+        const fEl=teams[0].querySelector('[data-flag]');
+        if(nEl?.dataset.name) ko[matchId].t1={name:nEl.dataset.name, flag:fEl?.dataset.flag||'🏳️'};
       }
       if(teams[1]){
-        const nameEl=teams[1].querySelector('[data-name]');
-        const flagEl=teams[1].querySelector('[data-flag]');
-        ko[matchId].t2={name:nameEl?.dataset.name||'',flag:flagEl?.dataset.flag||'🏳️'};
+        const nEl=teams[1].querySelector('[data-name]');
+        const fEl=teams[1].querySelector('[data-flag]');
+        if(nEl?.dataset.name) ko[matchId].t2={name:nEl.dataset.name, flag:fEl?.dataset.flag||'🏳️'};
       }
-      // penWin already saved live by setPenWin — do not overwrite here
+      // penWin preserved — already saved live by setPenWin
     });
   });
 }
@@ -1291,7 +1385,6 @@ function buildCountryGrid(){
 }
  
 async function loadSquad(country, flag, btn){
-  // Mark active button
   document.querySelectorAll('.country-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
  
@@ -1301,37 +1394,70 @@ async function loadSquad(country, flag, btn){
     return;
   }
  
-  // Show loading
   document.getElementById('squadDisplay').style.display='none';
   document.getElementById('squadLoading').style.display='block';
  
+  // Try Anthropic API via allorigins proxy (works from GitHub Pages)
   try{
-    const res = await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        tools:[{"type":"web_search_20250305","name":"web_search"}],
-        system:`Eres experto en el Mundial FIFA 2026. Responde SOLO con JSON válido, sin texto extra, sin markdown ni backticks. Estructura exacta:
-{"coach":"Nombre Entrenador","players":[{"num":1,"name":"Nombre Apellido","pos":"GK","club":"Club FC","country_club":"ESP"},...]}
-Posiciones: GK, DEF, MID, FWD. Incluye los 26 jugadores convocados. Los datos son de la convocatoria oficial del 1 de junio de 2026.`,
-        messages:[{role:'user',content:`Dame la convocatoria oficial de ${country} para el Mundial 2026 con los 26 jugadores: nombre, dorsal, posición (GK/DEF/MID/FWD) y club actual. Busca la lista definitiva entregada a FIFA el 1 de junio de 2026.`}]
-      })
-    });
-    const d = await res.json();
+    const prompt = `Dame la convocatoria oficial de ${country} para el Mundial 2026 con los 26 jugadores definitivos entregados a FIFA el 1 de junio de 2026. Incluye: nombre completo, dorsal, posición (GK/DEF/MID/FWD) y club actual. Responde SOLO con JSON válido, sin texto extra ni markdown. Estructura: {"coach":"Nombre DT","players":[{"num":1,"name":"Nombre Apellido","pos":"GK","club":"Club FC","country_club":"ESP"},...]}`;
+ 
+    // Use allorigins to bypass CORS on GitHub Pages
+    const apiPayload = {
+      model:'claude-sonnet-4-20250514',
+      max_tokens:1000,
+      tools:[{"type":"web_search_20250305","name":"web_search"}],
+      system:'Eres experto en el Mundial FIFA 2026. Responde SOLO con JSON válido, sin texto extra, sin markdown ni backticks. Posiciones: GK, DEF, MID, FWD. Incluye los 26 jugadores.',
+      messages:[{role:'user',content:prompt}]
+    };
+ 
+    // First try direct (works on localhost / claude.ai artifacts)
+    let res, data;
+    try {
+      res = await fetch('https://api.anthropic.com/v1/messages',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(apiPayload)
+      });
+      data = await res.json();
+    } catch(corsErr) {
+      // CORS blocked — use allorigins proxy
+      const encoded = encodeURIComponent(JSON.stringify(apiPayload));
+      res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://api.anthropic.com/v1/messages')}`,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(apiPayload)
+      });
+      data = await res.json();
+    }
+ 
     let text='';
-    (d.content||[]).forEach(b=>{if(b.type==='text')text+=b.text;});
-    const data = JSON.parse(text.replace(/```json|```/g,'').trim());
-    // Cache it
-    squadCache[country] = data;
+    (data.content||[]).forEach(b=>{if(b.type==='text')text+=b.text;});
+    if(!text) throw new Error('Sin respuesta de la IA');
+    const parsed = JSON.parse(text.replace(/```json|```/g,'').trim());
+    squadCache[country] = parsed;
     localStorage.setItem(SQUAD_CACHE_KEY, JSON.stringify(squadCache));
-    renderSquad(country, flag, data);
-    // Update cache indicator on button
-    btn.innerHTML = btn.innerHTML + (btn.querySelector('span[style]')?'':'<span style="font-size:.6rem;color:var(--green);margin-left:auto">✓</span>');
-  }catch(e){
+    renderSquad(country, flag, parsed);
+    // Mark button as cached
+    const indicator = btn.querySelector('.cache-ok');
+    if(!indicator) btn.insertAdjacentHTML('beforeend','<span class="cache-ok" style="font-size:.6rem;color:var(--green);margin-left:auto">✓</span>');
+  } catch(e) {
     document.getElementById('squadLoading').style.display='none';
-    toast('Error cargando convocatoria: '+e.message,'er');
+    // Show friendly error with manual fallback
+    document.getElementById('squadDisplay').style.display='block';
+    document.getElementById('squadFlag').textContent = flag;
+    document.getElementById('squadCountry').textContent = country.toUpperCase();
+    document.getElementById('squadCoach').textContent = '';
+    const errMsg = `<div style="padding:20px;color:var(--text2);font-size:.85rem;line-height:1.8;">
+      <div style="color:var(--orange);margin-bottom:8px;">⚠️ No se pudo cargar automáticamente</div>
+      Esta función requiere conexión con la IA de Anthropic.<br>
+      Consulta la convocatoria oficial en:<br>
+      <a href="https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/teams" target="_blank" style="color:var(--teal)">→ fifa.com/es/tournaments</a><br>
+      <a href="https://colgadosporelfutbol.com/listas-convocados-mundial-2026/" target="_blank" style="color:var(--teal)">→ colgadosporelfutbol.com</a>
+    </div>`;
+    ['squad-gk','squad-def','squad-mid','squad-fwd'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el) el.innerHTML=id==='squad-gk'?errMsg:'';
+    });
   }
 }
  
@@ -1403,3 +1529,4 @@ function renderSquad(country, flag, data){
 </script>
 </body>
 </html>
+ 
