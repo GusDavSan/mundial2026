@@ -42,7 +42,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .card{background:var(--s1);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
 .ch{background:var(--s2);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;}
 .ct{font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;}
-
+ 
 /* PHASE STEPPER */
 .phase-stepper{display:flex;gap:0;margin-bottom:24px;overflow-x:auto;scrollbar-width:none;border:1px solid var(--border);border-radius:10px;overflow:hidden;}
 .phase-stepper::-webkit-scrollbar{display:none;}
@@ -59,7 +59,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .phase-btn.locked .ph-label{color:var(--text3);}
 .phase-content{display:none;}
 .phase-content.active{display:block;animation:fi .3s ease;}
-
+ 
 /* GROUPS */
 .gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;}
 .gc{background:var(--s1);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
@@ -89,7 +89,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .gdp{color:var(--green);}.gdn{color:var(--red);}
 .pd{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:4px;}
 .pd.q{background:var(--green);}.pd.t{background:var(--gold);}
-
+ 
 /* KO BRACKET */
 .ko-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
 .ko-match{background:var(--s1);border:1px solid var(--border);border-radius:9px;overflow:hidden;}
@@ -104,7 +104,20 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .ko-score-inp:focus{border-color:var(--gold);}
 .ko-score-inp:disabled{background:transparent;border-color:transparent;color:var(--text2);cursor:default;}
 .winner-tag{font-size:.6rem;letter-spacing:1px;text-transform:uppercase;color:var(--green);margin-left:4px;}
-
+ 
+/* SQUAD */
+.country-btn{display:flex;align-items:center;gap:7px;padding:8px 12px;background:var(--s1);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;font-size:.85rem;font-weight:500;color:var(--text);width:100%;}
+.country-btn:hover{border-color:var(--gold);background:var(--gold-dim);}
+.country-btn.active{border-color:var(--gold);background:var(--gold-dim);color:var(--gold);}
+.country-btn .cf{font-size:1.1rem;}
+.country-btn .cn{font-size:.78rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.player-row{display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid rgba(44,44,68,.4);transition:background .15s;}
+.player-row:hover{background:rgba(255,255,255,.02);}
+.player-row:last-child{border-bottom:none;}
+.player-num{font-family:'Oswald',sans-serif;font-size:.9rem;color:var(--text3);width:22px;text-align:center;}
+.player-name{flex:1;font-size:.87rem;font-weight:500;}
+.player-club{font-size:.72rem;color:var(--text2);}
+.player-cap{font-size:.7rem;color:var(--text3);text-align:right;}
 /* PENALTIES */
 .pen-row{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 12px;background:rgba(255,71,87,.06);border-top:1px dashed rgba(255,71,87,.3);animation:fi .25s ease;}
 .pen-label{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);font-family:'Oswald',sans-serif;margin-right:4px;}
@@ -119,7 +132,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .locked-banner p{font-size:.82rem;line-height:1.7;}
 .progress-bar-wrap{background:var(--s2);border-radius:20px;height:6px;margin:12px 0;overflow:hidden;}
 .progress-bar{height:100%;background:var(--gold);border-radius:20px;transition:width .4s ease;}
-
+ 
 /* FINAL */
 .final-card{max-width:440px;margin:0 auto;background:var(--s1);border:2px solid var(--gold);border-radius:14px;overflow:hidden;box-shadow:0 0 40px rgba(255,210,63,.1);}
 .final-header{background:linear-gradient(135deg,rgba(255,210,63,.15),rgba(255,210,63,.05));padding:16px;text-align:center;border-bottom:1px solid var(--border);}
@@ -127,7 +140,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .champion-wrap{padding:20px;text-align:center;}
 .champion-label{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:8px;}
 .champion-name{font-family:'Oswald',sans-serif;font-size:2rem;color:var(--gold);letter-spacing:2px;min-height:44px;}
-
+ 
 /* BUTTONS */
 .btn{padding:8px 20px;border:none;border-radius:6px;cursor:pointer;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:all .2s;}
 .bg{background:var(--gold);color:#000;}.bg:hover{background:#ffde6e;transform:translateY(-1px);}
@@ -135,7 +148,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .bsm{padding:5px 12px;font-size:.65rem;}
 .ab{display:flex;justify-content:flex-end;gap:10px;padding:18px 0 6px;}
 .ab-between{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:18px 0 6px;flex-wrap:wrap;}
-
+ 
 /* LIVE */
 .match-day-section{margin-bottom:28px;}
 .day-title{font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:2px;color:var(--gold);padding:8px 0 10px;border-bottom:1px solid var(--border);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;}
@@ -164,7 +177,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .match-meta{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;margin-top:4px;border-top:1px solid rgba(44,44,68,.3);padding-top:6px;}
 .match-group{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-family:'Oswald',sans-serif;}
 .match-venue{font-size:.7rem;color:var(--text3);}
-
+ 
 /* THIRDS */
 .tg{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 @media(max-width:900px){.tg{grid-template-columns:1fr;}}
@@ -177,7 +190,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .rn{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;width:26px;display:inline-block;text-align:center;}
 .rg{color:var(--gold);}
 .tbn{display:inline-block;font-size:.6rem;padding:1px 6px;background:rgba(83,82,237,.3);border-radius:10px;color:#a0a0ff;margin-left:3px;}
-
+ 
 /* STATS */
 .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
 @media(max-width:1000px){.sg{grid-template-columns:1fr;}}
@@ -200,7 +213,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .ssub{font-size:.62rem;color:var(--text3);}
 .shim{background:linear-gradient(90deg,var(--s2) 0%,var(--s3) 50%,var(--s2) 100%);background-size:200% 100%;animation:shim 1.5s infinite;height:18px;border-radius:4px;margin:4px 0;}
 @keyframes shim{0%{background-position:200% 0}100%{background-position:-200% 0}}
-
+ 
 /* INFO BOXES */
 .ib{background:rgba(83,82,237,.08);border:1px solid rgba(83,82,237,.22);border-radius:7px;padding:11px 15px;margin-bottom:18px;font-size:.8rem;color:#9090c0;line-height:1.7;}
 .ib strong{color:var(--blue);}
@@ -237,7 +250,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 </style>
 </head>
 <body>
-
+ 
 <header>
   <div class="logo">⚽ MUNDIAL <span class="logo-sub">2026</span> <span class="hbadge">LIVE</span></div>
   <div class="api-pill">
@@ -246,23 +259,24 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
     <span style="color:var(--text3);margin-left:6px;font-family:'DM Mono',monospace;font-size:.67rem" id="aTime"></span>
   </div>
 </header>
-
+ 
 <nav>
   <button class="tb active" onclick="showTab('quiniela',this)">🎯 Mi Quiniela</button>
   <button class="tb" onclick="showTab('oficial',this)">📡 Oficial en Vivo</button>
   <button class="tb" onclick="showTab('terceros',this)">🥉 Mejores Terceros</button>
   <button class="tb" onclick="showTab('stats',this)">🌟 Estadísticas</button>
+  <button class="tb" onclick="showTab('squads',this)">👕 Convocatorias</button>
 </nav>
-
+ 
 <main>
-
+ 
 <!-- ====== QUINIELA ====== -->
 <div class="page active" id="tab-quiniela">
   <div class="ph">
     <h2>MI QUINIELA</h2>
     <p>Rellena cada fase para desbloquear la siguiente · Los clasificados se propagan automáticamente</p>
   </div>
-
+ 
   <!-- PHASE STEPPER -->
   <div class="phase-stepper">
     <button class="phase-btn active" id="pbtn-grupos" onclick="switchPhase('grupos')">
@@ -296,7 +310,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
       <span class="ph-sub">19 julio</span>
     </button>
   </div>
-
+ 
   <!-- PHASE: GRUPOS -->
   <div class="phase-content active" id="phase-grupos">
     <div class="ib"><strong>ℹ️ Grupos:</strong> Rellena los 72 partidos para desbloquear la Ronda de 32. Clasifican los <strong>2 primeros</strong> de cada grupo + los <strong>8 mejores terceros</strong>.</div>
@@ -316,7 +330,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
       <button class="btn bg" onclick="saveGroups()">💾 Guardar y continuar →</button>
     </div>
   </div>
-
+ 
   <!-- PHASE: R32 -->
   <div class="phase-content" id="phase-r32">
     <div class="ib"><strong>⚡ Ronda de 32:</strong> 32 clasificados — Los equipos se han propagado desde tus grupos. Introduce el marcador de cada eliminatoria. El ganador pasa a octavos.</div>
@@ -326,7 +340,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
       <button class="btn bg" onclick="saveKOPhase('r32')">💾 Guardar y continuar →</button>
     </div>
   </div>
-
+ 
   <!-- PHASE: R16 (Octavos) -->
   <div class="phase-content" id="phase-r16">
     <div class="ib"><strong>🔥 Octavos de Final:</strong> Los 16 ganadores de la Ronda de 32. Introduce el marcador de cada partido.</div>
@@ -336,7 +350,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
       <button class="btn bg" onclick="saveKOPhase('r16')">💾 Guardar y continuar →</button>
     </div>
   </div>
-
+ 
   <!-- PHASE: QF (Cuartos) -->
   <div class="phase-content" id="phase-qf">
     <div class="ib"><strong>💥 Cuartos de Final:</strong> Los 8 mejores del torneo. ¿Quién llega a las semis?</div>
@@ -346,7 +360,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
       <button class="btn bg" onclick="saveKOPhase('qf')">💾 Guardar y continuar →</button>
     </div>
   </div>
-
+ 
   <!-- PHASE: SF (Semis) -->
   <div class="phase-content" id="phase-sf">
     <div class="ib"><strong>🏟 Semifinales:</strong> Los 4 finalistas. Los perdedores disputan el 3er y 4º puesto.</div>
@@ -362,7 +376,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
       <button class="btn bg" onclick="saveKOPhase('sf')">💾 Guardar y continuar →</button>
     </div>
   </div>
-
+ 
   <!-- PHASE: FINAL -->
   <div class="phase-content" id="phase-final">
     <div style="text-align:center;font-size:3rem;margin-bottom:20px;animation:pulse 2s infinite">🏆</div>
@@ -383,7 +397,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
     </div>
   </div>
 </div>
-
+ 
 <!-- ====== OFICIAL ====== -->
 <div class="page" id="tab-oficial">
   <div class="ph"><h2>OFICIAL EN VIVO</h2><p>Partidos, marcadores y horarios · openfootball/worldcup.json</p></div>
@@ -407,7 +421,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
   </div>
   <div id="oficialContent"><div class="es"><div class="bi">⏳</div>Cargando partidos...</div></div>
 </div>
-
+ 
 <!-- ====== TERCEROS ====== -->
 <div class="page" id="tab-terceros">
   <div class="ph"><h2>MEJORES TERCEROS</h2><p>Los 8 mejores terceros de los 12 grupos clasifican a la Ronda de 32</p></div>
@@ -448,7 +462,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
     </div>
   </div>
 </div>
-
+ 
 <!-- ====== STATS ====== -->
 <div class="page" id="tab-stats">
   <div class="ph"><h2>ESTADÍSTICAS INDIVIDUALES</h2><p>Goleadores · Asistentes · Porteros — via Claude AI + búsqueda web</p></div>
@@ -463,17 +477,70 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
     <div class="sc-card"><div class="sh"><span class="si2">🧤</span><div><div class="shl">Guante de Oro</div><div class="sht teal">Porteros</div></div></div><div id="keepers"><div class="es" style="padding:28px">Pulsa "Cargar con IA"</div></div></div>
   </div>
 </div>
-
+ 
+<!-- ====== CONVOCATORIAS ====== -->
+<div class="page" id="tab-squads">
+  <div class="ph"><h2>CONVOCATORIAS</h2><p>26 jugadores por selección · Datos oficiales FIFA 2026 · Búsqueda via IA</p></div>
+  <div class="gb"><strong>✅ Datos oficiales:</strong> Las 48 convocatorias definitivas fueron entregadas el 1 de junio de 2026 y publicadas por FIFA el 4 de junio. La IA busca la lista oficial al seleccionar cada país.</div>
+ 
+  <!-- COUNTRY SELECTOR -->
+  <div style="margin-bottom:20px;">
+    <div style="font-size:.75rem;color:var(--text2);letter-spacing:1px;margin-bottom:10px;text-transform:uppercase;">Selecciona una selección:</div>
+    <div id="countryGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;"></div>
+  </div>
+ 
+  <!-- SQUAD DISPLAY -->
+  <div id="squadDisplay" style="display:none">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span id="squadFlag" style="font-size:2.5rem;"></span>
+        <div>
+          <div id="squadCountry" style="font-family:'Oswald',sans-serif;font-size:1.4rem;letter-spacing:2px;font-weight:600;"></div>
+          <div id="squadCoach" style="font-size:.8rem;color:var(--text2);margin-top:2px;"></div>
+        </div>
+      </div>
+      <button class="rb" onclick="document.getElementById('squadDisplay').style.display='none';document.getElementById('squadLoading').style.display='none';">✕ Cerrar</button>
+    </div>
+ 
+    <div class="sg" style="grid-template-columns:repeat(3,1fr);">
+      <div class="sc-card">
+        <div class="sh"><span class="si2">🧤</span><div><div class="shl">Porteros</div><div class="sht teal">GK</div></div></div>
+        <div id="squad-gk"></div>
+      </div>
+      <div class="sc-card">
+        <div class="sh"><span class="si2">🛡️</span><div><div class="shl">Defensas</div><div class="sht blue">DEF</div></div></div>
+        <div id="squad-def"></div>
+      </div>
+      <div class="sc-card">
+        <div class="sh"><span class="si2">⚙️</span><div><div class="shl">Centrocampistas</div><div class="sht" style="color:var(--gold)">MID</div></div></div>
+        <div id="squad-mid"></div>
+      </div>
+    </div>
+    <div style="margin-top:14px;" class="sc-card" id="fwdCard">
+      <div class="sh"><span class="si2">⚡</span><div><div class="shl">Delanteros</div><div class="sht red">FWD</div></div></div>
+      <div id="squad-fwd"></div>
+    </div>
+  </div>
+ 
+  <div id="squadLoading" style="display:none">
+    <div style="padding:16px">
+      <div class="shim"></div><div class="shim" style="width:90%"></div>
+      <div class="shim" style="width:80%"></div><div class="shim" style="width:85%"></div>
+      <div class="shim" style="width:70%"></div><div class="shim"></div>
+    </div>
+  </div>
+</div>
+ 
 </main>
 <div id="toast"></div>
-
+ 
 <script>
 // ============================================================
 // DATA
 // ============================================================
 const API_URL='https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json';
 const K={q:'wc26q',ko:'wc26ko',stats:'wc26stats'};
-
+ 
 const GROUPS={
   A:[["🇲🇽","México"],      ["🇿🇦","Sudáfrica"],      ["🇰🇷","Corea del Sur"],["🇨🇿","Rep. Checa"]],
   B:[["🇨🇦","Canadá"],      ["🇧🇦","Bosnia y Herz."], ["🇶🇦","Catar"],        ["🇨🇭","Suiza"]],
@@ -489,7 +556,7 @@ const GROUPS={
   L:[["🏴󠁧󠁢󠁥󠁮󠁧󠁿","Inglaterra"],["🇭🇷","Croacia"],   ["🇬🇭","Ghana"],        ["🇵🇦","Panamá"]]
 };
 const FIX=[[0,1],[2,3],[0,2],[1,3],[0,3],[1,2]];
-
+ 
 // R32 bracket: [1A vs 2C, 1B vs 2D, ...] — FIFA official bracket
 // Format: {id, label, slot1: "1A", slot2: "2B"} — resolved from group results
 const R32_BRACKET=[
@@ -519,7 +586,7 @@ const KO_PHASES={
   qf: {count:4, label:'Cuartos de Final'},
   sf: {count:2, label:'Semifinales'},
 };
-
+ 
 // ============================================================
 // UTILS
 // ============================================================
@@ -529,10 +596,10 @@ function toast(m,t=''){const el=document.getElementById('toast');el.textContent=
 function setDot(s){const d=document.getElementById('aDot'),t=document.getElementById('aTxt');d.className='dot'+(s==='live'?' live':s==='err'?' err':'');t.textContent=s==='live'?'Datos cargados':s==='err'?'Error':'Sin datos';}
 function setTime(){const n=new Date();document.getElementById('aTime').textContent=n.getHours().toString().padStart(2,'0')+':'+n.getMinutes().toString().padStart(2,'0');}
 function toSpainTime(dateStr,utcStr){const nextDay=utcStr.includes('+1');const clean=utcStr.replace('+1','');const d=new Date(dateStr+'T'+clean.padStart(5,'0')+':00Z');if(nextDay)d.setUTCDate(d.getUTCDate()+1);const spH=(d.getUTCHours()+2)%24;const spMi=d.getUTCMinutes();const overMidnight=(d.getUTCHours()+2)>=24;return{time:spH.toString().padStart(2,'0')+':'+spMi.toString().padStart(2,'0'),nextDay:overMidnight};}
-
+ 
 const FLAG={'Mexico':'🇲🇽','South Africa':'🇿🇦','Korea Republic':'🇰🇷','South Korea':'🇰🇷','Czech Republic':'🇨🇿','Czechia':'🇨🇿','Canada':'🇨🇦','Bosnia and Herzegovina':'🇧🇦','Bosnia Herzegovina':'🇧🇦','Qatar':'🇶🇦','Switzerland':'🇨🇭','Brazil':'🇧🇷','Morocco':'🇲🇦','Haiti':'🇭🇹','Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','United States':'🇺🇸','USA':'🇺🇸','Paraguay':'🇵🇾','Australia':'🇦🇺','Turkey':'🇹🇷','Türkiye':'🇹🇷','Germany':'🇩🇪','Curaçao':'🇨🇼','Curacao':'🇨🇼',"Côte d'Ivoire":'🇨🇮','Ivory Coast':'🇨🇮','Ecuador':'🇪🇨','Netherlands':'🇳🇱','Japan':'🇯🇵','Sweden':'🇸🇪','Tunisia':'🇹🇳','Belgium':'🇧🇪','Egypt':'🇪🇬','Iran':'🇮🇷','New Zealand':'🇳🇿','Spain':'🇪🇸','Cape Verde':'🇨🇻','Saudi Arabia':'🇸🇦','Uruguay':'🇺🇾','France':'🇫🇷','Senegal':'🇸🇳','Iraq':'🇮🇶','Norway':'🇳🇴','Argentina':'🇦🇷','Algeria':'🇩🇿','Austria':'🇦🇹','Jordan':'🇯🇴','Portugal':'🇵🇹','Congo DR':'🇨🇩','DR Congo':'🇨🇩','Uzbekistan':'🇺🇿','Colombia':'🇨🇴','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Croatia':'🇭🇷','Ghana':'🇬🇭','Panama':'🇵🇦'};
 function getF(n){return FLAG[n]||'🏳️';}
-
+ 
 // ============================================================
 // NAV
 // ============================================================
@@ -543,6 +610,7 @@ function showTab(id,btn){
   btn.classList.add('active');
   if(id==='oficial') renderSchedule();
   if(id==='stats'){const c=ld(K.stats,null);if(c)renderStats(c);}
+  if(id==='squads') buildCountryGrid();
 }
 function showIT(id,btn){
   ['ti-pred','ti-off'].forEach(t=>{const e=document.getElementById(t);if(e)e.style.display='none';});
@@ -551,7 +619,7 @@ function showIT(id,btn){
   btn.classList.add('active');
   if(id==='ti-off') loadOffThirds();
 }
-
+ 
 // ============================================================
 // PHASE SWITCHER
 // ============================================================
@@ -569,12 +637,12 @@ function switchPhase(phase){
   if(btnEl) btnEl.classList.add('active');
   currentPhase=phase;
 }
-
+ 
 function unlockPhase(phase){
   const btn=document.getElementById('pBtn-'+phase);
   if(btn) btn.classList.remove('locked');
 }
-
+ 
 // ============================================================
 // QUINIELA — GROUPS
 // ============================================================
@@ -614,7 +682,7 @@ function buildQ(){
   });
   updateProgress();
 }
-
+ 
 function updateProgress(){
   let filled=0;
   document.querySelectorAll('[data-k]').forEach(inp=>{if(inp.value!=='') filled++;});
@@ -622,7 +690,7 @@ function updateProgress(){
   document.getElementById('progLabel').textContent=`${matches} / 72 partidos completados`;
   document.getElementById('progBar').style.width=`${Math.min(100,(filled/total)*100)}%`;
 }
-
+ 
 function calcSt(letter,scores){
   const teams=GROUPS[letter];
   const st=teams.map(t=>({n:t[1],f:t[0],pts:0,gf:0,ga:0,gd:0,mp:0,w:0}));
@@ -639,13 +707,13 @@ function calcSt(letter,scores){
   });
   return st.sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf||b.w-a.w);
 }
-
+ 
 // Get top N teams from group (sorted standings)
 function getGroupTop(letter,scores,pos){
   const st=calcSt(letter,scores);
   return st[pos]?{name:st[pos].n,flag:st[pos].f,group:letter,pos:pos+1}:null;
 }
-
+ 
 // Get best 8 thirds
 function getBest8Thirds(scores){
   const thirds=[];
@@ -656,7 +724,7 @@ function getBest8Thirds(scores){
   thirds.sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf||a.ga-b.ga||b.w-a.w);
   return thirds.slice(0,8);
 }
-
+ 
 function saveGroups(){
   const raw={};
   document.querySelectorAll('[data-k]').forEach(inp=>{raw[inp.dataset.k]=inp.value;});
@@ -675,7 +743,7 @@ function saveGroups(){
   switchPhase('r32');
   toast('✓ Grupos guardados — Ronda de 32 desbloqueada','ok');
 }
-
+ 
 function resetQ(){
   if(!confirm('¿Reiniciar toda la quiniela?')) return;
   localStorage.removeItem(K.q);
@@ -690,7 +758,7 @@ function resetQ(){
   ['myAll','myTop8'].forEach(id=>document.getElementById(id).innerHTML='<tr><td colspan="7"><div class="es" style="padding:20px"><div class="bi">🎯</div>Guarda tu quiniela primero</div></td></tr>');
   toast('↺ Quiniela reiniciada');
 }
-
+ 
 // ============================================================
 // KO PHASES — build & save
 // ============================================================
@@ -700,7 +768,7 @@ function buildKOPhase(phase, groupScores){
   const el=document.getElementById(gridId);
   if(!el) return;
   el.innerHTML='';
-
+ 
   // Determine slots based on phase
   let slots=[];
   if(phase==='r32'){
@@ -739,30 +807,31 @@ function buildKOPhase(phase, groupScores){
       slots.push({id:matchId,label:`Partido ${i+1}`,t1:w1,t2:w2,
         s1:saved.s1??'',s2:saved.s2??'',penWin:saved.penWin||null});
     }
-    // 3rd place for sf
+    // 3rd place for sf — read fresh from storage
     if(phase==='sf'){
       const p3El=document.getElementById('p3Grid');
       if(p3El){
-        const p3saved=ko['p3']||{};
-        const l1=getLoser(ld(K.ko,{}),'sf_1');
-        const l2=getLoser(ld(K.ko,{}),'sf_2');
-        p3El.innerHTML=renderKOMatch('p3','3er Puesto',l1,l2,p3saved.s1??'',p3saved.s2??'',p3saved.penWin||null);
+        const freshKo=ld(K.ko,{});
+        const p3saved=freshKo['p3']||{};
+        const l1=getLoser(freshKo,'sf_1');
+        const l2=getLoser(freshKo,'sf_2');
+        p3El.innerHTML=renderKOMatch('p3','3er y 4º Puesto',l1,l2,p3saved.s1??'',p3saved.s2??'',p3saved.penWin||null);
       }
     }
-    // Final
+    // Final — read fresh from storage
     if(phase==='final'){
-      const finalKo=ld(K.ko,{});
-      const f1=getWinner(finalKo,'sf_1');
-      const f2=getWinner(finalKo,'sf_2');
-      const fsaved=finalKo['final']||{};
-      document.getElementById('finalMatchWrap').innerHTML=renderKOMatch('final','Gran Final',f1,f2,fsaved.s1??'',fsaved.s2??'',fsaved.penWin||null);
+      const freshKo=ld(K.ko,{});
+      const f1=getWinner(freshKo,'sf_1');
+      const f2=getWinner(freshKo,'sf_2');
+      const fsaved=freshKo['final']||{};
+      document.getElementById('finalMatchWrap').innerHTML=renderKOMatch('final','Gran Final 🏆',f1,f2,fsaved.s1??'',fsaved.s2??'',fsaved.penWin||null);
       updateChampion();
       return;
     }
   }
   el.innerHTML=slots.map(s=>renderKOMatch(s.id,s.label,s.t1,s.t2,s.s1,s.s2,s.penWin)).join('');
 }
-
+ 
 function resolveSlot(slot, groupScores, thirds){
   // Slot like "1A" = 1st of group A, "2B" = 2nd of group B
   // "3ABCFH" = best third from groups listed (simplified: next available third)
@@ -779,7 +848,7 @@ function resolveSlot(slot, groupScores, thirds){
   }
   return {name:slot,flag:'🏳️'};
 }
-
+ 
 function getWinner(ko,matchId){
   const m=ko[matchId];
   if(!m||m.s1===''||m.s2==='') return {name:`Ganador ${matchId}`,flag:'⚡'};
@@ -789,7 +858,7 @@ function getWinner(ko,matchId){
   // Tie: use penalty winner if set, else use t1 as placeholder
   return m.penWin==='t1'?(m.t1||{name:'Equipo 1',flag:'🏳️'}):(m.t2||{name:'Equipo 2',flag:'🏳️'});
 }
-
+ 
 function getLoser(ko,matchId){
   const m=ko[matchId];
   if(!m||m.s1===''||m.s2==='') return {name:`Perdedor ${matchId}`,flag:'⚡'};
@@ -798,36 +867,42 @@ function getLoser(ko,matchId){
   if(s2>s1) return m.t1||{name:'Equipo 1',flag:'🏳️'};
   return m.penWin==='t1'?(m.t2||{name:'Equipo 2',flag:'🏳️'}):(m.t1||{name:'Equipo 1',flag:'🏳️'});
 }
-
+ 
 function renderKOMatch(id, label, t1, t2, s1, s2, penWin){
   const n1 = t1?t1.name:'TBD';  const f1 = t1?t1.flag:'🏳️';
   const n2 = t2?t2.name:'TBD';  const f2 = t2?t2.flag:'🏳️';
   const ph1 = !t1||t1.flag==='⚡' ? 'ko-team-name placeholder' : 'ko-team-name';
   const ph2 = !t2||t2.flag==='⚡' ? 'ko-team-name placeholder' : 'ko-team-name';
   const isTie = s1!==''&&s2!==''&&!isNaN(parseInt(s1))&&!isNaN(parseInt(s2))&&parseInt(s1)===parseInt(s2);
-  const penBadge1 = penWin==='t1' ? '<span class="pen-badge">P</span>' : '';
-  const penBadge2 = penWin==='t2' ? '<span class="pen-badge">P</span>' : '';
-  // Penalty row: show when tie, or when penWin already set
+  const penBadge1 = penWin==='t1' ? ' <span class="pen-badge">PEN</span>' : '';
+  const penBadge2 = penWin==='t2' ? ' <span class="pen-badge">PEN</span>' : '';
   const penRow = (isTie||penWin) ? `
     <div class="pen-row">
       <span class="pen-label">⚽ Penaltis:</span>
       <button class="pen-btn${penWin==='t1'?' selected':''}" onclick="setPenWin('${id}','t1',this)">${f1} ${n1}</button>
       <button class="pen-btn${penWin==='t2'?' selected':''}" onclick="setPenWin('${id}','t2',this)">${f2} ${n2}</button>
     </div>` : '';
+  // Store name in data-name so we never read textContent (avoids pen-badge pollution)
   return `<div class="ko-match" id="komatch-${id}">
-    <div class="ko-match-header">${label}${penWin?` <span style="color:var(--red);font-size:.65rem">· Penaltis</span>`:''}</div>
+    <div class="ko-match-header">${label}${penWin?' <span style="color:var(--red);font-size:.65rem">· Pen.</span>':''}</div>
     <div class="ko-team">
-      <div class="ko-team-info"><span class="ko-team-flag">${f1}</span><span class="${ph1}">${n1}${penBadge1}</span></div>
+      <div class="ko-team-info">
+        <span class="ko-team-flag" data-flag="${f1}">${f1}</span>
+        <span class="${ph1}" data-name="${n1}">${n1}${penBadge1}</span>
+      </div>
       <input class="ko-score-inp" type="number" min="0" max="30" data-kid="${id}_s1" value="${s1}" placeholder="—" oninput="onKOScoreInput('${id}')">
     </div>
     <div class="ko-team">
-      <div class="ko-team-info"><span class="ko-team-flag">${f2}</span><span class="${ph2}">${n2}${penBadge2}</span></div>
+      <div class="ko-team-info">
+        <span class="ko-team-flag" data-flag="${f2}">${f2}</span>
+        <span class="${ph2}" data-name="${n2}">${n2}${penBadge2}</span>
+      </div>
       <input class="ko-score-inp" type="number" min="0" max="30" data-kid="${id}_s2" value="${s2}" placeholder="—" oninput="onKOScoreInput('${id}')">
     </div>
     ${penRow}
   </div>`;
 }
-
+ 
 // Called live when a score input changes — show/hide penalty row on the fly
 function onKOScoreInput(matchId){
   const card = document.getElementById('komatch-'+matchId);
@@ -837,30 +912,28 @@ function onKOScoreInput(matchId){
   const isTie = s1!==''&&s2!==''&&!isNaN(parseInt(s1))&&!isNaN(parseInt(s2))&&parseInt(s1)===parseInt(s2);
   let penRow = card.querySelector('.pen-row');
   if(isTie && !penRow){
-    // Inject penalty row
+    // Read names from data-name (not textContent, avoids badge pollution)
     const teams = card.querySelectorAll('.ko-team-info');
-    const f1 = teams[0]?.querySelector('.ko-team-flag')?.textContent||'🏳️';
-    const n1 = teams[0]?.querySelector('.ko-team-name')?.textContent||'Equipo 1';
-    const f2 = teams[1]?.querySelector('.ko-team-flag')?.textContent||'🏳️';
-    const n2 = teams[1]?.querySelector('.ko-team-name')?.textContent||'Equipo 2';
+    const f1 = teams[0]?.querySelector('[data-flag]')?.dataset.flag||'🏳️';
+    const n1 = teams[0]?.querySelector('[data-name]')?.dataset.name||'Equipo 1';
+    const f2 = teams[1]?.querySelector('[data-flag]')?.dataset.flag||'🏳️';
+    const n2 = teams[1]?.querySelector('[data-name]')?.dataset.name||'Equipo 2';
     const div = document.createElement('div');
     div.className='pen-row';
     div.innerHTML=`<span class="pen-label">⚽ Penaltis:</span>
       <button class="pen-btn" onclick="setPenWin('${matchId}','t1',this)">${f1} ${n1}</button>
       <button class="pen-btn" onclick="setPenWin('${matchId}','t2',this)">${f2} ${n2}</button>`;
     card.appendChild(div);
-    // Update header
     const hdr = card.querySelector('.ko-match-header');
-    if(hdr&&!hdr.querySelector('.pen-indicator')) hdr.innerHTML+=` <span class="pen-indicator" style="color:var(--red);font-size:.65rem">· Penaltis</span>`;
+    if(hdr&&!hdr.querySelector('.pen-indicator')) hdr.innerHTML+=` <span class="pen-indicator" style="color:var(--red);font-size:.65rem">· Pen.</span>`;
   } else if(!isTie && penRow){
     penRow.remove();
-    // Clear saved penWin
     const ko=ld(K.ko,{});
     if(ko[matchId]){delete ko[matchId].penWin;sv(K.ko,ko);}
     card.querySelector('.pen-indicator')?.remove();
   }
 }
-
+ 
 function setPenWin(matchId, winner, btn){
   // Toggle: if already selected, deselect
   const card = document.getElementById('komatch-'+matchId);
@@ -883,44 +956,44 @@ function setPenWin(matchId, winner, btn){
   }
   sv(K.ko,ko);
 }
-
+ 
 function saveKOPhase(phase){
   const ko=ld(K.ko,{});
-  // Collect all KO inputs on screen
+  // 1. Collect scores from all visible inputs
   document.querySelectorAll('[data-kid]').forEach(inp=>{
     const parts=inp.dataset.kid.split('_');
     const field=parts[parts.length-1];
     const matchId=parts.slice(0,-1).join('_');
     if(!ko[matchId]) ko[matchId]={};
     ko[matchId][field]=inp.value;
-    // Store team refs for winner propagation
-    if(phase==='r32'){
-      const grid=document.getElementById('r32Grid');
-      // Store team names alongside scores
-    }
   });
-  // Also capture team references from rendered matches
+  // 2. Capture team refs (using data-name/data-flag)
   captureTeamRefs(ko, phase);
   sv(K.ko,ko);
-
+ 
   const nextMap={r32:'r16',r16:'qf',qf:'sf',sf:'final',final:null};
   const next=nextMap[phase];
+ 
   if(next){
+    // Build the next phase
     buildKOPhase(next);
     unlockPhase(next);
-    document.getElementById('pBtn-'+phase).classList.add('done');
+    document.getElementById('pBtn-'+phase)?.classList.add('done');
     switchPhase(next);
-    toast(`✓ Guardado — ${KO_PHASES[next]?.label||'Final'} desbloqueada`,'ok');
+    // Special: after sf, also build 3rd place match inside sf phase
+    if(phase==='qf'){
+      // sf phase already has p3Grid built inside buildKOPhase('sf')
+    }
+    toast(`✓ Guardado — ${KO_PHASES[next]?.label||'Gran Final'} desbloqueada`,'ok');
   } else {
     // Final saved
     updateChampion();
-    document.getElementById('pBtn-final').classList.add('done');
+    document.getElementById('pBtn-final')?.classList.add('done');
     toast('🏆 ¡Quiniela completa guardada!','ok');
   }
 }
-
+ 
 function captureTeamRefs(ko, phase){
-  // Walk rendered ko-match elements and store t1/t2 team info
   const grids={r32:'r32Grid',r16:'r16Grid',qf:'qfGrid',sf:'sfGrid',final:'finalMatchWrap',p3:'p3Grid'};
   Object.entries(grids).forEach(([p,gid])=>{
     const el=document.getElementById(gid);
@@ -931,19 +1004,28 @@ function captureTeamRefs(ko, phase){
       const matchId=s1inp.dataset.kid.replace('_s1','');
       if(!ko[matchId]) ko[matchId]={};
       const teams=card.querySelectorAll('.ko-team-info');
-      if(teams[0]) ko[matchId].t1={name:teams[0].querySelector('.ko-team-name')?.textContent?.replace('P','').trim()||'',flag:teams[0].querySelector('.ko-team-flag')?.textContent||''};
-      if(teams[1]) ko[matchId].t2={name:teams[1].querySelector('.ko-team-name')?.textContent?.replace('P','').trim()||'',flag:teams[1].querySelector('.ko-team-flag')?.textContent||''};
-      // Preserve penWin — already saved live by setPenWin, don't overwrite
+      // Use data-name/data-flag to avoid pen-badge text pollution
+      if(teams[0]){
+        const nameEl=teams[0].querySelector('[data-name]');
+        const flagEl=teams[0].querySelector('[data-flag]');
+        ko[matchId].t1={name:nameEl?.dataset.name||'',flag:flagEl?.dataset.flag||'🏳️'};
+      }
+      if(teams[1]){
+        const nameEl=teams[1].querySelector('[data-name]');
+        const flagEl=teams[1].querySelector('[data-flag]');
+        ko[matchId].t2={name:nameEl?.dataset.name||'',flag:flagEl?.dataset.flag||'🏳️'};
+      }
+      // penWin already saved live by setPenWin — do not overwrite here
     });
   });
 }
-
+ 
 function updateChampion(){
   const ko=ld(K.ko,{});
   const w=getWinner(ko,'final');
   document.getElementById('championDisplay').textContent=w&&w.flag!=='⚡'?`${w.flag} ${w.name}`:'—';
 }
-
+ 
 // ============================================================
 // THIRDS
 // ============================================================
@@ -973,7 +1055,7 @@ function recalcThirds(scores){
   if(hasTie){nte.style.display='block';nte.innerHTML=`<div class="tb-note"><strong>⚖️ Desempates:</strong><br>`+Object.entries(ties).map(([i,c])=>{const a=thirds[+i],b=thirds[+i+1];return `<div>${a.f} ${a.n} vs ${b.f} ${b.n} — <strong style="color:var(--blue)">${c}</strong> <span class="tbn">${c}</span></div>`;}).join('')+'</div>';}
   else nte.style.display='none';
 }
-
+ 
 // ============================================================
 // SCHEDULE DATA
 // ============================================================
@@ -1051,7 +1133,7 @@ const SCHEDULE=[
   {m:71,d:"2026-06-28",utc:"23:00",venue:"MetLife Stadium, Nueva York/NJ",g:"L",t1:"Croacia",t2:"Ghana"},
   {m:72,d:"2026-06-28",utc:"02:00+1",venue:"Gillette Stadium, Boston",g:"L",t1:"Panamá",t2:"Inglaterra"}
 ];
-
+ 
 // ============================================================
 // RENDER OFFICIAL SCHEDULE
 // ============================================================
@@ -1101,7 +1183,7 @@ function renderSchedule(){
   });
   document.getElementById('oficialContent').innerHTML=html;
 }
-
+ 
 async function loadOfficial(spinner=false){
   const btn=document.getElementById('refreshBtn');
   if(spinner&&btn) btn.classList.add('sp');
@@ -1123,7 +1205,7 @@ async function loadOfficial(spinner=false){
   }catch(e){setDot('err');toast('Error: '+e.message,'er');}
   finally{if(btn)btn.classList.remove('sp');}
 }
-
+ 
 async function loadOffThirds(){
   const el=document.getElementById('offThirdsContent');
   if(!window._offData){el.innerHTML='<div style="padding:16px"><div class="shim"></div><div class="shim"></div></div>';await loadOfficial(false);}
@@ -1155,7 +1237,7 @@ async function loadOffThirds(){
   html+='</tbody></table>';
   el.innerHTML=html;
 }
-
+ 
 // ============================================================
 // STATS
 // ============================================================
@@ -1187,7 +1269,106 @@ function renderStats(stats){
   render('assists',stats.assists,'assists','blue','asistencias');
   render('keepers',stats.keepers,'clean_sheets','teal','portería a 0');
 }
-
+ 
+// ============================================================
+// CONVOCATORIAS — AI powered
+// ============================================================
+const SQUAD_CACHE_KEY = 'wc26squads';
+let squadCache = {};
+try { squadCache = JSON.parse(localStorage.getItem(SQUAD_CACHE_KEY)||'{}'); } catch(e){}
+ 
+function buildCountryGrid(){
+  const grid = document.getElementById('countryGrid');
+  if(grid.children.length > 0) return; // already built
+  const allTeams = Object.values(GROUPS).flat();
+  grid.innerHTML = allTeams.map(([flag,name])=>
+    `<button class="country-btn" onclick="loadSquad('${name.replace(/'/g,"\\'")}','${flag}',this)">
+      <span class="cf">${flag}</span>
+      <span class="cn">${name}</span>
+      ${squadCache[name]?'<span style="font-size:.6rem;color:var(--green);margin-left:auto">✓</span>':''}
+    </button>`
+  ).join('');
+}
+ 
+async function loadSquad(country, flag, btn){
+  // Mark active button
+  document.querySelectorAll('.country-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+ 
+  // Show from cache if available
+  if(squadCache[country]){
+    renderSquad(country, flag, squadCache[country]);
+    return;
+  }
+ 
+  // Show loading
+  document.getElementById('squadDisplay').style.display='none';
+  document.getElementById('squadLoading').style.display='block';
+ 
+  try{
+    const res = await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        tools:[{"type":"web_search_20250305","name":"web_search"}],
+        system:`Eres experto en el Mundial FIFA 2026. Responde SOLO con JSON válido, sin texto extra, sin markdown ni backticks. Estructura exacta:
+{"coach":"Nombre Entrenador","players":[{"num":1,"name":"Nombre Apellido","pos":"GK","club":"Club FC","country_club":"ESP"},...]}
+Posiciones: GK, DEF, MID, FWD. Incluye los 26 jugadores convocados. Los datos son de la convocatoria oficial del 1 de junio de 2026.`,
+        messages:[{role:'user',content:`Dame la convocatoria oficial de ${country} para el Mundial 2026 con los 26 jugadores: nombre, dorsal, posición (GK/DEF/MID/FWD) y club actual. Busca la lista definitiva entregada a FIFA el 1 de junio de 2026.`}]
+      })
+    });
+    const d = await res.json();
+    let text='';
+    (d.content||[]).forEach(b=>{if(b.type==='text')text+=b.text;});
+    const data = JSON.parse(text.replace(/```json|```/g,'').trim());
+    // Cache it
+    squadCache[country] = data;
+    localStorage.setItem(SQUAD_CACHE_KEY, JSON.stringify(squadCache));
+    renderSquad(country, flag, data);
+    // Update cache indicator on button
+    btn.innerHTML = btn.innerHTML + (btn.querySelector('span[style]')?'':'<span style="font-size:.6rem;color:var(--green);margin-left:auto">✓</span>');
+  }catch(e){
+    document.getElementById('squadLoading').style.display='none';
+    toast('Error cargando convocatoria: '+e.message,'er');
+  }
+}
+ 
+function renderSquad(country, flag, data){
+  document.getElementById('squadLoading').style.display='none';
+  document.getElementById('squadDisplay').style.display='block';
+  document.getElementById('squadFlag').textContent = flag;
+  document.getElementById('squadCountry').textContent = country.toUpperCase();
+  document.getElementById('squadCoach').textContent = data.coach ? `DT: ${data.coach}` : '';
+ 
+  const players = data.players || [];
+  const byPos = {GK:[], DEF:[], MID:[], FWD:[]};
+  players.forEach(p => { if(byPos[p.pos]) byPos[p.pos].push(p); });
+ 
+  const renderList = (id, list) => {
+    const el = document.getElementById(id);
+    if(!list.length){ el.innerHTML='<div class="es" style="padding:12px">Sin datos</div>'; return; }
+    el.innerHTML = list
+      .sort((a,b)=>(a.num||99)-(b.num||99))
+      .map(p=>`<div class="player-row">
+        <span class="player-num">${p.num||'—'}</span>
+        <div style="flex:1">
+          <div class="player-name">${p.name}</div>
+          <div class="player-club">${p.club||''}${p.country_club?' · '+p.country_club:''}</div>
+        </div>
+      </div>`).join('');
+  };
+ 
+  renderList('squad-gk',  byPos.GK);
+  renderList('squad-def', byPos.DEF);
+  renderList('squad-mid', byPos.MID);
+  renderList('squad-fwd', byPos.FWD);
+ 
+  // Scroll to display
+  document.getElementById('squadDisplay').scrollIntoView({behavior:'smooth', block:'start'});
+}
+ 
 // ============================================================
 // INIT
 // ============================================================
