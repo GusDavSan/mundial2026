@@ -1,0 +1,2811 @@
+{
+  "source": "FIFA Official squads v1, June 4 2026 · colgadosporelfutbol.com",
+  "updated": "2026-06-05",
+  "squads": {
+    "Argelia": {
+      "coach": "Vladimir Petkovic",
+      "players": [
+        {
+          "num": 1,
+          "name": "Melvin Mastil",
+          "pos": "GK",
+          "club": "FC Stade Nyonnais",
+          "country_club": "SUI"
+        },
+        {
+          "num": 16,
+          "name": "Oussama Benbot",
+          "pos": "GK",
+          "club": "USM Alger",
+          "country_club": "ALG"
+        },
+        {
+          "num": 23,
+          "name": "Luca Zidane",
+          "pos": "GK",
+          "club": "Granada CF",
+          "country_club": "ESP"
+        },
+        {
+          "num": 2,
+          "name": "Aissa Mandi",
+          "pos": "DEF",
+          "club": "Lille OSC",
+          "country_club": "FRA"
+        },
+        {
+          "num": 3,
+          "name": "Ramy Bensebaini",
+          "pos": "DEF",
+          "club": "Borussia Dortmund",
+          "country_club": "GER"
+        },
+        {
+          "num": 4,
+          "name": "Rayan Ait-Nouri",
+          "pos": "DEF",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 5,
+          "name": "Jaouen Hadjam",
+          "pos": "DEF",
+          "club": "BSC Young Boys",
+          "country_club": "SUI"
+        },
+        {
+          "num": 6,
+          "name": "Zineddine Belaid",
+          "pos": "DEF",
+          "club": "JS Kabylie",
+          "country_club": "ALG"
+        },
+        {
+          "num": 12,
+          "name": "Achraf Abada",
+          "pos": "DEF",
+          "club": "USM Alger",
+          "country_club": "ALG"
+        },
+        {
+          "num": 15,
+          "name": "Rak Belghali",
+          "pos": "DEF",
+          "club": "Hellas Verona",
+          "country_club": "ITA"
+        },
+        {
+          "num": 20,
+          "name": "Samir Chergui",
+          "pos": "DEF",
+          "club": "Paris FC",
+          "country_club": "FRA"
+        },
+        {
+          "num": 22,
+          "name": "Mohamed Amine Tougai",
+          "pos": "DEF",
+          "club": "Espérance de Tunisie",
+          "country_club": "TUN"
+        },
+        {
+          "num": 7,
+          "name": "Houssem Aouar",
+          "pos": "MID",
+          "club": "Al Ittihad",
+          "country_club": "KSA"
+        },
+        {
+          "num": 8,
+          "name": "Ramiz Zerrouki",
+          "pos": "MID",
+          "club": "FC Twente",
+          "country_club": "NED"
+        },
+        {
+          "num": 10,
+          "name": "Fares Chaibi",
+          "pos": "MID",
+          "club": "Eintracht Frankfurt",
+          "country_club": "GER"
+        },
+        {
+          "num": 13,
+          "name": "Hicham Boudaoui",
+          "pos": "MID",
+          "club": "OGC Nice",
+          "country_club": "FRA"
+        },
+        {
+          "num": 14,
+          "name": "Nabil Bentaleb",
+          "pos": "MID",
+          "club": "Lille OSC",
+          "country_club": "FRA"
+        },
+        {
+          "num": 17,
+          "name": "Ibrahim Maza",
+          "pos": "MID",
+          "club": "Bayer Leverkusen",
+          "country_club": "GER"
+        },
+        {
+          "num": 19,
+          "name": "Yassine Titraoui",
+          "pos": "MID",
+          "club": "Sporting Charleroi",
+          "country_club": "BEL"
+        },
+        {
+          "num": 9,
+          "name": "Riyad Mahrez",
+          "pos": "FWD",
+          "club": "Al Ahli FC",
+          "country_club": "KSA"
+        },
+        {
+          "num": 11,
+          "name": "Amine Gouiri",
+          "pos": "FWD",
+          "club": "Olympique Marseille",
+          "country_club": "FRA"
+        },
+        {
+          "num": 18,
+          "name": "Anis Hadj Moussa",
+          "pos": "FWD",
+          "club": "Feyenoord",
+          "country_club": "NED"
+        },
+        {
+          "num": 21,
+          "name": "Mohamed Amoura",
+          "pos": "FWD",
+          "club": "VfL Wolfsburg",
+          "country_club": "GER"
+        },
+        {
+          "num": 24,
+          "name": "Nadhir Benbouali",
+          "pos": "FWD",
+          "club": "Győri ETO FC",
+          "country_club": "HUN"
+        },
+        {
+          "num": 25,
+          "name": "Adil Boulbina",
+          "pos": "FWD",
+          "club": "Al Duhail SC",
+          "country_club": "QAT"
+        },
+        {
+          "num": 26,
+          "name": "Fares Ghedjemis",
+          "pos": "FWD",
+          "club": "Frosinone",
+          "country_club": "ITA"
+        }
+      ]
+    },
+    "Argentina": {
+      "coach": "Lionel Scaloni",
+      "players": [
+        {
+          "num": 1,
+          "name": "Emiliano Martínez",
+          "pos": "GK",
+          "club": "Aston Villa",
+          "country_club": "ENG"
+        },
+        {
+          "num": 12,
+          "name": "Gerónimo Rulli",
+          "pos": "GK",
+          "club": "Olympique Marseille",
+          "country_club": "FRA"
+        },
+        {
+          "num": 23,
+          "name": "Juan Musso",
+          "pos": "GK",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 2,
+          "name": "Nahuel Molina",
+          "pos": "DEF",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 3,
+          "name": "Nicolás Tagliafico",
+          "pos": "DEF",
+          "club": "Olympique Lyonnais",
+          "country_club": "FRA"
+        },
+        {
+          "num": 4,
+          "name": "Gonzalo Montiel",
+          "pos": "DEF",
+          "club": "CA River Plate",
+          "country_club": "ARG"
+        },
+        {
+          "num": 6,
+          "name": "Germán Pezzella",
+          "pos": "DEF",
+          "club": "Real Betis",
+          "country_club": "ESP"
+        },
+        {
+          "num": 13,
+          "name": "Cristian Romero",
+          "pos": "DEF",
+          "club": "Tottenham Hotspur",
+          "country_club": "ENG"
+        },
+        {
+          "num": 14,
+          "name": "Facundo Medina",
+          "pos": "DEF",
+          "club": "Olympique Marseille",
+          "country_club": "FRA"
+        },
+        {
+          "num": 19,
+          "name": "Nicolás Otamendi",
+          "pos": "DEF",
+          "club": "SL Benfica",
+          "country_club": "POR"
+        },
+        {
+          "num": 22,
+          "name": "Leonardo Balerdi",
+          "pos": "DEF",
+          "club": "Olympique Marseille",
+          "country_club": "FRA"
+        },
+        {
+          "num": 25,
+          "name": "Lisandro Martínez",
+          "pos": "DEF",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 5,
+          "name": "Leandro Paredes",
+          "pos": "MID",
+          "club": "CA Boca Juniors",
+          "country_club": "ARG"
+        },
+        {
+          "num": 7,
+          "name": "Rodrigo de Paul",
+          "pos": "MID",
+          "club": "Inter Miami CF",
+          "country_club": "USA"
+        },
+        {
+          "num": 8,
+          "name": "Alexis Mac Allister",
+          "pos": "MID",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 15,
+          "name": "Giovani Lo Celso",
+          "pos": "MID",
+          "club": "Real Betis",
+          "country_club": "ESP"
+        },
+        {
+          "num": 18,
+          "name": "Guido Rodríguez",
+          "pos": "MID",
+          "club": "Real Betis",
+          "country_club": "ESP"
+        },
+        {
+          "num": 20,
+          "name": "Enzo Fernández",
+          "pos": "MID",
+          "club": "Chelsea FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 24,
+          "name": "Exequiel Palacios",
+          "pos": "MID",
+          "club": "Bayer Leverkusen",
+          "country_club": "GER"
+        },
+        {
+          "num": 9,
+          "name": "Julián Álvarez",
+          "pos": "FWD",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 10,
+          "name": "Lionel Messi",
+          "pos": "FWD",
+          "club": "Inter Miami CF",
+          "country_club": "USA"
+        },
+        {
+          "num": 11,
+          "name": "Ángel Di María",
+          "pos": "FWD",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 16,
+          "name": "Thiago Almada",
+          "pos": "FWD",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 17,
+          "name": "Lautaro Martínez",
+          "pos": "FWD",
+          "club": "Inter Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 21,
+          "name": "Nico Paz",
+          "pos": "FWD",
+          "club": "Como",
+          "country_club": "ITA"
+        },
+        {
+          "num": 26,
+          "name": "Giuliano Simeone",
+          "pos": "FWD",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        }
+      ]
+    },
+    "España": {
+      "coach": "Luis de la Fuente",
+      "players": [
+        {
+          "num": 1,
+          "name": "David Raya",
+          "pos": "GK",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 13,
+          "name": "Unai Simón",
+          "pos": "GK",
+          "club": "Athletic Club",
+          "country_club": "ESP"
+        },
+        {
+          "num": 23,
+          "name": "Joan García",
+          "pos": "GK",
+          "club": "Espanyol",
+          "country_club": "ESP"
+        },
+        {
+          "num": 2,
+          "name": "Dani Carvajal",
+          "pos": "DEF",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 3,
+          "name": "Alejandro Balde",
+          "pos": "DEF",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 4,
+          "name": "Pau Cubarsí",
+          "pos": "DEF",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 5,
+          "name": "Aymeric Laporte",
+          "pos": "DEF",
+          "club": "Al Nassr",
+          "country_club": "KSA"
+        },
+        {
+          "num": 12,
+          "name": "Marc Pubill",
+          "pos": "DEF",
+          "club": "Almería / Udinese",
+          "country_club": "ESP"
+        },
+        {
+          "num": 15,
+          "name": "Dani Vivian",
+          "pos": "DEF",
+          "club": "Athletic Club",
+          "country_club": "ESP"
+        },
+        {
+          "num": 18,
+          "name": "Alejandro Grimaldo",
+          "pos": "DEF",
+          "club": "Bayer Leverkusen",
+          "country_club": "GER"
+        },
+        {
+          "num": 24,
+          "name": "Eric García",
+          "pos": "DEF",
+          "club": "Girona FC",
+          "country_club": "ESP"
+        },
+        {
+          "num": 6,
+          "name": "Martín Zubimendi",
+          "pos": "MID",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 7,
+          "name": "Mikel Merino",
+          "pos": "MID",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 8,
+          "name": "Rodri",
+          "pos": "MID",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 9,
+          "name": "Álvaro Morata",
+          "pos": "FWD",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 10,
+          "name": "Dani Olmo",
+          "pos": "MID",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 11,
+          "name": "Ferran Torres",
+          "pos": "FWD",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 14,
+          "name": "Joselu",
+          "pos": "FWD",
+          "club": "Deportivo Alavés",
+          "country_club": "ESP"
+        },
+        {
+          "num": 16,
+          "name": "Pedro",
+          "pos": "MID",
+          "club": "Lazio",
+          "country_club": "ITA"
+        },
+        {
+          "num": 17,
+          "name": "Nico Williams",
+          "pos": "FWD",
+          "club": "Athletic Club",
+          "country_club": "ESP"
+        },
+        {
+          "num": 19,
+          "name": "Yeremy Pino",
+          "pos": "FWD",
+          "club": "Villarreal CF",
+          "country_club": "ESP"
+        },
+        {
+          "num": 20,
+          "name": "Pedri",
+          "pos": "MID",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 21,
+          "name": "Bryan Gil",
+          "pos": "FWD",
+          "club": "Girona FC",
+          "country_club": "ESP"
+        },
+        {
+          "num": 22,
+          "name": "Álex Baena",
+          "pos": "MID",
+          "club": "Villarreal CF",
+          "country_club": "ESP"
+        },
+        {
+          "num": 25,
+          "name": "Lamine Yamal",
+          "pos": "FWD",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 26,
+          "name": "Ayoze Pérez",
+          "pos": "FWD",
+          "club": "Real Betis",
+          "country_club": "ESP"
+        }
+      ]
+    },
+    "Francia": {
+      "coach": "Didier Deschamps",
+      "players": [
+        {
+          "num": 1,
+          "name": "Mike Maignan",
+          "pos": "GK",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 16,
+          "name": "Alphonse Aréola",
+          "pos": "GK",
+          "club": "West Ham United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 23,
+          "name": "Brice Samba",
+          "pos": "GK",
+          "club": "RC Lens",
+          "country_club": "FRA"
+        },
+        {
+          "num": 2,
+          "name": "Benjamin Pavard",
+          "pos": "DEF",
+          "club": "Inter Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 3,
+          "name": "Lucas Hernández",
+          "pos": "DEF",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 4,
+          "name": "Raphaël Varane",
+          "pos": "DEF",
+          "club": "Como",
+          "country_club": "ITA"
+        },
+        {
+          "num": 5,
+          "name": "Jules Koundé",
+          "pos": "DEF",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 12,
+          "name": "Theo Hernández",
+          "pos": "DEF",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 21,
+          "name": "Ibrahima Konaté",
+          "pos": "DEF",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 22,
+          "name": "William Saliba",
+          "pos": "DEF",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 24,
+          "name": "Jonathan Clauss",
+          "pos": "DEF",
+          "club": "Olympique Marseille",
+          "country_club": "FRA"
+        },
+        {
+          "num": 6,
+          "name": "Eduardo Camavinga",
+          "pos": "MID",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 7,
+          "name": "Antoine Griezmann",
+          "pos": "FWD",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 8,
+          "name": "Aurélien Tchouaméni",
+          "pos": "MID",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 9,
+          "name": "Olivier Giroud",
+          "pos": "FWD",
+          "club": "Los Angeles FC",
+          "country_club": "USA"
+        },
+        {
+          "num": 10,
+          "name": "Kylian Mbappé",
+          "pos": "FWD",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 11,
+          "name": "Ousmane Dembélé",
+          "pos": "FWD",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 13,
+          "name": "N'Golo Kanté",
+          "pos": "MID",
+          "club": "Al Ittihad",
+          "country_club": "KSA"
+        },
+        {
+          "num": 14,
+          "name": "Adrien Rabiot",
+          "pos": "MID",
+          "club": "Olympique Marseille",
+          "country_club": "FRA"
+        },
+        {
+          "num": 15,
+          "name": "Marcus Thuram",
+          "pos": "FWD",
+          "club": "Inter Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 17,
+          "name": "Kingsley Coman",
+          "pos": "FWD",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 18,
+          "name": "Randal Kolo Muani",
+          "pos": "FWD",
+          "club": "Juventus FC",
+          "country_club": "ITA"
+        },
+        {
+          "num": 19,
+          "name": "Youssouf Fofana",
+          "pos": "MID",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 20,
+          "name": "Matteo Guendouzi",
+          "pos": "MID",
+          "club": "Lazio",
+          "country_club": "ITA"
+        },
+        {
+          "num": 25,
+          "name": "Warren Zaïre-Emery",
+          "pos": "MID",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 26,
+          "name": "Bradley Barcola",
+          "pos": "FWD",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        }
+      ]
+    },
+    "Portugal": {
+      "coach": "Roberto Martínez",
+      "players": [
+        {
+          "num": 1,
+          "name": "Diogo Costa",
+          "pos": "GK",
+          "club": "FC Porto",
+          "country_club": "POR"
+        },
+        {
+          "num": 12,
+          "name": "José Sá",
+          "pos": "GK",
+          "club": "Wolverhampton",
+          "country_club": "ENG"
+        },
+        {
+          "num": 22,
+          "name": "Rui Patrício",
+          "pos": "GK",
+          "club": "AS Roma",
+          "country_club": "ITA"
+        },
+        {
+          "num": 2,
+          "name": "João Cancelo",
+          "pos": "DEF",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 3,
+          "name": "Nuno Mendes",
+          "pos": "DEF",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 4,
+          "name": "Rúben Dias",
+          "pos": "DEF",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 5,
+          "name": "Danilo Pereira",
+          "pos": "DEF",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 6,
+          "name": "Pepe",
+          "pos": "DEF",
+          "club": "FC Porto",
+          "country_club": "POR"
+        },
+        {
+          "num": 13,
+          "name": "Diogo Dalot",
+          "pos": "DEF",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 21,
+          "name": "Nélson Semedo",
+          "pos": "DEF",
+          "club": "Wolverhampton",
+          "country_club": "ENG"
+        },
+        {
+          "num": 24,
+          "name": "António Silva",
+          "pos": "DEF",
+          "club": "SL Benfica",
+          "country_club": "POR"
+        },
+        {
+          "num": 8,
+          "name": "João Palhinha",
+          "pos": "MID",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 10,
+          "name": "Bernardo Silva",
+          "pos": "MID",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 14,
+          "name": "William Carvalho",
+          "pos": "MID",
+          "club": "Real Betis",
+          "country_club": "ESP"
+        },
+        {
+          "num": 16,
+          "name": "Vitinha",
+          "pos": "MID",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 17,
+          "name": "Renato Sanches",
+          "pos": "MID",
+          "club": "Sporting CP",
+          "country_club": "POR"
+        },
+        {
+          "num": 23,
+          "name": "Matheus Nunes",
+          "pos": "MID",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 7,
+          "name": "Cristiano Ronaldo",
+          "pos": "FWD",
+          "club": "Al Nassr",
+          "country_club": "KSA"
+        },
+        {
+          "num": 9,
+          "name": "André Silva",
+          "pos": "FWD",
+          "club": "RB Leipzig",
+          "country_club": "GER"
+        },
+        {
+          "num": 11,
+          "name": "Rafael Leão",
+          "pos": "FWD",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 15,
+          "name": "Rafael Grilo",
+          "pos": "FWD",
+          "club": "SL Benfica",
+          "country_club": "POR"
+        },
+        {
+          "num": 18,
+          "name": "Gonçalo Ramos",
+          "pos": "FWD",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 19,
+          "name": "Pedro Neto",
+          "pos": "FWD",
+          "club": "Chelsea FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 20,
+          "name": "João Félix",
+          "pos": "FWD",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 25,
+          "name": "Francisco Conceição",
+          "pos": "FWD",
+          "club": "Juventus FC",
+          "country_club": "ITA"
+        },
+        {
+          "num": 26,
+          "name": "Gonçalo Inácio",
+          "pos": "DEF",
+          "club": "Sporting CP",
+          "country_club": "POR"
+        }
+      ]
+    },
+    "Brasil": {
+      "coach": "Dorival Júnior",
+      "players": [
+        {
+          "num": 1,
+          "name": "Alisson",
+          "pos": "GK",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 12,
+          "name": "Weverton",
+          "pos": "GK",
+          "club": "Grêmio",
+          "country_club": "BRA"
+        },
+        {
+          "num": 23,
+          "name": "Ederson",
+          "pos": "GK",
+          "club": "Fenerbahçe",
+          "country_club": "TUR"
+        },
+        {
+          "num": 2,
+          "name": "Danilo",
+          "pos": "DEF",
+          "club": "CR Flamengo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 3,
+          "name": "Alex Sandro",
+          "pos": "DEF",
+          "club": "CR Flamengo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 4,
+          "name": "Marquinhos",
+          "pos": "DEF",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 5,
+          "name": "Gabriel Magalhães",
+          "pos": "DEF",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 6,
+          "name": "Bremer",
+          "pos": "DEF",
+          "club": "Juventus FC",
+          "country_club": "ITA"
+        },
+        {
+          "num": 13,
+          "name": "Léo Pereira",
+          "pos": "DEF",
+          "club": "CR Flamengo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 14,
+          "name": "Wesley",
+          "pos": "DEF",
+          "club": "AS Roma",
+          "country_club": "ITA"
+        },
+        {
+          "num": 22,
+          "name": "Roger Ibañez",
+          "pos": "DEF",
+          "club": "Al Ahli FC",
+          "country_club": "KSA"
+        },
+        {
+          "num": 24,
+          "name": "Douglas Santos",
+          "pos": "DEF",
+          "club": "Zenit St. Petersburg",
+          "country_club": "RUS"
+        },
+        {
+          "num": 5,
+          "name": "Casemiro",
+          "pos": "MID",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 8,
+          "name": "Bruno Guimarães",
+          "pos": "MID",
+          "club": "Newcastle United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 15,
+          "name": "Fabinho",
+          "pos": "MID",
+          "club": "Al Ittihad",
+          "country_club": "KSA"
+        },
+        {
+          "num": 17,
+          "name": "Lucas Paquetá",
+          "pos": "MID",
+          "club": "CR Flamengo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 18,
+          "name": "Danilo Santos",
+          "pos": "MID",
+          "club": "Botafogo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 7,
+          "name": "Rodrygo",
+          "pos": "FWD",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 9,
+          "name": "Neymar Jr",
+          "pos": "FWD",
+          "club": "Santos FC",
+          "country_club": "BRA"
+        },
+        {
+          "num": 10,
+          "name": "Raphinha",
+          "pos": "FWD",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 11,
+          "name": "Vinicius Junior",
+          "pos": "FWD",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 16,
+          "name": "Endrick",
+          "pos": "FWD",
+          "club": "Olympique Lyonnais",
+          "country_club": "FRA"
+        },
+        {
+          "num": 19,
+          "name": "Gabriel Martinelli",
+          "pos": "FWD",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 20,
+          "name": "Matheus Cunha",
+          "pos": "FWD",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 25,
+          "name": "Igor Thiago",
+          "pos": "FWD",
+          "club": "Brentford FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 26,
+          "name": "Luiz Henrique",
+          "pos": "FWD",
+          "club": "Zenit St. Petersburg",
+          "country_club": "RUS"
+        }
+      ]
+    },
+    "Alemania": {
+      "coach": "Julian Nagelsmann",
+      "players": [
+        {
+          "num": 1,
+          "name": "Manuel Neuer",
+          "pos": "GK",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 12,
+          "name": "Marc-André ter Stegen",
+          "pos": "GK",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 23,
+          "name": "Oliver Baumann",
+          "pos": "GK",
+          "club": "TSG Hoffenheim",
+          "country_club": "GER"
+        },
+        {
+          "num": 2,
+          "name": "Joshua Kimmich",
+          "pos": "DEF",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 3,
+          "name": "David Raum",
+          "pos": "DEF",
+          "club": "RB Leipzig",
+          "country_club": "GER"
+        },
+        {
+          "num": 4,
+          "name": "Jonathan Tah",
+          "pos": "DEF",
+          "club": "Bayer Leverkusen",
+          "country_club": "GER"
+        },
+        {
+          "num": 5,
+          "name": "Thilo Kehrer",
+          "pos": "DEF",
+          "club": "West Ham United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 13,
+          "name": "Nico Schlotterbeck",
+          "pos": "DEF",
+          "club": "Borussia Dortmund",
+          "country_club": "GER"
+        },
+        {
+          "num": 15,
+          "name": "Waldemar Anton",
+          "pos": "DEF",
+          "club": "VfB Stuttgart",
+          "country_club": "GER"
+        },
+        {
+          "num": 16,
+          "name": "Benjamin Henrichs",
+          "pos": "DEF",
+          "club": "RB Leipzig",
+          "country_club": "GER"
+        },
+        {
+          "num": 21,
+          "name": "Antonio Rüdiger",
+          "pos": "DEF",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 6,
+          "name": "Toni Kroos",
+          "pos": "MID",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 7,
+          "name": "Kai Havertz",
+          "pos": "MID",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 8,
+          "name": "Leon Goretzka",
+          "pos": "MID",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 10,
+          "name": "Jamal Musiala",
+          "pos": "MID",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 14,
+          "name": "Florian Wirtz",
+          "pos": "MID",
+          "club": "Bayer Leverkusen",
+          "country_club": "GER"
+        },
+        {
+          "num": 18,
+          "name": "Ilkay Gündogan",
+          "pos": "MID",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 20,
+          "name": "Leroy Sané",
+          "pos": "MID",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 22,
+          "name": "Robert Andrich",
+          "pos": "MID",
+          "club": "Bayer Leverkusen",
+          "country_club": "GER"
+        },
+        {
+          "num": 9,
+          "name": "Niclas Füllkrug",
+          "pos": "FWD",
+          "club": "West Ham United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 11,
+          "name": "Serge Gnabry",
+          "pos": "FWD",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 17,
+          "name": "Deniz Undav",
+          "pos": "FWD",
+          "club": "VfB Stuttgart",
+          "country_club": "GER"
+        },
+        {
+          "num": 19,
+          "name": "Maximilian Beier",
+          "pos": "FWD",
+          "club": "Borussia Dortmund",
+          "country_club": "GER"
+        },
+        {
+          "num": 24,
+          "name": "Tim Kleindienst",
+          "pos": "FWD",
+          "club": "Borussia Mönchengladbach",
+          "country_club": "GER"
+        },
+        {
+          "num": 25,
+          "name": "Chris Führich",
+          "pos": "FWD",
+          "club": "VfB Stuttgart",
+          "country_club": "GER"
+        },
+        {
+          "num": 26,
+          "name": "Aleksandar Pavlovic",
+          "pos": "MID",
+          "club": "Bayern München",
+          "country_club": "GER"
+        }
+      ]
+    },
+    "Inglaterra": {
+      "coach": "Gareth Southgate",
+      "players": [
+        {
+          "num": 1,
+          "name": "Jordan Pickford",
+          "pos": "GK",
+          "club": "Everton FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 13,
+          "name": "Aaron Ramsdale",
+          "pos": "GK",
+          "club": "Southampton FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 22,
+          "name": "Dean Henderson",
+          "pos": "GK",
+          "club": "Crystal Palace",
+          "country_club": "ENG"
+        },
+        {
+          "num": 2,
+          "name": "Kyle Walker",
+          "pos": "DEF",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 3,
+          "name": "Luke Shaw",
+          "pos": "DEF",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 4,
+          "name": "Marc Guéhi",
+          "pos": "DEF",
+          "club": "Crystal Palace",
+          "country_club": "ENG"
+        },
+        {
+          "num": 5,
+          "name": "Harry Maguire",
+          "pos": "DEF",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 6,
+          "name": "Levi Colwill",
+          "pos": "DEF",
+          "club": "Chelsea FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 12,
+          "name": "Trent Alexander-Arnold",
+          "pos": "DEF",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 23,
+          "name": "Ezri Konsa",
+          "pos": "DEF",
+          "club": "Aston Villa",
+          "country_club": "ENG"
+        },
+        {
+          "num": 24,
+          "name": "Jarrad Branthwaite",
+          "pos": "DEF",
+          "club": "Everton FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 7,
+          "name": "Jack Grealish",
+          "pos": "MID",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 8,
+          "name": "Declan Rice",
+          "pos": "MID",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 10,
+          "name": "Jude Bellingham",
+          "pos": "MID",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 14,
+          "name": "Conor Gallagher",
+          "pos": "MID",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 15,
+          "name": "Adam Wharton",
+          "pos": "MID",
+          "club": "Crystal Palace",
+          "country_club": "ENG"
+        },
+        {
+          "num": 16,
+          "name": "Kobbie Mainoo",
+          "pos": "MID",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 18,
+          "name": "Cole Palmer",
+          "pos": "MID",
+          "club": "Chelsea FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 9,
+          "name": "Harry Kane",
+          "pos": "FWD",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 11,
+          "name": "Bukayo Saka",
+          "pos": "FWD",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 17,
+          "name": "Ivan Toney",
+          "pos": "FWD",
+          "club": "Al Ahli FC",
+          "country_club": "KSA"
+        },
+        {
+          "num": 19,
+          "name": "Jarrod Bowen",
+          "pos": "FWD",
+          "club": "West Ham United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 20,
+          "name": "Ollie Watkins",
+          "pos": "FWD",
+          "club": "Aston Villa",
+          "country_club": "ENG"
+        },
+        {
+          "num": 21,
+          "name": "Phil Foden",
+          "pos": "FWD",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 25,
+          "name": "Anthony Gordon",
+          "pos": "FWD",
+          "club": "Newcastle United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 26,
+          "name": "Noni Madueke",
+          "pos": "FWD",
+          "club": "Chelsea FC",
+          "country_club": "ENG"
+        }
+      ]
+    },
+    "Países Bajos": {
+      "coach": "Ronald Koeman",
+      "players": [
+        {
+          "num": 1,
+          "name": "Bart Verbruggen",
+          "pos": "GK",
+          "club": "Brighton & Hove Albion",
+          "country_club": "ENG"
+        },
+        {
+          "num": 13,
+          "name": "Mark Flekken",
+          "pos": "GK",
+          "club": "Brentford FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 22,
+          "name": "Remko Pasveer",
+          "pos": "GK",
+          "club": "AFC Ajax",
+          "country_club": "NED"
+        },
+        {
+          "num": 2,
+          "name": "Denzel Dumfries",
+          "pos": "DEF",
+          "club": "Inter Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 3,
+          "name": "Matthijs de Ligt",
+          "pos": "DEF",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 4,
+          "name": "Virgil van Dijk",
+          "pos": "DEF",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 5,
+          "name": "Nathan Aké",
+          "pos": "DEF",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 12,
+          "name": "Stefan de Vrij",
+          "pos": "DEF",
+          "club": "Inter Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 15,
+          "name": "Jerdy Schouten",
+          "pos": "DEF",
+          "club": "PSV Eindhoven",
+          "country_club": "NED"
+        },
+        {
+          "num": 17,
+          "name": "Lutsharel Geertruida",
+          "pos": "DEF",
+          "club": "RB Leipzig",
+          "country_club": "GER"
+        },
+        {
+          "num": 23,
+          "name": "Ian Maatsen",
+          "pos": "DEF",
+          "club": "Aston Villa",
+          "country_club": "ENG"
+        },
+        {
+          "num": 6,
+          "name": "Frenkie de Jong",
+          "pos": "MID",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 8,
+          "name": "Ryan Gravenberch",
+          "pos": "MID",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 10,
+          "name": "Memphis Depay",
+          "pos": "MID",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 14,
+          "name": "Tijjani Reijnders",
+          "pos": "MID",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 16,
+          "name": "Teun Koopmeiners",
+          "pos": "MID",
+          "club": "Juventus FC",
+          "country_club": "ITA"
+        },
+        {
+          "num": 20,
+          "name": "Quinten Timber",
+          "pos": "MID",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 24,
+          "name": "Xavi Simons",
+          "pos": "MID",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 7,
+          "name": "Steven Bergwijn",
+          "pos": "FWD",
+          "club": "AFC Ajax",
+          "country_club": "NED"
+        },
+        {
+          "num": 9,
+          "name": "Wout Weghorst",
+          "pos": "FWD",
+          "club": "TSG Hoffenheim",
+          "country_club": "GER"
+        },
+        {
+          "num": 11,
+          "name": "Cody Gakpo",
+          "pos": "FWD",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 18,
+          "name": "Donyell Malen",
+          "pos": "FWD",
+          "club": "Borussia Dortmund",
+          "country_club": "GER"
+        },
+        {
+          "num": 19,
+          "name": "Georginio Wijnaldum",
+          "pos": "MID",
+          "club": "Al Ettifaq",
+          "country_club": "KSA"
+        },
+        {
+          "num": 21,
+          "name": "Brian Brobbey",
+          "pos": "FWD",
+          "club": "AFC Ajax",
+          "country_club": "NED"
+        },
+        {
+          "num": 25,
+          "name": "Noa Lang",
+          "pos": "FWD",
+          "club": "PSV Eindhoven",
+          "country_club": "NED"
+        },
+        {
+          "num": 26,
+          "name": "Joshua Zirkzee",
+          "pos": "FWD",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        }
+      ]
+    },
+    "Bélgica": {
+      "coach": "Domenico Tedesco",
+      "players": [
+        {
+          "num": 1,
+          "name": "Thibaut Courtois",
+          "pos": "GK",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 12,
+          "name": "Senne Lammens",
+          "pos": "GK",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 23,
+          "name": "Mike Penders",
+          "pos": "GK",
+          "club": "RC Strasbourg",
+          "country_club": "FRA"
+        },
+        {
+          "num": 2,
+          "name": "Timothy Castagne",
+          "pos": "DEF",
+          "club": "Fulham FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 3,
+          "name": "Arthur Theate",
+          "pos": "DEF",
+          "club": "Eintracht Frankfurt",
+          "country_club": "GER"
+        },
+        {
+          "num": 4,
+          "name": "Zeno Debast",
+          "pos": "DEF",
+          "club": "Sporting CP",
+          "country_club": "POR"
+        },
+        {
+          "num": 5,
+          "name": "Jan Vertonghen",
+          "pos": "DEF",
+          "club": "RSC Anderlecht",
+          "country_club": "BEL"
+        },
+        {
+          "num": 13,
+          "name": "Brandon Mechele",
+          "pos": "DEF",
+          "club": "Club Brugge",
+          "country_club": "BEL"
+        },
+        {
+          "num": 14,
+          "name": "Thomas Meunier",
+          "pos": "DEF",
+          "club": "Lille OSC",
+          "country_club": "FRA"
+        },
+        {
+          "num": 22,
+          "name": "Maxim de Cuyper",
+          "pos": "DEF",
+          "club": "Brighton & Hove Albion",
+          "country_club": "ENG"
+        },
+        {
+          "num": 24,
+          "name": "Koni de Winter",
+          "pos": "DEF",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 6,
+          "name": "Axel Witsel",
+          "pos": "MID",
+          "club": "Girona FC",
+          "country_club": "ESP"
+        },
+        {
+          "num": 7,
+          "name": "Kevin de Bruyne",
+          "pos": "MID",
+          "club": "SSC Napoli",
+          "country_club": "ITA"
+        },
+        {
+          "num": 8,
+          "name": "Youri Tielemans",
+          "pos": "MID",
+          "club": "Aston Villa",
+          "country_club": "ENG"
+        },
+        {
+          "num": 15,
+          "name": "Amadou Onana",
+          "pos": "MID",
+          "club": "Aston Villa",
+          "country_club": "ENG"
+        },
+        {
+          "num": 16,
+          "name": "Nicolas Raskin",
+          "pos": "MID",
+          "club": "Rangers FC",
+          "country_club": "SCO"
+        },
+        {
+          "num": 18,
+          "name": "Hans Vanaken",
+          "pos": "MID",
+          "club": "Club Brugge",
+          "country_club": "BEL"
+        },
+        {
+          "num": 20,
+          "name": "Alexis Saelemaekers",
+          "pos": "MID",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 9,
+          "name": "Romelu Lukaku",
+          "pos": "FWD",
+          "club": "SSC Napoli",
+          "country_club": "ITA"
+        },
+        {
+          "num": 10,
+          "name": "Leandro Trossard",
+          "pos": "FWD",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 11,
+          "name": "Jeremy Doku",
+          "pos": "FWD",
+          "club": "Manchester City",
+          "country_club": "ENG"
+        },
+        {
+          "num": 17,
+          "name": "Charles de Ketelaere",
+          "pos": "FWD",
+          "club": "Atalanta",
+          "country_club": "ITA"
+        },
+        {
+          "num": 19,
+          "name": "Dodi Lukebakio",
+          "pos": "FWD",
+          "club": "SL Benfica",
+          "country_club": "POR"
+        },
+        {
+          "num": 21,
+          "name": "Diego Moreira",
+          "pos": "MID",
+          "club": "RC Strasbourg",
+          "country_club": "FRA"
+        },
+        {
+          "num": 25,
+          "name": "Matias Fernandez-Pardo",
+          "pos": "FWD",
+          "club": "Lille OSC",
+          "country_club": "FRA"
+        },
+        {
+          "num": 26,
+          "name": "Joaquin Seys",
+          "pos": "DEF",
+          "club": "Club Brugge",
+          "country_club": "BEL"
+        }
+      ]
+    },
+    "Uruguay": {
+      "coach": "Marcelo Bielsa",
+      "players": [
+        {
+          "num": 1,
+          "name": "Sergio Rochet",
+          "pos": "GK",
+          "club": "Inter Miami CF",
+          "country_club": "USA"
+        },
+        {
+          "num": 12,
+          "name": "Sebastián Sosa",
+          "pos": "GK",
+          "club": "Independiente",
+          "country_club": "ARG"
+        },
+        {
+          "num": 23,
+          "name": "Santiago Mele",
+          "pos": "GK",
+          "club": "Liga de Quito",
+          "country_club": "ECU"
+        },
+        {
+          "num": 2,
+          "name": "Sebastián Cáceres",
+          "pos": "DEF",
+          "club": "Club América",
+          "country_club": "MEX"
+        },
+        {
+          "num": 3,
+          "name": "Mathías Olivera",
+          "pos": "DEF",
+          "club": "SSC Napoli",
+          "country_club": "ITA"
+        },
+        {
+          "num": 4,
+          "name": "Ronald Araújo",
+          "pos": "DEF",
+          "club": "FC Barcelona",
+          "country_club": "ESP"
+        },
+        {
+          "num": 5,
+          "name": "Matías Viña",
+          "pos": "DEF",
+          "club": "AS Roma",
+          "country_club": "ITA"
+        },
+        {
+          "num": 6,
+          "name": "José María Giménez",
+          "pos": "DEF",
+          "club": "Atlético de Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 15,
+          "name": "Diego Godín",
+          "pos": "DEF",
+          "club": "Vélez Sársfield",
+          "country_club": "ARG"
+        },
+        {
+          "num": 16,
+          "name": "Guillermo Varela",
+          "pos": "DEF",
+          "club": "CA Peñarol",
+          "country_club": "URU"
+        },
+        {
+          "num": 22,
+          "name": "Nahitan Nández",
+          "pos": "DEF",
+          "club": "Al Qadsiah",
+          "country_club": "KSA"
+        },
+        {
+          "num": 7,
+          "name": "Giorgian de Arrascaeta",
+          "pos": "MID",
+          "club": "CR Flamengo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 8,
+          "name": "Lucas Torreira",
+          "pos": "MID",
+          "club": "Galatasaray",
+          "country_club": "TUR"
+        },
+        {
+          "num": 13,
+          "name": "Rodrigo Bentancur",
+          "pos": "MID",
+          "club": "Tottenham Hotspur",
+          "country_club": "ENG"
+        },
+        {
+          "num": 14,
+          "name": "Federico Valverde",
+          "pos": "MID",
+          "club": "Real Madrid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 17,
+          "name": "Mauro Arambarri",
+          "pos": "MID",
+          "club": "Getafe CF",
+          "country_club": "ESP"
+        },
+        {
+          "num": 18,
+          "name": "Manuel Ugarte",
+          "pos": "MID",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 9,
+          "name": "Luis Suárez",
+          "pos": "FWD",
+          "club": "CA Peñarol",
+          "country_club": "URU"
+        },
+        {
+          "num": 10,
+          "name": "Nicolás de la Cruz",
+          "pos": "FWD",
+          "club": "CR Flamengo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 11,
+          "name": "Facundo Torres",
+          "pos": "FWD",
+          "club": "Orlando City SC",
+          "country_club": "USA"
+        },
+        {
+          "num": 19,
+          "name": "Darwin Núñez",
+          "pos": "FWD",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 20,
+          "name": "Agustín Canobbio",
+          "pos": "FWD",
+          "club": "Athletico Paranaense",
+          "country_club": "BRA"
+        },
+        {
+          "num": 21,
+          "name": "Maximiliano Araújo",
+          "pos": "FWD",
+          "club": "St. Louis City SC",
+          "country_club": "USA"
+        },
+        {
+          "num": 24,
+          "name": "Brian Rodríguez",
+          "pos": "FWD",
+          "club": "Club América",
+          "country_club": "MEX"
+        },
+        {
+          "num": 25,
+          "name": "Maxi Gómez",
+          "pos": "FWD",
+          "club": "Valencia CF",
+          "country_club": "ESP"
+        },
+        {
+          "num": 26,
+          "name": "Santiago Bueno",
+          "pos": "DEF",
+          "club": "Wolverhampton",
+          "country_club": "ENG"
+        }
+      ]
+    },
+    "Colombia": {
+      "coach": "Néstor Lorenzo",
+      "players": [
+        {
+          "num": 1,
+          "name": "David Ospina",
+          "pos": "GK",
+          "club": "Atlético Nacional",
+          "country_club": "COL"
+        },
+        {
+          "num": 12,
+          "name": "Camilo Vargas",
+          "pos": "GK",
+          "club": "Atlas FC",
+          "country_club": "MEX"
+        },
+        {
+          "num": 23,
+          "name": "Álvaro Montero",
+          "pos": "GK",
+          "club": "CA Vélez Sarsfield",
+          "country_club": "ARG"
+        },
+        {
+          "num": 2,
+          "name": "Daniel Muñoz",
+          "pos": "DEF",
+          "club": "Crystal Palace",
+          "country_club": "ENG"
+        },
+        {
+          "num": 3,
+          "name": "Johan Mojica",
+          "pos": "DEF",
+          "club": "RCD Mallorca",
+          "country_club": "ESP"
+        },
+        {
+          "num": 4,
+          "name": "Yerry Mina",
+          "pos": "DEF",
+          "club": "Cagliari",
+          "country_club": "ITA"
+        },
+        {
+          "num": 5,
+          "name": "Davinson Sánchez",
+          "pos": "DEF",
+          "club": "Galatasaray",
+          "country_club": "TUR"
+        },
+        {
+          "num": 13,
+          "name": "Deiver Machado",
+          "pos": "DEF",
+          "club": "FC Nantes",
+          "country_club": "FRA"
+        },
+        {
+          "num": 16,
+          "name": "Santiago Arias",
+          "pos": "DEF",
+          "club": "CA Independiente",
+          "country_club": "ARG"
+        },
+        {
+          "num": 22,
+          "name": "Gustavo Puerta",
+          "pos": "DEF",
+          "club": "Racing Santander",
+          "country_club": "ESP"
+        },
+        {
+          "num": 24,
+          "name": "Jhon Lucumí",
+          "pos": "DEF",
+          "club": "Bologna FC",
+          "country_club": "ITA"
+        },
+        {
+          "num": 6,
+          "name": "Jefferson Lerma",
+          "pos": "MID",
+          "club": "Crystal Palace",
+          "country_club": "ENG"
+        },
+        {
+          "num": 7,
+          "name": "Jhon Arias",
+          "pos": "MID",
+          "club": "SE Palmeiras",
+          "country_club": "BRA"
+        },
+        {
+          "num": 8,
+          "name": "Richard Rios",
+          "pos": "MID",
+          "club": "SL Benfica",
+          "country_club": "POR"
+        },
+        {
+          "num": 10,
+          "name": "James Rodríguez",
+          "pos": "MID",
+          "club": "Minnesota United FC",
+          "country_club": "USA"
+        },
+        {
+          "num": 14,
+          "name": "Jorge Carrascal",
+          "pos": "MID",
+          "club": "CR Flamengo",
+          "country_club": "BRA"
+        },
+        {
+          "num": 17,
+          "name": "Mateus Uribe",
+          "pos": "MID",
+          "club": "FC Porto",
+          "country_club": "POR"
+        },
+        {
+          "num": 18,
+          "name": "Juan Quintero",
+          "pos": "MID",
+          "club": "CA River Plate",
+          "country_club": "ARG"
+        },
+        {
+          "num": 9,
+          "name": "Jhon Córdoba",
+          "pos": "FWD",
+          "club": "FC Krasnodar",
+          "country_club": "RUS"
+        },
+        {
+          "num": 11,
+          "name": "Luis Díaz",
+          "pos": "FWD",
+          "club": "Bayern München",
+          "country_club": "GER"
+        },
+        {
+          "num": 15,
+          "name": "Cucho Hernández",
+          "pos": "FWD",
+          "club": "Real Betis",
+          "country_club": "ESP"
+        },
+        {
+          "num": 19,
+          "name": "Jaminton Campaz",
+          "pos": "FWD",
+          "club": "CA Rosario Central",
+          "country_club": "ARG"
+        },
+        {
+          "num": 20,
+          "name": "Luis Suárez",
+          "pos": "FWD",
+          "club": "Sporting CP",
+          "country_club": "POR"
+        },
+        {
+          "num": 21,
+          "name": "Andrés Gómez",
+          "pos": "FWD",
+          "club": "CR Vasco da Gama",
+          "country_club": "BRA"
+        },
+        {
+          "num": 25,
+          "name": "Kevin Castaño",
+          "pos": "MID",
+          "club": "CA River Plate",
+          "country_club": "ARG"
+        },
+        {
+          "num": 26,
+          "name": "Juan Portilla",
+          "pos": "MID",
+          "club": "Athletico Paranaense",
+          "country_club": "BRA"
+        }
+      ]
+    },
+    "México": {
+      "coach": "Guillermo Almada",
+      "players": [
+        {
+          "num": 1,
+          "name": "Guillermo Ochoa",
+          "pos": "GK",
+          "club": "Salernitana",
+          "country_club": "ITA"
+        },
+        {
+          "num": 13,
+          "name": "Rodolfo Cota",
+          "pos": "GK",
+          "club": "León",
+          "country_club": "MEX"
+        },
+        {
+          "num": 22,
+          "name": "Luis Malagón",
+          "pos": "GK",
+          "club": "Club América",
+          "country_club": "MEX"
+        },
+        {
+          "num": 2,
+          "name": "Jorge Sánchez",
+          "pos": "DEF",
+          "club": "Porto",
+          "country_club": "POR"
+        },
+        {
+          "num": 3,
+          "name": "Jesús Gallardo",
+          "pos": "DEF",
+          "club": "Monterrey",
+          "country_club": "MEX"
+        },
+        {
+          "num": 4,
+          "name": "Édson Álvarez",
+          "pos": "DEF",
+          "club": "West Ham United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 5,
+          "name": "Johan Vásquez",
+          "pos": "DEF",
+          "club": "Genoa",
+          "country_club": "ITA"
+        },
+        {
+          "num": 6,
+          "name": "César Montes",
+          "pos": "DEF",
+          "club": "Espanyol",
+          "country_club": "ESP"
+        },
+        {
+          "num": 12,
+          "name": "Kevin Álvarez",
+          "pos": "DEF",
+          "club": "Club América",
+          "country_club": "MEX"
+        },
+        {
+          "num": 19,
+          "name": "Jorge Ruvalcaba",
+          "pos": "DEF",
+          "club": "Tigres UANL",
+          "country_club": "MEX"
+        },
+        {
+          "num": 23,
+          "name": "Gerardo Arteaga",
+          "pos": "DEF",
+          "club": "Racing Club",
+          "country_club": "BEL"
+        },
+        {
+          "num": 7,
+          "name": "Jesús Corona",
+          "pos": "MID",
+          "club": "Sevilla FC",
+          "country_club": "ESP"
+        },
+        {
+          "num": 8,
+          "name": "Carlos Rodríguez",
+          "pos": "MID",
+          "club": "Cruz Azul",
+          "country_club": "MEX"
+        },
+        {
+          "num": 10,
+          "name": "Hirving Lozano",
+          "pos": "MID",
+          "club": "PSV Eindhoven",
+          "country_club": "NED"
+        },
+        {
+          "num": 14,
+          "name": "Marcelo Flores",
+          "pos": "MID",
+          "club": "Tigres UANL",
+          "country_club": "MEX"
+        },
+        {
+          "num": 15,
+          "name": "Orbelin Pineda",
+          "pos": "MID",
+          "club": "AEK Athens",
+          "country_club": "GRE"
+        },
+        {
+          "num": 16,
+          "name": "Luis Romo",
+          "pos": "MID",
+          "club": "Monterrey",
+          "country_club": "MEX"
+        },
+        {
+          "num": 17,
+          "name": "Eugenio Pizzuto",
+          "pos": "MID",
+          "club": "PSV Eindhoven",
+          "country_club": "NED"
+        },
+        {
+          "num": 18,
+          "name": "Chucky Lozano",
+          "pos": "MID",
+          "club": "San Diego FC",
+          "country_club": "USA"
+        },
+        {
+          "num": 9,
+          "name": "Raúl Jiménez",
+          "pos": "FWD",
+          "club": "Fulham FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 11,
+          "name": "Santiago Giménez",
+          "pos": "FWD",
+          "club": "AC Milan",
+          "country_club": "ITA"
+        },
+        {
+          "num": 20,
+          "name": "Alexis Vega",
+          "pos": "FWD",
+          "club": "Guadalajara",
+          "country_club": "MEX"
+        },
+        {
+          "num": 21,
+          "name": "Roberto Alvarado",
+          "pos": "FWD",
+          "club": "Guadalajara",
+          "country_club": "MEX"
+        },
+        {
+          "num": 24,
+          "name": "Julián Quiñones",
+          "pos": "FWD",
+          "club": "Club América",
+          "country_club": "MEX"
+        },
+        {
+          "num": 25,
+          "name": "Obed Vargas",
+          "pos": "MID",
+          "club": "Seattle Sounders",
+          "country_club": "USA"
+        },
+        {
+          "num": 26,
+          "name": "Uriel Antuna",
+          "pos": "FWD",
+          "club": "Guadalajara",
+          "country_club": "MEX"
+        }
+      ]
+    },
+    "Japón": {
+      "coach": "Hajime Moriyasu",
+      "players": [
+        {
+          "num": 1,
+          "name": "Shuichi Gonda",
+          "pos": "GK",
+          "club": "Shimizu S-Pulse",
+          "country_club": "JPN"
+        },
+        {
+          "num": 12,
+          "name": "Zion Suzuki",
+          "pos": "GK",
+          "club": "Club Brugge",
+          "country_club": "BEL"
+        },
+        {
+          "num": 23,
+          "name": "Ryosuke Kojima",
+          "pos": "GK",
+          "club": "Yokohama F. Marinos",
+          "country_club": "JPN"
+        },
+        {
+          "num": 2,
+          "name": "Miki Yamane",
+          "pos": "DEF",
+          "club": "Kawasaki Frontale",
+          "country_club": "JPN"
+        },
+        {
+          "num": 3,
+          "name": "Ko Itakura",
+          "pos": "DEF",
+          "club": "Borussia Mönchengladbach",
+          "country_club": "GER"
+        },
+        {
+          "num": 4,
+          "name": "Shogo Taniguchi",
+          "pos": "DEF",
+          "club": "Kawasaki Frontale",
+          "country_club": "JPN"
+        },
+        {
+          "num": 5,
+          "name": "Yuto Nagatomo",
+          "pos": "DEF",
+          "club": "FC Tokyo",
+          "country_club": "JPN"
+        },
+        {
+          "num": 13,
+          "name": "Takehiro Tomiyasu",
+          "pos": "DEF",
+          "club": "Arsenal FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 16,
+          "name": "Hiroki Ito",
+          "pos": "DEF",
+          "club": "VfB Stuttgart",
+          "country_club": "GER"
+        },
+        {
+          "num": 17,
+          "name": "Wataru Endo",
+          "pos": "DEF",
+          "club": "Liverpool FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 22,
+          "name": "Yukinari Sugawara",
+          "pos": "DEF",
+          "club": "AZ Alkmaar",
+          "country_club": "NED"
+        },
+        {
+          "num": 6,
+          "name": "Genki Haraguchi",
+          "pos": "MID",
+          "club": "Hannover 96",
+          "country_club": "GER"
+        },
+        {
+          "num": 7,
+          "name": "Ritsu Doan",
+          "pos": "MID",
+          "club": "SC Freiburg",
+          "country_club": "GER"
+        },
+        {
+          "num": 8,
+          "name": "Hidemasa Morita",
+          "pos": "MID",
+          "club": "Sporting CP",
+          "country_club": "POR"
+        },
+        {
+          "num": 10,
+          "name": "Shoya Nakajima",
+          "pos": "MID",
+          "club": "Portimonense SC",
+          "country_club": "POR"
+        },
+        {
+          "num": 14,
+          "name": "Junya Ito",
+          "pos": "MID",
+          "club": "Stade de Reims",
+          "country_club": "FRA"
+        },
+        {
+          "num": 15,
+          "name": "Gaku Shibasaki",
+          "pos": "MID",
+          "club": "Urawa Red Diamonds",
+          "country_club": "JPN"
+        },
+        {
+          "num": 19,
+          "name": "Kaoru Mitoma",
+          "pos": "MID",
+          "club": "Brighton & Hove Albion",
+          "country_club": "ENG"
+        },
+        {
+          "num": 24,
+          "name": "Daichi Kamada",
+          "pos": "MID",
+          "club": "Lazio",
+          "country_club": "ITA"
+        },
+        {
+          "num": 9,
+          "name": "Ayase Ueda",
+          "pos": "FWD",
+          "club": "Feyenoord",
+          "country_club": "NED"
+        },
+        {
+          "num": 11,
+          "name": "Takumi Minamino",
+          "pos": "FWD",
+          "club": "AS Monaco",
+          "country_club": "FRA"
+        },
+        {
+          "num": 18,
+          "name": "Koki Ogawa",
+          "pos": "FWD",
+          "club": "VfL Wolfsburg",
+          "country_club": "GER"
+        },
+        {
+          "num": 20,
+          "name": "Daizen Maeda",
+          "pos": "FWD",
+          "club": "Celtic FC",
+          "country_club": "SCO"
+        },
+        {
+          "num": 21,
+          "name": "Yuya Osako",
+          "pos": "FWD",
+          "club": "Vissel Kobe",
+          "country_club": "JPN"
+        },
+        {
+          "num": 25,
+          "name": "Shuto Machino",
+          "pos": "FWD",
+          "club": "Shonan Bellmare",
+          "country_club": "JPN"
+        },
+        {
+          "num": 26,
+          "name": "Keito Nakamura",
+          "pos": "FWD",
+          "club": "Stade de Reims",
+          "country_club": "FRA"
+        }
+      ]
+    },
+    "Marruecos": {
+      "coach": "Walid Regragui",
+      "players": [
+        {
+          "num": 1,
+          "name": "Yassine Bounou",
+          "pos": "GK",
+          "club": "Al Hilal",
+          "country_club": "KSA"
+        },
+        {
+          "num": 13,
+          "name": "Munir Mohamedi",
+          "pos": "GK",
+          "club": "Málaga CF",
+          "country_club": "ESP"
+        },
+        {
+          "num": 16,
+          "name": "Ahmed Reda Tagnaouti",
+          "pos": "GK",
+          "club": "Wydad AC",
+          "country_club": "MAR"
+        },
+        {
+          "num": 2,
+          "name": "Achraf Hakimi",
+          "pos": "DEF",
+          "club": "Paris Saint-Germain",
+          "country_club": "FRA"
+        },
+        {
+          "num": 3,
+          "name": "Noussair Mazraoui",
+          "pos": "DEF",
+          "club": "Manchester United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 4,
+          "name": "Romain Saïss",
+          "pos": "DEF",
+          "club": "Wolverhampton",
+          "country_club": "ENG"
+        },
+        {
+          "num": 5,
+          "name": "Nayef Aguerd",
+          "pos": "DEF",
+          "club": "West Ham United",
+          "country_club": "ENG"
+        },
+        {
+          "num": 6,
+          "name": "Sofyan Amrabat",
+          "pos": "DEF",
+          "club": "Fiorentina",
+          "country_club": "ITA"
+        },
+        {
+          "num": 15,
+          "name": "Yahia Attiat-Allah",
+          "pos": "DEF",
+          "club": "Zamalek SC",
+          "country_club": "EGY"
+        },
+        {
+          "num": 22,
+          "name": "Badr Benoun",
+          "pos": "DEF",
+          "club": "Al Qadsiah",
+          "country_club": "KSA"
+        },
+        {
+          "num": 23,
+          "name": "Achraf Dari",
+          "pos": "DEF",
+          "club": "RC Brest",
+          "country_club": "FRA"
+        },
+        {
+          "num": 7,
+          "name": "Hakim Ziyech",
+          "pos": "MID",
+          "club": "Galatasaray",
+          "country_club": "TUR"
+        },
+        {
+          "num": 8,
+          "name": "Azzedine Ounahi",
+          "pos": "MID",
+          "club": "Olympique Marseille",
+          "country_club": "FRA"
+        },
+        {
+          "num": 9,
+          "name": "Abdessamad Ezzalzouli",
+          "pos": "MID",
+          "club": "Real Betis",
+          "country_club": "ESP"
+        },
+        {
+          "num": 10,
+          "name": "Youssef En-Nesyri",
+          "pos": "FWD",
+          "club": "Fenerbahçe",
+          "country_club": "TUR"
+        },
+        {
+          "num": 11,
+          "name": "Soufiane Rahimi",
+          "pos": "FWD",
+          "club": "Al Ain",
+          "country_club": "UAE"
+        },
+        {
+          "num": 14,
+          "name": "Selim Amallah",
+          "pos": "MID",
+          "club": "Standard Liège",
+          "country_club": "BEL"
+        },
+        {
+          "num": 17,
+          "name": "Ilias Chair",
+          "pos": "MID",
+          "club": "Queens Park Rangers",
+          "country_club": "ENG"
+        },
+        {
+          "num": 18,
+          "name": "Youssef Aït Bennasser",
+          "pos": "MID",
+          "club": "AS Monaco",
+          "country_club": "FRA"
+        },
+        {
+          "num": 19,
+          "name": "Bilal El Khannouss",
+          "pos": "MID",
+          "club": "KRC Genk",
+          "country_club": "BEL"
+        },
+        {
+          "num": 20,
+          "name": "Zakaria Aboukhlal",
+          "pos": "FWD",
+          "club": "Toulouse FC",
+          "country_club": "FRA"
+        },
+        {
+          "num": 21,
+          "name": "Jawad El Yamiq",
+          "pos": "DEF",
+          "club": "Real Valladolid",
+          "country_club": "ESP"
+        },
+        {
+          "num": 24,
+          "name": "Hamza Igamane",
+          "pos": "FWD",
+          "club": "Rangers FC",
+          "country_club": "SCO"
+        },
+        {
+          "num": 25,
+          "name": "Yusuf Abdelhamid",
+          "pos": "DEF",
+          "club": "Stade de Reims",
+          "country_club": "FRA"
+        },
+        {
+          "num": 26,
+          "name": "Anass Zaroury",
+          "pos": "FWD",
+          "club": "Burnley FC",
+          "country_club": "ENG"
+        },
+        {
+          "num": 12,
+          "name": "Munir El Haddadi",
+          "pos": "FWD",
+          "club": "Almería",
+          "country_club": "ESP"
+        }
+      ]
+    }
+  }
+}
