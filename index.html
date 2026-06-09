@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -119,6 +118,21 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
 .player-name{flex:1;font-size:.87rem;font-weight:500;}
 .player-club{font-size:.72rem;color:var(--text2);}
 .player-cap{font-size:.7rem;color:var(--text3);text-align:right;}
+/* KO LARGE — semis, 3rd place, final */
+.ko-grid-lg { display:grid; grid-template-columns:repeat(auto-fill,minmax(380px,1fr)); gap:16px; }
+.ko-match-lg { background:var(--s1); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+.ko-match-lg .ko-match-header { background:var(--s2); padding:8px 18px; font-size:.75rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--text3); font-family:'Oswald',sans-serif; border-bottom:1px solid var(--border); }
+.ko-match-lg .ko-team { display:flex; align-items:center; justify-content:space-between; padding:14px 18px; border-bottom:1px solid rgba(44,44,68,.4); }
+.ko-match-lg .ko-team:last-of-type { border-bottom:none; }
+.ko-match-lg .ko-team-info { display:flex; align-items:center; gap:10px; flex:1; }
+.ko-match-lg .ko-team-flag { font-size:1.5rem; line-height:1; }
+.ko-match-lg .ko-team-name { font-size:1.1rem; font-weight:600; color:var(--text); }
+.ko-match-lg .ko-team-name.placeholder { color:var(--text3); font-style:italic; font-size:.9rem; font-weight:400; }
+.ko-match-lg .ko-score-inp { width:44px; height:38px; background:var(--bg); border:1px solid var(--border); border-radius:5px; color:var(--gold); font-family:'Oswald',sans-serif; font-size:1.3rem; font-weight:600; text-align:center; outline:none; transition:border-color .2s; }
+.ko-match-lg .ko-score-inp:focus { border-color:var(--gold); }
+.ko-match-lg .ko-score-inp:disabled { background:transparent; border-color:transparent; color:var(--text2); cursor:default; }
+.ko-match-lg .pen-row { padding:10px 18px; }
+.ko-match-lg .pen-badge { font-size:.65rem; padding:2px 7px; }
 /* PENALTIES */
 .pen-row{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 12px;background:rgba(255,71,87,.06);border-top:1px dashed rgba(255,71,87,.3);animation:fi .25s ease;}
 .pen-label{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);font-family:'Oswald',sans-serif;margin-right:4px;}
@@ -365,7 +379,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
   <!-- PHASE: SF (Semis) -->
   <div class="phase-content" id="phase-sf">
     <div class="ib"><strong>🏟 Semifinales:</strong> Introduce los resultados y pulsa <strong>"Actualizar 3º/4º"</strong> para ver los perdedores. Luego completa el partido de 3er puesto y pulsa "Ir a la Final".</div>
-    <div class="ko-grid" id="sfGrid"></div>
+    <div class="ko-grid ko-grid-lg" id="sfGrid"></div>
     <div class="ab-between" style="padding:12px 0 4px">
       <span></span>
       <button class="btn bo" onclick="refreshThirdPlace()" style="border-color:var(--teal);color:var(--teal)">🔄 Actualizar 3º/4º Puesto</button>
@@ -374,7 +388,7 @@ main{max-width:1400px;margin:0 auto;padding:24px 28px 60px;position:relative;z-i
       <div style="background:var(--s2);border-bottom:1px solid var(--border);padding:10px 16px;">
         <span class="ct" style="color:var(--text2)">🥉 3er y 4º Puesto</span>
       </div>
-      <div style="padding:12px;" id="p3Grid"></div>
+      <div style="padding:12px;" class="ko-grid-lg" id="p3Grid"></div>
     </div>
     <div class="ab-between">
       <button class="btn bo bsm" onclick="switchPhase('qf')">← Volver a cuartos</button>
@@ -820,7 +834,7 @@ function buildKOPhase(phase, groupScores){
         const p3saved=freshKo['p3']||{};
         const l1=getLoser(freshKo,'sf_1');
         const l2=getLoser(freshKo,'sf_2');
-        p3El.innerHTML=renderKOMatch('p3','3er y 4º Puesto',l1,l2,p3saved.s1??'',p3saved.s2??'',p3saved.penWin||null);
+        p3El.innerHTML=renderKOMatchLg('p3','3er y 4º Puesto',l1,l2,p3saved.s1??'',p3saved.s2??'',p3saved.penWin||null);
       }
     }
     // Final — read fresh from storage
@@ -829,12 +843,14 @@ function buildKOPhase(phase, groupScores){
       const f1=getWinner(freshKo,'sf_1');
       const f2=getWinner(freshKo,'sf_2');
       const fsaved=freshKo['final']||{};
-      document.getElementById('finalMatchWrap').innerHTML=renderKOMatch('final','Gran Final 🏆',f1,f2,fsaved.s1??'',fsaved.s2??'',fsaved.penWin||null);
+      document.getElementById('finalMatchWrap').innerHTML=renderKOMatchLg('final','Gran Final 🏆',f1,f2,fsaved.s1??'',fsaved.s2??'',fsaved.penWin||null);
       updateChampion();
       return;
     }
   }
-  el.innerHTML=slots.map(s=>renderKOMatch(s.id,s.label,s.t1,s.t2,s.s1,s.s2,s.penWin)).join('');
+  // sf uses large cards; others use normal
+  const renderer = phase==='sf' ? renderKOMatchLg : renderKOMatch;
+  el.innerHTML=slots.map(s=>renderer(s.id,s.label,s.t1,s.t2,s.s1,s.s2,s.penWin)).join('');
 }
  
 function resolveSlot(slot, groupScores, thirds){
@@ -916,7 +932,7 @@ function refreshThirdPlace(){
   const l2 = getLoser(freshKo, 'sf_2');
   const p3saved = freshKo['p3']||{};
   const p3El = document.getElementById('p3Grid');
-  if(p3El) p3El.innerHTML = renderKOMatch('p3','3er y 4º Puesto',l1,l2,p3saved.s1??'',p3saved.s2??'',p3saved.penWin||null);
+  if(p3El) p3El.innerHTML = renderKOMatchLg('p3','3er y 4º Puesto',l1,l2,p3saved.s1??'',p3saved.s2??'',p3saved.penWin||null);
   toast('✓ 3er/4º puesto actualizado','ok');
 }
  
@@ -951,7 +967,7 @@ function saveAndGoToFinal(){
   const f2 = getWinner(freshKo, 'sf_2');
   const fsaved = freshKo['final']||{};
   const finalEl = document.getElementById('finalMatchWrap');
-  if(finalEl) finalEl.innerHTML = renderKOMatch('final','Gran Final 🏆',f1,f2,fsaved.s1??'',fsaved.s2??'',fsaved.penWin||null);
+  if(finalEl) finalEl.innerHTML = renderKOMatchLg('final','Gran Final 🏆',f1,f2,fsaved.s1??'',fsaved.s2??'',fsaved.penWin||null);
   updateChampion();
   unlockPhase('final');
   document.getElementById('pBtn-sf')?.classList.add('done');
@@ -965,28 +981,29 @@ function renderKOMatch(id, label, t1, t2, s1, s2, penWin){
   const ph1 = !t1||t1.flag==='⚡' ? 'ko-team-name placeholder' : 'ko-team-name';
   const ph2 = !t2||t2.flag==='⚡' ? 'ko-team-name placeholder' : 'ko-team-name';
   const isTie = s1!==''&&s2!==''&&!isNaN(parseInt(s1))&&!isNaN(parseInt(s2))&&parseInt(s1)===parseInt(s2);
-  const penBadge1 = penWin==='t1' ? ' <span class="pen-badge">PEN</span>' : '';
-  const penBadge2 = penWin==='t2' ? ' <span class="pen-badge">PEN</span>' : '';
+  // pen-badge is OUTSIDE the name span so textContent of [data-name] is never polluted
+  const penBadge1 = penWin==='t1' ? '<span class="pen-badge">PEN</span>' : '';
+  const penBadge2 = penWin==='t2' ? '<span class="pen-badge">PEN</span>' : '';
   const penRow = (isTie||penWin) ? `
     <div class="pen-row">
       <span class="pen-label">⚽ Penaltis:</span>
       <button class="pen-btn${penWin==='t1'?' selected':''}" onclick="setPenWin('${id}','t1',this)">${f1} ${n1}</button>
       <button class="pen-btn${penWin==='t2'?' selected':''}" onclick="setPenWin('${id}','t2',this)">${f2} ${n2}</button>
     </div>` : '';
-  // Store name in data-name so we never read textContent (avoids pen-badge pollution)
+  // Use data-name on the span — badge is a SIBLING, not a child
   return `<div class="ko-match" id="komatch-${id}">
     <div class="ko-match-header">${label}${penWin?' <span style="color:var(--red);font-size:.65rem">· Pen.</span>':''}</div>
     <div class="ko-team">
       <div class="ko-team-info">
         <span class="ko-team-flag" data-flag="${f1}">${f1}</span>
-        <span class="${ph1}" data-name="${n1}">${n1}${penBadge1}</span>
+        <span class="${ph1}" data-name="${n1}">${n1}</span>${penBadge1}
       </div>
       <input class="ko-score-inp" type="number" min="0" max="30" data-kid="${id}_s1" value="${s1}" placeholder="—" oninput="onKOScoreInput('${id}')">
     </div>
     <div class="ko-team">
       <div class="ko-team-info">
         <span class="ko-team-flag" data-flag="${f2}">${f2}</span>
-        <span class="${ph2}" data-name="${n2}">${n2}${penBadge2}</span>
+        <span class="${ph2}" data-name="${n2}">${n2}</span>${penBadge2}
       </div>
       <input class="ko-score-inp" type="number" min="0" max="30" data-kid="${id}_s2" value="${s2}" placeholder="—" oninput="onKOScoreInput('${id}')">
     </div>
@@ -994,7 +1011,40 @@ function renderKOMatch(id, label, t1, t2, s1, s2, penWin){
   </div>`;
 }
  
-// Called live when a score input changes — show/hide penalty row on the fly
+// Large version for semis, 3rd place, final — same logic, different CSS class
+function renderKOMatchLg(id, label, t1, t2, s1, s2, penWin){
+  const n1 = t1?t1.name:'TBD';  const f1 = t1?t1.flag:'🏳️';
+  const n2 = t2?t2.name:'TBD';  const f2 = t2?t2.flag:'🏳️';
+  const ph1 = !t1||t1.flag==='⚡' ? 'ko-team-name placeholder' : 'ko-team-name';
+  const ph2 = !t2||t2.flag==='⚡' ? 'ko-team-name placeholder' : 'ko-team-name';
+  const isTie = s1!==''&&s2!==''&&!isNaN(parseInt(s1))&&!isNaN(parseInt(s2))&&parseInt(s1)===parseInt(s2);
+  const penBadge1 = penWin==='t1' ? '<span class="pen-badge">PEN</span>' : '';
+  const penBadge2 = penWin==='t2' ? '<span class="pen-badge">PEN</span>' : '';
+  const penRow = (isTie||penWin) ? `
+    <div class="pen-row">
+      <span class="pen-label">⚽ Penaltis:</span>
+      <button class="pen-btn${penWin==='t1'?' selected':''}" onclick="setPenWin('${id}','t1',this)">${f1} ${n1}</button>
+      <button class="pen-btn${penWin==='t2'?' selected':''}" onclick="setPenWin('${id}','t2',this)">${f2} ${n2}</button>
+    </div>` : '';
+  return `<div class="ko-match ko-match-lg" id="komatch-${id}">
+    <div class="ko-match-header">${label}${penWin?' <span style="color:var(--red);font-size:.65rem">· Pen.</span>':''}</div>
+    <div class="ko-team">
+      <div class="ko-team-info">
+        <span class="ko-team-flag" data-flag="${f1}">${f1}</span>
+        <span class="${ph1}" data-name="${n1}">${n1}</span>${penBadge1}
+      </div>
+      <input class="ko-score-inp" type="number" min="0" max="30" data-kid="${id}_s1" value="${s1}" placeholder="—" oninput="onKOScoreInput('${id}')">
+    </div>
+    <div class="ko-team">
+      <div class="ko-team-info">
+        <span class="ko-team-flag" data-flag="${f2}">${f2}</span>
+        <span class="${ph2}" data-name="${n2}">${n2}</span>${penBadge2}
+      </div>
+      <input class="ko-score-inp" type="number" min="0" max="30" data-kid="${id}_s2" value="${s2}" placeholder="—" oninput="onKOScoreInput('${id}')">
+    </div>
+    ${penRow}
+  </div>`;
+}
 function onKOScoreInput(matchId){
   const card = document.getElementById('komatch-'+matchId);
   if(!card) return;
@@ -1384,86 +1434,75 @@ function buildCountryGrid(){
   ).join('');
 }
  
+// Squads loaded from squads.json in same GitHub repo — no CORS, no API needed
+let SQUADS_DATA = null;
+ 
+async function loadSquadsJSON(){
+  if(SQUADS_DATA) return SQUADS_DATA;
+  // Try relative path first (works on GitHub Pages and local)
+  const urls = ['./squads.json', 'https://gusdavsan.github.io/mundial2026/squads.json'];
+  for(const url of urls){
+    try{
+      const r = await fetch(url);
+      if(r.ok){ SQUADS_DATA = await r.json(); return SQUADS_DATA; }
+    }catch(e){}
+  }
+  throw new Error('No se pudo cargar squads.json');
+}
+ 
 async function loadSquad(country, flag, btn){
   document.querySelectorAll('.country-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
  
-  // Show from cache if available
-  if(squadCache[country]){
-    renderSquad(country, flag, squadCache[country]);
-    return;
-  }
+  // Check in-memory cache first
+  if(squadCache[country]){ renderSquad(country, flag, squadCache[country]); return; }
  
   document.getElementById('squadDisplay').style.display='none';
   document.getElementById('squadLoading').style.display='block';
  
-  // Try Anthropic API via allorigins proxy (works from GitHub Pages)
   try{
-    const prompt = `Dame la convocatoria oficial de ${country} para el Mundial 2026 con los 26 jugadores definitivos entregados a FIFA el 1 de junio de 2026. Incluye: nombre completo, dorsal, posición (GK/DEF/MID/FWD) y club actual. Responde SOLO con JSON válido, sin texto extra ni markdown. Estructura: {"coach":"Nombre DT","players":[{"num":1,"name":"Nombre Apellido","pos":"GK","club":"Club FC","country_club":"ESP"},...]}`;
- 
-    // Use allorigins to bypass CORS on GitHub Pages
-    const apiPayload = {
-      model:'claude-sonnet-4-20250514',
-      max_tokens:1000,
-      tools:[{"type":"web_search_20250305","name":"web_search"}],
-      system:'Eres experto en el Mundial FIFA 2026. Responde SOLO con JSON válido, sin texto extra, sin markdown ni backticks. Posiciones: GK, DEF, MID, FWD. Incluye los 26 jugadores.',
-      messages:[{role:'user',content:prompt}]
-    };
- 
-    // First try direct (works on localhost / claude.ai artifacts)
-    let res, data;
-    try {
-      res = await fetch('https://api.anthropic.com/v1/messages',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(apiPayload)
-      });
-      data = await res.json();
-    } catch(corsErr) {
-      // CORS blocked — use allorigins proxy
-      const encoded = encodeURIComponent(JSON.stringify(apiPayload));
-      res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://api.anthropic.com/v1/messages')}`,{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(apiPayload)
-      });
-      data = await res.json();
+    // Try squads.json (static file, no CORS issues)
+    const data = await loadSquadsJSON();
+    const squad = data.squads?.[country];
+    if(squad){
+      squadCache[country] = squad;
+      localStorage.setItem(SQUAD_CACHE_KEY, JSON.stringify(squadCache));
+      renderSquad(country, flag, squad);
+      const indicator = btn.querySelector('.cache-ok');
+      if(!indicator) btn.insertAdjacentHTML('beforeend','<span class="cache-ok" style="font-size:.6rem;color:var(--green);margin-left:auto">✓</span>');
+      return;
     }
- 
-    let text='';
-    (data.content||[]).forEach(b=>{if(b.type==='text')text+=b.text;});
-    if(!text) throw new Error('Sin respuesta de la IA');
-    const parsed = JSON.parse(text.replace(/```json|```/g,'').trim());
-    squadCache[country] = parsed;
-    localStorage.setItem(SQUAD_CACHE_KEY, JSON.stringify(squadCache));
-    renderSquad(country, flag, parsed);
-    // Mark button as cached
-    const indicator = btn.querySelector('.cache-ok');
-    if(!indicator) btn.insertAdjacentHTML('beforeend','<span class="cache-ok" style="font-size:.6rem;color:var(--green);margin-left:auto">✓</span>');
+    // Not in JSON yet — show link to external source
+    throw new Error('not_in_json');
   } catch(e) {
     document.getElementById('squadLoading').style.display='none';
-    // Show friendly error with manual fallback
     document.getElementById('squadDisplay').style.display='block';
     document.getElementById('squadFlag').textContent = flag;
     document.getElementById('squadCountry').textContent = country.toUpperCase();
     document.getElementById('squadCoach').textContent = '';
-    const errMsg = `<div style="padding:20px;color:var(--text2);font-size:.85rem;line-height:1.8;">
-      <div style="color:var(--orange);margin-bottom:8px;">⚠️ No se pudo cargar automáticamente</div>
-      Esta función requiere conexión con la IA de Anthropic.<br>
-      Consulta la convocatoria oficial en:<br>
-      <a href="https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/teams" target="_blank" style="color:var(--teal)">→ fifa.com/es/tournaments</a><br>
-      <a href="https://colgadosporelfutbol.com/listas-convocados-mundial-2026/" target="_blank" style="color:var(--teal)">→ colgadosporelfutbol.com</a>
-    </div>`;
-    ['squad-gk','squad-def','squad-mid','squad-fwd'].forEach(id=>{
-      const el=document.getElementById(id);
-      if(el) el.innerHTML=id==='squad-gk'?errMsg:'';
+    const msg = e.message === 'not_in_json'
+      ? `<div style="padding:16px 20px;font-size:.85rem;color:var(--text2);line-height:2;">
+          <div style="color:var(--gold);margin-bottom:8px;font-family:'Oswald',sans-serif;letter-spacing:1px">CONVOCATORIA OFICIAL</div>
+          Los datos de <strong style="color:var(--text)">${country}</strong> aún no están incluidos en el archivo local.<br>
+          Consulta la lista oficial en:<br>
+          <a href="https://colgadosporelfutbol.com/listas-convocados-mundial-2026/" target="_blank" style="color:var(--teal)">→ colgadosporelfutbol.com (todas las 48 selecciones)</a><br>
+          <a href="https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/teams" target="_blank" style="color:var(--teal)">→ fifa.com oficial</a>
+        </div>`
+      : `<div style="padding:16px;color:var(--orange);font-size:.85rem;">
+          ⚠️ Error: ${e.message}<br>
+          <a href="https://colgadosporelfutbol.com/listas-convocados-mundial-2026/" target="_blank" style="color:var(--teal)">→ Ver convocatorias en colgadosporelfutbol.com</a>
+        </div>`;
+    ['squad-gk','squad-def','squad-mid','squad-fwd'].forEach((id,i)=>{
+      document.getElementById(id).innerHTML = i===0 ? msg : '';
     });
+    document.getElementById('fwdCard').style.display = 'none';
   }
 }
  
 function renderSquad(country, flag, data){
   document.getElementById('squadLoading').style.display='none';
   document.getElementById('squadDisplay').style.display='block';
+  document.getElementById('fwdCard').style.display='block';
   document.getElementById('squadFlag').textContent = flag;
   document.getElementById('squadCountry').textContent = country.toUpperCase();
   document.getElementById('squadCoach').textContent = data.coach ? `DT: ${data.coach}` : '';
