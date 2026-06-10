@@ -694,75 +694,122 @@ function switchGruposSub(sub){
 }
 async function loadGrupos(){
   const el=document.getElementById('standingsContent');
-  // Try API table
-  try{
-    const d=await v1(`/lookuptable.php?l=${LEAGUE_ID}&s=2026`);
-    const tbl=d.table||[];
-    if(tbl.length>0){
-      standingsData={};
-      tbl.forEach(r=>{
-        const g=r.strGroup||'?';
-        if(!standingsData[g])standingsData[g]=[];
-        standingsData[g].push(r);
-      });
-      el.innerHTML=renderStandingsHTML(standingsData);
-      return;
-    }
-  }catch{}
-  // Fallback: compute from API results / fixtures
+  // Step 1: Build standings from FIXTURES (always works, shows all 12 groups)
   computeStandingsFromFixtures();
+  // Step 2: Try to enrich with live API results (scores overlay)
+  try{
+    // Load today's finished matches to get live scores
+    const today=new Date().toISOString().slice(0,10);
+    const d=await v1(`/eventsday.php?d=${today}&l=${LEAGUE_ID}`);
+    (d.events||[]).forEach(e=>{
+      if(isFin(e.strStatus)||isLive(e.strStatus)){
+        const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
+        apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
+      }
+    });
+    // Also try the full season results for all past days
+    const d2=await v1(`/eventsseason.php?id=${LEAGUE_ID}&s=2026`);
+    (d2.events||[]).forEach(e=>{
+      if(isFin(e.strStatus)){
+        const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
+        apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
+      }
+    });
+    // Try API table — only trust it if it has proper group assignments (A-L)
+    const d3=await v1(`/lookuptable.php?l=${LEAGUE_ID}&s=2026`);
+    const tbl=d3.table||[];
+    if(tbl.length>0){
+      const tmp={};
+      tbl.forEach(r=>{const g=r.strGroup||'';if(g&&g!=='?')({tmp}[g]=(tmp[g]||[]).push(r));});
+      const hasProperGroups=Object.keys(tmp).length>=2;
+      if(hasProperGroups){
+        standingsData=tmp;
+        el.innerHTML=renderStandingsHTML(standingsData);
+        return;
+      }
+    }
+    // Recompute with newly loaded apiResults
+    computeStandingsFromFixtures();
+  }catch(e){
+    // Already showing fixture-based standings from Step 1 — no action needed
+    console.warn('Groups API load error:',e);
+  }
 }
 function computeStandingsFromFixtures(){
   const teams={};
+  // Initialize ALL 48 teams from FIXTURES regardless of results
   FIXTURES.filter(f=>f.group.startsWith('Group')).forEach(f=>{
-    const k=`${f.home}|${f.away}`;
-    const r=apiResults[k]||{};
-    const fin=isFin(r.status);
-    [f.home,f.away].forEach((t,i)=>{
+    [f.home,f.away].forEach(t=>{
       const key=`${f.group}|${t}`;
       if(!teams[key])teams[key]={name:t,flag:FLAGS[t]||'🏳️',group:f.group,p:0,w:0,d:0,l:0,gf:0,ga:0};
-      if(fin&&r.homeScore!==null&&r.homeScore!==undefined){
-        const mygf=i===0?parseInt(r.homeScore)||0:parseInt(r.awayScore)||0;
-        const myga=i===0?parseInt(r.awayScore)||0:parseInt(r.homeScore)||0;
-        teams[key].p++;teams[key].gf+=mygf;teams[key].ga+=myga;
-        if(mygf>myga)teams[key].w++;else if(mygf===myga)teams[key].d++;else teams[key].l++;
-      }
     });
+    // Overlay scores from apiResults if match is finished
+    const k1=`${f.home}|${f.away}`;
+    // TheSportsDB sometimes uses different team names — try both directions
+    const r=apiResults[k1]||apiResults[`${f.away}|${f.home}`]||{};
+    if(isFin(r.status)&&r.homeScore!==null&&r.homeScore!==undefined){
+      const isSwapped=!!apiResults[`${f.away}|${f.home}`]&&!apiResults[k1];
+      const h=parseInt(isSwapped?r.awayScore:r.homeScore)||0;
+      const a=parseInt(isSwapped?r.homeScore:r.awayScore)||0;
+      const hk=`${f.group}|${f.home}`;const ak=`${f.group}|${f.away}`;
+      teams[hk].p++;teams[hk].gf+=h;teams[hk].ga+=a;
+      teams[ak].p++;teams[ak].gf+=a;teams[ak].ga+=h;
+      if(h>a){teams[hk].w++;teams[ak].l++;}
+      else if(h===a){teams[hk].d++;teams[ak].d++;}
+      else{teams[ak].w++;teams[hk].l++;}
+    }
   });
   standingsData={};
   Object.values(teams).forEach(t=>{
     if(!standingsData[t.group])standingsData[t.group]=[];
     t.pts=t.w*3+t.d;t.gd=t.gf-t.ga;
+    t.intPoints=t.pts;t.intPlayed=t.p;t.intWin=t.w;t.intDraw=t.d;t.intLoss=t.l;
+    t.intGoalsFor=t.gf;t.intGoalsAgainst=t.ga;t.strBadge=null;t.strGroup=t.group;
     standingsData[t.group].push(t);
   });
   Object.keys(standingsData).forEach(g=>{
     standingsData[g].sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf);
-    standingsData[g].forEach((r,i)=>{r.intPoints=r.pts;r.intPlayed=r.p;r.intWin=r.w;r.intDraw=r.d;r.intLoss=r.l;r.intGoalsFor=r.gf;r.intGoalsAgainst=r.ga;r.strBadge=null;r.name=r.name;r.strGroup=g;});
   });
-  document.getElementById('standingsContent').innerHTML=renderStandingsHTML(standingsData);
+  const el=document.getElementById('standingsContent');
+  if(el)el.innerHTML=renderStandingsHTML(standingsData);
 }
 function renderStandingsHTML(data){
-  if(!Object.keys(data).length)return`<div class="empty"><div class="empty-icon">⏳</div><div class="empty-text">El torneo comienza el 11 de junio.<br>Las clasificaciones se actualizarán aquí.</div></div>`;
+  // Filter out invalid groups (like '?' or empty) — only keep proper group keys
+  const validKeys=Object.keys(data).filter(g=>g&&g!=='?'&&g!=='undefined');
+  if(!validKeys.length)return`<div class="empty"><div class="empty-icon">⏳</div><div class="empty-text">Cargando clasificación...</div></div>`;
   let html=`<div class="groups-grid">`;
-  Object.keys(data).sort().forEach(g=>{
-    const rows=[...data[g]].sort((a,b)=>parseInt(b.intPoints||0)-parseInt(a.intPoints||0)||(parseInt(b.intGoalsFor||0)-parseInt(b.intGoalsAgainst||0))-(parseInt(a.intGoalsFor||0)-parseInt(a.intGoalsAgainst||0)));
-    const dn=g.startsWith('Group')?`GRUPO ${g.slice(-1)}`:g.toUpperCase();
+  // Sort: 'Group A'→'Group L' or single letter 'A'→'L'
+  validKeys.sort((a,b)=>a.slice(-1).localeCompare(b.slice(-1))).forEach(g=>{
+    const rows=[...data[g]].sort((a,b)=>{
+      const pts=(x)=>parseInt(x.intPoints||x.pts||0);
+      const gd=(x)=>parseInt(x.intGoalsFor||x.gf||0)-parseInt(x.intGoalsAgainst||x.ga||0);
+      const gf=(x)=>parseInt(x.intGoalsFor||x.gf||0);
+      return pts(b)-pts(a)||gd(b)-gd(a)||gf(b)-gf(a);
+    });
+    // Get display name: 'Group A' → 'GRUPO A', 'A' → 'GRUPO A', '?' → skip
+    const letter=g.length===1?g:g.slice(-1);
+    const dn=`GRUPO ${letter}`;
     html+=`<div class="gc"><div class="gc-hdr"><span class="gc-name">${dn}</span></div>
     <table class="gtbl"><thead><tr><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GD</th><th>Pts</th></tr></thead><tbody>`;
     rows.forEach((r,i)=>{
-      const cls=i<2?'q'+(i+1):'';const dotClass=i<2?'g':i===2?'y':'';const dot=i<3?`<span class="qdot ${dotClass}"></span>`:'';
+      const cls=i<2?'q'+(i+1):'';
+      const dot=i<2?`<span class="qdot g"></span>`:i===2?`<span class="qdot y"></span>`:'';
+      const teamName=r.name||r.strTeam||'';
       const badge=r.strBadge?`<img class="tflag-sm" src="${r.strBadge}/tiny" onerror="this.style.display='none'" alt="">`:
-        `<span style="font-size:13px">${FLAGS[r.name]||'🏳️'}</span>`;
-      const gd=parseInt(r.intGoalsFor||0)-parseInt(r.intGoalsAgainst||0);
-      const gdStr=gd>0?`+${gd}`:gd;
-      html+=`<tr class="${cls}"><td><div class="tcell">${dot}${badge}<span>${r.name||r.strTeam}</span></div></td>
-      <td>${r.intPlayed||0}</td><td>${r.intWin||0}</td><td>${r.intDraw||0}</td><td>${r.intLoss||0}</td>
-      <td>${gdStr}</td><td class="ptscell">${r.intPoints||0}</td></tr>`;
+        `<span style="font-size:13px">${FLAGS[teamName]||'🏳️'}</span>`;
+      const gd=(parseInt(r.intGoalsFor||r.gf||0))-(parseInt(r.intGoalsAgainst||r.ga||0));
+      const gdStr=gd>0?`+${gd}`:String(gd);
+      html+=`<tr class="${cls}"><td><div class="tcell">${dot}${badge}<span>${teamName}</span></div></td>
+      <td>${r.intPlayed||r.p||0}</td><td>${r.intWin||r.w||0}</td><td>${r.intDraw||r.d||0}</td><td>${r.intLoss||r.l||0}</td>
+      <td>${gdStr}</td><td class="ptscell">${r.intPoints||r.pts||0}</td></tr>`;
     });
     html+=`</tbody></table></div>`;
   });
   html+=`</div><div style="margin-top:12px;font-size:11px;color:var(--muted);text-align:center">
-    <span style="color:var(--win)">●</span> Clasificado directo &nbsp;<span style="color:var(--draw)">●</span> Posible mejor 3º</div>`;
+    <span style="color:var(--win)">●</span> Clasificado directo &nbsp;
+    <span style="color:var(--draw)">●</span> Posible mejor 3º &nbsp;·&nbsp;
+    <button onclick="gruposLoaded=false;loadGrupos()" style="background:none;border:none;color:var(--gold);cursor:pointer;font-size:11px;font-weight:600">↻ Actualizar</button>
+  </div>`;
   return html;
 }
 function renderTerceros(){
