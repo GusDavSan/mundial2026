@@ -211,6 +211,38 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .groups-grid{grid-template-columns:1fr}
   .players-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
 }
+ 
+/* QUINIELA SCORE INPUTS */
+.qmatch{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;padding:8px 12px;border-top:1px solid var(--border)}
+.qmatch:first-of-type{border-top:none}
+.qmt{font-family:var(--disp);font-size:13px;letter-spacing:.3px;display:flex;align-items:center;gap:5px}
+.qmt.right{flex-direction:row-reverse;text-align:right}
+.qsc{display:flex;align-items:center;gap:5px;justify-content:center}
+.qsi{width:38px;height:34px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;color:var(--gold);font-family:var(--mono);font-size:16px;font-weight:700;text-align:center;outline:none;-moz-appearance:textfield}
+.qsi::-webkit-outer-spin-button,.qsi::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.qsi:focus{border-color:var(--gold);background:rgba(201,162,39,.06)}
+.qsi:disabled{opacity:.3;cursor:not-allowed}
+.qsep{font-family:var(--mono);font-weight:700;color:var(--muted)}
+.qstand{border-top:1px solid var(--border)}
+/* BRACKET SCORES */
+.b-scores{display:flex;align-items:center;gap:5px;justify-content:center;padding:6px 10px;border-top:1px solid var(--border);background:rgba(201,162,39,.03)}
+.pen-row{display:none;align-items:center;gap:8px;padding:6px 10px;border-top:1px solid var(--border);background:rgba(255,193,7,.04);flex-wrap:wrap}
+.pen-btn{background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--muted);cursor:pointer;font-size:11px;font-weight:600;padding:4px 10px;transition:all .2s}
+.pen-btn.active{background:rgba(201,162,39,.15);border-color:var(--gold);color:var(--gold)}
+.pen-btn:hover{color:var(--text);border-color:var(--border2)}
+/* CONFEDERATIONS */
+.conf-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.conf-hdr{background:rgba(201,162,39,.07);border-bottom:1px solid var(--border);padding:10px 14px;display:flex;align-items:center;gap:8px}
+.conf-name{font-family:var(--disp);font-size:15px;letter-spacing:2px;color:var(--gold)}
+.conf-label{font-size:11px;color:var(--muted)}
+.conf-teams{display:flex;flex-wrap:wrap;gap:0}
+.conf-team{display:flex;align-items:center;gap:7px;padding:9px 13px;cursor:pointer;transition:background .2s;border-top:1px solid var(--border);width:50%}
+.conf-team:nth-child(2n+1){border-right:1px solid var(--border)}
+.conf-team:nth-child(1),.conf-team:nth-child(2){border-top:none}
+.conf-team:hover{background:rgba(201,162,39,.06)}
+.conf-tname{font-family:var(--disp);font-size:13px;letter-spacing:.3px}
+/* QUINIELA CHAMPION */
+.q-champ{text-align:center;padding:20px;background:rgba(201,162,39,.06);border:1px solid var(--border2);border-radius:12px;margin-top:14px}
 </style>
 </head>
 <body>
@@ -261,11 +293,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
     <div id="golesContent"><div class="loading"><div class="spinner"></div><span class="loading-text">Cargando estadísticas...</span></div></div>
   </div>
   <div id="tab-equipos" style="display:none">
-    <div class="search-bar">
-      <input type="text" class="sinput" id="teamInput" placeholder="Buscar selección (ej: Spain, France...)" onkeydown="if(event.key==='Enter')searchTeam()">
-      <button class="btn" onclick="searchTeam()">Buscar</button>
-    </div>
-    <div id="teamContent"><div class="empty"><div class="empty-icon">🌍</div><div class="empty-text">Busca una selección para ver sus jugadores</div></div></div>
+    <div id="teamContent"></div>
   </div>
 </main>
  
@@ -613,7 +641,7 @@ async function loadCal(){
   buildRoundTabs();
   // Load API results for finished matches to overlay scores
   try{
-    const d=await v1(`/eventsseason.php?id=${LEAGUE_ID}&s=${SEASON||2026}`);
+    const d=await v1(`/eventsseason.php?id=${LEAGUE_ID}&s=2026`);
     (d.events||[]).forEach(e=>{
       const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
       apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
@@ -621,7 +649,6 @@ async function loadCal(){
   }catch{}
   renderCal();
 }
-const SEASON=2026;
 function buildRoundTabs(){
   const rounds=['all','Group A','Group B','Group C','Group D','Group E','Group F','Group G','Group H','Group I','Group J','Group K','Group L','Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL'];
   const labels={all:'Todos','Ronda de 32':'R32','Octavos':'Octavos','Cuartos':'Cuartos','Semifinal':'Semi','Tercer Puesto':'3er Puesto','FINAL':'Final'};
@@ -669,7 +696,7 @@ async function loadGrupos(){
   const el=document.getElementById('standingsContent');
   // Try API table
   try{
-    const d=await v1(`/lookuptable.php?l=${LEAGUE_ID}&s=${SEASON}`);
+    const d=await v1(`/lookuptable.php?l=${LEAGUE_ID}&s=2026`);
     const tbl=d.table||[];
     if(tbl.length>0){
       standingsData={};
@@ -774,116 +801,18 @@ function renderTerceros(){
 }
  
 // ══════════════════════════════════════════════
-// TAB: QUINIELA
+// BRACKET STRUCTURE (global - used by quiniela + real bracket)
 // ══════════════════════════════════════════════
-let qSub='qgroups';
-function switchQSub(sub){
-  qSub=sub;
-  document.querySelectorAll('#tab-quiniela .q-stab').forEach((t,i)=>{
-    t.classList.toggle('active',['qgroups','qterceros','qbracket'][i]===sub);
-  });
-  ['qgroups','qterceros','qbracket'].forEach(id=>{
-    document.getElementById(id).style.display=id===sub?'':'none';
-  });
-  if(sub==='qgroups')renderQGroups();
-  if(sub==='qterceros')renderQTerceros();
-  if(sub==='qbracket')renderQBracket();
-}
-function getQ(){
-  try{return JSON.parse(localStorage.getItem('mw26_q')||'{}')}catch{return{}}
-}
-function saveQ(data){
-  const cur=getQ();
-  localStorage.setItem('mw26_q',JSON.stringify(Object.assign(cur,data)));
-}
-function getQGroups(){
-  const q=getQ();
-  const groups=q.groups||{};
-  // Fill defaults if not set
-  Object.keys(GROUPS).forEach(g=>{
-    if(!groups[g])groups[g]=[...GROUPS[g]];
-  });
-  return groups;
-}
- 
-function renderQGroups(){
-  const el=document.getElementById('qgroups');
-  const groups=getQGroups();
-  let html=`<div class="info-box">Reordena los equipos de cada grupo según tu predicción. El 1º y 2º clasifican directamente; el 3º compite como mejor tercero.</div>`;
-  Object.keys(GROUPS).sort().forEach(g=>{
-    html+=`<div class="qg-card">
-    <div class="qg-hdr"><span>GRUPO ${g}</span><span style="font-size:10px;font-weight:400;color:var(--muted)">Arrastra o usa flechas</span></div>`;
-    const teams=groups[g]||GROUPS[g];
-    teams.forEach((t,i)=>{
-      const rankCls=['rank-1','rank-2','rank-3','rank-4'][i];
-      const rankLbl=['1º','2º','3º','4º'][i];
-      html+=`<div class="qg-team" id="qt-${g}-${i}">
-        <span class="qg-rank ${rankCls}">${rankLbl}</span>
-        <span class="qg-tname"><span style="font-size:16px">${FLAGS[t]||'🏳️'}</span>${t}</span>
-        <div class="qg-arrows">
-          <button class="arr-btn" onclick="moveQ('${g}',${i},-1)" ${i===0?'disabled':''}">▲</button>
-          <button class="arr-btn" onclick="moveQ('${g}',${i},1)" ${i===3?'disabled':''}">▼</button>
-        </div>
-      </div>`;
-    });
-    html+='</div>';
-  });
-  el.innerHTML=html;
-}
-function moveQ(group,idx,dir){
-  const groups=getQGroups();
-  const arr=groups[group];
-  const ni=idx+dir;
-  if(ni<0||ni>3)return;
-  [arr[idx],arr[ni]]=[arr[ni],arr[idx]];
-  saveQ({groups});
-  renderQGroups();
-  // Refresh terceros and bracket if open
-  if(qSub==='qterceros')renderQTerceros();
-  if(qSub==='qbracket')renderQBracket();
-}
- 
-function renderQTerceros(){
-  const el=document.getElementById('qterceros');
-  const groups=getQGroups();
-  const q=getQ();
-  const selectedTerceros=q.terceros||[];
-  const terceroTeams=Object.keys(GROUPS).sort().map(g=>({team:groups[g][2],group:g})).filter(t=>t.team);
-  let html=`<div class="info-box">De los 12 equipos que quedarán terceros en su grupo, selecciona los 8 que crees que clasificarán como mejor tercero.</div>
-  <div style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:10px">Seleccionados: <span id="tercCount">${selectedTerceros.length}</span>/8</div>
-  <div class="gc">`;
-  terceroTeams.forEach(({team,group},i)=>{
-    const checked=selectedTerceros.includes(team);
-    html+=`<div class="mt-team${i>0?'':''}" style="${i===0?'border-top:none':''}">
-      <input type="checkbox" class="mt-chk" id="tck-${team}" ${checked?'checked':''} onchange="toggleTercero('${team}',this.checked)">
-      <span class="mt-pos">Grp ${group}</span>
-      <span class="mt-flag">${FLAGS[team]||'🏳️'}</span>
-      <label for="tck-${team}" class="mt-name" style="cursor:pointer">${team}</label>
-      ${checked?`<span class="mt-qualify">✓ SELEC.</span>`:''}
-    </div>`;
-  });
-  html+='</div>';
-  el.innerHTML=html;
-}
-function toggleTercero(team,checked){
-  const q=getQ();
-  let t=q.terceros||[];
-  if(checked){if(t.length>=8){document.getElementById(`tck-${team}`).checked=false;return;}t.push(team);}
-  else t=t.filter(x=>x!==team);
-  saveQ({terceros:t});
-  renderQTerceros();
-}
- 
-// Bracket structure: R32 slot → [teamA_source, teamB_source]
-// source format: '1A' = 1st Group A, '2B' = 2nd Group B, 'T1' = 1st best tercero
 const BRACKET=[
   {round:'R32',id:'r32',matches:[
-    {slot:1,srcA:'1A',srcB:'T1'},{slot:2,srcA:'1B',srcB:'2A'},{slot:3,srcA:'1C',srcB:'T2'},
-    {slot:4,srcA:'1D',srcB:'2C'},{slot:5,srcA:'1E',srcB:'T3'},{slot:6,srcA:'1F',srcB:'2E'},
-    {slot:7,srcA:'1G',srcB:'T4'},{slot:8,srcA:'1H',srcB:'2G'},{slot:9,srcA:'1I',srcB:'T5'},
-    {slot:10,srcA:'1J',srcB:'2I'},{slot:11,srcA:'1K',srcB:'T6'},{slot:12,srcA:'1L',srcB:'2K'},
-    {slot:13,srcA:'2B',srcB:'T7'},{slot:14,srcA:'2D',srcB:'T8'},{slot:15,srcA:'2F',srcB:'2H'},
-    {slot:16,srcA:'2J',srcB:'2L'}
+    {slot:1,srcA:'1A',srcB:'T1'},{slot:2,srcA:'1B',srcB:'2A'},
+    {slot:3,srcA:'1C',srcB:'T2'},{slot:4,srcA:'1D',srcB:'2C'},
+    {slot:5,srcA:'1E',srcB:'T3'},{slot:6,srcA:'1F',srcB:'2E'},
+    {slot:7,srcA:'1G',srcB:'T4'},{slot:8,srcA:'1H',srcB:'2G'},
+    {slot:9,srcA:'1I',srcB:'T5'},{slot:10,srcA:'1J',srcB:'2I'},
+    {slot:11,srcA:'1K',srcB:'T6'},{slot:12,srcA:'1L',srcB:'2K'},
+    {slot:13,srcA:'2B',srcB:'T7'},{slot:14,srcA:'2D',srcB:'T8'},
+    {slot:15,srcA:'2F',srcB:'2H'},{slot:16,srcA:'2J',srcB:'2L'}
   ]},
   {round:'R16',id:'r16',matches:[
     {slot:1,fromA:'r32_1',fromB:'r32_2'},{slot:2,fromA:'r32_3',fromB:'r32_4'},
@@ -903,91 +832,277 @@ const BRACKET=[
 ];
 const ROUND_LABELS={'R32':'Ronda de 32','R16':'Octavos de Final','QF':'Cuartos de Final','SF':'Semifinal','FINAL':'⚽ FINAL','TERCER PUESTO':'3er Puesto'};
  
-function resolveSrc(src,groups,terceros,picks){
-  const rank=parseInt(src[0])-1;
-  if(src.startsWith('T')){
-    const ti=parseInt(src[1])-1;
-    return terceros[ti]||null;
-  }
-  const g=src[1];
-  return(groups[g]||GROUPS[g])[rank]||null;
+// TAB: QUINIELA
+// ══════════════════════════════════════════════
+let qSub='qgroups';
+const escQ=s=>(s||'').replace(/'/g,"\\'");
+ 
+// Storage
+function getQ(){try{return JSON.parse(localStorage.getItem('mw26_q')||'{}')}catch{return{}}}
+function saveQ(patch){localStorage.setItem('mw26_q',JSON.stringify(Object.assign(getQ(),patch)))}
+ 
+// Sub-tab switching
+function switchQSub(sub){
+  qSub=sub;
+  document.querySelectorAll('#tab-quiniela .q-stab').forEach((t,i)=>{
+    t.classList.toggle('active',['qgroups','qterceros','qbracket'][i]===sub);
+  });
+  ['qgroups','qterceros','qbracket'].forEach(id=>{
+    document.getElementById(id).style.display=id===sub?'block':'none';
+  });
+  if(sub==='qgroups')renderQGroups();
+  if(sub==='qterceros')renderQTerceros();
+  if(sub==='qbracket')renderQBracket();
 }
-function resolveFrom(key,picks,groups,terceros){
-  if(key.endsWith('_loser')){
-    const rk=key.replace('_loser','');
-    const[round,slot]=rk.split('_');
-    // Get the winner and return the other team
-    const w=picks[round]&&picks[round][slot];
-    // Find the match to get both teams
-    const roundDef=BRACKET.find(r=>r.id===round);
-    if(!roundDef)return null;
-    const match=roundDef.matches.find(m=>m.slot===parseInt(slot));
-    if(!match)return null;
-    const tA=getTeamForMatch(match,round,picks,groups,terceros);
-    if(!tA)return null;
-    return w===tA[0]?tA[1]:tA[0];
-  }
-  const[round,slot]=key.split('_');
-  return (picks[round]&&picks[round][slot])||null;
+ 
+// ── GROUP SCORES ────────────────────────────────
+function getGScore(fxId){const q=getQ();return(q.gscores&&q.gscores[fxId])||{h:'',a:''};}
+function qSI(fxId,side,val){
+  const q=getQ();if(!q.gscores)q.gscores={};
+  if(!q.gscores[fxId])q.gscores[fxId]={h:'',a:''};
+  q.gscores[fxId][side]=val;
+  saveQ({gscores:q.gscores});
+  const fx=FIXTURES.find(f=>f.id===fxId);
+  if(fx){const g=fx.group.slice(-1);const el=document.getElementById('qstand-'+g);if(el)el.innerHTML=renderQStand(g);}
 }
-function getTeamForMatch(match,round,picks,groups,terceros){
-  if(match.srcA){
-    const a=resolveSrc(match.srcA,groups,terceros,picks);
-    const b=resolveSrc(match.srcB,groups,terceros,picks);
-    return[a,b];
-  }
-  const a=resolveFrom(match.fromA,picks,groups,terceros);
-  const b=resolveFrom(match.fromB,picks,groups,terceros);
-  return[a,b];
+ 
+// ── KNOCKOUT SCORES ─────────────────────────────
+function getKScore(rid,slot){const q=getQ();return(q.kscores&&q.kscores[rid+'_'+slot])||{h:'',a:'',pen:null};}
+function saveKScore(rid,slot,patch){
+  const q=getQ();if(!q.kscores)q.kscores={};
+  q.kscores[rid+'_'+slot]=Object.assign({h:'',a:'',pen:null},q.kscores[rid+'_'+slot]||{},patch);
+  saveQ({kscores:q.kscores});
 }
+function qKI(rid,slot,side,val){
+  saveKScore(rid,slot,{[side]:val});
+  updateBracketMatch(rid,slot);cascadeBracketUpdate(rid,slot);
+}
+function qSetPen(rid,slot,team){
+  const ks=getKScore(rid,slot);
+  saveKScore(rid,slot,{pen:ks.pen===team?null:team});
+  updateBracketMatch(rid,slot);cascadeBracketUpdate(rid,slot);
+}
+ 
+// ── STANDINGS CALCULATION ───────────────────────
+function computeQStandings(g){
+  const st={};GROUPS[g].forEach(t=>{st[t]={name:t,p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0};});
+  FIXTURES.filter(f=>f.group==='Group '+g).forEach(m=>{
+    const s=getGScore(m.id);if(s.h===''||s.a==='')return;
+    const h=parseInt(s.h)||0,a=parseInt(s.a)||0;
+    st[m.home].p++;st[m.home].gf+=h;st[m.home].ga+=a;
+    st[m.away].p++;st[m.away].gf+=a;st[m.away].ga+=h;
+    if(h>a){st[m.home].w++;st[m.home].pts+=3;st[m.away].l++;}
+    else if(h===a){st[m.home].d++;st[m.home].pts++;st[m.away].d++;st[m.away].pts++;}
+    else{st[m.away].w++;st[m.away].pts+=3;st[m.home].l++;}
+  });
+  return Object.values(st).sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)||b.gf-a.gf);
+}
+function renderQStand(g){
+  const st=computeQStandings(g);
+  let h='<table class="gtbl"><thead><tr><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>DG</th><th>Pts</th></tr></thead><tbody>';
+  st.forEach((t,i)=>{
+    const cls=i<2?'q'+(i+1):'';const dot=i<2?'<span class="qdot g"></span>':i===2?'<span class="qdot y"></span>':'';
+    h+='<tr class="'+cls+'"><td><div class="tcell">'+dot+'<span style="font-size:12px">'+(FLAGS[t.name]||'🏳️')+'</span><span>'+t.name+'</span></div></td>'+
+       '<td>'+t.p+'</td><td>'+t.w+'</td><td>'+t.d+'</td><td>'+t.l+'</td>'+
+       '<td>'+(t.gf-t.ga>0?'+':'')+(t.gf-t.ga)+'</td><td class="ptscell">'+t.pts+'</td></tr>';
+  });
+  return h+'</tbody></table>';
+}
+ 
+// ── MEJOR TERCERO ───────────────────────────────
+function computeQTerceros(){
+  const list=[];
+  Object.keys(GROUPS).sort().forEach(g=>{
+    const st=computeQStandings(g);
+    if(st[2])list.push({name:st[2].name,group:g,pts:st[2].pts,gd:st[2].gf-st[2].ga,gf:st[2].gf});
+  });
+  return list.sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf);
+}
+ 
+// ── BRACKET RESOLUTION ──────────────────────────
+function getMatchDef(rid,slot){
+  const rd=BRACKET.find(r=>r.id===rid);return rd&&rd.matches.find(m=>m.slot===slot)||null;
+}
+function qResolveTeam(src){
+  if(!src)return null;
+  if(src.match(/^[12][A-L]$/))return computeQStandings(src[1])[parseInt(src[0])-1]?.name||null;
+  if(src.match(/^T\d+$/))return computeQTerceros()[parseInt(src.slice(1))-1]?.name||null;
+  if(src.endsWith('_loser')){
+    const base=src.replace('_loser','');const lu=base.lastIndexOf('_');
+    const rid=base.slice(0,lu);const slot=parseInt(base.slice(lu+1));
+    const w=getKnockoutWinner(rid,slot);
+    const m=getMatchDef(rid,slot);if(!m)return null;
+    const tA=qResolveTeam(m.srcA||m.fromA);const tB=qResolveTeam(m.srcB||m.fromB);
+    if(!w||!tA||!tB)return null;
+    return w===tA?tB:tA;
+  }
+  const lu=src.lastIndexOf('_');if(lu<0)return null;
+  const rid=src.slice(0,lu);const slot=parseInt(src.slice(lu+1));
+  return getKnockoutWinner(rid,slot);
+}
+function getKnockoutWinner(rid,slot){
+  const ks=getKScore(rid,slot);if(ks.h===''||ks.a==='')return null;
+  const h=parseInt(ks.h),a=parseInt(ks.a);
+  if(h===a)return ks.pen||null;
+  const m=getMatchDef(rid,slot);if(!m)return null;
+  const tA=qResolveTeam(m.srcA||m.fromA);const tB=qResolveTeam(m.srcB||m.fromB);
+  return h>a?tA:tB;
+}
+ 
+// ── RENDER FUNCTIONS ────────────────────────────
+function renderQGroups(){
+  const el=document.getElementById('qgroups');
+  let html='<div class="info-box">Introduce los marcadores de los partidos. Las clasificaciones y el bracket de eliminatoria se actualizan automáticamente.</div>';
+  Object.keys(GROUPS).sort().forEach(g=>{
+    html+='<div class="qg-card"><div class="qg-hdr"><span>GRUPO '+g+'</span></div>';
+    FIXTURES.filter(f=>f.group==='Group '+g).forEach(m=>{
+      const s=getGScore(m.id);
+      html+='<div class="qmatch">'+
+        '<div class="qmt">'+(FLAGS[m.home]||'🏳️')+' <span>'+m.home+'</span></div>'+
+        '<div class="qsc">'+
+          '<input type="number" id="qsh_'+m.id+'" class="qsi" min="0" max="30" value="'+s.h+'" oninput="qSI('+m.id+',\'h\',this.value)">'+
+          '<span class="qsep">-</span>'+
+          '<input type="number" id="qsa_'+m.id+'" class="qsi" min="0" max="30" value="'+s.a+'" oninput="qSI('+m.id+',\'a\',this.value)">'+
+        '</div>'+
+        '<div class="qmt right"><span>'+m.away+'</span> '+(FLAGS[m.away]||'🏳️')+'</div></div>';
+    });
+    html+='<div id="qstand-'+g+'" class="qstand">'+renderQStand(g)+'</div></div>';
+  });
+  // Summary + go to bracket button
+  const allDone = FIXTURES.filter(f=>f.group.startsWith('Group')).every(m=>{const s=getGScore(m.id);return s.h!==''&&s.a!=='';});
+  const partial = FIXTURES.filter(f=>f.group.startsWith('Group')).filter(m=>{const s=getGScore(m.id);return s.h!==''&&s.a!=='';}).length;
+  const total   = FIXTURES.filter(f=>f.group.startsWith('Group')).length;
+  html+='<div style="margin-top:14px;padding:14px;background:rgba(201,162,39,.06);border:1px solid var(--border2);border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">';
+  html+='<div><div style="font-family:var(--disp);font-size:14px;letter-spacing:1px;color:var(--gold)">PARTIDOS INTRODUCIDOS</div>';
+  html+='<div style="font-size:12px;color:var(--muted);margin-top:3px">'+partial+' de '+total+' partidos'+(allDone?' ✅ Fase de grupos completa':'')+'</div></div>';
+  html+='<div style="display:flex;gap:8px;flex-wrap:wrap">';
+  html+='<button class="btn btn-sm" onclick="switchQSub(\'qterceros\')">Mejor Tercero \u2192</button>';
+  html+='<button class="btn btn-sm" style="background:rgba(201,162,39,.2);font-weight:700" onclick="switchQSub(\'qbracket\')">Crear Bracket \u2192</button>';
+  html+='</div></div>';
+  el.innerHTML=html;
+}
+ 
+function renderQTerceros(){
+  const el=document.getElementById('qterceros');
+  const list=computeQTerceros();
+  let html='<div class="info-box">Los 8 mejores terceros de los 12 grupos clasifican a la Ronda de 32. Criterios: Pts → DG → GF → Fair play → Ranking FIFA.</div>';
+  html+='<div class="gc"><div class="gc-hdr"><span class="gc-name">CLASIFICACIÓN TERCEROS</span><span style="font-size:11px;color:var(--muted)">8 clasifican</span></div>';
+  html+='<table class="tercero-table"><thead><tr><th>#</th><th>Equipo</th><th>Grp</th><th>Pts</th><th>DG</th><th>GF</th></tr></thead><tbody>';
+  if(!list.length){
+    html+='<tr><td colspan="6" style="text-align:center;padding:20px;color:var(--muted)">Introduce los marcadores de grupos para ver la clasificación</td></tr>';
+  } else {
+    list.forEach((t,i)=>{
+      const q=i<8;
+      html+='<tr class="'+(q?'q-in':'')+'">';
+      html+='<td><span class="rank-num">'+(i+1)+'</span></td>';
+      html+='<td><div class="tcell"><span style="font-size:13px">'+(FLAGS[t.name]||'🏳️')+'</span><span>'+t.name+'</span>'+(q?'<span style="margin-left:4px;font-size:9px;font-weight:700;color:var(--win)">✓ CLASIFICA</span>':'')+'</div></td>';
+      html+='<td style="font-family:var(--mono);font-size:12px;color:var(--gold)">'+t.group+'</td>';
+      html+='<td style="font-family:var(--mono);font-weight:700">'+t.pts+'</td>';
+      html+='<td style="font-family:var(--mono)">'+(t.gd>0?'+':'')+t.gd+'</td>';
+      html+='<td style="font-family:var(--mono)">'+t.gf+'</td>';
+      html+='</tr>';
+    });
+  }
+  html+='</tbody></table></div>';
+  el.innerHTML=html;
+}
+ 
 function renderQBracket(){
   const el=document.getElementById('qbracket');
-  const q=getQ();
-  const groups=getQGroups();
-  const terceros=q.terceros||[];
-  const picks=q.bracketPicks||{};
-  let html=`<div class="info-box">Haz clic en un equipo para seleccionarlo como ganador. El ganador avanza automáticamente a la siguiente ronda.</div>`;
-  BRACKET.forEach(({round,id,matches})=>{
-    html+=`<div class="bracket-round"><div class="bracket-round-title">${ROUND_LABELS[round]||round}</div>`;
-    matches.forEach(match=>{
-      const[tA,tB]=getTeamForMatch(match,id,picks,groups,terceros);
-      const winner=(picks[id]&&picks[id][match.slot])||null;
-      const isTBD=!tA&&!tB;
-      html+=`<div class="b-match">
-        <div class="b-match-label">Partido ${match.slot}</div>
-        ${[tA,tB].map(t=>{
-          const isW=t&&winner===t;
-          const cls=t?`b-team${isW?' winner':''}`:'b-team tbd';
-          return`<div class="${cls}" onclick="${t?`pickBracket('${id}',${match.slot},'${t.replace(/'/g,"\\'")}')`:''}" >
-            <span style="font-size:14px">${t?FLAGS[t]||'🏳️':'🏳️'}</span>
-            <span class="b-tname">${t||'Por definir'}</span>
-            <span class="b-check">✓</span>
-          </div>`;
-        }).join(`<div style="height:1px;background:var(--border)"></div>`)}
-      </div>`;
+  let html='<div class="info-box">Los equipos se auto-rellenan de los grupos. Introduce el marcador de cada partido; si hay empate, selecciona el ganador en penaltis.</div>';
+  BRACKET.forEach(function(rd){
+    const round=rd.round;const id=rd.id;const matches=rd.matches;
+    html+='<div class="bracket-round"><div class="bracket-round-title">'+(ROUND_LABELS[round]||round)+'</div>';
+    matches.forEach(function(match){
+      const tA=qResolveTeam(match.srcA||match.fromA)||null;
+      const tB=qResolveTeam(match.srcB||match.fromB)||null;
+      const ks=getKScore(id,match.slot);
+      const winner=getKnockoutWinner(id,match.slot);
+      const isDraw=ks.h!==''&&ks.a!==''&&parseInt(ks.h)===parseInt(ks.a);
+      const key=id+'_'+match.slot;
+      const penTA=tA?('<button class="pen-btn'+(ks.pen===tA?' active':'')+'" onclick="qSetPen(\''+id+'\','+match.slot+',\''+escQ(tA)+'\')">'+FLAGS[tA]+' '+tA+'</button>'):'';
+      const penTB=tB?('<button class="pen-btn'+(ks.pen===tB?' active':'')+'" onclick="qSetPen(\''+id+'\','+match.slot+',\''+escQ(tB)+'\')">'+FLAGS[tB]+' '+tB+'</button>'):'';
+      html+=
+        '<div class="b-match" id="bm-'+key+'">'+
+          '<div class="b-match-label">Partido '+match.slot+'</div>'+
+          '<div id="bta-'+key+'" class="b-team'+(tA?'':' tbd')+(winner&&winner===tA?' winner':'')+'">'+
+            '<span id="bfa-'+key+'">'+(tA?FLAGS[tA]||'🏳️':'🏳️')+'</span>'+
+            '<span class="b-tname" id="bna-'+key+'">'+(tA||'Por definir')+'</span>'+
+            '<span class="b-check">✓</span>'+
+          '</div>'+
+          '<div class="b-scores">'+
+            '<input type="number" id="bsh-'+key+'" class="qsi" min="0" max="30" value="'+ks.h+'" '+((!tA||!tB)?'disabled':'')+' oninput="qKI(\''+id+'\','+match.slot+',\'h\',this.value)">'+
+            '<span class="qsep">-</span>'+
+            '<input type="number" id="bsa-'+key+'" class="qsi" min="0" max="30" value="'+ks.a+'" '+((!tA||!tB)?'disabled':'')+' oninput="qKI(\''+id+'\','+match.slot+',\'a\',this.value)">'+
+          '</div>'+
+          '<div id="btb-'+key+'" class="b-team'+(tB?'':' tbd')+(winner&&winner===tB?' winner':'')+'">'+
+            '<span id="bfb-'+key+'">'+(tB?FLAGS[tB]||'🏳️':'🏳️')+'</span>'+
+            '<span class="b-tname" id="bnb-'+key+'">'+(tB||'Por definir')+'</span>'+
+            '<span class="b-check">✓</span>'+
+          '</div>'+
+          '<div id="bpen-'+key+'" class="pen-row" style="display:'+(isDraw&&tA&&tB?'flex':'none')+'">'+
+            '<span style="font-size:11px;color:var(--muted)">Penaltis:</span>'+penTA+penTB+
+          '</div>'+
+        '</div>';
     });
     html+='</div>';
   });
-  // Show champion
-  const finPicks=picks['fin'];
-  const champ=finPicks&&finPicks[1];
-  if(champ)html+=`<div style="text-align:center;padding:20px;background:rgba(201,162,39,.08);border:1px solid var(--border2);border-radius:10px;margin-top:10px">
-    <div style="font-size:36px">${FLAGS[champ]||'🏆'}</div>
-    <div style="font-family:var(--disp);font-size:20px;letter-spacing:2px;color:var(--gold);margin-top:6px">${champ}</div>
-    <div style="font-size:11px;color:var(--muted);margin-top:2px">Tu campeón del Mundial 2026</div>
-  </div>`;
+  const champ=getKnockoutWinner('fin',1);
+  html+='<div id="q-champion" class="q-champ" style="display:'+(champ?'block':'none')+'">';
+  if(champ)html+='<div style="font-size:36px">'+(FLAGS[champ]||'🏆')+'</div>'+
+    '<div style="font-family:var(--disp);font-size:20px;letter-spacing:2px;color:var(--gold);margin-top:6px">'+champ+'</div>'+
+    '<div style="font-size:11px;color:var(--muted);margin-top:2px">Tu campeón del Mundial 2026 🏆</div>';
+  html+='</div>';
   el.innerHTML=html;
 }
-function pickBracket(round,slot,team){
-  const q=getQ();
-  if(!q.bracketPicks)q.bracketPicks={};
-  if(!q.bracketPicks[round])q.bracketPicks[round]={};
-  q.bracketPicks[round][slot]=team;
-  saveQ({bracketPicks:q.bracketPicks});
-  renderQBracket();
+ 
+// ── BRACKET INCREMENTAL UPDATES ─────────────────
+function updateBracketMatch(rid,slot){
+  const key=rid+'_'+slot;
+  const m=getMatchDef(rid,slot);if(!m)return;
+  const tA=qResolveTeam(m.srcA||m.fromA);const tB=qResolveTeam(m.srcB||m.fromB);
+  const ks=getKScore(rid,slot);const winner=getKnockoutWinner(rid,slot);
+  const isDraw=ks.h!==''&&ks.a!==''&&parseInt(ks.h)===parseInt(ks.a);
+  const g=n=>document.getElementById(n);
+  if(g('bna-'+key))g('bna-'+key).textContent=tA||'Por definir';
+  if(g('bnb-'+key))g('bnb-'+key).textContent=tB||'Por definir';
+  if(g('bfa-'+key))g('bfa-'+key).textContent=tA?FLAGS[tA]||'🏳️':'🏳️';
+  if(g('bfb-'+key))g('bfb-'+key).textContent=tB?FLAGS[tB]||'🏳️':'🏳️';
+  if(g('bta-'+key))g('bta-'+key).className='b-team'+(tA?'':' tbd')+(winner&&winner===tA?' winner':'');
+  if(g('btb-'+key))g('btb-'+key).className='b-team'+(tB?'':' tbd')+(winner&&winner===tB?' winner':'');
+  const sh=g('bsh-'+key);const sa=g('bsa-'+key);
+  if(sh)sh.disabled=!tA||!tB;if(sa)sa.disabled=!tA||!tB;
+  const pe=g('bpen-'+key);
+  if(pe){
+    pe.style.display=isDraw&&tA&&tB?'flex':'none';
+    if(isDraw&&tA&&tB)pe.innerHTML=
+      '<span style="font-size:11px;color:var(--muted)">Penaltis:</span>'+
+      '<button class="pen-btn'+(ks.pen===tA?' active':'')+'" onclick="qSetPen(\''+rid+'\','+slot+',\''+escQ(tA)+'\')">'+FLAGS[tA]+' '+tA+'</button>'+
+      '<button class="pen-btn'+(ks.pen===tB?' active':'')+'" onclick="qSetPen(\''+rid+'\','+slot+',\''+escQ(tB)+'\')">'+FLAGS[tB]+' '+tB+'</button>';
+  }
+  updateQChampion();
+}
+function cascadeBracketUpdate(rid,slot){
+  const key=rid+'_'+slot;
+  BRACKET.forEach(function(rd){
+    rd.matches.forEach(function(m){
+      const a=m.fromA||'';const b=m.fromB||'';
+      if(a===key||b===key||a===key+'_loser'||b===key+'_loser'){
+        updateBracketMatch(rd.id,m.slot);cascadeBracketUpdate(rd.id,m.slot);
+      }
+    });
+  });
+}
+function updateQChampion(){
+  const champ=getKnockoutWinner('fin',1);
+  const el=document.getElementById('q-champion');if(!el)return;
+  el.style.display=champ?'block':'none';
+  if(champ)el.innerHTML=
+    '<div style="font-size:36px">'+(FLAGS[champ]||'🏆')+'</div>'+
+    '<div style="font-family:var(--disp);font-size:20px;letter-spacing:2px;color:var(--gold);margin-top:6px">'+champ+'</div>'+
+    '<div style="font-size:11px;color:var(--muted);margin-top:2px">Tu campeón del Mundial 2026 🏆</div>';
 }
  
-// ══════════════════════════════════════════════
 // TAB: GOLEADORES
 // ══════════════════════════════════════════════
 let statsCache={},statsLoaded=false;
@@ -1022,7 +1137,7 @@ async function fetchMissingStats(missing,el){
       let eid=apiResults[k]?.id;
       if(!eid){
         // Search for event
-        const d=await v1(`/searchevents.php?e=${encodeURIComponent(f.home+'_vs_'+f.away)}&s=${SEASON}`);
+        const d=await v1(`/searchevents.php?e=${encodeURIComponent(f.home+'_vs_'+f.away)}&s=2026`);
         const evs=d.events||[];
         if(evs[0])eid=evs[0].idEvent;
       }
@@ -1107,48 +1222,162 @@ function refreshStats(){statsCache={};try{localStorage.removeItem(STATS_KEY);}ca
 // ══════════════════════════════════════════════
 // TAB: EQUIPOS
 // ══════════════════════════════════════════════
-async function searchTeam
-async function searchTeam(){
-  const q=document.getElementById('teamInput').value.trim();
-  if(!q)return;
+const CONFS=[
+  {name:'UEFA',icon:'🇪🇺',label:'Europa (16)',teams:['England','France','Spain','Germany','Netherlands','Belgium','Portugal','Croatia','Switzerland','Austria','Scotland','Norway','Czechia','Bosnia & Herzegovina','Sweden','Türkiye']},
+  {name:'CONMEBOL',icon:'🌎',label:'Sudamérica (6)',teams:['Brazil','Argentina','Colombia','Uruguay','Ecuador','Paraguay']},
+  {name:'CONCACAF',icon:'🌎',label:'Norteamérica (6)',teams:['United States','Mexico','Canada','Panama','Haiti','Curaçao']},
+  {name:'CAF',icon:'🌍',label:'África (10)',teams:['Morocco','South Africa','Ivory Coast','Egypt','Senegal','Ghana','Algeria','DR Congo','Cape Verde','Tunisia']},
+  {name:'AFC',icon:'🌏',label:'Asia / Oceanía (10)',teams:['Japan','South Korea','Saudi Arabia','Iran','Uzbekistan','Jordan','Iraq','Qatar','Australia','New Zealand']}
+];
+ 
+// VERIFIED TheSportsDB team IDs — extracted from thesportsdb.com/season/4429-fifa-world-cup/2026
+const TEAM_DB_IDS={
+  // UEFA
+  'Spain':133909,'France':133913,'Germany':133907,'Netherlands':133905,
+  'Belgium':134515,'Portugal':133908,'England':133914,'Croatia':133912,
+  'Switzerland':134506,'Austria':135986,'Scotland':136450,'Sweden':133916,
+  'Czechia':133904,'Bosnia & Herzegovina':134510,'Türkiye':135985,
+  // Norway: not found on TheSportsDB season page — will use name search fallback
+  // CONMEBOL
+  'Brazil':134496,'Argentina':134509,'Colombia':134501,'Uruguay':134504,
+  'Ecuador':134507,'Paraguay':136471,
+  // CONCACAF
+  'United States':134514,'Mexico':134497,'Canada':140073,'Panama':136141,
+  'Haiti':140175,'Curaçao':140271,
+  // CAF
+  'Morocco':136139,'South Africa':136482,'Ivory Coast':134502,'Egypt':136138,
+  'Senegal':136143,'Ghana':134513,'Algeria':134516,'DR Congo':136475,
+  'Cape Verde':136477,'Tunisia':136142,
+  // AFC
+  'Japan':134503,'South Korea':134517,'Saudi Arabia':136137,'Iran':134511,
+  'Uzbekistan':140151,'Jordan':140145,'Iraq':140148,'Qatar':136472,
+  // OFC
+  'Australia':134500,'New Zealand':137449
+};
+ 
+// Alternate search names
+// Alternate search names matching TheSportsDB strTeam exactly
+const TEAM_ALIASES={
+  'United States':'USA',
+  'Czechia':'Czech Republic',
+  'Bosnia & Herzegovina':'Bosnia-Herzegovina',
+  'Türkiye':'Turkey',
+  'DR Congo':'DR Congo',
+  'Curaçao':'Curacao'
+};
+ 
+function initEquipos(){
   const el=document.getElementById('teamContent');
-  el.innerHTML='<div class="loading"><div class="spinner"></div><span class="loading-text">Buscando...</span></div>';
-  try{
-    const d=await v1(`/searchteams.php?t=${encodeURIComponent(q)}`);
-    const teams=(d.teams||[]).filter(t=>t.strSport==='Soccer');
-    const team=teams[0];
-    if(!team){el.innerHTML='<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">No se encontró la selección</div></div>';return;}
-    loadTeamPlayers(team,el);
-  }catch(e){el.innerHTML=`<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">${e.message}</div></div>`;}
-}
-async function loadTeamPlayers(team,el){
-  let html=`<div style="display:flex;align-items:center;gap:14px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px">
-    ${team.strBadge?`<img src="${team.strBadge}/medium" style="width:56px;height:56px;object-fit:contain" alt="">`:
-    `<span style="font-size:50px">${FLAGS[team.strTeam]||'🏳️'}</span>`}
-    <div><div style="font-family:var(--disp);font-size:20px;letter-spacing:1px">${team.strTeam}</div>
-    <div style="font-size:12px;color:var(--muted);margin-top:3px">${team.strCountry||''}</div></div>
-  </div>`;
-  el.innerHTML=html+'<div class="loading"><div class="spinner"></div><span class="loading-text">Cargando jugadores...</span></div>';
-  try{
-    const d=await v1(`/lookup_all_players.php?id=${team.idTeam}`);
-    const players=d.player||[];
-    const byPos={};
-    const order=['Goalkeeper','Defender','Midfield','Forward'];
-    const lbl={Goalkeeper:'Porteros',Defender:'Defensas',Midfield:'Centrocampistas',Forward:'Delanteros'};
-    players.forEach(p=>{const pos=p.strPosition||'Otros';(byPos[pos]||(byPos[pos]=[])).push(p);});
-    let ph='';
-    [...order.filter(k=>byPos[k]),...Object.keys(byPos).filter(k=>!order.includes(k))].forEach(pos=>{
-      ph+=`<div class="sec-hdr" style="margin-top:16px"><span class="sec-ttl">${lbl[pos]||pos}</span><span class="sec-cnt">${byPos[pos].length}</span></div>
-      <div class="players-grid">${byPos[pos].map(p=>`<div class="pc">
-        <div class="pc-pos">${p.strPosition||'—'}</div>
-        <div class="pc-name">${p.strPlayer}</div>
-        ${p.strNumber?`<div class="pc-num">#${p.strNumber}</div>`:''}
-        ${p.dateBorn?`<div class="pc-num">${new Date().getFullYear()-parseInt(p.dateBorn.slice(0,4))} años</div>`:''}
-      </div>`).join('')}</div>`;
+  let html='<div class="info-box" style="margin-bottom:14px">Selecciona un equipo para ver su plantilla para el Mundial 2026.</div>';
+  CONFS.forEach(function(conf){
+    html+='<div class="conf-card"><div class="conf-hdr">'+conf.icon+' <span class="conf-name">'+conf.name+'</span> <span class="conf-label">'+conf.label+'</span></div>';
+    html+='<div class="conf-teams">';
+    conf.teams.forEach(function(t){
+      html+='<div class="conf-team" onclick="loadTeamByName(\''+t.replace(/'/g,"\\'")+'\')">'+'<span style="font-size:18px">'+(FLAGS[t]||'🏳️')+'</span>'+'<span class="conf-tname">'+t+'</span></div>';
     });
-    if(!players.length)ph='<div class="empty"><div class="empty-icon">👤</div><div class="empty-text">No hay jugadores disponibles para esta selección</div></div>';
-    el.innerHTML=html+ph;
-  }catch(e){el.innerHTML=html+`<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">${e.message}</div></div>`;}
+    html+='</div></div>';
+  });
+  el.innerHTML=html;el.style.display='block';
+}
+ 
+async function loadTeamByName(name){
+  const el=document.getElementById('teamContent');
+  const back='<button class="btn btn-sm" style="margin-bottom:12px" onclick="initEquipos()">← Todas las selecciones</button>';
+  el.innerHTML=back+'<div class="loading"><div class="spinner"></div><span class="loading-text">Cargando '+name+'...</span></div>';
+  try{
+    let team=null;
+    // Strategy 1: use known team ID directly
+    const knownId=TEAM_DB_IDS[name];
+    if(knownId){
+      try{
+        const d=await v1('/lookupteam.php?id='+knownId);
+        team=(d.teams||[])[0]||null;
+      }catch(e2){console.warn('Direct ID lookup failed:',e2);}
+    }
+    // Strategy 2: search by name
+    if(!team){
+      const searchNames=[name,TEAM_ALIASES[name]].filter(Boolean);
+      for(const sn of searchNames){
+        if(team)break;
+        try{
+          const d=await v1('/searchteams.php?t='+encodeURIComponent(sn));
+          const results=(d.teams||[]).filter(function(t){
+            return t.strSport==='Soccer'||t.strSport==='Football';
+          });
+          team=results.find(function(t){return t.strTeam===name||t.strTeam===sn;})||
+               results.find(function(t){return(t.strCountry||'').toLowerCase()===(name||'').toLowerCase();})||
+               results[0]||null;
+        }catch(e3){console.warn('Search failed for',sn,e3);}
+      }
+    }
+    if(!team){
+      el.innerHTML=back+'<div class="empty"><div class="empty-icon">🔍</div>'+
+        '<div class="empty-text">Equipo no encontrado en TheSportsDB.<br><br>'+
+        '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">Ver plantillas en FIFA.com →</a></div></div>';
+      return;
+    }
+    showTeamSquad(team,name,el,back);
+  }catch(e){
+    el.innerHTML=back+'<div class="empty"><div class="empty-icon">⚠️</div>'+
+      '<div class="empty-text">Error: '+e.message+'<br><br><a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">Ver plantillas en FIFA.com →</a></div></div>';
+  }
+}
+ 
+async function showTeamSquad(team,name,el,back){
+  const badgeHtml=team.strBadge?
+    '<img src="'+team.strBadge+'/medium" style="width:56px;height:56px;object-fit:contain" alt="" onerror="this.style.display=\'none\'">':
+    '<span style="font-size:46px">'+(FLAGS[name]||'🏳️')+'</span>';
+  const profile='<div style="display:flex;align-items:center;gap:14px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px">'+
+    badgeHtml+'<div>'+
+    '<div style="font-family:var(--disp);font-size:20px;letter-spacing:1px">'+(team.strTeam||name)+'</div>'+
+    (team.strCountry?'<div style="font-size:12px;color:var(--muted);margin-top:3px">'+team.strCountry+'</div>':'')+
+    (team.strDescriptionEN?'<div style="font-size:11px;color:var(--muted);margin-top:4px;max-width:400px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+team.strDescriptionEN.slice(0,80)+'...</div>':'')+
+    '</div></div>';
+  el.innerHTML=back+profile+'<div class="loading"><div class="spinner"></div><span class="loading-text">Cargando convocados...</span></div>';
+  try{
+    const d=await v1('/lookup_all_players.php?id='+team.idTeam);
+    const players=d.player||[];
+    if(!players.length){
+      // No players in DB — show FIFA link
+      el.innerHTML=back+profile+
+        '<div class="empty"><div class="empty-icon">👤</div>'+
+        '<div class="empty-text">TheSportsDB no tiene la plantilla convocada de '+name+' para el Mundial 2026.<br><br>'+
+        '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">Ver convocatoria oficial en FIFA.com →</a><br><br>'+
+        '<a href="https://www.thesportsdb.com/team/'+team.idTeam+'" target="_blank" rel="noopener" style="color:var(--muted);font-size:11px">Ver en TheSportsDB</a>'+
+        '</div></div>';
+      return;
+    }
+    const ORDER=['Goalkeeper','Defender','Midfield','Forward'];
+    const LBL={Goalkeeper:'Porteros',Defender:'Defensas',Midfield:'Centrocampistas',Forward:'Delanteros'};
+    const byPos={};
+    players.forEach(function(p){var pos=p.strPosition||'Otros';if(!byPos[pos])byPos[pos]=[];byPos[pos].push(p);});
+    var keys=ORDER.filter(function(k){return byPos[k];}).concat(Object.keys(byPos).filter(function(k){return!ORDER.includes(k);}));
+    let ph='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'+
+      '<div class="sec-ttl">CONVOCADOS ('+players.length+')</div>'+
+      '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold)">FIFA.com →</a></div>';
+    keys.forEach(function(pos){
+      ph+='<div class="sec-hdr" style="margin-top:14px"><span class="sec-ttl">'+(LBL[pos]||pos)+'</span><span class="sec-cnt">'+byPos[pos].length+'</span></div>';
+      ph+='<div class="players-grid">';
+      byPos[pos].forEach(function(p){
+        var born=p.dateBorn?p.dateBorn.slice(0,4):'';
+        var age=born?(new Date().getFullYear()-parseInt(born))+' años':'';
+        var club=p.strTeam||'';
+        ph+='<div class="pc">'+
+          '<div class="pc-pos">'+(p.strPosition||'—')+'</div>'+
+          '<div class="pc-name">'+p.strPlayer+'</div>'+
+          (p.strNumber?'<div class="pc-num">#'+p.strNumber+'</div>':'')+
+          (age?'<div class="pc-num">'+age+(club?' · '+club:'')+'</div>':
+               (club?'<div class="pc-num">'+club+'</div>':''))+
+          '</div>';
+      });
+      ph+='</div>';
+    });
+    el.innerHTML=back+profile+ph;
+  }catch(e){
+    el.innerHTML=back+profile+'<div class="empty"><div class="empty-icon">⚠️</div>'+
+      '<div class="empty-text">Error cargando jugadores: '+e.message+'<br><br>'+
+      '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">Ver convocatoria en FIFA.com →</a></div></div>';
+  }
 }
  
 // DETAIL PANEL
@@ -1311,6 +1540,7 @@ function switchTab(tab){
   if(tab==='grupos'&&!gruposLoaded){loadGrupos();gruposLoaded=true;}
   if(tab==='quiniela')renderQGroups();
   if(tab==='goles'&&!golesLoaded){loadGoleadores();golesLoaded=true;}
+  if(tab==='equipos')initEquipos();
 }
  
 // INIT
