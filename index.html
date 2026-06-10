@@ -243,6 +243,17 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .conf-tname{font-family:var(--disp);font-size:13px;letter-spacing:.3px}
 /* QUINIELA CHAMPION */
 .q-champ{text-align:center;padding:20px;background:rgba(201,162,39,.06);border:1px solid var(--border2);border-radius:12px;margin-top:14px}
+ 
+/* CALENDAR SPLIT VIEW (matches + standings) */
+.cal-split{display:grid;grid-template-columns:1fr 268px;gap:14px;align-items:start}
+.cal-stand-sticky{position:sticky;top:130px}
+@media(max-width:660px){
+  .cal-split{grid-template-columns:1fr}
+  .cal-stand-sticky{position:static;margin-bottom:14px}
+  .cal-standings-col{order:-1}
+}
+.gc-compact th{font-size:9px;padding:5px 10px}
+.gc-compact td{font-size:11px;padding:5px 10px}
 </style>
 </head>
 <body>
@@ -255,7 +266,6 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   <nav class="tabs">
     <div class="tab active" onclick="switchTab('live')">⚽ En Vivo</div>
     <div class="tab" onclick="switchTab('cal')">📅 Calendario</div>
-    <div class="tab" onclick="switchTab('grupos')">🏆 Grupos</div>
     <div class="tab" onclick="switchTab('quiniela')">🎯 Quiniela</div>
     <div class="tab" onclick="switchTab('goles')">📊 Goleadores</div>
     <div class="tab" onclick="switchTab('equipos')">👥 Equipos</div>
@@ -271,14 +281,8 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
     <div class="round-tabs" id="roundTabs"></div>
     <div id="calContent"><div class="loading"><div class="spinner"></div><span class="loading-text">Cargando...</span></div></div>
   </div>
-  <div id="tab-grupos" style="display:none">
-    <div class="q-subtabs">
-      <div class="q-stab active" onclick="switchGruposSub('standings')">Clasificación</div>
-      <div class="q-stab" onclick="switchGruposSub('terceros')">Mejor Tercero</div>
-    </div>
-    <div id="standingsContent"><div class="loading"><div class="spinner"></div><span class="loading-text">Cargando clasificación...</span></div></div>
-    <div id="tercerosContent" style="display:none"><div class="loading"><div class="spinner"></div><span class="loading-text">Calculando...</span></div></div>
-  </div>
+  <div id="standingsContent" style="display:none"></div>
+  <div id="tercerosContent" style="display:none"></div>
   <div id="tab-quiniela" style="display:none">
     <div class="q-subtabs">
       <div class="q-stab active" onclick="switchQSub('qgroups')">Grupos</div>
@@ -637,46 +641,139 @@ async function loadLive(){
 // TAB: CALENDARIO
 // ══════════════════════════════════════════════
 let calRound='all',apiResults={};
+// Name normalization: TheSportsDB uses different names than our FIXTURES
+const TSDB_NAMES={'USA':'United States','Turkey':'Türkiye','Czech Republic':'Czechia',
+  'Bosnia-Herzegovina':'Bosnia & Herzegovina','Congo DR':'DR Congo','Curacao':'Curaçao'};
+function normName(n){return TSDB_NAMES[n]||n;}
+ 
 async function loadCal(){
   buildRoundTabs();
-  // Load API results for finished matches to overlay scores
   try{
-    const d=await v1(`/eventsseason.php?id=${LEAGUE_ID}&s=2026`);
+    const d=await v1('/eventsseason.php?id='+LEAGUE_ID+'&s=2026');
     (d.events||[]).forEach(e=>{
-      const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
+      const key=normName(e.strHomeTeam)+'|'+normName(e.strAwayTeam);
+      apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
+    });
+  }catch{}
+  renderCal();
+}
+async function calStandRefresh(){
+  try{
+    const today=new Date().toISOString().slice(0,10);
+    const d=await v1('/eventsday.php?d='+today+'&l='+LEAGUE_ID);
+    (d.events||[]).forEach(e=>{
+      const key=normName(e.strHomeTeam)+'|'+normName(e.strAwayTeam);
       apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
     });
   }catch{}
   renderCal();
 }
 function buildRoundTabs(){
-  const rounds=['all','Group A','Group B','Group C','Group D','Group E','Group F','Group G','Group H','Group I','Group J','Group K','Group L','Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL'];
-  const labels={all:'Todos','Ronda de 32':'R32','Octavos':'Octavos','Cuartos':'Cuartos','Semifinal':'Semi','Tercer Puesto':'3er Puesto','FINAL':'Final'};
+  const rounds=['all','Group A','Group B','Group C','Group D','Group E','Group F','Group G','Group H','Group I','Group J','Group K','Group L','M3','Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL'];
+  const labels={all:'Todos',M3:'Mejor 3°','Ronda de 32':'R32','Octavos':'Octavos','Cuartos':'Cuartos','Semifinal':'Semi','Tercer Puesto':'3er Puesto','FINAL':'Final'};
   document.getElementById('roundTabs').innerHTML=rounds.map(r=>{
-    const lbl=labels[r]||(r.startsWith('Group')?`Grp ${r.slice(-1)}`:r);
-    return`<div class="rtab${calRound===r?' active':''}" onclick="setCalRound('${r}')">${lbl}</div>`;
+    const lbl=labels[r]||(r.startsWith('Group')?'Grp '+r.slice(-1):r);
+    return'<div class="rtab'+(calRound===r?' active':'')+'" onclick="setCalRound(this.dataset.r)" data-r="'+r+'">' +lbl+'</div>';
   }).join('');
 }
-function setCalRound(r){calRound=r;buildRoundTabs();renderCal();}
-function renderCal(){
-  const fx=calRound==='all'?FIXTURES:FIXTURES.filter(f=>f.group===calRound);
-  if(!fx.length){document.getElementById('calContent').innerHTML='<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">No hay partidos en esta fase</div></div>';return;}
+function setCalRound(r){if(r&&r.target)r=r.target.dataset.r;calRound=r;buildRoundTabs();renderCal();}
+// Compute real standings for a group letter ('A'..'L') using apiResults
+function computeRealGroupStandings(g){
+  const st={};
+  GROUPS[g].forEach(t=>{st[t]={name:t,p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0};});
+  FIXTURES.filter(f=>f.group==='Group '+g).forEach(m=>{
+    const r=apiResults[m.home+'|'+m.away]||{};
+    if(!isFin(r.status)||r.homeScore===null||r.homeScore===undefined)return;
+    const h=parseInt(r.homeScore)||0,a=parseInt(r.awayScore)||0;
+    st[m.home].p++;st[m.home].gf+=h;st[m.home].ga+=a;
+    st[m.away].p++;st[m.away].gf+=a;st[m.away].ga+=h;
+    if(h>a){st[m.home].w++;st[m.home].pts+=3;st[m.away].l++;}
+    else if(h===a){st[m.home].d++;st[m.home].pts++;st[m.away].d++;st[m.away].pts++;}
+    else{st[m.away].w++;st[m.away].pts+=3;st[m.home].l++;}
+  });
+  return Object.values(st).sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)||b.gf-a.gf);
+}
+ 
+function renderGroupStandingsCard(g){
+  const st=computeRealGroupStandings(g);
+  let h='<div class="gc cal-stand-sticky">';
+  h+='<div class="gc-hdr"><span class="gc-name">GRUPO '+g+'</span>';
+  h+='<button onclick="calStandRefresh()" style="background:none;border:none;color:var(--gold);cursor:pointer;font-size:13px;font-weight:700" title="Actualizar">↻</button></div>';
+  h+='<table class="gtbl gc-compact"><thead><tr><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>DG</th><th>Pts</th></tr></thead><tbody>';
+  st.forEach((t,i)=>{
+    const cls=i<2?'q'+(i+1):'';
+    const dot=i<2?'<span class="qdot g"></span>':i===2?'<span class="qdot y"></span>':'';
+    const gd=t.gf-t.ga;
+    h+='<tr class="'+cls+'"><td><div class="tcell">'+dot+'<span style="font-size:11px">'+(FLAGS[t.name]||'🏳️')+'</span><span>'+t.name+'</span></div></td>';
+    h+='<td>'+t.p+'</td><td>'+t.w+'</td><td>'+t.d+'</td><td>'+t.l+'</td>';
+    h+='<td>'+(gd>0?'+':'')+gd+'</td><td class="ptscell">'+t.pts+'</td></tr>';
+  });
+  h+='</tbody></table>';
+  h+='<div style="padding:6px 10px;font-size:10px;color:var(--muted)"><span style="color:var(--win)">●</span> Clasifica directo &nbsp;<span style="color:var(--draw)">●</span> Posible mejor 3º</div>';
+  h+='</div>';
+  return h;
+}
+ 
+function renderCalMejorTercero(){
+  const terceros=[];
+  Object.keys(GROUPS).sort().forEach(g=>{
+    const st=computeRealGroupStandings(g);
+    if(st[2])terceros.push({name:st[2].name,group:g,pts:st[2].pts,gd:st[2].gf-st[2].ga,gf:st[2].gf});
+  });
+  terceros.sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf);
+  let h='<div class="info-box">Los 8 mejores terceros de los 12 grupos clasifican a la Ronda de 32. Criterios: Pts → DG → GF → Fair play → Ranking FIFA</div>';
+  h+='<div class="gc"><div class="gc-hdr"><span class="gc-name">CLASIFICACIÓN MEJOR TERCERO</span>';
+  h+='<button onclick="calStandRefresh()" style="background:none;border:none;color:var(--gold);cursor:pointer;font-size:13px">↻</button></div>';
+  h+='<table class="tercero-table"><thead><tr><th>#</th><th>Equipo</th><th>Grp</th><th>Pts</th><th>DG</th><th>GF</th></tr></thead><tbody>';
+  if(!terceros.length){
+    h+='<tr><td colspan="6" style="text-align:center;padding:20px;color:var(--muted)">Disponible cuando empiecen los partidos</td></tr>';
+  } else {
+    terceros.forEach((t,i)=>{
+      h+='<tr class="'+(i<8?'q-in':'')+'"><td><span class="rank-num">'+(i+1)+'</span></td>';
+      h+='<td><div class="tcell"><span style="font-size:13px">'+(FLAGS[t.name]||'🏳️')+'</span><span>'+t.name+'</span>'+(i<8?'<span style="margin-left:4px;font-size:9px;font-weight:700;color:var(--win)">✓</span>':'')+'</div></td>';
+      h+='<td style="font-family:var(--mono);font-size:12px;color:var(--gold)">'+t.group+'</td>';
+      h+='<td style="font-family:var(--mono);font-weight:700">'+t.pts+'</td>';
+      h+='<td style="font-family:var(--mono)">'+(t.gd>0?'+':'')+t.gd+'</td>';
+      h+='<td style="font-family:var(--mono)">'+t.gf+'</td></tr>';
+    });
+  }
+  h+='</tbody></table></div>';
+  document.getElementById('calContent').innerHTML=h;
+}
+ 
+function buildMatchesHtml(fx){
+  if(!fx.length)return'<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">No hay partidos en esta fase</div></div>';
   const byDate={};
   fx.forEach(f=>{(byDate[f.date]||(byDate[f.date]=[])).push(f);});
   let html='';
   Object.keys(byDate).sort().forEach(dt=>{
     const lbl=fmtDay(dt)+(isToday(dt)?'<span class="today-mark"> · HOY</span>':'');
-    html+=`<div class="day-lbl">${lbl}</div>`;
+    html+='<div class="day-lbl">'+lbl+'</div>';
     byDate[dt].forEach(f=>{
-      const k=`${f.home}|${f.away}`;
+      const k=f.home+'|'+f.away;
       const r=apiResults[k]||{};
-      html+=matchCard(Object.assign({},f,{
-        status:r.status,homeScore:r.homeScore,awayScore:r.awayScore,
-        id:r.id||f.id
-      }));
+      html+=matchCard(Object.assign({},f,{status:r.status,homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||f.id}));
     });
   });
-  document.getElementById('calContent').innerHTML=html;
+  return html;
+}
+ 
+function renderCal(){
+  const el=document.getElementById('calContent');
+  // Special: Mejor Tercero view
+  if(calRound==='M3'){renderCalMejorTercero();return;}
+  const fx=calRound==='all'?FIXTURES:FIXTURES.filter(f=>f.group===calRound);
+  const matchesHtml=buildMatchesHtml(fx);
+  // Group tab: split view (matches left, standings right)
+  if(calRound.startsWith('Group')){
+    const g=calRound.slice(-1);
+    el.innerHTML='<div class="cal-split">'+
+      '<div class="cal-matches-col">'+matchesHtml+'</div>'+
+      '<div class="cal-standings-col">'+renderGroupStandingsCard(g)+'</div>'+
+      '</div>';
+    return;
+  }
+  el.innerHTML=matchesHtml;
 }
  
 // ══════════════════════════════════════════════
@@ -1572,19 +1669,19 @@ function closeDetail(){
 document.getElementById('detailPanel').addEventListener('click',e=>{if(e.target===document.getElementById('detailPanel'))closeDetail();});
  
 // TAB SWITCHING
-let activeTab='live',calLoaded=false,gruposLoaded=false,golesLoaded=false;
+let activeTab='live',calLoaded=false,golesLoaded=false;
 function switchTab(tab){
   clearInterval(liveTimer);
   activeTab=tab;
   document.querySelectorAll('.tab').forEach((t,i)=>{
-    t.classList.toggle('active',['live','cal','grupos','quiniela','goles','equipos'][i]===tab);
+    t.classList.toggle('active',['live','cal','quiniela','goles','equipos'][i]===tab);
   });
-  ['live','cal','grupos','quiniela','goles','equipos'].forEach(id=>{
+  ['live','cal','quiniela','goles','equipos'].forEach(id=>{
     document.getElementById('tab-'+id).style.display=id===tab?'block':'none';
   });
   if(tab==='live')loadLive();
   if(tab==='cal'&&!calLoaded){loadCal();calLoaded=true;}
-  if(tab==='grupos'&&!gruposLoaded){loadGrupos();gruposLoaded=true;}
+  if(tab==='cal'&&calLoaded)renderCal();
   if(tab==='quiniela')renderQGroups();
   if(tab==='goles'&&!golesLoaded){loadGoleadores();golesLoaded=true;}
   if(tab==='equipos')initEquipos();
