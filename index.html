@@ -245,15 +245,17 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .q-champ{text-align:center;padding:20px;background:rgba(201,162,39,.06);border:1px solid var(--border2);border-radius:12px;margin-top:14px}
  
 /* CALENDAR SPLIT VIEW (matches + standings) */
-.cal-split{display:grid;grid-template-columns:1fr 268px;gap:14px;align-items:start}
-.cal-stand-sticky{position:sticky;top:130px}
+.cal-split{display:grid;grid-template-columns:1fr 280px;gap:20px;align-items:start}
+.cal-stand-sticky{position:sticky;top:108px;margin-top:2px}
+.cal-standings-col{padding-top:2px}
 @media(max-width:660px){
   .cal-split{grid-template-columns:1fr}
   .cal-stand-sticky{position:static;margin-bottom:14px}
-  .cal-standings-col{order:-1}
+  .cal-standings-col{order:-1;padding-top:0}
 }
-.gc-compact th{font-size:9px;padding:5px 10px}
-.gc-compact td{font-size:11px;padding:5px 10px}
+.gc-compact th{font-size:10px;padding:7px 11px;letter-spacing:.4px}
+.gc-compact td{font-size:12px;padding:7px 11px}
+.gc-compact .tcell span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:110px}
 </style>
 </head>
 <body>
@@ -1301,64 +1303,87 @@ async function fetchMissingStats(missing,el){
   const p=document.getElementById('statsProgress');
   if(p)p.remove();
 }
-function renderStats(el,append=false){
+function renderStats(el,append){
   const scorers={},assists={},keepers={};
-  Object.entries(statsCache).forEach(([k,{timeline}])=>{
-    if(!timeline)return;
-    const[home,away]=k.split('|');
+  Object.entries(statsCache).forEach(function([k,obj]){
+    const timeline=obj.timeline||[];
+    if(!timeline.length)return;
+    const parts=k.split('|');const home=parts[0];const away=parts[1];
     let hGoals=0,aGoals=0;
-    timeline.forEach(ev=>{
-      if(ev.strTimelineType==='Goal'||ev.strTimelineType==='Penalty'){
+    timeline.forEach(function(ev){
+      const type=ev.strTimelineType||'';
+      if(type==='Goal'||type==='Penalty'){
         const p=ev.strPlayer;if(!p)return;
-        scorers[p]=(scorers[p]||{name:p,team:ev.strTeam,goals:0});scorers[p].goals++;
-        if(ev.strAssistPlayer){assists[ev.strAssistPlayer]=(assists[ev.strAssistPlayer]||{name:ev.strAssistPlayer,team:ev.strTeam,ast:0});assists[ev.strAssistPlayer].ast++;}
-        if(ev.strTeam===home)hGoals++;else aGoals++;
+        if(!scorers[p])scorers[p]={name:p,team:ev.strTeam||'',goals:0,ast:0};
+        scorers[p].goals++;
+        const ap=ev.strAssistPlayer||ev.strAssist;
+        if(ap){
+          if(!assists[ap])assists[ap]={name:ap,team:ev.strTeam||'',ast:0};
+          assists[ap].ast++;
+        }
+        if((ev.strTeam||'')===(home||''))hGoals++;else aGoals++;
       }
     });
-    // Clean sheets
-    if(hGoals===0){keepers[home]=(keepers[home]||{name:home,cs:0});keepers[home].cs++;}
-    if(aGoals===0){keepers[away]=(keepers[away]||{name:away,cs:0});keepers[away].cs++;}
+    if(hGoals===0){if(!keepers[home])keepers[home]={name:home,cs:0};keepers[home].cs++;}
+    if(aGoals===0){if(!keepers[away])keepers[away]={name:away,cs:0};keepers[away].cs++;}
   });
-  const topScorers=Object.values(scorers).sort((a,b)=>b.goals-a.goals).slice(0,15);
-  const topAssists=Object.values(assists).sort((a,b)=>b.ast-a.ast).slice(0,10);
-  const topKeepers=Object.values(keepers).sort((a,b)=>b.cs-a.cs).slice(0,10);
+  const topScorers=Object.values(scorers).sort(function(a,b){return b.goals-a.goals;}).slice(0,15);
+  const topAssists=Object.values(assists).sort(function(a,b){return b.ast-a.ast;}).slice(0,10);
+  const topKeepers=Object.values(keepers).sort(function(a,b){return b.cs-a.cs;}).slice(0,10);
+  const noData=!topScorers.length&&!topAssists.length&&!topKeepers.length;
   let html='';
-  // Scorers
-  if(topScorers.length){
-    html+=`<div class="stat-card"><div class="stat-card-hdr">⚽ Máximos Goleadores</div>`;
-    topScorers.forEach((p,i)=>{html+=`<div class="stat-row">
-      <span class="stat-pos">${i+1}</span>
-      <span class="stat-flag">${FLAGS[p.team]||'🏳️'}</span>
-      <div class="stat-info"><div class="stat-pname">${p.name}</div><div class="stat-team">${p.team}</div></div>
-      <span class="stat-val">${p.goals}</span>
-    </div>`;});
-    html+=`</div>`;
+  if(noData){
+    html='<div class="empty"><div class="empty-icon">📊</div>'+
+      '<div class="empty-text">Las estadísticas aparecerán aquí en tiempo real conforme vayan terminando los partidos.<br><br>'+
+      '<span style="color:var(--gold);font-weight:600">3 secciones:</span><br>'+
+      '⚽ Máximos goleadores<br>🎯 Máximos asistentes<br>🥅 Mejores porteros (porterías a 0)</div></div>';
+  } else {
+    // ⚽ Scorers
+    if(topScorers.length){
+      html+='<div class="stat-card"><div class="stat-card-hdr">⚽ Máximos Goleadores</div>';
+      topScorers.forEach(function(p,i){
+        html+='<div class="stat-row">'+
+          '<span class="stat-pos">'+(i+1)+'</span>'+
+          '<span class="stat-flag">'+(FLAGS[p.team]||'🏳️')+'</span>'+
+          '<div class="stat-info"><div class="stat-pname">'+p.name+'</div><div class="stat-team">'+p.team+'</div></div>'+
+          '<span class="stat-val">'+p.goals+'</span></div>';
+      });
+      html+='</div>';
+    }
+    // 🎯 Assists
+    if(topAssists.length){
+      html+='<div class="stat-card"><div class="stat-card-hdr">🎯 Máximos Asistentes</div>';
+      topAssists.forEach(function(p,i){
+        html+='<div class="stat-row">'+
+          '<span class="stat-pos">'+(i+1)+'</span>'+
+          '<span class="stat-flag">'+(FLAGS[p.team]||'🏳️')+'</span>'+
+          '<div class="stat-info"><div class="stat-pname">'+p.name+'</div><div class="stat-team">'+p.team+'</div></div>'+
+          '<span class="stat-val">'+p.ast+'</span></div>';
+      });
+      html+='</div>';
+    } else if(topScorers.length){
+      // Assists might not be in timeline data - show info
+      html+='<div class="stat-card"><div class="stat-card-hdr">🎯 Máximos Asistentes</div>'+
+        '<div class="stat-row"><div class="stat-info" style="text-align:center;padding:8px;color:var(--muted);font-size:12px">'+
+        'TheSportsDB puede no incluir asistencias en el timeline. Se actualizará conforme haya datos.</div></div></div>';
+    }
+    // 🥅 Keepers (clean sheets)
+    if(topKeepers.length){
+      html+='<div class="stat-card"><div class="stat-card-hdr">🥅 Mejores Porteros · Porterías a cero</div>';
+      topKeepers.forEach(function(p,i){
+        html+='<div class="stat-row">'+
+          '<span class="stat-pos">'+(i+1)+'</span>'+
+          '<span class="stat-flag">'+(FLAGS[p.name]||'🏳️')+'</span>'+
+          '<div class="stat-info"><div class="stat-pname">'+(p.name)+'</div>'+
+          '<div class="stat-team">'+p.cs+' portería'+(p.cs!==1?'s':'')+' a cero</div></div>'+
+          '<span class="stat-val">'+p.cs+'</span></div>';
+      });
+      html+='</div>';
+    }
   }
-  // Assists
-  if(topAssists.length){
-    html+=`<div class="stat-card"><div class="stat-card-hdr">🎯 Máximos Asistentes</div>`;
-    topAssists.forEach((p,i)=>{html+=`<div class="stat-row">
-      <span class="stat-pos">${i+1}</span>
-      <span class="stat-flag">${FLAGS[p.team]||'🏳️'}</span>
-      <div class="stat-info"><div class="stat-pname">${p.name}</div><div class="stat-team">${p.team}</div></div>
-      <span class="stat-val">${p.ast}</span>
-    </div>`;});
-    html+=`</div>`;
-  }
-  // Keepers
-  if(topKeepers.length){
-    html+=`<div class="stat-card"><div class="stat-card-hdr">🥅 Mejores Porteros (porterías a cero)</div>`;
-    topKeepers.forEach((p,i)=>{html+=`<div class="stat-row">
-      <span class="stat-pos">${i+1}</span>
-      <span class="stat-flag">${FLAGS[p.name]||'🏳️'}</span>
-      <div class="stat-info"><div class="stat-pname">${p.name}</div><div class="stat-team" style="font-size:10px">Selección</div></div>
-      <span class="stat-val">${p.cs}</span>
-    </div>`;});
-    html+=`</div>`;
-  }
-  if(!html)html=`<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">Cargando estadísticas de partidos finalizados...</div></div>`;
-  html+=`<div style="text-align:center;margin-top:14px"><button class="btn btn-sm" onclick="refreshStats()">↻ Actualizar estadísticas</button></div>`;
-  if(append){const old=el.querySelector('.stat-card,div.empty');if(old){el.innerHTML=html;return;}}
+  html+='<div style="text-align:center;margin-top:14px">'+
+    '<button class="btn btn-sm" onclick="refreshStats()">↻ Actualizar estadísticas</button></div>';
+  if(append){var old=el.querySelector('.stat-card,.empty');if(old){el.innerHTML=html;return;}}
   el.innerHTML=html;
 }
 function refreshStats(){statsCache={};try{localStorage.removeItem(STATS_KEY);}catch{}loadGoleadores();}
