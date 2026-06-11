@@ -277,6 +277,53 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .gc-compact th{font-size:10px;padding:7px 11px;letter-spacing:.4px}
 .gc-compact td{font-size:12px;padding:7px 11px}
 .gc-compact .tcell span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:110px}
+
+/* READABILITY PASS */
+body{font-size:16px}
+.content{max-width:900px}
+.logo{font-size:30px}
+.lang-btn,.live-badge{font-size:13px}
+.tab{font-size:14px;padding:11px 15px}
+.sec-ttl,.day-lbl{font-size:15px}
+.sec-cnt,.loading-text,.empty-text{font-size:15px}
+.rtab{font-size:13px;padding:7px 14px}
+.today-mark{font-size:12px}
+.mc{padding:14px 16px;margin-bottom:9px}
+.mc-round,.mc-status{font-size:12px}
+.t-name{font-size:18px}
+.score{font-size:26px}
+.vs{font-size:14px}
+.mc-minute,.utc-val,.mc-venue{font-size:12px}
+.es-val{font-size:18px}
+.es-lbl{font-size:11px}
+.gc-name,.conf-name,.bracket-round-title{font-size:17px}
+.gtbl th,.tercero-table th{font-size:11px}
+.gtbl td,.tercero-table td{font-size:14px}
+.q-stab,.btn-sm{font-size:14px}
+.qg-hdr,.qg-tname,.mt-name,.squad-title,.stat-card-hdr{font-size:16px}
+.qmatch{gap:10px;padding:10px 13px}
+.qmt{font-size:15px}
+.stat-empty-row,.stat-pname,.pc-name,.tl-txt,.hl-title,.info-box{font-size:14px}
+.stat-team,.pc-num,.tl-team,.ref-txt,.ref-btn,.sbar-lbls,.conf-label,.squad-count{font-size:13px}
+.pc-pos,.b-match-label,.sbar-lbl-mid{font-size:11px}
+.stat-val{font-size:20px}
+.cal-third-info{margin:-4px 0 16px;line-height:1.55}
+.hl-section{margin-top:14px}
+.hl-card{padding:12px;gap:12px}
+.hl-card.primary{background:rgba(201,162,39,.07);border-color:var(--border2)}
+.hl-play{width:84px;height:54px;font-size:22px;overflow:hidden}
+.hl-thumb{width:84px;height:54px;object-fit:cover;border-radius:5px;flex-shrink:0;background:var(--bg3)}
+.hl-source{font-size:12px;color:var(--muted);margin-top:3px}
+@media(max-width:480px){
+  .content{padding:16px 12px}
+  .logo{font-size:28px}
+  .tab{font-size:13px;padding:10px 13px}
+  .t-name{font-size:16px}
+  .score{font-size:23px}
+  .gtbl td,.tercero-table td{font-size:13px}
+  .qmt{font-size:14px}
+  .hl-play,.hl-thumb{width:76px;height:50px}
+}
 </style>
 </head>
 <body>
@@ -319,6 +366,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   </div>
   <div id="tab-cal" style="display:none">
     <div class="round-tabs" id="roundTabs"></div>
+    <div id="calThirdInfo" class="info-box cal-third-info"></div>
     <div id="calContent"><div class="loading"><div class="spinner"></div><span class="loading-text" data-i18n="loadingShort">Cargando...</span></div></div>
   </div>
   <div id="standingsContent" style="display:none"></div>
@@ -396,6 +444,7 @@ const I18N={
     updatedNext:'Actualizado · siguiente en {s}s',today:'HOY',todayMatches:'PARTIDOS HOY',liveNow:'EN JUEGO',todayUpcoming:'HOY — PRÓXIMOS',finished:'FINALIZADOS',nextMatches:'PRÓXIMOS PARTIDOS',
     noLive:'No hay partidos en directo.',worldCupStarts:'El Mundial arranca el',noPhaseMatches:'No hay partidos en esta fase',
     all:'Todos',bestThirdShort:'Mejor 3°',thirdPlace:'3er Puesto',final:'Final',classifiedDirect:'Clasifica directo',possibleThird:'Posible mejor 3º',
+    calThirdInfo:'clasifican los 8 mejores terceros de los 12 grupos. Criterios de desempate: puntos, diferencia de goles, goles a favor, fair play y ranking FIFA.',
     qGroups:'Grupos',qThird:'Mejor Tercero',qBracket:'Eliminatoria',
     statsIntro:'Tres apartados disponibles: máximos goleadores, máximos asistentes y mejores porteros.',
     scorers:'Máximos Goleadores',assists:'Máximos Asistentes',keepers:'Mejores Porteros',cleanSheets:'Porterías a cero',
@@ -405,7 +454,8 @@ const I18N={
     chooseTeam:'Selecciona un equipo para ver su plantilla para el Mundial 2026.',allTeams:'Todas las selecciones',loadingTeam:'Cargando {team}...',squadLoading:'Cargando convocados...',
     teamNotFound:'Equipo no encontrado en TheSportsDB.',viewSquadsFifa:'Ver plantillas en FIFA.com',officialSquad:'Ver convocatoria oficial en FIFA.com',viewTsdb:'Ver en TheSportsDB',
     noSquad:'TheSportsDB no tiene la plantilla convocada de {team} para el Mundial 2026.',squad:'CONVOCADOS',goalkeepers:'Porteros',defenders:'Defensas',midfielders:'Medio campo',forwards:'Delanteros',manager:'Manager',others:'Otros',
-    noPlayersInBlock:'Sin jugadores en esta demarcación todavía.',managerMissing:'Manager no disponible en TheSportsDB.',years:'años',error:'Error',playersLoadError:'Error cargando jugadores'
+    noPlayersInBlock:'Sin jugadores en esta demarcación todavía.',managerMissing:'Manager no disponible en TheSportsDB.',years:'años',error:'Error',playersLoadError:'Error cargando jugadores',
+    highlights:'Highlights',watchHighlight:'Ver resumen'
   },
   en:{
     langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
@@ -414,6 +464,7 @@ const I18N={
     updatedNext:'Updated · next in {s}s',today:'TODAY',todayMatches:'MATCHES TODAY',liveNow:'LIVE NOW',todayUpcoming:'TODAY — UPCOMING',finished:'FINISHED',nextMatches:'UPCOMING MATCHES',
     noLive:'No live matches right now.',worldCupStarts:'The World Cup starts on',noPhaseMatches:'No matches in this stage',
     all:'All',bestThirdShort:'Best 3rd',thirdPlace:'3rd Place',final:'Final',classifiedDirect:'Direct qualification',possibleThird:'Possible best 3rd',
+    calThirdInfo:'the 8 best third-placed teams from the 12 groups qualify. Tiebreakers: points, goal difference, goals for, fair play and FIFA ranking.',
     qGroups:'Groups',qThird:'Best Third',qBracket:'Knockout',
     statsIntro:'Three sections available: top scorers, top assists and best goalkeepers.',
     scorers:'Top Scorers',assists:'Top Assists',keepers:'Best Goalkeepers',cleanSheets:'Clean sheets',
@@ -423,7 +474,8 @@ const I18N={
     chooseTeam:'Select a team to see its World Cup 2026 squad.',allTeams:'All teams',loadingTeam:'Loading {team}...',squadLoading:'Loading squad...',
     teamNotFound:'Team not found in TheSportsDB.',viewSquadsFifa:'View squads on FIFA.com',officialSquad:'View official squad on FIFA.com',viewTsdb:'View on TheSportsDB',
     noSquad:'TheSportsDB does not have the World Cup 2026 squad for {team}.',squad:'SQUAD',goalkeepers:'Goalkeepers',defenders:'Defenders',midfielders:'Midfield',forwards:'Forwards',manager:'Manager',others:'Others',
-    noPlayersInBlock:'No players listed in this block yet.',managerMissing:'Manager not available in TheSportsDB.',years:'years',error:'Error',playersLoadError:'Error loading players'
+    noPlayersInBlock:'No players listed in this block yet.',managerMissing:'Manager not available in TheSportsDB.',years:'years',error:'Error',playersLoadError:'Error loading players',
+    highlights:'Highlights',watchHighlight:'Watch highlights'
   }
 };
 function t(key,vars){
@@ -436,6 +488,12 @@ function applyLang(){
   const btn=document.getElementById('langBtn');
   if(btn)btn.textContent=t('langBtn');
   document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n);});
+  renderCalendarThirdInfo();
+}
+function renderCalendarThirdInfo(){
+  const el=document.getElementById('calThirdInfo');
+  if(!el)return;
+  el.innerHTML='<strong>'+t('bestThirdShort')+':</strong> '+t('calThirdInfo');
 }
 function rerenderActiveTab(){
   applyLang();
@@ -1700,6 +1758,40 @@ async function showTeamSquad(team,name,el,back){
 }
 
 // DETAIL PANEL
+function escHtml(s){
+  return String(s||'').replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function normalizeHighlightsData(data){
+  if(!data)return[];
+  const list=data.highlights||data.results||data.event_highlights||data.eventhighlights||data.tvhighlights||data.youtube||[];
+  return Array.isArray(list)?list.filter(h=>h&&(h.strVideo||h.strYoutube||h.strThumb||h.strPoster)):[];
+}
+async function loadEventHighlights(eventId,dateEvent,seed){
+  let hls=normalizeHighlightsData(seed);
+  if(hls.length)return hls;
+  if(!dateEvent)return[];
+  try{
+    const d=await v1(`/eventshighlights.php?d=${dateEvent}&l=${LEAGUE_ID}`,2500);
+    hls=normalizeHighlightsData(d).filter(h=>String(h.idEvent||'')===String(eventId));
+  }catch{}
+  return hls;
+}
+function renderHighlightsSection(hls){
+  if(!hls.length)return'';
+  let html=`<div class="hl-section"><div class="sec-ttl" style="margin-bottom:8px">▶ ${t('highlights')}</div>`;
+  hls.slice(0,3).forEach(function(h,i){
+    const url=h.strVideo||h.strYoutube||'#';
+    const thumb=h.strThumb||h.strPoster||h.strFanart||'';
+    const title=h.strFilename||h.strEvent||t('watchHighlight');
+    html+=`<a class="hl-card${i===0?' primary':''}" href="${escHtml(url)}" target="_blank" rel="noopener">
+      ${thumb?`<img class="hl-thumb" src="${escHtml(thumb)}" alt="">`:`<div class="hl-play">▶</div>`}
+      <div class="stat-info"><div class="hl-title">${escHtml(title)}</div><div class="hl-source">YouTube · ${t('watchHighlight')}</div></div>
+    </a>`;
+  });
+  return html+'</div>';
+}
 async function openDetail(eid,date,home,away){
   const panel=document.getElementById('detailPanel');
   const inner=document.getElementById('detailInner');
@@ -1720,18 +1812,18 @@ async function openDetail(eid,date,home,away){
     if(fx){
       const es=toES(fx.date,fx.time);
       inner.innerHTML=`<div style="padding:20px;text-align:center">
-        <div style="font-family:var(--disp);font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:10px">${fx.group}</div>
+        <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:10px">${fx.group}</div>
         <div style="display:flex;justify-content:center;gap:20px;align-items:center;margin:12px 0">
-          <div style="text-align:center"><span style="font-size:36px">${fx.homeFlag}</span><div style="font-family:var(--disp);font-size:14px;margin-top:5px">${fx.home}</div></div>
-          <div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>
-          <div style="text-align:center"><span style="font-size:36px">${fx.awayFlag}</span><div style="font-family:var(--disp);font-size:14px;margin-top:5px">${fx.away}</div></div>
+          <div style="text-align:center"><span style="font-size:36px">${fx.homeFlag}</span><div style="font-family:var(--disp);font-size:16px;margin-top:5px">${fx.home}</div></div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--muted)">VS</div>
+          <div style="text-align:center"><span style="font-size:36px">${fx.awayFlag}</span><div style="font-family:var(--disp);font-size:16px;margin-top:5px">${fx.away}</div></div>
         </div>
         ${es?`<div style="background:rgba(201,162,39,.06);border:1px solid var(--border);border-radius:8px;padding:9px 14px;display:inline-flex;align-items:center;gap:8px;margin-top:6px">
-          <span style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--gold)">${es.time}</span>
-          <span style="font-size:9px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
-          <span style="font-family:var(--mono);font-size:10px;color:var(--muted)">${fx.time} UTC</span>
+          <span style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--gold)">${es.time}</span>
+          <span style="font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
+          <span style="font-family:var(--mono);font-size:12px;color:var(--muted)">${fx.time} UTC</span>
         </div>`:''}
-        <div style="font-size:11px;color:var(--muted);margin-top:8px">📍 ${fx.venue}, ${fx.city}</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:8px">📍 ${fx.venue}, ${fx.city}</div>
       </div>`;
     }else inner.innerHTML='<div class="empty" style="padding:40px"><div class="empty-icon">📅</div><div class="empty-text">Partido no encontrado</div></div>';
     return;
@@ -1749,33 +1841,35 @@ async function openDetail(eid,date,home,away){
     const es=toES(ev.dateEvent,ev.strTime&&ev.strTime.slice(0,5));
     const fin=isFin(ev.strStatus),live2=isLive(ev.strStatus);
     const hasScore=ev.intHomeScore!==null&&ev.intHomeScore!==undefined;
+    const hls=await loadEventHighlights(eventId,ev.dateEvent,hlD.value);
     let html=`<div style="padding:16px">
       <div style="text-align:center;margin-bottom:12px">
-        <div style="font-family:var(--disp);font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:7px">${ev.strRound||''}</div>
+        <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:7px">${ev.strRound||''}</div>
         <div style="display:flex;justify-content:center;gap:14px;align-items:center">
           <div style="text-align:center">
             ${ev.strHomeTeamBadge?`<img src="${ev.strHomeTeamBadge}/medium" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:
             `<div style="font-size:32px;margin-bottom:4px">${FLAGS[ev.strHomeTeam]||'🏳️'}</div>`}
-            <div style="font-family:var(--disp);font-size:12px">${ev.strHomeTeam}</div>
+            <div style="font-family:var(--disp);font-size:14px">${ev.strHomeTeam}</div>
           </div>
           <div style="text-align:center;min-width:65px">
-            ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:28px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${ev.intHomeScore} – ${ev.intAwayScore}</div>`:
-            `<div style="font-family:var(--mono);font-size:14px;color:var(--muted)">VS</div>`}
-            ${live2?`<div style="font-size:10px;color:var(--live);font-weight:600">${ev.strProgress||'EN JUEGO'}'</div>`:''}
+            ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${ev.intHomeScore} – ${ev.intAwayScore}</div>`:
+            `<div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>`}
+            ${live2?`<div style="font-size:12px;color:var(--live);font-weight:600">${ev.strProgress||'EN JUEGO'}'</div>`:''}
           </div>
           <div style="text-align:center">
             ${ev.strAwayTeamBadge?`<img src="${ev.strAwayTeamBadge}/medium" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:
             `<div style="font-size:32px;margin-bottom:4px">${FLAGS[ev.strAwayTeam]||'🏳️'}</div>`}
-            <div style="font-family:var(--disp);font-size:12px">${ev.strAwayTeam}</div>
+            <div style="font-family:var(--disp);font-size:14px">${ev.strAwayTeam}</div>
           </div>
         </div>
         ${es?`<div style="background:rgba(201,162,39,.06);border:1px solid var(--border);border-radius:8px;padding:7px 12px;display:inline-flex;align-items:center;gap:8px;margin-top:8px">
-          <span style="font-family:var(--mono);font-size:16px;font-weight:700;color:var(--gold)">${es.time}</span>
-          <span style="font-size:9px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
-          <span style="font-family:var(--mono);font-size:10px;color:var(--muted)">${ev.strTime&&ev.strTime.slice(0,5)||''} UTC</span>
+          <span style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--gold)">${es.time}</span>
+          <span style="font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
+          <span style="font-family:var(--mono);font-size:12px;color:var(--muted)">${ev.strTime&&ev.strTime.slice(0,5)||''} UTC</span>
         </div>`:''}
-        ${ev.strVenue?`<div style="font-size:11px;color:var(--muted);margin-top:6px">📍 ${ev.strVenue}${ev.strCity?', '+ev.strCity:''}</div>`:''}
+        ${ev.strVenue?`<div style="font-size:13px;color:var(--muted);margin-top:6px">📍 ${ev.strVenue}${ev.strCity?', '+ev.strCity:''}</div>`:''}
       </div>`;
+    html+=renderHighlightsSection(hls);
     // Stats
     const stats=(stD.value&&stD.value.eventstats)||[];
     if(stats.length){
@@ -1799,20 +1893,8 @@ async function openDetail(eid,date,home,away){
       html+=`<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">TIMELINE</div>`;
       tl.forEach(e=>{
         const icon=e.strTimelineType==='Goal'?'⚽':e.strTimelineType==='Yellow Card'?'🟨':e.strTimelineType==='Red Card'?'🟥':e.strTimelineType==='Substitution'?'🔄':'•';
-        html+=`<div class="tl-ev"><div class="tl-min">${e.strTimeline}'</div><div style="font-size:15px">${icon}</div>
+        html+=`<div class="tl-ev"><div class="tl-min">${e.strTimeline}'</div><div style="font-size:17px">${icon}</div>
           <div><div class="tl-txt">${e.strPlayer||e.strTimelineType}</div><div class="tl-team">${e.strTeam||''}</div></div></div>`;
-      });
-      html+='</div>';
-    }
-    // Highlights
-    const hls=(hlD.value&&(hlD.value.highlights||hlD.value.results))||[];
-    if(hls.length){
-      html+=`<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">HIGHLIGHTS</div>`;
-      hls.slice(0,3).forEach(h=>{
-        html+=`<a class="hl-card" href="${h.strVideo||h.strYoutube||'#'}" target="_blank" rel="noopener">
-          ${h.strThumb?`<img src="${h.strThumb}" style="width:70px;height:44px;object-fit:cover;border-radius:4px" alt="">`:
-          `<div class="hl-play">▶</div>`}
-          <div class="hl-title">${h.strFilename||h.strEvent||'Ver highlight'}</div></a>`;
       });
       html+='</div>';
     }
@@ -1824,8 +1906,8 @@ async function openDetail(eid,date,home,away){
       html+=`<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">ALINEACIONES</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">`;
       [[hLu,ev.strHomeTeam],[aLu,ev.strAwayTeam]].forEach(([lineup,tname])=>{
-        html+=`<div><div style="font-family:var(--disp);font-size:11px;letter-spacing:1px;color:var(--gold);margin-bottom:5px">${tname}</div>`;
-        lineup.forEach(p=>{html+=`<div style="font-size:10px;padding:3px 0;border-bottom:1px solid var(--border);display:flex;gap:6px">
+        html+=`<div><div style="font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--gold);margin-bottom:5px">${tname}</div>`;
+        lineup.forEach(p=>{html+=`<div style="font-size:12px;padding:3px 0;border-bottom:1px solid var(--border);display:flex;gap:6px">
           <span style="font-family:var(--mono);color:var(--muted);min-width:16px">${p.intSquadNumber||'—'}</span>
           <span>${p.strPlayer}</span></div>`;});
         html+='</div>';
