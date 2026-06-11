@@ -48,7 +48,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .empty{text-align:center;padding:50px 20px}
 .empty-icon{font-size:38px;margin-bottom:10px}
 /* ROUND TABS */
-.round-tabs{display:flex;gap:7px;overflow-x:auto;padding-bottom:10px;margin-bottom:14px;scrollbar-width:none}
+.round-tabs{display:flex;gap:7px;flex-wrap:wrap;overflow-x:visible;padding-bottom:10px;margin-bottom:14px;scrollbar-width:none}
 .round-tabs::-webkit-scrollbar{display:none}
 .rtab{padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap;cursor:pointer;border:1px solid var(--border);color:var(--muted);transition:all .2s}
 .rtab.active{background:rgba(201,162,39,.1);border-color:var(--border2);color:var(--gold)}
@@ -877,7 +877,7 @@ async function calStandRefresh(){
 }
 function buildRoundTabs(){
   const rounds=['all','Group A','Group B','Group C','Group D','Group E','Group F','Group G','Group H','Group I','Group J','Group K','Group L','M3','Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL'];
-  const labels={all:t('all'),M3:t('bestThirdShort'),'Ronda de 32':'R32','Octavos':lang==='es'?'Octavos':'R16','Cuartos':lang==='es'?'Cuartos':'QF','Semifinal':lang==='es'?'Semi':'SF','Tercer Puesto':t('thirdPlace'),'FINAL':t('final')};
+  const labels={all:t('all'),M3:t('bestThirdShort'),'Ronda de 32':lang==='es'?'Dieciseisavos':'Round of 32','Octavos':lang==='es'?'Octavos':'R16','Cuartos':lang==='es'?'Cuartos':'QF','Semifinal':lang==='es'?'Semi':'SF','Tercer Puesto':t('thirdPlace'),'FINAL':t('final')};
   document.getElementById('roundTabs').innerHTML=rounds.map(r=>{
     const lbl=labels[r]||(r.startsWith('Group')?(lang==='es'?'Grp ':'Group ')+r.slice(-1):r);
     return'<div class="rtab'+(calRound===r?' active':'')+'" onclick="setCalRound(this.dataset.r)" data-r="'+r+'">' +lbl+'</div>';
