@@ -266,21 +266,24 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .q-champ{text-align:center;padding:20px;background:rgba(201,162,39,.06);border:1px solid var(--border2);border-radius:12px;margin-top:14px}
 
 /* CALENDAR SPLIT VIEW (matches + standings) */
-.cal-split{display:grid;grid-template-columns:1fr 280px;gap:20px;align-items:start}
+.cal-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(440px,470px);gap:20px;align-items:start}
 .cal-stand-sticky{position:sticky;top:108px;margin-top:2px}
-.cal-standings-col{padding-top:2px}
-@media(max-width:660px){
+.cal-standings-col{padding-top:2px;min-width:0}
+@media(max-width:900px){
   .cal-split{grid-template-columns:1fr}
   .cal-stand-sticky{position:static;margin-bottom:14px}
   .cal-standings-col{order:-1;padding-top:0}
 }
-.gc-compact th{font-size:10px;padding:7px 11px;letter-spacing:.4px}
-.gc-compact td{font-size:12px;padding:7px 11px}
-.gc-compact .tcell span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:110px}
+.gc-compact th{font-size:10px;padding:7px 6px;letter-spacing:.35px}
+.gc-compact td{font-size:12px;padding:7px 6px}
+.gc-compact th:first-child,.gc-compact td:first-child{padding-left:10px}
+.gc-compact th:last-child,.gc-compact td:last-child{padding-right:10px}
+.gc-compact .tcell{gap:5px}
+.gc-compact .tcell span:last-child{white-space:nowrap;overflow:visible;text-overflow:clip;max-width:none}
 
 /* READABILITY PASS */
 body{font-size:16px}
-.content{max-width:900px}
+.content{max-width:1180px}
 .logo{font-size:30px}
 .lang-btn,.live-badge{font-size:13px}
 .tab{font-size:14px;padding:11px 15px}
@@ -307,7 +310,7 @@ body{font-size:16px}
 .stat-team,.pc-num,.tl-team,.ref-txt,.ref-btn,.sbar-lbls,.conf-label,.squad-count{font-size:13px}
 .pc-pos,.b-match-label,.sbar-lbl-mid{font-size:11px}
 .stat-val{font-size:20px}
-.cal-third-info{margin:-4px 0 16px;line-height:1.55}
+.cal-third-info{display:none;margin:-4px 0 16px;line-height:1.55}
 .hl-section{margin-top:14px}
 .hl-card{padding:12px;gap:12px}
 .hl-card.primary{background:rgba(201,162,39,.07);border-color:var(--border2)}
@@ -443,7 +446,7 @@ const I18N={
     liveStatus:'EN JUEGO',finishedShort:'FIN',upcoming:'PRÓXIMO',group:'Grupo',spainTime:'España',
     updatedNext:'Actualizado · siguiente en {s}s',today:'HOY',todayMatches:'PARTIDOS HOY',liveNow:'EN JUEGO',todayUpcoming:'HOY — PRÓXIMOS',finished:'FINALIZADOS',nextMatches:'PRÓXIMOS PARTIDOS',
     noLive:'No hay partidos en directo.',worldCupStarts:'El Mundial arranca el',noPhaseMatches:'No hay partidos en esta fase',
-    all:'Todos',bestThirdShort:'Mejor 3°',thirdPlace:'3er Puesto',final:'Final',classifiedDirect:'Clasifica directo',possibleThird:'Posible mejor 3º',
+    all:'Todos',bestThirdShort:'Mejor tercero',thirdPlace:'3er Puesto',final:'Final',classifiedDirect:'Clasifica directo',possibleThird:'Posible mejor 3º',
     calThirdInfo:'clasifican los 8 mejores terceros de los 12 grupos. Criterios de desempate: puntos, diferencia de goles, goles a favor, fair play y ranking FIFA.',
     qGroups:'Grupos',qThird:'Mejor Tercero',qBracket:'Eliminatoria',
     statsIntro:'Tres apartados disponibles: máximos goleadores, máximos asistentes y mejores porteros.',
@@ -463,7 +466,7 @@ const I18N={
     liveStatus:'LIVE',finishedShort:'FT',upcoming:'UPCOMING',group:'Group',spainTime:'Spain',
     updatedNext:'Updated · next in {s}s',today:'TODAY',todayMatches:'MATCHES TODAY',liveNow:'LIVE NOW',todayUpcoming:'TODAY — UPCOMING',finished:'FINISHED',nextMatches:'UPCOMING MATCHES',
     noLive:'No live matches right now.',worldCupStarts:'The World Cup starts on',noPhaseMatches:'No matches in this stage',
-    all:'All',bestThirdShort:'Best 3rd',thirdPlace:'3rd Place',final:'Final',classifiedDirect:'Direct qualification',possibleThird:'Possible best 3rd',
+    all:'All',bestThirdShort:'Best third',thirdPlace:'3rd Place',final:'Final',classifiedDirect:'Direct qualification',possibleThird:'Possible best 3rd',
     calThirdInfo:'the 8 best third-placed teams from the 12 groups qualify. Tiebreakers: points, goal difference, goals for, fair play and FIFA ranking.',
     qGroups:'Groups',qThird:'Best Third',qBracket:'Knockout',
     statsIntro:'Three sections available: top scorers, top assists and best goalkeepers.',
@@ -493,7 +496,8 @@ function applyLang(){
 function renderCalendarThirdInfo(){
   const el=document.getElementById('calThirdInfo');
   if(!el)return;
-  el.innerHTML='<strong>'+t('bestThirdShort')+':</strong> '+t('calThirdInfo');
+  el.style.display='none';
+  el.innerHTML='';
 }
 function rerenderActiveTab(){
   applyLang();
@@ -902,17 +906,17 @@ function renderGroupStandingsCard(g){
   let h='<div class="gc cal-stand-sticky">';
   h+='<div class="gc-hdr"><span class="gc-name">'+t('group').toUpperCase()+' '+g+'</span>';
   h+='<button onclick="calStandRefresh()" style="background:none;border:none;color:var(--gold);cursor:pointer;font-size:13px;font-weight:700" title="'+t('refresh')+'">↻</button></div>';
-  h+='<table class="gtbl gc-compact"><thead><tr><th>'+(lang==='es'?'Equipo':'Team')+'</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>DG</th><th>Pts</th></tr></thead><tbody>';
+  h+='<table class="gtbl gc-compact"><thead><tr><th>'+(lang==='es'?'Equipo':'Team')+'</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th></tr></thead><tbody>';
   st.forEach((t,i)=>{
     const cls=i<2?'q'+(i+1):'';
     const dot=i<2?'<span class="qdot g"></span>':i===2?'<span class="qdot y"></span>':'';
     const gd=t.gf-t.ga;
     h+='<tr class="'+cls+'"><td><div class="tcell">'+dot+'<span style="font-size:11px">'+(FLAGS[t.name]||'🏳️')+'</span><span>'+t.name+'</span></div></td>';
     h+='<td>'+t.p+'</td><td>'+t.w+'</td><td>'+t.d+'</td><td>'+t.l+'</td>';
-    h+='<td>'+(gd>0?'+':'')+gd+'</td><td class="ptscell">'+t.pts+'</td></tr>';
+    h+='<td>'+t.gf+'</td><td>'+t.ga+'</td><td>'+(gd>0?'+':'')+gd+'</td><td class="ptscell">'+t.pts+'</td></tr>';
   });
   h+='</tbody></table>';
-  h+='<div style="padding:6px 10px;font-size:10px;color:var(--muted)"><span style="color:var(--win)">●</span> '+t('classifiedDirect')+' &nbsp;<span style="color:var(--draw)">●</span> '+t('possibleThird')+'</div>';
+  h+='<div style="padding:7px 10px;font-size:12px;color:var(--muted);line-height:1.5"><span style="color:var(--win)">●</span> '+t('classifiedDirect')+' &nbsp;<span style="color:var(--draw)">●</span> '+t('possibleThird')+'<br>GF: '+(lang==='es'?'goles a favor':'goals for')+' · GC: '+(lang==='es'?'goles en contra':'goals against')+' · DG: '+(lang==='es'?'diferencia de goles':'goal difference')+'</div>';
   h+='</div>';
   return h;
 }
@@ -921,26 +925,31 @@ function renderCalMejorTercero(){
   const terceros=[];
   Object.keys(GROUPS).sort().forEach(g=>{
     const st=computeRealGroupStandings(g);
-    if(st[2])terceros.push({name:st[2].name,group:g,pts:st[2].pts,gd:st[2].gf-st[2].ga,gf:st[2].gf});
+    if(st[2])terceros.push({name:st[2].name,group:g,p:st[2].p,pts:st[2].pts,gd:st[2].gf-st[2].ga,gf:st[2].gf,ga:st[2].ga});
   });
   terceros.sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf);
-  let h='<div class="info-box">'+(lang==='es'?'Los 8 mejores terceros de los 12 grupos clasifican a la Ronda de 32. Criterios: Pts → DG → GF → Fair play → Ranking FIFA':'The 8 best third-placed teams from the 12 groups qualify for the Round of 32. Criteria: Pts → GD → GF → Fair play → FIFA ranking')+'</div>';
-  h+='<div class="gc"><div class="gc-hdr"><span class="gc-name">'+(lang==='es'?'CLASIFICACIÓN MEJOR TERCERO':'BEST THIRD-PLACED TABLE')+'</span>';
-  h+='<button onclick="calStandRefresh()" style="background:none;border:none;color:var(--gold);cursor:pointer;font-size:13px">↻</button></div>';
-  h+='<table class="tercero-table"><thead><tr><th>#</th><th>Equipo</th><th>Grp</th><th>Pts</th><th>DG</th><th>GF</th></tr></thead><tbody>';
+  let h='<div class="gc"><div class="gc-hdr"><span class="gc-name">'+(lang==='es'?'MEJORES TERCEROS':'BEST THIRD-PLACED TEAMS')+'</span><span style="font-size:13px;color:var(--muted)">8 '+(lang==='es'?'clasifican':'qualify')+'</span>';
+  h+='<button onclick="calStandRefresh()" style="background:none;border:none;color:var(--gold);cursor:pointer;font-size:15px">↻</button></div>';
+  h+='<table class="tercero-table"><thead><tr><th>#</th><th>'+(lang==='es'?'Equipo':'Team')+'</th><th>Grp</th><th>PJ</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead><tbody>';
   if(!terceros.length){
-    h+='<tr><td colspan="6" style="text-align:center;padding:20px;color:var(--muted)">'+(lang==='es'?'Disponible cuando empiecen los partidos':'Available once matches begin')+'</td></tr>';
+    h+='<tr><td colspan="8" style="text-align:center;padding:20px;color:var(--muted)">'+(lang==='es'?'Disponible cuando empiecen los partidos':'Available once matches begin')+'</td></tr>';
   } else {
     terceros.forEach((t,i)=>{
       h+='<tr class="'+(i<8?'q-in':'')+'"><td><span class="rank-num">'+(i+1)+'</span></td>';
       h+='<td><div class="tcell"><span style="font-size:13px">'+(FLAGS[t.name]||'🏳️')+'</span><span>'+t.name+'</span>'+(i<8?'<span style="margin-left:4px;font-size:9px;font-weight:700;color:var(--win)">✓</span>':'')+'</div></td>';
       h+='<td style="font-family:var(--mono);font-size:12px;color:var(--gold)">'+t.group+'</td>';
+      h+='<td style="font-family:var(--mono)">'+t.p+'</td>';
       h+='<td style="font-family:var(--mono);font-weight:700">'+t.pts+'</td>';
-      h+='<td style="font-family:var(--mono)">'+(t.gd>0?'+':'')+t.gd+'</td>';
-      h+='<td style="font-family:var(--mono)">'+t.gf+'</td></tr>';
+      h+='<td style="font-family:var(--mono)">'+t.gf+'</td>';
+      h+='<td style="font-family:var(--mono)">'+t.ga+'</td>';
+      h+='<td style="font-family:var(--mono)">'+(t.gd>0?'+':'')+t.gd+'</td></tr>';
     });
   }
   h+='</tbody></table></div>';
+  h+='<div class="info-box" style="margin-top:14px">'+
+    '<strong>'+(lang==='es'?'Criterios de desempate':'Tiebreakers')+':</strong> '+
+    (lang==='es'?'puntos, diferencia de goles, goles a favor, fair play y ranking FIFA. Los 8 mejores terceros de los 12 grupos pasan a la Ronda de 32.':'points, goal difference, goals for, fair play and FIFA ranking. The 8 best third-placed teams from the 12 groups advance to the Round of 32.')+
+    '</div>';
   document.getElementById('calContent').innerHTML=h;
 }
 
