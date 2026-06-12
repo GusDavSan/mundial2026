@@ -479,7 +479,7 @@ const I18N={
     statsAvailableSoon:'Las estadísticas se irán rellenando conforme terminen los partidos.',statsProgress:'Actualizando: {done}/{total} partidos...',refreshStats:'Actualizar estadísticas',
     keeperTentative:'Portero probable · confirmar alineación',keeperConfirmed:'Portero confirmado',keeperFallback:'Portero por confirmar',teamCleanSheet:'Portería a cero de la selección',
     matchStats:'ESTADÍSTICAS',timeline:'TIMELINE',timelineGoals:'GOLES',timelineCards:'TARJETAS',timelineSubs:'CAMBIOS',timelineOther:'OTROS',
-    goalEvent:'Gol',penaltyGoal:'Penalti',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',otherEvent:'Evento',
+    goalEvent:'Gol',penaltyGoal:'Penalti',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
     noEventsInBlock:'Sin eventos en este bloque.',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
     shots:'Tiros',shotsOnGoal:'Tiros a puerta',possession:'Posesión',passes:'Pases',fouls:'Faltas',yellowCards:'Tarjetas amarillas',redCards:'Tarjetas rojas',corners:'Córners',
     chooseTeam:'Selecciona un equipo para ver su plantilla para el Mundial 2026.',allTeams:'Todas las selecciones',loadingTeam:'Cargando {team}...',squadLoading:'Cargando convocados...',
@@ -504,7 +504,7 @@ const I18N={
     statsAvailableSoon:'Stats will populate as matches finish.',statsProgress:'Updating: {done}/{total} matches...',refreshStats:'Refresh stats',
     keeperTentative:'Likely goalkeeper · confirm lineup',keeperConfirmed:'Confirmed goalkeeper',keeperFallback:'Goalkeeper to confirm',teamCleanSheet:'Team clean sheet',
     matchStats:'STATS',timeline:'TIMELINE',timelineGoals:'GOALS',timelineCards:'CARDS',timelineSubs:'SUBSTITUTIONS',timelineOther:'OTHER',
-    goalEvent:'Goal',penaltyGoal:'Penalty',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',otherEvent:'Event',
+    goalEvent:'Goal',penaltyGoal:'Penalty',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
     noEventsInBlock:'No events in this block.',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
     shots:'Shots',shotsOnGoal:'Shots on goal',possession:'Possession',passes:'Passes',fouls:'Fouls',yellowCards:'Yellow cards',redCards:'Red cards',corners:'Corners',
     chooseTeam:'Select a team to see its World Cup 2026 squad.',allTeams:'All teams',loadingTeam:'Loading {team}...',squadLoading:'Loading squad...',
@@ -814,8 +814,9 @@ async function loadLive(){
   }catch{}
   // Merge with local fixtures for time/venue
   const matchFx=m=>{
-    const h=(m.strHomeTeam||'').trim(),a=(m.strAwayTeam||'').trim();
-    return FIXTURES.find(f=>(f.home===h||f.away===h)&&(f.home===a||f.away===a));
+    const h=normName((m.strHomeTeam||'').trim()),a=normName((m.strAwayTeam||'').trim());
+    return FIXTURES.find(f=>sameTeam(f.home,h)&&sameTeam(f.away,a))||
+      FIXTURES.find(f=>sameTeam(f.home,a)&&sameTeam(f.away,h));
   };
   let html='';
   if(liveNow.length>0){
@@ -824,10 +825,10 @@ async function loadLive(){
     html+=liveNow.map(e=>{
       const fx=matchFx(e)||{};
       return matchCard({
-        id:e.idEvent,date:e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
-        home:e.strHomeTeam,away:e.strAwayTeam,group:e.strRound,
+        id:e.idEvent,date:fx.date||e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
+        home:fx.home||normName(e.strHomeTeam)||e.strHomeTeam,away:fx.away||normName(e.strAwayTeam)||e.strAwayTeam,group:fx.group||e.strRound,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[e.strHomeTeam]||'🏳️',awayFlag:FLAGS[e.strAwayTeam]||'🏳️',
+        homeFlag:FLAGS[fx.home||normName(e.strHomeTeam)]||'🏳️',awayFlag:FLAGS[fx.away||normName(e.strAwayTeam)]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,progress:e.strProgress
       });
@@ -837,12 +838,12 @@ async function loadLive(){
   if(upcoming.length>0){
     html+=`<div class="sec-hdr"><span class="sec-ttl">📅 ${t('todayUpcoming')}</span><span class="sec-cnt">${upcoming.length}</span></div>`;
     html+=upcoming.map(e=>{
-      const fx=matchFx(e)||FIXTURES.find(f=>f.date===today)||{};
+      const fx=matchFx(e)||{};
       return matchCard({
-        id:e.idEvent,date:e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
-        home:e.strHomeTeam,away:e.strAwayTeam,group:e.strRound,
+        id:e.idEvent,date:fx.date||e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
+        home:fx.home||normName(e.strHomeTeam)||e.strHomeTeam,away:fx.away||normName(e.strAwayTeam)||e.strAwayTeam,group:fx.group||e.strRound,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[e.strHomeTeam]||'🏳️',awayFlag:FLAGS[e.strAwayTeam]||'🏳️',
+        homeFlag:FLAGS[fx.home||normName(e.strHomeTeam)]||'🏳️',awayFlag:FLAGS[fx.away||normName(e.strAwayTeam)]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus
       });
@@ -854,10 +855,10 @@ async function loadLive(){
     html+=finished.map(e=>{
       const fx=matchFx(e)||{};
       return matchCard({
-        id:e.idEvent,date:e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
-        home:e.strHomeTeam,away:e.strAwayTeam,group:e.strRound,
+        id:e.idEvent,date:fx.date||e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
+        home:fx.home||normName(e.strHomeTeam)||e.strHomeTeam,away:fx.away||normName(e.strAwayTeam)||e.strAwayTeam,group:fx.group||e.strRound,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[e.strHomeTeam]||'🏳️',awayFlag:FLAGS[e.strAwayTeam]||'🏳️',
+        homeFlag:FLAGS[fx.home||normName(e.strHomeTeam)]||'🏳️',awayFlag:FLAGS[fx.away||normName(e.strAwayTeam)]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore
       });
@@ -884,6 +885,35 @@ let calRound='all',apiResults={};
 const TSDB_NAMES={'USA':'United States','Turkey':'Türkiye','Czech Republic':'Czechia',
   'Bosnia-Herzegovina':'Bosnia & Herzegovina','Congo DR':'DR Congo','Curacao':'Curaçao'};
 function normName(n){return TSDB_NAMES[n]||n;}
+const API_SEARCH_NAMES={
+  'Czechia':['Czech Republic','Czechia'],
+  'Bosnia & Herzegovina':['Bosnia-Herzegovina','Bosnia & Herzegovina','Bosnia Herzegovina'],
+  'United States':['USA','United States'],
+  'Türkiye':['Turkey','Türkiye'],
+  'Curaçao':['Curacao','Curaçao'],
+  'DR Congo':['Congo DR','DR Congo']
+};
+function eventSearchNames(team){
+  return API_SEARCH_NAMES[team]||[team];
+}
+async function findEventIdForFixture(f){
+  const tried=new Set();
+  const homes=eventSearchNames(f.home),aways=eventSearchNames(f.away);
+  for(const h of homes){
+    for(const a of aways){
+      const q=h+'_vs_'+a;
+      if(tried.has(q))continue;
+      tried.add(q);
+      try{
+        const d=await v1(`/searchevents.php?e=${encodeURIComponent(q)}&s=2026`,2500);
+        const evs=d.events||d.event||[];
+        const ev=Array.isArray(evs)?evs.find(x=>String(x.idLeague)===LEAGUE_ID)||evs[0]:evs;
+        if(ev&&ev.idEvent)return ev.idEvent;
+      }catch{}
+    }
+  }
+  return null;
+}
 
 async function loadCal(){
   buildRoundTabs();
@@ -1496,7 +1526,7 @@ function updateQChampion(){
 // ══════════════════════════════════════════════
 let statsCache={},statsLoaded=false;
 const STATS_KEY='mw26_stats';
-const STATS_VERSION=3;
+const STATS_VERSION=4;
 async function loadGoleadores(){
   const el=document.getElementById('golesContent');
   // Load from cache
@@ -1510,7 +1540,7 @@ async function loadGoleadores(){
   await loadLocalSquads();
   // Get list of finished matches
   const today=new Date().toISOString().slice(0,10);
-  const finishedFx=FIXTURES.filter(f=>f.date<today&&f.home!=='TBD');
+  const finishedFx=FIXTURES.filter(f=>f.home!=='TBD'&&(f.date<today||(f.date===today&&isPast(f.date,f.time))));
   if(finishedFx.length===0){
     renderStats(el);
     return;
@@ -1533,10 +1563,7 @@ async function fetchMissingStats(missing,el){
       const k=`${f.home}|${f.away}`;
       let eid=apiResults[k]?.id;
       if(!eid){
-        // Search for event
-        const d=await v1(`/searchevents.php?e=${encodeURIComponent(f.home+'_vs_'+f.away)}&s=2026`);
-        const evs=d.events||[];
-        if(evs[0])eid=evs[0].idEvent;
+        eid=await findEventIdForFixture(f);
       }
       if(eid){
         const[evD,tlD,luD]=await Promise.allSettled([
@@ -1885,13 +1912,19 @@ function eventMinute(ev){
   return /^\d+(\+\d+)?$/.test(raw)?raw+"'":'';
 }
 function timelineKind(ev){
+  const raw=stripText(ev.strTimelineType||ev.strTimeline||'');
+  const detail=stripText(ev.strTimelineDetail||'');
   const tx=eventText(ev);
-  if(tx.includes('red card')||tx.includes('tarjeta roja')||/\bred\b/.test(tx))return 'red';
-  if(tx.includes('yellow card')||tx.includes('tarjeta amarilla')||/\byellow\b/.test(tx))return 'yellow';
-  if(tx.includes('card')||tx.includes('tarjeta'))return 'yellow';
-  if(tx.includes('substitution')||tx.includes('substitution')||tx.includes('cambio'))return 'substitution';
-  if(tx.includes('penalty')||tx.includes('penalti'))return 'goal';
-  if(tx.includes('goal')||tx.includes('gol'))return 'goal';
+  if(raw==='goal'||raw==='penalty')return 'goal';
+  if(raw==='var'||raw.includes('var'))return 'var';
+  if(raw==='card'||raw.includes('card')){
+    if(detail.includes('red')||tx.includes('red card')||tx.includes('tarjeta roja'))return 'red';
+    return 'yellow';
+  }
+  if(detail.includes('red card')||tx.includes('tarjeta roja'))return 'red';
+  if(detail.includes('yellow card')||tx.includes('tarjeta amarilla'))return 'yellow';
+  if(raw==='subst'||raw.includes('substitution')||detail.includes('substitution')||tx.includes('cambio'))return 'substitution';
+  if(detail.includes('goal disallowed'))return 'var';
   return 'other';
 }
 function timelineLabel(ev){
@@ -1900,10 +1933,11 @@ function timelineLabel(ev){
   if(kind==='yellow')return t('yellowCard');
   if(kind==='red')return t('redCard');
   if(kind==='substitution')return t('substitutionEvent');
+  if(kind==='var')return t('varEvent');
   return t('otherEvent');
 }
 function timelineIcon(kind){
-  return kind==='goal'?'⚽':kind==='yellow'?'🟨':kind==='red'?'🟥':kind==='substitution'?'🔄':'•';
+  return kind==='goal'?'⚽':kind==='yellow'?'🟨':kind==='red'?'🟥':kind==='substitution'?'🔄':kind==='var'?'📺':'•';
 }
 function eventPlayer(ev){
   const vals=[ev.strPlayer,ev.strPlayer1,ev.strPlayer2,ev.strTimelinePlayer];
@@ -1914,10 +1948,11 @@ function eventPlayer(ev){
   return '';
 }
 function eventAssist(ev){
-  const vals=[ev.strAssistPlayer,ev.strAssist,ev.strAssist1,ev.strPlayer2];
+  if(timelineKind(ev)!=='goal')return '';
+  const vals=[ev.strAssistPlayer,ev.strAssist,ev.strAssist1];
   for(const v of vals){
     const name=String(v||'').trim();
-    if(name&&!['assist','none','null','-'].includes(stripText(name)))return name;
+    if(name&&!['assist','none','null','-','0'].includes(stripText(name)))return name;
   }
   return '';
 }
@@ -1944,11 +1979,15 @@ function renderTimelineBlock(title,events){
     const player=eventPlayer(ev)||timelineLabel(ev);
     const minute=eventMinute(ev)||'•';
     const assist=eventAssist(ev);
+    const teamFlag=FLAGS[normName(ev.strTeam)]||FLAGS[ev.strTeam]||'🏳️';
+    let meta='';
+    if(kind==='yellow'||kind==='red')meta='<span style="font-size:15px">'+teamFlag+'</span>';
+    else meta=escHtml(timelineLabel(ev))+(ev.strTeam?' · '+teamFlag+' '+escHtml(normName(ev.strTeam)):'')+(assist?' · '+escHtml(t('assistLabel'))+': '+escHtml(assist):'');
     html+='<div class="event-row">'+
       '<div class="event-minute">'+escHtml(minute)+'</div>'+
       '<div class="event-icon">'+timelineIcon(kind)+'</div>'+
       '<div><div class="event-title">'+escHtml(player)+'</div>'+
-      '<div class="event-meta">'+escHtml(timelineLabel(ev))+(ev.strTeam?' · '+escHtml(ev.strTeam):'')+(assist?' · '+escHtml(t('assists'))+': '+escHtml(assist):'')+'</div></div>'+
+      '<div class="event-meta">'+meta+'</div></div>'+
       '</div>';
   });
   return html+'</div>';
@@ -2045,6 +2084,12 @@ function renderLineupsSection(lineup,home,away){
   });
   return html+'</div></div>';
 }
+const DAZN_HIGHLIGHTS_FALLBACK={
+  items:[
+    {matchId:1,date:'2026-06-11',home:'Mexico',away:'South Africa',source:'DAZN ES',title:'México vs Sudáfrica (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™',url:'https://www.youtube.com/watch?v=x83kn09PJKg',thumbnail:'https://i.ytimg.com/vi/x83kn09PJKg/hqdefault.jpg',videoId:'x83kn09PJKg',manual:true},
+    {matchId:2,date:'2026-06-12',home:'South Korea',away:'Czechia',source:'DAZN ES',title:'República de Corea vs Chequia (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™',url:'https://www.youtube.com/watch?v=9ojbKBxau9Q',thumbnail:'https://i.ytimg.com/vi/9ojbKBxau9Q/hqdefault.jpg',videoId:'9ojbKBxau9Q',manual:true}
+  ]
+};
 function normalizeHighlightsData(data){
   if(!data)return[];
   const list=data.items||data.highlights||data.results||data.event_highlights||data.eventhighlights||data.tvhighlights||data.youtube||[];
@@ -2065,7 +2110,7 @@ async function loadDaznHighlights(eventId,ev){
     try{
       const d=await fetchJson('data/dazn-highlights.json',{},1500);
       daznHighlightsCache=normalizeHighlightsData(d);
-    }catch{daznHighlightsCache=[];}
+    }catch{daznHighlightsCache=normalizeHighlightsData(DAZN_HIGHLIGHTS_FALLBACK);}
   }
   const home=ev&&ev.strHomeTeam,away=ev&&ev.strAwayTeam,date=ev&&ev.dateEvent;
   return (daznHighlightsCache||[]).filter(function(h){
@@ -2107,11 +2152,16 @@ async function openDetail(eid,date,home,away){
   document.body.style.overflow='hidden';
   inner.innerHTML='<div class="loading" style="min-height:200px"><div class="spinner"></div><span class="loading-text">Cargando detalles...</span></div>';
   let eventId=eid;
+  if(eventId&&Number(eventId)<100000)eventId=null;
   if(!eventId||eventId===0){
     try{
       const k=`${home}|${away}`;
       eventId=apiResults[k]&&apiResults[k].id;
-      if(!eventId){const d=await v1(`/searchevents.php?e=${encodeURIComponent(home+'_vs_'+away)}`);eventId=d.events&&d.events[0]&&d.events[0].idEvent;}
+      if(!eventId){
+        const fx=FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away)&&(!date||f.date===date))||
+          FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away));
+        eventId=fx?await findEventIdForFixture(fx):null;
+      }
     }catch{}
   }
   if(!eventId){
@@ -2231,4 +2281,3 @@ setTimeout(()=>{loadCal();calLoaded=true;},2000);
 </script>
 </body>
 </html>
-
