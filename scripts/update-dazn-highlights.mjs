@@ -2,9 +2,13 @@ import fs from "node:fs/promises";
 import vm from "node:vm";
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
-const OUT_FILE = "data/dazn-highlights.json";
+const OUT_FILE = process.env.HIGHLIGHTS_OUT_FILE || "data/dazn-highlights.json";
 const CHANNEL_HANDLE = "@DAZNES";
-const MAX_UPLOAD_PAGES = 3;
+const MAX_UPLOAD_PAGES = Number(process.env.MAX_UPLOAD_PAGES || 3);
+const MOCK_UPLOADS_FILE = process.env.MOCK_UPLOADS_FILE || "";
+const DEBUG = process.env.DEBUG_HIGHLIGHTS === "1";
+const NOW = process.env.NOW ? new Date(process.env.NOW) : new Date();
+const MIN_CONFIDENCE = Number(process.env.MIN_CONFIDENCE || 12);
 
 const HTML_CANDIDATES = ["index.html", "mundial2026_22.html", "mundial2026.html"];
 
@@ -16,6 +20,7 @@ const TEAM_ALIASES = {
   "United States": ["united states", "estados unidos", "usa", "eeuu", "ee.uu"],
   "Türkiye": ["turkiye", "türkiye", "turquia", "turquía", "turkey"],
   "Bosnia & Herzegovina": ["bosnia", "bosnia herzegovina", "bosnia y herzegovina"],
+  "Canada": ["canada", "canadá"],
   "DR Congo": ["dr congo", "rd congo", "republica democratica del congo", "república democrática del congo"],
   "Curaçao": ["curacao", "curaçao"],
   "Ivory Coast": ["ivory coast", "costa de marfil"],
@@ -50,14 +55,13 @@ const TEAM_ALIASES = {
   "Algeria": ["algeria", "argelia"],
   "Haiti": ["haiti", "haití"],
   "Panama": ["panama", "panamá"],
-  "Canada": ["canada", "canadá"],
   "Australia": ["australia"],
   "Qatar": ["qatar", "catar"],
   "Iran": ["iran", "irán"],
   "Iraq": ["iraq", "irak"],
   "Jordan": ["jordan", "jordania"],
   "Uzbekistan": ["uzbekistan", "uzbekistán"],
-  "Morocco": ["morocco", "marruecos"]
+  "Wales": ["wales", "gales"]
 };
 
 function normalize(text) {
@@ -71,9 +75,16 @@ function aliases(team) {
   return [...new Set([team, ...(TEAM_ALIASES[team] || [])].map(normalize).filter(Boolean))];
 }
 
+function escapeRegex(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 function hasTeam(title, team) {
   const clean = normalize(title);
-  return aliases(team).some((name) => clean.includes(name));
+  return aliases(team).some((name) => {
+    const pattern = new RegExp(`(^|[^a-z0-9])${escapeRegex(name)}([^a-z0-9]|$)`, "i");
+    return pattern.test(clean);
+  });
 }
 
 function scoreVideoForMatch(video, match) {
@@ -83,7 +94,17 @@ function scoreVideoForMatch(video, match) {
   if (hasTeam(title, match.away)) score += 6;
   if (/(resumen|highlights|goles|goals|mejores momentos)/.test(title)) score += 3;
   if (/(mundial|world cup|fifa)/.test(title)) score += 2;
-  if (/(directo|previa|preview|rueda de prensa|press conference)/.test(title)) score -= 5;
+  if (/(copa mundial|world cup|fifa world cup)/.test(title)) score += 1;
+  if (/(directo|en vivo|live|previa|preview|rueda de prensa|press conference|entrenamiento|training)/.test(title)) score -= 5;
+  if (video.publishedAt && match.date) {
+    const published = new Date(video.publishedAt);
+    const matchStart = new Date(`${match.date}T${match.time || "00:00"}:00Z`);
+    const daysAfter = (published - matchStart) / 86400000;
+    if (Number.isFinite(daysAfter)) {
+      if (daysAfter >= -0.25 && daysAfter <= 4) score += 2;
+      if (daysAfter < -0.5 || daysAfter > 14) score -= 4;
+    }
+  }
   return score;
 }
 
@@ -146,6 +167,18 @@ async function getRecentUploads(playlistId) {
   return videos.filter((v) => v.videoId && v.title);
 }
 
+async function readMockUploads() {
+  const raw = await fs.readFile(MOCK_UPLOADS_FILE, "utf8");
+  const data = JSON.parse(raw);
+  const items = Array.isArray(data) ? data : data.items || [];
+  return items.map((item) => ({
+    videoId: item.videoId || item.id,
+    title: item.title,
+    publishedAt: item.publishedAt || NOW.toISOString(),
+    thumbnail: item.thumbnail || ""
+  })).filter((v) => v.videoId && v.title);
+}
+
 async function readExisting() {
   try {
     const raw = await fs.readFile(OUT_FILE, "utf8");
@@ -158,7 +191,7 @@ async function readExisting() {
 
 function matchDateHasPassed(match) {
   if (match.home === "TBD" || match.away === "TBD") return false;
-  return new Date(`${match.date}T${match.time || "23:59"}:00Z`) <= new Date();
+  return new Date(`${match.date}T${match.time || "23:59"}:00Z`) <= NOW;
 }
 
 function buildHighlights(fixtures, uploads, existing) {
@@ -174,9 +207,13 @@ function buildHighlights(fixtures, uploads, existing) {
     if (existingItem?.manual || existingItem?.locked) continue;
     const best = uploads
       .map((video) => ({ video, score: scoreVideoForMatch(video, match) }))
-      .filter((x) => x.score >= 12)
+      .filter((x) => x.score >= MIN_CONFIDENCE)
       .sort((a, b) => b.score - a.score || new Date(b.video.publishedAt) - new Date(a.video.publishedAt))[0];
-    if (!best) continue;
+    if (!best) {
+      if (DEBUG) console.log(`Sin match DAZN: ${match.id} ${match.home} vs ${match.away}`);
+      continue;
+    }
+    if (DEBUG) console.log(`DAZN match ${match.id}: "${best.video.title}" (${best.score})`);
     byMatch.set(matchKey, {
       matchId: match.id,
       date: match.date,
@@ -199,13 +236,14 @@ function buildHighlights(fixtures, uploads, existing) {
   };
 }
 
-if (!API_KEY) {
+if (!API_KEY && !MOCK_UPLOADS_FILE) {
   throw new Error("Falta el secreto YOUTUBE_API_KEY en GitHub Actions");
 }
 
 const [fixtures, existing] = await Promise.all([readFixtures(), readExisting()]);
-const uploadsPlaylist = await getUploadsPlaylist();
-const uploads = await getRecentUploads(uploadsPlaylist);
+const uploads = MOCK_UPLOADS_FILE
+  ? await readMockUploads()
+  : await getRecentUploads(await getUploadsPlaylist());
 const output = buildHighlights(fixtures, uploads, existing);
 
 await fs.mkdir("data", { recursive: true });
