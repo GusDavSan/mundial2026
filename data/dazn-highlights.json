@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T00:00:00.000Z",
+  "updated": "2026-06-12T12:01:22.539Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -12,7 +12,8 @@
       "url": "https://www.youtube.com/watch?v=x83kn09PJKg",
       "thumbnail": "https://i.ytimg.com/vi/x83kn09PJKg/hqdefault.jpg",
       "videoId": "x83kn09PJKg",
-      "confidence": 18
+      "publishedAt": "2026-06-11T23:00:03Z",
+      "confidence": 20
     },
     {
       "matchId": 2,
@@ -24,7 +25,8 @@
       "url": "https://www.youtube.com/watch?v=9ojbKBxau9Q",
       "thumbnail": "https://i.ytimg.com/vi/9ojbKBxau9Q/hqdefault.jpg",
       "videoId": "9ojbKBxau9Q",
-      "confidence": 18
+      "publishedAt": "2026-06-12T06:08:49Z",
+      "confidence": 20
     }
   ]
 }
