@@ -1,5 +1,30 @@
 {
-  "updated": null,
+  "updated": "2026-06-12T00:00:00.000Z",
   "source": "DAZN ES YouTube highlights",
-  "items": []
+  "items": [
+    {
+      "matchId": 1,
+      "date": "2026-06-11",
+      "home": "Mexico",
+      "away": "South Africa",
+      "source": "DAZN ES",
+      "title": "México vs Sudáfrica (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=x83kn09PJKg",
+      "thumbnail": "https://i.ytimg.com/vi/x83kn09PJKg/hqdefault.jpg",
+      "videoId": "x83kn09PJKg",
+      "manual": true
+    },
+    {
+      "matchId": 2,
+      "date": "2026-06-12",
+      "home": "South Korea",
+      "away": "Czechia",
+      "source": "DAZN ES",
+      "title": "República de Corea vs Chequia (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9ojbKBxau9Q",
+      "thumbnail": "https://i.ytimg.com/vi/9ojbKBxau9Q/hqdefault.jpg",
+      "videoId": "9ojbKBxau9Q",
+      "manual": true
+    }
+  ]
 }
