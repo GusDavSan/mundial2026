@@ -232,10 +232,15 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .event-empty{padding:12px;color:var(--muted);font-size:13px;text-align:center}
 .lineup-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .lineup-card{background:rgba(13,20,38,.65);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.lineup-team{font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--gold);padding:8px 10px;border-bottom:1px solid var(--border);background:rgba(201,162,39,.04)}
-.lineup-player{font-size:12px;padding:5px 10px;border-bottom:1px solid var(--border);display:flex;gap:7px;align-items:center}
+.lineup-team{font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--gold);padding:8px 10px;border-bottom:1px solid var(--border);background:rgba(201,162,39,.04);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.lineup-formation{font-family:var(--mono);font-size:11px;color:var(--text);background:rgba(201,162,39,.1);border:1px solid var(--border);border-radius:14px;padding:2px 7px;letter-spacing:0}
+.lineup-subtitle{font-family:var(--disp);font-size:12px;letter-spacing:1.2px;color:var(--gold2);padding:8px 10px 4px}
+.lineup-player{font-size:12px;padding:5px 10px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:24px 1fr auto;gap:7px;align-items:center}
 .lineup-player:last-child{border-bottom:none}
+.lineup-num{font-family:var(--mono);color:var(--muted);font-size:11px}
+.lineup-pos{font-family:var(--mono);font-size:10px;color:var(--muted)}
 .lineup-empty{font-size:12px;color:var(--muted);line-height:1.45;padding:12px 10px}
+.lineup-source{font-size:11px;color:var(--muted);text-align:right;margin-top:7px}
 /* Highlight */
 .hl-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px;display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;margin-bottom:7px}
 .hl-card:hover{border-color:var(--gold2)}
@@ -333,6 +338,7 @@ body{font-size:16px}
 .event-block-title,.lineup-team{font-size:15px}
 .event-title,.lineup-player{font-size:14px}
 .event-meta,.event-empty,.lineup-empty{font-size:13px}
+.lineup-subtitle{font-size:14px}
 .cal-third-info{display:none;margin:-4px 0 16px;line-height:1.55}
 .hl-section{margin-top:14px}
 .hl-card{padding:12px;gap:12px}
@@ -481,6 +487,7 @@ const I18N={
     matchStats:'ESTADÍSTICAS',timeline:'TIMELINE',timelineGoals:'GOLES',timelineCards:'TARJETAS',timelineSubs:'CAMBIOS',timelineOther:'OTROS',
     goalEvent:'Gol',penaltyGoal:'Penalti',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
     noEventsInBlock:'Sin eventos en este bloque.',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
+    starters:'Titulares',bench:'Banquillo',formation:'Formación',lineupsSource:'Fuente',
     shots:'Tiros',shotsOnGoal:'Tiros a puerta',possession:'Posesión',passes:'Pases',fouls:'Faltas',yellowCards:'Tarjetas amarillas',redCards:'Tarjetas rojas',corners:'Córners',
     chooseTeam:'Selecciona un equipo para ver su plantilla para el Mundial 2026.',allTeams:'Todas las selecciones',loadingTeam:'Cargando {team}...',squadLoading:'Cargando convocados...',
     teamNotFound:'Equipo no encontrado en TheSportsDB.',viewSquadsFifa:'Ver plantillas en FIFA.com',officialSquad:'Ver convocatoria oficial en FIFA.com',viewTsdb:'Ver en TheSportsDB',
@@ -506,6 +513,7 @@ const I18N={
     matchStats:'STATS',timeline:'TIMELINE',timelineGoals:'GOALS',timelineCards:'CARDS',timelineSubs:'SUBSTITUTIONS',timelineOther:'OTHER',
     goalEvent:'Goal',penaltyGoal:'Penalty',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
     noEventsInBlock:'No events in this block.',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
+    starters:'Starters',bench:'Bench',formation:'Formation',lineupsSource:'Source',
     shots:'Shots',shotsOnGoal:'Shots on goal',possession:'Possession',passes:'Passes',fouls:'Fouls',yellowCards:'Yellow cards',redCards:'Red cards',corners:'Corners',
     chooseTeam:'Select a team to see its World Cup 2026 squad.',allTeams:'All teams',loadingTeam:'Loading {team}...',squadLoading:'Loading squad...',
     teamNotFound:'Team not found in TheSportsDB.',viewSquadsFifa:'View squads on FIFA.com',officialSquad:'View official squad on FIFA.com',viewTsdb:'View on TheSportsDB',
@@ -2067,21 +2075,64 @@ function findLikelyKeeperFromSquad(team){
   });
   return gk?{strPlayer:gk.name,intSquadNumber:gk.num,tentative:true}:null;
 }
+let storedLineupsCache=null,storedLineupsLoaded=false;
+async function loadStoredLineups(eventId,ev){
+  if(!storedLineupsLoaded){
+    storedLineupsLoaded=true;
+    try{
+      const d=await fetchJson('data/lineups.json',{},1500);
+      storedLineupsCache=d&&Array.isArray(d.items)?d.items:[];
+    }catch{storedLineupsCache=[];}
+  }
+  const home=ev&&normName(ev.strHomeTeam),away=ev&&normName(ev.strAwayTeam),date=ev&&ev.dateEvent;
+  return (storedLineupsCache||[]).find(function(item){
+    if(!item)return false;
+    if(date&&item.date&&String(item.date)!==String(date))return false;
+    return sameTeam(item.homeTeam||item.home&&item.home.team,home)&&sameTeam(item.awayTeam||item.away&&item.away.team,away);
+  })||null;
+}
+function renderPlayerList(players){
+  return (players||[]).map(function(p){
+    return '<div class="lineup-player">'+
+      '<span class="lineup-num">'+escHtml(p.num||p.jersey||'')+'</span>'+
+      '<span>'+escHtml(p.name||p.strPlayer||p.strName||'')+'</span>'+
+      '<span class="lineup-pos">'+escHtml(p.pos||p.position||'')+'</span>'+
+      '</div>';
+  }).join('');
+}
+function renderStructuredLineupTeam(side){
+  const starters=side.starters||[],bench=side.bench||[];
+  let html='<div class="lineup-card"><div class="lineup-team"><span>'+escHtml(side.team||'')+'</span>'+
+    (side.formation?'<span class="lineup-formation">'+escHtml(side.formation)+'</span>':'')+'</div>';
+  html+='<div class="lineup-subtitle">'+t('starters')+'</div>';
+  html+=starters.length?renderPlayerList(starters):'<div class="lineup-empty">'+t('lineupsUnavailable')+'</div>';
+  if(bench.length){
+    html+='<div class="lineup-subtitle">'+t('bench')+'</div>';
+    html+=renderPlayerList(bench);
+  }
+  return html+'</div>';
+}
+function renderRawLineupTeam(team,lineup){
+  const rows=(lineup||[]).filter(p=>sameTeam(p.strTeam,team));
+  let html='<div class="lineup-card"><div class="lineup-team"><span>'+escHtml(team)+'</span></div>';
+  if(!rows.length){
+    html+='<div class="lineup-empty">'+t('lineupsUnavailable')+'</div>';
+  }else{
+    html+=renderPlayerList(rows.map(function(p){
+      return {num:p.intSquadNumber||p.strNumber||'',name:p.strPlayer||p.strName||'',pos:p.strPosition||''};
+    }));
+  }
+  return html+'</div>';
+}
 function renderLineupsSection(lineup,home,away){
   const teams=[home,away];
   let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('lineups')+'</div><div class="lineup-grid">';
-  teams.forEach(function(team){
-    const rows=(lineup||[]).filter(p=>sameTeam(p.strTeam,team));
-    html+='<div class="lineup-card"><div class="lineup-team">'+escHtml(team)+'</div>';
-    if(!rows.length){
-      html+='<div class="lineup-empty">'+t('lineupsUnavailable')+'</div>';
-    }else{
-      rows.forEach(function(p){
-        html+='<div class="lineup-player"><span style="font-family:var(--mono);color:var(--muted);min-width:20px">'+escHtml(p.intSquadNumber||p.strNumber||'—')+'</span><span>'+escHtml(p.strPlayer||p.strName||'')+'</span></div>';
-      });
-    }
-    html+='</div>';
-  });
+  if(lineup&&lineup.home&&lineup.away){
+    html+=renderStructuredLineupTeam(lineup.home)+renderStructuredLineupTeam(lineup.away);
+    html+='</div><div class="lineup-source">'+t('lineupsSource')+': '+escHtml(lineup.source||'ESPN')+'</div></div>';
+    return html;
+  }
+  teams.forEach(function(team){html+=renderRawLineupTeam(team,lineup||[]);});
   return html+'</div></div>';
 }
 const DAZN_HIGHLIGHTS_FALLBACK={
@@ -2243,7 +2294,8 @@ async function openDetail(eid,date,home,away){
     if(tl.length)html+=renderSplitTimeline(tl);
     // Lineups
     const lu=(luD.value&&luD.value.lineup)||[];
-    html+=renderLineupsSection(lu,ev.strHomeTeam,ev.strAwayTeam);
+    const storedLineup=await loadStoredLineups(eventId,ev);
+    html+=renderLineupsSection(storedLineup||lu,ev.strHomeTeam,ev.strAwayTeam);
     html+='</div>';
     inner.innerHTML=html;
   }catch(e){inner.innerHTML=`<div class="empty" style="padding:40px"><div class="empty-icon">⚠️</div><div class="empty-text">${e.message}</div></div>`;}
