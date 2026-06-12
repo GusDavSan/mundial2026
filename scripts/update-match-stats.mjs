@@ -207,6 +207,98 @@ function valueFor(statObj, keys) {
   return null;
 }
 
+function scoreFromEvent(event, fixture) {
+  const competitors = event.competitions?.[0]?.competitors || [];
+  const home = competitors.find((c) => sameTeam(c.team?.displayName, fixture.home));
+  const away = competitors.find((c) => sameTeam(c.team?.displayName, fixture.away));
+  const homeScore = Number.parseInt(home?.score, 10);
+  const awayScore = Number.parseInt(away?.score, 10);
+  return {
+    home: Number.isFinite(homeScore) ? homeScore : null,
+    away: Number.isFinite(awayScore) ? awayScore : null
+  };
+}
+
+function isKeeperPosition(pos = {}) {
+  const txt = normalize(`${pos.name || ""} ${pos.displayName || ""} ${pos.abbreviation || ""}`);
+  return txt.includes("goalkeeper") || txt === "g" || txt === "gk";
+}
+
+function rosterKeeper(summary, teamName) {
+  const roster = (summary.rosters || []).find((r) => sameTeam(r.team?.displayName, teamName));
+  const player = roster?.roster?.find((p) => p.starter && isKeeperPosition(p.position)) ||
+    roster?.roster?.find((p) => isKeeperPosition(p.position));
+  if (!player?.athlete) return null;
+  return {
+    id: player.athlete.id || "",
+    name: player.athlete.displayName || player.athlete.fullName || player.athlete.shortName || "",
+    shortName: player.athlete.shortName || player.athlete.displayName || "",
+    number: player.jersey || player.athlete.jersey || "",
+    source: "ESPN roster"
+  };
+}
+
+function savesLeader(summary, teamName) {
+  const group = (summary.leaders || []).find((item) => sameTeam(item.team?.displayName, teamName));
+  const saves = group?.leaders?.find((item) => item.name === "saves");
+  const leader = saves?.leaders?.[0];
+  if (!leader?.athlete) return null;
+  const value = Number.parseFloat(String(leader.displayValue ?? leader.mainStat?.value ?? "").replace("%", ""));
+  return {
+    id: leader.athlete.id || "",
+    name: leader.athlete.displayName || leader.athlete.fullName || leader.athlete.shortName || "",
+    shortName: leader.athlete.shortName || leader.athlete.displayName || "",
+    number: leader.athlete.jersey || "",
+    saves: Number.isFinite(value) ? value : null,
+    source: "ESPN leaders"
+  };
+}
+
+function countPenaltySaves(summary, keeperName) {
+  if (!keeperName) return 0;
+  const keeper = normalize(keeperName);
+  const lastName = keeper.split(" ").filter(Boolean).slice(-1)[0] || keeper;
+  const events = [...(summary.commentary || []), ...(summary.keyEvents || [])];
+  return events.filter((event) => {
+    const text = normalize(`${event.text || ""} ${event.play?.text || ""} ${event.play?.shortText || ""}`);
+    const isPenaltySave = text.includes("penalty saved") || text.includes("saved penalty") || text.includes("penalti parado");
+    return isPenaltySave && (text.includes(keeper) || text.includes(lastName));
+  }).length;
+}
+
+function keeperMetricsFromSummary(summary, fixture, event, stats) {
+  const score = scoreFromEvent(event, fixture);
+  const sides = [
+    { side: "home", team: fixture.home, goalsFor: score.home, goalsAgainst: score.away, saves: stats.saves?.home },
+    { side: "away", team: fixture.away, goalsFor: score.away, goalsAgainst: score.home, saves: stats.saves?.away }
+  ];
+
+  return sides.map((side) => {
+    const leader = savesLeader(summary, side.team);
+    const roster = rosterKeeper(summary, side.team);
+    const keeper = leader || roster;
+    if (!keeper?.name) return null;
+    const saves = Number.isFinite(leader?.saves) ? leader.saves : Number(side.saves || 0);
+    const goalsAgainst = Number.isFinite(side.goalsAgainst) ? side.goalsAgainst : 0;
+    const shotsFaced = saves + goalsAgainst;
+    const savePct = shotsFaced > 0 ? (saves / shotsFaced) * 100 : (goalsAgainst === 0 ? 100 : 0);
+    const penaltySaves = countPenaltySaves(summary, keeper.name);
+    return {
+      side: side.side,
+      team: side.team,
+      name: keeper.name,
+      shortName: keeper.shortName || keeper.name,
+      number: keeper.number || "",
+      saves,
+      goalsAgainst,
+      cleanSheet: goalsAgainst === 0 ? 1 : 0,
+      savePct: Math.round(savePct * 10) / 10,
+      penaltySaves,
+      source: keeper.source || "ESPN"
+    };
+  }).filter(Boolean);
+}
+
 function statsFromSummary(summary, fixture, event) {
   const teams = summary.boxscore?.teams || [];
   if (teams.length < 2) return null;
@@ -232,7 +324,8 @@ function statsFromSummary(summary, fixture, event) {
     awayTeam: fixture.away,
     source: "ESPN",
     updatedAt: NOW.toISOString(),
-    stats
+    stats,
+    keepers: keeperMetricsFromSummary(summary, fixture, event, stats)
   };
 }
 
