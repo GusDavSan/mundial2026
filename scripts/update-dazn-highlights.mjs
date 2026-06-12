@@ -11,7 +11,7 @@ const HTML_CANDIDATES = ["index.html", "mundial2026_22.html", "mundial2026.html"
 const TEAM_ALIASES = {
   "Mexico": ["mexico", "mexico", "méxico"],
   "South Africa": ["south africa", "sudafrica", "sudáfrica"],
-  "South Korea": ["south korea", "corea del sur", "korea republic"],
+  "South Korea": ["south korea", "corea del sur", "republica de corea", "república de corea", "korea republic"],
   "Czechia": ["czechia", "chequia", "czech republic", "republica checa", "república checa"],
   "United States": ["united states", "estados unidos", "usa", "eeuu", "ee.uu"],
   "Türkiye": ["turkiye", "türkiye", "turquia", "turquía", "turkey"],
