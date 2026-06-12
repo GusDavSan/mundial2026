@@ -1668,7 +1668,7 @@ async function loadGoleadores(){
       statsCache=parsed&&parsed._v===STATS_VERSION?(parsed.items||{}):{};
     }
   }catch{statsCache={};}
-  await Promise.all([loadLocalSquads(),ensureStoredMatchStats()]);
+  await Promise.all([loadLocalSquads(),ensureStoredMatchStats(),ensureStoredLineups()]);
   // Get list of finished matches
   const today=new Date().toISOString().slice(0,10);
   const finishedFx=FIXTURES.filter(f=>f.home!=='TBD'&&(f.date<today||(f.date===today&&isPast(f.date,f.time))));
@@ -1752,6 +1752,58 @@ function finishKeeperRanking(k){
   k.cs=k.cleanSheets;
   return k;
 }
+function fixtureByStoredMatch(item){
+  if(!item)return null;
+  return FIXTURES.find(function(f){return Number(f.id)===Number(item.matchId);})||
+    FIXTURES.find(function(f){return String(f.date)===String(item.date)&&sameTeam(f.home,item.homeTeam)&&sameTeam(f.away,item.awayTeam);})||null;
+}
+function storedLineupForItem(item){
+  const fx=fixtureByStoredMatch(item);
+  const id=Number(item&&item.matchId);
+  return (storedLineupsCache||[]).find(function(l){
+    if(!l)return false;
+    if(Number(l.matchId)===id)return true;
+    if(fx&&String(l.date)===String(fx.date)&&sameTeam(l.homeTeam||l.home&&l.home.team,fx.home)&&sameTeam(l.awayTeam||l.away&&l.away.team,fx.away))return true;
+    return false;
+  })||null;
+}
+function keeperFromStructuredSide(side){
+  const players=[...(side&&side.starters||[]),...(side&&side.bench||[])];
+  const p=players.find(function(x){
+    const pos=stripText([x.pos,x.position].filter(Boolean).join(' '));
+    return pos==='g'||pos==='gk'||pos.includes('goalkeeper')||pos.includes('portero');
+  });
+  return p?{name:p.name||p.shortName,number:p.num||p.jersey||'',source:'ESPN lineups'}:null;
+}
+function fallbackKeepersFromStoredStats(item){
+  const fx=fixtureByStoredMatch(item);
+  if(!fx||!item||!item.stats)return[];
+  const lineup=storedLineupForItem(item);
+  const hs=apiResults[fx.home+'|'+fx.away]?.homeScore;
+  const as=apiResults[fx.home+'|'+fx.away]?.awayScore;
+  const homeScore=Number.isFinite(Number(hs))?Number(hs):null;
+  const awayScore=Number.isFinite(Number(as))?Number(as):null;
+  const hSaves=Number(item.stats.saves&&item.stats.saves.home||0);
+  const aSaves=Number(item.stats.saves&&item.stats.saves.away||0);
+  const hSog=Number(item.stats.shotsOnGoal&&item.stats.shotsOnGoal.home||0);
+  const aSog=Number(item.stats.shotsOnGoal&&item.stats.shotsOnGoal.away||0);
+  const sides=[
+    {side:'home',team:fx.home,keeper:keeperFromStructuredSide(lineup&&lineup.home),saves:hSaves,goalsAgainst:awayScore!==null?awayScore:Math.max(0,aSog-hSaves)},
+    {side:'away',team:fx.away,keeper:keeperFromStructuredSide(lineup&&lineup.away),saves:aSaves,goalsAgainst:homeScore!==null?homeScore:Math.max(0,hSog-aSaves)}
+  ];
+  return sides.map(function(row){
+    if(!row.keeper||!row.keeper.name)return null;
+    const saves=Number(row.saves||0);
+    const goalsAgainst=Number.isFinite(Number(row.goalsAgainst))?Number(row.goalsAgainst):0;
+    const faced=saves+goalsAgainst;
+    return {
+      side:row.side,team:row.team,name:row.keeper.name,number:row.keeper.number||'',
+      saves,goalsAgainst,cleanSheet:goalsAgainst===0?1:0,
+      savePct:faced>0?Math.round(saves/faced*1000)/10:(goalsAgainst===0?100:0),
+      penaltySaves:0,source:row.keeper.source
+    };
+  }).filter(Boolean);
+}
 function renderKeeperMetrics(p){
   const pct=Number.isFinite(p.savePct)?p.savePct.toFixed(1):'0.0';
   const parts=[
@@ -1769,9 +1821,11 @@ function renderStats(el,append){
   const scorers={},assists={},keepers={};
   const espnKeeperMatches=new Set();
   (storedMatchStatsCache||[]).forEach(function(item){
-    if(!item||!Array.isArray(item.keepers)||!item.keepers.length)return;
+    if(!item)return;
+    const keeperRows=Array.isArray(item.keepers)&&item.keepers.length?item.keepers:fallbackKeepersFromStoredStats(item);
+    if(!keeperRows.length)return;
     espnKeeperMatches.add(Number(item.matchId));
-    item.keepers.forEach(function(k){
+    keeperRows.forEach(function(k){
       addKeeperAggregate(keepers,{
         name:k.name,team:k.team,matches:1,saves:k.saves,goalsAgainst:k.goalsAgainst,
         cleanSheets:k.cleanSheet,penaltySaves:k.penaltySaves,confirmed:true,source:k.source||'ESPN'
@@ -2224,7 +2278,7 @@ async function ensureStoredMatchStats(){
   if(!storedMatchStatsLoaded){
     storedMatchStatsLoaded=true;
     try{
-      const d=await fetchJson('data/match-stats.json',{},1500);
+      const d=await fetchJson('data/match-stats.json?v='+STATS_VERSION,{},4000);
       storedMatchStatsCache=d&&Array.isArray(d.items)?d.items:[];
     }catch{storedMatchStatsCache=[];}
   }
@@ -2311,14 +2365,18 @@ function findLikelyKeeperFromSquad(team){
 }
 const LINEUPS_FALLBACK={"items":[{"matchId":3,"date":"2026-06-12","homeTeam":"Canada","awayTeam":"Bosnia & Herzegovina","source":"ESPN","home":{"team":"Canada","formation":"4-4-2","starters":[{"name":"Maxime Crépeau","shortName":"M. Crépeau","num":"16","pos":"G","position":"Goalkeeper","formationPlace":"1"},{"name":"Derek Cornelius","shortName":"D. Cornelius","num":"13","pos":"CD-L","position":"Center Left Defender","formationPlace":"6"},{"name":"Luc de Fougerolles","shortName":"L. de Fougerolles","num":"4","pos":"CD-R","position":"Center Right Defender","formationPlace":"5"},{"name":"Richie Laryea","shortName":"R. Laryea","num":"22","pos":"LB","position":"Left Back","formationPlace":"3"},{"name":"Alistair Johnston","shortName":"A. Johnston","num":"2","pos":"RB","position":"Right Back","formationPlace":"2"},{"name":"Stephen Eustáquio","shortName":"S. Eustáquio","num":"7","pos":"CM-L","position":"Center Left Midfielder","formationPlace":"8"},{"name":"Ismaël Koné","shortName":"I. Koné","num":"8","pos":"CM-R","position":"Center Right Midfielder","formationPlace":"4"},{"name":"Liam Millar","shortName":"L. Millar","num":"11","pos":"LM","position":"Left Midfielder","formationPlace":"11"},{"name":"Tajon Buchanan","shortName":"T. Buchanan","num":"17","pos":"RM","position":"Right Midfielder","formationPlace":"7"},{"name":"Tani Oluwaseyi","shortName":"T. Oluwaseyi","num":"12","pos":"CF-L","position":"Center Left Forward","formationPlace":"9"},{"name":"Jonathan David","shortName":"J. David","num":"10","pos":"CF-R","position":"Center Right Forward","formationPlace":"10"}],"bench":[{"name":"Alfie Jones","shortName":"A. Jones","num":"3","pos":"SUB","position":"Substitute"},{"name":"Niko Sigur","shortName":"N. Sigur","num":"23","pos":"SUB","position":"Substitute"},{"name":"Jacob Shaffelburg","shortName":"J. Shaffelburg","num":"14","pos":"SUB","position":"Substitute"},{"name":"Joel Waterman","shortName":"J. Waterman","num":"5","pos":"SUB","position":"Substitute"},{"name":"Jonathan Osorio","shortName":"J. Osorio","num":"21","pos":"SUB","position":"Substitute"},{"name":"Jayden Nelson","shortName":"J. Nelson","num":"26","pos":"SUB","position":"Substitute"},{"name":"Cyle Larin","shortName":"C. Larin","num":"9","pos":"SUB","position":"Substitute"},{"name":"Ali Ahmed","shortName":"A. Ahmed","num":"20","pos":"SUB","position":"Substitute"},{"name":"Promise David","shortName":"P. David","num":"24","pos":"SUB","position":"Substitute"},{"name":"Owen Goodman","shortName":"O. Goodman","num":"18","pos":"SUB","position":"Substitute"},{"name":"Alphonso Davies","shortName":"A. Davies","num":"19","pos":"SUB","position":"Substitute"},{"name":"Dayne St. Clair","shortName":"D. St. Clair","num":"1","pos":"SUB","position":"Substitute"},{"name":"Moïse Bombito","shortName":"M. Bombito","num":"15","pos":"SUB","position":"Substitute"},{"name":"Nathan Saliba","shortName":"N. Saliba","num":"25","pos":"SUB","position":"Substitute"},{"name":"Mathieu Choinière","shortName":"M. Choinière","num":"6","pos":"SUB","position":"Substitute"}]},"away":{"team":"Bosnia & Herzegovina","formation":"4-4-2","starters":[{"name":"Nikola Vasilj","shortName":"N. Vasilj","num":"1","pos":"G","position":"Goalkeeper","formationPlace":"1"},{"name":"Tarik Muharemovic","shortName":"T. Muharemovic","num":"4","pos":"CD-L","position":"Center Left Defender","formationPlace":"6"},{"name":"Nikola Katic","shortName":"N. Katic","num":"18","pos":"CD-R","position":"Center Right Defender","formationPlace":"5"},{"name":"Sead Kolasinac","shortName":"S. Kolasinac","num":"5","pos":"LB","position":"Left Back","formationPlace":"3"},{"name":"Amar Dedic","shortName":"A. Dedic","num":"7","pos":"RB","position":"Right Back","formationPlace":"2"},{"name":"Ivan Basic","shortName":"I. Basic","num":"13","pos":"CM-L","position":"Center Left Midfielder","formationPlace":"8"},{"name":"Benjamin Tahirovic","shortName":"B. Tahirovic","num":"6","pos":"CM-R","position":"Center Right Midfielder","formationPlace":"4"},{"name":"Amar Memic","shortName":"A. Memic","num":"15","pos":"LM","position":"Left Midfielder","formationPlace":"11"},{"name":"Esmir Bajraktarevic","shortName":"E. Bajraktarevic","num":"20","pos":"RM","position":"Right Midfielder","formationPlace":"7"},{"name":"Jovo Lukic","shortName":"J. Lukic","num":"25","pos":"CF-L","position":"Center Left Forward","formationPlace":"9"},{"name":"Ermedin Demirovic","shortName":"E. Demirovic","num":"10","pos":"CF-R","position":"Center Right Forward","formationPlace":"10"}],"bench":[{"name":"Edin Dzeko","shortName":"E. Dzeko","num":"11","pos":"SUB","position":"Substitute"},{"name":"Martin Zlomislic","shortName":"M. Zlomislic","num":"22","pos":"SUB","position":"Substitute"},{"name":"Mladen Jurkas","shortName":"M. Jurkas","num":"12","pos":"SUB","position":"Substitute"},{"name":"Samed Bazdar","shortName":"S. Bazdar","num":"9","pos":"SUB","position":"Substitute"},{"name":"Amir Hadziahmetovic","shortName":"A. Hadziahmetovic","num":"16","pos":"SUB","position":"Substitute"},{"name":"Ermin Mahmic","shortName":"E. Mahmic","num":"26","pos":"SUB","position":"Substitute"},{"name":"Armin Gigovic","shortName":"A. Gigovic","num":"8","pos":"SUB","position":"Substitute"},{"name":"Stjepan Radeljic","shortName":"S. Radeljic","num":"21","pos":"SUB","position":"Substitute"},{"name":"Dzenis Burnic","shortName":"D. Burnic","num":"17","pos":"SUB","position":"Substitute"},{"name":"Kerim Alajbegovic","shortName":"K. Alajbegovic","num":"19","pos":"SUB","position":"Substitute"},{"name":"Arjan Malic","shortName":"A. Malic","num":"24","pos":"SUB","position":"Substitute"},{"name":"Dennis Hadzikadunic","shortName":"D. Hadzikadunic","num":"3","pos":"SUB","position":"Substitute"},{"name":"Haris Tabakovic","shortName":"H. Tabakovic","num":"23","pos":"SUB","position":"Substitute"},{"name":"Ivan Sunjic","shortName":"I. Sunjic","num":"14","pos":"SUB","position":"Substitute"},{"name":"Nihad Mujakic","shortName":"N. Mujakic","num":"2","pos":"SUB","position":"Substitute"}]}}]};
 let storedLineupsCache=null,storedLineupsLoaded=false;
-async function loadStoredLineups(eventId,ev){
+async function ensureStoredLineups(){
   if(!storedLineupsLoaded){
     storedLineupsLoaded=true;
     try{
-      const d=await fetchJson('data/lineups.json',{},1500);
+      const d=await fetchJson('data/lineups.json?v='+STATS_VERSION,{},4000);
       storedLineupsCache=d&&Array.isArray(d.items)?d.items:[];
     }catch{storedLineupsCache=(LINEUPS_FALLBACK.items||[]);}
   }
+  return storedLineupsCache||[];
+}
+async function loadStoredLineups(eventId,ev){
+  await ensureStoredLineups();
   const home=ev&&normName(ev.strHomeTeam),away=ev&&normName(ev.strAwayTeam),date=ev&&ev.dateEvent;
   return (storedLineupsCache||[]).find(function(item){
     if(!item)return false;
