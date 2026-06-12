@@ -1,0 +1,92 @@
+{
+  "updated": "2026-06-12T12:00:00.000Z",
+  "source": "ESPN match stats via GitHub Actions",
+  "items": [
+    {
+      "matchId": 1,
+      "espnEventId": "760415",
+      "date": "2026-06-11",
+      "homeTeam": "Mexico",
+      "awayTeam": "South Africa",
+      "source": "ESPN",
+      "updatedAt": "2026-06-12T12:00:00.000Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 4,
+          "away": 2
+        },
+        "shots": {
+          "home": 16,
+          "away": 3
+        },
+        "possession": {
+          "home": 60.5,
+          "away": 39.5
+        },
+        "passes": {
+          "home": 520,
+          "away": 334
+        },
+        "fouls": {
+          "home": 12,
+          "away": 11
+        },
+        "corners": {
+          "home": 3,
+          "away": 1
+        },
+        "saves": {
+          "home": 2,
+          "away": 2
+        },
+        "offsides": {
+          "home": 1,
+          "away": 1
+        }
+      }
+    },
+    {
+      "matchId": 2,
+      "espnEventId": "760414",
+      "date": "2026-06-12",
+      "homeTeam": "South Korea",
+      "awayTeam": "Czechia",
+      "source": "ESPN",
+      "updatedAt": "2026-06-12T12:00:00.000Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 6,
+          "away": 4
+        },
+        "shots": {
+          "home": 15,
+          "away": 7
+        },
+        "possession": {
+          "home": 61.5,
+          "away": 38.5
+        },
+        "passes": {
+          "home": 541,
+          "away": 327
+        },
+        "fouls": {
+          "home": 9,
+          "away": 16
+        },
+        "corners": {
+          "home": 4,
+          "away": 5
+        },
+        "saves": {
+          "home": 3,
+          "away": 4
+        },
+        "offsides": {
+          "home": 2,
+          "away": 2
+        }
+      }
+    }
+  ]
+}
