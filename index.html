@@ -165,11 +165,19 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .stat-row{display:flex;align-items:center;gap:10px;padding:9px 14px;border-top:1px solid var(--border)}
 .stat-row:first-of-type{border-top:none}
 .stat-pos{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gold);width:22px;text-align:center;flex-shrink:0}
-.stat-flag{font-size:16px;flex-shrink:0}
+.stat-flag{width:22px;min-width:22px;height:16px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.stat-flag-img{width:22px;height:15px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(232,237,245,.18)}
+.stat-flag-emoji{font-size:16px;line-height:1}
 .stat-info{flex:1}
 .stat-pname{font-size:13px;font-weight:600}
 .stat-team{font-size:11px;color:var(--muted)}
 .stat-val{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--text)}
+.keeper-metrics{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.keeper-metric{font-family:var(--mono);font-size:10px;color:var(--muted);background:rgba(232,237,245,.055);border:1px solid var(--border);border-radius:12px;padding:2px 6px;white-space:nowrap}
+.keeper-metric strong{color:var(--text);font-weight:700}
+.keeper-score{display:flex;flex-direction:column;align-items:flex-end;gap:1px;min-width:48px}
+.keeper-score .stat-val{line-height:1}
+.keeper-score-label{font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--muted);text-transform:uppercase}
 /* DETAIL PANEL */
 .detail-panel{display:none;position:fixed;inset:0;z-index:200;background:rgba(6,11,24,.93);backdrop-filter:blur(4px);overflow-y:auto;padding:20px 14px;align-items:flex-start;justify-content:center}
 .detail-panel.open{display:flex}
@@ -244,21 +252,36 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .lineup-pos{font-family:var(--mono);font-size:10px;color:var(--muted)}
 .lineup-empty{font-size:12px;color:var(--muted);line-height:1.45;padding:12px 10px}
 .lineup-source{font-size:11px;color:var(--muted);text-align:right;margin-top:7px}
-.pitch{margin:10px;border:1px solid rgba(201,162,39,.26);border-radius:8px;min-height:330px;padding:12px 10px;background:
-  linear-gradient(90deg,rgba(255,255,255,.035) 49.8%,rgba(201,162,39,.18) 50%,rgba(255,255,255,.035) 50.2%),
-  repeating-linear-gradient(0deg,rgba(18,75,56,.52),rgba(18,75,56,.52) 32px,rgba(22,91,67,.42) 32px,rgba(22,91,67,.42) 64px);
-  position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:8px;overflow:hidden}
-.pitch::before{content:'';position:absolute;left:50%;top:50%;width:86px;height:86px;border:1px solid rgba(232,237,245,.12);border-radius:50%;transform:translate(-50%,-50%)}
-.pitch-line{position:relative;z-index:1;display:grid;gap:6px;justify-items:center;align-items:center}
-.player-chip{max-width:88px;min-width:0;text-align:center;background:rgba(6,11,24,.82);border:1px solid rgba(201,162,39,.35);border-radius:7px;padding:4px 5px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
-.player-num{display:block;font-family:var(--mono);font-size:10px;color:var(--gold);line-height:1}
-.player-name{display:block;font-size:11px;font-weight:700;color:var(--text);line-height:1.12;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.player-pos{display:block;font-family:var(--mono);font-size:9px;color:var(--muted);line-height:1;margin-top:2px}
-.lineup-bench{border-top:1px solid var(--border);padding:0 10px 8px}
-.lineup-bench summary{cursor:pointer;font-family:var(--disp);font-size:12px;letter-spacing:1.2px;color:var(--gold2);padding:8px 0;list-style:none}
-.lineup-bench summary::-webkit-details-marker{display:none}
-.lineup-bench summary::after{content:'+';float:right;color:var(--gold);font-family:var(--mono)}
-.lineup-bench[open] summary::after{content:'-'}
+.lineup-switch{padding:10px}
+.lineup-toggle{display:grid;grid-template-columns:1fr 1fr;gap:0;background:rgba(232,237,245,.1);border:1px solid rgba(232,237,245,.08);border-radius:999px;padding:3px;margin-bottom:12px}
+.lineup-toggle-btn{border:0;background:transparent;color:var(--muted);border-radius:999px;padding:8px 10px;font-family:var(--sans);font-size:14px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s,color .2s,box-shadow .2s}
+.lineup-toggle-btn.active{background:rgba(232,237,245,.93);color:#0d1426;box-shadow:0 7px 18px rgba(0,0,0,.24)}
+.lineup-toggle-flag{font-size:17px;line-height:1}
+.lineup-toggle-form{font-family:var(--mono);letter-spacing:0}
+.lineup-panel{display:none}
+.lineup-panel.active{display:block}
+.lineup-pitch{margin:0;border:1px solid rgba(92,195,124,.55);border-radius:12px;height:540px;padding:18px 8px;background:
+  radial-gradient(circle at 50% 50%,transparent 0 52px,rgba(255,255,255,.62) 53px,rgba(255,255,255,.62) 54px,transparent 55px),
+  linear-gradient(0deg,transparent 49.7%,rgba(255,255,255,.68) 49.8%,rgba(255,255,255,.68) 50.2%,transparent 50.3%),
+  linear-gradient(90deg,rgba(255,255,255,.04) 0 50%,rgba(0,0,0,.025) 50% 100%),
+  repeating-linear-gradient(0deg,#4fa157 0,#4fa157 78px,#469850 78px,#469850 156px);
+  background-size:auto,auto,86px 86px,auto;position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:8px;overflow:hidden}
+.lineup-pitch::before{content:'';position:absolute;left:50%;bottom:-1px;width:210px;height:92px;border:2px solid rgba(255,255,255,.56);border-bottom:none;transform:translateX(-50%);pointer-events:none}
+.lineup-pitch::after{content:'';position:absolute;left:50%;bottom:-1px;width:92px;height:42px;border:2px solid rgba(255,255,255,.56);border-bottom:none;transform:translateX(-50%);pointer-events:none}
+.pitch-line{position:relative;z-index:1;display:grid;gap:4px;justify-items:center;align-items:center}
+.kit-player{min-width:0;text-align:center;filter:drop-shadow(0 6px 9px rgba(0,0,0,.3))}
+.kit-shirt{position:relative;display:block;width:58px;height:66px;margin:0 auto}
+.kit-body{position:absolute;left:14px;top:0;width:30px;height:62px;background:var(--kit-shirt);border:2px solid var(--kit-trim);clip-path:polygon(18% 0,82% 0,100% 20%,85% 100%,15% 100%,0 20%);box-shadow:inset 8px 0 12px rgba(255,255,255,.12),inset -8px 0 12px rgba(0,0,0,.12)}
+.kit-sleeve{position:absolute;top:10px;width:20px;height:28px;background:var(--kit-shirt);border:2px solid var(--kit-trim);z-index:0}
+.kit-sleeve.left{left:1px;transform:rotate(26deg);clip-path:polygon(28% 0,100% 12%,78% 100%,0 82%)}
+.kit-sleeve.right{right:1px;transform:rotate(-26deg);clip-path:polygon(0 12%,72% 0,100% 82%,22% 100%)}
+.kit-collar{position:absolute;left:50%;top:0;width:22px;height:12px;border:3px solid var(--kit-trim);border-top:0;border-radius:0 0 14px 14px;transform:translateX(-50%);background:rgba(6,11,24,.32);z-index:2}
+.kit-number{position:absolute;left:0;right:0;top:22px;text-align:center;font-family:var(--mono);font-size:22px;font-weight:900;color:var(--kit-number);line-height:1;text-shadow:0 1px 2px rgba(0,0,0,.25);z-index:3}
+.kit-name{display:inline-block;max-width:78px;margin-top:-2px;padding:2px 6px;border-radius:6px;background:rgba(225,244,218,.9);color:#1d3020;font-size:12px;font-weight:800;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kit-pos{display:block;margin-top:2px;font-family:var(--mono);font-size:9px;color:rgba(232,237,245,.86)}
+.lineup-bench-block{margin-top:10px;background:rgba(6,11,24,.32);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.lineup-bench-title{font-family:var(--disp);font-size:12px;letter-spacing:1.4px;color:var(--gold);padding:8px 10px;border-bottom:1px solid var(--border);background:rgba(201,162,39,.045)}
+.lineup-bench-list{max-height:260px;overflow:auto}
 .stat-source{font-size:11px;color:var(--muted);text-align:right;margin-top:5px}
 /* Highlight */
 .hl-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px;display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;margin-bottom:7px}
@@ -281,9 +304,12 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .lineup-grid{grid-template-columns:1fr}
   .detail-body-grid{grid-template-columns:1fr}
   .detail-side{position:static}
-  .pitch{min-height:300px}
-  .player-chip{max-width:76px;padding:4px}
-  .player-name{font-size:10px}
+  .lineup-pitch{height:500px;padding:16px 5px}
+  .kit-shirt{width:50px;height:58px}
+  .kit-body{left:12px;width:26px;height:55px}
+  .kit-sleeve{width:18px;height:25px}
+  .kit-number{top:20px;font-size:19px}
+  .kit-name{max-width:64px;font-size:10px;padding:2px 5px}
   .event-row{grid-template-columns:36px 24px 1fr;padding:9px 10px}
 }
 
@@ -507,12 +533,13 @@ const I18N={
     all:'Todos',bestThirdShort:'Mejor tercero',thirdPlace:'3er Puesto',final:'Final',classifiedDirect:'Clasifica directo',possibleThird:'Posible mejor 3º',
     calThirdInfo:'clasifican los 8 mejores terceros de los 12 grupos. Criterios de desempate: puntos, diferencia de goles, goles a favor, fair play y ranking FIFA.',
     qGroups:'Grupos',qThird:'Mejor Tercero',qBracket:'Eliminatoria',
-    statsIntro:'Tres apartados disponibles: máximos goleadores, máximos asistentes y mejores porteros.',
-    scorers:'Máximos Goleadores',assists:'Máximos Asistentes',keepers:'Mejores Porteros',cleanSheets:'Porterías a cero',
+    statsIntro:'Tres apartados disponibles: máximos goleadores, máximos asistentes y candidatos al Guante de Oro.',
+    scorers:'Máximos Goleadores',assists:'Máximos Asistentes',keepers:'Candidatos al Guante de Oro',cleanSheets:'Porterías a cero',
     goals:'goles',assistCount:'asistencias',cleanSheetCount:'porterías a cero',
-    noScorers:'Aún no hay goles registrados.',noAssists:'Aún no hay asistencias registradas.',noKeepers:'Aún no hay porterías a cero registradas.',
+    noScorers:'Aún no hay goles registrados.',noAssists:'Aún no hay asistencias registradas.',noKeepers:'Aún no hay datos de porteros registrados.',
     statsAvailableSoon:'Las estadísticas se irán rellenando conforme terminen los partidos.',statsProgress:'Actualizando: {done}/{total} partidos...',refreshStats:'Actualizar estadísticas',
     keeperTentative:'Portero probable · confirmar alineación',keeperConfirmed:'Portero confirmado',keeperFallback:'Portero por confirmar',teamCleanSheet:'Portería a cero de la selección',
+    keeperEstimated:'Ranking estimado',keeperSaves:'Paradas',keeperSavePct:'% paradas',keeperGoalsAgainst:'GC',keeperCleanSheets:'P0',keeperPenaltySaves:'Pen.',
     matchStats:'ESTADÍSTICAS',timeline:'TIMELINE',timelineGoals:'GOLES',timelineCards:'TARJETAS',timelineSubs:'CAMBIOS',timelineOther:'OTROS',
     goalEvent:'Gol',penaltyGoal:'Penalti',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
     noEventsInBlock:'Sin eventos en este bloque.',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
@@ -533,12 +560,13 @@ const I18N={
     all:'All',bestThirdShort:'Best third',thirdPlace:'3rd Place',final:'Final',classifiedDirect:'Direct qualification',possibleThird:'Possible best 3rd',
     calThirdInfo:'the 8 best third-placed teams from the 12 groups qualify. Tiebreakers: points, goal difference, goals for, fair play and FIFA ranking.',
     qGroups:'Groups',qThird:'Best Third',qBracket:'Knockout',
-    statsIntro:'Three sections available: top scorers, top assists and best goalkeepers.',
-    scorers:'Top Scorers',assists:'Top Assists',keepers:'Best Goalkeepers',cleanSheets:'Clean sheets',
+    statsIntro:'Three sections available: top scorers, top assists and Golden Glove candidates.',
+    scorers:'Top Scorers',assists:'Top Assists',keepers:'Golden Glove Candidates',cleanSheets:'Clean sheets',
     goals:'goals',assistCount:'assists',cleanSheetCount:'clean sheets',
-    noScorers:'No goals recorded yet.',noAssists:'No assists recorded yet.',noKeepers:'No clean sheets recorded yet.',
+    noScorers:'No goals recorded yet.',noAssists:'No assists recorded yet.',noKeepers:'No goalkeeper data recorded yet.',
     statsAvailableSoon:'Stats will populate as matches finish.',statsProgress:'Updating: {done}/{total} matches...',refreshStats:'Refresh stats',
     keeperTentative:'Likely goalkeeper · confirm lineup',keeperConfirmed:'Confirmed goalkeeper',keeperFallback:'Goalkeeper to confirm',teamCleanSheet:'Team clean sheet',
+    keeperEstimated:'Estimated ranking',keeperSaves:'Saves',keeperSavePct:'Save %',keeperGoalsAgainst:'GA',keeperCleanSheets:'CS',keeperPenaltySaves:'Pen.',
     matchStats:'STATS',timeline:'TIMELINE',timelineGoals:'GOALS',timelineCards:'CARDS',timelineSubs:'SUBSTITUTIONS',timelineOther:'OTHER',
     goalEvent:'Goal',penaltyGoal:'Penalty',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
     noEventsInBlock:'No events in this block.',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
@@ -605,6 +633,21 @@ const FLAGS={
   'England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Croatia':'🇭🇷','Ghana':'🇬🇭','Panama':'🇵🇦','TBD':'🏳️'
 };
 
+const TEAM_ISO={
+  'Mexico':'mx','South Africa':'za','South Korea':'kr','Korea Republic':'kr','Republic of Korea':'kr','Czechia':'cz','Czech Republic':'cz',
+  'Canada':'ca','Bosnia & Herzegovina':'ba','Bosnia-Herzegovina':'ba','Bosnia and Herzegovina':'ba','Qatar':'qa','Switzerland':'ch',
+  'Brazil':'br','Morocco':'ma','Haiti':'ht','Scotland':'gb-sct',
+  'United States':'us','USA':'us','Paraguay':'py','Australia':'au','Türkiye':'tr','Turkey':'tr',
+  'Germany':'de','Curaçao':'cw','Curacao':'cw','Ivory Coast':'ci',"Cote d'Ivoire":'ci','Cote d Ivoire':'ci','Ecuador':'ec',
+  'Netherlands':'nl','Japan':'jp','Sweden':'se','Tunisia':'tn',
+  'Belgium':'be','Egypt':'eg','Iran':'ir','New Zealand':'nz',
+  'Spain':'es','Cape Verde':'cv','Saudi Arabia':'sa','Uruguay':'uy',
+  'France':'fr','Senegal':'sn','Iraq':'iq','Norway':'no',
+  'Argentina':'ar','Algeria':'dz','Austria':'at','Jordan':'jo',
+  'Portugal':'pt','DR Congo':'cd','Congo DR':'cd','Uzbekistan':'uz','Colombia':'co',
+  'England':'gb-eng','Croatia':'hr','Ghana':'gh','Panama':'pa'
+};
+
 // ══════════════════════════════════════════════
 // GROUPS
 // ══════════════════════════════════════════════
@@ -621,6 +664,57 @@ const GROUPS={
   J:['Argentina','Algeria','Austria','Jordan'],
   K:['Portugal','DR Congo','Uzbekistan','Colombia'],
   L:['England','Croatia','Ghana','Panama']
+};
+
+const KIT_COLORS={
+  'Mexico':{shirt:'#0b7a3b',trim:'#ffffff',number:'#ffffff',keeper:'#f4c430',keeperNumber:'#111827'},
+  'South Africa':{shirt:'#f6c400',trim:'#0b7a3b',number:'#0b2b18',keeper:'#2563eb',keeperNumber:'#ffffff'},
+  'South Korea':{shirt:'#ffffff',trim:'#e11d48',number:'#111827',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Czechia':{shirt:'#c8102e',trim:'#11457e',number:'#ffffff',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Canada':{shirt:'#d71920',trim:'#ffffff',number:'#ffffff',keeper:'#575757',keeperNumber:'#ffffff'},
+  'Bosnia & Herzegovina':{shirt:'#1d4f9c',trim:'#f7c600',number:'#ffffff',keeper:'#f7c600',keeperNumber:'#123b7c'},
+  'Qatar':{shirt:'#8a1538',trim:'#ffffff',number:'#ffffff',keeper:'#14b8a6',keeperNumber:'#06251f'},
+  'Switzerland':{shirt:'#e30613',trim:'#ffffff',number:'#ffffff',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Brazil':{shirt:'#f7d117',trim:'#1f8f45',number:'#11457e',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Morocco':{shirt:'#c1272d',trim:'#006233',number:'#ffffff',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Haiti':{shirt:'#0050a4',trim:'#d21034',number:'#ffffff',keeper:'#facc15',keeperNumber:'#111827'},
+  'Scotland':{shirt:'#003876',trim:'#ffffff',number:'#ffffff',keeper:'#84cc16',keeperNumber:'#102000'},
+  'United States':{shirt:'#f8fafc',trim:'#1e3a8a',number:'#111827',keeper:'#dc2626',keeperNumber:'#ffffff'},
+  'Paraguay':{shirt:'#d52b1e',trim:'#ffffff',number:'#ffffff',keeper:'#2563eb',keeperNumber:'#ffffff'},
+  'Australia':{shirt:'#ffcd00',trim:'#00843d',number:'#123b2a',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Türkiye':{shirt:'#e30a17',trim:'#ffffff',number:'#ffffff',keeper:'#16a34a',keeperNumber:'#ffffff'},
+  'Germany':{shirt:'#ffffff',trim:'#111827',number:'#111827',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Curaçao':{shirt:'#0057b8',trim:'#f9d616',number:'#ffffff',keeper:'#ef4444',keeperNumber:'#ffffff'},
+  'Ivory Coast':{shirt:'#f77f00',trim:'#ffffff',number:'#ffffff',keeper:'#16a34a',keeperNumber:'#ffffff'},
+  'Ecuador':{shirt:'#ffdd00',trim:'#034ea2',number:'#1b2452',keeper:'#ef4444',keeperNumber:'#ffffff'},
+  'Netherlands':{shirt:'#ff7a00',trim:'#ffffff',number:'#111827',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Japan':{shirt:'#1e40af',trim:'#ffffff',number:'#ffffff',keeper:'#facc15',keeperNumber:'#111827'},
+  'Sweden':{shirt:'#005293',trim:'#fecb00',number:'#ffffff',keeper:'#16a34a',keeperNumber:'#ffffff'},
+  'Tunisia':{shirt:'#e70013',trim:'#ffffff',number:'#ffffff',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Belgium':{shirt:'#111827',trim:'#ef3340',number:'#facc15',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Egypt':{shirt:'#ce1126',trim:'#ffffff',number:'#ffffff',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Iran':{shirt:'#ffffff',trim:'#da0000',number:'#111827',keeper:'#16a34a',keeperNumber:'#ffffff'},
+  'New Zealand':{shirt:'#111827',trim:'#ffffff',number:'#ffffff',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Spain':{shirt:'#c60b1e',trim:'#ffc400',number:'#ffffff',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Cape Verde':{shirt:'#003893',trim:'#f7d117',number:'#ffffff',keeper:'#ef4444',keeperNumber:'#ffffff'},
+  'Saudi Arabia':{shirt:'#ffffff',trim:'#006c35',number:'#006c35',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Uruguay':{shirt:'#75aadb',trim:'#111827',number:'#111827',keeper:'#facc15',keeperNumber:'#111827'},
+  'France':{shirt:'#1d2d5c',trim:'#ffffff',number:'#ffffff',keeper:'#f6d32d',keeperNumber:'#111827'},
+  'Senegal':{shirt:'#ffffff',trim:'#00853f',number:'#111827',keeper:'#facc15',keeperNumber:'#111827'},
+  'Iraq':{shirt:'#c8102e',trim:'#ffffff',number:'#ffffff',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Norway':{shirt:'#ba0c2f',trim:'#00205b',number:'#ffffff',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Argentina':{shirt:'#75aadb',trim:'#ffffff',number:'#111827',keeper:'#f59e0b',keeperNumber:'#111827'},
+  'Algeria':{shirt:'#ffffff',trim:'#006233',number:'#006233',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Austria':{shirt:'#ef3340',trim:'#ffffff',number:'#ffffff',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Jordan':{shirt:'#ffffff',trim:'#ce1126',number:'#111827',keeper:'#16a34a',keeperNumber:'#ffffff'},
+  'Portugal':{shirt:'#b91c1c',trim:'#0f7b3f',number:'#ffffff',keeper:'#7c3aed',keeperNumber:'#ffffff'},
+  'DR Congo':{shirt:'#007fff',trim:'#f7d117',number:'#ffffff',keeper:'#ef4444',keeperNumber:'#ffffff'},
+  'Uzbekistan':{shirt:'#ffffff',trim:'#1e90ff',number:'#1e3a8a',keeper:'#16a34a',keeperNumber:'#ffffff'},
+  'Colombia':{shirt:'#fcd116',trim:'#003893',number:'#1b2452',keeper:'#ef4444',keeperNumber:'#ffffff'},
+  'England':{shirt:'#f8fafc',trim:'#1e3a8a',number:'#111827',keeper:'#22c55e',keeperNumber:'#06220f'},
+  'Croatia':{shirt:'#ffffff',trim:'#dc2626',number:'#111827',keeper:'#111827',keeperNumber:'#ffffff'},
+  'Ghana':{shirt:'#ffffff',trim:'#fcd116',number:'#111827',keeper:'#16a34a',keeperNumber:'#ffffff'},
+  'Panama':{shirt:'#d21034',trim:'#ffffff',number:'#ffffff',keeper:'#1d4ed8',keeperNumber:'#ffffff'}
 };
 
 // ══════════════════════════════════════════════
@@ -1563,7 +1657,7 @@ function updateQChampion(){
 // ══════════════════════════════════════════════
 let statsCache={},statsLoaded=false;
 const STATS_KEY='mw26_stats';
-const STATS_VERSION=4;
+const STATS_VERSION=5;
 async function loadGoleadores(){
   const el=document.getElementById('golesContent');
   // Load from cache
@@ -1574,7 +1668,7 @@ async function loadGoleadores(){
       statsCache=parsed&&parsed._v===STATS_VERSION?(parsed.items||{}):{};
     }
   }catch{statsCache={};}
-  await loadLocalSquads();
+  await Promise.all([loadLocalSquads(),ensureStoredMatchStats()]);
   // Get list of finished matches
   const today=new Date().toISOString().slice(0,10);
   const finishedFx=FIXTURES.filter(f=>f.home!=='TBD'&&(f.date<today||(f.date===today&&isPast(f.date,f.time))));
@@ -1631,12 +1725,64 @@ async function fetchMissingStats(missing,el){
   const p=document.getElementById('statsProgress');
   if(p)p.remove();
 }
+function keeperKey(team,name){return stripText(team)+'|'+stripText(name);}
+function addKeeperAggregate(keepers,row){
+  if(!row||!row.name||!row.team)return;
+  const key=keeperKey(row.team,row.name);
+  if(!keepers[key]){
+    keepers[key]={
+      name:row.name,team:row.team,matches:0,saves:0,goalsAgainst:0,cleanSheets:0,penaltySaves:0,
+      tentative:!!row.tentative,confirmed:!!row.confirmed,source:row.source||''
+    };
+  }
+  const k=keepers[key];
+  k.matches+=Number(row.matches||1);
+  k.saves+=Number(row.saves||0);
+  k.goalsAgainst+=Number(row.goalsAgainst||0);
+  k.cleanSheets+=Number(row.cleanSheets!==undefined?row.cleanSheets:(row.cleanSheet||0));
+  k.penaltySaves+=Number(row.penaltySaves||0);
+  k.tentative=k.tentative||!!row.tentative;
+  k.confirmed=k.confirmed||!!row.confirmed;
+  if(row.source)k.source=row.source;
+}
+function finishKeeperRanking(k){
+  const faced=k.saves+k.goalsAgainst;
+  k.savePct=faced>0?(k.saves/faced*100):(k.goalsAgainst===0&&k.matches>0?100:0);
+  k.score=(k.cleanSheets*5)+(k.saves*.7)+(k.savePct/12)+(k.penaltySaves*3)-(k.goalsAgainst*.8);
+  k.cs=k.cleanSheets;
+  return k;
+}
+function renderKeeperMetrics(p){
+  const pct=Number.isFinite(p.savePct)?p.savePct.toFixed(1):'0.0';
+  const parts=[
+    [t('keeperCleanSheets'),p.cleanSheets||0],
+    [t('keeperSaves'),p.saves||0],
+    [t('keeperSavePct'),pct+'%'],
+    [t('keeperGoalsAgainst'),p.goalsAgainst||0]
+  ];
+  if(p.penaltySaves)parts.push([t('keeperPenaltySaves'),p.penaltySaves]);
+  return '<div class="keeper-metrics">'+parts.map(function(pair){
+    return '<span class="keeper-metric">'+pair[0]+' <strong>'+pair[1]+'</strong></span>';
+  }).join('')+'</div>';
+}
 function renderStats(el,append){
   const scorers={},assists={},keepers={};
+  const espnKeeperMatches=new Set();
+  (storedMatchStatsCache||[]).forEach(function(item){
+    if(!item||!Array.isArray(item.keepers)||!item.keepers.length)return;
+    espnKeeperMatches.add(Number(item.matchId));
+    item.keepers.forEach(function(k){
+      addKeeperAggregate(keepers,{
+        name:k.name,team:k.team,matches:1,saves:k.saves,goalsAgainst:k.goalsAgainst,
+        cleanSheets:k.cleanSheet,penaltySaves:k.penaltySaves,confirmed:true,source:k.source||'ESPN'
+      });
+    });
+  });
   Object.entries(statsCache).forEach(function([k,obj]){
     const timeline=obj.timeline||[];
     if(!timeline.length&&!obj.event)return;
     const parts=k.split('|');const home=parts[0];const away=parts[1];
+    const fx=FIXTURES.find(function(f){return sameTeam(f.home,home)&&sameTeam(f.away,away);});
     const event=obj.event||{};
     timeline.forEach(function(ev){
       if(timelineKind(ev)==='goal'){
@@ -1651,16 +1797,17 @@ function renderStats(el,append){
         }
       }
     });
+    if(fx&&espnKeeperMatches.has(Number(fx.id)))return;
     if(event&&isFin(event.strStatus)&&event.intHomeScore!==null&&event.intHomeScore!==undefined&&event.intAwayScore!==null&&event.intAwayScore!==undefined){
       const hs=parseInt(event.intHomeScore),as=parseInt(event.intAwayScore);
       function addKeeper(team){
         const confirmed=findGoalkeeperInLineup(team,obj.lineup||[]);
         const likely=confirmed||findLikelyKeeperFromSquad(team);
         if(!likely||!likely.strPlayer)return;
-        const key=team+'|'+likely.strPlayer;
-        if(!keepers[key])keepers[key]={name:likely.strPlayer,team,cs:0,tentative:!!likely.tentative};
-        keepers[key].cs++;
-        keepers[key].tentative=keepers[key].tentative||!!likely.tentative;
+        addKeeperAggregate(keepers,{
+          name:likely.strPlayer,team,cleanSheets:1,saves:0,goalsAgainst:0,
+          tentative:!!likely.tentative,confirmed:!!confirmed,source:confirmed?'TheSportsDB':'Squad fallback'
+        });
       }
       if(Number.isFinite(hs)&&hs===0)addKeeper(away);
       if(Number.isFinite(as)&&as===0)addKeeper(home);
@@ -1668,24 +1815,28 @@ function renderStats(el,append){
   });
   const topScorers=Object.values(scorers).sort(function(a,b){return b.goals-a.goals;}).slice(0,15);
   const topAssists=Object.values(assists).sort(function(a,b){return b.ast-a.ast;}).slice(0,10);
-  const topKeepers=Object.values(keepers).sort(function(a,b){return b.cs-a.cs;}).slice(0,10);
+  const topKeepers=Object.values(keepers).map(finishKeeperRanking).sort(function(a,b){
+    return b.score-a.score||b.cleanSheets-a.cleanSheets||b.savePct-a.savePct||b.saves-a.saves||a.goalsAgainst-b.goalsAgainst;
+  }).slice(0,10);
   function renderPlayerRows(list,kind){
     if(!list.length){
       const emptyKey=kind==='goals'?'noScorers':kind==='assists'?'noAssists':'noKeepers';
       return '<div class="stat-empty-row">'+t(emptyKey)+'<br>'+t('statsAvailableSoon')+'</div>';
     }
     return list.map(function(p,i){
-      const val=kind==='goals'?p.goals:kind==='assists'?p.ast:p.cs;
+      const val=kind==='goals'?p.goals:kind==='assists'?p.ast:p.score.toFixed(1);
       const team=p.team||'';
-      const label=kind==='goals'?t('goals'):kind==='assists'?t('assistCount'):t('cleanSheetCount');
       const sub=kind==='keepers'?
-        (p.tentative?t('keeperTentative'):t('keeperConfirmed'))+' · '+team:
+        (p.tentative?t('keeperTentative'):(p.confirmed?t('keeperConfirmed'):t('keeperEstimated')))+' · '+team:
         team;
+      const valueHtml=kind==='keepers'?
+        '<span class="keeper-score"><span class="stat-val">'+val+'</span><span class="keeper-score-label">'+t('keeperEstimated')+'</span></span>':
+        '<span class="stat-val">'+val+'</span>';
       return '<div class="stat-row">'+
         '<span class="stat-pos">'+(i+1)+'</span>'+
-        '<span class="stat-flag">'+(FLAGS[team]||'🏳️')+'</span>'+
-        '<div class="stat-info"><div class="stat-pname">'+p.name+'</div><div class="stat-team">'+sub+'</div></div>'+
-        '<span class="stat-val">'+val+'</span></div>';
+        flagHtml(team)+
+        '<div class="stat-info"><div class="stat-pname">'+p.name+'</div><div class="stat-team">'+sub+'</div>'+(kind==='keepers'?renderKeeperMetrics(p):'')+'</div>'+
+        valueHtml+'</div>';
     }).join('');
   }
   let html='<div class="stats-intro">'+
@@ -1697,7 +1848,7 @@ function renderStats(el,append){
     '</div></div>';
   html+='<div class="stat-card"><div class="stat-card-hdr">⚽ '+t('scorers')+'</div>'+renderPlayerRows(topScorers,'goals')+'</div>';
   html+='<div class="stat-card"><div class="stat-card-hdr">🎯 '+t('assists')+'</div>'+renderPlayerRows(topAssists,'assists')+'</div>';
-  html+='<div class="stat-card"><div class="stat-card-hdr">🥅 '+t('keepers')+' · '+t('cleanSheets')+'</div>'+renderPlayerRows(topKeepers,'keepers')+'</div>';
+  html+='<div class="stat-card"><div class="stat-card-hdr">🧤 '+t('keepers')+'</div>'+renderPlayerRows(topKeepers,'keepers')+'</div>';
   html+='<div style="text-align:center;margin-top:14px">'+
     '<button class="btn btn-sm" onclick="refreshStats()">↻ '+t('refreshStats')+'</button></div>';
   if(append){var old=el.querySelector('.stat-card,.empty');if(old){el.innerHTML=html;return;}}
@@ -1913,6 +2064,14 @@ function sameTeam(a,b){
   const bb=stripText(typeof normName==='function'?normName(b):b);
   return aa===bb;
 }
+function flagHtml(team,cls='stat-flag'){
+  const raw=team||'';
+  const name=typeof normName==='function'?normName(raw):raw;
+  const iso=TEAM_ISO[raw]||TEAM_ISO[name]||TEAM_ISO[String(raw).replace(/\s+/g,' ').trim()];
+  const fallback=FLAGS[name]||FLAGS[raw]||'🏳️';
+  if(!iso)return '<span class="'+cls+'" title="'+escHtml(name||raw)+'"><span class="stat-flag-emoji">'+fallback+'</span></span>';
+  return '<span class="'+cls+'" title="'+escHtml(name||raw)+'"><img class="stat-flag-img" src="https://flagcdn.com/w40/'+iso+'.png" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode(\''+fallback+'\'))"></span>';
+}
 const SQUAD_KEY_BY_TEAM={
   'Algeria':'Argelia','Argentina':'Argentina','Spain':'España','France':'Francia','Portugal':'Portugal',
   'Brazil':'Brasil','Germany':'Alemania','England':'Inglaterra','Netherlands':'Países Bajos','Belgium':'Bélgica',
@@ -2061,7 +2220,7 @@ function findStat(stats,keys){
   return (stats||[]).find(function(s){return wanted.includes(stripText(s.strStat||s.strName||s.name));});
 }
 let storedMatchStatsCache=null,storedMatchStatsLoaded=false;
-async function loadStoredMatchStats(eventId,ev){
+async function ensureStoredMatchStats(){
   if(!storedMatchStatsLoaded){
     storedMatchStatsLoaded=true;
     try{
@@ -2069,6 +2228,10 @@ async function loadStoredMatchStats(eventId,ev){
       storedMatchStatsCache=d&&Array.isArray(d.items)?d.items:[];
     }catch{storedMatchStatsCache=[];}
   }
+  return storedMatchStatsCache||[];
+}
+async function loadStoredMatchStats(eventId,ev){
+  await ensureStoredMatchStats();
   const home=ev&&normName(ev.strHomeTeam),away=ev&&normName(ev.strAwayTeam),date=ev&&ev.dateEvent;
   return (storedMatchStatsCache||[]).find(function(item){
     if(!item)return false;
@@ -2146,6 +2309,7 @@ function findLikelyKeeperFromSquad(team){
   });
   return gk?{strPlayer:gk.name,intSquadNumber:gk.num,tentative:true}:null;
 }
+const LINEUPS_FALLBACK={"items":[{"matchId":3,"date":"2026-06-12","homeTeam":"Canada","awayTeam":"Bosnia & Herzegovina","source":"ESPN","home":{"team":"Canada","formation":"4-4-2","starters":[{"name":"Maxime Crépeau","shortName":"M. Crépeau","num":"16","pos":"G","position":"Goalkeeper","formationPlace":"1"},{"name":"Derek Cornelius","shortName":"D. Cornelius","num":"13","pos":"CD-L","position":"Center Left Defender","formationPlace":"6"},{"name":"Luc de Fougerolles","shortName":"L. de Fougerolles","num":"4","pos":"CD-R","position":"Center Right Defender","formationPlace":"5"},{"name":"Richie Laryea","shortName":"R. Laryea","num":"22","pos":"LB","position":"Left Back","formationPlace":"3"},{"name":"Alistair Johnston","shortName":"A. Johnston","num":"2","pos":"RB","position":"Right Back","formationPlace":"2"},{"name":"Stephen Eustáquio","shortName":"S. Eustáquio","num":"7","pos":"CM-L","position":"Center Left Midfielder","formationPlace":"8"},{"name":"Ismaël Koné","shortName":"I. Koné","num":"8","pos":"CM-R","position":"Center Right Midfielder","formationPlace":"4"},{"name":"Liam Millar","shortName":"L. Millar","num":"11","pos":"LM","position":"Left Midfielder","formationPlace":"11"},{"name":"Tajon Buchanan","shortName":"T. Buchanan","num":"17","pos":"RM","position":"Right Midfielder","formationPlace":"7"},{"name":"Tani Oluwaseyi","shortName":"T. Oluwaseyi","num":"12","pos":"CF-L","position":"Center Left Forward","formationPlace":"9"},{"name":"Jonathan David","shortName":"J. David","num":"10","pos":"CF-R","position":"Center Right Forward","formationPlace":"10"}],"bench":[{"name":"Alfie Jones","shortName":"A. Jones","num":"3","pos":"SUB","position":"Substitute"},{"name":"Niko Sigur","shortName":"N. Sigur","num":"23","pos":"SUB","position":"Substitute"},{"name":"Jacob Shaffelburg","shortName":"J. Shaffelburg","num":"14","pos":"SUB","position":"Substitute"},{"name":"Joel Waterman","shortName":"J. Waterman","num":"5","pos":"SUB","position":"Substitute"},{"name":"Jonathan Osorio","shortName":"J. Osorio","num":"21","pos":"SUB","position":"Substitute"},{"name":"Jayden Nelson","shortName":"J. Nelson","num":"26","pos":"SUB","position":"Substitute"},{"name":"Cyle Larin","shortName":"C. Larin","num":"9","pos":"SUB","position":"Substitute"},{"name":"Ali Ahmed","shortName":"A. Ahmed","num":"20","pos":"SUB","position":"Substitute"},{"name":"Promise David","shortName":"P. David","num":"24","pos":"SUB","position":"Substitute"},{"name":"Owen Goodman","shortName":"O. Goodman","num":"18","pos":"SUB","position":"Substitute"},{"name":"Alphonso Davies","shortName":"A. Davies","num":"19","pos":"SUB","position":"Substitute"},{"name":"Dayne St. Clair","shortName":"D. St. Clair","num":"1","pos":"SUB","position":"Substitute"},{"name":"Moïse Bombito","shortName":"M. Bombito","num":"15","pos":"SUB","position":"Substitute"},{"name":"Nathan Saliba","shortName":"N. Saliba","num":"25","pos":"SUB","position":"Substitute"},{"name":"Mathieu Choinière","shortName":"M. Choinière","num":"6","pos":"SUB","position":"Substitute"}]},"away":{"team":"Bosnia & Herzegovina","formation":"4-4-2","starters":[{"name":"Nikola Vasilj","shortName":"N. Vasilj","num":"1","pos":"G","position":"Goalkeeper","formationPlace":"1"},{"name":"Tarik Muharemovic","shortName":"T. Muharemovic","num":"4","pos":"CD-L","position":"Center Left Defender","formationPlace":"6"},{"name":"Nikola Katic","shortName":"N. Katic","num":"18","pos":"CD-R","position":"Center Right Defender","formationPlace":"5"},{"name":"Sead Kolasinac","shortName":"S. Kolasinac","num":"5","pos":"LB","position":"Left Back","formationPlace":"3"},{"name":"Amar Dedic","shortName":"A. Dedic","num":"7","pos":"RB","position":"Right Back","formationPlace":"2"},{"name":"Ivan Basic","shortName":"I. Basic","num":"13","pos":"CM-L","position":"Center Left Midfielder","formationPlace":"8"},{"name":"Benjamin Tahirovic","shortName":"B. Tahirovic","num":"6","pos":"CM-R","position":"Center Right Midfielder","formationPlace":"4"},{"name":"Amar Memic","shortName":"A. Memic","num":"15","pos":"LM","position":"Left Midfielder","formationPlace":"11"},{"name":"Esmir Bajraktarevic","shortName":"E. Bajraktarevic","num":"20","pos":"RM","position":"Right Midfielder","formationPlace":"7"},{"name":"Jovo Lukic","shortName":"J. Lukic","num":"25","pos":"CF-L","position":"Center Left Forward","formationPlace":"9"},{"name":"Ermedin Demirovic","shortName":"E. Demirovic","num":"10","pos":"CF-R","position":"Center Right Forward","formationPlace":"10"}],"bench":[{"name":"Edin Dzeko","shortName":"E. Dzeko","num":"11","pos":"SUB","position":"Substitute"},{"name":"Martin Zlomislic","shortName":"M. Zlomislic","num":"22","pos":"SUB","position":"Substitute"},{"name":"Mladen Jurkas","shortName":"M. Jurkas","num":"12","pos":"SUB","position":"Substitute"},{"name":"Samed Bazdar","shortName":"S. Bazdar","num":"9","pos":"SUB","position":"Substitute"},{"name":"Amir Hadziahmetovic","shortName":"A. Hadziahmetovic","num":"16","pos":"SUB","position":"Substitute"},{"name":"Ermin Mahmic","shortName":"E. Mahmic","num":"26","pos":"SUB","position":"Substitute"},{"name":"Armin Gigovic","shortName":"A. Gigovic","num":"8","pos":"SUB","position":"Substitute"},{"name":"Stjepan Radeljic","shortName":"S. Radeljic","num":"21","pos":"SUB","position":"Substitute"},{"name":"Dzenis Burnic","shortName":"D. Burnic","num":"17","pos":"SUB","position":"Substitute"},{"name":"Kerim Alajbegovic","shortName":"K. Alajbegovic","num":"19","pos":"SUB","position":"Substitute"},{"name":"Arjan Malic","shortName":"A. Malic","num":"24","pos":"SUB","position":"Substitute"},{"name":"Dennis Hadzikadunic","shortName":"D. Hadzikadunic","num":"3","pos":"SUB","position":"Substitute"},{"name":"Haris Tabakovic","shortName":"H. Tabakovic","num":"23","pos":"SUB","position":"Substitute"},{"name":"Ivan Sunjic","shortName":"I. Sunjic","num":"14","pos":"SUB","position":"Substitute"},{"name":"Nihad Mujakic","shortName":"N. Mujakic","num":"2","pos":"SUB","position":"Substitute"}]}}]};
 let storedLineupsCache=null,storedLineupsLoaded=false;
 async function loadStoredLineups(eventId,ev){
   if(!storedLineupsLoaded){
@@ -2153,7 +2317,7 @@ async function loadStoredLineups(eventId,ev){
     try{
       const d=await fetchJson('data/lineups.json',{},1500);
       storedLineupsCache=d&&Array.isArray(d.items)?d.items:[];
-    }catch{storedLineupsCache=[];}
+    }catch{storedLineupsCache=(LINEUPS_FALLBACK.items||[]);}
   }
   const home=ev&&normName(ev.strHomeTeam),away=ev&&normName(ev.strAwayTeam),date=ev&&ev.dateEvent;
   return (storedLineupsCache||[]).find(function(item){
@@ -2181,6 +2345,22 @@ function sideOrder(pos){
 function lineName(player){
   return player.shortName||String(player.name||'').split(' ').slice(-1)[0]||player.name||'';
 }
+function slugId(s){
+  return stripText(s).replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'lineup';
+}
+function isKeeperPlayer(p){
+  return positionRank((p&&p.pos)||(p&&p.position)||'')===0;
+}
+function getKit(team,keeper){
+  const key=normName(team||'');
+  const base=KIT_COLORS[key]||KIT_COLORS[team]||{shirt:'#1f2937',trim:'#c9a227',number:'#ffffff',keeper:'#64748b',keeperNumber:'#ffffff'};
+  if(!keeper)return base;
+  return {
+    shirt:base.keeper||base.shirt,
+    trim:base.keeperTrim||base.trim||'#ffffff',
+    number:base.keeperNumber||base.number||'#ffffff'
+  };
+}
 function formationLines(side){
   const starters=side.starters||[];
   const gk=starters.find(p=>positionRank(p.pos||p.position)===0)||starters[0];
@@ -2204,17 +2384,25 @@ function formationLines(side){
   if(gk)lines.unshift([gk]);
   return lines;
 }
+function renderKitPlayer(p,team){
+  const kit=getKit(team,isKeeperPlayer(p));
+  const style='--kit-shirt:'+kit.shirt+';--kit-trim:'+kit.trim+';--kit-number:'+kit.number;
+  return '<div class="kit-player" style="'+style+'" title="'+escHtml((p.num?('#'+p.num+' '):'')+(p.name||''))+'">'+
+    '<span class="kit-shirt" aria-hidden="true">'+
+      '<span class="kit-sleeve left"></span><span class="kit-sleeve right"></span><span class="kit-body"></span><span class="kit-collar"></span>'+
+      '<span class="kit-number">'+escHtml(p.num||'')+'</span>'+
+    '</span>'+
+    '<span class="kit-name">'+escHtml(lineName(p))+'</span>'+
+    '<span class="kit-pos">'+escHtml(p.pos||'')+'</span>'+
+  '</div>';
+}
 function renderPitchMap(side){
   const lines=formationLines(side).slice().reverse();
-  let html='<div class="pitch" aria-label="'+escHtml(side.team||'')+' '+escHtml(t('formation'))+'">';
+  let html='<div class="lineup-pitch" aria-label="'+escHtml(side.team||'')+' '+escHtml(t('formation'))+'">';
   lines.forEach(function(line){
     html+='<div class="pitch-line" style="grid-template-columns:repeat('+Math.max(line.length,1)+',minmax(0,1fr))">';
     line.forEach(function(p){
-      html+='<div class="player-chip" title="'+escHtml((p.num?('#'+p.num+' '):'')+(p.name||''))+'">'+
-        '<span class="player-num">'+escHtml(p.num||'')+'</span>'+
-        '<span class="player-name">'+escHtml(lineName(p))+'</span>'+
-        '<span class="player-pos">'+escHtml(p.pos||'')+'</span>'+
-      '</div>';
+      html+=renderKitPlayer(p,side.team);
     });
     html+='</div>';
   });
@@ -2229,15 +2417,20 @@ function renderPlayerList(players){
       '</div>';
   }).join('');
 }
-function renderStructuredLineupTeam(side){
+function renderStructuredLineupPanel(side,panelSide,active){
   const starters=side.starters||[],bench=side.bench||[];
-  let html='<div class="lineup-card"><div class="lineup-team"><span>'+escHtml(side.team||'')+'</span>'+
-    (side.formation?'<span class="lineup-formation">'+escHtml(side.formation)+'</span>':'')+'</div>';
+  let html='<div class="lineup-panel '+(active?'active':'')+'" data-side="'+panelSide+'">';
   html+=starters.length>=11?renderPitchMap(side):'<div class="lineup-empty">'+t('lineupsUnavailable')+'</div>';
   if(bench.length){
-    html+='<details class="lineup-bench"><summary>'+t('bench')+' ('+bench.length+')</summary>'+renderPlayerList(bench)+'</details>';
+    html+='<div class="lineup-bench-block"><div class="lineup-bench-title">'+t('bench')+' ('+bench.length+')</div><div class="lineup-bench-list">'+renderPlayerList(bench)+'</div></div>';
   }
   return html+'</div>';
+}
+function switchLineupTeam(btn,side){
+  const card=btn&&btn.closest&&btn.closest('.lineup-switch');
+  if(!card)return;
+  card.querySelectorAll('.lineup-toggle-btn').forEach(function(b){b.classList.toggle('active',b.dataset.side===side);});
+  card.querySelectorAll('.lineup-panel').forEach(function(p){p.classList.toggle('active',p.dataset.side===side);});
 }
 function renderRawLineupTeam(team,lineup){
   const rows=(lineup||[]).filter(p=>sameTeam(p.strTeam,team));
@@ -2253,12 +2446,18 @@ function renderRawLineupTeam(team,lineup){
 }
 function renderLineupsSection(lineup,home,away){
   const teams=[home,away];
-  let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('lineups')+'</div><div class="lineup-grid">';
+  let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('lineups')+'</div>';
   if(lineup&&lineup.home&&lineup.away){
-    html+=renderStructuredLineupTeam(lineup.home)+renderStructuredLineupTeam(lineup.away);
-    html+='</div><div class="lineup-source">'+t('lineupsSource')+': '+escHtml(lineup.source||'ESPN')+'</div></div>';
+    html+='<div class="lineup-card lineup-switch">';
+    html+='<div class="lineup-toggle">'+
+      '<button type="button" class="lineup-toggle-btn active" data-side="home" onclick="switchLineupTeam(this,\'home\')"><span class="lineup-toggle-flag">'+(FLAGS[normName(lineup.home.team)]||FLAGS[lineup.home.team]||'🏳️')+'</span><span class="lineup-toggle-form">'+escHtml(lineup.home.formation||lineup.home.team||'')+'</span></button>'+
+      '<button type="button" class="lineup-toggle-btn" data-side="away" onclick="switchLineupTeam(this,\'away\')"><span class="lineup-toggle-flag">'+(FLAGS[normName(lineup.away.team)]||FLAGS[lineup.away.team]||'🏳️')+'</span><span class="lineup-toggle-form">'+escHtml(lineup.away.formation||lineup.away.team||'')+'</span></button>'+
+    '</div><div class="lineup-panels">';
+    html+=renderStructuredLineupPanel(lineup.home,'home',true)+renderStructuredLineupPanel(lineup.away,'away',false);
+    html+='</div></div><div class="lineup-source">'+t('lineupsSource')+': '+escHtml(lineup.source||'ESPN')+'</div></div>';
     return html;
   }
+  html+='<div class="lineup-grid">';
   teams.forEach(function(team){html+=renderRawLineupTeam(team,lineup||[]);});
   return html+'</div></div>';
 }
