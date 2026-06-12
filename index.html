@@ -218,6 +218,24 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .tl-min{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--gold);min-width:28px;text-align:right}
 .tl-txt{font-size:12px;color:var(--text)}
 .tl-team{font-size:10px;color:var(--muted)}
+.event-groups{display:grid;gap:10px;margin-top:8px}
+.event-block{background:rgba(13,20,38,.74);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.event-block-hdr{display:flex;align-items:center;justify-content:space-between;gap:8px;background:rgba(201,162,39,.045);border-bottom:1px solid var(--border);padding:8px 11px}
+.event-block-title{font-family:var(--disp);font-size:13px;letter-spacing:1.6px;color:var(--gold)}
+.event-count{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.event-row{display:grid;grid-template-columns:42px 26px 1fr;gap:8px;align-items:flex-start;padding:9px 11px;border-top:1px solid var(--border)}
+.event-row:first-of-type{border-top:none}
+.event-minute{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gold);text-align:right}
+.event-icon{font-size:18px;line-height:1}
+.event-title{font-size:14px;font-weight:650;color:var(--text);line-height:1.25}
+.event-meta{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
+.event-empty{padding:12px;color:var(--muted);font-size:13px;text-align:center}
+.lineup-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lineup-card{background:rgba(13,20,38,.65);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.lineup-team{font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--gold);padding:8px 10px;border-bottom:1px solid var(--border);background:rgba(201,162,39,.04)}
+.lineup-player{font-size:12px;padding:5px 10px;border-bottom:1px solid var(--border);display:flex;gap:7px;align-items:center}
+.lineup-player:last-child{border-bottom:none}
+.lineup-empty{font-size:12px;color:var(--muted);line-height:1.45;padding:12px 10px}
 /* Highlight */
 .hl-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px;display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;margin-bottom:7px}
 .hl-card:hover{border-color:var(--gold2)}
@@ -231,6 +249,8 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .groups-grid{grid-template-columns:1fr}
   .players-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
   .squad-blocks{grid-template-columns:1fr}
+  .lineup-grid{grid-template-columns:1fr}
+  .event-row{grid-template-columns:36px 24px 1fr;padding:9px 10px}
 }
 
 /* QUINIELA SCORE INPUTS */
@@ -310,6 +330,9 @@ body{font-size:16px}
 .stat-team,.pc-num,.tl-team,.ref-txt,.ref-btn,.sbar-lbls,.conf-label,.squad-count{font-size:13px}
 .pc-pos,.b-match-label,.sbar-lbl-mid{font-size:11px}
 .stat-val{font-size:20px}
+.event-block-title,.lineup-team{font-size:15px}
+.event-title,.lineup-player{font-size:14px}
+.event-meta,.event-empty,.lineup-empty{font-size:13px}
 .cal-third-info{display:none;margin:-4px 0 16px;line-height:1.55}
 .hl-section{margin-top:14px}
 .hl-card{padding:12px;gap:12px}
@@ -454,11 +477,16 @@ const I18N={
     goals:'goles',assistCount:'asistencias',cleanSheetCount:'porterías a cero',
     noScorers:'Aún no hay goles registrados.',noAssists:'Aún no hay asistencias registradas.',noKeepers:'Aún no hay porterías a cero registradas.',
     statsAvailableSoon:'Las estadísticas se irán rellenando conforme terminen los partidos.',statsProgress:'Actualizando: {done}/{total} partidos...',refreshStats:'Actualizar estadísticas',
+    keeperTentative:'Portero probable · confirmar alineación',keeperConfirmed:'Portero confirmado',keeperFallback:'Portero por confirmar',teamCleanSheet:'Portería a cero de la selección',
+    matchStats:'ESTADÍSTICAS',timeline:'TIMELINE',timelineGoals:'GOLES',timelineCards:'TARJETAS',timelineSubs:'CAMBIOS',timelineOther:'OTROS',
+    goalEvent:'Gol',penaltyGoal:'Penalti',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',otherEvent:'Evento',
+    noEventsInBlock:'Sin eventos en este bloque.',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
+    shots:'Tiros',shotsOnGoal:'Tiros a puerta',possession:'Posesión',passes:'Pases',fouls:'Faltas',yellowCards:'Tarjetas amarillas',redCards:'Tarjetas rojas',corners:'Córners',
     chooseTeam:'Selecciona un equipo para ver su plantilla para el Mundial 2026.',allTeams:'Todas las selecciones',loadingTeam:'Cargando {team}...',squadLoading:'Cargando convocados...',
     teamNotFound:'Equipo no encontrado en TheSportsDB.',viewSquadsFifa:'Ver plantillas en FIFA.com',officialSquad:'Ver convocatoria oficial en FIFA.com',viewTsdb:'Ver en TheSportsDB',
     noSquad:'TheSportsDB no tiene la plantilla convocada de {team} para el Mundial 2026.',squad:'CONVOCADOS',goalkeepers:'Porteros',defenders:'Defensas',midfielders:'Medio campo',forwards:'Delanteros',manager:'Manager',others:'Otros',
     noPlayersInBlock:'Sin jugadores en esta demarcación todavía.',managerMissing:'Manager no disponible en TheSportsDB.',years:'años',error:'Error',playersLoadError:'Error cargando jugadores',
-    highlights:'Highlights',watchHighlight:'Ver resumen'
+    highlights:'Highlights',watchHighlight:'Ver resumen',daznHighlights:'Resumen DAZN'
   },
   en:{
     langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
@@ -474,11 +502,16 @@ const I18N={
     goals:'goals',assistCount:'assists',cleanSheetCount:'clean sheets',
     noScorers:'No goals recorded yet.',noAssists:'No assists recorded yet.',noKeepers:'No clean sheets recorded yet.',
     statsAvailableSoon:'Stats will populate as matches finish.',statsProgress:'Updating: {done}/{total} matches...',refreshStats:'Refresh stats',
+    keeperTentative:'Likely goalkeeper · confirm lineup',keeperConfirmed:'Confirmed goalkeeper',keeperFallback:'Goalkeeper to confirm',teamCleanSheet:'Team clean sheet',
+    matchStats:'STATS',timeline:'TIMELINE',timelineGoals:'GOALS',timelineCards:'CARDS',timelineSubs:'SUBSTITUTIONS',timelineOther:'OTHER',
+    goalEvent:'Goal',penaltyGoal:'Penalty',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',otherEvent:'Event',
+    noEventsInBlock:'No events in this block.',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
+    shots:'Shots',shotsOnGoal:'Shots on goal',possession:'Possession',passes:'Passes',fouls:'Fouls',yellowCards:'Yellow cards',redCards:'Red cards',corners:'Corners',
     chooseTeam:'Select a team to see its World Cup 2026 squad.',allTeams:'All teams',loadingTeam:'Loading {team}...',squadLoading:'Loading squad...',
     teamNotFound:'Team not found in TheSportsDB.',viewSquadsFifa:'View squads on FIFA.com',officialSquad:'View official squad on FIFA.com',viewTsdb:'View on TheSportsDB',
     noSquad:'TheSportsDB does not have the World Cup 2026 squad for {team}.',squad:'SQUAD',goalkeepers:'Goalkeepers',defenders:'Defenders',midfielders:'Midfield',forwards:'Forwards',manager:'Manager',others:'Others',
     noPlayersInBlock:'No players listed in this block yet.',managerMissing:'Manager not available in TheSportsDB.',years:'years',error:'Error',playersLoadError:'Error loading players',
-    highlights:'Highlights',watchHighlight:'Watch highlights'
+    highlights:'Highlights',watchHighlight:'Watch highlights',daznHighlights:'DAZN highlights'
   }
 };
 function t(key,vars){
@@ -1463,10 +1496,18 @@ function updateQChampion(){
 // ══════════════════════════════════════════════
 let statsCache={},statsLoaded=false;
 const STATS_KEY='mw26_stats';
+const STATS_VERSION=3;
 async function loadGoleadores(){
   const el=document.getElementById('golesContent');
   // Load from cache
-  try{const c=storageGet(STATS_KEY,'');if(c)statsCache=JSON.parse(c);}catch{}
+  try{
+    const c=storageGet(STATS_KEY,'');
+    if(c){
+      const parsed=JSON.parse(c);
+      statsCache=parsed&&parsed._v===STATS_VERSION?(parsed.items||{}):{};
+    }
+  }catch{statsCache={};}
+  await loadLocalSquads();
   // Get list of finished matches
   const today=new Date().toISOString().slice(0,10);
   const finishedFx=FIXTURES.filter(f=>f.date<today&&f.home!=='TBD');
@@ -1498,9 +1539,22 @@ async function fetchMissingStats(missing,el){
         if(evs[0])eid=evs[0].idEvent;
       }
       if(eid){
-        const tl=await v1(`/lookuptimeline.php?id=${eid}`);
-        statsCache[k]={timeline:tl.timeline||[],eid};
-        storageSet(STATS_KEY,JSON.stringify(statsCache));
+        const[evD,tlD,luD]=await Promise.allSettled([
+          v1(`/lookupevent.php?id=${eid}`),
+          v1(`/lookuptimeline.php?id=${eid}`),
+          v1(`/lookuplineup.php?id=${eid}`)
+        ]);
+        const ev=evD.value&&evD.value.events&&evD.value.events[0];
+        statsCache[k]={
+          eid,
+          timeline:(tlD.value&&tlD.value.timeline)||[],
+          lineup:(luD.value&&luD.value.lineup)||[],
+          event:ev?{
+            idEvent:ev.idEvent,dateEvent:ev.dateEvent,strStatus:ev.strStatus,strHomeTeam:ev.strHomeTeam,strAwayTeam:ev.strAwayTeam,
+            intHomeScore:ev.intHomeScore,intAwayScore:ev.intAwayScore
+          }:null
+        };
+        storageSet(STATS_KEY,JSON.stringify({_v:STATS_VERSION,items:statsCache}));
       }
       done++;
       const p=document.getElementById('statsProgress');
@@ -1517,25 +1571,36 @@ function renderStats(el,append){
   const scorers={},assists={},keepers={};
   Object.entries(statsCache).forEach(function([k,obj]){
     const timeline=obj.timeline||[];
-    if(!timeline.length)return;
+    if(!timeline.length&&!obj.event)return;
     const parts=k.split('|');const home=parts[0];const away=parts[1];
-    let hGoals=0,aGoals=0;
+    const event=obj.event||{};
     timeline.forEach(function(ev){
-      const type=ev.strTimelineType||'';
-      if(type==='Goal'||type==='Penalty'){
-        const p=ev.strPlayer;if(!p)return;
-        if(!scorers[p])scorers[p]={name:p,team:ev.strTeam||'',goals:0,ast:0};
+      if(timelineKind(ev)==='goal'){
+        const p=eventPlayer(ev);if(!p)return;
+        const team=ev.strTeam||'';
+        if(!scorers[p])scorers[p]={name:p,team,goals:0,ast:0};
         scorers[p].goals++;
-        const ap=ev.strAssistPlayer||ev.strAssist;
-        if(ap){
-          if(!assists[ap])assists[ap]={name:ap,team:ev.strTeam||'',ast:0};
+        const ap=eventAssist(ev);
+        if(ap&&ap!==p){
+          if(!assists[ap])assists[ap]={name:ap,team,ast:0};
           assists[ap].ast++;
         }
-        if((ev.strTeam||'')===(home||''))hGoals++;else aGoals++;
       }
     });
-    if(hGoals===0){if(!keepers[home])keepers[home]={name:home,cs:0};keepers[home].cs++;}
-    if(aGoals===0){if(!keepers[away])keepers[away]={name:away,cs:0};keepers[away].cs++;}
+    if(event&&isFin(event.strStatus)&&event.intHomeScore!==null&&event.intHomeScore!==undefined&&event.intAwayScore!==null&&event.intAwayScore!==undefined){
+      const hs=parseInt(event.intHomeScore),as=parseInt(event.intAwayScore);
+      function addKeeper(team){
+        const confirmed=findGoalkeeperInLineup(team,obj.lineup||[]);
+        const likely=confirmed||findLikelyKeeperFromSquad(team);
+        if(!likely||!likely.strPlayer)return;
+        const key=team+'|'+likely.strPlayer;
+        if(!keepers[key])keepers[key]={name:likely.strPlayer,team,cs:0,tentative:!!likely.tentative};
+        keepers[key].cs++;
+        keepers[key].tentative=keepers[key].tentative||!!likely.tentative;
+      }
+      if(Number.isFinite(hs)&&hs===0)addKeeper(away);
+      if(Number.isFinite(as)&&as===0)addKeeper(home);
+    }
   });
   const topScorers=Object.values(scorers).sort(function(a,b){return b.goals-a.goals;}).slice(0,15);
   const topAssists=Object.values(assists).sort(function(a,b){return b.ast-a.ast;}).slice(0,10);
@@ -1547,12 +1612,15 @@ function renderStats(el,append){
     }
     return list.map(function(p,i){
       const val=kind==='goals'?p.goals:kind==='assists'?p.ast:p.cs;
-      const team=kind==='keepers'?p.name:p.team;
+      const team=p.team||'';
       const label=kind==='goals'?t('goals'):kind==='assists'?t('assistCount'):t('cleanSheetCount');
+      const sub=kind==='keepers'?
+        (p.tentative?t('keeperTentative'):t('keeperConfirmed'))+' · '+team:
+        team;
       return '<div class="stat-row">'+
         '<span class="stat-pos">'+(i+1)+'</span>'+
         '<span class="stat-flag">'+(FLAGS[team]||'🏳️')+'</span>'+
-        '<div class="stat-info"><div class="stat-pname">'+p.name+'</div><div class="stat-team">'+(kind==='keepers'?val+' '+label:team)+'</div></div>'+
+        '<div class="stat-info"><div class="stat-pname">'+p.name+'</div><div class="stat-team">'+sub+'</div></div>'+
         '<span class="stat-val">'+val+'</span></div>';
     }).join('');
   }
@@ -1772,10 +1840,239 @@ function escHtml(s){
     return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
   });
 }
+function stripText(s){
+  return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+}
+function sameTeam(a,b){
+  if(!a||!b)return false;
+  const aa=stripText(typeof normName==='function'?normName(a):a);
+  const bb=stripText(typeof normName==='function'?normName(b):b);
+  return aa===bb;
+}
+const SQUAD_KEY_BY_TEAM={
+  'Algeria':'Argelia','Argentina':'Argentina','Spain':'España','France':'Francia','Portugal':'Portugal',
+  'Brazil':'Brasil','Germany':'Alemania','England':'Inglaterra','Netherlands':'Países Bajos','Belgium':'Bélgica',
+  'Uruguay':'Uruguay','Colombia':'Colombia','Mexico':'México','Japan':'Japón','Morocco':'Marruecos',
+  'South Korea':'Corea del Sur','Ecuador':'Ecuador','Senegal':'Senegal','Norway':'Noruega','Croatia':'Croacia'
+};
+let localSquads=null,localSquadsLoaded=false;
+async function loadLocalSquads(){
+  if(localSquadsLoaded)return localSquads;
+  localSquadsLoaded=true;
+  try{
+    const d=await fetchJson('squads.json',{},1500);
+    localSquads=d&&d.squads?d.squads:null;
+  }catch{localSquads=null;}
+  return localSquads;
+}
+function getLocalSquad(team){
+  if(!localSquads)return null;
+  return localSquads[SQUAD_KEY_BY_TEAM[team]||team]||null;
+}
+function eventText(ev){
+  return stripText([
+    ev.strTimelineType,ev.strTimeline,ev.strTimelineDetail,ev.strEvent,ev.strComment,
+    ev.strPlayer,ev.strPlayer1,ev.strPlayer2,ev.strAssist,ev.strAssistPlayer
+  ].filter(Boolean).join(' '));
+}
+function eventMinute(ev){
+  const vals=[ev.intTime,ev.intMinute,ev.strMinute,ev.strTime,ev.strTimelineMinute,ev.intTimeline];
+  for(const v of vals){
+    const raw=String(v||'').trim();
+    if(/^\d+(\+\d+)?$/.test(raw))return raw+"'";
+  }
+  const raw=String(ev.strTimeline||'').trim();
+  return /^\d+(\+\d+)?$/.test(raw)?raw+"'":'';
+}
+function timelineKind(ev){
+  const tx=eventText(ev);
+  if(tx.includes('red card')||tx.includes('tarjeta roja')||/\bred\b/.test(tx))return 'red';
+  if(tx.includes('yellow card')||tx.includes('tarjeta amarilla')||/\byellow\b/.test(tx))return 'yellow';
+  if(tx.includes('card')||tx.includes('tarjeta'))return 'yellow';
+  if(tx.includes('substitution')||tx.includes('substitution')||tx.includes('cambio'))return 'substitution';
+  if(tx.includes('penalty')||tx.includes('penalti'))return 'goal';
+  if(tx.includes('goal')||tx.includes('gol'))return 'goal';
+  return 'other';
+}
+function timelineLabel(ev){
+  const kind=timelineKind(ev),tx=eventText(ev);
+  if(kind==='goal')return tx.includes('penalty')||tx.includes('penalti')?t('penaltyGoal'):t('goalEvent');
+  if(kind==='yellow')return t('yellowCard');
+  if(kind==='red')return t('redCard');
+  if(kind==='substitution')return t('substitutionEvent');
+  return t('otherEvent');
+}
+function timelineIcon(kind){
+  return kind==='goal'?'⚽':kind==='yellow'?'🟨':kind==='red'?'🟥':kind==='substitution'?'🔄':'•';
+}
+function eventPlayer(ev){
+  const vals=[ev.strPlayer,ev.strPlayer1,ev.strPlayer2,ev.strTimelinePlayer];
+  for(const v of vals){
+    const name=String(v||'').trim();
+    if(name&&!['goal','card','yellow card','red card','substitution'].includes(stripText(name)))return name;
+  }
+  return '';
+}
+function eventAssist(ev){
+  const vals=[ev.strAssistPlayer,ev.strAssist,ev.strAssist1,ev.strPlayer2];
+  for(const v of vals){
+    const name=String(v||'').trim();
+    if(name&&!['assist','none','null','-'].includes(stripText(name)))return name;
+  }
+  return '';
+}
+function teamSide(team,home,away){
+  if(sameTeam(team,home))return 'home';
+  if(sameTeam(team,away))return 'away';
+  return null;
+}
+function timelineCounts(timeline,home,away){
+  const counts={yellow:{home:0,away:0},red:{home:0,away:0},goal:{home:0,away:0}};
+  (timeline||[]).forEach(function(ev){
+    const side=teamSide(ev.strTeam,home,away);
+    if(!side)return;
+    const kind=timelineKind(ev);
+    if(kind==='yellow'||kind==='red'||kind==='goal')counts[kind][side]++;
+  });
+  return counts;
+}
+function renderTimelineBlock(title,events){
+  let html='<div class="event-block"><div class="event-block-hdr"><span class="event-block-title">'+title+'</span><span class="event-count">'+events.length+'</span></div>';
+  if(!events.length)return html+'<div class="event-empty">'+t('noEventsInBlock')+'</div></div>';
+  events.forEach(function(ev){
+    const kind=timelineKind(ev);
+    const player=eventPlayer(ev)||timelineLabel(ev);
+    const minute=eventMinute(ev)||'•';
+    const assist=eventAssist(ev);
+    html+='<div class="event-row">'+
+      '<div class="event-minute">'+escHtml(minute)+'</div>'+
+      '<div class="event-icon">'+timelineIcon(kind)+'</div>'+
+      '<div><div class="event-title">'+escHtml(player)+'</div>'+
+      '<div class="event-meta">'+escHtml(timelineLabel(ev))+(ev.strTeam?' · '+escHtml(ev.strTeam):'')+(assist?' · '+escHtml(t('assists'))+': '+escHtml(assist):'')+'</div></div>'+
+      '</div>';
+  });
+  return html+'</div>';
+}
+function renderSplitTimeline(timeline){
+  const groups={goals:[],cards:[],subs:[],other:[]};
+  (timeline||[]).forEach(function(ev){
+    const kind=timelineKind(ev);
+    if(kind==='goal')groups.goals.push(ev);
+    else if(kind==='yellow'||kind==='red')groups.cards.push(ev);
+    else if(kind==='substitution')groups.subs.push(ev);
+    else groups.other.push(ev);
+  });
+  let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('timeline')+'</div><div class="event-groups">';
+  html+=renderTimelineBlock('⚽ '+t('timelineGoals'),groups.goals);
+  html+=renderTimelineBlock('🟨 '+t('timelineCards'),groups.cards);
+  if(groups.subs.length)html+=renderTimelineBlock('🔄 '+t('timelineSubs'),groups.subs);
+  if(groups.other.length)html+=renderTimelineBlock(t('timelineOther'),groups.other);
+  return html+'</div></div>';
+}
+function statNum(row,side){
+  if(!row)return 0;
+  const keys=side==='home'?['intHome','strHome','home','homeValue']:['intAway','strAway','away','awayValue'];
+  for(const k of keys){
+    if(row[k]!==undefined&&row[k]!==null&&row[k]!==''){
+      const n=parseFloat(String(row[k]).replace('%',''));
+      return Number.isFinite(n)?n:0;
+    }
+  }
+  return 0;
+}
+function findStat(stats,keys){
+  const wanted=keys.map(stripText);
+  return (stats||[]).find(function(s){return wanted.includes(stripText(s.strStat||s.strName||s.name));});
+}
+function renderMatchStats(stats,ev,timeline){
+  if(!stats.length&&!timeline.length)return'';
+  const counts=timelineCounts(timeline,ev.strHomeTeam,ev.strAwayTeam);
+  const rows=[
+    {keys:['Shots on Goal','Shots On Goal','On Target'],label:'shotsOnGoal',icon:'🎯'},
+    {keys:['Shots','Total Shots'],label:'shots',icon:'⚽'},
+    {keys:['Possession'],label:'possession',icon:'◎',suffix:'%'},
+    {keys:['Passes'],label:'passes',icon:'↔'},
+    {keys:['Fouls'],label:'fouls',icon:'!'},
+    {keys:['Yellow Cards','Yellowcards','Yellow Card'],label:'yellowCards',icon:'🟨',override:counts.yellow},
+    {keys:['Red Cards','Redcards','Red Card'],label:'redCards',icon:'🟥',override:counts.red},
+    {keys:['Corners','Corner Kicks'],label:'corners',icon:'◿'}
+  ];
+  let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:8px">'+t('matchStats')+'</div>';
+  rows.forEach(function(def){
+    const s=findStat(stats,def.keys);
+    if(!s&&!def.override)return;
+    let h=def.override?Math.max(statNum(s,'home'),def.override.home):statNum(s,'home');
+    let a=def.override?Math.max(statNum(s,'away'),def.override.away):statNum(s,'away');
+    const tot=h+a,hp=tot>0?h/tot*100:50;
+    html+='<div class="sbar-row"><div class="sbar-lbls">'+
+      '<span style="font-family:var(--mono)">'+h+(def.suffix||'')+'</span>'+
+      '<span class="sbar-lbl-mid">'+def.icon+' '+t(def.label)+'</span>'+
+      '<span style="font-family:var(--mono)">'+a+(def.suffix||'')+'</span>'+
+      '</div><div class="sbar-track"><div class="sbar-h" style="width:'+hp+'%"></div><div class="sbar-a" style="width:'+(100-hp)+'%"></div></div></div>';
+  });
+  return html+'</div>';
+}
+function findGoalkeeperInLineup(team,lineup){
+  const players=(lineup||[]).filter(p=>sameTeam(p.strTeam,team));
+  return players.find(function(p){
+    const pos=stripText([p.strPosition,p.strFormationPosition,p.strRole,p.strLineup].filter(Boolean).join(' '));
+    return pos.includes('goalkeeper')||pos==='gk'||pos.includes('portero');
+  })||null;
+}
+function findLikelyKeeperFromSquad(team){
+  const squad=getLocalSquad(team);
+  if(!squad||!Array.isArray(squad.players))return null;
+  const gk=squad.players.find(function(p){
+    const pos=stripText(p.pos||p.position||'');
+    return pos==='gk'||pos.includes('goalkeeper')||pos.includes('portero');
+  });
+  return gk?{strPlayer:gk.name,intSquadNumber:gk.num,tentative:true}:null;
+}
+function renderLineupsSection(lineup,home,away){
+  const teams=[home,away];
+  let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('lineups')+'</div><div class="lineup-grid">';
+  teams.forEach(function(team){
+    const rows=(lineup||[]).filter(p=>sameTeam(p.strTeam,team));
+    html+='<div class="lineup-card"><div class="lineup-team">'+escHtml(team)+'</div>';
+    if(!rows.length){
+      html+='<div class="lineup-empty">'+t('lineupsUnavailable')+'</div>';
+    }else{
+      rows.forEach(function(p){
+        html+='<div class="lineup-player"><span style="font-family:var(--mono);color:var(--muted);min-width:20px">'+escHtml(p.intSquadNumber||p.strNumber||'—')+'</span><span>'+escHtml(p.strPlayer||p.strName||'')+'</span></div>';
+      });
+    }
+    html+='</div>';
+  });
+  return html+'</div></div>';
+}
 function normalizeHighlightsData(data){
   if(!data)return[];
-  const list=data.highlights||data.results||data.event_highlights||data.eventhighlights||data.tvhighlights||data.youtube||[];
-  return Array.isArray(list)?list.filter(h=>h&&(h.strVideo||h.strYoutube||h.strThumb||h.strPoster)):[];
+  const list=data.items||data.highlights||data.results||data.event_highlights||data.eventhighlights||data.tvhighlights||data.youtube||[];
+  return Array.isArray(list)?list.map(function(h){
+    const videoId=h.videoId||h.idVideo||h.id;
+    return Object.assign({},h,{
+      strVideo:h.strVideo||h.strYoutube||h.url||(videoId?'https://www.youtube.com/watch?v='+videoId:''),
+      strThumb:h.strThumb||h.thumbnail||h.thumb||h.strPoster||h.strFanart||'',
+      strFilename:h.strFilename||h.title||h.strEvent||t('watchHighlight'),
+      source:h.source||h.strSource||'YouTube'
+    });
+  }).filter(h=>h&&(h.strVideo||h.strThumb)):[];
+}
+let daznHighlightsCache=null,daznHighlightsLoaded=false;
+async function loadDaznHighlights(eventId,ev){
+  if(!daznHighlightsLoaded){
+    daznHighlightsLoaded=true;
+    try{
+      const d=await fetchJson('data/dazn-highlights.json',{},1500);
+      daznHighlightsCache=normalizeHighlightsData(d);
+    }catch{daznHighlightsCache=[];}
+  }
+  const home=ev&&ev.strHomeTeam,away=ev&&ev.strAwayTeam,date=ev&&ev.dateEvent;
+  return (daznHighlightsCache||[]).filter(function(h){
+    if(String(h.matchId||h.eventId||h.idEvent||'')===String(eventId))return true;
+    const sameDate=!h.date||!date||String(h.date)===String(date);
+    return sameDate&&sameTeam(h.home,home)&&sameTeam(h.away,away);
+  });
 }
 async function loadEventHighlights(eventId,dateEvent,seed){
   let hls=normalizeHighlightsData(seed);
@@ -1794,9 +2091,10 @@ function renderHighlightsSection(hls){
     const url=h.strVideo||h.strYoutube||'#';
     const thumb=h.strThumb||h.strPoster||h.strFanart||'';
     const title=h.strFilename||h.strEvent||t('watchHighlight');
+    const source=h.source||'YouTube';
     html+=`<a class="hl-card${i===0?' primary':''}" href="${escHtml(url)}" target="_blank" rel="noopener">
       ${thumb?`<img class="hl-thumb" src="${escHtml(thumb)}" alt="">`:`<div class="hl-play">▶</div>`}
-      <div class="stat-info"><div class="hl-title">${escHtml(title)}</div><div class="hl-source">YouTube · ${t('watchHighlight')}</div></div>
+      <div class="stat-info"><div class="hl-title">${escHtml(title)}</div><div class="hl-source">${escHtml(source)} · ${t('watchHighlight')}</div></div>
     </a>`;
   });
   return html+'</div>';
@@ -1850,7 +2148,15 @@ async function openDetail(eid,date,home,away){
     const es=toES(ev.dateEvent,ev.strTime&&ev.strTime.slice(0,5));
     const fin=isFin(ev.strStatus),live2=isLive(ev.strStatus);
     const hasScore=ev.intHomeScore!==null&&ev.intHomeScore!==undefined;
-    const hls=await loadEventHighlights(eventId,ev.dateEvent,hlD.value);
+    const tsdbHls=await loadEventHighlights(eventId,ev.dateEvent,hlD.value);
+    const daznHls=await loadDaznHighlights(eventId,ev);
+    const seenHls={};
+    const hls=tsdbHls.concat(daznHls).filter(function(h){
+      const key=h.strVideo||h.url||h.videoId||h.strFilename;
+      if(!key||seenHls[key])return false;
+      seenHls[key]=true;
+      return true;
+    });
     let html=`<div style="padding:16px">
       <div style="text-align:center;margin-bottom:12px">
         <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:7px">${ev.strRound||''}</div>
@@ -1881,48 +2187,13 @@ async function openDetail(eid,date,home,away){
     html+=renderHighlightsSection(hls);
     // Stats
     const stats=(stD.value&&stD.value.eventstats)||[];
-    if(stats.length){
-      html+=`<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:8px">ESTADÍSTICAS</div>`;
-      const sm={};stats.forEach(s=>{sm[s.strStat]=s;});
-      ['Shots','Shots on Goal','Possession','Passes','Fouls','Yellow Cards','Red Cards','Corners'].forEach(k=>{
-        const s=sm[k];if(!s)return;
-        const h=parseFloat(s.intHome)||0,a=parseFloat(s.intAway)||0,tot=h+a;
-        const hp=tot>0?h/tot*100:50;
-        html+=`<div class="sbar-row"><div class="sbar-lbls">
-          <span style="font-family:var(--mono)">${h}${k.includes('Poss')?'%':''}</span>
-          <span class="sbar-lbl-mid">${k}</span>
-          <span style="font-family:var(--mono)">${a}${k.includes('Poss')?'%':''}</span>
-        </div><div class="sbar-track"><div class="sbar-h" style="width:${hp}%"></div><div class="sbar-a" style="width:${100-hp}%"></div></div></div>`;
-      });
-      html+='</div>';
-    }
-    // Timeline
     const tl=(tlD.value&&tlD.value.timeline)||[];
-    if(tl.length){
-      html+=`<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">TIMELINE</div>`;
-      tl.forEach(e=>{
-        const icon=e.strTimelineType==='Goal'?'⚽':e.strTimelineType==='Yellow Card'?'🟨':e.strTimelineType==='Red Card'?'🟥':e.strTimelineType==='Substitution'?'🔄':'•';
-        html+=`<div class="tl-ev"><div class="tl-min">${e.strTimeline}'</div><div style="font-size:17px">${icon}</div>
-          <div><div class="tl-txt">${e.strPlayer||e.strTimelineType}</div><div class="tl-team">${e.strTeam||''}</div></div></div>`;
-      });
-      html+='</div>';
-    }
+    html+=renderMatchStats(stats,ev,tl);
+    // Timeline
+    if(tl.length)html+=renderSplitTimeline(tl);
     // Lineups
     const lu=(luD.value&&luD.value.lineup)||[];
-    if(lu.length){
-      const hLu=lu.filter(p=>p.strTeam===ev.strHomeTeam);
-      const aLu=lu.filter(p=>p.strTeam===ev.strAwayTeam);
-      html+=`<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">ALINEACIONES</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">`;
-      [[hLu,ev.strHomeTeam],[aLu,ev.strAwayTeam]].forEach(([lineup,tname])=>{
-        html+=`<div><div style="font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--gold);margin-bottom:5px">${tname}</div>`;
-        lineup.forEach(p=>{html+=`<div style="font-size:12px;padding:3px 0;border-bottom:1px solid var(--border);display:flex;gap:6px">
-          <span style="font-family:var(--mono);color:var(--muted);min-width:16px">${p.intSquadNumber||'—'}</span>
-          <span>${p.strPlayer}</span></div>`;});
-        html+='</div>';
-      });
-      html+='</div></div>';
-    }
+    html+=renderLineupsSection(lu,ev.strHomeTeam,ev.strAwayTeam);
     html+='</div>';
     inner.innerHTML=html;
   }catch(e){inner.innerHTML=`<div class="empty" style="padding:40px"><div class="empty-icon">⚠️</div><div class="empty-text">${e.message}</div></div>`;}
@@ -1960,3 +2231,4 @@ setTimeout(()=>{loadCal();calLoaded=true;},2000);
 </script>
 </body>
 </html>
+
