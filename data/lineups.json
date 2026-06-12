@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T17:19:04.524Z",
+  "updated": "2026-06-12T19:31:46.708Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-12T17:19:04.524Z",
+      "updatedAt": "2026-06-12T19:31:46.708Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -558,7 +558,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-12T17:19:04.524Z",
+      "updatedAt": "2026-06-12T19:31:46.708Z",
       "home": {
         "team": "South Korea",
         "espnTeam": "South Korea",
@@ -1090,6 +1090,555 @@
           {
             "name": "David Zima",
             "shortName": "D. Zima",
+            "num": "2",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ]
+      }
+    },
+    {
+      "matchId": 3,
+      "espnEventId": "760416",
+      "date": "2026-06-12",
+      "homeTeam": "Canada",
+      "awayTeam": "Bosnia & Herzegovina",
+      "source": "ESPN",
+      "updatedAt": "2026-06-12T19:31:46.708Z",
+      "home": {
+        "team": "Canada",
+        "espnTeam": "Canada",
+        "formation": "4-4-2",
+        "logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+        "starters": [
+          {
+            "name": "Maxime Crépeau",
+            "shortName": "M. Crépeau",
+            "num": "16",
+            "pos": "G",
+            "position": "Goalkeeper",
+            "formationPlace": "1",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Derek Cornelius",
+            "shortName": "D. Cornelius",
+            "num": "13",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
+            "formationPlace": "6",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Luc de Fougerolles",
+            "shortName": "L. de Fougerolles",
+            "num": "4",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Richie Laryea",
+            "shortName": "R. Laryea",
+            "num": "22",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Alistair Johnston",
+            "shortName": "A. Johnston",
+            "num": "2",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Stephen Eustáquio",
+            "shortName": "S. Eustáquio",
+            "num": "7",
+            "pos": "CM-L",
+            "position": "Center Left Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ismaël Koné",
+            "shortName": "I. Koné",
+            "num": "8",
+            "pos": "CM-R",
+            "position": "Center Right Midfielder",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Liam Millar",
+            "shortName": "L. Millar",
+            "num": "11",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Tajon Buchanan",
+            "shortName": "T. Buchanan",
+            "num": "17",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Tani Oluwaseyi",
+            "shortName": "T. Oluwaseyi",
+            "num": "12",
+            "pos": "CF-L",
+            "position": "Center Left Forward",
+            "formationPlace": "9",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jonathan David",
+            "shortName": "J. David",
+            "num": "10",
+            "pos": "CF-R",
+            "position": "Center Right Forward",
+            "formationPlace": "10",
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ],
+        "bench": [
+          {
+            "name": "Alfie Jones",
+            "shortName": "A. Jones",
+            "num": "3",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Niko Sigur",
+            "shortName": "N. Sigur",
+            "num": "23",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jacob Shaffelburg",
+            "shortName": "J. Shaffelburg",
+            "num": "14",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Joel Waterman",
+            "shortName": "J. Waterman",
+            "num": "5",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jonathan Osorio",
+            "shortName": "J. Osorio",
+            "num": "21",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jayden Nelson",
+            "shortName": "J. Nelson",
+            "num": "26",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Cyle Larin",
+            "shortName": "C. Larin",
+            "num": "9",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ali Ahmed",
+            "shortName": "A. Ahmed",
+            "num": "20",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Promise David",
+            "shortName": "P. David",
+            "num": "24",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Owen Goodman",
+            "shortName": "O. Goodman",
+            "num": "18",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Alphonso Davies",
+            "shortName": "A. Davies",
+            "num": "19",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Dayne St. Clair",
+            "shortName": "D. St. Clair",
+            "num": "1",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Moïse Bombito",
+            "shortName": "M. Bombito",
+            "num": "15",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Nathan Saliba",
+            "shortName": "N. Saliba",
+            "num": "25",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Mathieu Choinière",
+            "shortName": "M. Choinière",
+            "num": "6",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ]
+      },
+      "away": {
+        "team": "Bosnia & Herzegovina",
+        "espnTeam": "Bosnia-Herzegovina",
+        "formation": "4-4-2",
+        "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
+        "starters": [
+          {
+            "name": "Nikola Vasilj",
+            "shortName": "N. Vasilj",
+            "num": "1",
+            "pos": "G",
+            "position": "Goalkeeper",
+            "formationPlace": "1",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Tarik Muharemovic",
+            "shortName": "T. Muharemovic",
+            "num": "4",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
+            "formationPlace": "6",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Nikola Katic",
+            "shortName": "N. Katic",
+            "num": "18",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Sead Kolasinac",
+            "shortName": "S. Kolasinac",
+            "num": "5",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Amar Dedic",
+            "shortName": "A. Dedic",
+            "num": "7",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ivan Basic",
+            "shortName": "I. Basic",
+            "num": "13",
+            "pos": "CM-L",
+            "position": "Center Left Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Benjamin Tahirovic",
+            "shortName": "B. Tahirovic",
+            "num": "6",
+            "pos": "CM-R",
+            "position": "Center Right Midfielder",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Amar Memic",
+            "shortName": "A. Memic",
+            "num": "15",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Esmir Bajraktarevic",
+            "shortName": "E. Bajraktarevic",
+            "num": "20",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jovo Lukic",
+            "shortName": "J. Lukic",
+            "num": "25",
+            "pos": "CF-L",
+            "position": "Center Left Forward",
+            "formationPlace": "9",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ermedin Demirovic",
+            "shortName": "E. Demirovic",
+            "num": "10",
+            "pos": "CF-R",
+            "position": "Center Right Forward",
+            "formationPlace": "10",
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ],
+        "bench": [
+          {
+            "name": "Edin Dzeko",
+            "shortName": "E. Dzeko",
+            "num": "11",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Martin Zlomislic",
+            "shortName": "M. Zlomislic",
+            "num": "22",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Mladen Jurkas",
+            "shortName": "M. Jurkas",
+            "num": "12",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Samed Bazdar",
+            "shortName": "S. Bazdar",
+            "num": "9",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Amir Hadziahmetovic",
+            "shortName": "A. Hadziahmetovic",
+            "num": "16",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ermin Mahmic",
+            "shortName": "E. Mahmic",
+            "num": "26",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Armin Gigovic",
+            "shortName": "A. Gigovic",
+            "num": "8",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Stjepan Radeljic",
+            "shortName": "S. Radeljic",
+            "num": "21",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Dzenis Burnic",
+            "shortName": "D. Burnic",
+            "num": "17",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Kerim Alajbegovic",
+            "shortName": "K. Alajbegovic",
+            "num": "19",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Arjan Malic",
+            "shortName": "A. Malic",
+            "num": "24",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Dennis Hadzikadunic",
+            "shortName": "D. Hadzikadunic",
+            "num": "3",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Haris Tabakovic",
+            "shortName": "H. Tabakovic",
+            "num": "23",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ivan Sunjic",
+            "shortName": "I. Sunjic",
+            "num": "14",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Nihad Mujakic",
+            "shortName": "N. Mujakic",
             "num": "2",
             "pos": "SUB",
             "position": "Substitute",
