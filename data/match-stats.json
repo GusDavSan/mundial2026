@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T17:52:19.855Z",
+  "updated": "2026-06-12T20:11:52.789Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-12T17:52:19.855Z",
+      "updatedAt": "2026-06-12T20:11:52.789Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -43,7 +43,35 @@
           "home": 1,
           "away": 1
         }
-      }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Mexico",
+          "name": "Raúl Rangel",
+          "shortName": "R. Rangel",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "South Africa",
+          "name": "Ronwen Williams",
+          "shortName": "R. Williams",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
     },
     {
       "matchId": 2,
@@ -52,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-12T17:52:19.855Z",
+      "updatedAt": "2026-06-12T20:11:52.789Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -86,7 +114,106 @@
           "home": 2,
           "away": 2
         }
-      }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "South Korea",
+          "name": "Kim Seung-Gyu",
+          "shortName": "K. Seung-Gyu",
+          "number": "1",
+          "saves": 3,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 75,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Czechia",
+          "name": "Matej Kovár",
+          "shortName": "M. Kovár",
+          "number": "1",
+          "saves": 4,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 3,
+      "espnEventId": "760416",
+      "date": "2026-06-12",
+      "homeTeam": "Canada",
+      "awayTeam": "Bosnia & Herzegovina",
+      "source": "ESPN",
+      "updatedAt": "2026-06-12T20:11:52.789Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 3
+        },
+        "shots": {
+          "home": 7,
+          "away": 6
+        },
+        "possession": {
+          "home": 65.8,
+          "away": 34.2
+        },
+        "passes": {
+          "home": 238,
+          "away": 128
+        },
+        "fouls": {
+          "home": 4,
+          "away": 9
+        },
+        "corners": {
+          "home": 9,
+          "away": 1
+        },
+        "saves": {
+          "home": 2,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Canada",
+          "name": "Maxime Crépeau",
+          "shortName": "M. Crépeau",
+          "number": "16",
+          "saves": 2,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Bosnia & Herzegovina",
+          "name": "Nikola Vasilj",
+          "shortName": "N. Vasilj",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
     }
   ]
 }
