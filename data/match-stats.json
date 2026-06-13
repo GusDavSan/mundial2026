@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T19:56:14.775Z",
+  "updated": "2026-06-13T21:22:37.894Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T19:56:14.775Z",
+      "updatedAt": "2026-06-13T21:22:37.894Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T19:56:14.775Z",
+      "updatedAt": "2026-06-13T21:22:37.894Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T19:56:14.775Z",
+      "updatedAt": "2026-06-13T21:22:37.894Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -222,7 +222,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T19:56:14.775Z",
+      "updatedAt": "2026-06-13T21:22:37.894Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -293,35 +293,35 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T19:56:14.775Z",
+      "updatedAt": "2026-06-13T21:22:37.894Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 2,
-          "away": 6
+          "home": 4,
+          "away": 7
         },
         "shots": {
-          "home": 4,
-          "away": 13
+          "home": 7,
+          "away": 26
         },
         "possession": {
-          "home": 25.3,
-          "away": 74.7
+          "home": 31.8,
+          "away": 68.2
         },
         "passes": {
-          "home": 98,
-          "away": 290
+          "home": 277,
+          "away": 578
         },
         "fouls": {
-          "home": 6,
-          "away": 8
+          "home": 12,
+          "away": 11
         },
         "corners": {
           "home": 3,
-          "away": 4
+          "away": 10
         },
         "saves": {
           "home": 5,
-          "away": 2
+          "away": 3
         },
         "offsides": {
           "home": 0,
@@ -348,10 +348,10 @@
           "name": "Gregor Kobel",
           "shortName": "G. Kobel",
           "number": "1",
-          "saves": 2,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 3,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
