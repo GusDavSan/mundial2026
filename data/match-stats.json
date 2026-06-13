@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T18:12:50.453Z",
+  "updated": "2026-06-13T19:56:14.775Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T18:12:50.453Z",
+      "updatedAt": "2026-06-13T19:56:14.775Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T18:12:50.453Z",
+      "updatedAt": "2026-06-13T19:56:14.775Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T18:12:50.453Z",
+      "updatedAt": "2026-06-13T19:56:14.775Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -222,7 +222,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T18:12:50.453Z",
+      "updatedAt": "2026-06-13T19:56:14.775Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -281,6 +281,77 @@
           "goalsAgainst": 4,
           "cleanSheet": 0,
           "savePct": 42.9,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 5,
+      "espnEventId": "760420",
+      "date": "2026-06-13",
+      "homeTeam": "Qatar",
+      "awayTeam": "Switzerland",
+      "source": "ESPN",
+      "updatedAt": "2026-06-13T19:56:14.775Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 6
+        },
+        "shots": {
+          "home": 4,
+          "away": 13
+        },
+        "possession": {
+          "home": 25.3,
+          "away": 74.7
+        },
+        "passes": {
+          "home": 98,
+          "away": 290
+        },
+        "fouls": {
+          "home": 6,
+          "away": 8
+        },
+        "corners": {
+          "home": 3,
+          "away": 4
+        },
+        "saves": {
+          "home": 5,
+          "away": 2
+        },
+        "offsides": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Qatar",
+          "name": "Mahmoud Abunada",
+          "shortName": "M. Abunada",
+          "number": "1",
+          "saves": 5,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 83.3,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Switzerland",
+          "name": "Gregor Kobel",
+          "shortName": "G. Kobel",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
