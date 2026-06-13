@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T21:22:37.894Z",
+  "updated": "2026-06-13T22:38:30.526Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T21:22:37.894Z",
+      "updatedAt": "2026-06-13T22:38:30.526Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T21:22:37.894Z",
+      "updatedAt": "2026-06-13T22:38:30.526Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T21:22:37.894Z",
+      "updatedAt": "2026-06-13T22:38:30.526Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -222,7 +222,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T21:22:37.894Z",
+      "updatedAt": "2026-06-13T22:38:30.526Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -293,22 +293,22 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T21:22:37.894Z",
+      "updatedAt": "2026-06-13T22:38:30.526Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 4,
+          "home": 3,
           "away": 7
         },
         "shots": {
-          "home": 7,
+          "home": 6,
           "away": 26
         },
         "possession": {
-          "home": 31.8,
-          "away": 68.2
+          "home": 32,
+          "away": 68
         },
         "passes": {
-          "home": 277,
+          "home": 279,
           "away": 578
         },
         "fouls": {
@@ -354,6 +354,77 @@
           "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 6,
+      "espnEventId": "760419",
+      "date": "2026-06-13",
+      "homeTeam": "Brazil",
+      "awayTeam": "Morocco",
+      "source": "ESPN",
+      "updatedAt": "2026-06-13T22:38:30.526Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 2
+        },
+        "shots": {
+          "home": 4,
+          "away": 12
+        },
+        "possession": {
+          "home": 52.4,
+          "away": 47.6
+        },
+        "passes": {
+          "home": 173,
+          "away": 157
+        },
+        "fouls": {
+          "home": 5,
+          "away": 5
+        },
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "saves": {
+          "home": 1,
+          "away": 0
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Brazil",
+          "name": "Alisson Becker",
+          "shortName": "A. Becker",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Morocco",
+          "name": "Yassine Bounou",
+          "shortName": "Y. Bounou",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
