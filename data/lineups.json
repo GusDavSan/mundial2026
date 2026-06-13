@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T14:22:44.611Z",
+  "updated": "2026-06-13T15:54:19.450Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T14:22:44.611Z",
+      "updatedAt": "2026-06-13T15:54:19.450Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -558,7 +558,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T14:22:44.611Z",
+      "updatedAt": "2026-06-13T15:54:19.450Z",
       "home": {
         "team": "South Korea",
         "espnTeam": "South Korea",
@@ -1107,7 +1107,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T14:22:44.611Z",
+      "updatedAt": "2026-06-13T15:54:19.450Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -1656,7 +1656,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T14:22:44.611Z",
+      "updatedAt": "2026-06-13T15:54:19.450Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
