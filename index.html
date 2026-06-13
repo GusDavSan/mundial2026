@@ -62,8 +62,6 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .my-team-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
 .my-team-select{background:var(--bg2);border:1px solid var(--border2);border-radius:8px;color:var(--text);padding:8px 10px;font-family:var(--sans);font-size:13px;outline:none;max-width:220px}
 .my-team-select:focus{border-color:var(--gold)}
-.my-team-mini{margin-left:7px;font-size:9px;color:var(--gold);border:1px solid var(--border);border-radius:10px;padding:1px 5px;vertical-align:middle;white-space:nowrap}
-.mc.my-team-match{border-color:rgba(201,162,39,.74);box-shadow:0 0 0 1px rgba(201,162,39,.08),0 12px 28px rgba(201,162,39,.04)}
 /* ROUND TABS */
 .round-tabs{display:flex;gap:7px;flex-wrap:wrap;overflow-x:visible;padding-bottom:10px;margin-bottom:14px;scrollbar-width:none}
 .round-tabs::-webkit-scrollbar{display:none}
@@ -304,6 +302,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .event-row:first-of-type{border-top:none}
 .event-minute{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gold);text-align:right}
 .event-icon{font-size:18px;line-height:1}
+.event-icon.pk{display:inline-flex;align-items:center;justify-content:center;width:22px;height:18px;border:1px solid rgba(201,162,39,.45);border-radius:5px;background:rgba(201,162,39,.08);color:var(--gold);font-family:var(--mono);font-size:10px;font-weight:900;letter-spacing:.3px}
 .event-title{font-size:14px;font-weight:650;color:var(--text);line-height:1.25}
 .event-meta{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
 .event-empty{padding:12px;color:var(--muted);font-size:13px;text-align:center}
@@ -504,6 +503,7 @@ body{font-size:16px}
   </div>
   <nav class="tabs">
     <div class="tab active" onclick="switchTab('live')">⚽ <span data-i18n="tabLive">En Vivo</span></div>
+    <div class="tab" onclick="switchTab('miseleccion')">⭐ <span data-i18n="tabMySelection">Mi Selección</span></div>
     <div class="tab" onclick="switchTab('cal')">📅 <span data-i18n="tabCalendar">Calendario</span></div>
     <div class="tab" onclick="switchTab('quiniela')">🎯 <span data-i18n="tabPool">Quiniela</span></div>
     <div class="tab" onclick="switchTab('goles')">📊 <span data-i18n="tabStats">Goleadores</span></div>
@@ -512,7 +512,6 @@ body{font-size:16px}
 </header>
 
 <main class="content">
-  <section id="myTeamBar" class="my-team-bar"></section>
   <div id="tab-live">
     <div class="ref-bar"><span class="ref-txt" id="refTxt" data-i18n="loadingShort">Cargando...</span><button class="ref-btn" onclick="loadLive()">↻ <span data-i18n="refresh">Actualizar</span></button></div>
     <div id="liveContent">
@@ -530,6 +529,10 @@ body{font-size:16px}
         </div>
       </div>
     </div>
+  </div>
+  <div id="tab-miseleccion" style="display:none">
+    <section id="myTeamBar" class="my-team-bar"></section>
+    <div id="myTeamContent"></div>
   </div>
   <div id="tab-cal" style="display:none">
     <div class="round-tabs" id="roundTabs"></div>
@@ -605,7 +608,7 @@ function storageRemove(key){
 let lang=storageGet('mw26_lang','es');
 const I18N={
   es:{
-    langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Goleadores',tabTeams:'Equipos',
+    langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabMySelection:'Mi Selección',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Goleadores',tabTeams:'Equipos',
     loadingShort:'Cargando...',loadingMatches:'Buscando partidos...',loadingStats:'Cargando estadísticas...',refresh:'Actualizar',
     liveStatus:'EN JUEGO',finishedShort:'FIN',upcoming:'PRÓXIMO',group:'Grupo',spainTime:'España',
     updatedNext:'Actualizado · siguiente en {s}s',today:'HOY',todayMatches:'PARTIDOS HOY',liveNow:'EN JUEGO',todayUpcoming:'HOY — PRÓXIMOS',finished:'FINALIZADOS',nextMatches:'PRÓXIMOS PARTIDOS',
@@ -621,7 +624,7 @@ const I18N={
     keeperTentative:'Portero probable · confirmar alineación',keeperConfirmed:'Portero confirmado',keeperFallback:'Portero por confirmar',teamCleanSheet:'Portería a cero de la selección',
     keeperEstimated:'Ranking estimado',keeperSaves:'Paradas',keeperSavePct:'% paradas',keeperGoalsAgainst:'GC',keeperCleanSheets:'P0',keeperPenaltySaves:'Pen.',
     matchStats:'ESTADÍSTICAS',timeline:'TIMELINE',timelineGoals:'GOLES',timelineCards:'TARJETAS',timelineSubs:'CAMBIOS',timelineOther:'OTROS',
-    goalEvent:'Gol',penaltyGoal:'Penalti',penaltyEvent:'Penalti',penaltyFor:'A favor de',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
+    goalEvent:'Gol',penaltyGoal:'Penalti',penaltyEvent:'Penalti',penalties:'Penaltis',penaltyFor:'A favor de',noMinute:'s/min',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
     noEventsInBlock:'Sin eventos en este bloque.',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
     starters:'Titulares',bench:'Banquillo',formation:'Formación',lineupsSource:'Fuente',
     shots:'Tiros',shotsOnGoal:'Tiros a puerta',possession:'Posesión',passes:'Pases',fouls:'Faltas',yellowCards:'Tarjetas amarillas',redCards:'Tarjetas rojas',corners:'Córners',
@@ -637,6 +640,7 @@ const I18N={
     liveInsightPending:'Datos en vivo pendientes',
     mySelection:'Mi Selección',mySelectionShort:'Mi selección',chooseSelection:'Elegir selección',mySelectionHint:'Elige una selección para tener su calendario, grupo y previa siempre a mano.',
     selectTeam:'Selecciona equipo',nextMatch:'Próximo partido',noNextMatch:'Sin próximos partidos',viewCalendar:'Ver calendario',viewTeam:'Ver equipo',clearSelection:'Quitar',
+    mySelectionSchedule:'Calendario de mi selección',mySelectionStandings:'Clasificación del grupo',chooseSelectionEmpty:'Elige una selección para ver aquí su calendario y grupo.',
     fifaRank:'Ranking FIFA',rankingSource:'FIFA 11 jun 2026',ptsShort:'Pts',gdShort:'DG',
     matchPreview:'Previa',recentForm:'Forma reciente',h2h:'Cara a cara',favorite:'Favorito',keyData:'Claves',playerToWatch:'Jugador a seguir',playerToWatchPending:'Pendiente de ESPN',
     squadRankingSource:'ranking interno',squadConfirmedWatch:'convocado',rankedFallbackWatch:'referente del equipo',
@@ -644,7 +648,7 @@ const I18N={
     oddsImplied:'prob. implícita',rankingAdvantage:'Ventaja ranking',groupPosition:'Posición de grupo'
   },
   en:{
-    langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
+    langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabMySelection:'My Team',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
     loadingShort:'Loading...',loadingMatches:'Looking for matches...',loadingStats:'Loading stats...',refresh:'Refresh',
     liveStatus:'LIVE',finishedShort:'FT',upcoming:'UPCOMING',group:'Group',spainTime:'Spain',
     updatedNext:'Updated · next in {s}s',today:'TODAY',todayMatches:'MATCHES TODAY',liveNow:'LIVE NOW',todayUpcoming:'TODAY — UPCOMING',finished:'FINISHED',nextMatches:'UPCOMING MATCHES',
@@ -660,7 +664,7 @@ const I18N={
     keeperTentative:'Likely goalkeeper · confirm lineup',keeperConfirmed:'Confirmed goalkeeper',keeperFallback:'Goalkeeper to confirm',teamCleanSheet:'Team clean sheet',
     keeperEstimated:'Estimated ranking',keeperSaves:'Saves',keeperSavePct:'Save %',keeperGoalsAgainst:'GA',keeperCleanSheets:'CS',keeperPenaltySaves:'Pen.',
     matchStats:'STATS',timeline:'TIMELINE',timelineGoals:'GOALS',timelineCards:'CARDS',timelineSubs:'SUBSTITUTIONS',timelineOther:'OTHER',
-    goalEvent:'Goal',penaltyGoal:'Penalty',penaltyEvent:'Penalty',penaltyFor:'For',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
+    goalEvent:'Goal',penaltyGoal:'Penalty',penaltyEvent:'Penalty',penalties:'Penalties',penaltyFor:'For',noMinute:'no min',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
     noEventsInBlock:'No events in this block.',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
     starters:'Starters',bench:'Bench',formation:'Formation',lineupsSource:'Source',
     shots:'Shots',shotsOnGoal:'Shots on goal',possession:'Possession',passes:'Passes',fouls:'Fouls',yellowCards:'Yellow cards',redCards:'Red cards',corners:'Corners',
@@ -676,6 +680,7 @@ const I18N={
     liveInsightPending:'Live data pending',
     mySelection:'My Team',mySelectionShort:'My team',chooseSelection:'Choose team',mySelectionHint:'Choose a team to keep its schedule, group and match previews close.',
     selectTeam:'Select team',nextMatch:'Next match',noNextMatch:'No upcoming matches',viewCalendar:'View schedule',viewTeam:'View team',clearSelection:'Clear',
+    mySelectionSchedule:'My team schedule',mySelectionStandings:'Group standings',chooseSelectionEmpty:'Choose a team to see its schedule and group here.',
     fifaRank:'FIFA Ranking',rankingSource:'FIFA 11 Jun 2026',ptsShort:'Pts',gdShort:'GD',
     matchPreview:'Preview',recentForm:'Recent form',h2h:'Head to head',favorite:'Favorite',keyData:'Key notes',playerToWatch:'Player to watch',playerToWatchPending:'Pending ESPN data',
     squadRankingSource:'internal ranking',squadConfirmedWatch:'in squad',rankedFallbackWatch:'team reference',
@@ -703,7 +708,7 @@ function renderCalendarThirdInfo(){
 }
 function rerenderActiveTab(){
   applyLang();
-  if(typeof renderMyTeamBar==='function')renderMyTeamBar();
+  if(typeof renderMyTeamPage==='function')renderMyTeamPage();
   if(typeof buildRoundTabs==='function'&&document.getElementById('roundTabs'))buildRoundTabs();
   if(typeof activeTab==='undefined')return;
   if(activeTab==='cal'&&calLoaded)renderCal();
@@ -1002,21 +1007,17 @@ function myTeamOptions(){
 function setMyTeam(team){
   myTeam=normName(team||'');
   if(myTeam)storageSet(MY_TEAM_KEY,myTeam);else storageRemove(MY_TEAM_KEY);
-  if(calRound==='mine'&&!myTeam)calRound='all';
-  renderMyTeamBar();
+  renderMyTeamPage();
   if(typeof buildRoundTabs==='function'&&document.getElementById('roundTabs'))buildRoundTabs();
   if(typeof activeTab!=='undefined'){
     if(activeTab==='cal'&&calLoaded)renderCal();
-    if(activeTab==='live')loadLive();
   }
 }
 function clearMyTeam(){setMyTeam('');}
 function openMyTeamCalendar(){
   if(!myTeam)return;
-  calRound='mine';
-  switchTab('cal');
-  if(typeof buildRoundTabs==='function')buildRoundTabs();
-  renderCal();
+  switchTab('miseleccion');
+  renderMyTeamPage();
 }
 function openMyTeamSquad(){
   if(!myTeam)return;
@@ -1050,10 +1051,29 @@ function renderMyTeamBar(){
     '<div class="my-team-main"><div class="my-team-flag">'+(FLAGS[myTeam]||flagHtml(myTeam)||'🏳️')+'</div><div style="min-width:0"><div class="my-team-kicker">'+t('mySelection')+'</div><div class="my-team-title">'+escHtml(myTeam)+'</div><div class="my-team-meta">'+chips+'</div></div></div>'+
     '<div class="my-team-actions">'+
       '<select class="my-team-select" onchange="setMyTeam(this.value)" aria-label="'+escHtml(t('chooseSelection'))+'">'+myTeamOptions()+'</select>'+
-      '<button class="btn btn-sm" onclick="openMyTeamCalendar()">'+t('viewCalendar')+'</button>'+
       '<button class="btn btn-sm" onclick="openMyTeamSquad()">'+t('viewTeam')+'</button>'+
       '<button class="btn btn-sm" onclick="clearMyTeam()">'+t('clearSelection')+'</button>'+
     '</div></div>';
+}
+function renderMyTeamContent(){
+  const el=document.getElementById('myTeamContent');
+  if(!el)return;
+  if(!myTeam){
+    el.innerHTML='<div class="empty"><div class="empty-icon">⭐</div><div class="empty-text">'+t('chooseSelectionEmpty')+'</div></div>';
+    return;
+  }
+  const fixtures=teamFixtures(myTeam);
+  const matchesHtml=buildMatchesHtml(fixtures);
+  const g=teamGroup(myTeam);
+  const standingsHtml=g?renderGroupStandingsCard(g):'';
+  el.innerHTML='<div class="cal-split">'+
+    '<div class="cal-matches-col"><div class="sec-hdr"><span class="sec-ttl">'+t('mySelectionSchedule')+'</span><span class="sec-cnt">'+fixtures.length+'</span></div>'+matchesHtml+'</div>'+
+    '<div class="cal-standings-col"><div class="sec-hdr"><span class="sec-ttl">'+t('mySelectionStandings')+'</span></div>'+standingsHtml+'</div>'+
+    '</div>';
+}
+function renderMyTeamPage(){
+  renderMyTeamBar();
+  renderMyTeamContent();
 }
 
 // ══════════════════════════════════════════════
@@ -1163,7 +1183,6 @@ function matchCard(m,overrides={}){
   const es=toES(om.date,om.time);
   const live=isLive(om.status);
   const fin=isFin(om.status);
-  const mine=isMyTeamFixture(om);
   const hasScore=om.homeScore!==null&&om.homeScore!==undefined&&om.homeScore!=='';
   const hBadge=om.strHomeTeamBadge?`<img class="t-flag" src="${om.strHomeTeamBadge}/tiny" onerror="this.style.display='none'" alt="">`:
     (om.homeFlag?`<span style="font-size:20px;flex-shrink:0">${om.homeFlag}</span>`:`<span style="font-size:20px;flex-shrink:0">🏳️</span>`);
@@ -1173,7 +1192,7 @@ function matchCard(m,overrides={}){
     fin?`<span class="mc-status s-fin">${t('finishedShort')}</span>`:
     `<span class="mc-status s-up">${t('upcoming')}</span>`;
   const rndLbl=(om.group||'').startsWith('Group')?`${t('group')} ${(om.group||'').slice(-1)}`:(om.group||'');
-  const rndHtml=escHtml(rndLbl)+(mine?'<span class="my-team-mini">★ '+t('mySelectionShort')+'</span>':'');
+  const rndHtml=escHtml(rndLbl);
   const scoreHtml=(live||fin)&&hasScore?
     `<div class="score${live?' live':''}">${om.homeScore}&nbsp;–&nbsp;${om.awayScore}</div>${live&&om.progress?`<div class="mc-minute">${om.progress}'</div>`:''}`
     :`<div class="vs">VS</div>`;
@@ -1182,7 +1201,7 @@ function matchCard(m,overrides={}){
     <div class="es-time"><span class="es-val">${es.time}</span><span class="es-lbl">🇪🇸 ${t('spainTime')}</span></div>
     <div style="text-align:right"><div class="utc-val">${om.time} UTC</div><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>
   </div>`:`<div class="mc-time" style="justify-content:flex-end"><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>`;
-  return`<div class="mc${live?' live':''}${mine?' my-team-match':''}" onclick="openDetail(${om.id||0},'${om.date}','${om.home}','${om.away}')">
+  return`<div class="mc${live?' live':''}" onclick="openDetail(${om.id||0},'${om.date}','${om.home}','${om.away}')">
     <div class="mc-meta"><span class="mc-round">${rndHtml}</span>${statusHtml}</div>
     <div class="mc-body">
       <div class="t-side">${hBadge}<span class="t-name">${om.home||'Por definir'}</span></div>
@@ -1411,7 +1430,7 @@ async function loadCal(){
     });
   }catch{}
   renderCal();
-  renderMyTeamBar();
+  renderMyTeamPage();
 }
 async function calStandRefresh(){
   try{
@@ -1423,11 +1442,11 @@ async function calStandRefresh(){
     });
   }catch{}
   renderCal();
-  renderMyTeamBar();
+  renderMyTeamPage();
 }
 function buildRoundTabs(){
-  const rounds=['all'].concat(myTeam?['mine']:[],['Group A','Group B','Group C','Group D','Group E','Group F','Group G','Group H','Group I','Group J','Group K','Group L','M3','Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL']);
-  const labels={all:t('all'),mine:'★ '+t('mySelectionShort'),M3:t('bestThirdShort'),'Ronda de 32':lang==='es'?'Dieciseisavos':'Round of 32','Octavos':lang==='es'?'Octavos':'R16','Cuartos':lang==='es'?'Cuartos':'QF','Semifinal':lang==='es'?'Semi':'SF','Tercer Puesto':t('thirdPlace'),'FINAL':t('final')};
+  const rounds=['all','Group A','Group B','Group C','Group D','Group E','Group F','Group G','Group H','Group I','Group J','Group K','Group L','M3','Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL'];
+  const labels={all:t('all'),M3:t('bestThirdShort'),'Ronda de 32':lang==='es'?'Dieciseisavos':'Round of 32','Octavos':lang==='es'?'Octavos':'R16','Cuartos':lang==='es'?'Cuartos':'QF','Semifinal':lang==='es'?'Semi':'SF','Tercer Puesto':t('thirdPlace'),'FINAL':t('final')};
   document.getElementById('roundTabs').innerHTML=rounds.map(r=>{
     const lbl=labels[r]||(r.startsWith('Group')?(lang==='es'?'Grp ':'Group ')+r.slice(-1):r);
     return'<div class="rtab'+(calRound===r?' active':'')+'" onclick="setCalRound(this.dataset.r)" data-r="'+r+'">' +lbl+'</div>';
@@ -1524,8 +1543,7 @@ function renderCal(){
   const el=document.getElementById('calContent');
   // Special: Mejor Tercero view
   if(calRound==='M3'){renderCalMejorTercero();return;}
-  if(calRound==='mine'&&!myTeam)calRound='all';
-  const fx=calRound==='all'?FIXTURES:(calRound==='mine'?teamFixtures(myTeam):FIXTURES.filter(f=>f.group===calRound));
+  const fx=calRound==='all'?FIXTURES:FIXTURES.filter(f=>f.group===calRound);
   const matchesHtml=buildMatchesHtml(fx);
   // Group tab: split view (matches left, standings right)
   if(calRound.startsWith('Group')){
@@ -2648,10 +2666,16 @@ function timelineLabel(ev){
 function timelineIcon(kind){
   return kind==='goal'?'⚽':kind==='penalty'?'PK':kind==='yellow'?'🟨':kind==='red'?'🟥':kind==='substitution'?'🔄':kind==='var'?'📺':'•';
 }
+function cleanEventPlayerName(name){
+  let txt=String(name||'').trim();
+  const conceded=txt.match(/penalty\s+conceded\s+by\s+(.+)/i)||txt.match(/penalti\s+cometido\s+por\s+(.+)/i);
+  if(conceded)txt=conceded[1].trim();
+  return txt.replace(/\s+following\b.*$/i,'').replace(/\s+with\b.*$/i,'').trim();
+}
 function eventPlayer(ev){
   const vals=[ev.strPlayer,ev.strPlayer1,ev.strPlayer2,ev.strTimelinePlayer];
   for(const v of vals){
-    const name=String(v||'').trim();
+    const name=cleanEventPlayerName(v);
     if(name&&!['goal','card','yellow card','red card','substitution'].includes(stripText(name)))return name;
   }
   return '';
@@ -2665,10 +2689,23 @@ function eventAssist(ev){
   }
   return '';
 }
+function isPenaltyConceded(ev){
+  const tx=eventText(ev);
+  return tx.includes('penalty conceded')||tx.includes('conceded by')||tx.includes('penalti cometido');
+}
 function teamSide(team,home,away){
   if(sameTeam(team,home))return 'home';
   if(sameTeam(team,away))return 'away';
   return null;
+}
+function eventBeneficiaryTeam(ev,home,away){
+  if(timelineKind(ev)!=='penalty')return ev.strTeam||'';
+  const team=ev.strTeam||'';
+  if(!isPenaltyConceded(ev)||!home||!away)return team;
+  const side=teamSide(team,home,away);
+  if(side==='home')return away;
+  if(side==='away')return home;
+  return team;
 }
 function eventCommentKey(ev){
   return stripText(ev.strComment||ev.strEvent||ev.strTimelineDetail||'')
@@ -2698,6 +2735,11 @@ function sameTimelineEvent(a,b){
   const ca=eventCommentKey(a),cb=eventCommentKey(b);
   const ma=minuteScore(eventMinute(a)),mb=minuteScore(eventMinute(b));
   if(ma>=0&&mb>=0&&Math.abs(ma-mb)>0)return false;
+  if(ka==='penalty'){
+    if(ta&&tb&&ta===tb)return true;
+    if(pa&&pb&&(pa===pb||pa.includes(pb)||pb.includes(pa)))return true;
+  }
+  if((ka==='yellow'||ka==='red')&&pa&&pb&&pa===pb&&(!ta||!tb||ta===tb))return true;
   const sameComment=!ca||!cb||ca===cb||ca.includes(cb)||cb.includes(ca);
   if(pa&&pb&&pa===pb&&ta&&tb&&ta===tb&&sameComment)return true;
   if(pa&&pb&&pa===pb&&(!ta||!tb)&&sameComment)return true;
@@ -2725,8 +2767,8 @@ function dedupeTimelineEvents(timeline){
   });
   return out.sort(function(a,b){
     const ma=minuteScore(eventMinute(a)),mb=minuteScore(eventMinute(b));
-    if(ma<0&&mb>=0)return -1;
-    if(ma>=0&&mb<0)return 1;
+    if(ma<0&&mb>=0)return 1;
+    if(ma>=0&&mb<0)return -1;
     return ma-mb;
   });
 }
@@ -2740,29 +2782,33 @@ function timelineCounts(timeline,home,away){
   });
   return counts;
 }
-function renderTimelineBlock(title,events){
+function renderTimelineBlock(title,events,home,away){
   let html='<div class="event-block"><div class="event-block-hdr"><span class="event-block-title">'+title+'</span><span class="event-count">'+events.length+'</span></div>';
   if(!events.length)return html+'<div class="event-empty">'+t('noEventsInBlock')+'</div></div>';
   events.forEach(function(ev){
     const kind=timelineKind(ev);
     const player=eventPlayer(ev)||timelineLabel(ev);
-    const minute=eventMinute(ev)||'•';
+    const minute=eventMinute(ev)||t('noMinute');
     const assist=eventAssist(ev);
     const teamFlag=FLAGS[normName(ev.strTeam)]||FLAGS[ev.strTeam]||'🏳️';
     let meta='';
     if(kind==='yellow'||kind==='red')meta='<span style="font-size:15px">'+teamFlag+'</span>';
-    else if(kind==='penalty')meta=ev.strTeam?escHtml(t('penaltyFor'))+' · '+teamFlag+' '+escHtml(normName(ev.strTeam)):escHtml(timelineLabel(ev));
+    else if(kind==='penalty'){
+      const beneficiary=eventBeneficiaryTeam(ev,home,away);
+      const beneficiaryFlag=FLAGS[normName(beneficiary)]||FLAGS[beneficiary]||'🏳️';
+      meta=beneficiary?escHtml(t('penaltyFor'))+' · '+beneficiaryFlag+' '+escHtml(normName(beneficiary)):escHtml(timelineLabel(ev));
+    }
     else meta=escHtml(timelineLabel(ev))+(ev.strTeam?' · '+teamFlag+' '+escHtml(normName(ev.strTeam)):'')+(assist?' · '+escHtml(t('assistLabel'))+': '+escHtml(assist):'');
     html+='<div class="event-row">'+
       '<div class="event-minute">'+escHtml(minute)+'</div>'+
-      '<div class="event-icon">'+timelineIcon(kind)+'</div>'+
+      '<div class="event-icon'+(kind==='penalty'?' pk':'')+'">'+timelineIcon(kind)+'</div>'+
       '<div><div class="event-title">'+escHtml(player)+'</div>'+
       '<div class="event-meta">'+meta+'</div></div>'+
       '</div>';
   });
   return html+'</div>';
 }
-function renderSplitTimeline(timeline){
+function renderSplitTimeline(timeline,home,away){
   const groups={goals:[],penalties:[],cards:[],subs:[],other:[]};
   dedupeTimelineEvents(timeline).forEach(function(ev){
     const kind=timelineKind(ev);
@@ -2773,11 +2819,11 @@ function renderSplitTimeline(timeline){
     else groups.other.push(ev);
   });
   let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('timeline')+'</div><div class="event-groups">';
-  html+=renderTimelineBlock('⚽ '+t('timelineGoals'),groups.goals);
-  if(groups.penalties.length)html+=renderTimelineBlock('PK '+t('penaltyEvent'),groups.penalties);
-  html+=renderTimelineBlock('🟨 '+t('timelineCards'),groups.cards);
-  if(groups.subs.length)html+=renderTimelineBlock('🔄 '+t('timelineSubs'),groups.subs);
-  if(groups.other.length)html+=renderTimelineBlock(t('timelineOther'),groups.other);
+  html+=renderTimelineBlock('⚽ '+t('timelineGoals'),groups.goals,home,away);
+  if(groups.penalties.length)html+=renderTimelineBlock(t('penalties'),groups.penalties,home,away);
+  html+=renderTimelineBlock('🟨 '+t('timelineCards'),groups.cards,home,away);
+  if(groups.subs.length)html+=renderTimelineBlock('🔄 '+t('timelineSubs'),groups.subs,home,away);
+  if(groups.other.length)html+=renderTimelineBlock(t('timelineOther'),groups.other,home,away);
   return html+'</div></div>';
 }
 function statNum(row,side){
@@ -3597,7 +3643,7 @@ async function renderEspnOnlyDetail(fx,espnLive){
   html+=renderHighlightsSection(hls);
   const liveTimeline=espnLive.timeline||[];
   const statsHtml=renderMatchStats([],ev,liveTimeline,espnLive.stats);
-  const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline):'';
+  const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline,fx.home,fx.away):'';
   const lineupHtml=renderLineupsSection(espnLive.lineup,fx.home,fx.away);
   const pendingHtml=pendingMainHtml(!!statsHtml,!!timelineHtml,state);
   html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+pendingHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
@@ -3721,7 +3767,7 @@ async function openDetail(eid,date,home,away){
     const espnMatchStats=(espnLive&&espnLive.stats)||espnStoredStats;
     const liveTimeline=(espnLive&&espnLive.timeline&&espnLive.timeline.length)?espnLive.timeline:tl;
     const statsHtml=renderMatchStats(stats,ev,liveTimeline,espnMatchStats);
-    const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline):'';
+    const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline,ev.strHomeTeam,ev.strAwayTeam):'';
     const storedLineup=await loadStoredLineups(eventId,ev);
     const lineupHtml=renderLineupsSection((espnLive&&espnLive.lineup)||storedLineup||((luD.value&&luD.value.lineup)||[]),ev.strHomeTeam,ev.strAwayTeam);
     const detailState=espnState||(live2?'in':fin?'post':'pre');
@@ -3751,12 +3797,13 @@ function switchTab(tab){
   clearInterval(liveTimer);
   activeTab=tab;
   document.querySelectorAll('.tab').forEach((t,i)=>{
-    t.classList.toggle('active',['live','cal','quiniela','goles','equipos'][i]===tab);
+    t.classList.toggle('active',['live','miseleccion','cal','quiniela','goles','equipos'][i]===tab);
   });
-  ['live','cal','quiniela','goles','equipos'].forEach(id=>{
+  ['live','miseleccion','cal','quiniela','goles','equipos'].forEach(id=>{
     document.getElementById('tab-'+id).style.display=id===tab?'block':'none';
   });
   if(tab==='live')loadLive();
+  if(tab==='miseleccion')renderMyTeamPage();
   if(tab==='cal'&&!calLoaded){loadCal();calLoaded=true;}
   if(tab==='cal'&&calLoaded)renderCal();
   if(tab==='quiniela')renderQGroups();
@@ -3766,7 +3813,7 @@ function switchTab(tab){
 
 // INIT
 applyLang();
-renderMyTeamBar();
+renderMyTeamPage();
 loadLive();
 setTimeout(()=>{loadCal();calLoaded=true;},2000);
 </script>
