@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T22:11:48.033Z",
+  "updated": "2026-06-13T03:45:38.319Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -34,11 +34,24 @@
       "home": "Canada",
       "away": "Bosnia & Herzegovina",
       "source": "DAZN ES",
-      "title": "¡CÁNTALO, CYLE! 🔥 ¡El golazo que canta todo Canadá! Larin para empatar contra Bosnia 🇨🇦 #DAZNMundial",
-      "url": "https://www.youtube.com/watch?v=DGZcNCYPM9U",
-      "thumbnail": "https://i.ytimg.com/vi/DGZcNCYPM9U/hqdefault.jpg",
-      "videoId": "DGZcNCYPM9U",
-      "publishedAt": "2026-06-12T20:55:00Z",
+      "title": "Canadá vs Bosnia y Herzegovina (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=wVK5fDnqdyY",
+      "thumbnail": "https://i.ytimg.com/vi/wVK5fDnqdyY/hqdefault.jpg",
+      "videoId": "wVK5fDnqdyY",
+      "publishedAt": "2026-06-12T23:00:09Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 4,
+      "date": "2026-06-13",
+      "home": "United States",
+      "away": "Paraguay",
+      "source": "DAZN ES",
+      "title": "LA JUGADA INSÓLITA DEL ESTADOS UNIDOS 🆚 PARAGUAY 😳#DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=V_IH4iMxrJE",
+      "thumbnail": "https://i.ytimg.com/vi/V_IH4iMxrJE/hqdefault.jpg",
+      "videoId": "V_IH4iMxrJE",
+      "publishedAt": "2026-06-13T02:29:59Z",
       "confidence": 16
     }
   ]
