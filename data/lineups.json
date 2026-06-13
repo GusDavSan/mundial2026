@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T22:34:26.869Z",
+  "updated": "2026-06-13T23:44:43.945Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:34:26.869Z",
+      "updatedAt": "2026-06-13T23:44:43.945Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -558,7 +558,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:34:26.869Z",
+      "updatedAt": "2026-06-13T23:44:43.945Z",
       "home": {
         "team": "South Korea",
         "espnTeam": "South Korea",
@@ -1107,7 +1107,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:34:26.869Z",
+      "updatedAt": "2026-06-13T23:44:43.945Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -1656,7 +1656,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:34:26.869Z",
+      "updatedAt": "2026-06-13T23:44:43.945Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -2205,7 +2205,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:34:26.869Z",
+      "updatedAt": "2026-06-13T23:44:43.945Z",
       "home": {
         "team": "Qatar",
         "espnTeam": "Qatar",
@@ -2754,7 +2754,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:34:26.869Z",
+      "updatedAt": "2026-06-13T23:44:43.945Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -2809,7 +2809,7 @@
             "position": "Right Back",
             "formationPlace": "2",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Raphinha",
@@ -2839,7 +2839,7 @@
             "position": "Right Midfielder",
             "formationPlace": "8",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Igor Thiago",
@@ -2849,7 +2849,7 @@
             "position": "Forward",
             "formationPlace": "9",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Vinícius Júnior",
@@ -2869,7 +2869,7 @@
             "position": "Attacking Midfielder Right",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -2880,7 +2880,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -2920,7 +2920,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -2940,7 +2940,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -2960,7 +2960,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -3059,7 +3059,7 @@
             "position": "Left Back",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Achraf Hakimi",
@@ -3079,12 +3079,12 @@
             "position": "Attacking Midfielder",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
-            "name": "Neil El Aynaoui",
-            "shortName": "N. El Aynaoui",
-            "num": "24",
+            "name": "Ayyoub Bouaddi",
+            "shortName": "A. Bouaddi",
+            "num": "6",
             "pos": "LM",
             "position": "Left Midfielder",
             "formationPlace": "4",
@@ -3092,9 +3092,9 @@
             "subbedOut": false
           },
           {
-            "name": "Ayyoub Bouaddi",
-            "shortName": "A. Bouaddi",
-            "num": "6",
+            "name": "Neil El Aynaoui",
+            "shortName": "N. El Aynaoui",
+            "num": "24",
             "pos": "RM",
             "position": "Right Midfielder",
             "formationPlace": "8",
@@ -3119,7 +3119,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Brahim Díaz",
@@ -3129,7 +3129,7 @@
             "position": "Attacking Midfielder Right",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -3160,7 +3160,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -3180,7 +3180,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -3200,7 +3200,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -3210,7 +3210,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
