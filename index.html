@@ -638,6 +638,7 @@ const I18N={
     selectTeam:'Selecciona equipo',nextMatch:'Próximo partido',noNextMatch:'Sin próximos partidos',viewCalendar:'Ver calendario',viewTeam:'Ver equipo',clearSelection:'Quitar',
     fifaRank:'Ranking FIFA',rankingSource:'FIFA 11 jun 2026',ptsShort:'Pts',gdShort:'DG',
     matchPreview:'Previa',recentForm:'Forma reciente',h2h:'Cara a cara',favorite:'Favorito',keyData:'Claves',playerToWatch:'Jugador a seguir',playerToWatchPending:'Pendiente de ESPN',
+    squadRankingSource:'ranking interno',squadConfirmedWatch:'convocado',rankedFallbackWatch:'referente del equipo',
     noPreviewData:'ESPN aún no ha publicado forma, cuotas o cara a cara suficiente.',formUnavailable:'Forma no disponible',noH2H:'Sin enfrentamientos recientes',marketUnavailable:'Favorito no disponible',
     oddsImplied:'prob. implícita',rankingAdvantage:'Ventaja ranking',groupPosition:'Posición de grupo'
   },
@@ -675,6 +676,7 @@ const I18N={
     selectTeam:'Select team',nextMatch:'Next match',noNextMatch:'No upcoming matches',viewCalendar:'View schedule',viewTeam:'View team',clearSelection:'Clear',
     fifaRank:'FIFA Ranking',rankingSource:'FIFA 11 Jun 2026',ptsShort:'Pts',gdShort:'GD',
     matchPreview:'Preview',recentForm:'Recent form',h2h:'Head to head',favorite:'Favorite',keyData:'Key notes',playerToWatch:'Player to watch',playerToWatchPending:'Pending ESPN data',
+    squadRankingSource:'internal ranking',squadConfirmedWatch:'in squad',rankedFallbackWatch:'team reference',
     noPreviewData:'ESPN has not published enough form, odds or head-to-head data yet.',formUnavailable:'Form unavailable',noH2H:'No recent meetings',marketUnavailable:'Favorite unavailable',
     oddsImplied:'implied prob.',rankingAdvantage:'Ranking edge',groupPosition:'Group position'
   }
@@ -2483,6 +2485,56 @@ const SQUAD_KEY_BY_TEAM={
   'Uruguay':'Uruguay','Colombia':'Colombia','Mexico':'México','Japan':'Japón','Morocco':'Marruecos',
   'South Korea':'Corea del Sur','Ecuador':'Ecuador','Senegal':'Senegal','Norway':'Noruega','Croatia':'Croacia'
 };
+const TEAM_WATCH_RANKING={
+  'Mexico':['Santiago Giménez','Edson Álvarez','Raúl Jiménez','Hirving Lozano','Julián Quiñones'],
+  'South Africa':['Teboho Mokoena','Ronwen Williams','Percy Tau'],
+  'South Korea':['Son Heung-min','Kim Min-jae','Lee Kang-in','Hwang Hee-chan'],
+  'Czechia':['Patrik Schick','Tomáš Souček','Vladimír Coufal'],
+  'Canada':['Alphonso Davies','Jonathan David','Tajon Buchanan'],
+  'Bosnia & Herzegovina':['Edin Džeko','Miralem Pjanić','Sead Kolašinac'],
+  'Qatar':['Akram Afif','Almoez Ali','Hassan Al-Haydos'],
+  'Switzerland':['Granit Xhaka','Manuel Akanji','Yann Sommer'],
+  'Brazil':['Vinicius Junior','Rodrygo','Neymar Jr','Raphinha','Alisson'],
+  'Morocco':['Achraf Hakimi','Brahim Díaz','Yassine Bounou','Hakim Ziyech'],
+  'Haiti':['Duckens Nazon','Frantzdy Pierrot'],
+  'Scotland':['Scott McTominay','Andy Robertson','John McGinn'],
+  'United States':['Christian Pulisic','Weston McKennie','Tyler Adams','Gio Reyna'],
+  'Paraguay':['Miguel Almirón','Julio Enciso','Ramón Sosa'],
+  'Australia':['Mathew Ryan','Harry Souttar','Jackson Irvine'],
+  'Türkiye':['Hakan Çalhanoğlu','Arda Güler','Kenan Yıldız'],
+  'Germany':['Jamal Musiala','Florian Wirtz','Joshua Kimmich','Toni Kroos'],
+  'Curaçao':['Juninho Bacuna','Kenji Gorré'],
+  'Ivory Coast':['Franck Kessié','Simon Adingra','Sébastien Haller'],
+  'Ecuador':['Moisés Caicedo','Piero Hincapié','Willian Pacho','Enner Valencia'],
+  'Netherlands':['Virgil van Dijk','Frenkie de Jong','Cody Gakpo','Xavi Simons'],
+  'Japan':['Takefusa Kubo','Kaoru Mitoma','Takehiro Tomiyasu','Wataru Endo'],
+  'Sweden':['Alexander Isak','Viktor Gyökeres','Dejan Kulusevski'],
+  'Tunisia':['Ellyes Skhiri','Hannibal Mejbri','Elias Achouri'],
+  'Belgium':['Kevin de Bruyne','Thibaut Courtois','Romelu Lukaku','Jeremy Doku'],
+  'Egypt':['Mohamed Salah','Omar Marmoush','Mohamed Elneny'],
+  'Iran':['Mehdi Taremi','Sardar Azmoun'],
+  'New Zealand':['Chris Wood','Sarpreet Singh'],
+  'Spain':['Lamine Yamal','Rodri','Pedri','Nico Williams'],
+  'Cape Verde':['Ryan Mendes','Bebé','Roberto Lopes'],
+  'Saudi Arabia':['Salem Al-Dawsari','Firas Al-Buraikan','Saud Abdulhamid'],
+  'Uruguay':['Federico Valverde','Darwin Núñez','Ronald Araújo','Luis Suárez'],
+  'France':['Kylian Mbappé','Ousmane Dembélé','Antoine Griezmann','William Saliba'],
+  'Senegal':['Sadio Mané','Kalidou Koulibaly','Nicolas Jackson','Pape Matar Sarr'],
+  'Iraq':['Aymen Hussein','Ali Jasim'],
+  'Norway':['Erling Haaland','Martin Odegaard','Alexander Sorloth'],
+  'Argentina':['Lionel Messi','Lautaro Martínez','Julián Álvarez','Emiliano Martínez'],
+  'Algeria':['Riyad Mahrez','Rayan Ait-Nouri','Amine Gouiri','Houssem Aouar'],
+  'Austria':['David Alaba','Marcel Sabitzer','Christoph Baumgartner'],
+  'Jordan':['Mousa Al-Taamari','Yazan Al-Naimat'],
+  'Portugal':['Cristiano Ronaldo','Bernardo Silva','Rafael Leão','Vitinha'],
+  'DR Congo':['Yoane Wissa','Cédric Bakambu','Chancel Mbemba'],
+  'Uzbekistan':['Eldor Shomurodov','Abbosbek Fayzullaev'],
+  'Colombia':['Luis Díaz','James Rodríguez','Jhon Arias','Daniel Muñoz'],
+  'England':['Jude Bellingham','Harry Kane','Bukayo Saka','Phil Foden'],
+  'Croatia':['Luka Modric','Josko Gvardiol','Mateo Kovacic'],
+  'Ghana':['Mohammed Kudus','Thomas Partey','Iñaki Williams'],
+  'Panama':['Adalberto Carrasquilla','Aníbal Godoy']
+};
 let localSquads=null,localSquadsLoaded=false;
 async function loadLocalSquads(){
   if(localSquadsLoaded)return localSquads;
@@ -2495,7 +2547,41 @@ async function loadLocalSquads(){
 }
 function getLocalSquad(team){
   if(!localSquads)return null;
-  return localSquads[SQUAD_KEY_BY_TEAM[team]||team]||null;
+  const wanted=SQUAD_KEY_BY_TEAM[team]||SQUAD_KEY_BY_TEAM[normName(team)]||team;
+  if(localSquads[wanted])return localSquads[wanted];
+  const wantedKey=stripText(wanted);
+  const hit=Object.keys(localSquads).find(k=>stripText(k)===wantedKey);
+  return hit?localSquads[hit]:null;
+}
+function watchRankingForTeam(team){
+  const base=typeof normName==='function'?normName(team):team;
+  return TEAM_WATCH_RANKING[team]||TEAM_WATCH_RANKING[base]||
+    TEAM_WATCH_RANKING[Object.keys(TEAM_WATCH_RANKING).find(k=>sameTeam(k,team))]||[];
+}
+function squadPlayerKey(name){
+  return stripText(name).replace(/[^a-z0-9]+/g,' ').replace(/\bjunior\b/g,'jr').trim();
+}
+function squadPlayerMatches(playerName,candidate){
+  const p=squadPlayerKey(playerName),c=squadPlayerKey(candidate);
+  if(!p||!c)return false;
+  if(p===c)return true;
+  return c.length>6&&(p.includes(c)||c.includes(p));
+}
+function rankedSquadPlayerToWatch(team){
+  const ranking=watchRankingForTeam(team);
+  if(!ranking.length)return null;
+  const squad=getLocalSquad(team);
+  if(squad&&Array.isArray(squad.players)){
+    for(const candidate of ranking){
+      const player=squad.players.find(p=>squadPlayerMatches(p.name,candidate));
+      if(player&&player.name){
+        const detail=[t('squadConfirmedWatch'),player.pos].filter(Boolean).join(' · ');
+        return {name:player.name,source:t('squadRankingSource'),detail};
+      }
+    }
+    return null;
+  }
+  return {name:ranking[0],source:t('squadRankingSource'),detail:t('rankedFallbackWatch')};
 }
 function eventText(ev){
   return stripText([
@@ -3268,13 +3354,20 @@ function pctText(v){return v===null||v===undefined?'—':Math.round(v*100)+'%';}
 function pctWidth(v){return v===null||v===undefined?0:Math.max(0,Math.min(100,Math.round(v*100)));}
 function leaderEntryName(entry){
   const athlete=entry&&entry.athlete||entry&&entry.player||entry&&entry.person||{};
-  return athlete.displayName||athlete.fullName||athlete.shortName||entry&&entry.displayName||entry&&entry.name||'';
+  return athlete.displayName||athlete.fullName||athlete.shortName||'';
 }
 function leaderEntryTeam(entry,group){
   const athlete=entry&&entry.athlete||entry&&entry.player||{};
   return entry&&entry.team&&(entry.team.displayName||entry.team.name)||athlete.team&&(athlete.team.displayName||athlete.team.name)||group&&group.team&&(group.team.displayName||group.team.name)||'';
 }
+function isValidWatchPlayerName(name){
+  const n=espnNorm(name);
+  if(!n||n.length<3)return false;
+  return !['total shots','shots','shots on goal','shots on target','goalkeeper saves','saves','fouls','yellow cards','red cards','corner kicks','corners','possession','passes','offsides','goals against','goals for','assists'].includes(n);
+}
 function espnPlayerToWatch(summary,lineup,team){
+  const ranked=rankedSquadPlayerToWatch(team);
+  if(ranked)return ranked;
   const leaders=summary&&summary.leaders;
   const buckets=Array.isArray(leaders)?leaders:Object.values(leaders||{});
   for(const group of buckets){
@@ -3283,7 +3376,7 @@ function espnPlayerToWatch(summary,lineup,team){
     for(const entry of entries){
       const name=leaderEntryName(entry);
       const entryTeam=leaderEntryTeam(entry,group);
-      if(name&&(!entryTeam||sameEspnTeam(entryTeam,team))){
+      if(isValidWatchPlayerName(name)&&(!entryTeam||sameEspnTeam(entryTeam,team))){
         return {name,source:'ESPN',detail:group.displayName||group.name||entry.displayValue||entry.value||''};
       }
     }
@@ -3328,6 +3421,7 @@ function renderMatchPreview(fx,espnLive){
 }
 async function loadEspnLiveData(fx){
   try{
+    await loadLocalSquads();
     const event=await findEspnEventForFixture(fx);
     if(!event)return null;
     const summary=await fetchJson(ESPN_BASE+'/summary?event='+encodeURIComponent(event.id),{},5000);
