@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T20:41:09.185Z",
+  "updated": "2026-06-13T22:19:25.028Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -66,6 +66,19 @@
       "videoId": "_T0DqayiI2E",
       "publishedAt": "2026-06-13T19:50:11Z",
       "confidence": 14
+    },
+    {
+      "matchId": 6,
+      "date": "2026-06-13",
+      "home": "Brazil",
+      "away": "Morocco",
+      "source": "DAZN ES",
+      "title": "A LO LUIS ENRIQUE 🧐El saque de centro de Marruecos contra Brasil #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=WLzcshQgR7I",
+      "thumbnail": "https://i.ytimg.com/vi/WLzcshQgR7I/hqdefault.jpg",
+      "videoId": "WLzcshQgR7I",
+      "publishedAt": "2026-06-13T22:15:03Z",
+      "confidence": 16
     }
   ]
 }
