@@ -78,6 +78,21 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .score.live{color:var(--live)}
 .vs{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:2px}
 .mc-minute{font-family:var(--mono);font-size:10px;color:var(--live);font-weight:600;margin-top:2px}
+.live-insight{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:grid;gap:8px}
+.live-insight-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.live-momentum-label{font-size:9px;font-weight:800;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
+.live-momentum-team{font-family:var(--disp);font-size:16px;letter-spacing:1px;color:var(--gold);line-height:1;margin-top:2px}
+.live-momentum-bar{height:5px;background:var(--bg3);border-radius:999px;display:flex;overflow:hidden;min-width:130px;flex:1;max-width:220px}
+.live-momentum-home{background:var(--gold);border-radius:999px}
+.live-momentum-away{background:var(--muted);border-radius:999px;margin-left:auto}
+.live-mini-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.live-mini-stat{background:rgba(232,237,245,.045);border:1px solid var(--border);border-radius:7px;padding:6px 5px;text-align:center;min-width:0}
+.live-mini-label{display:block;font-size:9px;font-weight:800;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.4px;text-transform:uppercase}
+.live-mini-val{display:block;font-family:var(--mono);font-size:12px;font-weight:800;color:var(--text);margin-top:2px}
+.live-last-event{display:flex;align-items:center;gap:7px;background:rgba(0,230,118,.035);border:1px solid rgba(0,230,118,.12);border-radius:8px;padding:7px 9px;font-size:11px;min-width:0}
+.live-last-tag{font-size:9px;font-weight:900;letter-spacing:1px;color:var(--muted);text-transform:uppercase;flex-shrink:0}
+.live-last-main{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text);font-weight:700;min-width:0}
+.live-last-min{font-family:var(--mono);color:var(--gold);font-weight:800;margin-left:auto;flex-shrink:0}
 /* TIME BLOCK – SIGNATURE ELEMENT */
 .mc-time{display:flex;align-items:center;justify-content:space-between;margin-top:9px;padding-top:9px;border-top:1px solid var(--border)}
 .es-time{display:flex;align-items:baseline;gap:5px}
@@ -183,6 +198,13 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .detail-panel.open{display:flex}
 .detail-inner{background:var(--bg2);border:1px solid var(--border2);border-radius:14px;width:100%;max-width:1080px;overflow:hidden}
 .d-close{position:fixed;top:22px;right:18px;background:var(--bg2);border:1px solid var(--border);border-radius:50%;width:30px;height:30px;display:none;align-items:center;justify-content:center;cursor:pointer;color:var(--text);font-size:15px;z-index:201}
+.detail-confidence{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:11px;line-height:1.4}
+.confidence-dot{width:6px;height:6px;border-radius:50%;background:var(--live);box-shadow:0 0 10px rgba(0,230,118,.35);flex-shrink:0}
+.detail-refresh-btn{background:rgba(201,162,39,.08);border:1px solid var(--border);border-radius:16px;color:var(--gold);font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.3px;padding:4px 10px;cursor:pointer;transition:background .2s,border-color .2s}
+.detail-refresh-btn:hover{background:rgba(201,162,39,.16);border-color:var(--border2)}
+.detail-refresh-btn:disabled{opacity:.5;cursor:wait}
+.pending-box{background:rgba(201,162,39,.045);border:1px solid var(--border);border-radius:8px;padding:11px 12px;color:var(--muted);font-size:12px;line-height:1.45;margin-top:10px}
+.pending-title{font-family:var(--disp);font-size:13px;letter-spacing:1.6px;color:var(--gold);margin-bottom:3px}
 /* INPUT/BUTTON */
 .search-bar{display:flex;gap:8px;margin-bottom:18px}
 .sinput{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 13px;color:var(--text);font-family:var(--sans);font-size:14px;outline:none}
@@ -311,6 +333,9 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .kit-number{top:20px;font-size:19px}
   .kit-name{max-width:64px;font-size:10px;padding:2px 5px}
   .event-row{grid-template-columns:36px 24px 1fr;padding:9px 10px}
+  .live-mini-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .live-insight-top{align-items:flex-start}
+  .live-momentum-bar{max-width:150px}
 }
 
 /* QUINIELA SCORE INPUTS */
@@ -550,6 +575,10 @@ const I18N={
     noSquad:'TheSportsDB no tiene la plantilla convocada de {team} para el Mundial 2026.',squad:'CONVOCADOS',goalkeepers:'Porteros',defenders:'Defensas',midfielders:'Medio campo',forwards:'Delanteros',manager:'Manager',others:'Otros',
     noPlayersInBlock:'Sin jugadores en esta demarcación todavía.',managerMissing:'Manager no disponible en TheSportsDB.',years:'años',error:'Error',playersLoadError:'Error cargando jugadores',
     highlights:'Highlights',watchHighlight:'Ver resumen',daznHighlights:'Resumen DAZN'
+    ,momentum:'Momentum',balancedMatch:'Partido igualado',controlsMatch:'controla el partido',lastEvent:'Último',dataSource:'Fuente',updatedAgo:'actualizado {time}',justNow:'ahora',
+    forceRefresh:'Forzar actualizar',refreshing:'Actualizando...',lineupsPending:'Alineaciones pendientes',lineupsPendingDetail:'ESPN todavía no ha publicado las alineaciones de este partido.',
+    statsPending:'Estadísticas pendientes',statsPendingDetail:'Aparecerán aquí cuando ESPN publique datos del partido.',timelinePending:'Eventos pendientes',timelinePendingDetail:'Goles, tarjetas y cambios aparecerán en cuanto ESPN los publique.',
+    liveInsightPending:'Datos en vivo pendientes'
   },
   en:{
     langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
@@ -577,6 +606,10 @@ const I18N={
     noSquad:'TheSportsDB does not have the World Cup 2026 squad for {team}.',squad:'SQUAD',goalkeepers:'Goalkeepers',defenders:'Defenders',midfielders:'Midfield',forwards:'Forwards',manager:'Manager',others:'Others',
     noPlayersInBlock:'No players listed in this block yet.',managerMissing:'Manager not available in TheSportsDB.',years:'years',error:'Error',playersLoadError:'Error loading players',
     highlights:'Highlights',watchHighlight:'Watch highlights',daznHighlights:'DAZN highlights'
+    ,momentum:'Momentum',balancedMatch:'Balanced match',controlsMatch:'controls the match',lastEvent:'Last',dataSource:'Source',updatedAgo:'updated {time}',justNow:'now',
+    forceRefresh:'Force refresh',refreshing:'Refreshing...',lineupsPending:'Lineups pending',lineupsPendingDetail:'ESPN has not published lineups for this match yet.',
+    statsPending:'Stats pending',statsPendingDetail:'They will appear here when ESPN publishes match data.',timelinePending:'Events pending',timelinePendingDetail:'Goals, cards and substitutions will appear as ESPN publishes them.',
+    liveInsightPending:'Live data pending'
   }
 };
 function t(key,vars){
@@ -871,6 +904,74 @@ const isFin=s=>s&&FIN_ST.some(x=>s.toLowerCase().includes(x.toLowerCase()));
 // ══════════════════════════════════════════════
 // MATCH CARD
 // ══════════════════════════════════════════════
+function clamp(n,min,max){return Math.max(min,Math.min(max,n));}
+function statPairFromMatch(espnMatch,key){
+  const row=espnMatch&&espnMatch.stats&&espnMatch.stats[key];
+  if(!row)return null;
+  const home=Number(row.home),away=Number(row.away);
+  return {home:Number.isFinite(home)?home:0,away:Number.isFinite(away)?away:0};
+}
+function pairText(pair,suffix){
+  if(!pair)return '—';
+  return prettyStatVal(pair.home,suffix)+' - '+prettyStatVal(pair.away,suffix);
+}
+function minuteScore(minute){
+  const raw=String(minute||'').replace(/'/g,'').trim();
+  const parts=raw.split('+').map(n=>parseInt(n,10)).filter(Number.isFinite);
+  if(!parts.length)return -1;
+  return parts.reduce((a,b)=>a+b,0);
+}
+function latestImportantEvent(timeline){
+  return (timeline||[]).filter(function(ev){
+    const kind=timelineKind(ev);
+    return kind==='goal'||kind==='yellow'||kind==='red'||kind==='substitution'||kind==='var';
+  }).sort(function(a,b){return minuteScore(eventMinute(b))-minuteScore(eventMinute(a));})[0]||null;
+}
+function buildLiveInsight(fx,espnLive){
+  if(!fx||!espnLive)return null;
+  const matchStats=espnLive.stats||null;
+  const timeline=espnLive.timeline||[];
+  const sog=statPairFromMatch(matchStats,'shotsOnGoal');
+  const shots=statPairFromMatch(matchStats,'shots');
+  const poss=statPairFromMatch(matchStats,'possession');
+  const counts=timelineCounts(timeline,fx.home,fx.away);
+  const cards={home:(counts.yellow.home||0)+(counts.red.home||0),away:(counts.yellow.away||0)+(counts.red.away||0)};
+  const score=espnLive.event?espnScore(espnLive.event,fx):{home:null,away:null};
+  const scoreDiff=(Number(score.home||0)-Number(score.away||0))*4;
+  const sogDiff=sog?(sog.home-sog.away)*3:0;
+  const shotDiff=shots?(shots.home-shots.away)*.65:0;
+  const possDiff=poss?(poss.home-poss.away)*.08:0;
+  const cardDiff=(cards.away-cards.home)*.25;
+  const momentumRaw=scoreDiff+sogDiff+shotDiff+possDiff+cardDiff;
+  const momentumPct=clamp(50+momentumRaw*4,18,82);
+  const momentumTeam=Math.abs(momentumRaw)<1.6?t('balancedMatch'):(momentumRaw>0?fx.home:fx.away);
+  const last=latestImportantEvent(timeline);
+  if(!sog&&!shots&&!poss&&!last)return null;
+  return {date:fx.date,home:fx.home,away:fx.away,momentumTeam,momentumPct,sog,shots,poss,cards,last,updatedAt:espnLive.fetchedAt||new Date().toISOString()};
+}
+function renderLiveInsight(insight){
+  if(!insight)return '';
+  const last=insight.last;
+  const lastKind=last?timelineKind(last):'';
+  const lastPlayer=last?(eventPlayer(last)||timelineLabel(last)):'';
+  const lastTeam=last&&last.strTeam?(FLAGS[normName(last.strTeam)]||FLAGS[last.strTeam]||''):'';
+  const lastMinute=last?eventMinute(last):'';
+  const possText=insight.poss?prettyStatVal(insight.poss.home,'%'):'—';
+  const cardsText=pairText(insight.cards);
+  return '<div class="live-insight" onclick="event.stopPropagation(); openDetail(0,\''+escQ(insight.date||'')+'\',\''+escQ(insight.home)+'\',\''+escQ(insight.away)+'\')">'+
+    '<div class="live-insight-top">'+
+      '<div><div class="live-momentum-label">'+t('momentum')+'</div><div class="live-momentum-team">'+escHtml(insight.momentumTeam)+'</div></div>'+
+      '<div class="live-momentum-bar" aria-hidden="true"><div class="live-momentum-home" style="width:'+insight.momentumPct+'%"></div><div class="live-momentum-away" style="width:'+(100-insight.momentumPct)+'%"></div></div>'+
+    '</div>'+
+    '<div class="live-mini-stats">'+
+      '<div class="live-mini-stat"><span class="live-mini-label">🎯</span><span class="live-mini-val">'+pairText(insight.sog)+'</span></div>'+
+      '<div class="live-mini-stat"><span class="live-mini-label">⚽</span><span class="live-mini-val">'+pairText(insight.shots)+'</span></div>'+
+      '<div class="live-mini-stat"><span class="live-mini-label">◎</span><span class="live-mini-val">'+possText+'</span></div>'+
+      '<div class="live-mini-stat"><span class="live-mini-label">🟨</span><span class="live-mini-val">'+cardsText+'</span></div>'+
+    '</div>'+
+    (last?'<div class="live-last-event"><span class="live-last-tag">'+t('lastEvent')+'</span><span class="live-last-main">'+timelineIcon(lastKind)+' '+escHtml(lastPlayer)+' '+lastTeam+'</span><span class="live-last-min">'+escHtml(lastMinute)+'</span></div>':'')+
+  '</div>';
+}
 function matchCard(m,overrides={}){
   const om=Object.assign({},m,overrides);
   const es=toES(om.date,om.time);
@@ -888,6 +989,7 @@ function matchCard(m,overrides={}){
   const scoreHtml=(live||fin)&&hasScore?
     `<div class="score${live?' live':''}">${om.homeScore}&nbsp;–&nbsp;${om.awayScore}</div>${live&&om.progress?`<div class="mc-minute">${om.progress}'</div>`:''}`
     :`<div class="vs">VS</div>`;
+  const insightHtml=live&&om.liveInsight?renderLiveInsight(om.liveInsight):'';
   const timeBlock=es?`<div class="mc-time">
     <div class="es-time"><span class="es-val">${es.time}</span><span class="es-lbl">🇪🇸 ${t('spainTime')}</span></div>
     <div style="text-align:right"><div class="utc-val">${om.time} UTC</div><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>
@@ -898,7 +1000,7 @@ function matchCard(m,overrides={}){
       <div class="t-side">${hBadge}<span class="t-name">${om.home||'Por definir'}</span></div>
       <div class="score-c">${scoreHtml}</div>
       <div class="t-side away"><span class="t-name">${om.away||'Por definir'}</span>${aBadge}</div>
-    </div>${timeBlock}</div>`;
+    </div>${insightHtml}${timeBlock}</div>`;
 }
 
 // ══════════════════════════════════════════════
@@ -985,6 +1087,27 @@ async function loadLive(){
       seenFx.add(fx.id);
     });
   }catch(e){console.warn('ESPN live load failed',e);}
+  if(liveNow.length){
+    await Promise.all(liveNow.map(async function(e){
+      const fx=matchFx(e);
+      if(!fx)return;
+      try{
+        const espnLive=await loadEspnLiveData(fx);
+        if(!espnLive)return;
+        const insight=buildLiveInsight(fx,espnLive);
+        if(insight)e.liveInsight=insight;
+        const score=espnScore(espnLive.event,fx);
+        if(score.home!==null&&score.away!==null){
+          e.homeScore=score.home;e.awayScore=score.away;
+          e.intHomeScore=score.home;e.intAwayScore=score.away;
+        }
+        const st=espnLive.event&&espnLive.event.status;
+        const state=st&&st.type&&st.type.state;
+        if(state==='in')e.status=e.strStatus='Live';
+        e.progress=(st&&(st.displayClock||st.type&&st.type.shortDetail||st.type&&st.type.detail))||e.progress||e.strProgress;
+      }catch(err){console.warn('ESPN live insight failed',err);}
+    }));
+  }
   let html='';
   if(liveNow.length>0){
     document.getElementById('liveBadge').style.display='flex';
@@ -999,7 +1122,8 @@ async function loadLive(){
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
-        status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress
+        status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
+        liveInsight:e.liveInsight
       });
     }).join('');
     html+='<div class="divider"></div>';
@@ -2547,6 +2671,10 @@ function renderRawLineupTeam(team,lineup){
 function renderLineupsSection(lineup,home,away){
   const teams=[home,away];
   let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('lineups')+'</div>';
+  const hasRaw=Array.isArray(lineup)&&lineup.length>0;
+  if(!lineup||(!hasRaw&&!(lineup.home&&lineup.away))){
+    return html+pendingBox(t('lineupsPending'),t('lineupsPendingDetail'))+'</div>';
+  }
   if(lineup&&lineup.home&&lineup.away){
     html+='<div class="lineup-card lineup-switch">';
     html+='<div class="lineup-toggle">'+
@@ -2585,7 +2713,7 @@ async function loadDaznHighlights(eventId,ev){
   if(!daznHighlightsLoaded){
     daznHighlightsLoaded=true;
     try{
-      const d=await fetchJson('data/dazn-highlights.json',{},1500);
+      const d=await fetchJson('data/dazn-highlights.json?v='+STATS_VERSION,{},1500);
       daznHighlightsCache=normalizeHighlightsData(d);
     }catch{daznHighlightsCache=normalizeHighlightsData(DAZN_HIGHLIGHTS_FALLBACK);}
   }
@@ -2620,6 +2748,33 @@ function renderHighlightsSection(hls){
     </a>`;
   });
   return html+'</div>';
+}
+function relativeTime(ts){
+  const d=ts?new Date(ts):new Date();
+  const diff=Math.max(0,Date.now()-d.getTime());
+  const mins=Math.floor(diff/60000);
+  if(!Number.isFinite(mins)||mins<1)return t('justNow');
+  if(mins<60)return mins+' min';
+  const hrs=Math.floor(mins/60);
+  if(hrs<24)return hrs+' h';
+  return Math.floor(hrs/24)+' d';
+}
+function pendingBox(title,detail){
+  return '<div class="pending-box"><div class="pending-title">'+escHtml(title)+'</div><div>'+escHtml(detail)+'</div></div>';
+}
+function detailConfidenceHtml(fx,opts){
+  const sources=(opts&&opts.sources||[]).filter(Boolean);
+  const sourceText=sources.length?sources.join(' + '):'Calendario';
+  const updated=opts&&opts.updatedAt?t('updatedAgo',{time:relativeTime(opts.updatedAt)}):'';
+  const refresh=fx?'<button id="detailRefreshBtn" class="detail-refresh-btn" onclick="forceRefreshDetail(\''+escQ(fx.date)+'\',\''+escQ(fx.home)+'\',\''+escQ(fx.away)+'\')">↻ '+t('forceRefresh')+'</button>':'';
+  return '<div class="detail-confidence"><span class="confidence-dot"></span><span>'+t('dataSource')+': '+escHtml(sourceText)+(updated?' · '+escHtml(updated):'')+'</span>'+refresh+'</div>';
+}
+function pendingMainHtml(hasStats,hasTimeline,state){
+  if(state!=='pre'&&state!=='scheduled')return '';
+  let html='';
+  if(!hasStats)html+=pendingBox(t('statsPending'),t('statsPendingDetail'));
+  if(!hasTimeline)html+=pendingBox(t('timelinePending'),t('timelinePendingDetail'));
+  return html;
 }
 const ESPN_BASE='https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world';
 const ESPN_TEAM_ALIASES={
@@ -2831,7 +2986,7 @@ async function loadEspnLiveData(fx){
     if(!event)return null;
     const summary=await fetchJson(ESPN_BASE+'/summary?event='+encodeURIComponent(event.id),{},5000);
     return {
-      event,summary,
+      event,summary,fetchedAt:new Date().toISOString(),
       stats:espnStatsFromSummary(summary,fx,event),
       lineup:espnLineupFromSummary(summary,fx,event),
       timeline:espnTimelineFromSummary(summary),
@@ -2878,7 +3033,7 @@ async function renderEspnOnlyDetail(fx,espnLive){
   const hasScore=ev.intHomeScore!==null&&ev.intHomeScore!==undefined&&ev.intAwayScore!==null&&ev.intAwayScore!==undefined;
   const daznHls=await loadDaznHighlights(event.id||ev.idEvent,ev);
   const seenHls={};
-  const hls=[...(espnLive.highlights||[]),...daznHls].filter(function(h){
+  const hls=[...daznHls,...(espnLive.highlights||[])].filter(function(h){
     const key=h.strVideo||h.url||h.videoId||h.strFilename;
     if(!key||seenHls[key])return false;
     seenHls[key]=true;
@@ -2908,12 +3063,14 @@ async function renderEspnOnlyDetail(fx,espnLive){
       </div>`:''}
       <div style="font-size:13px;color:var(--muted);margin-top:6px">📍 ${escHtml(fx.venue||'')}${fx.city?', '+escHtml(fx.city):''}</div>
     </div>`;
+  html+=detailConfidenceHtml(fx,{sources:['ESPN directo'],updatedAt:espnLive.fetchedAt});
   html+=renderHighlightsSection(hls);
   const liveTimeline=espnLive.timeline||[];
   const statsHtml=renderMatchStats([],ev,liveTimeline,espnLive.stats);
   const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline):'';
   const lineupHtml=renderLineupsSection(espnLive.lineup,fx.home,fx.away);
-  html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
+  const pendingHtml=pendingMainHtml(!!statsHtml,!!timelineHtml,state);
+  html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+pendingHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
   return html+'</div>';
 }
 async function openDetail(eid,date,home,away){
@@ -2989,7 +3146,7 @@ async function openDetail(eid,date,home,away){
     const daznHls=await loadDaznHighlights(eventId,ev);
     const espnHls=espnLive&&espnLive.highlights||[];
     const seenHls={};
-    const hls=tsdbHls.concat(espnHls,daznHls).filter(function(h){
+    const hls=daznHls.concat(espnHls,tsdbHls).filter(function(h){
       const key=h.strVideo||h.url||h.videoId||h.strFilename;
       if(!key||seenHls[key])return false;
       seenHls[key]=true;
@@ -3022,6 +3179,7 @@ async function openDetail(eid,date,home,away){
         </div>`:''}
         ${ev.strVenue?`<div style="font-size:13px;color:var(--muted);margin-top:6px">📍 ${ev.strVenue}${ev.strCity?', '+ev.strCity:''}</div>`:''}
       </div>`;
+    html+=detailConfidenceHtml(fxDetail,{sources:[espnLive?'ESPN directo':'',ev?'TheSportsDB':''],updatedAt:espnLive&&espnLive.fetchedAt});
     html+=renderHighlightsSection(hls);
     // Stats
     const stats=(stD.value&&stD.value.eventstats)||[];
@@ -3033,10 +3191,19 @@ async function openDetail(eid,date,home,away){
     const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline):'';
     const storedLineup=await loadStoredLineups(eventId,ev);
     const lineupHtml=renderLineupsSection((espnLive&&espnLive.lineup)||storedLineup||((luD.value&&luD.value.lineup)||[]),ev.strHomeTeam,ev.strAwayTeam);
-    html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
+    const detailState=espnState||(live2?'in':fin?'post':'pre');
+    const pendingHtml=pendingMainHtml(!!statsHtml,!!timelineHtml,detailState);
+    html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+pendingHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
     html+='</div>';
     inner.innerHTML=html;
   }catch(e){inner.innerHTML=`<div class="empty" style="padding:40px"><div class="empty-icon">⚠️</div><div class="empty-text">${e.message}</div></div>`;}
+}
+function forceRefreshDetail(date,home,away){
+  const btn=document.getElementById('detailRefreshBtn');
+  if(btn){btn.disabled=true;btn.textContent='↻ '+t('refreshing');}
+  Object.keys(espnScoreboardCache).forEach(k=>delete espnScoreboardCache[k]);
+  storedLineupsLoaded=false;storedMatchStatsLoaded=false;
+  openDetail(0,date,home,away);
 }
 function closeDetail(){
   document.getElementById('detailPanel').classList.remove('open');
