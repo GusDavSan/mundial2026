@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T10:58:08.616Z",
+  "updated": "2026-06-13T12:55:38.777Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T10:58:08.616Z",
+      "updatedAt": "2026-06-13T12:55:38.777Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T10:58:08.616Z",
+      "updatedAt": "2026-06-13T12:55:38.777Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T10:58:08.616Z",
+      "updatedAt": "2026-06-13T12:55:38.777Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -222,7 +222,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T10:58:08.616Z",
+      "updatedAt": "2026-06-13T12:55:38.777Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
