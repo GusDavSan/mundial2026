@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T22:38:30.526Z",
+  "updated": "2026-06-13T23:48:53.727Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:38:30.526Z",
+      "updatedAt": "2026-06-13T23:48:53.727Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:38:30.526Z",
+      "updatedAt": "2026-06-13T23:48:53.727Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:38:30.526Z",
+      "updatedAt": "2026-06-13T23:48:53.727Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -222,7 +222,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:38:30.526Z",
+      "updatedAt": "2026-06-13T23:48:53.727Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -293,7 +293,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:38:30.526Z",
+      "updatedAt": "2026-06-13T23:48:53.727Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -308,8 +308,8 @@
           "away": 68
         },
         "passes": {
-          "home": 279,
-          "away": 578
+          "home": 278,
+          "away": 577
         },
         "fouls": {
           "home": 12,
@@ -364,39 +364,39 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T22:38:30.526Z",
+      "updatedAt": "2026-06-13T23:48:53.727Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
+          "home": 4,
           "away": 2
         },
         "shots": {
-          "home": 4,
+          "home": 11,
           "away": 12
         },
         "possession": {
-          "home": 52.4,
-          "away": 47.6
+          "home": 54.8,
+          "away": 45.2
         },
         "passes": {
-          "home": 173,
-          "away": 157
+          "home": 465,
+          "away": 385
         },
         "fouls": {
-          "home": 5,
-          "away": 5
+          "home": 14,
+          "away": 12
         },
         "corners": {
-          "home": 1,
+          "home": 4,
           "away": 0
         },
         "saves": {
           "home": 1,
-          "away": 0
+          "away": 3
         },
         "offsides": {
           "home": 0,
-          "away": 0
+          "away": 1
         }
       },
       "keepers": [
@@ -419,12 +419,12 @@
           "name": "Yassine Bounou",
           "shortName": "Y. Bounou",
           "number": "1",
-          "saves": 0,
+          "saves": 3,
           "goalsAgainst": 1,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 75,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
