@@ -79,6 +79,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 @keyframes livePulse{0%,100%{box-shadow:0 0 10px rgba(0,230,118,.04)}50%{box-shadow:0 0 22px rgba(0,230,118,.13)}}
 .mc-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .mc-round{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--muted)}
+.mc-status-group{display:flex;align-items:center;justify-content:flex-end;gap:5px;flex-wrap:wrap}
 .mc-status{font-size:10px;font-weight:700;letter-spacing:.3px;padding:2px 7px;border-radius:10px}
 .s-live{color:var(--live);background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.3)}
 .s-fin{color:var(--muted);background:rgba(91,107,138,.1)}
@@ -93,6 +94,8 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .score.live{color:var(--live)}
 .vs{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:2px}
 .mc-minute{font-family:var(--mono);font-size:10px;color:var(--live);font-weight:600;margin-top:2px}
+.mc-live-tags{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:3px;flex-wrap:wrap}
+.mc-live-tag{font-family:var(--mono);font-size:10px;font-weight:800;color:var(--live);background:rgba(0,230,118,.08);border:1px solid rgba(0,230,118,.28);border-radius:999px;padding:2px 7px;line-height:1.1}
 .live-insight{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:grid;gap:8px}
 .live-insight-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .live-momentum-label{font-size:9px;font-weight:800;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
@@ -613,6 +616,7 @@ const I18N={
     langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabMySelection:'Mi Selección',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Goleadores',tabTeams:'Equipos',
     loadingShort:'Cargando...',loadingMatches:'Buscando partidos...',loadingStats:'Cargando estadísticas...',refresh:'Actualizar',
     liveStatus:'EN JUEGO',finishedShort:'FIN',upcoming:'PRÓXIMO',group:'Grupo',spainTime:'España',
+    firstHalf:'1ª parte',halftime:'Descanso',secondHalf:'2ª parte',extraTime:'Prórroga',penaltiesPhase:'Penaltis',
     updatedNext:'Actualizado · siguiente en {s}s',today:'HOY',todayMatches:'PARTIDOS HOY',liveNow:'EN JUEGO',todayUpcoming:'HOY — PRÓXIMOS',finished:'FINALIZADOS',nextMatches:'PRÓXIMOS PARTIDOS',
     noLive:'No hay partidos en directo.',worldCupStarts:'El Mundial arranca el',noPhaseMatches:'No hay partidos en esta fase',
     all:'Todos',bestThirdShort:'Mejor tercero',thirdPlace:'3er Puesto',final:'Final',classifiedDirect:'Clasifica directo',possibleThird:'Posible mejor 3º',
@@ -653,6 +657,7 @@ const I18N={
     langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabMySelection:'My Team',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
     loadingShort:'Loading...',loadingMatches:'Looking for matches...',loadingStats:'Loading stats...',refresh:'Refresh',
     liveStatus:'LIVE',finishedShort:'FT',upcoming:'UPCOMING',group:'Group',spainTime:'Spain',
+    firstHalf:'1st half',halftime:'Halftime',secondHalf:'2nd half',extraTime:'Extra time',penaltiesPhase:'Penalties',
     updatedNext:'Updated · next in {s}s',today:'TODAY',todayMatches:'MATCHES TODAY',liveNow:'LIVE NOW',todayUpcoming:'TODAY — UPCOMING',finished:'FINISHED',nextMatches:'UPCOMING MATCHES',
     noLive:'No live matches right now.',worldCupStarts:'The World Cup starts on',noPhaseMatches:'No matches in this stage',
     all:'All',bestThirdShort:'Best third',thirdPlace:'3rd Place',final:'Final',classifiedDirect:'Direct qualification',possibleThird:'Possible best 3rd',
@@ -1121,6 +1126,20 @@ function pairText(pair,suffix){
   if(!pair)return '—';
   return prettyStatVal(pair.home,suffix)+' - '+prettyStatVal(pair.away,suffix);
 }
+function liveClockLabel(progress){
+  const raw=String(progress||'').trim();
+  if(!raw)return '';
+  if(/^\d+(\+\d+)?'?$/.test(raw))return raw.replace(/'+$/,'')+"'";
+  return raw;
+}
+function livePhaseTagsHtml(progress,periodLabel){
+  const clock=liveClockLabel(progress);
+  if(!clock&&!periodLabel)return '';
+  return '<div class="mc-live-tags">'+
+    (clock?'<span class="mc-live-tag">'+escHtml(clock)+'</span>':'')+
+    (periodLabel?'<span class="mc-live-tag">'+escHtml(periodLabel)+'</span>':'')+
+    '</div>';
+}
 function minuteScore(minute){
   const raw=String(minute||'').replace(/'/g,'').trim();
   const parts=raw.split('+').map(n=>parseInt(n,10)).filter(Number.isFinite);
@@ -1195,13 +1214,14 @@ function matchCard(m,overrides={}){
     (om.homeFlag?`<span style="font-size:20px;flex-shrink:0">${om.homeFlag}</span>`:`<span style="font-size:20px;flex-shrink:0">🏳️</span>`);
   const aBadge=om.strAwayTeamBadge?`<img class="t-flag" src="${om.strAwayTeamBadge}/tiny" onerror="this.style.display='none'" alt="">`:
     (om.awayFlag?`<span style="font-size:20px;flex-shrink:0">${om.awayFlag}</span>`:`<span style="font-size:20px;flex-shrink:0">🏳️</span>`);
-  const statusHtml=live?`<span class="mc-status s-live">${om.progress||t('liveStatus')}</span>`:
-    fin?`<span class="mc-status s-fin">${t('finishedShort')}</span>`:
-    `<span class="mc-status s-up">${t('upcoming')}</span>`;
+  const statusHtml=live?`<span class="mc-status-group"><span class="mc-status s-live">${escHtml(liveClockLabel(om.progress)||t('liveStatus'))}</span>${om.periodLabel?`<span class="mc-status s-live">${escHtml(om.periodLabel)}</span>`:''}</span>`:
+    fin?`<span class="mc-status-group"><span class="mc-status s-fin">${t('finishedShort')}</span></span>`:
+    `<span class="mc-status-group"><span class="mc-status s-up">${t('upcoming')}</span></span>`;
   const rndLbl=(om.group||'').startsWith('Group')?`${t('group')} ${(om.group||'').slice(-1)}`:(om.group||'');
   const rndHtml=escHtml(rndLbl);
+  const liveTags=live?livePhaseTagsHtml(om.progress,om.periodLabel):'';
   const scoreHtml=(live||fin)&&hasScore?
-    `<div class="score${live?' live':''}">${om.homeScore}&nbsp;–&nbsp;${om.awayScore}</div>${live&&om.progress?`<div class="mc-minute">${om.progress}'</div>`:''}`
+    `<div class="score${live?' live':''}">${om.homeScore}&nbsp;–&nbsp;${om.awayScore}</div>${liveTags}`
     :`<div class="vs">VS</div>`;
   const insightHtml=live&&om.liveInsight?renderLiveInsight(om.liveInsight):'';
   const timeBlock=es?`<div class="mc-time">
@@ -1293,7 +1313,7 @@ async function loadLive(){
         id:fx.id,date:fx.date,time:fx.time,home:fx.home,away:fx.away,group:fx.group,
         venue:fx.venue,city:fx.city,homeFlag:fx.homeFlag,awayFlag:fx.awayFlag,
         status:state==='in'?'Live':state==='post'?'FT':'Scheduled',
-        homeScore:h&&h.score,awayScore:a&&a.score,progress:detail
+        homeScore:h&&h.score,awayScore:a&&a.score,progress:detail,periodLabel:state==='in'?espnPeriodLabel(event.status):''
       };
       if(state==='in')liveNow.push(row);
       else if(state==='post')finished.push(row);
@@ -1319,6 +1339,7 @@ async function loadLive(){
         const state=st&&st.type&&st.type.state;
         if(state==='in')e.status=e.strStatus='Live';
         e.progress=(st&&(st.displayClock||st.type&&st.type.shortDetail||st.type&&st.type.detail))||e.progress||e.strProgress;
+        e.periodLabel=state==='in'?espnPeriodLabel(st):'';
       }catch(err){console.warn('ESPN live insight failed',err);}
     }));
   }
@@ -3211,6 +3232,21 @@ function sameEspnTeam(a,b){
   const aa=espnAliases(a),bb=espnAliases(b);
   return aa.some(function(x){return bb.includes(x);});
 }
+function espnPeriodLabel(status){
+  const st=status||{};
+  const type=st.type||{};
+  const text=espnNorm([type.name,type.description,type.detail,type.shortDetail].filter(Boolean).join(' '));
+  if(text.includes('halftime')||text.includes('half time'))return t('halftime');
+  if(text.includes('penalt'))return t('penaltiesPhase');
+  if(text.includes('extra'))return t('extraTime');
+  if(text.includes('second half'))return t('secondHalf');
+  if(text.includes('first half'))return t('firstHalf');
+  const p=parseInt(st.period,10);
+  if(p===1)return t('firstHalf');
+  if(p===2)return t('secondHalf');
+  if(p===3||p===4)return t('extraTime');
+  return '';
+}
 function espnDateKey(dateStr){return String(dateStr||'').replace(/-/g,'');}
 function espnDateShift(dateStr,days){
   const parts=String(dateStr||'').split('-').map(Number);
@@ -3601,6 +3637,7 @@ function espnDetailEvent(fx,espnLive){
     strAwayTeamBadge:espnLogo(event,fx.away),
     strStatus:state==='post'?'FT':state==='in'?'Live':'Scheduled',
     strProgress:event.status&&event.status.displayClock||event.status&&event.status.type&&event.status.type.shortDetail||'',
+    strPeriodLabel:state==='in'?espnPeriodLabel(event.status):'',
     intHomeScore:score.home,
     intAwayScore:score.away
   };
@@ -3631,7 +3668,7 @@ async function renderEspnOnlyDetail(fx,espnLive){
         </div>
         <div style="text-align:center;min-width:65px">
           ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${ev.intHomeScore} – ${ev.intAwayScore}</div>`:`<div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>`}
-          ${live2?`<div style="font-size:12px;color:var(--live);font-weight:600">${escHtml(detail||ev.strProgress||'EN JUEGO')}</div>`:''}
+          ${live2?livePhaseTagsHtml(detail||ev.strProgress,ev.strPeriodLabel):''}
         </div>
         <div style="text-align:center">
           ${ev.strAwayTeamBadge?`<img src="${escHtml(ev.strAwayTeamBadge)}" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:`<div style="font-size:32px;margin-bottom:4px">${fx.awayFlag||FLAGS[fx.away]||'🏳️'}</div>`}
@@ -3749,7 +3786,7 @@ async function openDetail(eid,date,home,away){
           <div style="text-align:center;min-width:65px">
             ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${displayHomeScore} – ${displayAwayScore}</div>`:
             `<div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>`}
-            ${live2?`<div style="font-size:12px;color:var(--live);font-weight:600">${espnStatusDetail||ev.strProgress||'EN JUEGO'}</div>`:''}
+            ${live2?livePhaseTagsHtml(espnStatusDetail||ev.strProgress,espnLive&&espnLive.event?espnPeriodLabel(espnLive.event.status):''):''}
           </div>
           <div style="text-align:center">
             ${ev.strAwayTeamBadge?`<img src="${ev.strAwayTeamBadge}/medium" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:
