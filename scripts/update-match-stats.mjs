@@ -179,6 +179,10 @@ function eventTeams(event) {
   return { home, away };
 }
 
+function matchLabel(fixture) {
+  return `${fixture.id} ${fixture.home} vs ${fixture.away}`;
+}
+
 function matchEventForFixture(fixture, events) {
   const direct = events.find((event) => {
     const t = eventTeams(event);
@@ -353,20 +357,22 @@ async function buildMatchStats(fixtures, existing) {
     if (existingItem?.manual || existingItem?.locked) continue;
     const event = matchEventForFixture(fixture, events);
     if (!event) {
-      if (DEBUG) console.log(`Sin evento ESPN para ${fixture.id} ${fixture.home} vs ${fixture.away}`);
+      console.log(`${matchLabel(fixture)} -> ESPN no encontrado`);
       continue;
     }
+    const state = event.status?.type?.state || "unknown";
+    console.log(`${matchLabel(fixture)} -> ESPN ${event.id} (${state})`);
     try {
       const summary = await getSummary(event.id);
       const item = statsFromSummary(summary, fixture, event);
       if (!item) {
-        if (DEBUG) console.log(`ESPN sin stats: ${fixture.id} ${fixture.home} vs ${fixture.away}`);
+        console.log(`${matchLabel(fixture)} -> stats no publicadas aun`);
         continue;
       }
       byMatch.set(matchKey, item);
-      if (DEBUG) console.log(`Stats ${fixture.id}: ${fixture.home} vs ${fixture.away} (${Object.keys(item.stats).join(", ")})`);
+      console.log(`${matchLabel(fixture)} -> stats actualizadas (${Object.keys(item.stats).join(", ")})`);
     } catch (e) {
-      if (DEBUG) console.warn(`Error summary ESPN ${event.id}: ${e.message}`);
+      console.warn(`${matchLabel(fixture)} -> error summary ESPN ${event.id}: ${e.message}`);
     }
   }
 
