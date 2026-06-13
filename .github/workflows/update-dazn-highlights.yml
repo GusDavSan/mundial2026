@@ -3,7 +3,7 @@ name: Update DAZN highlights
 on:
   workflow_dispatch:
   schedule:
-    - cron: "37 */4 * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
