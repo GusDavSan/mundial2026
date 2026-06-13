@@ -945,23 +945,61 @@ async function loadLive(){
   }catch{}
   // Merge with local fixtures for time/venue
   const matchFx=m=>{
-    const h=normName((m.strHomeTeam||'').trim()),a=normName((m.strAwayTeam||'').trim());
+    const h=normName(String(m.strHomeTeam||m.home||m.homeTeam||'').trim()),a=normName(String(m.strAwayTeam||m.away||m.awayTeam||'').trim());
     return FIXTURES.find(f=>sameTeam(f.home,h)&&sameTeam(f.away,a))||
       FIXTURES.find(f=>sameTeam(f.home,a)&&sameTeam(f.away,h));
   };
+  // ESPN is faster for live score/state and supports browser CORS.
+  try{
+    const espnEvents=await loadEspnScoreboardsAround(today);
+    const seenFx=new Set();
+    function markSeen(list){
+      (list||[]).forEach(function(e){
+        const fx=matchFx({
+          strHomeTeam:e.strHomeTeam||e.home||e.homeTeam,
+          strAwayTeam:e.strAwayTeam||e.away||e.awayTeam
+        });
+        if(fx)seenFx.add(fx.id);
+      });
+    }
+    markSeen(liveNow);markSeen(upcoming);markSeen(finished);
+    espnEvents.forEach(function(event){
+      const teams=espnEventTeams(event);
+      const fx=FIXTURES.find(f=>sameEspnTeam(f.home,teams.home)&&sameEspnTeam(f.away,teams.away));
+      if(!fx||fx.date!==today||seenFx.has(fx.id))return;
+      const comp=event.competitions&&event.competitions[0];
+      const competitors=comp&&comp.competitors||[];
+      const h=competitors.find(c=>c.homeAway==='home');
+      const a=competitors.find(c=>c.homeAway==='away');
+      const state=event.status&&event.status.type&&event.status.type.state||'pre';
+      const detail=event.status&&event.status.type&&(event.status.type.shortDetail||event.status.type.detail)||event.status&&event.status.displayClock||'';
+      const row={
+        id:fx.id,date:fx.date,time:fx.time,home:fx.home,away:fx.away,group:fx.group,
+        venue:fx.venue,city:fx.city,homeFlag:fx.homeFlag,awayFlag:fx.awayFlag,
+        status:state==='in'?'Live':state==='post'?'FT':'Scheduled',
+        homeScore:h&&h.score,awayScore:a&&a.score,progress:detail
+      };
+      if(state==='in')liveNow.push(row);
+      else if(state==='post')finished.push(row);
+      else upcoming.push(row);
+      seenFx.add(fx.id);
+    });
+  }catch(e){console.warn('ESPN live load failed',e);}
   let html='';
   if(liveNow.length>0){
     document.getElementById('liveBadge').style.display='flex';
     html+=`<div class="sec-hdr"><span class="sec-ttl">🔴 ${t('liveNow')}</span><span class="sec-cnt">${liveNow.length}</span></div>`;
     html+=liveNow.map(e=>{
       const fx=matchFx(e)||{};
+      const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
+      const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent,date:fx.date||e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
-        home:fx.home||normName(e.strHomeTeam)||e.strHomeTeam,away:fx.away||normName(e.strAwayTeam)||e.strAwayTeam,group:fx.group||e.strRound,
+        id:e.idEvent||e.id,date:fx.date||e.dateEvent||e.date||today,time:fx.time||e.strTime?.slice(0,5)||e.time||'',
+        home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[fx.home||normName(e.strHomeTeam)]||'🏳️',awayFlag:FLAGS[fx.away||normName(e.strAwayTeam)]||'🏳️',
+        homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
-        status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,progress:e.strProgress
+        status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress
       });
     }).join('');
     html+='<div class="divider"></div>';
@@ -970,13 +1008,15 @@ async function loadLive(){
     html+=`<div class="sec-hdr"><span class="sec-ttl">📅 ${t('todayUpcoming')}</span><span class="sec-cnt">${upcoming.length}</span></div>`;
     html+=upcoming.map(e=>{
       const fx=matchFx(e)||{};
+      const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
+      const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent,date:fx.date||e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
-        home:fx.home||normName(e.strHomeTeam)||e.strHomeTeam,away:fx.away||normName(e.strAwayTeam)||e.strAwayTeam,group:fx.group||e.strRound,
+        id:e.idEvent||e.id,date:fx.date||e.dateEvent||e.date||today,time:fx.time||e.strTime?.slice(0,5)||e.time||'',
+        home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[fx.home||normName(e.strHomeTeam)]||'🏳️',awayFlag:FLAGS[fx.away||normName(e.strAwayTeam)]||'🏳️',
+        homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
-        status:e.strStatus
+        status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress
       });
     }).join('');
     html+='<div class="divider"></div>';
@@ -985,13 +1025,15 @@ async function loadLive(){
     html+=`<div class="sec-hdr"><span class="sec-ttl">✅ ${t('finished')}</span></div>`;
     html+=finished.map(e=>{
       const fx=matchFx(e)||{};
+      const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
+      const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent,date:fx.date||e.dateEvent||today,time:fx.time||e.strTime?.slice(0,5)||'',
-        home:fx.home||normName(e.strHomeTeam)||e.strHomeTeam,away:fx.away||normName(e.strAwayTeam)||e.strAwayTeam,group:fx.group||e.strRound,
+        id:e.idEvent||e.id,date:fx.date||e.dateEvent||e.date||today,time:fx.time||e.strTime?.slice(0,5)||e.time||'',
+        home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[fx.home||normName(e.strHomeTeam)]||'🏳️',awayFlag:FLAGS[fx.away||normName(e.strAwayTeam)]||'🏳️',
+        homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
-        status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore
+        status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress
       });
     }).join('');
   }
@@ -1657,7 +1699,7 @@ function updateQChampion(){
 // ══════════════════════════════════════════════
 let statsCache={},statsLoaded=false;
 const STATS_KEY='mw26_stats';
-const STATS_VERSION=5;
+const STATS_VERSION=6;
 async function loadGoleadores(){
   const el=document.getElementById('golesContent');
   // Load from cache
@@ -2579,6 +2621,301 @@ function renderHighlightsSection(hls){
   });
   return html+'</div>';
 }
+const ESPN_BASE='https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world';
+const ESPN_TEAM_ALIASES={
+  'United States':['usa','united states','estados unidos','eeuu','ee uu'],
+  'South Korea':['south korea','korea republic','republic of korea','corea del sur','republica de corea'],
+  'Czechia':['czechia','czech republic','chequia','republica checa'],
+  'Bosnia & Herzegovina':['bosnia and herzegovina','bosnia herzegovina','bosnia-herzegovina','bosnia'],
+  'Türkiye':['turkiye','turkey','türkiye','turquia'],
+  'DR Congo':['dr congo','congo dr','rd congo','congo'],
+  'Curaçao':['curacao','curaçao'],
+  'Ivory Coast':['ivory coast','cote d ivoire','costa de marfil'],
+  'Cape Verde':['cape verde','cabo verde'],
+  'Saudi Arabia':['saudi arabia','arabia saudi','arabia saudí'],
+  'New Zealand':['new zealand','nueva zelanda']
+};
+function espnNorm(s){
+  return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').trim();
+}
+function espnAliases(team){
+  const base=normName(team||'');
+  return [...new Set([team,base,TEAM_ALIASES&&TEAM_ALIASES[base],...(ESPN_TEAM_ALIASES[base]||[])].filter(Boolean).map(espnNorm))];
+}
+function sameEspnTeam(a,b){
+  const aa=espnAliases(a),bb=espnAliases(b);
+  return aa.some(function(x){return bb.includes(x);});
+}
+function espnDateKey(dateStr){return String(dateStr||'').replace(/-/g,'');}
+function espnDateShift(dateStr,days){
+  const parts=String(dateStr||'').split('-').map(Number);
+  if(parts.length!==3||parts.some(n=>!Number.isFinite(n)))return null;
+  const dt=new Date(Date.UTC(parts[0],parts[1]-1,parts[2]+days));
+  return dt.toISOString().slice(0,10);
+}
+function espnDateWindow(dateStr){
+  return [-1,0,1].map(d=>espnDateShift(dateStr,d)).filter(Boolean);
+}
+function espnEventTeams(event){
+  const competitors=event&&event.competitions&&event.competitions[0]&&event.competitions[0].competitors||[];
+  return {
+    home:(competitors.find(c=>c.homeAway==='home')||{}).team&&competitors.find(c=>c.homeAway==='home').team.displayName,
+    away:(competitors.find(c=>c.homeAway==='away')||{}).team&&competitors.find(c=>c.homeAway==='away').team.displayName
+  };
+}
+const espnScoreboardCache={};
+async function loadEspnScoreboard(dateStr){
+  const key=espnDateKey(dateStr);
+  if(!key)return[];
+  if(!espnScoreboardCache[key]){
+    const d=await fetchJson(ESPN_BASE+'/scoreboard?dates='+key,{},4500);
+    espnScoreboardCache[key]=d.events||[];
+  }
+  return espnScoreboardCache[key];
+}
+async function loadEspnScoreboardsAround(dateStr){
+  const lists=await Promise.all(espnDateWindow(dateStr).map(d=>loadEspnScoreboard(d).catch(()=>[])));
+  const seen={};
+  return lists.flat().filter(function(event){
+    const id=event&&event.id;
+    if(!id||seen[id])return false;
+    seen[id]=true;
+    return true;
+  });
+}
+async function findEspnEventForFixture(fx){
+  if(!fx)return null;
+  const events=await loadEspnScoreboardsAround(fx.date);
+  const matches=events.filter(function(event){
+    const teams=espnEventTeams(event);
+    return sameEspnTeam(teams.home,fx.home)&&sameEspnTeam(teams.away,fx.away);
+  }).concat(events.filter(function(event){
+    const teams=espnEventTeams(event);
+    return sameEspnTeam(teams.home,fx.away)&&sameEspnTeam(teams.away,fx.home);
+  }));
+  return matches.find(function(event){
+    const iso=event&&event.date?String(event.date).slice(0,16):'';
+    return iso.startsWith(fx.date+'T'+fx.time);
+  })||matches[0]||null;
+}
+function espnStatMap(stats){
+  const out={};
+  (stats||[]).forEach(function(stat){
+    const n=parseFloat(String(stat.displayValue!==undefined?stat.displayValue:stat.value).replace('%',''));
+    if(Number.isFinite(n))out[stat.name]=n;
+  });
+  return out;
+}
+function espnStatValue(map,keys){
+  for(const k of keys){if(map[k]!==undefined)return map[k];}
+  return null;
+}
+function espnScore(event,fx){
+  const competitors=event&&event.competitions&&event.competitions[0]&&event.competitions[0].competitors||[];
+  const home=competitors.find(c=>sameEspnTeam(c.team&&c.team.displayName,fx.home));
+  const away=competitors.find(c=>sameEspnTeam(c.team&&c.team.displayName,fx.away));
+  const hs=parseInt(home&&home.score,10),as=parseInt(away&&away.score,10);
+  return {home:Number.isFinite(hs)?hs:null,away:Number.isFinite(as)?as:null};
+}
+function espnStatsFromSummary(summary,fx,event){
+  const teams=summary&&summary.boxscore&&summary.boxscore.teams||[];
+  const homeBox=teams.find(x=>sameEspnTeam(x.team&&x.team.displayName,fx.home));
+  const awayBox=teams.find(x=>sameEspnTeam(x.team&&x.team.displayName,fx.away));
+  if(!homeBox||!awayBox)return null;
+  const hm=espnStatMap(homeBox.statistics),am=espnStatMap(awayBox.statistics);
+  const defs={
+    shotsOnGoal:['shotsOnTarget'],shots:['totalShots'],possession:['possessionPct'],
+    passes:['totalPasses'],fouls:['foulsCommitted'],corners:['wonCorners'],
+    saves:['saves'],offsides:['offsides']
+  };
+  const stats={};
+  Object.keys(defs).forEach(function(key){
+    const h=espnStatValue(hm,defs[key]),a=espnStatValue(am,defs[key]);
+    if(h!==null||a!==null)stats[key]={home:h||0,away:a||0};
+  });
+  if(!Object.keys(stats).length)return null;
+  return {matchId:fx.id,espnEventId:event&&event.id,date:fx.date,homeTeam:fx.home,awayTeam:fx.away,source:'ESPN live',updatedAt:new Date().toISOString(),stats};
+}
+function espnPlayerFromRoster(entry){
+  return {
+    name:entry.athlete&&entry.athlete.displayName||entry.athlete&&entry.athlete.fullName||'',
+    shortName:entry.athlete&&entry.athlete.shortName||'',
+    num:entry.jersey||entry.athlete&&entry.athlete.jersey||'',
+    pos:entry.position&&entry.position.abbreviation||'',
+    position:entry.position&&entry.position.displayName||entry.position&&entry.position.name||'',
+    formationPlace:entry.formationPlace||'',
+    subbedIn:!!entry.subbedIn,subbedOut:!!entry.subbedOut
+  };
+}
+function espnSideFromRoster(roster,team){
+  const players=roster&&roster.roster||[];
+  return {
+    team,espnTeam:roster&&roster.team&&roster.team.displayName||'',
+    formation:roster&&roster.formation||'',
+    logo:roster&&roster.team&&roster.team.logos&&roster.team.logos[0]&&roster.team.logos[0].href||'',
+    starters:players.filter(p=>p.starter).map(espnPlayerFromRoster).filter(p=>p.name),
+    bench:players.filter(p=>!p.starter).map(espnPlayerFromRoster).filter(p=>p.name)
+  };
+}
+function espnLineupFromSummary(summary,fx,event){
+  const rosters=summary&&summary.rosters||[];
+  const homeRoster=rosters.find(r=>sameEspnTeam(r.team&&r.team.displayName,fx.home));
+  const awayRoster=rosters.find(r=>sameEspnTeam(r.team&&r.team.displayName,fx.away));
+  if(!homeRoster||!awayRoster)return null;
+  const home=espnSideFromRoster(homeRoster,fx.home),away=espnSideFromRoster(awayRoster,fx.away);
+  if(home.starters.length<11||away.starters.length<11)return null;
+  return {matchId:fx.id,espnEventId:event&&event.id,date:fx.date,homeTeam:fx.home,awayTeam:fx.away,source:'ESPN directo',updatedAt:new Date().toISOString(),home,away};
+}
+function espnPlayerFromText(text){
+  const m=String(text||'').match(/(?:Goal![^.]*\.\s*)?([^.(]+)\s+\(([^)]+)\)/);
+  return m?m[1].trim():'';
+}
+function espnTeamFromText(text){
+  const m=String(text||'').match(/(?:Goal![^.]*\.\s*)?[^.(]+\s+\(([^)]+)\)/);
+  return m?normName(m[1].trim()):'';
+}
+function espnAssistFromText(text){
+  const m=String(text||'').match(/Assisted by ([^.]+)/i);
+  return m?m[1].replace(/\s+following\b.*$/i,'').replace(/\s+with\b.*$/i,'').trim():'';
+}
+function espnTimelineType(playType){
+  const raw=String(playType&&playType.text||playType&&playType.type||'');
+  const n=espnNorm(raw);
+  if(n.includes('goal'))return 'Goal';
+  if(n.includes('yellow'))return 'Card';
+  if(n.includes('red'))return 'Card';
+  if(n.includes('substitution'))return 'Substitution';
+  if(n.includes('var'))return 'VAR';
+  return raw||'Event';
+}
+function espnTimelineFromSummary(summary){
+  const rows=[...(summary&&summary.keyEvents||[]),...(summary&&summary.commentary||[])];
+  const seen={};
+  return rows.map(function(row){
+    const play=row.play||{};
+    const type=play.type||{};
+    const txt=row.text||play.text||play.shortText||'';
+    const key=(row.sequence||'')+'|'+txt;
+    if(seen[key])return null;
+    seen[key]=true;
+    const display=row.time&&row.time.displayValue||play.clock&&play.clock.displayValue||'';
+    const minute=String(display).replace(/'/g,'');
+    const firstParticipant=play.participants&&play.participants[0]&&play.participants[0].athlete&&play.participants[0].athlete.displayName;
+    const textPlayer=espnPlayerFromText(txt);
+    return {
+      strTimeline:minute,strTime:minute,
+      strTimelineType:espnTimelineType(type),
+      strTimelineDetail:type.text||type.type||'',
+      strComment:txt,
+      strPlayer:textPlayer||firstParticipant,
+      strAssistPlayer:espnAssistFromText(txt),
+      strTeam:normName(play.team&&play.team.displayName||espnTeamFromText(txt))
+    };
+  }).filter(function(ev){
+    if(!ev)return false;
+    const kind=timelineKind(ev);
+    return kind==='goal'||kind==='yellow'||kind==='red'||kind==='substitution'||kind==='var';
+  });
+}
+function espnHighlightsFromSummary(summary){
+  return (summary&&summary.videos||[]).map(function(v){
+    const links=v.links||{};
+    const url=links.web&&links.web.href||links.mobile&&links.mobile.href||links.source&&links.source.href||'';
+    const thumb=v.thumbnail||v.posterImages&&v.posterImages.default&&v.posterImages.default.href||'';
+    return {strVideo:url,strThumb:thumb,strFilename:v.headline||v.title||t('watchHighlight'),source:'ESPN'};
+  }).filter(h=>h.strVideo);
+}
+async function loadEspnLiveData(fx){
+  try{
+    const event=await findEspnEventForFixture(fx);
+    if(!event)return null;
+    const summary=await fetchJson(ESPN_BASE+'/summary?event='+encodeURIComponent(event.id),{},5000);
+    return {
+      event,summary,
+      stats:espnStatsFromSummary(summary,fx,event),
+      lineup:espnLineupFromSummary(summary,fx,event),
+      timeline:espnTimelineFromSummary(summary),
+      highlights:espnHighlightsFromSummary(summary)
+    };
+  }catch(e){
+    console.warn('ESPN live fallback failed',e);
+    return null;
+  }
+}
+function espnLogo(event,team){
+  const competitors=event&&event.competitions&&event.competitions[0]&&event.competitions[0].competitors||[];
+  const row=competitors.find(c=>sameEspnTeam(c.team&&c.team.displayName,team));
+  return row&&row.team&&row.team.logos&&row.team.logos[0]&&row.team.logos[0].href||'';
+}
+function espnDetailEvent(fx,espnLive){
+  const event=espnLive&&espnLive.event||{};
+  const state=event.status&&event.status.type&&event.status.type.state||'pre';
+  const score=espnScore(event,fx);
+  return {
+    idEvent:'espn-'+(event.id||fx.id),
+    dateEvent:fx.date,
+    strTime:fx.time,
+    strRound:fx.group,
+    strHomeTeam:fx.home,
+    strAwayTeam:fx.away,
+    strVenue:fx.venue,
+    strCity:fx.city,
+    strHomeTeamBadge:espnLogo(event,fx.home),
+    strAwayTeamBadge:espnLogo(event,fx.away),
+    strStatus:state==='post'?'FT':state==='in'?'Live':'Scheduled',
+    strProgress:event.status&&event.status.displayClock||event.status&&event.status.type&&event.status.type.shortDetail||'',
+    intHomeScore:score.home,
+    intAwayScore:score.away
+  };
+}
+async function renderEspnOnlyDetail(fx,espnLive){
+  const ev=espnDetailEvent(fx,espnLive);
+  const event=espnLive&&espnLive.event||{};
+  const state=event.status&&event.status.type&&event.status.type.state||'pre';
+  const detail=event.status&&(event.status.displayClock||event.status.type&&event.status.type.shortDetail||event.status.type&&event.status.type.detail)||'';
+  const es=toES(fx.date,fx.time);
+  const live2=state==='in',fin=state==='post';
+  const hasScore=ev.intHomeScore!==null&&ev.intHomeScore!==undefined&&ev.intAwayScore!==null&&ev.intAwayScore!==undefined;
+  const daznHls=await loadDaznHighlights(event.id||ev.idEvent,ev);
+  const seenHls={};
+  const hls=[...(espnLive.highlights||[]),...daznHls].filter(function(h){
+    const key=h.strVideo||h.url||h.videoId||h.strFilename;
+    if(!key||seenHls[key])return false;
+    seenHls[key]=true;
+    return true;
+  });
+  let html=`<div style="padding:16px">
+    <div style="text-align:center;margin-bottom:12px">
+      <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:7px">${escHtml(fx.group||'')}</div>
+      <div style="display:flex;justify-content:center;gap:14px;align-items:center">
+        <div style="text-align:center">
+          ${ev.strHomeTeamBadge?`<img src="${escHtml(ev.strHomeTeamBadge)}" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:`<div style="font-size:32px;margin-bottom:4px">${fx.homeFlag||FLAGS[fx.home]||'🏳️'}</div>`}
+          <div style="font-family:var(--disp);font-size:14px">${escHtml(fx.home)}</div>
+        </div>
+        <div style="text-align:center;min-width:65px">
+          ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${ev.intHomeScore} – ${ev.intAwayScore}</div>`:`<div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>`}
+          ${live2?`<div style="font-size:12px;color:var(--live);font-weight:600">${escHtml(detail||ev.strProgress||'EN JUEGO')}</div>`:''}
+        </div>
+        <div style="text-align:center">
+          ${ev.strAwayTeamBadge?`<img src="${escHtml(ev.strAwayTeamBadge)}" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:`<div style="font-size:32px;margin-bottom:4px">${fx.awayFlag||FLAGS[fx.away]||'🏳️'}</div>`}
+          <div style="font-family:var(--disp);font-size:14px">${escHtml(fx.away)}</div>
+        </div>
+      </div>
+      ${es?`<div style="background:rgba(201,162,39,.06);border:1px solid var(--border);border-radius:8px;padding:7px 12px;display:inline-flex;align-items:center;gap:8px;margin-top:8px">
+        <span style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--gold)">${es.time}</span>
+        <span style="font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
+        <span style="font-family:var(--mono);font-size:12px;color:var(--muted)">${fx.time} UTC</span>
+      </div>`:''}
+      <div style="font-size:13px;color:var(--muted);margin-top:6px">📍 ${escHtml(fx.venue||'')}${fx.city?', '+escHtml(fx.city):''}</div>
+    </div>`;
+  html+=renderHighlightsSection(hls);
+  const liveTimeline=espnLive.timeline||[];
+  const statsHtml=renderMatchStats([],ev,liveTimeline,espnLive.stats);
+  const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline):'';
+  const lineupHtml=renderLineupsSection(espnLive.lineup,fx.home,fx.away);
+  html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
+  return html+'</div>';
+}
 async function openDetail(eid,date,home,away){
   const panel=document.getElementById('detailPanel');
   const inner=document.getElementById('detailInner');
@@ -2599,7 +2936,15 @@ async function openDetail(eid,date,home,away){
       }
     }catch{}
   }
+  const fxDetail=FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away)&&(!date||f.date===date))||
+    FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away));
+  const espnLivePromise=fxDetail?loadEspnLiveData(fxDetail):Promise.resolve(null);
   if(!eventId){
+    const espnLive=await espnLivePromise;
+    if(espnLive&&fxDetail){
+      inner.innerHTML=await renderEspnOnlyDetail(fxDetail,espnLive);
+      return;
+    }
     const fx=FIXTURES.find(f=>f.home===home&&f.away===away&&f.date===date);
     if(fx){
       const es=toES(fx.date,fx.time);
@@ -2621,22 +2966,30 @@ async function openDetail(eid,date,home,away){
     return;
   }
   try{
-    const[evD,tlD,stD,hlD,luD]=await Promise.allSettled([
+    const[evD,tlD,stD,hlD,luD,espnD]=await Promise.allSettled([
       v1(`/lookupevent.php?id=${eventId}`),
       v1(`/lookuptimeline.php?id=${eventId}`),
       v1(`/lookupeventstats.php?id=${eventId}`),
       v2(`/lookup/event_highlights/${eventId}`),
-      v1(`/lookuplineup.php?id=${eventId}`)
+      v1(`/lookuplineup.php?id=${eventId}`),
+      espnLivePromise
     ]);
+    const espnLive=espnD.status==='fulfilled'?espnD.value:null;
     const ev=(evD.value&&evD.value.events&&evD.value.events[0]);
     if(!ev){inner.innerHTML='<div class="empty" style="padding:40px"><div class="empty-icon">❌</div><div class="empty-text">Sin datos API</div></div>';return;}
     const es=toES(ev.dateEvent,ev.strTime&&ev.strTime.slice(0,5));
-    const fin=isFin(ev.strStatus),live2=isLive(ev.strStatus);
-    const hasScore=ev.intHomeScore!==null&&ev.intHomeScore!==undefined;
+    const espnState=espnLive&&espnLive.event&&espnLive.event.status&&espnLive.event.status.type&&espnLive.event.status.type.state;
+    const espnStatusDetail=espnLive&&espnLive.event&&espnLive.event.status&&(espnLive.event.status.displayClock||espnLive.event.status.type&&espnLive.event.status.type.shortDetail||espnLive.event.status.type&&espnLive.event.status.type.detail);
+    const espnLiveScore=espnLive&&fxDetail?espnScore(espnLive.event,fxDetail):null;
+    const displayHomeScore=espnLiveScore&&espnLiveScore.home!==null?espnLiveScore.home:ev.intHomeScore;
+    const displayAwayScore=espnLiveScore&&espnLiveScore.away!==null?espnLiveScore.away:ev.intAwayScore;
+    const fin=espnState==='post'||isFin(ev.strStatus),live2=espnState==='in'||isLive(ev.strStatus);
+    const hasScore=displayHomeScore!==null&&displayHomeScore!==undefined;
     const tsdbHls=await loadEventHighlights(eventId,ev.dateEvent,hlD.value);
     const daznHls=await loadDaznHighlights(eventId,ev);
+    const espnHls=espnLive&&espnLive.highlights||[];
     const seenHls={};
-    const hls=tsdbHls.concat(daznHls).filter(function(h){
+    const hls=tsdbHls.concat(espnHls,daznHls).filter(function(h){
       const key=h.strVideo||h.url||h.videoId||h.strFilename;
       if(!key||seenHls[key])return false;
       seenHls[key]=true;
@@ -2652,9 +3005,9 @@ async function openDetail(eid,date,home,away){
             <div style="font-family:var(--disp);font-size:14px">${ev.strHomeTeam}</div>
           </div>
           <div style="text-align:center;min-width:65px">
-            ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${ev.intHomeScore} – ${ev.intAwayScore}</div>`:
+            ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${displayHomeScore} – ${displayAwayScore}</div>`:
             `<div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>`}
-            ${live2?`<div style="font-size:12px;color:var(--live);font-weight:600">${ev.strProgress||'EN JUEGO'}'</div>`:''}
+            ${live2?`<div style="font-size:12px;color:var(--live);font-weight:600">${espnStatusDetail||ev.strProgress||'EN JUEGO'}</div>`:''}
           </div>
           <div style="text-align:center">
             ${ev.strAwayTeamBadge?`<img src="${ev.strAwayTeamBadge}/medium" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:
@@ -2673,11 +3026,13 @@ async function openDetail(eid,date,home,away){
     // Stats
     const stats=(stD.value&&stD.value.eventstats)||[];
     const tl=(tlD.value&&tlD.value.timeline)||[];
-    const espnMatchStats=await loadStoredMatchStats(eventId,ev);
-    const statsHtml=renderMatchStats(stats,ev,tl,espnMatchStats);
-    const timelineHtml=tl.length?renderSplitTimeline(tl):'';
+    const espnStoredStats=await loadStoredMatchStats(eventId,ev);
+    const espnMatchStats=(espnLive&&espnLive.stats)||espnStoredStats;
+    const liveTimeline=(espnLive&&espnLive.timeline&&espnLive.timeline.length)?espnLive.timeline:tl;
+    const statsHtml=renderMatchStats(stats,ev,liveTimeline,espnMatchStats);
+    const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline):'';
     const storedLineup=await loadStoredLineups(eventId,ev);
-    const lineupHtml=renderLineupsSection(storedLineup||((luD.value&&luD.value.lineup)||[]),ev.strHomeTeam,ev.strAwayTeam);
+    const lineupHtml=renderLineupsSection((espnLive&&espnLive.lineup)||storedLineup||((luD.value&&luD.value.lineup)||[]),ev.strHomeTeam,ev.strAwayTeam);
     html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
     html+='</div>';
     inner.innerHTML=html;
