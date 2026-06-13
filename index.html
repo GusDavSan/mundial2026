@@ -102,7 +102,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .live-momentum-bar{height:5px;background:var(--bg3);border-radius:999px;display:flex;overflow:hidden;min-width:130px;flex:1;max-width:220px}
 .live-momentum-home{background:var(--gold);border-radius:999px}
 .live-momentum-away{background:var(--muted);border-radius:999px;margin-left:auto}
-.live-mini-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.live-mini-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:6px}
 .live-mini-stat{background:rgba(232,237,245,.045);border:1px solid var(--border);border-radius:7px;padding:6px 5px;text-align:center;min-width:0}
 .live-mini-label{display:block;font-size:9px;font-weight:800;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.4px;text-transform:uppercase}
 .live-mini-val{display:block;font-family:var(--mono);font-size:11px;font-weight:800;color:var(--text);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -621,7 +621,7 @@ const I18N={
     keeperTentative:'Portero probable · confirmar alineación',keeperConfirmed:'Portero confirmado',keeperFallback:'Portero por confirmar',teamCleanSheet:'Portería a cero de la selección',
     keeperEstimated:'Ranking estimado',keeperSaves:'Paradas',keeperSavePct:'% paradas',keeperGoalsAgainst:'GC',keeperCleanSheets:'P0',keeperPenaltySaves:'Pen.',
     matchStats:'ESTADÍSTICAS',timeline:'TIMELINE',timelineGoals:'GOLES',timelineCards:'TARJETAS',timelineSubs:'CAMBIOS',timelineOther:'OTROS',
-    goalEvent:'Gol',penaltyGoal:'Penalti',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
+    goalEvent:'Gol',penaltyGoal:'Penalti',penaltyEvent:'Penalti',penaltyFor:'A favor de',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
     noEventsInBlock:'Sin eventos en este bloque.',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
     starters:'Titulares',bench:'Banquillo',formation:'Formación',lineupsSource:'Fuente',
     shots:'Tiros',shotsOnGoal:'Tiros a puerta',possession:'Posesión',passes:'Pases',fouls:'Faltas',yellowCards:'Tarjetas amarillas',redCards:'Tarjetas rojas',corners:'Córners',
@@ -660,7 +660,7 @@ const I18N={
     keeperTentative:'Likely goalkeeper · confirm lineup',keeperConfirmed:'Confirmed goalkeeper',keeperFallback:'Goalkeeper to confirm',teamCleanSheet:'Team clean sheet',
     keeperEstimated:'Estimated ranking',keeperSaves:'Saves',keeperSavePct:'Save %',keeperGoalsAgainst:'GA',keeperCleanSheets:'CS',keeperPenaltySaves:'Pen.',
     matchStats:'STATS',timeline:'TIMELINE',timelineGoals:'GOALS',timelineCards:'CARDS',timelineSubs:'SUBSTITUTIONS',timelineOther:'OTHER',
-    goalEvent:'Goal',penaltyGoal:'Penalty',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
+    goalEvent:'Goal',penaltyGoal:'Penalty',penaltyEvent:'Penalty',penaltyFor:'For',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
     noEventsInBlock:'No events in this block.',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
     starters:'Starters',bench:'Bench',formation:'Formation',lineupsSource:'Source',
     shots:'Shots',shotsOnGoal:'Shots on goal',possession:'Possession',passes:'Passes',fouls:'Fouls',yellowCards:'Yellow cards',redCards:'Red cards',corners:'Corners',
@@ -1106,9 +1106,9 @@ function minuteScore(minute){
   return parts.reduce((a,b)=>a+b,0);
 }
 function latestImportantEvent(timeline){
-  return (timeline||[]).filter(function(ev){
+  return dedupeTimelineEvents(timeline).filter(function(ev){
     const kind=timelineKind(ev);
-    return kind==='goal'||kind==='yellow'||kind==='red'||kind==='substitution'||kind==='var';
+    return kind==='goal'||kind==='penalty'||kind==='yellow'||kind==='red'||kind==='substitution'||kind==='var';
   }).sort(function(a,b){return minuteScore(eventMinute(b))-minuteScore(eventMinute(a));})[0]||null;
 }
 function buildLiveInsight(fx,espnLive){
@@ -1119,7 +1119,9 @@ function buildLiveInsight(fx,espnLive){
   const shots=statPairFromMatch(matchStats,'shots');
   const poss=statPairFromMatch(matchStats,'possession');
   const counts=timelineCounts(timeline,fx.home,fx.away);
-  const cards={home:(counts.yellow.home||0)+(counts.red.home||0),away:(counts.yellow.away||0)+(counts.red.away||0)};
+  const yellowCards={home:counts.yellow.home||0,away:counts.yellow.away||0};
+  const redCards={home:counts.red.home||0,away:counts.red.away||0};
+  const cards={home:yellowCards.home+redCards.home,away:yellowCards.away+redCards.away};
   const score=espnLive.event?espnScore(espnLive.event,fx):{home:null,away:null};
   const scoreDiff=(Number(score.home||0)-Number(score.away||0))*4;
   const sogDiff=sog?(sog.home-sog.away)*3:0;
@@ -1131,7 +1133,7 @@ function buildLiveInsight(fx,espnLive){
   const momentumTeam=Math.abs(momentumRaw)<1.6?t('balancedMatch'):(momentumRaw>0?fx.home:fx.away);
   const last=latestImportantEvent(timeline);
   if(!sog&&!shots&&!poss&&!last)return null;
-  return {date:fx.date,home:fx.home,away:fx.away,momentumTeam,momentumPct,sog,shots,poss,cards,last,updatedAt:espnLive.fetchedAt||new Date().toISOString()};
+  return {date:fx.date,home:fx.home,away:fx.away,momentumTeam,momentumPct,sog,shots,poss,yellowCards,redCards,last,updatedAt:espnLive.fetchedAt||new Date().toISOString()};
 }
 function renderLiveInsight(insight){
   if(!insight)return '';
@@ -1141,7 +1143,6 @@ function renderLiveInsight(insight){
   const lastTeam=last&&last.strTeam?(FLAGS[normName(last.strTeam)]||FLAGS[last.strTeam]||''):'';
   const lastMinute=last?eventMinute(last):'';
   const possText=pairText(insight.poss,'%');
-  const cardsText=pairText(insight.cards);
   return '<div class="live-insight" onclick="event.stopPropagation(); openDetail(0,\''+escQ(insight.date||'')+'\',\''+escQ(insight.home)+'\',\''+escQ(insight.away)+'\')">'+
     '<div class="live-insight-top">'+
       '<div><div class="live-momentum-label">'+t('momentum')+'</div><div class="live-momentum-team">'+escHtml(insight.momentumTeam)+'</div></div>'+
@@ -1151,7 +1152,8 @@ function renderLiveInsight(insight){
       '<div class="live-mini-stat"><span class="live-mini-label">'+t('shotsOnTargetShort')+'</span><span class="live-mini-val">'+pairText(insight.sog)+'</span></div>'+
       '<div class="live-mini-stat"><span class="live-mini-label">'+t('shotsShort')+'</span><span class="live-mini-val">'+pairText(insight.shots)+'</span></div>'+
       '<div class="live-mini-stat"><span class="live-mini-label">'+t('possession')+'</span><span class="live-mini-val">'+possText+'</span></div>'+
-      '<div class="live-mini-stat"><span class="live-mini-label">'+t('cardsShort')+'</span><span class="live-mini-val">'+cardsText+'</span></div>'+
+      '<div class="live-mini-stat"><span class="live-mini-label">🟨</span><span class="live-mini-val">'+pairText(insight.yellowCards)+'</span></div>'+
+      '<div class="live-mini-stat"><span class="live-mini-label">🟥</span><span class="live-mini-val">'+pairText(insight.redCards)+'</span></div>'+
     '</div>'+
     (last?'<div class="live-last-event"><span class="live-last-tag">'+t('lastEvent')+'</span><span class="live-last-main">'+timelineIcon(lastKind)+' '+escHtml(lastPlayer)+' '+lastTeam+'</span><span class="live-last-min">'+escHtml(lastMinute)+'</span></div>':'')+
   '</div>';
@@ -2605,12 +2607,22 @@ function timelineKind(ev){
   const detail=stripText(ev.strTimelineDetail||'');
   const tx=eventText(ev);
   const hasWord=function(text,word){return new RegExp('(^|[^a-z])'+word+'([^a-z]|$)').test(text);};
-  const goalSignal=raw==='goal'||raw==='penalty'||raw.includes('goal')||detail.includes('goal')||
+  const penaltySignal=raw.includes('penalty')||detail.includes('penalty')||tx.includes('penalty')||tx.includes('penalti');
+  const penaltyScored=penaltySignal&&(
+    detail.includes('penalty scored')||detail.includes('penalty - scored')||
+    tx.includes('penalty scored')||tx.includes('penalty - scored')||
+    tx.includes('penalti marcado')||tx.includes('penalty converted')||
+    tx.includes('goal!')
+  );
+  if(detail.includes('goal disallowed'))return 'var';
+  const goalSignal=raw==='goal'||raw.includes('goal')||detail.includes('goal')||
     tx.includes('goal!')||tx.includes(' gol')||tx.includes('gol ')||
     detail.includes('penalty scored')||detail.includes('penalty - scored')||
     tx.includes('penalty scored')||tx.includes('penalty - scored')||
     tx.includes('penalti marcado')||tx.includes('penalty converted');
+  if(penaltyScored)return 'goal';
   if(goalSignal)return 'goal';
+  if(penaltySignal)return 'penalty';
   if(raw==='var'||raw.includes('var'))return 'var';
   const cardSignal=raw==='card'||raw.includes('card')||hasWord(raw,'yellow')||hasWord(raw,'red')||
     detail.includes('card')||hasWord(detail,'yellow')||hasWord(detail,'red')||
@@ -2621,12 +2633,12 @@ function timelineKind(ev){
     return 'yellow';
   }
   if(raw==='subst'||raw.includes('substitution')||detail.includes('substitution')||tx.includes('cambio'))return 'substitution';
-  if(detail.includes('goal disallowed'))return 'var';
   return 'other';
 }
 function timelineLabel(ev){
   const kind=timelineKind(ev),tx=eventText(ev);
   if(kind==='goal')return tx.includes('penalty')||tx.includes('penalti')?t('penaltyGoal'):t('goalEvent');
+  if(kind==='penalty')return t('penaltyEvent');
   if(kind==='yellow')return t('yellowCard');
   if(kind==='red')return t('redCard');
   if(kind==='substitution')return t('substitutionEvent');
@@ -2634,7 +2646,7 @@ function timelineLabel(ev){
   return t('otherEvent');
 }
 function timelineIcon(kind){
-  return kind==='goal'?'⚽':kind==='yellow'?'🟨':kind==='red'?'🟥':kind==='substitution'?'🔄':kind==='var'?'📺':'•';
+  return kind==='goal'?'⚽':kind==='penalty'?'PK':kind==='yellow'?'🟨':kind==='red'?'🟥':kind==='substitution'?'🔄':kind==='var'?'📺':'•';
 }
 function eventPlayer(ev){
   const vals=[ev.strPlayer,ev.strPlayer1,ev.strPlayer2,ev.strTimelinePlayer];
@@ -2658,9 +2670,69 @@ function teamSide(team,home,away){
   if(sameTeam(team,away))return 'away';
   return null;
 }
+function eventCommentKey(ev){
+  return stripText(ev.strComment||ev.strEvent||ev.strTimelineDetail||'')
+    .replace(/\b\d+(\+\d+)?\b/g,'')
+    .replace(/\bgoal\b/g,'')
+    .replace(/\bpenalty\b/g,'')
+    .replace(/\bcard\b/g,'')
+    .replace(/\byellow\b/g,'')
+    .replace(/\bred\b/g,'')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+function eventQuality(ev){
+  let score=0;
+  if(eventMinute(ev))score+=8;
+  if(eventPlayer(ev))score+=6;
+  if(ev.strTeam)score+=4;
+  if(eventAssist(ev))score+=2;
+  if(ev.strComment)score+=1;
+  return score;
+}
+function sameTimelineEvent(a,b){
+  const ka=timelineKind(a),kb=timelineKind(b);
+  if(ka!==kb)return false;
+  const pa=squadPlayerKey(eventPlayer(a)||''),pb=squadPlayerKey(eventPlayer(b)||'');
+  const ta=stripText(normName(a.strTeam||'')),tb=stripText(normName(b.strTeam||''));
+  const ca=eventCommentKey(a),cb=eventCommentKey(b);
+  const ma=minuteScore(eventMinute(a)),mb=minuteScore(eventMinute(b));
+  if(ma>=0&&mb>=0&&Math.abs(ma-mb)>0)return false;
+  const sameComment=!ca||!cb||ca===cb||ca.includes(cb)||cb.includes(ca);
+  if(pa&&pb&&pa===pb&&ta&&tb&&ta===tb&&sameComment)return true;
+  if(pa&&pb&&pa===pb&&(!ta||!tb)&&sameComment)return true;
+  if(ta&&tb&&ta===tb&&ca&&cb&&ca===cb)return true;
+  return !pa&&!pb&&ca&&cb&&ca===cb;
+}
+function mergeTimelineEvent(a,b){
+  const primary=eventQuality(b)>eventQuality(a)?b:a;
+  const secondary=primary===a?b:a;
+  const out=Object.assign({},primary);
+  Object.keys(secondary||{}).forEach(function(k){
+    if((out[k]===undefined||out[k]===null||out[k]==='')&&secondary[k]!==undefined&&secondary[k]!==null&&secondary[k]!=='')out[k]=secondary[k];
+  });
+  return out;
+}
+function dedupeTimelineEvents(timeline){
+  const out=[];
+  (timeline||[]).forEach(function(ev){
+    if(!ev)return;
+    const kind=timelineKind(ev);
+    if(!['goal','penalty','yellow','red','substitution','var'].includes(kind))return;
+    const idx=out.findIndex(existing=>sameTimelineEvent(existing,ev));
+    if(idx>=0)out[idx]=mergeTimelineEvent(out[idx],ev);
+    else out.push(ev);
+  });
+  return out.sort(function(a,b){
+    const ma=minuteScore(eventMinute(a)),mb=minuteScore(eventMinute(b));
+    if(ma<0&&mb>=0)return -1;
+    if(ma>=0&&mb<0)return 1;
+    return ma-mb;
+  });
+}
 function timelineCounts(timeline,home,away){
   const counts={yellow:{home:0,away:0},red:{home:0,away:0},goal:{home:0,away:0}};
-  (timeline||[]).forEach(function(ev){
+  dedupeTimelineEvents(timeline).forEach(function(ev){
     const side=teamSide(ev.strTeam,home,away);
     if(!side)return;
     const kind=timelineKind(ev);
@@ -2679,6 +2751,7 @@ function renderTimelineBlock(title,events){
     const teamFlag=FLAGS[normName(ev.strTeam)]||FLAGS[ev.strTeam]||'🏳️';
     let meta='';
     if(kind==='yellow'||kind==='red')meta='<span style="font-size:15px">'+teamFlag+'</span>';
+    else if(kind==='penalty')meta=ev.strTeam?escHtml(t('penaltyFor'))+' · '+teamFlag+' '+escHtml(normName(ev.strTeam)):escHtml(timelineLabel(ev));
     else meta=escHtml(timelineLabel(ev))+(ev.strTeam?' · '+teamFlag+' '+escHtml(normName(ev.strTeam)):'')+(assist?' · '+escHtml(t('assistLabel'))+': '+escHtml(assist):'');
     html+='<div class="event-row">'+
       '<div class="event-minute">'+escHtml(minute)+'</div>'+
@@ -2690,16 +2763,18 @@ function renderTimelineBlock(title,events){
   return html+'</div>';
 }
 function renderSplitTimeline(timeline){
-  const groups={goals:[],cards:[],subs:[],other:[]};
-  (timeline||[]).forEach(function(ev){
+  const groups={goals:[],penalties:[],cards:[],subs:[],other:[]};
+  dedupeTimelineEvents(timeline).forEach(function(ev){
     const kind=timelineKind(ev);
     if(kind==='goal')groups.goals.push(ev);
+    else if(kind==='penalty')groups.penalties.push(ev);
     else if(kind==='yellow'||kind==='red')groups.cards.push(ev);
     else if(kind==='substitution')groups.subs.push(ev);
     else groups.other.push(ev);
   });
   let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:7px">'+t('timeline')+'</div><div class="event-groups">';
   html+=renderTimelineBlock('⚽ '+t('timelineGoals'),groups.goals);
+  if(groups.penalties.length)html+=renderTimelineBlock('PK '+t('penaltyEvent'),groups.penalties);
   html+=renderTimelineBlock('🟨 '+t('timelineCards'),groups.cards);
   if(groups.subs.length)html+=renderTimelineBlock('🔄 '+t('timelineSubs'),groups.subs);
   if(groups.other.length)html+=renderTimelineBlock(t('timelineOther'),groups.other);
@@ -3230,7 +3305,7 @@ function espnTimelineType(playType){
 function espnTimelineFromSummary(summary){
   const rows=[...(summary&&summary.keyEvents||[]),...(summary&&summary.commentary||[])];
   const seen={};
-  return rows.map(function(row){
+  const mapped=rows.map(function(row){
     const play=row.play||{};
     const type=play.type||{};
     const txt=row.text||play.text||play.shortText||'';
@@ -3253,8 +3328,9 @@ function espnTimelineFromSummary(summary){
   }).filter(function(ev){
     if(!ev)return false;
     const kind=timelineKind(ev);
-    return kind==='goal'||kind==='yellow'||kind==='red'||kind==='substitution'||kind==='var';
+    return kind==='goal'||kind==='penalty'||kind==='yellow'||kind==='red'||kind==='substitution'||kind==='var';
   });
+  return dedupeTimelineEvents(mapped);
 }
 function espnHighlightsFromSummary(summary){
   return (summary&&summary.videos||[]).map(function(v){
