@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T18:44:36.637Z",
+  "updated": "2026-06-13T20:41:09.185Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -53,6 +53,19 @@
       "videoId": "nb_lwU9AN0g",
       "publishedAt": "2026-06-13T05:22:55Z",
       "confidence": 20
+    },
+    {
+      "matchId": 5,
+      "date": "2026-06-13",
+      "home": "Qatar",
+      "away": "Switzerland",
+      "source": "DAZN ES",
+      "title": "Para sangre fría... la de Embolo 🧊Suiza marca territorio ante Catar 💥",
+      "url": "https://www.youtube.com/watch?v=_T0DqayiI2E",
+      "thumbnail": "https://i.ytimg.com/vi/_T0DqayiI2E/hqdefault.jpg",
+      "videoId": "_T0DqayiI2E",
+      "publishedAt": "2026-06-13T19:50:11Z",
+      "confidence": 14
     }
   ]
 }
