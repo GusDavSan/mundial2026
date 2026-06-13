@@ -100,6 +100,8 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .live-momentum-bar{height:5px;background:var(--bg3);border-radius:999px;display:flex;overflow:hidden;min-width:130px;flex:1;max-width:220px}
 .live-momentum-home{background:var(--gold);border-radius:999px}
 .live-momentum-away{background:var(--muted);border-radius:999px;margin-left:auto}
+.live-momentum-scale{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;font-family:var(--mono);font-size:9px;color:var(--muted);white-space:nowrap}
+.live-momentum-scale span:first-child{color:var(--gold)}
 .live-mini-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:6px}
 .live-mini-stat{background:rgba(232,237,245,.045);border:1px solid var(--border);border-radius:7px;padding:6px 5px;text-align:center;min-width:0}
 .live-mini-label{display:block;font-size:9px;font-weight:800;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.4px;text-transform:uppercase}
@@ -1163,10 +1165,15 @@ function renderLiveInsight(insight){
   const lastTeam=last&&last.strTeam?(FLAGS[normName(last.strTeam)]||FLAGS[last.strTeam]||''):'';
   const lastMinute=last?eventMinute(last):'';
   const possText=pairText(insight.poss,'%');
+  const homeMomentum=Math.round(insight.momentumPct||50);
+  const awayMomentum=100-homeMomentum;
   return '<div class="live-insight" onclick="event.stopPropagation(); openDetail(0,\''+escQ(insight.date||'')+'\',\''+escQ(insight.home)+'\',\''+escQ(insight.away)+'\')">'+
     '<div class="live-insight-top">'+
       '<div><div class="live-momentum-label">'+t('momentum')+'</div><div class="live-momentum-team">'+escHtml(insight.momentumTeam)+'</div></div>'+
-      '<div class="live-momentum-bar" aria-hidden="true"><div class="live-momentum-home" style="width:'+insight.momentumPct+'%"></div><div class="live-momentum-away" style="width:'+(100-insight.momentumPct)+'%"></div></div>'+
+      '<div style="min-width:130px;flex:1;max-width:220px">'+
+        '<div class="live-momentum-bar" aria-hidden="true"><div class="live-momentum-home" style="width:'+insight.momentumPct+'%"></div><div class="live-momentum-away" style="width:'+(100-insight.momentumPct)+'%"></div></div>'+
+        '<div class="live-momentum-scale"><span>'+escHtml(insight.home)+' '+homeMomentum+'%</span><span>'+escHtml(insight.away)+' '+awayMomentum+'%</span></div>'+
+      '</div>'+
     '</div>'+
     '<div class="live-mini-stats">'+
       '<div class="live-mini-stat"><span class="live-mini-label">'+t('shotsOnTargetShort')+'</span><span class="live-mini-val">'+pairText(insight.sog)+'</span></div>'+
