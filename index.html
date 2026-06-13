@@ -1307,13 +1307,14 @@ async function loadLive(){
       const competitors=comp&&comp.competitors||[];
       const h=competitors.find(c=>c.homeAway==='home');
       const a=competitors.find(c=>c.homeAway==='away');
-      const state=event.status&&event.status.type&&event.status.type.state||'pre';
-      const detail=event.status&&event.status.type&&(event.status.type.shortDetail||event.status.type.detail)||event.status&&event.status.displayClock||'';
+      const st=espnEventStatus(event);
+      const state=st&&st.type&&st.type.state||'pre';
+      const detail=st&&st.type&&(st.type.shortDetail||st.type.detail)||st&&st.displayClock||'';
       const row={
         id:fx.id,date:fx.date,time:fx.time,home:fx.home,away:fx.away,group:fx.group,
         venue:fx.venue,city:fx.city,homeFlag:fx.homeFlag,awayFlag:fx.awayFlag,
         status:state==='in'?'Live':state==='post'?'FT':'Scheduled',
-        homeScore:h&&h.score,awayScore:a&&a.score,progress:detail,periodLabel:state==='in'?espnPeriodLabel(event.status):''
+        homeScore:h&&h.score,awayScore:a&&a.score,progress:detail,periodLabel:state==='in'?espnPeriodLabel(st):''
       };
       if(state==='in')liveNow.push(row);
       else if(state==='post')finished.push(row);
@@ -1335,7 +1336,7 @@ async function loadLive(){
           e.homeScore=score.home;e.awayScore=score.away;
           e.intHomeScore=score.home;e.intAwayScore=score.away;
         }
-        const st=espnLive.event&&espnLive.event.status;
+        const st=espnEventStatus(espnLive.event);
         const state=st&&st.type&&st.type.state;
         if(state==='in')e.status=e.strStatus='Live';
         e.progress=(st&&(st.displayClock||st.type&&st.type.shortDetail||st.type&&st.type.detail))||e.progress||e.strProgress;
@@ -1358,6 +1359,7 @@ async function loadLive(){
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
+        periodLabel:e.strPeriodLabel||e.periodLabel,
         liveInsight:e.liveInsight
       });
     }).join('');
@@ -3232,6 +3234,10 @@ function sameEspnTeam(a,b){
   const aa=espnAliases(a),bb=espnAliases(b);
   return aa.some(function(x){return bb.includes(x);});
 }
+function espnEventStatus(event){
+  const comp=event&&event.competitions&&event.competitions[0];
+  return comp&&comp.status||event&&event.status||{};
+}
 function espnPeriodLabel(status){
   const st=status||{};
   const type=st.type||{};
@@ -3622,7 +3628,8 @@ function espnLogo(event,team){
 }
 function espnDetailEvent(fx,espnLive){
   const event=espnLive&&espnLive.event||{};
-  const state=event.status&&event.status.type&&event.status.type.state||'pre';
+  const st=espnEventStatus(event);
+  const state=st&&st.type&&st.type.state||'pre';
   const score=espnScore(event,fx);
   return {
     idEvent:'espn-'+(event.id||fx.id),
@@ -3636,8 +3643,8 @@ function espnDetailEvent(fx,espnLive){
     strHomeTeamBadge:espnLogo(event,fx.home),
     strAwayTeamBadge:espnLogo(event,fx.away),
     strStatus:state==='post'?'FT':state==='in'?'Live':'Scheduled',
-    strProgress:event.status&&event.status.displayClock||event.status&&event.status.type&&event.status.type.shortDetail||'',
-    strPeriodLabel:state==='in'?espnPeriodLabel(event.status):'',
+    strProgress:st&&st.displayClock||st&&st.type&&st.type.shortDetail||'',
+    strPeriodLabel:state==='in'?espnPeriodLabel(st):'',
     intHomeScore:score.home,
     intAwayScore:score.away
   };
@@ -3645,8 +3652,9 @@ function espnDetailEvent(fx,espnLive){
 async function renderEspnOnlyDetail(fx,espnLive){
   const ev=espnDetailEvent(fx,espnLive);
   const event=espnLive&&espnLive.event||{};
-  const state=event.status&&event.status.type&&event.status.type.state||'pre';
-  const detail=event.status&&(event.status.displayClock||event.status.type&&event.status.type.shortDetail||event.status.type&&event.status.type.detail)||'';
+  const st=espnEventStatus(event);
+  const state=st&&st.type&&st.type.state||'pre';
+  const detail=st&&(st.displayClock||st.type&&st.type.shortDetail||st.type&&st.type.detail)||'';
   const es=toES(fx.date,fx.time);
   const live2=state==='in',fin=state==='post';
   const hasScore=ev.intHomeScore!==null&&ev.intHomeScore!==undefined&&ev.intAwayScore!==null&&ev.intAwayScore!==undefined;
@@ -3757,8 +3765,9 @@ async function openDetail(eid,date,home,away){
     const ev=(evD.value&&evD.value.events&&evD.value.events[0]);
     if(!ev){inner.innerHTML='<div class="empty" style="padding:40px"><div class="empty-icon">❌</div><div class="empty-text">Sin datos API</div></div>';return;}
     const es=toES(ev.dateEvent,ev.strTime&&ev.strTime.slice(0,5));
-    const espnState=espnLive&&espnLive.event&&espnLive.event.status&&espnLive.event.status.type&&espnLive.event.status.type.state;
-    const espnStatusDetail=espnLive&&espnLive.event&&espnLive.event.status&&(espnLive.event.status.displayClock||espnLive.event.status.type&&espnLive.event.status.type.shortDetail||espnLive.event.status.type&&espnLive.event.status.type.detail);
+    const espnStatus=espnLive&&espnLive.event?espnEventStatus(espnLive.event):null;
+    const espnState=espnStatus&&espnStatus.type&&espnStatus.type.state;
+    const espnStatusDetail=espnStatus&&(espnStatus.displayClock||espnStatus.type&&espnStatus.type.shortDetail||espnStatus.type&&espnStatus.type.detail);
     const espnLiveScore=espnLive&&fxDetail?espnScore(espnLive.event,fxDetail):null;
     const displayHomeScore=espnLiveScore&&espnLiveScore.home!==null?espnLiveScore.home:ev.intHomeScore;
     const displayAwayScore=espnLiveScore&&espnLiveScore.away!==null?espnLiveScore.away:ev.intAwayScore;
@@ -3786,7 +3795,7 @@ async function openDetail(eid,date,home,away){
           <div style="text-align:center;min-width:65px">
             ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${displayHomeScore} – ${displayAwayScore}</div>`:
             `<div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>`}
-            ${live2?livePhaseTagsHtml(espnStatusDetail||ev.strProgress,espnLive&&espnLive.event?espnPeriodLabel(espnLive.event.status):''):''}
+            ${live2?livePhaseTagsHtml(espnStatusDetail||ev.strProgress,espnStatus?espnPeriodLabel(espnStatus):''):''}
           </div>
           <div style="text-align:center">
             ${ev.strAwayTeamBadge?`<img src="${ev.strAwayTeamBadge}/medium" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:
