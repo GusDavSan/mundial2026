@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T00:03:40.452Z",
+  "updated": "2026-06-13T03:37:17.818Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T00:03:40.452Z",
+      "updatedAt": "2026-06-13T03:37:17.818Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T00:03:40.452Z",
+      "updatedAt": "2026-06-13T03:37:17.818Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T00:03:40.452Z",
+      "updatedAt": "2026-06-13T03:37:17.818Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -210,6 +210,77 @@
           "goalsAgainst": 1,
           "cleanSheet": 0,
           "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 4,
+      "espnEventId": "760417",
+      "date": "2026-06-13",
+      "homeTeam": "United States",
+      "awayTeam": "Paraguay",
+      "source": "ESPN",
+      "updatedAt": "2026-06-13T03:37:17.818Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 6,
+          "away": 1
+        },
+        "shots": {
+          "home": 16,
+          "away": 9
+        },
+        "possession": {
+          "home": 65.2,
+          "away": 34.8
+        },
+        "passes": {
+          "home": 598,
+          "away": 320
+        },
+        "fouls": {
+          "home": 13,
+          "away": 17
+        },
+        "corners": {
+          "home": 3,
+          "away": 1
+        },
+        "saves": {
+          "home": 1,
+          "away": 3
+        },
+        "offsides": {
+          "home": 2,
+          "away": 1
+        }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "United States",
+          "name": "Matt Freese",
+          "shortName": "M. Freese",
+          "number": "24",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Paraguay",
+          "name": "Orlando Gil",
+          "shortName": "O. Gil",
+          "number": "12",
+          "saves": 3,
+          "goalsAgainst": 4,
+          "cleanSheet": 0,
+          "savePct": 42.9,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
