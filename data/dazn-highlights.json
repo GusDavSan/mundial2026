@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T07:31:37.106Z",
+  "updated": "2026-06-14T10:32:23.003Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -12,7 +12,7 @@
       "url": "https://www.youtube.com/watch?v=x83kn09PJKg",
       "thumbnail": "https://i.ytimg.com/vi/x83kn09PJKg/hqdefault.jpg",
       "videoId": "x83kn09PJKg",
-      "publishedAt": "2026-06-14T07:31:35.378Z",
+      "publishedAt": "2026-06-11T23:00:03Z",
       "confidence": 20
     },
     {
@@ -25,7 +25,7 @@
       "url": "https://www.youtube.com/watch?v=9ojbKBxau9Q",
       "thumbnail": "https://i.ytimg.com/vi/9ojbKBxau9Q/hqdefault.jpg",
       "videoId": "9ojbKBxau9Q",
-      "publishedAt": "2026-06-14T07:31:35.378Z",
+      "publishedAt": "2026-06-12T06:08:49Z",
       "confidence": 20
     },
     {
@@ -61,10 +61,10 @@
       "away": "Switzerland",
       "source": "DAZN ES",
       "title": "Catar vs Suiza (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=M0fpVLsf1EA",
-      "thumbnail": "https://i2.ytimg.com/vi/M0fpVLsf1EA/hqdefault.jpg",
-      "videoId": "M0fpVLsf1EA",
-      "publishedAt": "2026-06-13T23:00:11+00:00",
+      "url": "https://www.youtube.com/watch?v=izVd6GibW6g",
+      "thumbnail": "https://i.ytimg.com/vi/izVd6GibW6g/hqdefault.jpg",
+      "videoId": "izVd6GibW6g",
+      "publishedAt": "2026-06-13T23:00:15Z",
       "confidence": 20
     },
     {
@@ -87,10 +87,10 @@
       "away": "Scotland",
       "source": "DAZN ES",
       "title": "Haití vs Escocia (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=MIGfw5DdcYs",
-      "thumbnail": "https://i2.ytimg.com/vi/MIGfw5DdcYs/hqdefault.jpg",
-      "videoId": "MIGfw5DdcYs",
-      "publishedAt": "2026-06-14T04:10:56+00:00",
+      "url": "https://www.youtube.com/watch?v=zYNRVDc9z_4",
+      "thumbnail": "https://i.ytimg.com/vi/zYNRVDc9z_4/hqdefault.jpg",
+      "videoId": "zYNRVDc9z_4",
+      "publishedAt": "2026-06-14T05:00:13Z",
       "confidence": 20
     }
   ]
