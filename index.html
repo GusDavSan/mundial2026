@@ -281,13 +281,27 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .info-box{background:rgba(201,162,39,.05);border:1px solid rgba(201,162,39,.2);border-radius:8px;padding:10px 13px;font-size:12px;color:var(--gold2);margin-bottom:14px;line-height:1.6}
 /* PLAYERS */
 .players-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
-.squad-blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
-.squad-block{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
-.squad-block.full{grid-column:1/-1}
-.squad-hdr{background:rgba(201,162,39,.06);border-bottom:1px solid var(--border);padding:9px 13px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.team-profile{display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,260px);gap:12px;margin-bottom:14px}
+.team-summary,.team-manager-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;min-height:96px}
+.team-summary{display:flex;align-items:center;gap:14px;padding:13px 14px}
+.team-summary-badge{width:58px;height:58px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.team-summary-badge img{width:58px;height:58px;object-fit:contain}
+.team-title{font-family:var(--disp);font-size:23px;letter-spacing:1px;line-height:1;color:var(--text)}
+.team-subline{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.35}
+.team-subline strong{color:var(--gold);font-weight:800}
+.team-manager-card{padding:12px 13px;display:flex;flex-direction:column;justify-content:center}
+.team-manager-title{font-family:var(--disp);font-size:14px;letter-spacing:2px;color:var(--gold);margin-bottom:7px}
+.squad-board{display:grid;gap:10px;margin-top:10px}
+.squad-row{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.squad-hdr{background:rgba(201,162,39,.06);border-bottom:1px solid var(--border);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .squad-title{font-family:var(--disp);font-size:14px;letter-spacing:2px;color:var(--gold)}
 .squad-count{font-family:var(--mono);font-size:11px;color:var(--muted)}
-.squad-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:8px;padding:10px}
+.squad-strip{display:flex;flex-wrap:wrap;gap:8px;padding:10px}
+.player-chip{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px;min-width:150px;max-width:220px;flex:1 1 150px;background:rgba(6,11,24,.42);border:1px solid var(--border);border-radius:8px;padding:8px 9px}
+.player-chip:hover{border-color:var(--border2)}
+.player-chip-num{font-family:var(--mono);font-size:11px;color:var(--gold);min-width:24px;text-align:center}
+.player-chip-name{font-size:12px;font-weight:800;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player-chip-meta{font-size:10px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .manager-card{display:flex;align-items:center;gap:10px;padding:12px 13px}
 .manager-avatar{width:36px;height:36px;border-radius:50%;background:rgba(201,162,39,.1);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .pc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px}
@@ -382,6 +396,10 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .t-name{font-size:13px}.score{font-size:19px}
   .groups-grid{grid-template-columns:1fr}
   .players-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .team-profile{grid-template-columns:1fr}
+  .team-summary{align-items:flex-start}
+  .team-summary-badge,.team-summary-badge img{width:50px;height:50px}
+  .player-chip{min-width:128px;flex-basis:128px}
   .squad-blocks{grid-template-columns:1fr}
   .lineup-grid{grid-template-columns:1fr}
   .detail-body-grid{grid-template-columns:1fr}
@@ -2530,15 +2548,35 @@ async function loadTeamByName(name){
 }
 
 async function showTeamSquad(team,name,el,back){
-  const badgeHtml=team.strBadge?
-    '<img src="'+team.strBadge+'/medium" style="width:56px;height:56px;object-fit:contain" alt="" onerror="this.style.display=\'none\'">':
-    '<span style="font-size:46px">'+(FLAGS[name]||'🏳️')+'</span>';
-  const profile='<div style="display:flex;align-items:center;gap:14px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px">'+
-    badgeHtml+'<div>'+
-    '<div style="font-family:var(--disp);font-size:20px;letter-spacing:1px">'+(team.strTeam||name)+'</div>'+
-    (team.strCountry?'<div style="font-size:12px;color:var(--muted);margin-top:3px">'+team.strCountry+'</div>':'')+
-    (team.strDescriptionEN?'<div style="font-size:11px;color:var(--muted);margin-top:4px;max-width:400px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+team.strDescriptionEN.slice(0,80)+'...</div>':'')+
-    '</div></div>';
+  function teamConf(teamName){
+    const conf=CONFS.find(c=>c.teams.some(t=>sameTeam(t,teamName)));
+    return conf?conf.name:'';
+  }
+  function nonRepeatingCountry(){
+    const country=team.strCountry||'';
+    const title=team.strTeam||name;
+    if(!country)return '';
+    const c=stripText(country).replace(/^the\s+/,'');
+    const tt=stripText(title).replace(/^the\s+/,'');
+    return c&&c!==tt&&!c.includes(tt)&&!tt.includes(c)?country:'';
+  }
+  function buildProfile(managerName,managerMeta){
+    const badgeHtml=team.strBadge?
+      '<img src="'+escHtml(team.strBadge)+'/medium" alt="" onerror="this.style.display=\'none\'">':
+      '<span style="font-size:42px">'+(FLAGS[name]||'🏳️')+'</span>';
+    const meta=[nonRepeatingCountry(),teamConf(name),teamGroup(name)?t('group')+' '+teamGroup(name):''].filter(Boolean);
+    return '<div class="team-profile">'+
+      '<div class="team-summary"><div class="team-summary-badge">'+badgeHtml+'</div><div>'+
+        '<div class="team-title">'+escHtml(team.strTeam||name)+'</div>'+
+        '<div class="team-subline">'+(meta.length?meta.map(escHtml).join(' · '):escHtml(t('squad')))+'</div>'+
+      '</div></div>'+
+      '<aside class="team-manager-card"><div class="team-manager-title">'+t('manager')+'</div>'+
+        (managerName?'<div class="manager-card" style="padding:0"><div class="manager-avatar">M</div><div class="stat-info"><div class="stat-pname">'+escHtml(managerName)+'</div><div class="stat-team">'+escHtml(managerMeta||t('manager'))+'</div></div></div>':
+          '<div class="stat-empty-row" style="padding:0;text-align:left">'+t('managerMissing')+'</div>')+
+      '</aside></div>';
+  }
+  const initialManager=team.strManager||team.strCoach||team.strHeadCoach||team.strManagerName||'';
+  const profile=buildProfile(initialManager,initialManager?t('manager'):'');
   el.innerHTML=back+profile+'<div class="loading"><div class="spinner"></div><span class="loading-text">'+t('squadLoading')+'</span></div>';
   try{
     const d=await v1('/lookup_all_players.php?id='+team.idTeam);
@@ -2577,37 +2615,30 @@ async function showTeamSquad(team,name,el,back){
     });
     const managerName=(managerPlayer&&managerPlayer.strPlayer)||team.strManager||team.strCoach||team.strHeadCoach||team.strManagerName||'';
     const managerMeta=(managerPlayer&&(managerPlayer.strTeam||managerPlayer.strPosition))||'';
-    function playerCard(p){
+    function playerChip(p){
       var born=p.dateBorn?p.dateBorn.slice(0,4):'';
       var age=born?(new Date().getFullYear()-parseInt(born))+' '+t('years'):'';
       var club=p.strTeam||'';
-      return '<div class="pc">'+
-        '<div class="pc-pos">'+(p.strPosition||'—')+'</div>'+
-        '<div class="pc-name">'+p.strPlayer+'</div>'+
-        (p.strNumber?'<div class="pc-num">#'+p.strNumber+'</div>':'')+
-        (age?'<div class="pc-num">'+age+(club?' · '+club:'')+'</div>':
-             (club?'<div class="pc-num">'+club+'</div>':''))+
+      const meta=[p.strPosition||'',age,club].filter(Boolean).join(' · ');
+      return '<div class="player-chip" title="'+escHtml((p.strNumber?('#'+p.strNumber+' '):'')+(p.strPlayer||''))+'">'+
+        '<div class="player-chip-num">'+(p.strNumber?escHtml('#'+p.strNumber):'—')+'</div>'+
+        '<div><div class="player-chip-name">'+escHtml(p.strPlayer||'')+'</div>'+
+        (meta?'<div class="player-chip-meta">'+escHtml(meta)+'</div>':'')+'</div>'+
         '</div>';
     }
     let ph='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'+
       '<div class="sec-ttl">'+t('squad')+' ('+players.length+')</div>'+
       '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold)">FIFA.com →</a></div>';
-    ph+='<div class="squad-blocks">';
+    ph+='<div class="squad-board">';
     blocks.forEach(function(block){
       const list=byRole[block.key];
-      ph+='<section class="squad-block"><div class="squad-hdr"><span class="squad-title">'+block.label+'</span><span class="squad-count">'+list.length+'</span></div>';
-      if(list.length)ph+='<div class="squad-grid">'+list.map(playerCard).join('')+'</div>';
+      ph+='<section class="squad-row"><div class="squad-hdr"><span class="squad-title">'+block.label+'</span><span class="squad-count">'+list.length+'</span></div>';
+      if(list.length)ph+='<div class="squad-strip">'+list.map(playerChip).join('')+'</div>';
       else ph+='<div class="stat-empty-row">'+t('noPlayersInBlock')+'</div>';
       ph+='</section>';
     });
-    ph+='<section class="squad-block full"><div class="squad-hdr"><span class="squad-title">'+t('manager')+'</span><span class="squad-count">'+(managerName?'1':'0')+'</span></div>';
-    if(managerName){
-      ph+='<div class="manager-card"><div class="manager-avatar">M</div><div class="stat-info"><div class="stat-pname">'+managerName+'</div><div class="stat-team">'+(managerMeta||t('manager'))+'</div></div></div>';
-    }else{
-      ph+='<div class="stat-empty-row">'+t('managerMissing')+'</div>';
-    }
-    ph+='</section></div>';
-    el.innerHTML=back+profile+ph;
+    ph+='</div>';
+    el.innerHTML=back+buildProfile(managerName,managerMeta||t('manager'))+ph;
   }catch(e){
     el.innerHTML=back+profile+'<div class="empty"><div class="empty-icon">⚠️</div>'+
       '<div class="empty-text">'+t('playersLoadError')+': '+e.message+'<br><br>'+
