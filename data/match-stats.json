@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T04:41:55.642Z",
+  "updated": "2026-06-14T08:35:12.992Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -222,7 +222,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -293,7 +293,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -364,7 +364,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -435,7 +435,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -446,12 +446,12 @@
           "away": 9
         },
         "possession": {
-          "home": 53.8,
-          "away": 46.2
+          "home": 53.7,
+          "away": 46.3
         },
         "passes": {
           "home": 431,
-          "away": 373
+          "away": 374
         },
         "fouls": {
           "home": 23,
@@ -506,39 +506,39 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "updatedAt": "2026-06-14T08:35:12.992Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 2
-        },
-        "shots": {
-          "home": 3,
+          "home": 4,
           "away": 8
         },
+        "shots": {
+          "home": 9,
+          "away": 30
+        },
         "possession": {
-          "home": 33.6,
-          "away": 66.4
+          "home": 28.4,
+          "away": 71.6
         },
         "passes": {
-          "home": 133,
-          "away": 274
+          "home": 271,
+          "away": 704
         },
         "fouls": {
-          "home": 5,
-          "away": 1
+          "home": 12,
+          "away": 4
         },
         "corners": {
-          "home": 2,
-          "away": 2
+          "home": 5,
+          "away": 8
         },
         "saves": {
-          "home": 2,
-          "away": 0
+          "home": 8,
+          "away": 2
         },
         "offsides": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 3
         }
       },
       "keepers": [
@@ -548,7 +548,7 @@
           "name": "Patrick Beach",
           "shortName": "P. Beach",
           "number": "18",
-          "saves": 2,
+          "saves": 8,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
@@ -561,12 +561,12 @@
           "name": "Ugurcan Çakir",
           "shortName": "U. Çakir",
           "number": "23",
-          "saves": 0,
-          "goalsAgainst": 1,
+          "saves": 2,
+          "goalsAgainst": 2,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
