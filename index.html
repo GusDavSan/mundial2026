@@ -1604,7 +1604,9 @@ function buildMatchesHtml(fx){
     byDate[dt].forEach(f=>{
       const k=f.home+'|'+f.away;
       const r=apiResults[k]||{};
-      html+=matchCard(Object.assign({},f,{status:r.status,homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||f.id}));
+      const status=r.status;
+      const upcoming=!isLive(status)&&!isFin(status)&&!isPast(f.date,f.time);
+      html+=matchCard(Object.assign({},f,{status,homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||f.id,timeNote:upcoming?upcomingDawnNote(f.date,f.time):''}));
     });
   });
   return html;
