@@ -546,11 +546,11 @@ body{font-size:16px}
   </div>
   <nav class="tabs">
     <div class="tab active" onclick="switchTab('live')">⚽ <span data-i18n="tabLive">En Vivo</span></div>
-    <div class="tab" onclick="switchTab('miseleccion')">⭐ <span data-i18n="tabMySelection">Mi Selección</span></div>
     <div class="tab" onclick="switchTab('cal')">📅 <span data-i18n="tabCalendar">Calendario</span></div>
     <div class="tab" onclick="switchTab('quiniela')">🎯 <span data-i18n="tabPool">Quiniela</span></div>
     <div class="tab" onclick="switchTab('goles')">📊 <span data-i18n="tabStats">Goleadores</span></div>
     <div class="tab" onclick="switchTab('equipos')">👥 <span data-i18n="tabTeams">Equipos</span></div>
+    <div class="tab" onclick="switchTab('miseleccion')">⭐ <span data-i18n="tabMySelection">Mi Selección</span></div>
   </nav>
 </header>
 
@@ -572,10 +572,6 @@ body{font-size:16px}
         </div>
       </div>
     </div>
-  </div>
-  <div id="tab-miseleccion" style="display:none">
-    <section id="myTeamBar" class="my-team-bar"></section>
-    <div id="myTeamContent"></div>
   </div>
   <div id="tab-cal" style="display:none">
     <div class="round-tabs" id="roundTabs"></div>
@@ -599,6 +595,10 @@ body{font-size:16px}
   </div>
   <div id="tab-equipos" style="display:none">
     <div id="teamContent"></div>
+  </div>
+  <div id="tab-miseleccion" style="display:none">
+    <section id="myTeamBar" class="my-team-bar"></section>
+    <div id="myTeamContent"></div>
   </div>
 </main>
 
@@ -4330,9 +4330,9 @@ function switchTab(tab){
   clearInterval(liveTimer);
   activeTab=tab;
   document.querySelectorAll('.tab').forEach((t,i)=>{
-    t.classList.toggle('active',['live','miseleccion','cal','quiniela','goles','equipos'][i]===tab);
+    t.classList.toggle('active',['live','cal','quiniela','goles','equipos','miseleccion'][i]===tab);
   });
-  ['live','miseleccion','cal','quiniela','goles','equipos'].forEach(id=>{
+  ['live','cal','quiniela','goles','equipos','miseleccion'].forEach(id=>{
     document.getElementById('tab-'+id).style.display=id===tab?'block':'none';
   });
   if(tab==='live')loadLive();
