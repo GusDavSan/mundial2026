@@ -3220,6 +3220,11 @@ function isPenaltyConceded(ev){
   const tx=eventText(ev);
   return tx.includes('penalty conceded')||tx.includes('conceded by')||tx.includes('penalti cometido');
 }
+function penaltyAwardedTeamFromEvent(ev){
+  const txt=String(ev.strComment||ev.strEvent||'').trim();
+  const m=txt.match(/^Penalty\s+(.+?)\./i)||txt.match(/^Penalti\s+(.+?)\./i);
+  return m?normName(m[1].trim()):'';
+}
 function teamSide(team,home,away){
   if(sameTeam(team,home))return 'home';
   if(sameTeam(team,away))return 'away';
@@ -3227,6 +3232,8 @@ function teamSide(team,home,away){
 }
 function eventBeneficiaryTeam(ev,home,away){
   if(timelineKind(ev)!=='penalty')return ev.strTeam||'';
+  const awarded=penaltyAwardedTeamFromEvent(ev);
+  if(awarded)return awarded;
   const team=ev.strTeam||'';
   if(!isPenaltyConceded(ev)||!home||!away)return team;
   const side=teamSide(team,home,away);
@@ -3902,6 +3909,10 @@ function espnTeamFromText(text){
   const m=String(text||'').match(/(?:Goal![^.]*\.\s*)?[^.(]+\s+\(([^)]+)\)/);
   return m?normName(m[1].trim()):'';
 }
+function espnPenaltyAwardedTeamFromText(text){
+  const m=String(text||'').trim().match(/^Penalty\s+(.+?)\./i);
+  return m?normName(m[1].trim()):'';
+}
 function espnAssistFromText(text){
   const m=String(text||'').match(/Assisted by ([^.]+)/i);
   return m?m[1].replace(/\s+following\b.*$/i,'').replace(/\s+with\b.*$/i,'').trim():'';
@@ -3932,14 +3943,16 @@ function espnTimelineFromSummary(summary){
     const minute=String(display).replace(/'/g,'');
     const firstParticipant=play.participants&&play.participants[0]&&play.participants[0].athlete&&play.participants[0].athlete.displayName;
     const textPlayer=espnPlayerFromText(txt);
+    const typeName=espnTimelineType(type);
+    const penaltyAwardTeam=typeName==='Goal'?'':espnPenaltyAwardedTeamFromText(txt);
     return {
       strTimeline:minute,strTime:minute,
-      strTimelineType:espnTimelineType(type),
+      strTimelineType:typeName,
       strTimelineDetail:type.text||type.type||'',
       strComment:txt,
       strPlayer:textPlayer||firstParticipant,
       strAssistPlayer:espnAssistFromText(txt),
-      strTeam:normName(play.team&&play.team.displayName||espnTeamFromText(txt))
+      strTeam:penaltyAwardTeam||normName(play.team&&play.team.displayName||espnTeamFromText(txt))
     };
   }).filter(function(ev){
     if(!ev)return false;
