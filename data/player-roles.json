@@ -1,0 +1,64 @@
+{
+  "updated": "2026-06-14",
+  "source": "Manual role overrides for squad cards. Used only for list role/block; player profile still shows source positions.",
+  "teams": {
+    "Spain": {
+      "David Raya": { "role": "POR", "block": "goalkeepers" },
+      "Unai Simón": { "role": "POR", "block": "goalkeepers" },
+      "Joan García": { "role": "POR", "block": "goalkeepers" },
+      "Dani Carvajal": { "role": "LD", "block": "defenders" },
+      "Marc Pubill": { "role": "LD", "block": "defenders" },
+      "Alejandro Balde": { "role": "LI", "block": "defenders" },
+      "Alejandro Grimaldo": { "role": "LI", "block": "defenders" },
+      "Pau Cubarsí": { "role": "DFC", "block": "defenders" },
+      "Aymeric Laporte": { "role": "DFC", "block": "defenders" },
+      "Dani Vivian": { "role": "DFC", "block": "defenders" },
+      "Eric García": { "role": "DFC", "block": "defenders" },
+      "Rodri": { "role": "MCD", "block": "midfielders" },
+      "Martín Zubimendi": { "role": "MCD", "block": "midfielders" },
+      "Mikel Merino": { "role": "MC", "block": "midfielders" },
+      "Pedri": { "role": "MC", "block": "midfielders" },
+      "Dani Olmo": { "role": "MCO", "block": "midfielders" },
+      "Álex Baena": { "role": "MCO", "block": "midfielders" },
+      "Pedro": { "role": "EI", "block": "forwards" },
+      "Lamine Yamal": { "role": "ED", "block": "forwards" },
+      "Ferran Torres": { "role": "ED", "block": "forwards" },
+      "Nico Williams": { "role": "EI", "block": "forwards" },
+      "Yeremy Pino": { "role": "ED", "block": "forwards" },
+      "Bryan Gil": { "role": "EI", "block": "forwards" },
+      "Álvaro Morata": { "role": "DC", "block": "forwards" },
+      "Joselu": { "role": "DC", "block": "forwards" },
+      "Ayoze Pérez": { "role": "SD", "block": "forwards" }
+    },
+    "England": {
+      "Declan Rice": { "role": "MCD", "block": "midfielders" },
+      "Jude Bellingham": { "role": "MCO", "block": "midfielders" },
+      "Bukayo Saka": { "role": "ED", "block": "forwards" },
+      "Phil Foden": { "role": "MCO", "block": "midfielders" },
+      "Harry Kane": { "role": "DC", "block": "forwards" },
+      "Kyle Walker": { "role": "LD", "block": "defenders" },
+      "Trent Alexander-Arnold": { "role": "LD", "block": "defenders" },
+      "Luke Shaw": { "role": "LI", "block": "defenders" }
+    },
+    "France": {
+      "Kylian Mbappé": { "role": "EI", "block": "forwards" },
+      "Ousmane Dembélé": { "role": "ED", "block": "forwards" },
+      "Antoine Griezmann": { "role": "MCO", "block": "midfielders" },
+      "Aurélien Tchouaméni": { "role": "MCD", "block": "midfielders" },
+      "Eduardo Camavinga": { "role": "MC", "block": "midfielders" },
+      "William Saliba": { "role": "DFC", "block": "defenders" },
+      "Theo Hernández": { "role": "LI", "block": "defenders" },
+      "Jules Koundé": { "role": "LD", "block": "defenders" }
+    },
+    "Brazil": {
+      "Alisson": { "role": "POR", "block": "goalkeepers" },
+      "Marquinhos": { "role": "DFC", "block": "defenders" },
+      "Casemiro": { "role": "MCD", "block": "midfielders" },
+      "Bruno Guimarães": { "role": "MC", "block": "midfielders" },
+      "Lucas Paquetá": { "role": "MCO", "block": "midfielders" },
+      "Vinicius Junior": { "role": "EI", "block": "forwards" },
+      "Rodrygo": { "role": "ED", "block": "forwards" },
+      "Raphinha": { "role": "ED", "block": "forwards" }
+    }
+  }
+}
