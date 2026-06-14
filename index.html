@@ -1261,6 +1261,62 @@ function matchCard(m,overrides={}){
       <div class="t-side away"><span class="t-name">${om.away||'Por definir'}</span>${aBadge}</div>
     </div>${insightHtml}${timeBlock}</div>`;
 }
+function matchResultKey(home,away){
+  return normName(home||'')+'|'+normName(away||'');
+}
+function storeMatchResult(fx,patch){
+  if(!fx)return;
+  const key=matchResultKey(fx.home,fx.away);
+  mergeMatchResultKey(key,patch);
+}
+function mergeMatchResultKey(key,patch){
+  const prev=apiResults[key]||{};
+  const incoming=patch||{};
+  const next=Object.assign({},prev,incoming);
+  if(isLive(prev.status)&&!isLive(incoming.status)&&!isFin(incoming.status)){
+    ['status','homeScore','awayScore','progress','periodLabel','liveInsight','date','time'].forEach(k=>{
+      if(prev[k]!==undefined)next[k]=prev[k];
+    });
+  }
+  ['date','time','progress','periodLabel','liveInsight'].forEach(k=>{
+    if((next[k]===undefined||next[k]==='')&&prev[k]!==undefined)next[k]=prev[k];
+  });
+  apiResults[key]=next;
+}
+function cardDateTimeFromData(data,fx,fallbackDate){
+  const source=data||{};
+  const fixture=fx||{};
+  return{
+    date:source.dateEvent||source.date||fixture.date||fallbackDate||'',
+    time:(source.strTime&&String(source.strTime).slice(0,5))||source.time||fixture.time||''
+  };
+}
+function cardTimeMsFromData(data,fx,fallbackDate){
+  const dt=cardDateTimeFromData(data,fx,fallbackDate);
+  const es=toES(dt.date,dt.time);
+  return es?es.dt.getTime():Number.MAX_SAFE_INTEGER;
+}
+function resultPatchFromEspnEvent(event,fx){
+  const comp=event&&event.competitions&&event.competitions[0];
+  const competitors=comp&&comp.competitors||[];
+  const h=competitors.find(c=>c.homeAway==='home');
+  const a=competitors.find(c=>c.homeAway==='away');
+  const st=espnEventStatus(event);
+  const state=st&&st.type&&st.type.state||'pre';
+  const detail=st&&st.type&&(st.type.shortDetail||st.type.detail)||st&&st.displayClock||'';
+  const kickoff=espnUtcKickoffParts(event);
+  const score=fx?espnScore(event,fx):{home:parseInt(h&&h.score,10),away:parseInt(a&&a.score,10)};
+  return{
+    id:event&&event.id,
+    date:kickoff.date,
+    time:kickoff.time,
+    status:state==='in'?'Live':state==='post'?'FT':'Scheduled',
+    homeScore:Number.isFinite(score.home)?score.home:(h&&h.score),
+    awayScore:Number.isFinite(score.away)?score.away:(a&&a.score),
+    progress:detail,
+    periodLabel:state==='in'?espnPeriodLabel(st):''
+  };
+}
 
 // ══════════════════════════════════════════════
 // TAB: EN VIVO
@@ -1269,12 +1325,12 @@ let liveTimer=null,liveCountdown=60;
 function liveFallbackHtml(today,todayFx){
   if(todayFx.length>0){
     return `<div class="sec-hdr"><span class="sec-ttl">📅 ${t('todayMatches')}</span></div>`+
-      todayFx.map(f=>matchCard(f)).join('');
+      todayFx.map(f=>matchCard(Object.assign({},f,{timeNote:!isPast(f.date,f.time)?upcomingDawnNote(f.date,f.time):''}))).join('');
   }
   const next=FIXTURES.filter(f=>f.date>today).slice(0,8);
   if(next.length){
     return `<div class="sec-hdr"><span class="sec-ttl">⏭ ${t('nextMatches')}</span></div>`+
-      next.map(f=>matchCard(f)).join('');
+      next.map(f=>matchCard(Object.assign({},f,{timeNote:upcomingDawnNote(f.date,f.time)}))).join('');
   }
   return `<div class="empty"><div class="empty-icon">🏟️</div><div class="empty-text">${t('noLive')}<br>${t('worldCupStarts')} <strong style="color:var(--gold)">11 de junio</strong>.</div></div>`;
 }
@@ -1328,22 +1384,15 @@ async function loadLive(){
       const teams=espnEventTeams(event);
       const fx=FIXTURES.find(f=>sameEspnTeam(f.home,teams.home)&&sameEspnTeam(f.away,teams.away));
       if(!fx||fx.date!==today||seenFx.has(fx.id))return;
-      const comp=event.competitions&&event.competitions[0];
-      const competitors=comp&&comp.competitors||[];
-      const h=competitors.find(c=>c.homeAway==='home');
-      const a=competitors.find(c=>c.homeAway==='away');
-      const st=espnEventStatus(event);
-      const state=st&&st.type&&st.type.state||'pre';
-      const detail=st&&st.type&&(st.type.shortDetail||st.type.detail)||st&&st.displayClock||'';
-      const kickoff=espnUtcKickoffParts(event);
+      const patch=resultPatchFromEspnEvent(event,fx);
+      storeMatchResult(fx,patch);
       const row={
-        id:fx.id,date:kickoff.date||fx.date,time:kickoff.time||fx.time,home:fx.home,away:fx.away,group:fx.group,
+        id:fx.id,date:patch.date||fx.date,time:patch.time||fx.time,home:fx.home,away:fx.away,group:fx.group,
         venue:fx.venue,city:fx.city,homeFlag:fx.homeFlag,awayFlag:fx.awayFlag,
-        status:state==='in'?'Live':state==='post'?'FT':'Scheduled',
-        homeScore:h&&h.score,awayScore:a&&a.score,progress:detail,periodLabel:state==='in'?espnPeriodLabel(st):''
+        status:patch.status,homeScore:patch.homeScore,awayScore:patch.awayScore,progress:patch.progress,periodLabel:patch.periodLabel
       };
-      if(state==='in')liveNow.push(row);
-      else if(state==='post')finished.push(row);
+      if(patch.status==='Live')liveNow.push(row);
+      else if(patch.status==='FT')finished.push(row);
       else upcoming.push(row);
       seenFx.add(fx.id);
     });
@@ -1370,17 +1419,22 @@ async function loadLive(){
         const kickoff=espnUtcKickoffParts(espnLive.event);
         if(kickoff.date){e.date=e.dateEvent=kickoff.date;}
         if(kickoff.time){e.time=e.strTime=kickoff.time;}
+        storeMatchResult(fx,{
+          id:espnLive.event&&espnLive.event.id||e.idEvent||e.id,
+          date:e.dateEvent||e.date,
+          time:e.strTime||e.time,
+          status:e.strStatus||e.status,
+          homeScore:e.intHomeScore??e.homeScore,
+          awayScore:e.intAwayScore??e.awayScore,
+          progress:e.strProgress||e.progress,
+          periodLabel:e.strPeriodLabel||e.periodLabel,
+          liveInsight:e.liveInsight
+        });
       }catch(err){console.warn('ESPN live insight failed',err);}
     }));
   }
-  const cardDateTime=function(e){
-    const fx=matchFx(e)||{};
-    return{fx,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||''};
-  };
   const cardTimeMs=function(e){
-    const dt=cardDateTime(e);
-    const es=toES(dt.date,dt.time);
-    return es?es.dt.getTime():Number.MAX_SAFE_INTEGER;
+    return cardTimeMsFromData(e,matchFx(e)||{},today);
   };
   upcoming.sort((a,b)=>cardTimeMs(a)-cardTimeMs(b));
   let html='';
@@ -1389,10 +1443,11 @@ async function loadLive(){
     html+=`<div class="sec-hdr"><span class="sec-ttl">🔴 ${t('liveNow')}</span><span class="sec-cnt">${liveNow.length}</span></div>`;
     html+=liveNow.map(e=>{
       const fx=matchFx(e)||{};
+      const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent||e.id,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||'',
+        id:e.idEvent||e.id,date:dt.date,time:dt.time,
         home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
@@ -1407,8 +1462,8 @@ async function loadLive(){
   if(upcoming.length>0){
     html+=`<div class="sec-hdr"><span class="sec-ttl">📅 ${t('todayUpcoming')}</span><span class="sec-cnt">${upcoming.length}</span></div>`;
     html+=upcoming.map(e=>{
-      const dt=cardDateTime(e);
-      const fx=dt.fx||{};
+      const fx=matchFx(e)||{};
+      const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
@@ -1427,10 +1482,11 @@ async function loadLive(){
     html+=`<div class="sec-hdr"><span class="sec-ttl">✅ ${t('finished')}</span></div>`;
     html+=finished.map(e=>{
       const fx=matchFx(e)||{};
+      const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent||e.id,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||'',
+        id:e.idEvent||e.id,date:dt.date,time:dt.time,
         home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
@@ -1443,6 +1499,8 @@ async function loadLive(){
     html=liveFallbackHtml(today,todayFx);
   }
   el.innerHTML=html;
+  if(typeof activeTab!=='undefined'&&activeTab==='cal'&&calLoaded)renderCal();
+  if(typeof renderMyTeamPage==='function')renderMyTeamPage();
   liveCountdown=60;
   rt.textContent=t('updatedNext',{s:liveCountdown});
   liveTimer=setInterval(()=>{
@@ -1497,7 +1555,7 @@ async function loadCal(){
     const d=await v1('/eventsseason.php?id='+LEAGUE_ID+'&s=2026');
     (d.events||[]).forEach(e=>{
       const key=normName(e.strHomeTeam)+'|'+normName(e.strAwayTeam);
-      apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
+      mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
     });
   }catch{}
   renderCal();
@@ -1509,7 +1567,7 @@ async function calStandRefresh(){
     const d=await v1('/eventsday.php?d='+today+'&l='+LEAGUE_ID);
     (d.events||[]).forEach(e=>{
       const key=normName(e.strHomeTeam)+'|'+normName(e.strAwayTeam);
-      apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
+      mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
     });
   }catch{}
   renderCal();
@@ -1604,9 +1662,15 @@ function buildMatchesHtml(fx){
     byDate[dt].forEach(f=>{
       const k=f.home+'|'+f.away;
       const r=apiResults[k]||{};
+      const resolved=cardDateTimeFromData(r,f,f.date);
       const status=r.status;
-      const upcoming=!isLive(status)&&!isFin(status)&&!isPast(f.date,f.time);
-      html+=matchCard(Object.assign({},f,{status,homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||f.id,timeNote:upcoming?upcomingDawnNote(f.date,f.time):''}));
+      const upcoming=!isLive(status)&&!isFin(status)&&!isPast(resolved.date,resolved.time);
+      html+=matchCard(Object.assign({},f,{
+        date:resolved.date,time:resolved.time,status,
+        homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||f.id,
+        progress:r.progress,periodLabel:r.periodLabel,liveInsight:r.liveInsight,
+        timeNote:upcoming?upcomingDawnNote(resolved.date,resolved.time):''
+      }));
     });
   });
   return html;
@@ -1655,7 +1719,7 @@ async function loadGrupos(){
     (d.events||[]).forEach(e=>{
       if(isFin(e.strStatus)||isLive(e.strStatus)){
         const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
-        apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
+        mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
       }
     });
     // Also try the full season results for all past days
@@ -1663,7 +1727,7 @@ async function loadGrupos(){
     (d2.events||[]).forEach(e=>{
       if(isFin(e.strStatus)){
         const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
-        apiResults[key]={status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent};
+        mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
       }
     });
     // Try API table — only trust it if it has proper group assignments (A-L)
