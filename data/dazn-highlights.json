@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T21:39:36.732Z",
+  "updated": "2026-06-14T23:37:52.564Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -118,6 +118,19 @@
       "videoId": "BjeaepHDZcM",
       "publishedAt": "2026-06-14T21:00:26Z",
       "confidence": 14
+    },
+    {
+      "matchId": 10,
+      "date": "2026-06-14",
+      "home": "Netherlands",
+      "away": "Japan",
+      "source": "DAZN ES",
+      "title": "😁La locura de Japón con el empate contra Países Bajos en el 89' 🇯🇵 ¡Bendito fútbol! #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=GKHrriQ5AHo",
+      "thumbnail": "https://i.ytimg.com/vi/GKHrriQ5AHo/hqdefault.jpg",
+      "videoId": "GKHrriQ5AHo",
+      "publishedAt": "2026-06-14T22:01:22Z",
+      "confidence": 16
     }
   ]
 }
