@@ -2940,7 +2940,7 @@ let localSquads=null,localSquadsLoaded=false,playerRoles=null,playerRolesLoaded=
 async function loadLocalSquads(){
   if(localSquadsLoaded)return localSquads;
   localSquadsLoaded=true;
-  const paths=['squads.json','squad.json','data/squads.json','data/squad.json','scripts/squads.json','scripts/squad.json'];
+  const paths=['squad.json','squads.json','data/squad.json','data/squads.json','scripts/squad.json','scripts/squads.json'];
   for(const path of paths){
     try{
       const d=await fetchJson(path,{},1500);
