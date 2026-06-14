@@ -115,9 +115,11 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .live-last-min{font-family:var(--mono);color:var(--gold);font-weight:800;margin-left:auto;flex-shrink:0}
 /* TIME BLOCK – SIGNATURE ELEMENT */
 .mc-time{display:flex;align-items:center;justify-content:space-between;margin-top:9px;padding-top:9px;border-top:1px solid var(--border)}
+.es-block{display:flex;flex-direction:column;gap:2px;min-width:0}
 .es-time{display:flex;align-items:baseline;gap:5px}
 .es-val{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--gold)}
 .es-lbl{font-size:9px;font-weight:600;letter-spacing:1px;color:var(--gold2);text-transform:uppercase}
+.es-note{font-size:10px;font-weight:700;letter-spacing:.4px;color:var(--muted)}
 .utc-val{font-family:var(--mono);font-size:10px;color:var(--muted)}
 .mc-venue{font-size:10px;color:var(--muted);text-align:right;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 /* GROUPS TABLE */
@@ -616,6 +618,7 @@ const I18N={
     langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabMySelection:'Mi Selección',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Goleadores',tabTeams:'Equipos',
     loadingShort:'Cargando...',loadingMatches:'Buscando partidos...',loadingStats:'Cargando estadísticas...',refresh:'Actualizar',
     liveStatus:'EN JUEGO',finishedShort:'FIN',upcoming:'PRÓXIMO',group:'Grupo',spainTime:'España',
+    dawnOfDay:'madrugada del {day}',
     firstHalf:'1ª parte',halftime:'Descanso',secondHalf:'2ª parte',extraTime:'Prórroga',penaltiesPhase:'Penaltis',
     updatedNext:'Actualizado · siguiente en {s}s',today:'HOY',todayMatches:'PARTIDOS HOY',liveNow:'EN JUEGO',todayUpcoming:'HOY — PRÓXIMOS',finished:'FINALIZADOS',nextMatches:'PRÓXIMOS PARTIDOS',
     noLive:'No hay partidos en directo.',worldCupStarts:'El Mundial arranca el',noPhaseMatches:'No hay partidos en esta fase',
@@ -657,6 +660,7 @@ const I18N={
     langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabMySelection:'My Team',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
     loadingShort:'Loading...',loadingMatches:'Looking for matches...',loadingStats:'Loading stats...',refresh:'Refresh',
     liveStatus:'LIVE',finishedShort:'FT',upcoming:'UPCOMING',group:'Group',spainTime:'Spain',
+    dawnOfDay:'early {day}',
     firstHalf:'1st half',halftime:'Halftime',secondHalf:'2nd half',extraTime:'Extra time',penaltiesPhase:'Penalties',
     updatedNext:'Updated · next in {s}s',today:'TODAY',todayMatches:'MATCHES TODAY',liveNow:'LIVE NOW',todayUpcoming:'TODAY — UPCOMING',finished:'FINISHED',nextMatches:'UPCOMING MATCHES',
     noLive:'No live matches right now.',worldCupStarts:'The World Cup starts on',noPhaseMatches:'No matches in this stage',
@@ -1098,6 +1102,27 @@ function toES(dateStr,timeStr){
     };
   }catch{return null;}
 }
+function tzDateKey(dt){
+  const parts=new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(dt);
+  const map={};parts.forEach(p=>{map[p.type]=p.value;});
+  return `${map.year}-${map.month}-${map.day}`;
+}
+function tzHour(dt){
+  const hour=new Intl.DateTimeFormat('en-GB',{timeZone:TZ,hour:'2-digit',hour12:false}).format(dt);
+  return parseInt(hour,10);
+}
+function upcomingDawnNote(dateStr,timeStr){
+  const es=toES(dateStr,timeStr);
+  if(!es)return '';
+  const eventKey=tzDateKey(es.dt);
+  const todayKey=tzDateKey(new Date());
+  const hour=tzHour(es.dt);
+  if(eventKey<=todayKey||hour>5)return '';
+  const locale=lang==='en'?'en-US':'es-ES';
+  let day=es.dt.toLocaleDateString(locale,{timeZone:TZ,weekday:'long'});
+  if(lang==='es')day=day.toLowerCase();
+  return t('dawnOfDay',{day});
+}
 function fmtDay(dateStr){
   const[y,m,d]=dateStr.split('-').map(Number);
   return new Date(y,m-1,d).toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
@@ -1225,7 +1250,7 @@ function matchCard(m,overrides={}){
     :`<div class="vs">VS</div>`;
   const insightHtml=live&&om.liveInsight?renderLiveInsight(om.liveInsight):'';
   const timeBlock=es?`<div class="mc-time">
-    <div class="es-time"><span class="es-val">${es.time}</span><span class="es-lbl">🇪🇸 ${t('spainTime')}</span></div>
+    <div class="es-block"><div class="es-time"><span class="es-val">${es.time}</span><span class="es-lbl">🇪🇸 ${t('spainTime')}</span></div>${om.timeNote?`<div class="es-note">${escHtml(om.timeNote)}</div>`:''}</div>
     <div style="text-align:right"><div class="utc-val">${om.time} UTC</div><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>
   </div>`:`<div class="mc-time" style="justify-content:flex-end"><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>`;
   return`<div class="mc${live?' live':''}" onclick="openDetail(${om.id||0},'${om.date}','${om.home}','${om.away}')">
@@ -1348,6 +1373,16 @@ async function loadLive(){
       }catch(err){console.warn('ESPN live insight failed',err);}
     }));
   }
+  const cardDateTime=function(e){
+    const fx=matchFx(e)||{};
+    return{fx,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||''};
+  };
+  const cardTimeMs=function(e){
+    const dt=cardDateTime(e);
+    const es=toES(dt.date,dt.time);
+    return es?es.dt.getTime():Number.MAX_SAFE_INTEGER;
+  };
+  upcoming.sort((a,b)=>cardTimeMs(a)-cardTimeMs(b));
   let html='';
   if(liveNow.length>0){
     document.getElementById('liveBadge').style.display='flex';
@@ -1372,16 +1407,18 @@ async function loadLive(){
   if(upcoming.length>0){
     html+=`<div class="sec-hdr"><span class="sec-ttl">📅 ${t('todayUpcoming')}</span><span class="sec-cnt">${upcoming.length}</span></div>`;
     html+=upcoming.map(e=>{
-      const fx=matchFx(e)||{};
+      const dt=cardDateTime(e);
+      const fx=dt.fx||{};
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent||e.id,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||'',
+        id:e.idEvent||e.id,date:dt.date,time:dt.time,
         home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
-        status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress
+        status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
+        timeNote:upcomingDawnNote(dt.date,dt.time)
       });
     }).join('');
     html+='<div class="divider"></div>';
