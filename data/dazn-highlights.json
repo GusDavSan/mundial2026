@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T17:48:15.533Z",
+  "updated": "2026-06-14T19:58:33.296Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -105,6 +105,19 @@
       "videoId": "QrMHQu2PDHE",
       "publishedAt": "2026-06-14T10:56:13Z",
       "confidence": 20
+    },
+    {
+      "matchId": 9,
+      "date": "2026-06-14",
+      "home": "Germany",
+      "away": "Curaçao",
+      "source": "DAZN ES",
+      "title": "Highlights en un minuto: 🇩🇪 Alemania 🆚  Curazao 🇨🇼 #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=sjQBNtUIZsc",
+      "thumbnail": "https://i4.ytimg.com/vi/sjQBNtUIZsc/hqdefault.jpg",
+      "videoId": "sjQBNtUIZsc",
+      "publishedAt": "2026-06-14T19:30:14+00:00",
+      "confidence": 13
     }
   ]
 }
