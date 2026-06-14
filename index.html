@@ -1310,8 +1310,9 @@ async function loadLive(){
       const st=espnEventStatus(event);
       const state=st&&st.type&&st.type.state||'pre';
       const detail=st&&st.type&&(st.type.shortDetail||st.type.detail)||st&&st.displayClock||'';
+      const kickoff=espnUtcKickoffParts(event);
       const row={
-        id:fx.id,date:fx.date,time:fx.time,home:fx.home,away:fx.away,group:fx.group,
+        id:fx.id,date:kickoff.date||fx.date,time:kickoff.time||fx.time,home:fx.home,away:fx.away,group:fx.group,
         venue:fx.venue,city:fx.city,homeFlag:fx.homeFlag,awayFlag:fx.awayFlag,
         status:state==='in'?'Live':state==='post'?'FT':'Scheduled',
         homeScore:h&&h.score,awayScore:a&&a.score,progress:detail,periodLabel:state==='in'?espnPeriodLabel(st):''
@@ -1341,6 +1342,9 @@ async function loadLive(){
         if(state==='in')e.status=e.strStatus='Live';
         e.progress=(st&&(st.displayClock||st.type&&st.type.shortDetail||st.type&&st.type.detail))||e.progress||e.strProgress;
         e.periodLabel=state==='in'?espnPeriodLabel(st):'';
+        const kickoff=espnUtcKickoffParts(espnLive.event);
+        if(kickoff.date){e.date=e.dateEvent=kickoff.date;}
+        if(kickoff.time){e.time=e.strTime=kickoff.time;}
       }catch(err){console.warn('ESPN live insight failed',err);}
     }));
   }
@@ -1353,7 +1357,7 @@ async function loadLive(){
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent||e.id,date:fx.date||e.dateEvent||e.date||today,time:fx.time||e.strTime?.slice(0,5)||e.time||'',
+        id:e.idEvent||e.id,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||'',
         home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
@@ -1372,7 +1376,7 @@ async function loadLive(){
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent||e.id,date:fx.date||e.dateEvent||e.date||today,time:fx.time||e.strTime?.slice(0,5)||e.time||'',
+        id:e.idEvent||e.id,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||'',
         home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
@@ -1389,7 +1393,7 @@ async function loadLive(){
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
       return matchCard({
-        id:e.idEvent||e.id,date:fx.date||e.dateEvent||e.date||today,time:fx.time||e.strTime?.slice(0,5)||e.time||'',
+        id:e.idEvent||e.id,date:e.dateEvent||e.date||fx.date||today,time:e.strTime?.slice(0,5)||e.time||fx.time||'',
         home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
         homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
@@ -3254,6 +3258,14 @@ function espnPeriodLabel(status){
   return '';
 }
 function espnDateKey(dateStr){return String(dateStr||'').replace(/-/g,'');}
+function espnUtcKickoffParts(event){
+  const raw=event&&event.date;
+  if(!raw)return{};
+  const dt=new Date(raw);
+  if(isNaN(dt))return{};
+  const iso=dt.toISOString();
+  return{date:iso.slice(0,10),time:iso.slice(11,16)};
+}
 function espnDateShift(dateStr,days){
   const parts=String(dateStr||'').split('-').map(Number);
   if(parts.length!==3||parts.some(n=>!Number.isFinite(n)))return null;
