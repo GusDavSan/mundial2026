@@ -270,6 +270,79 @@ function countPenaltySaves(summary, keeperName) {
   }).length;
 }
 
+function canonicalTeam(team, fixture) {
+  if (sameTeam(team, fixture.home)) return fixture.home;
+  if (sameTeam(team, fixture.away)) return fixture.away;
+  return team || "";
+}
+
+function displayMinute(play) {
+  const raw = play?.clock?.displayValue || play?.time?.displayValue || "";
+  if (raw) return String(raw).replace(/'+$/, "");
+  const val = Number(play?.clock?.value ?? play?.time?.value);
+  if (Number.isFinite(val) && val > 0) return String(Math.max(1, Math.ceil(val / 60)));
+  return "";
+}
+
+function participantName(play, index) {
+  const athlete = play?.participants?.[index]?.athlete;
+  return athlete?.displayName || athlete?.fullName || athlete?.shortName || "";
+}
+
+function playerFromGoalText(text) {
+  const own = text.match(/own goal by\s+([^(.,]+)/i);
+  if (own) return own[1].trim();
+  const afterScore = text.match(/Goal!\s+[^.]+\.\s+([^(.,]+)/i);
+  if (afterScore) return afterScore[1].trim();
+  return "";
+}
+
+function assistFromGoalText(text) {
+  const m = text.match(/Assisted by\s+([^.,]+)(?:[.,]|$)/i);
+  return m ? m[1].trim() : "";
+}
+
+function goalEventsFromSummary(summary, fixture) {
+  const plays = [...(summary.keyEvents || []), ...(summary.scoringPlays || [])];
+  const seen = new Set();
+  const goals = [];
+  for (const play of plays) {
+    const id = String(play.id || "");
+    if (id && seen.has(id)) continue;
+    const type = normalize(`${play.type?.text || ""} ${play.type?.type || ""}`);
+    const text = String(play.text || play.shortText || play.play?.text || "");
+    const textNorm = normalize(text);
+    const isGoal = play.scoringPlay || type.includes("goal") || textNorm.startsWith("goal ");
+    const disallowed = textNorm.includes("disallowed") || textNorm.includes("overturned");
+    if (!isGoal || disallowed) continue;
+    if (id) seen.add(id);
+
+    const penalty = textNorm.includes("penalty");
+    const ownGoal = textNorm.includes("own goal") || type.includes("own goal");
+    const team = canonicalTeam(play.team?.displayName || play.play?.team?.displayName || "", fixture);
+    const player = participantName(play, 0) || playerFromGoalText(text);
+    let assist = "";
+    if (!penalty && !ownGoal) {
+      assist = participantName(play, 1) || assistFromGoalText(text);
+      if (normalize(assist) === normalize(player)) assist = "";
+    }
+
+    goals.push({
+      id,
+      minute: displayMinute(play),
+      period: play.period?.number || null,
+      team,
+      player,
+      assist,
+      penalty,
+      ownGoal,
+      text,
+      source: "ESPN"
+    });
+  }
+  return goals.filter((goal) => goal.team && goal.player);
+}
+
 function keeperMetricsFromSummary(summary, fixture, event, stats) {
   const score = scoreFromEvent(event, fixture);
   const sides = [
@@ -320,6 +393,17 @@ function statsFromSummary(summary, fixture, event) {
   }
   if (!Object.keys(stats).length) return null;
 
+  const goals = goalEventsFromSummary(summary, fixture);
+  const assists = goals.filter((goal) => goal.assist && !goal.ownGoal).map((goal) => ({
+    id: goal.id,
+    minute: goal.minute,
+    period: goal.period,
+    team: goal.team,
+    player: goal.assist,
+    goal: goal.player,
+    source: "ESPN"
+  }));
+
   return {
     matchId: fixture.id,
     espnEventId: event.id,
@@ -329,6 +413,8 @@ function statsFromSummary(summary, fixture, event) {
     source: "ESPN",
     updatedAt: NOW.toISOString(),
     stats,
+    goals,
+    assists,
     keepers: keeperMetricsFromSummary(summary, fixture, event, stats)
   };
 }
@@ -370,7 +456,7 @@ async function buildMatchStats(fixtures, existing) {
         continue;
       }
       byMatch.set(matchKey, item);
-      console.log(`${matchLabel(fixture)} -> stats actualizadas (${Object.keys(item.stats).join(", ")})`);
+      console.log(`${matchLabel(fixture)} -> stats actualizadas (${Object.keys(item.stats).join(", ")}; goles ${item.goals.length}; asistencias ${item.assists.length})`);
     } catch (e) {
       console.warn(`${matchLabel(fixture)} -> error summary ESPN ${event.id}: ${e.message}`);
     }
