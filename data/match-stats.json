@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T16:57:07.407Z",
+  "updated": "2026-06-14T18:19:17.359Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -126,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -264,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -381,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -552,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -650,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -767,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -853,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T16:57:07.407Z",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -949,6 +949,168 @@
           "goalsAgainst": 2,
           "cleanSheet": 0,
           "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 9,
+      "espnEventId": "760422",
+      "date": "2026-06-14",
+      "homeTeam": "Germany",
+      "awayTeam": "Curaçao",
+      "source": "ESPN",
+      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 8,
+          "away": 2
+        },
+        "shots": {
+          "home": 21,
+          "away": 4
+        },
+        "possession": {
+          "home": 68.9,
+          "away": 31.1
+        },
+        "passes": {
+          "home": 403,
+          "away": 185
+        },
+        "fouls": {
+          "home": 9,
+          "away": 8
+        },
+        "corners": {
+          "home": 7,
+          "away": 0
+        },
+        "saves": {
+          "home": 1,
+          "away": 3
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49506991",
+          "minute": "6",
+          "period": 1,
+          "team": "Germany",
+          "player": "Felix Nmecha",
+          "assist": "Florian Wirtz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 1, Curaçao 0. Felix Nmecha (Germany) right footed shot from the centre of the box to the bottom right corner. Assisted by Florian Wirtz.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49507416",
+          "minute": "21",
+          "period": 1,
+          "team": "Curaçao",
+          "player": "Livano Comenencia",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 1, Curaçao 1. Livano Comenencia (Curaçao) left footed shot from the centre of the box to the bottom left corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49507667",
+          "minute": "38",
+          "period": 1,
+          "team": "Germany",
+          "player": "Nico Schlotterbeck",
+          "assist": "Nathaniel Brown",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 2, Curaçao 1. Nico Schlotterbeck (Germany) header from very close range to the bottom left corner. Assisted by Nathaniel Brown with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49507949",
+          "minute": "45'+5",
+          "period": 1,
+          "team": "Germany",
+          "player": "Kai Havertz",
+          "assist": "",
+          "penalty": true,
+          "ownGoal": false,
+          "text": "Goal! Germany 3, Curaçao 1. Kai Havertz (Germany) converts the penalty with a left footed shot to the bottom left corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49508258",
+          "minute": "47",
+          "period": 2,
+          "team": "Germany",
+          "player": "Jamal Musiala",
+          "assist": "Joshua Kimmich",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 4, Curaçao 1. Jamal Musiala (Germany) right footed shot from the right side of the box to the bottom left corner. Assisted by Joshua Kimmich.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49506991",
+          "minute": "6",
+          "period": 1,
+          "team": "Germany",
+          "player": "Florian Wirtz",
+          "goal": "Felix Nmecha",
+          "source": "ESPN"
+        },
+        {
+          "id": "49507667",
+          "minute": "38",
+          "period": 1,
+          "team": "Germany",
+          "player": "Nathaniel Brown",
+          "goal": "Nico Schlotterbeck",
+          "source": "ESPN"
+        },
+        {
+          "id": "49508258",
+          "minute": "47",
+          "period": 2,
+          "team": "Germany",
+          "player": "Joshua Kimmich",
+          "goal": "Jamal Musiala",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Germany",
+          "name": "Manuel Neuer",
+          "shortName": "M. Neuer",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Curaçao",
+          "name": "Eloy Room",
+          "shortName": "E. Room",
+          "number": "1",
+          "saves": 3,
+          "goalsAgainst": 4,
+          "cleanSheet": 0,
+          "savePct": 42.9,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
