@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T19:41:49.983Z",
+  "updated": "2026-06-14T20:53:38.378Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -126,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -264,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -381,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -552,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -650,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -767,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -853,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -961,7 +961,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T19:41:49.983Z",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1054,7 +1054,7 @@
           "assist": "Joshua Kimmich",
           "penalty": false,
           "ownGoal": false,
-          "text": "Goal! Germany 4, Curaçao 1. Jamal Musiala (Germany) right footed shot from the right side of the box to the bottom left corner. Assisted by Joshua Kimmich.",
+          "text": "Goal! Germany 4, Curaçao 1. Jamal Musiala (Germany) right footed shot from the right side of the box to the bottom left corner. Assisted by Joshua Kimmich with a through ball.",
           "source": "ESPN"
         },
         {
@@ -1174,6 +1174,79 @@
           "goalsAgainst": 7,
           "cleanSheet": 0,
           "savePct": 36.4,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 10,
+      "espnEventId": "760425",
+      "date": "2026-06-14",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Japan",
+      "source": "ESPN",
+      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 3,
+          "away": 0
+        },
+        "shots": {
+          "home": 5,
+          "away": 3
+        },
+        "possession": {
+          "home": 69.2,
+          "away": 30.8
+        },
+        "passes": {
+          "home": 340,
+          "away": 147
+        },
+        "fouls": {
+          "home": 3,
+          "away": 3
+        },
+        "corners": {
+          "home": 3,
+          "away": 1
+        },
+        "saves": {
+          "home": 0,
+          "away": 3
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Netherlands",
+          "name": "Bart Verbruggen",
+          "shortName": "B. Verbruggen",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Japan",
+          "name": "Zion Suzuki",
+          "shortName": "Z. Suzuki",
+          "number": "1",
+          "saves": 3,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
