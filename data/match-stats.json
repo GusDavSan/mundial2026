@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T23:48:53.727Z",
+  "updated": "2026-06-14T04:41:55.642Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T23:48:53.727Z",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -80,7 +80,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T23:48:53.727Z",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -151,7 +151,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T23:48:53.727Z",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -222,7 +222,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T23:48:53.727Z",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -293,7 +293,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T23:48:53.727Z",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -309,7 +309,7 @@
         },
         "passes": {
           "home": 278,
-          "away": 577
+          "away": 576
         },
         "fouls": {
           "home": 12,
@@ -364,35 +364,35 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-13T23:48:53.727Z",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 4,
-          "away": 2
+          "home": 5,
+          "away": 3
         },
         "shots": {
-          "home": 11,
-          "away": 12
+          "home": 12,
+          "away": 14
         },
         "possession": {
-          "home": 54.8,
-          "away": 45.2
+          "home": 51.4,
+          "away": 48.6
         },
         "passes": {
-          "home": 465,
-          "away": 385
+          "home": 514,
+          "away": 486
         },
         "fouls": {
-          "home": 14,
-          "away": 12
+          "home": 16,
+          "away": 14
         },
         "corners": {
-          "home": 4,
-          "away": 0
+          "home": 6,
+          "away": 2
         },
         "saves": {
-          "home": 1,
-          "away": 3
+          "home": 2,
+          "away": 4
         },
         "offsides": {
           "home": 0,
@@ -406,10 +406,10 @@
           "name": "Alisson Becker",
           "shortName": "A. Becker",
           "number": "1",
-          "saves": 1,
+          "saves": 2,
           "goalsAgainst": 1,
           "cleanSheet": 0,
-          "savePct": 50,
+          "savePct": 66.7,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -419,12 +419,154 @@
           "name": "Yassine Bounou",
           "shortName": "Y. Bounou",
           "number": "1",
-          "saves": 3,
+          "saves": 4,
           "goalsAgainst": 1,
           "cleanSheet": 0,
-          "savePct": 75,
+          "savePct": 80,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 7,
+      "espnEventId": "760418",
+      "date": "2026-06-14",
+      "homeTeam": "Haiti",
+      "awayTeam": "Scotland",
+      "source": "ESPN",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 2
+        },
+        "shots": {
+          "home": 15,
+          "away": 9
+        },
+        "possession": {
+          "home": 53.8,
+          "away": 46.2
+        },
+        "passes": {
+          "home": 431,
+          "away": 373
+        },
+        "fouls": {
+          "home": 23,
+          "away": 21
+        },
+        "corners": {
+          "home": 4,
+          "away": 3
+        },
+        "saves": {
+          "home": 1,
+          "away": 2
+        },
+        "offsides": {
+          "home": 3,
+          "away": 1
+        }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Haiti",
+          "name": "Johny Placide",
+          "shortName": "J. Placide",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Scotland",
+          "name": "Angus Gunn",
+          "shortName": "A. Gunn",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 8,
+      "espnEventId": "760421",
+      "date": "2026-06-14",
+      "homeTeam": "Australia",
+      "awayTeam": "Türkiye",
+      "source": "ESPN",
+      "updatedAt": "2026-06-14T04:41:55.642Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 2
+        },
+        "shots": {
+          "home": 3,
+          "away": 8
+        },
+        "possession": {
+          "home": 33.6,
+          "away": 66.4
+        },
+        "passes": {
+          "home": 133,
+          "away": 274
+        },
+        "fouls": {
+          "home": 5,
+          "away": 1
+        },
+        "corners": {
+          "home": 2,
+          "away": 2
+        },
+        "saves": {
+          "home": 2,
+          "away": 0
+        },
+        "offsides": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Australia",
+          "name": "Patrick Beach",
+          "shortName": "P. Beach",
+          "number": "18",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Türkiye",
+          "name": "Ugurcan Çakir",
+          "shortName": "U. Çakir",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
