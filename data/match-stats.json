@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T22:18:08.726Z",
+  "updated": "2026-06-14T23:39:13.912Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -126,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -264,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -381,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -552,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -650,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -767,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -853,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -961,7 +961,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1186,7 +1186,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T22:18:08.726Z",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1197,11 +1197,11 @@
           "away": 10
         },
         "possession": {
-          "home": 59.8,
-          "away": 40.2
+          "home": 59.7,
+          "away": 40.3
         },
         "passes": {
-          "home": 525,
+          "home": 524,
           "away": 342
         },
         "fouls": {
@@ -1260,7 +1260,7 @@
         },
         {
           "id": "49515010",
-          "minute": "88",
+          "minute": "89",
           "period": 2,
           "team": "Japan",
           "player": "Daichi Kamada",
@@ -1301,7 +1301,7 @@
         },
         {
           "id": "49515010",
-          "minute": "88",
+          "minute": "89",
           "period": 2,
           "team": "Japan",
           "player": "Koki Ogawa",
@@ -1333,6 +1333,79 @@
           "goalsAgainst": 2,
           "cleanSheet": 0,
           "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 11,
+      "espnEventId": "760423",
+      "date": "2026-06-14",
+      "homeTeam": "Ivory Coast",
+      "awayTeam": "Ecuador",
+      "source": "ESPN",
+      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 0
+        },
+        "shots": {
+          "home": 3,
+          "away": 6
+        },
+        "possession": {
+          "home": 51.3,
+          "away": 48.7
+        },
+        "passes": {
+          "home": 195,
+          "away": 186
+        },
+        "fouls": {
+          "home": 4,
+          "away": 1
+        },
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Ivory Coast",
+          "name": "Yahia Fofana",
+          "shortName": "Y. Fofana",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Ecuador",
+          "name": "Hernán Galíndez",
+          "shortName": "H. Galíndez",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
