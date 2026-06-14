@@ -4,6 +4,8 @@ import vm from "node:vm";
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const OUT_FILE = process.env.HIGHLIGHTS_OUT_FILE || "data/dazn-highlights.json";
 const CHANNEL_HANDLE = "@DAZNES";
+const CHANNEL_ID = process.env.DAZN_CHANNEL_ID || "UCz9FiMLz6SOgR_4VEFvjeIA";
+const FEED_URL = process.env.DAZN_FEED_URL || `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 const MAX_UPLOAD_PAGES = Number(process.env.MAX_UPLOAD_PAGES || 3);
 const MOCK_UPLOADS_FILE = process.env.MOCK_UPLOADS_FILE || "";
 const DEBUG = process.env.DEBUG_HIGHLIGHTS === "1";
@@ -167,6 +169,40 @@ async function getRecentUploads(playlistId) {
   return videos.filter((v) => v.videoId && v.title);
 }
 
+function decodeXml(text) {
+  return String(text || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+async function getRecentFeedUploads() {
+  const r = await fetch(FEED_URL);
+  if (!r.ok) throw new Error(`YouTube RSS ${r.status}: ${await r.text()}`);
+  const xml = await r.text();
+  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map((m) => m[1]);
+  return entries.map((entry) => {
+    const videoId = entry.match(/<yt:videoId>([^<]+)<\/yt:videoId>/)?.[1] || "";
+    const title = decodeXml(entry.match(/<title>([\s\S]*?)<\/title>/)?.[1] || "");
+    const publishedAt = entry.match(/<published>([^<]+)<\/published>/)?.[1] || NOW.toISOString();
+    const thumbnail = decodeXml(entry.match(/<media:thumbnail url="([^"]+)"/)?.[1] || "");
+    return { videoId, title, publishedAt, thumbnail };
+  }).filter((v) => v.videoId && v.title);
+}
+
+function uniqueVideos(videos) {
+  const seen = new Set();
+  return videos.filter((video) => {
+    const key = video.videoId || video.title;
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 async function readMockUploads() {
   const raw = await fs.readFile(MOCK_UPLOADS_FILE, "utf8");
   const data = JSON.parse(raw);
@@ -210,10 +246,10 @@ function buildHighlights(fixtures, uploads, existing) {
       .filter((x) => x.score >= MIN_CONFIDENCE)
       .sort((a, b) => b.score - a.score || new Date(b.video.publishedAt) - new Date(a.video.publishedAt))[0];
     if (!best) {
-      if (DEBUG) console.log(`Sin match DAZN: ${match.id} ${match.home} vs ${match.away}`);
+      console.log(`Sin highlight DAZN: ${match.id} ${match.home} vs ${match.away}`);
       continue;
     }
-    if (DEBUG) console.log(`DAZN match ${match.id}: "${best.video.title}" (${best.score})`);
+    console.log(`Encontrado ${match.home}-${match.away} -> ${best.video.videoId} (${best.score}) "${best.video.title}"`);
     byMatch.set(matchKey, {
       matchId: match.id,
       date: match.date,
@@ -236,14 +272,26 @@ function buildHighlights(fixtures, uploads, existing) {
   };
 }
 
-if (!API_KEY && !MOCK_UPLOADS_FILE) {
-  throw new Error("Falta el secreto YOUTUBE_API_KEY en GitHub Actions");
-}
-
 const [fixtures, existing] = await Promise.all([readFixtures(), readExisting()]);
-const uploads = MOCK_UPLOADS_FILE
-  ? await readMockUploads()
-  : await getRecentUploads(await getUploadsPlaylist());
+let uploads = [];
+if (MOCK_UPLOADS_FILE) {
+  uploads = await readMockUploads();
+} else {
+  const feedUploads = await getRecentFeedUploads().catch((e) => {
+    console.warn(`Feed DAZN no disponible: ${e.message}`);
+    return [];
+  });
+  let apiUploads = [];
+  if (API_KEY) {
+    apiUploads = await getRecentUploads(await getUploadsPlaylist()).catch((e) => {
+      console.warn(`YouTube API no disponible: ${e.message}`);
+      return [];
+    });
+  } else {
+    console.log("YOUTUBE_API_KEY no definido; usando feed RSS público de DAZN.");
+  }
+  uploads = uniqueVideos([...feedUploads, ...apiUploads]);
+}
 const output = buildHighlights(fixtures, uploads, existing);
 
 await fs.mkdir("data", { recursive: true });
