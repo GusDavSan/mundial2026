@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T15:18:37.980Z",
+  "updated": "2026-06-14T17:48:15.533Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -74,10 +74,10 @@
       "away": "Morocco",
       "source": "DAZN ES",
       "title": "Brasil vs Marruecos (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Nl3LDFriPu8",
-      "thumbnail": "https://i3.ytimg.com/vi/Nl3LDFriPu8/hqdefault.jpg",
-      "videoId": "Nl3LDFriPu8",
-      "publishedAt": "2026-06-14T03:44:44+00:00",
+      "url": "https://www.youtube.com/watch?v=dTo1wgNe3Qg",
+      "thumbnail": "https://i.ytimg.com/vi/dTo1wgNe3Qg/hqdefault.jpg",
+      "videoId": "dTo1wgNe3Qg",
+      "publishedAt": "2026-06-14T03:42:19Z",
       "confidence": 20
     },
     {
@@ -91,6 +91,19 @@
       "thumbnail": "https://i.ytimg.com/vi/zYNRVDc9z_4/hqdefault.jpg",
       "videoId": "zYNRVDc9z_4",
       "publishedAt": "2026-06-14T05:00:13Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 8,
+      "date": "2026-06-14",
+      "home": "Australia",
+      "away": "Türkiye",
+      "source": "DAZN ES",
+      "title": "Australia vs Turquía (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=QrMHQu2PDHE",
+      "thumbnail": "https://i.ytimg.com/vi/QrMHQu2PDHE/hqdefault.jpg",
+      "videoId": "QrMHQu2PDHE",
+      "publishedAt": "2026-06-14T10:56:13Z",
       "confidence": 20
     }
   ]
