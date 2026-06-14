@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T06:55:38.056Z",
+  "updated": "2026-06-14T10:19:02.610Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -558,7 +558,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "South Korea",
         "espnTeam": "South Korea",
@@ -1107,7 +1107,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -1656,7 +1656,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -2205,7 +2205,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "Qatar",
         "espnTeam": "Qatar",
@@ -2754,7 +2754,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -3293,7 +3293,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "Haiti",
         "espnTeam": "Haiti",
@@ -3842,7 +3842,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T06:55:38.056Z",
+      "updatedAt": "2026-06-14T10:19:02.610Z",
       "home": {
         "team": "Australia",
         "espnTeam": "Australia",
