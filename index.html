@@ -297,11 +297,26 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .squad-title{font-family:var(--disp);font-size:14px;letter-spacing:2px;color:var(--gold)}
 .squad-count{font-family:var(--mono);font-size:11px;color:var(--muted)}
 .squad-strip{display:flex;flex-wrap:wrap;gap:8px;padding:10px}
-.player-chip{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px;min-width:150px;max-width:220px;flex:1 1 150px;background:rgba(6,11,24,.42);border:1px solid var(--border);border-radius:8px;padding:8px 9px}
-.player-chip:hover{border-color:var(--border2)}
-.player-chip-num{font-family:var(--mono);font-size:11px;color:var(--gold);min-width:24px;text-align:center}
-.player-chip-name{font-size:12px;font-weight:800;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.player-chip-meta{font-size:10px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player-chip{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:9px;min-width:188px;max-width:292px;min-height:76px;flex:1 1 188px;background:rgba(6,11,24,.42);border:1px solid var(--border);border-radius:8px;padding:9px 10px;color:inherit;text-align:left;cursor:pointer;font-family:var(--sans)}
+.player-chip:hover{border-color:var(--border2);background:rgba(201,162,39,.045)}
+.player-chip-num{font-family:var(--mono);font-size:12px;color:var(--gold);min-width:28px;text-align:center;padding-top:2px}
+.player-chip-name{font-size:13px;font-weight:850;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player-chip-facts{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:4px}
+.player-pos-badge{font-family:var(--mono);font-size:10px;font-weight:900;letter-spacing:.3px;color:var(--gold);border:1px solid rgba(201,162,39,.35);background:rgba(201,162,39,.08);border-radius:5px;padding:2px 5px;line-height:1}
+.player-age{font-size:10px;color:var(--muted);line-height:1.2}
+.player-chip-club{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player-modal{padding:18px}
+.player-modal-head{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;margin-bottom:14px}
+.player-photo{width:96px;height:96px;border-radius:14px;background:rgba(201,162,39,.07);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:var(--disp);font-size:34px;color:var(--gold)}
+.player-photo img{width:100%;height:100%;object-fit:cover}
+.player-modal-name{font-family:var(--disp);font-size:25px;letter-spacing:1px;line-height:1;color:var(--text)}
+.player-modal-sub{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.45}
+.player-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.player-detail-cell{background:rgba(6,11,24,.45);border:1px solid var(--border);border-radius:8px;padding:9px 10px;min-height:54px}
+.player-detail-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;font-weight:800}
+.player-detail-value{font-size:13px;color:var(--text);font-weight:750;margin-top:4px;line-height:1.25}
+.player-bio{font-size:12px;line-height:1.55;color:var(--muted);border-top:1px solid var(--border);margin-top:14px;padding-top:12px}
+.player-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .manager-card{display:flex;align-items:center;gap:10px;padding:12px 13px}
 .manager-avatar{width:36px;height:36px;border-radius:50%;background:rgba(201,162,39,.1);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .pc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px}
@@ -399,7 +414,10 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .team-profile{grid-template-columns:1fr}
   .team-summary{align-items:flex-start}
   .team-summary-badge,.team-summary-badge img{width:50px;height:50px}
-  .player-chip{min-width:128px;flex-basis:128px}
+  .player-chip{min-width:158px;flex-basis:158px;max-width:none}
+  .player-detail-grid{grid-template-columns:1fr}
+  .player-modal-head{grid-template-columns:76px 1fr;gap:12px}
+  .player-photo{width:76px;height:76px;border-radius:12px}
   .squad-blocks{grid-template-columns:1fr}
   .lineup-grid{grid-template-columns:1fr}
   .detail-body-grid{grid-template-columns:1fr}
@@ -660,6 +678,7 @@ const I18N={
     teamNotFound:'Equipo no encontrado en TheSportsDB.',viewSquadsFifa:'Ver plantillas en FIFA.com',officialSquad:'Ver convocatoria oficial en FIFA.com',viewTsdb:'Ver en TheSportsDB',
     noSquad:'TheSportsDB no tiene la plantilla convocada de {team} para el Mundial 2026.',squad:'CONVOCADOS',goalkeepers:'Porteros',defenders:'Defensas',midfielders:'Medio campo',forwards:'Delanteros',manager:'Manager',others:'Otros',
     noPlayersInBlock:'Sin jugadores en esta demarcación todavía.',managerMissing:'Manager no disponible en TheSportsDB.',years:'años',error:'Error',playersLoadError:'Error cargando jugadores',
+    playerDetails:'Ficha del jugador',shirtNumber:'Dorsal',position:'Posición',club:'Club',age:'Edad',height:'Altura',weight:'Peso',born:'Nacimiento',birthplace:'Lugar',nationality:'Nacionalidad',bio:'Bio',noBio:'Sin bio disponible',
     highlights:'Highlights',watchHighlight:'Ver resumen',daznHighlights:'Resumen DAZN'
     ,momentum:'Momentum',balancedMatch:'Partido igualado',controlsMatch:'controla el partido',lastEvent:'Último',dataSource:'Fuente',updatedAgo:'actualizado {time}',justNow:'ahora',
     forceRefresh:'Forzar actualizar',refreshing:'Actualizando...',lineupsPending:'Alineaciones pendientes',lineupsPendingDetail:'ESPN todavía no ha publicado las alineaciones de este partido.',
@@ -702,6 +721,7 @@ const I18N={
     teamNotFound:'Team not found in TheSportsDB.',viewSquadsFifa:'View squads on FIFA.com',officialSquad:'View official squad on FIFA.com',viewTsdb:'View on TheSportsDB',
     noSquad:'TheSportsDB does not have the World Cup 2026 squad for {team}.',squad:'SQUAD',goalkeepers:'Goalkeepers',defenders:'Defenders',midfielders:'Midfield',forwards:'Forwards',manager:'Manager',others:'Others',
     noPlayersInBlock:'No players listed in this block yet.',managerMissing:'Manager not available in TheSportsDB.',years:'years',error:'Error',playersLoadError:'Error loading players',
+    playerDetails:'Player profile',shirtNumber:'Number',position:'Position',club:'Club',age:'Age',height:'Height',weight:'Weight',born:'Born',birthplace:'Place',nationality:'Nationality',bio:'Bio',noBio:'No bio available',
     highlights:'Highlights',watchHighlight:'Watch highlights',daznHighlights:'DAZN highlights'
     ,momentum:'Momentum',balancedMatch:'Balanced match',controlsMatch:'controls the match',lastEvent:'Last',dataSource:'Source',updatedAgo:'updated {time}',justNow:'now',
     forceRefresh:'Force refresh',refreshing:'Refreshing...',lineupsPending:'Lineups pending',lineupsPendingDetail:'ESPN has not published lineups for this match yet.',
@@ -2487,6 +2507,44 @@ const TEAM_ALIASES={
   'Curaçao':'Curacao'
 };
 let selectedTeamName=null;
+let squadPlayerStore={};
+
+function ageFromDate(dateStr){
+  if(!dateStr)return '';
+  const born=new Date(dateStr);
+  if(isNaN(born))return '';
+  const now=new Date();
+  let age=now.getFullYear()-born.getFullYear();
+  const m=now.getMonth()-born.getMonth();
+  if(m<0||(m===0&&now.getDate()<born.getDate()))age--;
+  return age>0?age:'';
+}
+
+function squadPositionAbbr(pos){
+  const p=stripText(pos);
+  if(!p)return '—';
+  const has=s=>p.includes(s);
+  if(has('goal'))return 'POR';
+  if(has('left wing back'))return 'CAI';
+  if(has('right wing back'))return 'CAD';
+  if(has('left back'))return 'LI';
+  if(has('right back'))return 'LD';
+  if(has('centre back')||has('center back')||has('central defender')||has('centre defender')||has('center defender')||has('defender centre'))return 'DFC';
+  if(has('defensive midfield'))return 'MCD';
+  if(has('attacking midfield'))return 'MCO';
+  if(has('central midfield')||has('centre midfield')||has('center midfield'))return 'MC';
+  if(has('left midfield'))return 'MI';
+  if(has('right midfield'))return 'MD';
+  if(has('left wing'))return 'EI';
+  if(has('right wing'))return 'ED';
+  if(has('winger'))return 'EXT';
+  if(has('second striker'))return 'SD';
+  if(has('centre forward')||has('center forward')||has('striker'))return 'DC';
+  if(has('forward'))return 'DEL';
+  if(has('def'))return 'DEF';
+  if(has('mid'))return 'MED';
+  return String(pos||'').slice(0,3).toUpperCase();
+}
 
 function initEquipos(){
   selectedTeamName=null;
@@ -2548,6 +2606,7 @@ async function loadTeamByName(name){
 }
 
 async function showTeamSquad(team,name,el,back){
+  squadPlayerStore={};
   function teamConf(teamName){
     const conf=CONFS.find(c=>c.teams.some(t=>sameTeam(t,teamName)));
     return conf?conf.name:'';
@@ -2616,15 +2675,18 @@ async function showTeamSquad(team,name,el,back){
     const managerName=(managerPlayer&&managerPlayer.strPlayer)||team.strManager||team.strCoach||team.strHeadCoach||team.strManagerName||'';
     const managerMeta=(managerPlayer&&(managerPlayer.strTeam||managerPlayer.strPosition))||'';
     function playerChip(p){
-      var born=p.dateBorn?p.dateBorn.slice(0,4):'';
-      var age=born?(new Date().getFullYear()-parseInt(born))+' '+t('years'):'';
-      var club=p.strTeam||'';
-      const meta=[p.strPosition||'',age,club].filter(Boolean).join(' · ');
-      return '<div class="player-chip" title="'+escHtml((p.strNumber?('#'+p.strNumber+' '):'')+(p.strPlayer||''))+'">'+
+      const id='pl_'+String(p.idPlayer||p.strPlayer||Math.random()).replace(/[^a-zA-Z0-9_-]/g,'_');
+      squadPlayerStore[id]={player:p,teamName:name,team};
+      const age=ageFromDate(p.dateBorn);
+      const club=p.strTeam||'';
+      const pos=squadPositionAbbr(p.strPosition);
+      const facts='<div class="player-chip-facts"><span class="player-pos-badge">'+escHtml(pos)+'</span>'+(age?'<span class="player-age">'+age+' '+t('years')+'</span>':'')+'</div>';
+      return '<button type="button" class="player-chip" onclick="openPlayerDetail(\''+id+'\')" title="'+escHtml((p.strNumber?('#'+p.strNumber+' '):'')+(p.strPlayer||''))+'">'+
         '<div class="player-chip-num">'+(p.strNumber?escHtml('#'+p.strNumber):'—')+'</div>'+
         '<div><div class="player-chip-name">'+escHtml(p.strPlayer||'')+'</div>'+
-        (meta?'<div class="player-chip-meta">'+escHtml(meta)+'</div>':'')+'</div>'+
-        '</div>';
+        facts+
+        (club?'<div class="player-chip-club">'+escHtml(club)+'</div>':'')+'</div>'+
+        '</button>';
     }
     let ph='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'+
       '<div class="sec-ttl">'+t('squad')+' ('+players.length+')</div>'+
@@ -2644,6 +2706,86 @@ async function showTeamSquad(team,name,el,back){
       '<div class="empty-text">'+t('playersLoadError')+': '+e.message+'<br><br>'+
       '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">'+t('officialSquad')+' →</a></div></div>';
   }
+}
+
+async function openPlayerDetail(id){
+  const record=squadPlayerStore[id];
+  if(!record)return;
+  const panel=document.getElementById('detailPanel');
+  const inner=document.getElementById('detailInner');
+  const close=document.getElementById('dClose');
+  panel.classList.add('open');close.style.display='flex';
+  document.body.style.overflow='hidden';
+  inner.innerHTML=renderPlayerDetail(record,null,true);
+  const espnId=record.player&&record.player.idESPN;
+  if(espnId){
+    try{
+      const espn=await fetchJson('https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/athletes/'+encodeURIComponent(espnId)+'?lang=en&region=us',{},2500);
+      inner.innerHTML=renderPlayerDetail(record,espn,false);
+    }catch(e){
+      inner.innerHTML=renderPlayerDetail(record,null,false);
+    }
+  }
+}
+
+function playerLink(links,rel){
+  return (links||[]).find(l=>(l.rel||[]).includes(rel)&&l.href&&l.href.startsWith('http'))?.href||'';
+}
+
+function playerDate(dateStr){
+  if(!dateStr)return '';
+  const d=new Date(dateStr);
+  if(isNaN(d))return String(dateStr).slice(0,10);
+  return d.toLocaleDateString(lang==='es'?'es-ES':'en-US',{year:'numeric',month:'short',day:'numeric'});
+}
+
+function playerDetailCell(label,value){
+  if(!value)return '';
+  return '<div class="player-detail-cell"><div class="player-detail-label">'+escHtml(label)+'</div><div class="player-detail-value">'+escHtml(value)+'</div></div>';
+}
+
+function renderPlayerDetail(record,espn,loadingEspn){
+  const p=record.player||{};
+  const img=p.strCutout||p.strRender||p.strThumb||p.strPoster||'';
+  const age=ageFromDate(p.dateBorn)||espn&&espn.age||'';
+  const height=p.strHeight||espn&&espn.displayHeight||'';
+  const weight=p.strWeight||espn&&espn.displayWeight||'';
+  const born=playerDate(p.dateBorn||espn&&espn.dateOfBirth);
+  const position=p.strPosition||espn&&espn.position&&espn.position.displayName||'';
+  const club=p.strTeam||'';
+  const nationality=p.strNationality||record.teamName||espn&&espn.citizenship||'';
+  const birthPlace=p.strBirthLocation||espn&&espn.birthPlace&&[espn.birthPlace.city,espn.birthPlace.country].filter(Boolean).join(', ')||'';
+  const bio=p.strDescriptionES||p.strDescriptionEN||'';
+  const espnUrl=playerLink(espn&&espn.links,'playercard')||(p.idESPN?'https://www.espn.com/soccer/player/_/id/'+p.idESPN:'');
+  const links=[
+    p.idPlayer?'<a class="btn btn-sm" href="https://www.thesportsdb.com/player/'+escHtml(p.idPlayer)+'" target="_blank" rel="noopener">TheSportsDB</a>':'',
+    espnUrl?'<a class="btn btn-sm" href="'+escHtml(espnUrl)+'" target="_blank" rel="noopener">ESPN</a>':'',
+    p.idTransferMkt?'<a class="btn btn-sm" href="https://www.transfermarkt.com/-/profil/spieler/'+escHtml(p.idTransferMkt)+'" target="_blank" rel="noopener">Transfermarkt</a>':'',
+    p.idWikidata?'<a class="btn btn-sm" href="https://www.wikidata.org/wiki/'+escHtml(p.idWikidata)+'" target="_blank" rel="noopener">Wikidata</a>':''
+  ].filter(Boolean).join('');
+  return '<div class="player-modal">'+
+    '<div class="player-modal-head">'+
+      '<div class="player-photo">'+(img?'<img src="'+escHtml(img)+'" alt="" onerror="this.parentNode.textContent=\''+escHtml((p.strPlayer||'?').slice(0,1))+'\'">':escHtml((p.strPlayer||'?').slice(0,1)))+'</div>'+
+      '<div><div class="sec-ttl" style="margin-bottom:6px">'+t('playerDetails')+'</div>'+
+        '<div class="player-modal-name">'+escHtml(p.strPlayer||'')+'</div>'+
+        '<div class="player-modal-sub">'+escHtml([record.teamName,squadPositionAbbr(position),club].filter(Boolean).join(' · '))+'</div>'+
+        (loadingEspn?'<div class="player-modal-sub">'+t('loadingShort')+'</div>':'')+
+      '</div>'+
+    '</div>'+
+    '<div class="player-detail-grid">'+
+      playerDetailCell(t('shirtNumber'),p.strNumber?('#'+p.strNumber):'')+
+      playerDetailCell(t('position'),[squadPositionAbbr(position),position].filter(Boolean).join(' · '))+
+      playerDetailCell(t('club'),club)+
+      playerDetailCell(t('age'),age?age+' '+t('years'):'')+
+      playerDetailCell(t('height'),height)+
+      playerDetailCell(t('weight'),weight)+
+      playerDetailCell(t('born'),born)+
+      playerDetailCell(t('birthplace'),birthPlace)+
+      playerDetailCell(t('nationality'),nationality)+
+    '</div>'+
+    '<div class="player-bio"><div class="player-detail-label">'+t('bio')+'</div>'+(bio?escHtml(bio.slice(0,520))+(bio.length>520?'...':''):t('noBio'))+'</div>'+
+    (links?'<div class="player-links">'+links+'</div>':'')+
+  '</div>';
 }
 
 // DETAIL PANEL
