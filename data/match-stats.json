@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T20:53:38.378Z",
+  "updated": "2026-06-14T22:18:08.726Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -126,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -264,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -381,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -552,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -650,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -767,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -853,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -961,7 +961,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -972,12 +972,12 @@
           "away": 8
         },
         "possession": {
-          "home": 64.7,
-          "away": 35.3
+          "home": 64.6,
+          "away": 35.4
         },
         "passes": {
-          "home": 635,
-          "away": 341
+          "home": 637,
+          "away": 343
         },
         "fouls": {
           "home": 18,
@@ -1090,7 +1090,7 @@
           "assist": "Deniz Undav",
           "penalty": false,
           "ownGoal": false,
-          "text": "Goal! Germany 7, Curaçao 1. Kai Havertz (Germany) left footed shot from the centre of the box to the centre of the goal. Assisted by Deniz Undav following a fast break.",
+          "text": "Goal! Germany 7, Curaçao 1. Kai Havertz (Germany) left footed shot from the centre of the box to the centre of the goal. Assisted by Deniz Undav with a through ball following a fast break.",
           "source": "ESPN"
         }
       ],
@@ -1186,43 +1186,129 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T20:53:38.378Z",
+      "updatedAt": "2026-06-14T22:18:08.726Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 3,
-          "away": 0
+          "home": 6,
+          "away": 3
         },
         "shots": {
-          "home": 5,
-          "away": 3
+          "home": 10,
+          "away": 10
         },
         "possession": {
-          "home": 69.2,
-          "away": 30.8
+          "home": 59.8,
+          "away": 40.2
         },
         "passes": {
-          "home": 340,
-          "away": 147
+          "home": 525,
+          "away": 342
         },
         "fouls": {
-          "home": 3,
-          "away": 3
+          "home": 7,
+          "away": 7
         },
         "corners": {
-          "home": 3,
-          "away": 1
+          "home": 5,
+          "away": 4
         },
         "saves": {
-          "home": 0,
-          "away": 3
+          "home": 1,
+          "away": 4
         },
         "offsides": {
-          "home": 0,
+          "home": 1,
           "away": 0
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49513720",
+          "minute": "51",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Virgil van Dijk",
+          "assist": "Ryan Gravenberch",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 1, Japan 0. Virgil van Dijk (Netherlands) header from the centre of the box to the bottom right corner. Assisted by Ryan Gravenberch with a cross following a set piece situation.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49513918",
+          "minute": "57",
+          "period": 2,
+          "team": "Japan",
+          "player": "Keito Nakamura",
+          "assist": "Takefusa Kubo",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 1, Japan 1. Keito Nakamura (Japan) right footed shot from outside the box to the bottom left corner. Assisted by Takefusa Kubo.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49514068",
+          "minute": "64",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Crysencio Summerville",
+          "assist": "Ryan Gravenberch",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 2, Japan 1. Crysencio Summerville (Netherlands) left footed shot from the right side of the box to the bottom left corner. Assisted by Ryan Gravenberch.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49515010",
+          "minute": "88",
+          "period": 2,
+          "team": "Japan",
+          "player": "Daichi Kamada",
+          "assist": "Koki Ogawa",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 2, Japan 2. Daichi Kamada (Japan) header from the centre of the box to the top right corner. Assisted by Koki Ogawa following a corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49513720",
+          "minute": "51",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Ryan Gravenberch",
+          "goal": "Virgil van Dijk",
+          "source": "ESPN"
+        },
+        {
+          "id": "49513918",
+          "minute": "57",
+          "period": 2,
+          "team": "Japan",
+          "player": "Takefusa Kubo",
+          "goal": "Keito Nakamura",
+          "source": "ESPN"
+        },
+        {
+          "id": "49514068",
+          "minute": "64",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Ryan Gravenberch",
+          "goal": "Crysencio Summerville",
+          "source": "ESPN"
+        },
+        {
+          "id": "49515010",
+          "minute": "88",
+          "period": 2,
+          "team": "Japan",
+          "player": "Koki Ogawa",
+          "goal": "Daichi Kamada",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -1230,12 +1316,12 @@
           "name": "Bart Verbruggen",
           "shortName": "B. Verbruggen",
           "number": "1",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 1,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 33.3,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -1243,10 +1329,10 @@
           "name": "Zion Suzuki",
           "shortName": "Z. Suzuki",
           "number": "1",
-          "saves": 3,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 4,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 66.7,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
