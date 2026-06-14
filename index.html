@@ -2207,7 +2207,7 @@ function updateQChampion(){
 // ══════════════════════════════════════════════
 let statsCache={},statsLoaded=false;
 const STATS_KEY='mw26_stats';
-const STATS_VERSION=6;
+const STATS_VERSION=7;
 async function loadGoleadores(){
   const el=document.getElementById('golesContent');
   // Load from cache
@@ -2370,8 +2370,27 @@ function renderKeeperMetrics(p){
 function renderStats(el,append){
   const scorers={},assists={},keepers={};
   const espnKeeperMatches=new Set();
+  const espnTimelineMatches=new Set();
+  const playerStatKey=function(team,name){return stripText(team)+'|'+stripText(name);};
   (storedMatchStatsCache||[]).forEach(function(item){
     if(!item)return;
+    (item.goals||[]).forEach(function(goal){
+      const p=goal.player||goal.name;
+      const team=goal.team||'';
+      if(!p||goal.ownGoal)return;
+      const key=playerStatKey(team,p);
+      if(!scorers[key])scorers[key]={name:p,team,goals:0,ast:0};
+      scorers[key].goals++;
+    });
+    (item.assists||[]).forEach(function(assist){
+      const p=assist.player||assist.name;
+      const team=assist.team||'';
+      if(!p)return;
+      const key=playerStatKey(team,p);
+      if(!assists[key])assists[key]={name:p,team,ast:0};
+      assists[key].ast++;
+    });
+    if((item.goals&&item.goals.length)||(item.assists&&item.assists.length))espnTimelineMatches.add(Number(item.matchId));
     const keeperRows=Array.isArray(item.keepers)&&item.keepers.length?item.keepers:fallbackKeepersFromStoredStats(item);
     if(!keeperRows.length)return;
     espnKeeperMatches.add(Number(item.matchId));
@@ -2388,19 +2407,23 @@ function renderStats(el,append){
     const parts=k.split('|');const home=parts[0];const away=parts[1];
     const fx=FIXTURES.find(function(f){return sameTeam(f.home,home)&&sameTeam(f.away,away);});
     const event=obj.event||{};
-    timeline.forEach(function(ev){
-      if(timelineKind(ev)==='goal'){
-        const p=eventPlayer(ev);if(!p)return;
-        const team=ev.strTeam||'';
-        if(!scorers[p])scorers[p]={name:p,team,goals:0,ast:0};
-        scorers[p].goals++;
-        const ap=eventAssist(ev);
-        if(ap&&ap!==p){
-          if(!assists[ap])assists[ap]={name:ap,team,ast:0};
-          assists[ap].ast++;
+    if(!(fx&&espnTimelineMatches.has(Number(fx.id)))){
+      timeline.forEach(function(ev){
+        if(timelineKind(ev)==='goal'){
+          const p=eventPlayer(ev);if(!p)return;
+          const team=ev.strTeam||'';
+          const sk=playerStatKey(team,p);
+          if(!scorers[sk])scorers[sk]={name:p,team,goals:0,ast:0};
+          scorers[sk].goals++;
+          const ap=eventAssist(ev);
+          if(ap&&ap!==p){
+            const ak=playerStatKey(team,ap);
+            if(!assists[ak])assists[ak]={name:ap,team,ast:0};
+            assists[ak].ast++;
+          }
         }
-      }
-    });
+      });
+    }
     if(fx&&espnKeeperMatches.has(Number(fx.id)))return;
     if(event&&isFin(event.strStatus)&&event.intHomeScore!==null&&event.intHomeScore!==undefined&&event.intAwayScore!==null&&event.intAwayScore!==undefined){
       const hs=parseInt(event.intHomeScore),as=parseInt(event.intAwayScore);
@@ -2417,8 +2440,22 @@ function renderStats(el,append){
       if(Number.isFinite(as)&&as===0)addKeeper(home);
     }
   });
-  const topScorers=Object.values(scorers).sort(function(a,b){return b.goals-a.goals;}).slice(0,15);
-  const topAssists=Object.values(assists).sort(function(a,b){return b.ast-a.ast;}).slice(0,10);
+  function topDynamicWithTies(list,limit,key,minFloor){
+    const sorted=list.sort(function(a,b){
+      return (b[key]||0)-(a[key]||0)||String(a.name||'').localeCompare(String(b.name||''),'es')||String(a.team||'').localeCompare(String(b.team||''),'es');
+    });
+    if(sorted.length<=limit)return sorted;
+    const values=[...new Set(sorted.map(function(row){return row[key]||0;}).filter(function(v){return v>=(minFloor||1);}))]
+      .sort(function(a,b){return b-a;});
+    let floor=minFloor||1;
+    for(const val of values){
+      const count=sorted.filter(function(row){return (row[key]||0)>=val;}).length;
+      if(count>=limit){floor=val;break;}
+    }
+    return sorted.filter(function(row){return (row[key]||0)>=floor;});
+  }
+  const topScorers=topDynamicWithTies(Object.values(scorers),15,'goals',1);
+  const topAssists=topDynamicWithTies(Object.values(assists),10,'ast',1);
   const topKeepers=Object.values(keepers).map(finishKeeperRanking).sort(function(a,b){
     return b.score-a.score||b.cleanSheets-a.cleanSheets||b.savePct-a.savePct||b.saves-a.saves||a.goalsAgainst-b.goalsAgainst;
   }).slice(0,10);
