@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T22:19:25.028Z",
+  "updated": "2026-06-14T01:37:18.854Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -60,12 +60,12 @@
       "home": "Qatar",
       "away": "Switzerland",
       "source": "DAZN ES",
-      "title": "Para sangre fría... la de Embolo 🧊Suiza marca territorio ante Catar 💥",
-      "url": "https://www.youtube.com/watch?v=_T0DqayiI2E",
-      "thumbnail": "https://i.ytimg.com/vi/_T0DqayiI2E/hqdefault.jpg",
-      "videoId": "_T0DqayiI2E",
-      "publishedAt": "2026-06-13T19:50:11Z",
-      "confidence": 14
+      "title": "Catar vs Suiza (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=izVd6GibW6g",
+      "thumbnail": "https://i.ytimg.com/vi/izVd6GibW6g/hqdefault.jpg",
+      "videoId": "izVd6GibW6g",
+      "publishedAt": "2026-06-13T23:00:15Z",
+      "confidence": 20
     },
     {
       "matchId": 6,
@@ -73,12 +73,12 @@
       "home": "Brazil",
       "away": "Morocco",
       "source": "DAZN ES",
-      "title": "A LO LUIS ENRIQUE 🧐El saque de centro de Marruecos contra Brasil #DAZNMundial #FIFAWorldCup",
-      "url": "https://www.youtube.com/watch?v=WLzcshQgR7I",
-      "thumbnail": "https://i.ytimg.com/vi/WLzcshQgR7I/hqdefault.jpg",
-      "videoId": "WLzcshQgR7I",
-      "publishedAt": "2026-06-13T22:15:03Z",
-      "confidence": 16
+      "title": "RESUMEN DE GOLES EN UN MINUTO 🫡🇧🇷 BRASIL  🆚 MARRUECOS 🇲🇦",
+      "url": "https://www.youtube.com/watch?v=ZTMkWpcO-Ik",
+      "thumbnail": "https://i.ytimg.com/vi/ZTMkWpcO-Ik/hqdefault.jpg",
+      "videoId": "ZTMkWpcO-Ik",
+      "publishedAt": "2026-06-14T00:22:48Z",
+      "confidence": 17
     }
   ]
 }
