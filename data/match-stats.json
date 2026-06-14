@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T08:35:12.992Z",
+  "updated": "2026-06-14T09:30:41.117Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -44,6 +44,52 @@
           "away": 1
         }
       },
+      "goals": [
+        {
+          "id": "49483413",
+          "minute": "9",
+          "period": 1,
+          "team": "Mexico",
+          "player": "Julián Quiñones",
+          "assist": "Érik Lira",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Mexico 1, South Africa 0. Julián Quiñones (Mexico) right footed shot from the centre of the box to the centre of the goal. Assisted by Érik Lira.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49484266",
+          "minute": "67",
+          "period": 2,
+          "team": "Mexico",
+          "player": "Raúl Jiménez",
+          "assist": "Roberto Alvarado",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Mexico 2, South Africa 0. Raúl Jiménez (Mexico) header from very close range to the bottom left corner. Assisted by Roberto Alvarado with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49483413",
+          "minute": "9",
+          "period": 1,
+          "team": "Mexico",
+          "player": "Érik Lira",
+          "goal": "Julián Quiñones",
+          "source": "ESPN"
+        },
+        {
+          "id": "49484266",
+          "minute": "67",
+          "period": 2,
+          "team": "Mexico",
+          "player": "Roberto Alvarado",
+          "goal": "Raúl Jiménez",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -80,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -115,6 +161,73 @@
           "away": 2
         }
       },
+      "goals": [
+        {
+          "id": "49485589",
+          "minute": "59",
+          "period": 2,
+          "team": "Czechia",
+          "player": "Ladislav Krejcí",
+          "assist": "Vladimír Coufal",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Korea Republic 0, Czechia 1. Ladislav Krejcí (Czechia) header from very close range to the bottom right corner. Assisted by Vladimír Coufal.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49485726",
+          "minute": "67",
+          "period": 2,
+          "team": "South Korea",
+          "player": "Hwang In-Beom",
+          "assist": "Lee Kang-In",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Korea Republic 1, Czechia 1. Hwang In-Beom (Korea Republic) right footed shot from the centre of the box to the bottom right corner. Assisted by Lee Kang-In.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49485808",
+          "minute": "80",
+          "period": 2,
+          "team": "South Korea",
+          "player": "Oh Hyeon-Gyu",
+          "assist": "Hwang In-Beom",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Korea Republic 2, Czechia 1. Oh Hyeon-Gyu (Korea Republic) left footed shot from very close range to the bottom left corner. Assisted by Hwang In-Beom.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49485589",
+          "minute": "59",
+          "period": 2,
+          "team": "Czechia",
+          "player": "Vladimír Coufal",
+          "goal": "Ladislav Krejcí",
+          "source": "ESPN"
+        },
+        {
+          "id": "49485726",
+          "minute": "67",
+          "period": 2,
+          "team": "South Korea",
+          "player": "Lee Kang-In",
+          "goal": "Hwang In-Beom",
+          "source": "ESPN"
+        },
+        {
+          "id": "49485808",
+          "minute": "80",
+          "period": 2,
+          "team": "South Korea",
+          "player": "Hwang In-Beom",
+          "goal": "Oh Hyeon-Gyu",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -151,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -186,6 +299,52 @@
           "away": 0
         }
       },
+      "goals": [
+        {
+          "id": "49486368",
+          "minute": "21",
+          "period": 1,
+          "team": "Bosnia & Herzegovina",
+          "player": "Jovo Lukic",
+          "assist": "Sead Kolasinac",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Canada 0, Bosnia and Herzegovina 1. Jovo Lukic (Bosnia and Herzegovina) header from very close range to the centre of the goal. Assisted by Sead Kolasinac with a headed pass following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49487265",
+          "minute": "78",
+          "period": 2,
+          "team": "Canada",
+          "player": "Cyle Larin",
+          "assist": "Promise David",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Canada 1, Bosnia and Herzegovina 1. Cyle Larin (Canada) right footed shot from the centre of the box to the bottom right corner. Assisted by Promise David.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49486368",
+          "minute": "21",
+          "period": 1,
+          "team": "Bosnia & Herzegovina",
+          "player": "Sead Kolasinac",
+          "goal": "Jovo Lukic",
+          "source": "ESPN"
+        },
+        {
+          "id": "49487265",
+          "minute": "78",
+          "period": 2,
+          "team": "Canada",
+          "player": "Promise David",
+          "goal": "Cyle Larin",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -222,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -257,6 +416,106 @@
           "away": 1
         }
       },
+      "goals": [
+        {
+          "id": "49489736",
+          "minute": "7",
+          "period": 1,
+          "team": "United States",
+          "player": "Damián Bobadilla",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": true,
+          "text": "Own Goal by Damián Bobadilla, Paraguay. USA 1, Paraguay 0.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49490437",
+          "minute": "31",
+          "period": 1,
+          "team": "United States",
+          "player": "Folarin Balogun",
+          "assist": "Christian Pulisic",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! USA 2, Paraguay 0. Folarin Balogun (USA) right footed shot from the centre of the box to the bottom right corner. Assisted by Christian Pulisic.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49491046",
+          "minute": "45'+5",
+          "period": 1,
+          "team": "United States",
+          "player": "Folarin Balogun",
+          "assist": "Malik Tillman",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! USA 3, Paraguay 0. Folarin Balogun (USA) left footed shot from the centre of the box to the top left corner. Assisted by Malik Tillman.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49491561",
+          "minute": "73",
+          "period": 2,
+          "team": "Paraguay",
+          "player": "Maurício",
+          "assist": "Julio Enciso",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! USA 3, Paraguay 1. Mauricio (Paraguay) left footed shot from the centre of the box to the bottom right corner. Assisted by Julio Enciso following a set piece situation.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49491938",
+          "minute": "90'+8",
+          "period": 2,
+          "team": "United States",
+          "player": "Giovanni Reyna",
+          "assist": "Alex Freeman",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! USA 4, Paraguay 1. Giovanni Reyna (USA) right footed shot from the centre of the box to the bottom left corner. Assisted by Alex Freeman.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49490437",
+          "minute": "31",
+          "period": 1,
+          "team": "United States",
+          "player": "Christian Pulisic",
+          "goal": "Folarin Balogun",
+          "source": "ESPN"
+        },
+        {
+          "id": "49491046",
+          "minute": "45'+5",
+          "period": 1,
+          "team": "United States",
+          "player": "Malik Tillman",
+          "goal": "Folarin Balogun",
+          "source": "ESPN"
+        },
+        {
+          "id": "49491561",
+          "minute": "73",
+          "period": 2,
+          "team": "Paraguay",
+          "player": "Julio Enciso",
+          "goal": "Maurício",
+          "source": "ESPN"
+        },
+        {
+          "id": "49491938",
+          "minute": "90'+8",
+          "period": 2,
+          "team": "United States",
+          "player": "Alex Freeman",
+          "goal": "Giovanni Reyna",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -293,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -328,6 +587,33 @@
           "away": 1
         }
       },
+      "goals": [
+        {
+          "id": "49493954",
+          "minute": "17",
+          "period": 1,
+          "team": "Switzerland",
+          "player": "Breel Embolo",
+          "assist": "",
+          "penalty": true,
+          "ownGoal": false,
+          "text": "Goal! Qatar 0, Switzerland 1. Breel Embolo (Switzerland) converts the penalty with a right footed shot to the bottom left corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49496324",
+          "minute": "90'+4",
+          "period": 2,
+          "team": "Qatar",
+          "player": "Miro Muheim",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": true,
+          "text": "Own Goal by Miro Muheim, Switzerland. Qatar 1, Switzerland 1.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [],
       "keepers": [
         {
           "side": "home",
@@ -364,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -399,6 +685,52 @@
           "away": 1
         }
       },
+      "goals": [
+        {
+          "id": "49497769",
+          "minute": "21",
+          "period": 1,
+          "team": "Morocco",
+          "player": "Ismael Saibari",
+          "assist": "Brahim Díaz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Brazil 0, Morocco 1. Ismael Saibari (Morocco) right footed shot from outside the box to the centre of the goal. Assisted by Brahim Díaz with a through ball following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49497900",
+          "minute": "32",
+          "period": 1,
+          "team": "Brazil",
+          "player": "Vinícius Júnior",
+          "assist": "Bruno Guimarães",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Brazil 1, Morocco 1. Vinícius Júnior (Brazil) right footed shot from the left side of the box to the top right corner. Assisted by Bruno Guimarães.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49497769",
+          "minute": "21",
+          "period": 1,
+          "team": "Morocco",
+          "player": "Brahim Díaz",
+          "goal": "Ismael Saibari",
+          "source": "ESPN"
+        },
+        {
+          "id": "49497900",
+          "minute": "32",
+          "period": 1,
+          "team": "Brazil",
+          "player": "Bruno Guimarães",
+          "goal": "Vinícius Júnior",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -435,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -470,6 +802,21 @@
           "away": 1
         }
       },
+      "goals": [
+        {
+          "id": "49501598",
+          "minute": "28",
+          "period": 1,
+          "team": "Scotland",
+          "player": "John McGinn",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Haiti 0, Scotland 1. John McGinn (Scotland) left footed shot from the centre of the box to the high centre of the goal.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [],
       "keepers": [
         {
           "side": "home",
@@ -506,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T08:35:12.992Z",
+      "updatedAt": "2026-06-14T09:30:41.117Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -541,6 +888,43 @@
           "away": 3
         }
       },
+      "goals": [
+        {
+          "id": "49503574",
+          "minute": "27",
+          "period": 1,
+          "team": "Australia",
+          "player": "Nestory Irankunda",
+          "assist": "Paul Okon-Engstler",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Australia 1, Türkiye 0. Nestory Irankunda (Australia) right footed shot from the centre of the box to the bottom left corner. Assisted by Paul Okon-Engstler.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49504497",
+          "minute": "75",
+          "period": 2,
+          "team": "Australia",
+          "player": "Connor Metcalfe",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Australia 2, Türkiye 0. Connor Metcalfe (Australia) left footed shot from outside the box to the bottom right corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49503574",
+          "minute": "27",
+          "period": 1,
+          "team": "Australia",
+          "player": "Paul Okon-Engstler",
+          "goal": "Nestory Irankunda",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
