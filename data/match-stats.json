@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T18:19:17.359Z",
+  "updated": "2026-06-14T19:37:58.312Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -126,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -264,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -381,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -552,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -650,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -767,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -853,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -961,39 +961,39 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T18:19:17.359Z",
+      "updatedAt": "2026-06-14T19:37:58.312Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 8,
+          "home": 12,
           "away": 2
         },
         "shots": {
-          "home": 21,
-          "away": 4
-        },
-        "possession": {
-          "home": 68.9,
-          "away": 31.1
-        },
-        "passes": {
-          "home": 403,
-          "away": 185
-        },
-        "fouls": {
-          "home": 9,
+          "home": 26,
           "away": 8
         },
+        "possession": {
+          "home": 64.7,
+          "away": 35.3
+        },
+        "passes": {
+          "home": 635,
+          "away": 341
+        },
+        "fouls": {
+          "home": 18,
+          "away": 11
+        },
         "corners": {
-          "home": 7,
-          "away": 0
+          "home": 8,
+          "away": 1
         },
         "saves": {
           "home": 1,
-          "away": 3
+          "away": 4
         },
         "offsides": {
           "home": 0,
-          "away": 0
+          "away": 1
         }
       },
       "goals": [
@@ -1056,6 +1056,42 @@
           "ownGoal": false,
           "text": "Goal! Germany 4, Curaçao 1. Jamal Musiala (Germany) right footed shot from the right side of the box to the bottom left corner. Assisted by Joshua Kimmich.",
           "source": "ESPN"
+        },
+        {
+          "id": "49508863",
+          "minute": "68",
+          "period": 2,
+          "team": "Germany",
+          "player": "Nathaniel Brown",
+          "assist": "Deniz Undav",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 5, Curaçao 1. Nathaniel Brown (Germany) right footed shot from the centre of the box to the bottom right corner. Assisted by Deniz Undav.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49508963",
+          "minute": "78",
+          "period": 2,
+          "team": "Germany",
+          "player": "Deniz Undav",
+          "assist": "Joshua Kimmich",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 6, Curaçao 1. Deniz Undav (Germany) right footed shot from the centre of the box to the bottom left corner. Assisted by Joshua Kimmich.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49509123",
+          "minute": "88",
+          "period": 2,
+          "team": "Germany",
+          "player": "Kai Havertz",
+          "assist": "Deniz Undav",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 7, Curaçao 1. Kai Havertz (Germany) left footed shot from the centre of the box to the centre of the goal. Assisted by Deniz Undav following a fast break.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -1085,6 +1121,33 @@
           "player": "Joshua Kimmich",
           "goal": "Jamal Musiala",
           "source": "ESPN"
+        },
+        {
+          "id": "49508863",
+          "minute": "68",
+          "period": 2,
+          "team": "Germany",
+          "player": "Deniz Undav",
+          "goal": "Nathaniel Brown",
+          "source": "ESPN"
+        },
+        {
+          "id": "49508963",
+          "minute": "78",
+          "period": 2,
+          "team": "Germany",
+          "player": "Joshua Kimmich",
+          "goal": "Deniz Undav",
+          "source": "ESPN"
+        },
+        {
+          "id": "49509123",
+          "minute": "88",
+          "period": 2,
+          "team": "Germany",
+          "player": "Deniz Undav",
+          "goal": "Kai Havertz",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -1107,10 +1170,10 @@
           "name": "Eloy Room",
           "shortName": "E. Room",
           "number": "1",
-          "saves": 3,
-          "goalsAgainst": 4,
+          "saves": 4,
+          "goalsAgainst": 7,
           "cleanSheet": 0,
-          "savePct": 42.9,
+          "savePct": 36.4,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
