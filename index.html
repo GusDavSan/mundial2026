@@ -3106,6 +3106,21 @@ function sideOrder(pos){
   if(/\b(r|right|rb|rm|rw|cd r|cm r|cf r)\b/.test(p)||p.endsWith('-r'))return 3;
   return 2;
 }
+function formationPlaceHorizontalRank(player){
+  const fp=parseInt(player&&player.formationPlace||0,10);
+  const map={3:1,11:1,4:2,6:2,10:2,5:3,9:3,8:4,2:5,7:5};
+  return map[fp]||3;
+}
+function playerHorizontalRank(player){
+  const pos=stripText([player&&player.pos,player&&player.position].filter(Boolean).join(' '));
+  const compact=pos.replace(/\s+/g,'-');
+  if(/\b(center|centre)\s+left\b/.test(pos)||/\b(cd|cb|cm|dm)-l\b/.test(compact))return 2;
+  if(/\b(center|centre)\s+right\b/.test(pos)||/\b(cd|cb|cm|dm)-r\b/.test(compact))return 4;
+  if(/\bleft\b/.test(pos)||/\b(lb|lwb|lm|lw)\b/.test(pos)||/-(l)\b/.test(compact))return 1;
+  if(/\bright\b/.test(pos)||/\b(rb|rwb|rm|rw)\b/.test(pos)||/-(r)\b/.test(compact))return 5;
+  if(/\b(center|centre|central|cd|cb|cm|dm|am|cf|st|f|fw|g|gk)\b/.test(pos))return 3;
+  return formationPlaceHorizontalRank(player);
+}
 function lineName(player){
   return player.shortName||String(player.name||'').split(' ').slice(-1)[0]||player.name||'';
 }
@@ -3130,7 +3145,7 @@ function formationLines(side){
   const gk=starters.find(p=>positionRank(p.pos||p.position)===0)||starters[0];
   const outfield=starters.filter(p=>p!==gk).slice().sort(function(a,b){
     return positionRank(a.pos||a.position)-positionRank(b.pos||b.position)||
-      sideOrder(a.pos||a.position)-sideOrder(b.pos||b.position)||
+      playerHorizontalRank(a)-playerHorizontalRank(b)||
       (parseInt(a.formationPlace||0)-parseInt(b.formationPlace||0));
   });
   const counts=String(side.formation||'').split('-').map(n=>parseInt(n,10)).filter(Boolean);
@@ -3138,7 +3153,7 @@ function formationLines(side){
   let idx=0;
   counts.forEach(function(count){
     const row=outfield.slice(idx,idx+count).sort(function(a,b){
-      return sideOrder(a.pos||a.position)-sideOrder(b.pos||b.position)||
+      return playerHorizontalRank(a)-playerHorizontalRank(b)||
         (parseInt(a.formationPlace||0)-parseInt(b.formationPlace||0));
     });
     if(row.length)lines.push(row);
