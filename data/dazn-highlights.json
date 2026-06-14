@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T01:37:18.854Z",
+  "updated": "2026-06-14T05:56:24.178Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -73,12 +73,25 @@
       "home": "Brazil",
       "away": "Morocco",
       "source": "DAZN ES",
-      "title": "RESUMEN DE GOLES EN UN MINUTO 🫡🇧🇷 BRASIL  🆚 MARRUECOS 🇲🇦",
-      "url": "https://www.youtube.com/watch?v=ZTMkWpcO-Ik",
-      "thumbnail": "https://i.ytimg.com/vi/ZTMkWpcO-Ik/hqdefault.jpg",
-      "videoId": "ZTMkWpcO-Ik",
-      "publishedAt": "2026-06-14T00:22:48Z",
-      "confidence": 17
+      "title": "Brasil vs Marruecos (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=dTo1wgNe3Qg",
+      "thumbnail": "https://i.ytimg.com/vi/dTo1wgNe3Qg/hqdefault.jpg",
+      "videoId": "dTo1wgNe3Qg",
+      "publishedAt": "2026-06-14T03:42:19Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 7,
+      "date": "2026-06-14",
+      "home": "Haiti",
+      "away": "Scotland",
+      "source": "DAZN ES",
+      "title": "Haití vs Escocia (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=zYNRVDc9z_4",
+      "thumbnail": "https://i.ytimg.com/vi/zYNRVDc9z_4/hqdefault.jpg",
+      "videoId": "zYNRVDc9z_4",
+      "publishedAt": "2026-06-14T05:00:13Z",
+      "confidence": 20
     }
   ]
 }
