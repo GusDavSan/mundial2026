@@ -179,6 +179,14 @@ function decodeXml(text) {
     .replace(/&gt;/g, ">");
 }
 
+function decodeJsonText(text) {
+  try {
+    return JSON.parse(`"${String(text || "").replace(/"/g, '\\"')}"`);
+  } catch {
+    return String(text || "");
+  }
+}
+
 async function getRecentFeedUploads() {
   const r = await fetch(FEED_URL);
   if (!r.ok) throw new Error(`YouTube RSS ${r.status}: ${await r.text()}`);
@@ -201,6 +209,49 @@ function uniqueVideos(videos) {
     seen.add(key);
     return true;
   });
+}
+
+function parseSearchVideos(html) {
+  const out = [];
+  const re = /"videoId":"([^"]+)"[\s\S]{0,1600}?"title":\{"runs":\[\{"text":"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(html))) {
+    out.push({
+      videoId: m[1],
+      title: decodeJsonText(m[2]),
+      publishedAt: NOW.toISOString(),
+      thumbnail: `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg`
+    });
+  }
+  return uniqueVideos(out);
+}
+
+async function getOembedAuthor(videoId) {
+  const url = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`YouTube oEmbed ${r.status}`);
+  const data = await r.json();
+  return data.author_name || "";
+}
+
+async function searchDaznForMatch(match) {
+  const query = `${match.home} ${match.away} Resumen goles Highlights Copa Mundial FIFA 2026 DAZN`;
+  const r = await fetch(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`);
+  if (!r.ok) throw new Error(`YouTube search ${r.status}`);
+  const scored = parseSearchVideos(await r.text())
+    .map((video) => ({ video, score: scoreVideoForMatch(video, match) }))
+    .filter((x) => x.score >= MIN_CONFIDENCE)
+    .sort((a, b) => b.score - a.score);
+  for (const item of scored.slice(0, 6)) {
+    try {
+      const author = await getOembedAuthor(item.video.videoId);
+      if (normalize(author) === "dazn es") return item;
+      if (DEBUG) console.log(`Descartado ${item.video.videoId}: autor ${author}`);
+    } catch (e) {
+      if (DEBUG) console.log(`oEmbed falló ${item.video.videoId}: ${e.message}`);
+    }
+  }
+  return null;
 }
 
 async function readMockUploads() {
@@ -230,7 +281,7 @@ function matchDateHasPassed(match) {
   return new Date(`${match.date}T${match.time || "23:59"}:00Z`) <= NOW;
 }
 
-function buildHighlights(fixtures, uploads, existing) {
+async function buildHighlights(fixtures, uploads, existing) {
   const byMatch = new Map();
   for (const item of existing.items) {
     const key = String(item.matchId || item.eventId || `${item.home}|${item.away}|${item.date}`);
@@ -241,10 +292,16 @@ function buildHighlights(fixtures, uploads, existing) {
     const matchKey = String(match.id);
     const existingItem = byMatch.get(matchKey);
     if (existingItem?.manual || existingItem?.locked) continue;
-    const best = uploads
+    let best = uploads
       .map((video) => ({ video, score: scoreVideoForMatch(video, match) }))
       .filter((x) => x.score >= MIN_CONFIDENCE)
       .sort((a, b) => b.score - a.score || new Date(b.video.publishedAt) - new Date(a.video.publishedAt))[0];
+    if (!best) {
+      best = await searchDaznForMatch(match).catch((e) => {
+        console.warn(`Búsqueda DAZN falló ${match.id} ${match.home} vs ${match.away}: ${e.message}`);
+        return null;
+      });
+    }
     if (!best) {
       console.log(`Sin highlight DAZN: ${match.id} ${match.home} vs ${match.away}`);
       continue;
@@ -292,7 +349,7 @@ if (MOCK_UPLOADS_FILE) {
   }
   uploads = uniqueVideos([...feedUploads, ...apiUploads]);
 }
-const output = buildHighlights(fixtures, uploads, existing);
+const output = await buildHighlights(fixtures, uploads, existing);
 
 await fs.mkdir("data", { recursive: true });
 await fs.writeFile(OUT_FILE, `${JSON.stringify(output, null, 2)}\n`);
