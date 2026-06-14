@@ -296,10 +296,10 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .squad-hdr{background:rgba(201,162,39,.06);border-bottom:1px solid var(--border);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .squad-title{font-family:var(--disp);font-size:14px;letter-spacing:2px;color:var(--gold)}
 .squad-count{font-family:var(--mono);font-size:11px;color:var(--muted)}
-.squad-strip{display:flex;flex-wrap:wrap;gap:8px;padding:10px}
-.player-chip{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:9px;min-width:188px;max-width:292px;min-height:76px;flex:1 1 188px;background:rgba(6,11,24,.42);border:1px solid var(--border);border-radius:8px;padding:9px 10px;color:inherit;text-align:left;cursor:pointer;font-family:var(--sans)}
+.squad-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:8px;padding:10px;align-items:stretch}
+.player-chip{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:start;gap:9px;width:100%;min-height:84px;background:rgba(6,11,24,.42);border:1px solid var(--border);border-radius:8px;padding:9px 10px;color:inherit;text-align:left;cursor:pointer;font-family:var(--sans)}
 .player-chip:hover{border-color:var(--border2);background:rgba(201,162,39,.045)}
-.player-chip-num{font-family:var(--mono);font-size:12px;color:var(--gold);min-width:28px;text-align:center;padding-top:2px}
+.player-chip-num{font-family:var(--mono);font-size:12px;color:var(--gold);width:42px;text-align:center;padding-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .player-chip-name{font-size:13px;font-weight:850;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .player-chip-facts{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:4px}
 .player-pos-badge{font-family:var(--mono);font-size:10px;font-weight:900;letter-spacing:.3px;color:var(--gold);border:1px solid rgba(201,162,39,.35);background:rgba(201,162,39,.08);border-radius:5px;padding:2px 5px;line-height:1}
@@ -414,7 +414,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .team-profile{grid-template-columns:1fr}
   .team-summary{align-items:flex-start}
   .team-summary-badge,.team-summary-badge img{width:50px;height:50px}
-  .player-chip{min-width:158px;flex-basis:158px;max-width:none}
+  .squad-strip{grid-template-columns:repeat(auto-fit,minmax(168px,1fr))}
   .player-detail-grid{grid-template-columns:1fr}
   .player-modal-head{grid-template-columns:76px 1fr;gap:12px}
   .player-photo{width:76px;height:76px;border-radius:12px}
@@ -2684,9 +2684,10 @@ async function showTeamSquad(team,name,el,back){
       const age=ageFromDate(p.dateBorn);
       const club=meta.club||p.strTeam||'';
       const pos=meta.role||squadPositionAbbr(p.strPosition);
-      const facts='<div class="player-chip-facts"><span class="player-pos-badge">'+escHtml(pos)+'</span>'+(age?'<span class="player-age">'+age+' '+t('years')+'</span>':'')+'</div>';
+      const mainLabel=meta.number?('#'+meta.number):pos;
+      const facts='<div class="player-chip-facts">'+(meta.number?'<span class="player-pos-badge">'+escHtml(pos)+'</span>':'')+(age?'<span class="player-age">'+age+' '+t('years')+'</span>':'')+'</div>';
       return '<button type="button" class="player-chip" onclick="openPlayerDetail(\''+id+'\')" title="'+escHtml((p.strNumber?('#'+p.strNumber+' '):'')+(p.strPlayer||''))+'">'+
-        '<div class="player-chip-num">'+(meta.number?escHtml('#'+meta.number):(p.strNumber?escHtml('#'+p.strNumber):'—'))+'</div>'+
+        '<div class="player-chip-num">'+escHtml(mainLabel||'—')+'</div>'+
         '<div><div class="player-chip-name">'+escHtml(p.strPlayer||'')+'</div>'+
         facts+
         (club?'<div class="player-chip-club">'+escHtml(club)+'</div>':'')+'</div>'+
@@ -2881,16 +2882,13 @@ const PLAYER_ROLES_FALLBACK={
       "David Raya":{role:"POR",block:"goalkeepers"},
       "Unai Simón":{role:"POR",block:"goalkeepers"},
       "Joan García":{role:"POR",block:"goalkeepers"},
-      "Dani Carvajal":{role:"LD",block:"defenders"},
       "Marcos Llorente":{role:"LD",block:"defenders"},
-      "Pedro Porro":{role:"LD",block:"defenders"},
       "Marc Pubill":{role:"LD",block:"defenders"},
-      "Alejandro Balde":{role:"LI",block:"defenders"},
-      "Marc Cucurella":{role:"LI",block:"defenders"},
+      "Pedro Porro":{role:"LD",block:"defenders"},
       "Alejandro Grimaldo":{role:"LI",block:"defenders"},
+      "Marc Cucurella":{role:"LI",block:"defenders"},
       "Pau Cubarsí":{role:"DFC",block:"defenders"},
       "Aymeric Laporte":{role:"DFC",block:"defenders"},
-      "Dani Vivian":{role:"DFC",block:"defenders"},
       "Eric García":{role:"DFC",block:"defenders"},
       "Rodri":{role:"MCD",block:"midfielders"},
       "Martín Zubimendi":{role:"MCD",block:"midfielders"},
@@ -2898,19 +2896,43 @@ const PLAYER_ROLES_FALLBACK={
       "Pedri":{role:"MC",block:"midfielders"},
       "Gavi":{role:"MC",block:"midfielders"},
       "Fabián Ruiz":{role:"MC",block:"midfielders"},
-      "Dani Olmo":{role:"MCO",block:"midfielders"},
       "Álex Baena":{role:"MCO",block:"midfielders"},
+      "Dani Olmo":{role:"FW",block:"forwards"},
       "Lamine Yamal":{role:"ED",block:"forwards"},
       "Ferran Torres":{role:"ED",block:"forwards"},
       "Nico Williams":{role:"EI",block:"forwards"},
       "Yeremy Pino":{role:"ED",block:"forwards"},
-      "Bryan Gil":{role:"EI",block:"forwards"},
+      "Víctor Muñoz":{role:"EI",block:"forwards"},
       "Mikel Oyarzabal":{role:"DC",block:"forwards"},
-      "Álvaro Morata":{role:"DC",block:"forwards"},
-      "Joselu":{role:"DC",block:"forwards"},
-      "Borja Iglesias":{role:"DC",block:"forwards"},
-      "Ayoze Pérez":{role:"SD",block:"forwards"},
-      "Víctor Muñoz":{role:"EI",block:"forwards"}
+      "Borja Iglesias":{role:"DC",block:"forwards"}
+    },
+    England:{
+      "Jordan Pickford":{role:"POR",block:"goalkeepers"},
+      "Dean Henderson":{role:"POR",block:"goalkeepers"},
+      "James Trafford":{role:"POR",block:"goalkeepers"},
+      "Ezri Konsa":{role:"DFC",block:"defenders"},
+      "Nico O'Reilly":{role:"LI",block:"defenders"},
+      "John Stones":{role:"DFC",block:"defenders"},
+      "Marc Guéhi":{role:"DFC",block:"defenders"},
+      "Tino Livramento":{role:"LD",block:"defenders"},
+      "Dan Burn":{role:"LI",block:"defenders"},
+      "Reece James":{role:"LD",block:"defenders"},
+      "Djed Spence":{role:"LD",block:"defenders"},
+      "Jarell Quansah":{role:"DFC",block:"defenders"},
+      "Declan Rice":{role:"MCD",block:"midfielders"},
+      "Elliot Anderson":{role:"MC",block:"midfielders"},
+      "Jude Bellingham":{role:"MCO",block:"midfielders"},
+      "Jordan Henderson":{role:"MC",block:"midfielders"},
+      "Kobbie Mainoo":{role:"MC",block:"midfielders"},
+      "Morgan Rogers":{role:"MCO",block:"midfielders"},
+      "Eberechi Eze":{role:"MCO",block:"midfielders"},
+      "Bukayo Saka":{role:"ED",block:"forwards"},
+      "Harry Kane":{role:"DC",block:"forwards"},
+      "Marcus Rashford":{role:"EI",block:"forwards"},
+      "Anthony Gordon":{role:"EI",block:"forwards"},
+      "Ollie Watkins":{role:"DC",block:"forwards"},
+      "Noni Madueke":{role:"ED",block:"forwards"},
+      "Ivan Toney":{role:"DC",block:"forwards"}
     }
   }
 };
@@ -2935,6 +2957,19 @@ function mergeRoleMaps(base,extra){
   });
   return out;
 }
+function filterRolesToLocalSquads(roles){
+  if(!roles||!localSquads)return roles;
+  const out={};
+  Object.keys(roles).forEach(function(team){
+    const squad=getLocalSquad(team);
+    if(!squad||!Array.isArray(squad.players)){out[team]=roles[team];return;}
+    out[team]={};
+    Object.keys(roles[team]||{}).forEach(function(playerName){
+      if(squad.players.some(function(p){return squadPlayerMatches(p.name,playerName);}))out[team][playerName]=roles[team][playerName];
+    });
+  });
+  return out;
+}
 async function loadPlayerRoles(){
   if(playerRolesLoaded)return playerRoles;
   playerRolesLoaded=true;
@@ -2943,14 +2978,16 @@ async function loadPlayerRoles(){
     const d=await fetchJson('data/player-roles.json',{},1500);
     if(d&&d.teams)playerRoles=mergeRoleMaps(playerRoles,d.teams);
   }catch{}
+  playerRoles=filterRolesToLocalSquads(playerRoles);
   return playerRoles;
 }
 function getLocalSquad(team){
   if(!localSquads)return null;
-  const wanted=SQUAD_KEY_BY_TEAM[team]||SQUAD_KEY_BY_TEAM[normName(team)]||team;
-  if(localSquads[wanted])return localSquads[wanted];
-  const wantedKey=stripText(wanted);
-  const hit=Object.keys(localSquads).find(k=>stripText(k)===wantedKey);
+  const normalized=typeof normName==='function'?normName(team):team;
+  const candidates=[team,normalized,SQUAD_KEY_BY_TEAM[team],SQUAD_KEY_BY_TEAM[normalized]].filter(Boolean);
+  for(const name of candidates){if(localSquads[name])return localSquads[name];}
+  const candidateKeys=candidates.map(stripText);
+  const hit=Object.keys(localSquads).find(k=>candidateKeys.includes(stripText(k)));
   return hit?localSquads[hit]:null;
 }
 function localSquadPlayer(team,playerName){
@@ -2965,9 +3002,9 @@ function officialSquadDisplayPlayer(team,official,tsdbPlayers){
     _officialTeam:team,
     idPlayer:match.idPlayer||('official_'+squadPlayerKey(team+' '+official.name).replace(/\s+/g,'_')),
     strPlayer:official.name,
-    strNumber:official.num||match.strNumber||'',
+    strNumber:official.num||'',
     strTeam:official.club||match.strTeam||'',
-    strPosition:official.pos||match.strPosition||''
+    strPosition:official.role||official.pos||match.strPosition||''
   });
 }
 function playerRoleOverride(team,playerName){
@@ -2980,18 +3017,18 @@ function playerRoleOverride(team,playerName){
 }
 function blockFromOfficialPos(pos){
   const p=String(pos||'').toUpperCase();
-  if(p==='GK'||p==='POR')return 'goalkeepers';
-  if(p==='DEF')return 'defenders';
-  if(p==='MID'||p==='MED')return 'midfielders';
-  if(p==='FWD'||p==='DEL')return 'forwards';
+  if(p==='GK'||p==='POR'||p==='G')return 'goalkeepers';
+  if(p==='DEF'||p==='DF'||p==='D')return 'defenders';
+  if(p==='MID'||p==='MED'||p==='MF')return 'midfielders';
+  if(p==='FWD'||p==='FW'||p==='DEL')return 'forwards';
   return '';
 }
 function blockFromRole(role){
   const r=String(role||'').toUpperCase();
   if(['POR','GK','G'].includes(r))return 'goalkeepers';
-  if(['DFC','LD','LI','CAD','CAI','DEF','CB','RB','LB'].includes(r))return 'defenders';
-  if(['MCD','MC','MCO','MI','MD','MED','CM','DM','AM','LM','RM'].includes(r))return 'midfielders';
-  if(['ED','EI','EXT','DC','SD','DEL','FWD','ST','CF','LW','RW'].includes(r))return 'forwards';
+  if(['DFC','LD','LI','CAD','CAI','DEF','DF','D','CB','RB','LB'].includes(r))return 'defenders';
+  if(['MCD','MC','MCO','MI','MD','MED','MID','MF','CM','DM','AM','LM','RM'].includes(r))return 'midfielders';
+  if(['ED','EI','EXT','DC','SD','DEL','FWD','FW','ST','CF','LW','RW'].includes(r))return 'forwards';
   return '';
 }
 function genericRoleForBlock(block){
@@ -3005,19 +3042,22 @@ function squadPlayerMeta(team,p){
   const name=p&&p.strPlayer||p&&p.name||'';
   const official=p&&p._officialSquad||localSquadPlayer(team,name);
   const override=playerRoleOverride(team,name)||{};
-  const officialBlock=blockFromOfficialPos(official&&official.pos);
+  const officialRole=official&&official.role||'';
+  const officialRoleBlock=blockFromRole(officialRole);
+  const officialBlock=officialRoleBlock||blockFromOfficialPos(official&&official.pos);
   const roleFromTsdb=squadPositionAbbr(p&&p.strPosition);
   const overrideBlock=override.block||blockFromRole(override.role);
   const overrideFits=!officialBlock||!overrideBlock||overrideBlock===officialBlock;
   const block=(overrideFits&&overrideBlock)||officialBlock||blockFromRole(roleFromTsdb)||'midfielders';
-  let role=overrideFits&&override.role||'';
+  const refinedRole=overrideFits&&override.role||'';
+  let role=refinedRole||officialRole||'';
   if(!role&&roleAllowedInBlock(roleFromTsdb,block))role=roleFromTsdb;
   if(!role)role=genericRoleForBlock(block);
   return {
     block,
     role,
     official,
-    source:override.role?'override':official?'convocatoria':'TheSportsDB',
+    source:refinedRole?'override':officialRole?'convocatoria':official?'convocatoria':'TheSportsDB',
     club:official&&official.club||p&&p.strTeam||'',
     number:official&&official.num||p&&p.strNumber||''
   };
