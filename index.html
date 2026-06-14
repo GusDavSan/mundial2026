@@ -2875,23 +2875,74 @@ const TEAM_WATCH_RANKING={
   'Ghana':['Mohammed Kudus','Thomas Partey','Iñaki Williams'],
   'Panama':['Adalberto Carrasquilla','Aníbal Godoy']
 };
+const PLAYER_ROLES_FALLBACK={
+  teams:{
+    Spain:{
+      "David Raya":{role:"POR",block:"goalkeepers"},
+      "Unai Simón":{role:"POR",block:"goalkeepers"},
+      "Joan García":{role:"POR",block:"goalkeepers"},
+      "Dani Carvajal":{role:"LD",block:"defenders"},
+      "Marcos Llorente":{role:"LD",block:"defenders"},
+      "Pedro Porro":{role:"LD",block:"defenders"},
+      "Marc Pubill":{role:"LD",block:"defenders"},
+      "Alejandro Balde":{role:"LI",block:"defenders"},
+      "Marc Cucurella":{role:"LI",block:"defenders"},
+      "Alejandro Grimaldo":{role:"LI",block:"defenders"},
+      "Pau Cubarsí":{role:"DFC",block:"defenders"},
+      "Aymeric Laporte":{role:"DFC",block:"defenders"},
+      "Dani Vivian":{role:"DFC",block:"defenders"},
+      "Eric García":{role:"DFC",block:"defenders"},
+      "Rodri":{role:"MCD",block:"midfielders"},
+      "Martín Zubimendi":{role:"MCD",block:"midfielders"},
+      "Mikel Merino":{role:"MC",block:"midfielders"},
+      "Pedri":{role:"MC",block:"midfielders"},
+      "Gavi":{role:"MC",block:"midfielders"},
+      "Fabián Ruiz":{role:"MC",block:"midfielders"},
+      "Dani Olmo":{role:"MCO",block:"midfielders"},
+      "Álex Baena":{role:"MCO",block:"midfielders"},
+      "Lamine Yamal":{role:"ED",block:"forwards"},
+      "Ferran Torres":{role:"ED",block:"forwards"},
+      "Nico Williams":{role:"EI",block:"forwards"},
+      "Yeremy Pino":{role:"ED",block:"forwards"},
+      "Bryan Gil":{role:"EI",block:"forwards"},
+      "Mikel Oyarzabal":{role:"DC",block:"forwards"},
+      "Álvaro Morata":{role:"DC",block:"forwards"},
+      "Joselu":{role:"DC",block:"forwards"},
+      "Borja Iglesias":{role:"DC",block:"forwards"},
+      "Ayoze Pérez":{role:"SD",block:"forwards"},
+      "Víctor Muñoz":{role:"EI",block:"forwards"}
+    }
+  }
+};
 let localSquads=null,localSquadsLoaded=false,playerRoles=null,playerRolesLoaded=false;
 async function loadLocalSquads(){
   if(localSquadsLoaded)return localSquads;
   localSquadsLoaded=true;
-  try{
-    const d=await fetchJson('squads.json',{},1500);
-    localSquads=d&&d.squads?d.squads:null;
-  }catch{localSquads=null;}
+  const paths=['squads.json','squad.json','data/squads.json','data/squad.json','scripts/squads.json','scripts/squad.json'];
+  for(const path of paths){
+    try{
+      const d=await fetchJson(path,{},1500);
+      if(d&&d.squads){localSquads=d.squads;break;}
+    }catch{}
+  }
+  if(!localSquads)localSquads=null;
   return localSquads;
+}
+function mergeRoleMaps(base,extra){
+  const out=JSON.parse(JSON.stringify(base||{}));
+  Object.keys(extra||{}).forEach(function(team){
+    out[team]=Object.assign(out[team]||{},extra[team]||{});
+  });
+  return out;
 }
 async function loadPlayerRoles(){
   if(playerRolesLoaded)return playerRoles;
   playerRolesLoaded=true;
+  playerRoles=PLAYER_ROLES_FALLBACK.teams;
   try{
     const d=await fetchJson('data/player-roles.json',{},1500);
-    playerRoles=d&&d.teams?d.teams:null;
-  }catch{playerRoles=null;}
+    if(d&&d.teams)playerRoles=mergeRoleMaps(playerRoles,d.teams);
+  }catch{}
   return playerRoles;
 }
 function getLocalSquad(team){
@@ -2916,7 +2967,7 @@ function officialSquadDisplayPlayer(team,official,tsdbPlayers){
     strPlayer:official.name,
     strNumber:official.num||match.strNumber||'',
     strTeam:official.club||match.strTeam||'',
-    strPosition:match.strPosition||official.pos||''
+    strPosition:official.pos||match.strPosition||''
   });
 }
 function playerRoleOverride(team,playerName){
@@ -2957,8 +3008,9 @@ function squadPlayerMeta(team,p){
   const officialBlock=blockFromOfficialPos(official&&official.pos);
   const roleFromTsdb=squadPositionAbbr(p&&p.strPosition);
   const overrideBlock=override.block||blockFromRole(override.role);
-  const block=overrideBlock||officialBlock||blockFromRole(roleFromTsdb)||'midfielders';
-  let role=override.role||'';
+  const overrideFits=!officialBlock||!overrideBlock||overrideBlock===officialBlock;
+  const block=(overrideFits&&overrideBlock)||officialBlock||blockFromRole(roleFromTsdb)||'midfielders';
+  let role=overrideFits&&override.role||'';
   if(!role&&roleAllowedInBlock(roleFromTsdb,block))role=roleFromTsdb;
   if(!role)role=genericRoleForBlock(block);
   return {
