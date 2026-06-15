@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T11:21:39.416Z",
+  "updated": "2026-06-15T12:26:13.000Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -42,6 +42,14 @@
         "offsides": {
           "home": 1,
           "away": 1
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 2
+        },
+        "redCards": {
+          "home": 1,
+          "away": 2
         }
       },
       "goals": [
@@ -126,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -159,6 +167,10 @@
         "offsides": {
           "home": 2,
           "away": 2
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 0
         }
       },
       "goals": [
@@ -264,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -297,6 +309,10 @@
         "offsides": {
           "home": 1,
           "away": 0
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 3
         }
       },
       "goals": [
@@ -381,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -414,6 +430,14 @@
         "offsides": {
           "home": 2,
           "away": 1
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 5
+        },
+        "redCards": {
+          "home": 1,
+          "away": 0
         }
       },
       "goals": [
@@ -552,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -584,6 +608,10 @@
         },
         "offsides": {
           "home": 0,
+          "away": 1
+        },
+        "yellowCards": {
+          "home": 2,
           "away": 1
         }
       },
@@ -650,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -683,6 +711,10 @@
         "offsides": {
           "home": 0,
           "away": 1
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 0
         }
       },
       "goals": [
@@ -767,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -800,6 +832,10 @@
         "offsides": {
           "home": 3,
           "away": 1
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 3
         }
       },
       "goals": [
@@ -853,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -886,6 +922,10 @@
         "offsides": {
           "home": 1,
           "away": 3
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
         }
       },
       "goals": [
@@ -961,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1186,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1218,6 +1258,10 @@
         },
         "offsides": {
           "home": 1,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 3,
           "away": 0
         }
       },
@@ -1345,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1378,6 +1422,10 @@
         "offsides": {
           "home": 0,
           "away": 0
+        },
+        "yellowCards": {
+          "home": 3,
+          "away": 1
         }
       },
       "goals": [
@@ -1441,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T11:21:39.416Z",
+      "updatedAt": "2026-06-15T12:26:13.000Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1474,6 +1522,10 @@
         "offsides": {
           "home": 3,
           "away": 6
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
         }
       },
       "goals": [
