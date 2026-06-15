@@ -8,12 +8,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: mundial-data-updates-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -34,5 +40,6 @@ jobs:
             echo "No highlight changes"
           else
             git commit -m "Update DAZN highlights"
+            git pull --rebase origin "$GITHUB_REF_NAME"
             git push
           fi
