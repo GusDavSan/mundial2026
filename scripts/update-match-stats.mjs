@@ -92,6 +92,10 @@ function sameTeam(a, b) {
   return aa.some((x) => bb.includes(x));
 }
 
+function hasWord(text, word) {
+  return new RegExp(`\\b${word}\\b`).test(text);
+}
+
 function ymd(date) {
   return date.toISOString().slice(0, 10).replaceAll("-", "");
 }
@@ -276,6 +280,35 @@ function canonicalTeam(team, fixture) {
   return team || "";
 }
 
+function cardKind(event) {
+  const raw = normalize(`${event.type?.text || ""} ${event.type?.type || ""} ${event.play?.type?.text || ""} ${event.play?.type?.type || ""}`);
+  const text = normalize(`${event.text || ""} ${event.shortText || ""} ${event.play?.text || ""} ${event.play?.shortText || ""}`);
+  const merged = `${raw} ${text}`;
+  const isCard = hasWord(merged, "card") || (hasWord(merged, "yellow") && hasWord(merged, "card")) || (hasWord(merged, "red") && hasWord(merged, "card"));
+  if (!isCard) return null;
+  if (hasWord(merged, "red") && hasWord(merged, "card")) return "red";
+  if (hasWord(merged, "yellow") && hasWord(merged, "card")) return "yellow";
+  return null;
+}
+
+function cardCountsFromSummary(summary, fixture) {
+  const counts = { yellow: { home: 0, away: 0 }, red: { home: 0, away: 0 } };
+  const seen = new Set();
+  const events = [...(summary.commentary || []), ...(summary.keyEvents || [])];
+  for (const event of events) {
+    const kind = cardKind(event);
+    if (!kind) continue;
+    const text = normalize(event.text || event.shortText || event.play?.text || event.play?.shortText || "");
+    const team = canonicalTeam(event.team?.displayName || event.play?.team?.displayName || "", fixture);
+    const side = sameTeam(team, fixture.home) ? "home" : sameTeam(team, fixture.away) ? "away" : "";
+    const key = `${kind}|${side || normalize(team)}|${event.clock?.displayValue || event.time?.displayValue || ""}|${text}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    if (side) counts[kind][side]++;
+  }
+  return counts;
+}
+
 function displayMinute(play) {
   const raw = play?.clock?.displayValue || play?.time?.displayValue || "";
   if (raw) return String(raw).replace(/'+$/, "");
@@ -392,6 +425,9 @@ function statsFromSummary(summary, fixture, event) {
     if (home !== null || away !== null) stats[key] = { home: home ?? 0, away: away ?? 0 };
   }
   if (!Object.keys(stats).length) return null;
+  const cardCounts = cardCountsFromSummary(summary, fixture);
+  if (cardCounts.yellow.home || cardCounts.yellow.away) stats.yellowCards = { home: cardCounts.yellow.home, away: cardCounts.yellow.away };
+  if (cardCounts.red.home || cardCounts.red.away) stats.redCards = { home: cardCounts.red.home, away: cardCounts.red.away };
 
   const goals = goalEventsFromSummary(summary, fixture);
   const assists = goals.filter((goal) => goal.assist && !goal.ownGoal).map((goal) => ({
