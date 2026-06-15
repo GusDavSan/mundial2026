@@ -1456,6 +1456,7 @@ async function loadLive(){
         const st=espnEventStatus(espnLive.event);
         const state=st&&st.type&&st.type.state;
         if(state==='in')e.status=e.strStatus='Live';
+        else if(state==='post')e.status=e.strStatus='FT';
         e.progress=(st&&(st.displayClock||st.type&&st.type.shortDetail||st.type&&st.type.detail))||e.progress||e.strProgress;
         e.periodLabel=state==='in'?espnPeriodLabel(st):'';
         const kickoff=espnUtcKickoffParts(espnLive.event);
@@ -1475,6 +1476,24 @@ async function loadLive(){
       }catch(err){console.warn('ESPN live insight failed',err);}
     }));
   }
+  const pushUniqueMatch=function(list,e){
+    const fx=matchFx(e);
+    const key=fx&&fx.id;
+    const idx=key?list.findIndex(function(x){
+      const xfx=matchFx(x);
+      return xfx&&xfx.id===key;
+    }):-1;
+    if(idx>=0)list[idx]=Object.assign({},list[idx],e);
+    else list.push(e);
+  };
+  const stillLive=[];
+  liveNow.forEach(function(e){
+    const status=e.strStatus||e.status;
+    if(isFin(status))pushUniqueMatch(finished,e);
+    else if(isLive(status))stillLive.push(e);
+    else pushUniqueMatch(upcoming,e);
+  });
+  liveNow=stillLive;
   const cardTimeMs=function(e){
     return cardTimeMsFromData(e,matchFx(e)||{},today);
   };
