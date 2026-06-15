@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T15:48:58.700Z",
+  "updated": "2026-06-15T16:29:06.648Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T15:48:58.700Z",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1673,6 +1673,83 @@
           "goalsAgainst": 5,
           "cleanSheet": 0,
           "savePct": 16.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 13,
+      "espnEventId": "760428",
+      "date": "2026-06-15",
+      "homeTeam": "Spain",
+      "awayTeam": "Cape Verde",
+      "source": "ESPN",
+      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 0
+        },
+        "shots": {
+          "home": 3,
+          "away": 0
+        },
+        "possession": {
+          "home": 66.8,
+          "away": 33.2
+        },
+        "passes": {
+          "home": 213,
+          "away": 106
+        },
+        "fouls": {
+          "home": 2,
+          "away": 1
+        },
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 2
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Spain",
+          "name": "Unai Simón",
+          "shortName": "U. Simón",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Cape Verde",
+          "name": "Vozinha",
+          "shortName": "Vozinha",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
