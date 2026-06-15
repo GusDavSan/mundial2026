@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T16:29:06.648Z",
+  "updated": "2026-06-15T20:04:23.037Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,42 +1685,42 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T16:29:06.648Z",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 0
+          "home": 7,
+          "away": 1
         },
         "shots": {
-          "home": 3,
-          "away": 0
+          "home": 27,
+          "away": 6
         },
         "possession": {
-          "home": 66.8,
-          "away": 33.2
+          "home": 74.2,
+          "away": 25.8
         },
         "passes": {
-          "home": 213,
-          "away": 106
+          "home": 801,
+          "away": 279
         },
         "fouls": {
-          "home": 2,
+          "home": 10,
           "away": 1
         },
         "corners": {
-          "home": 1,
-          "away": 0
-        },
-        "saves": {
-          "home": 0,
+          "home": 11,
           "away": 1
         },
+        "saves": {
+          "home": 1,
+          "away": 7
+        },
         "offsides": {
-          "home": 0,
-          "away": 2
+          "home": 2,
+          "away": 3
         },
         "yellowCards": {
-          "home": 0,
+          "home": 1,
           "away": 1
         }
       },
@@ -1733,12 +1733,12 @@
           "name": "Unai Simón",
           "shortName": "U. Simón",
           "number": "23",
-          "saves": 0,
+          "saves": 1,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -1746,12 +1746,112 @@
           "name": "Vozinha",
           "shortName": "Vozinha",
           "number": "1",
-          "saves": 1,
+          "saves": 7,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 14,
+      "espnEventId": "760426",
+      "date": "2026-06-15",
+      "homeTeam": "Belgium",
+      "awayTeam": "Egypt",
+      "source": "ESPN",
+      "updatedAt": "2026-06-15T20:04:23.037Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 0,
+          "away": 3
+        },
+        "shots": {
+          "home": 7,
+          "away": 4
+        },
+        "possession": {
+          "home": 58,
+          "away": 42
+        },
+        "passes": {
+          "home": 262,
+          "away": 191
+        },
+        "fouls": {
+          "home": 10,
+          "away": 6
+        },
+        "corners": {
+          "home": 1,
+          "away": 4
+        },
+        "saves": {
+          "home": 2,
+          "away": 0
+        },
+        "offsides": {
+          "home": 0,
+          "away": 1
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 2
+        }
+      },
+      "goals": [
+        {
+          "id": "49524019",
+          "minute": "19",
+          "period": 1,
+          "team": "Egypt",
+          "player": "Emam Ashour",
+          "assist": "Mohamed Salah",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Belgium 0, Egypt 1. Emam Ashour (Egypt) right footed shot from outside the box to the bottom left corner. Assisted by Mohamed Salah.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49524019",
+          "minute": "19",
+          "period": 1,
+          "team": "Egypt",
+          "player": "Mohamed Salah",
+          "goal": "Emam Ashour",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Belgium",
+          "name": "Thibaut Courtois",
+          "shortName": "T. Courtois",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Egypt",
+          "name": "Mostafa Shoubir",
+          "shortName": "M. Shoubir",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
