@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T05:28:34.480Z",
+  "updated": "2026-06-15T06:34:57.503Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -143,6 +143,19 @@
       "thumbnail": "https://i.ytimg.com/vi/MTCy-d68T34/hqdefault.jpg",
       "videoId": "MTCy-d68T34",
       "publishedAt": "2026-06-15T03:00:12Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 12,
+      "date": "2026-06-15",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "source": "DAZN ES",
+      "title": "Suecia vs Túnez (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=dWEZs97hXaw",
+      "thumbnail": "https://i.ytimg.com/vi/dWEZs97hXaw/hqdefault.jpg",
+      "videoId": "dWEZs97hXaw",
+      "publishedAt": "2026-06-15T06:02:49Z",
       "confidence": 20
     }
   ]
