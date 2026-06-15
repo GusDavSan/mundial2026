@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T23:37:52.564Z",
+  "updated": "2026-06-15T04:28:13.190Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -125,12 +125,25 @@
       "home": "Netherlands",
       "away": "Japan",
       "source": "DAZN ES",
-      "title": "😁La locura de Japón con el empate contra Países Bajos en el 89' 🇯🇵 ¡Bendito fútbol! #DAZNMundial",
-      "url": "https://www.youtube.com/watch?v=GKHrriQ5AHo",
-      "thumbnail": "https://i.ytimg.com/vi/GKHrriQ5AHo/hqdefault.jpg",
-      "videoId": "GKHrriQ5AHo",
-      "publishedAt": "2026-06-14T22:01:22Z",
-      "confidence": 16
+      "title": "Países Bajos vs Japón (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Pmr949U0gWA",
+      "thumbnail": "https://i1.ytimg.com/vi/Pmr949U0gWA/hqdefault.jpg",
+      "videoId": "Pmr949U0gWA",
+      "publishedAt": "2026-06-15T00:00:15+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 11,
+      "date": "2026-06-14",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "source": "DAZN ES",
+      "title": "Costa de Marfil vs Ecuador (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=MTCy-d68T34",
+      "thumbnail": "https://i.ytimg.com/vi/MTCy-d68T34/hqdefault.jpg",
+      "videoId": "MTCy-d68T34",
+      "publishedAt": "2026-06-15T03:00:12Z",
+      "confidence": 20
     }
   ]
 }
