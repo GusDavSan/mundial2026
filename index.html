@@ -190,7 +190,7 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .b-tname{font-family:var(--disp);font-size:13px;letter-spacing:.4px;flex:1}
 .b-check{color:var(--gold);font-size:12px;opacity:0}
 .b-team.winner .b-check{opacity:1}
-/* GOLEADORES */
+/* TOP JUGADORES / RACHA TORNEO */
 .stats-intro{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
 .stat-pills{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .stat-pills::-webkit-scrollbar{display:none}
@@ -215,6 +215,9 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .keeper-score{display:flex;flex-direction:column;align-items:flex-end;gap:1px;min-width:48px}
 .keeper-score .stat-val{line-height:1}
 .keeper-score-label{font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--muted);text-transform:uppercase}
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.trend-grid .stat-card{margin-bottom:0}
+.trend-note{font-size:11px;color:var(--muted);line-height:1.5;text-align:center;margin-top:14px}
 /* DETAIL PANEL */
 .detail-panel{display:none;position:fixed;inset:0;z-index:200;background:rgba(6,11,24,.93);backdrop-filter:blur(4px);overflow-y:auto;padding:20px 14px;align-items:flex-start;justify-content:center}
 .detail-panel.open{display:flex}
@@ -548,7 +551,8 @@ body{font-size:16px}
     <div class="tab active" onclick="switchTab('live')">⚽ <span data-i18n="tabLive">En Vivo</span></div>
     <div class="tab" onclick="switchTab('cal')">📅 <span data-i18n="tabCalendar">Calendario</span></div>
     <div class="tab" onclick="switchTab('quiniela')">🎯 <span data-i18n="tabPool">Quiniela</span></div>
-    <div class="tab" onclick="switchTab('goles')">📊 <span data-i18n="tabStats">Goleadores</span></div>
+    <div class="tab" onclick="switchTab('goles')">📊 <span data-i18n="tabStats">Top jugadores</span></div>
+    <div class="tab" onclick="switchTab('rachas')">📈 <span data-i18n="tabTrends">Racha torneo</span></div>
     <div class="tab" onclick="switchTab('equipos')">👥 <span data-i18n="tabTeams">Equipos</span></div>
     <div class="tab" onclick="switchTab('miseleccion')">⭐ <span data-i18n="tabMySelection">Mi Selección</span></div>
   </nav>
@@ -592,6 +596,9 @@ body{font-size:16px}
   </div>
   <div id="tab-goles" style="display:none">
     <div id="golesContent"><div class="loading"><div class="spinner"></div><span class="loading-text" data-i18n="loadingStats">Cargando estadísticas...</span></div></div>
+  </div>
+  <div id="tab-rachas" style="display:none">
+    <div id="trendsContent"><div class="loading"><div class="spinner"></div><span class="loading-text" data-i18n="loadingStats">Cargando estadísticas...</span></div></div>
   </div>
   <div id="tab-equipos" style="display:none">
     <div id="teamContent"></div>
@@ -651,7 +658,7 @@ function storageRemove(key){
 let lang=storageGet('mw26_lang','es');
 const I18N={
   es:{
-    langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabMySelection:'Mi Selección',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Goleadores',tabTeams:'Equipos',
+    langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabMySelection:'Mi Selección',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Top jugadores',tabTrends:'Racha torneo',tabTeams:'Equipos',
     loadingShort:'Cargando...',loadingMatches:'Buscando partidos...',loadingStats:'Cargando estadísticas...',refresh:'Actualizar',
     liveStatus:'EN JUEGO',finishedShort:'FIN',upcoming:'PRÓXIMO',group:'Grupo',spainTime:'España',
     dawnOfDay:'madrugada del {day}',
@@ -662,6 +669,10 @@ const I18N={
     calThirdInfo:'clasifican los 8 mejores terceros de los 12 grupos. Criterios de desempate: puntos, diferencia de goles, goles a favor, fair play y ranking FIFA.',
     qGroups:'Grupos',qThird:'Mejor Tercero',qBracket:'Eliminatoria',
     statsIntro:'Tres apartados disponibles: máximos goleadores, máximos asistentes y candidatos al Guante de Oro.',
+    trendsIntro:'Lectura rápida por selecciones con datos acumulados del torneo.',
+    trendsSource:'Fuente: ESPN + estadísticas guardadas',
+    topScoringTeams:'Selecciones más goleadoras',bestDefenses:'Mejores defensas',topShotTeams:'Más tiros a puerta',topPossessionTeams:'Más posesión media',topAssistTeams:'Más asistencias',topCleanSheetTeams:'Más porterías a cero',
+    playedMatches:'partidos',goalsAgainstShort:'GC',perMatch:'por partido',avgShort:'media',
     scorers:'Máximos Goleadores',assists:'Máximos Asistentes',keepers:'Candidatos al Guante de Oro',cleanSheets:'Porterías a cero',
     goals:'goles',assistCount:'asistencias',cleanSheetCount:'porterías a cero',
     noScorers:'Aún no hay goles registrados.',noAssists:'Aún no hay asistencias registradas.',noKeepers:'Aún no hay datos de porteros registrados.',
@@ -694,7 +705,7 @@ const I18N={
     oddsImplied:'prob. implícita',rankingAdvantage:'Ventaja ranking',groupPosition:'Posición de grupo'
   },
   en:{
-    langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabMySelection:'My Team',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Stats',tabTeams:'Teams',
+    langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabMySelection:'My Team',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Top players',tabTrends:'Tournament form',tabTeams:'Teams',
     loadingShort:'Loading...',loadingMatches:'Looking for matches...',loadingStats:'Loading stats...',refresh:'Refresh',
     liveStatus:'LIVE',finishedShort:'FT',upcoming:'UPCOMING',group:'Group',spainTime:'Spain',
     dawnOfDay:'early {day}',
@@ -705,6 +716,10 @@ const I18N={
     calThirdInfo:'the 8 best third-placed teams from the 12 groups qualify. Tiebreakers: points, goal difference, goals for, fair play and FIFA ranking.',
     qGroups:'Groups',qThird:'Best Third',qBracket:'Knockout',
     statsIntro:'Three sections available: top scorers, top assists and Golden Glove candidates.',
+    trendsIntro:'A quick team-by-team read from accumulated tournament data.',
+    trendsSource:'Source: ESPN + stored stats',
+    topScoringTeams:'Top scoring teams',bestDefenses:'Best defenses',topShotTeams:'Most shots on target',topPossessionTeams:'Highest average possession',topAssistTeams:'Most assists',topCleanSheetTeams:'Most clean sheets',
+    playedMatches:'matches',goalsAgainstShort:'GA',perMatch:'per match',avgShort:'avg',
     scorers:'Top Scorers',assists:'Top Assists',keepers:'Golden Glove Candidates',cleanSheets:'Clean sheets',
     goals:'goals',assistCount:'assists',cleanSheetCount:'clean sheets',
     noScorers:'No goals recorded yet.',noAssists:'No assists recorded yet.',noKeepers:'No goalkeeper data recorded yet.',
@@ -763,6 +778,7 @@ function rerenderActiveTab(){
   if(activeTab==='cal'&&calLoaded)renderCal();
   if(activeTab==='quiniela')switchQSub(qSub);
   if(activeTab==='goles')renderStats(document.getElementById('golesContent'));
+  if(activeTab==='rachas')renderTournamentTrends();
   if(activeTab==='equipos'){
     if(typeof selectedTeamName!=='undefined'&&selectedTeamName)loadTeamByName(selectedTeamName);
     else initEquipos();
@@ -2230,7 +2246,7 @@ function updateQChampion(){
 // ══════════════════════════════════════════════
 let statsCache={},statsLoaded=false;
 const STATS_KEY='mw26_stats';
-const STATS_VERSION=8;
+const STATS_VERSION=9;
 async function loadGoleadores(){
   const el=document.getElementById('golesContent');
   // Load from cache
@@ -2522,6 +2538,122 @@ function renderStats(el,append){
   el.innerHTML=html;
 }
 function refreshStats(){statsCache={};storageRemove(STATS_KEY);loadGoleadores();}
+
+function aggregateTournamentTeamStats(items){
+  const teams={};
+  function row(team){
+    const name=normName(team||'');
+    if(!name)return null;
+    if(!teams[name]){
+      teams[name]={team:name,played:0,gf:0,ga:0,assists:0,sog:0,shots:0,passes:0,corners:0,cleanSheets:0,possTotal:0,possMatches:0};
+    }
+    return teams[name];
+  }
+  (items||[]).forEach(function(item){
+    const home=row(item.homeTeam||item.home);
+    const away=row(item.awayTeam||item.away);
+    if(!home||!away)return;
+    home.played++;away.played++;
+    let hGoals=0,aGoals=0;
+    (item.goals||[]).forEach(function(goal){
+      if(sameTeam(goal.team,home.team))hGoals++;
+      else if(sameTeam(goal.team,away.team))aGoals++;
+    });
+    home.gf+=hGoals;home.ga+=aGoals;
+    away.gf+=aGoals;away.ga+=hGoals;
+    if(aGoals===0)home.cleanSheets++;
+    if(hGoals===0)away.cleanSheets++;
+    (item.assists||[]).forEach(function(assist){
+      if(sameTeam(assist.team,home.team))home.assists++;
+      else if(sameTeam(assist.team,away.team))away.assists++;
+    });
+    const stats=item.stats||{};
+    function addPair(key,field){
+      const pair=stats[key]||{};
+      home[field]+=Number(pair.home||0);
+      away[field]+=Number(pair.away||0);
+    }
+    addPair('shotsOnGoal','sog');
+    addPair('shots','shots');
+    addPair('passes','passes');
+    addPair('corners','corners');
+    const poss=stats.possession||{};
+    if(Number.isFinite(Number(poss.home))){home.possTotal+=Number(poss.home);home.possMatches++;}
+    if(Number.isFinite(Number(poss.away))){away.possTotal+=Number(poss.away);away.possMatches++;}
+  });
+  return Object.values(teams).map(function(trow){
+    trow.gd=trow.gf-trow.ga;
+    trow.gfPer=trow.played?trow.gf/trow.played:0;
+    trow.gaPer=trow.played?trow.ga/trow.played:0;
+    trow.avgPoss=trow.possMatches?trow.possTotal/trow.possMatches:0;
+    return trow;
+  });
+}
+function trendTop(rows,sorter,limit){
+  return rows.slice().filter(r=>r.played>0).sort(sorter).slice(0,limit||6);
+}
+function renderTrendRows(rows,valueFn,subFn){
+  if(!rows.length)return '<div class="stat-empty-row">'+t('statsAvailableSoon')+'</div>';
+  return rows.map(function(r,i){
+    return '<div class="stat-row">'+
+      '<span class="stat-pos">'+(i+1)+'</span>'+
+      flagHtml(r.team)+
+      '<div class="stat-info"><div class="stat-pname">'+escHtml(r.team)+'</div><div class="stat-team">'+escHtml(subFn(r))+'</div></div>'+
+      '<span class="stat-val">'+escHtml(valueFn(r))+'</span>'+
+    '</div>';
+  }).join('');
+}
+function renderTrendCard(icon,title,rows,valueFn,subFn){
+  return '<div class="stat-card"><div class="stat-card-hdr">'+icon+' '+title+'</div>'+renderTrendRows(rows,valueFn,subFn)+'</div>';
+}
+async function renderTournamentTrends(){
+  const el=document.getElementById('trendsContent');
+  if(!el)return;
+  el.innerHTML='<div class="loading"><div class="spinner"></div><span class="loading-text">'+t('loadingStats')+'</span></div>';
+  const items=await ensureStoredMatchStats();
+  const rows=aggregateTournamentTeamStats(items);
+  if(!rows.length){
+    el.innerHTML='<div class="empty"><div class="empty-icon">📈</div><div class="empty-text">'+t('statsAvailableSoon')+'</div></div>';
+    return;
+  }
+  const playedSub=function(r){return r.played+' '+t('playedMatches')+' · DG '+(r.gd>0?'+':'')+r.gd;};
+  const defenseSub=function(r){return r.played+' '+t('playedMatches')+' · '+r.cleanSheets+' '+t('cleanSheetCount');};
+  const avgSub=function(r){return r.played+' '+t('playedMatches')+' · '+t('avgShort')+' '+(r.played?(r.shots/r.played).toFixed(1):'0.0')+' '+t('shotsShort').toLowerCase();};
+  let html='<div class="stats-intro">'+
+    '<div class="info-box" style="flex:1;min-width:240px;margin-bottom:0">'+t('trendsIntro')+'</div>'+
+    '<div class="stat-pills">'+
+      '<span class="stat-pill ready">⚽ '+t('topScoringTeams')+'</span>'+
+      '<span class="stat-pill ready">🛡️ '+t('bestDefenses')+'</span>'+
+      '<span class="stat-pill ready">📈 '+t('topPossessionTeams')+'</span>'+
+    '</div></div>';
+  html+='<div class="trend-grid">';
+  html+=renderTrendCard('⚽',t('topScoringTeams'),
+    trendTop(rows,(a,b)=>b.gf-a.gf||b.gd-a.gd||a.team.localeCompare(b.team,'es')),
+    r=>String(r.gf),
+    playedSub);
+  html+=renderTrendCard('🛡️',t('bestDefenses'),
+    trendTop(rows,(a,b)=>a.gaPer-b.gaPer||b.cleanSheets-a.cleanSheets||a.ga-b.ga||a.team.localeCompare(b.team,'es')),
+    r=>r.ga+' '+t('goalsAgainstShort'),
+    defenseSub);
+  html+=renderTrendCard('🎯',t('topShotTeams'),
+    trendTop(rows,(a,b)=>b.sog-a.sog||b.shots-a.shots||a.team.localeCompare(b.team,'es')),
+    r=>String(r.sog),
+    avgSub);
+  html+=renderTrendCard('◉',t('topPossessionTeams'),
+    trendTop(rows,(a,b)=>b.avgPoss-a.avgPoss||a.team.localeCompare(b.team,'es')),
+    r=>r.avgPoss.toFixed(1)+'%',
+    r=>r.played+' '+t('playedMatches')+' · '+t('avgShort'));
+  html+=renderTrendCard('🎯',t('topAssistTeams'),
+    trendTop(rows,(a,b)=>b.assists-a.assists||b.gf-a.gf||a.team.localeCompare(b.team,'es')),
+    r=>String(r.assists),
+    playedSub);
+  html+=renderTrendCard('🧤',t('topCleanSheetTeams'),
+    trendTop(rows,(a,b)=>b.cleanSheets-a.cleanSheets||a.ga-b.ga||a.team.localeCompare(b.team,'es')),
+    r=>String(r.cleanSheets),
+    defenseSub);
+  html+='</div><div class="trend-note">'+t('trendsSource')+'</div>';
+  el.innerHTML=html;
+}
 
 // ══════════════════════════════════════════════
 // TAB: EQUIPOS
@@ -4402,14 +4534,14 @@ function closeDetail(){
 document.getElementById('detailPanel').addEventListener('click',e=>{if(e.target===document.getElementById('detailPanel'))closeDetail();});
 
 // TAB SWITCHING
-let activeTab='live',calLoaded=false,golesLoaded=false;
+let activeTab='live',calLoaded=false,golesLoaded=false,trendsLoaded=false;
 function switchTab(tab){
   clearInterval(liveTimer);
   activeTab=tab;
   document.querySelectorAll('.tab').forEach((t,i)=>{
-    t.classList.toggle('active',['live','cal','quiniela','goles','equipos','miseleccion'][i]===tab);
+    t.classList.toggle('active',['live','cal','quiniela','goles','rachas','equipos','miseleccion'][i]===tab);
   });
-  ['live','cal','quiniela','goles','equipos','miseleccion'].forEach(id=>{
+  ['live','cal','quiniela','goles','rachas','equipos','miseleccion'].forEach(id=>{
     document.getElementById('tab-'+id).style.display=id===tab?'block':'none';
   });
   if(tab==='live')loadLive();
@@ -4418,6 +4550,7 @@ function switchTab(tab){
   if(tab==='cal'&&calLoaded)renderCal();
   if(tab==='quiniela')renderQGroups();
   if(tab==='goles'&&!golesLoaded){loadGoleadores();golesLoaded=true;}
+  if(tab==='rachas'){renderTournamentTrends();trendsLoaded=true;}
   if(tab==='equipos')initEquipos();
 }
 
