@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T02:06:49.507Z",
+  "updated": "2026-06-15T04:52:33.397Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -126,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -264,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -381,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -552,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -650,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -767,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -853,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -961,7 +961,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1186,7 +1186,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1345,7 +1345,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1356,12 +1356,12 @@
           "away": 12
         },
         "possession": {
-          "home": 48.3,
-          "away": 51.7
+          "home": 48.4,
+          "away": 51.6
         },
         "passes": {
           "home": 470,
-          "away": 494
+          "away": 492
         },
         "fouls": {
           "home": 10,
@@ -1441,43 +1441,162 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "updatedAt": "2026-06-15T04:52:33.397Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 0,
-          "away": 0
+          "home": 7,
+          "away": 2
         },
         "shots": {
-          "home": 1,
-          "away": 0
+          "home": 13,
+          "away": 6
         },
         "possession": {
-          "home": 60.9,
-          "away": 39.1
+          "home": 49.1,
+          "away": 50.9
         },
         "passes": {
-          "home": 28,
-          "away": 16
+          "home": 355,
+          "away": 364
         },
         "fouls": {
-          "home": 0,
-          "away": 1
+          "home": 10,
+          "away": 8
         },
         "corners": {
-          "home": 0,
-          "away": 0
+          "home": 4,
+          "away": 2
         },
         "saves": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 1
         },
         "offsides": {
-          "home": 0,
-          "away": 0
+          "home": 3,
+          "away": 6
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49520651",
+          "minute": "7",
+          "period": 1,
+          "team": "Sweden",
+          "player": "Yasin Ayari",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Sweden 1, Tunisia 0. Yasin Ayari (Sweden) right footed shot from outside the box to the top right corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49520951",
+          "minute": "30",
+          "period": 1,
+          "team": "Sweden",
+          "player": "Alexander Isak",
+          "assist": "Viktor Gyökeres",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Sweden 2, Tunisia 0. Alexander Isak (Sweden) right footed shot from outside the box to the bottom right corner. Assisted by Viktor Gyökeres following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521122",
+          "minute": "43",
+          "period": 1,
+          "team": "Tunisia",
+          "player": "Omar Rekik",
+          "assist": "Hannibal Mejbri",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Sweden 2, Tunisia 1. Omar Rekik (Tunisia) header from the centre of the box to the bottom left corner. Assisted by Hannibal Mejbri with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521431",
+          "minute": "59",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Viktor Gyökeres",
+          "assist": "Alexander Isak",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Sweden 3, Tunisia 1. Viktor Gyökeres (Sweden) right footed shot from the centre of the box to the bottom left corner. Assisted by Alexander Isak.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521708",
+          "minute": "84",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Mattias Svanberg",
+          "assist": "Alexander Isak",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Sweden 4, Tunisia 1. Mattias Svanberg (Sweden) right footed shot from the centre of the box to the centre of the goal. Assisted by Alexander Isak following a set piece situation.Goal awarded following VAR Review.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521808",
+          "minute": "90'+6",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Yasin Ayari",
+          "assist": "Lucas Bergvall",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Sweden 5, Tunisia 1. Yasin Ayari (Sweden) right footed shot from outside the box to the bottom left corner. Assisted by Lucas Bergvall.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49520951",
+          "minute": "30",
+          "period": 1,
+          "team": "Sweden",
+          "player": "Viktor Gyökeres",
+          "goal": "Alexander Isak",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521122",
+          "minute": "43",
+          "period": 1,
+          "team": "Tunisia",
+          "player": "Hannibal Mejbri",
+          "goal": "Omar Rekik",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521431",
+          "minute": "59",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Alexander Isak",
+          "goal": "Viktor Gyökeres",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521708",
+          "minute": "84",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Alexander Isak",
+          "goal": "Mattias Svanberg",
+          "source": "ESPN"
+        },
+        {
+          "id": "49521808",
+          "minute": "90'+6",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Lucas Bergvall",
+          "goal": "Yasin Ayari",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -1485,12 +1604,12 @@
           "name": "Kristoffer Nordfeldt",
           "shortName": "K. Nordfeldt",
           "number": "23",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -1498,12 +1617,12 @@
           "name": "Mouhib Chamakh",
           "shortName": "M. Chamakh",
           "number": "1",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 1,
+          "goalsAgainst": 5,
+          "cleanSheet": 0,
+          "savePct": 16.7,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
