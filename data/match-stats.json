@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T23:39:13.912Z",
+  "updated": "2026-06-15T02:06:49.507Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -126,7 +126,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -264,7 +264,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -381,7 +381,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -552,7 +552,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -650,7 +650,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -767,7 +767,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -853,7 +853,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -961,7 +961,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1186,7 +1186,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1197,12 +1197,12 @@
           "away": 10
         },
         "possession": {
-          "home": 59.7,
-          "away": 40.3
+          "home": 59.8,
+          "away": 40.2
         },
         "passes": {
           "home": 524,
-          "away": 342
+          "away": 341
         },
         "fouls": {
           "home": 7,
@@ -1345,35 +1345,131 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-14T23:39:13.912Z",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 0
-        },
-        "shots": {
-          "home": 3,
-          "away": 6
-        },
-        "possession": {
-          "home": 51.3,
-          "away": 48.7
-        },
-        "passes": {
-          "home": 195,
-          "away": 186
-        },
-        "fouls": {
           "home": 4,
           "away": 1
         },
+        "shots": {
+          "home": 15,
+          "away": 12
+        },
+        "possession": {
+          "home": 48.3,
+          "away": 51.7
+        },
+        "passes": {
+          "home": 470,
+          "away": 494
+        },
+        "fouls": {
+          "home": 10,
+          "away": 13
+        },
         "corners": {
+          "home": 3,
+          "away": 6
+        },
+        "saves": {
           "home": 1,
+          "away": 3
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49520440",
+          "minute": "90",
+          "period": 2,
+          "team": "Ivory Coast",
+          "player": "Amad Diallo",
+          "assist": "Wilfried Singo",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Côte d'Ivoire 1, Ecuador 0. Amad Diallo (Côte d'Ivoire) left footed shot from the centre of the box to the bottom left corner. Assisted by Wilfried Singo.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49520440",
+          "minute": "90",
+          "period": 2,
+          "team": "Ivory Coast",
+          "player": "Wilfried Singo",
+          "goal": "Amad Diallo",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Ivory Coast",
+          "name": "Yahia Fofana",
+          "shortName": "Y. Fofana",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Ecuador",
+          "name": "Hernán Galíndez",
+          "shortName": "H. Galíndez",
+          "number": "1",
+          "saves": 3,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 75,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 12,
+      "espnEventId": "760424",
+      "date": "2026-06-15",
+      "homeTeam": "Sweden",
+      "awayTeam": "Tunisia",
+      "source": "ESPN",
+      "updatedAt": "2026-06-15T02:06:49.507Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 0,
+          "away": 0
+        },
+        "shots": {
+          "home": 1,
+          "away": 0
+        },
+        "possession": {
+          "home": 60.9,
+          "away": 39.1
+        },
+        "passes": {
+          "home": 28,
+          "away": 16
+        },
+        "fouls": {
+          "home": 0,
+          "away": 1
+        },
+        "corners": {
+          "home": 0,
           "away": 0
         },
         "saves": {
           "home": 0,
-          "away": 1
+          "away": 0
         },
         "offsides": {
           "home": 0,
@@ -1385,10 +1481,10 @@
       "keepers": [
         {
           "side": "home",
-          "team": "Ivory Coast",
-          "name": "Yahia Fofana",
-          "shortName": "Y. Fofana",
-          "number": "1",
+          "team": "Sweden",
+          "name": "Kristoffer Nordfeldt",
+          "shortName": "K. Nordfeldt",
+          "number": "23",
           "saves": 0,
           "goalsAgainst": 0,
           "cleanSheet": 1,
@@ -1398,16 +1494,16 @@
         },
         {
           "side": "away",
-          "team": "Ecuador",
-          "name": "Hernán Galíndez",
-          "shortName": "H. Galíndez",
+          "team": "Tunisia",
+          "name": "Mouhib Chamakh",
+          "shortName": "M. Chamakh",
           "number": "1",
-          "saves": 1,
+          "saves": 0,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
-          "source": "ESPN leaders"
+          "source": "ESPN roster"
         }
       ]
     }
