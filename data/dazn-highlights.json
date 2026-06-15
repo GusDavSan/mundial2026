@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T12:43:45.366Z",
+  "updated": "2026-06-15T18:02:41.196Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -126,10 +126,10 @@
       "away": "Japan",
       "source": "DAZN ES",
       "title": "Países Bajos vs Japón (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Pmr949U0gWA",
-      "thumbnail": "https://i1.ytimg.com/vi/Pmr949U0gWA/hqdefault.jpg",
-      "videoId": "Pmr949U0gWA",
-      "publishedAt": "2026-06-15T00:00:15+00:00",
+      "url": "https://www.youtube.com/watch?v=rmit7fK16AQ",
+      "thumbnail": "https://i.ytimg.com/vi/rmit7fK16AQ/hqdefault.jpg",
+      "videoId": "rmit7fK16AQ",
+      "publishedAt": "2026-06-15T00:00:00Z",
       "confidence": 20
     },
     {
@@ -157,6 +157,19 @@
       "videoId": "dWEZs97hXaw",
       "publishedAt": "2026-06-15T06:02:49Z",
       "confidence": 20
+    },
+    {
+      "matchId": 13,
+      "date": "2026-06-15",
+      "home": "Spain",
+      "away": "Cape Verde",
+      "source": "DAZN ES",
+      "title": "¡VOZINHA! El portero de Cabo Verde se viste de héroe para impedir el gol de España 💥#DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=5IF-wuYwz6s",
+      "thumbnail": "https://i.ytimg.com/vi/5IF-wuYwz6s/hqdefault.jpg",
+      "videoId": "5IF-wuYwz6s",
+      "publishedAt": "2026-06-15T17:06:15Z",
+      "confidence": 16
     }
   ]
 }
