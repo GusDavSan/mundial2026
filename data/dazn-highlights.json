@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T17:21:51.181Z",
+  "updated": "2026-06-16T21:20:31.812Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -209,6 +209,19 @@
       "videoId": "PFKJiSSfGXM",
       "publishedAt": "2026-06-16T05:16:02Z",
       "confidence": 20
+    },
+    {
+      "matchId": 17,
+      "date": "2026-06-16",
+      "home": "France",
+      "away": "Senegal",
+      "source": "DAZN ES",
+      "title": "Show de Mbappé. Francia se divierte 🍿 El resumen del PARTIDAZO entre Francia y Senegal, en un minuto",
+      "url": "https://www.youtube.com/watch?v=v008Ciyt8ig",
+      "thumbnail": "https://i3.ytimg.com/vi/v008Ciyt8ig/hqdefault.jpg",
+      "videoId": "v008Ciyt8ig",
+      "publishedAt": "2026-06-16T21:12:46+00:00",
+      "confidence": 17
     }
   ]
 }
