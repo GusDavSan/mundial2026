@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T22:30:41.005Z",
+  "updated": "2026-06-16T00:15:17.309Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1777,8 +1777,8 @@
           "away": 46.4
         },
         "passes": {
-          "home": 453,
-          "away": 397
+          "home": 455,
+          "away": 398
         },
         "fouls": {
           "home": 15,
@@ -1874,42 +1874,71 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-15T22:30:41.005Z",
+      "updatedAt": "2026-06-16T00:15:17.309Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 0,
-          "away": 1
+          "home": 3,
+          "away": 10
         },
         "shots": {
-          "home": 1,
-          "away": 3
+          "home": 7,
+          "away": 28
         },
         "possession": {
-          "home": 44.5,
-          "away": 55.5
+          "home": 33.2,
+          "away": 66.8
         },
         "passes": {
-          "home": 141,
-          "away": 174
+          "home": 320,
+          "away": 610
         },
         "fouls": {
-          "home": 2,
-          "away": 1
+          "home": 11,
+          "away": 6
         },
         "corners": {
-          "home": 1,
-          "away": 1
+          "home": 4,
+          "away": 14
         },
         "saves": {
-          "home": 1,
-          "away": 0
+          "home": 9,
+          "away": 2
         },
         "offsides": {
           "home": 0,
-          "away": 1
+          "away": 6
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 0
         }
       },
-      "goals": [],
+      "goals": [
+        {
+          "id": "49525862",
+          "minute": "41",
+          "period": 1,
+          "team": "Saudi Arabia",
+          "player": "Abdulelah Al-Amri",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Saudi Arabia 1, Uruguay 0. Abdulelah Al Amri (Saudi Arabia) right footed shot from very close range to the centre of the goal following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49526471",
+          "minute": "80",
+          "period": 2,
+          "team": "Uruguay",
+          "player": "Maxi Araújo",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Saudi Arabia 1, Uruguay 1. Maxi Araújo (Uruguay) left footed shot from the left side of the six yard box to the bottom left corner.",
+          "source": "ESPN"
+        }
+      ],
       "assists": [],
       "keepers": [
         {
@@ -1918,10 +1947,10 @@
           "name": "Mohammed Al-Owais",
           "shortName": "M. Al-Owais",
           "number": "21",
-          "saves": 1,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 9,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 90,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -1931,12 +1960,12 @@
           "name": "Fernando Muslera",
           "shortName": "F. Muslera",
           "number": "23",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 2,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
