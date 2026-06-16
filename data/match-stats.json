@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T22:01:44.957Z",
+  "updated": "2026-06-16T23:44:50.527Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T22:01:44.957Z",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2270,6 +2270,156 @@
           "savePct": 62.5,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 18,
+      "espnEventId": "760430",
+      "date": "2026-06-16",
+      "homeTeam": "Iraq",
+      "awayTeam": "Norway",
+      "source": "ESPN",
+      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 4
+        },
+        "shots": {
+          "home": 11,
+          "away": 9
+        },
+        "possession": {
+          "home": 39.7,
+          "away": 60.3
+        },
+        "passes": {
+          "home": 276,
+          "away": 427
+        },
+        "fouls": {
+          "home": 8,
+          "away": 12
+        },
+        "corners": {
+          "home": 2,
+          "away": 5
+        },
+        "saves": {
+          "home": 1,
+          "away": 0
+        },
+        "offsides": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49533060",
+          "minute": "29",
+          "period": 1,
+          "team": "Norway",
+          "player": "Erling Haaland",
+          "assist": "David Møller Wolfe",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Iraq 0, Norway 1. Erling Haaland (Norway) left footed shot from very close range to the top right corner. Assisted by David Møller Wolfe with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49533195",
+          "minute": "39",
+          "period": 1,
+          "team": "Iraq",
+          "player": "Aymen Hussein",
+          "assist": "Amir Al-Ammari",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Iraq 1, Norway 1. Aymen Hussein (Iraq) header from the centre of the box to the bottom right corner. Assisted by Amir Al Ammari with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49533256",
+          "minute": "43",
+          "period": 1,
+          "team": "Norway",
+          "player": "Erling Haaland",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Iraq 1, Norway 2. Erling Haaland (Norway) right footed shot from very close range to the centre of the goal.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49534369",
+          "minute": "76",
+          "period": 2,
+          "team": "Norway",
+          "player": "Leo Østigard",
+          "assist": "Martin Ødegaard",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Iraq 1, Norway 3. Leo Østigård (Norway) header from very close range to the high centre of the goal. Assisted by Martin Ødegaard with a cross following a corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49533060",
+          "minute": "29",
+          "period": 1,
+          "team": "Norway",
+          "player": "David Møller Wolfe",
+          "goal": "Erling Haaland",
+          "source": "ESPN"
+        },
+        {
+          "id": "49533195",
+          "minute": "39",
+          "period": 1,
+          "team": "Iraq",
+          "player": "Amir Al-Ammari",
+          "goal": "Aymen Hussein",
+          "source": "ESPN"
+        },
+        {
+          "id": "49534369",
+          "minute": "76",
+          "period": 2,
+          "team": "Norway",
+          "player": "Martin Ødegaard",
+          "goal": "Leo Østigard",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Iraq",
+          "name": "Jalal Hassan",
+          "shortName": "J. Hassan",
+          "number": "12",
+          "saves": 1,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 25,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Norway",
+          "name": "Ørjan Nyland",
+          "shortName": "Ø. Nyland",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
