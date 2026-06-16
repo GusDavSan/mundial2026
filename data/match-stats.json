@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T00:15:17.309Z",
+  "updated": "2026-06-16T05:38:36.166Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1804,7 +1804,7 @@
       "goals": [
         {
           "id": "49524019",
-          "minute": "19",
+          "minute": "20",
           "period": 1,
           "team": "Egypt",
           "player": "Emam Ashour",
@@ -1830,7 +1830,7 @@
       "assists": [
         {
           "id": "49524019",
-          "minute": "19",
+          "minute": "20",
           "period": 1,
           "team": "Egypt",
           "player": "Mohamed Salah",
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T00:15:17.309Z",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1882,15 +1882,15 @@
         },
         "shots": {
           "home": 7,
-          "away": 28
+          "away": 27
         },
         "possession": {
           "home": 33.2,
           "away": 66.8
         },
         "passes": {
-          "home": 320,
-          "away": 610
+          "home": 322,
+          "away": 612
         },
         "fouls": {
           "home": 11,
@@ -1964,6 +1964,160 @@
           "goalsAgainst": 1,
           "cleanSheet": 0,
           "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 16,
+      "espnEventId": "760427",
+      "date": "2026-06-16",
+      "homeTeam": "Iran",
+      "awayTeam": "New Zealand",
+      "source": "ESPN",
+      "updatedAt": "2026-06-16T05:38:36.166Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 4,
+          "away": 8
+        },
+        "shots": {
+          "home": 17,
+          "away": 14
+        },
+        "possession": {
+          "home": 48.5,
+          "away": 51.5
+        },
+        "passes": {
+          "home": 409,
+          "away": 446
+        },
+        "fouls": {
+          "home": 10,
+          "away": 8
+        },
+        "corners": {
+          "home": 4,
+          "away": 1
+        },
+        "saves": {
+          "home": 6,
+          "away": 2
+        },
+        "offsides": {
+          "home": 2,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49528195",
+          "minute": "7",
+          "period": 1,
+          "team": "New Zealand",
+          "player": "Elijah Just",
+          "assist": "Chris Wood",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! IR Iran 0, New Zealand 1. Elijah Just (New Zealand) right footed shot from the centre of the box to the high centre of the goal. Assisted by Chris Wood.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49529312",
+          "minute": "32",
+          "period": 1,
+          "team": "Iran",
+          "player": "Ramin Rezaeian",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! IR Iran 1, New Zealand 1. Ramin Rezaeian (IR Iran) right footed shot from the centre of the box to the bottom left corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49530353",
+          "minute": "54",
+          "period": 2,
+          "team": "New Zealand",
+          "player": "Elijah Just",
+          "assist": "Chris Wood",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! IR Iran 1, New Zealand 2. Elijah Just (New Zealand) right footed shot from the right side of the box to the centre of the goal. Assisted by Chris Wood following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49530497",
+          "minute": "64",
+          "period": 2,
+          "team": "Iran",
+          "player": "Mohammad Mohebbi",
+          "assist": "Ramin Rezaeian",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! IR Iran 2, New Zealand 2. Mohammad Mohebbi (IR Iran) header from the centre of the box to the bottom left corner. Assisted by Ramin Rezaeian with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49528195",
+          "minute": "7",
+          "period": 1,
+          "team": "New Zealand",
+          "player": "Chris Wood",
+          "goal": "Elijah Just",
+          "source": "ESPN"
+        },
+        {
+          "id": "49530353",
+          "minute": "54",
+          "period": 2,
+          "team": "New Zealand",
+          "player": "Chris Wood",
+          "goal": "Elijah Just",
+          "source": "ESPN"
+        },
+        {
+          "id": "49530497",
+          "minute": "64",
+          "period": 2,
+          "team": "Iran",
+          "player": "Ramin Rezaeian",
+          "goal": "Mohammad Mohebbi",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Iran",
+          "name": "Alireza Beiranvand",
+          "shortName": "A. Beiranvand",
+          "number": "1",
+          "saves": 6,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 75,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "New Zealand",
+          "name": "Max Crocombe",
+          "shortName": "M. Crocombe",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
