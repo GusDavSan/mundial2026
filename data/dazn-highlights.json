@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T21:20:31.812Z",
+  "updated": "2026-06-16T23:48:52.108Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -216,12 +216,12 @@
       "home": "France",
       "away": "Senegal",
       "source": "DAZN ES",
-      "title": "Show de Mbappé. Francia se divierte 🍿 El resumen del PARTIDAZO entre Francia y Senegal, en un minuto",
-      "url": "https://www.youtube.com/watch?v=v008Ciyt8ig",
-      "thumbnail": "https://i3.ytimg.com/vi/v008Ciyt8ig/hqdefault.jpg",
-      "videoId": "v008Ciyt8ig",
-      "publishedAt": "2026-06-16T21:12:46+00:00",
-      "confidence": 17
+      "title": "Francia vs Senegal  (3-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=U4e4QQKggGA",
+      "thumbnail": "https://i2.ytimg.com/vi/U4e4QQKggGA/hqdefault.jpg",
+      "videoId": "U4e4QQKggGA",
+      "publishedAt": "2026-06-16T22:59:23+00:00",
+      "confidence": 20
     }
   ]
 }
