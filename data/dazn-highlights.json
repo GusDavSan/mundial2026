@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T04:05:38.475Z",
+  "updated": "2026-06-16T05:34:09.692Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -195,6 +195,19 @@
       "thumbnail": "https://i.ytimg.com/vi/NfOeo5KLvis/hqdefault.jpg",
       "videoId": "NfOeo5KLvis",
       "publishedAt": "2026-06-16T02:13:16Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 16,
+      "date": "2026-06-16",
+      "home": "Iran",
+      "away": "New Zealand",
+      "source": "DAZN ES",
+      "title": "Irán vs Nueva Zelanda (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=PFKJiSSfGXM",
+      "thumbnail": "https://i.ytimg.com/vi/PFKJiSSfGXM/hqdefault.jpg",
+      "videoId": "PFKJiSSfGXM",
+      "publishedAt": "2026-06-16T05:16:02Z",
       "confidence": 20
     }
   ]
