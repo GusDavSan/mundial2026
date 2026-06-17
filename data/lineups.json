@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T11:56:09.793Z",
+  "updated": "2026-06-17T15:57:20.789Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -558,7 +558,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "South Korea",
         "espnTeam": "South Korea",
@@ -1107,7 +1107,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -1656,7 +1656,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -2205,7 +2205,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Qatar",
         "espnTeam": "Qatar",
@@ -2754,7 +2754,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -2812,8 +2812,8 @@
             "subbedOut": true
           },
           {
-            "name": "Raphinha",
-            "shortName": "Raphinha",
+            "name": "Raphinha ",
+            "shortName": "Raphinha ",
             "num": "11",
             "pos": "AM",
             "position": "Attacking Midfielder",
@@ -2884,8 +2884,8 @@
             "subbedOut": false
           },
           {
-            "name": "Ederson",
-            "shortName": "Ederson",
+            "name": "Ederson ",
+            "shortName": "Ederson ",
             "num": "23",
             "pos": "SUB",
             "position": "Substitute",
@@ -3293,7 +3293,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Haiti",
         "espnTeam": "Haiti",
@@ -3842,7 +3842,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Australia",
         "espnTeam": "Australia",
@@ -4391,7 +4391,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Germany",
         "espnTeam": "Germany",
@@ -4940,7 +4940,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Netherlands",
         "espnTeam": "Netherlands",
@@ -5489,7 +5489,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Ivory Coast",
         "espnTeam": "Ivory Coast",
@@ -6038,7 +6038,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Sweden",
         "espnTeam": "Sweden",
@@ -6587,7 +6587,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -6645,8 +6645,8 @@
             "subbedOut": false
           },
           {
-            "name": "Rodri",
-            "shortName": "Rodri",
+            "name": "Rodri ",
+            "shortName": "Rodri ",
             "num": "16",
             "pos": "CM",
             "position": "Center Midfielder",
@@ -6655,8 +6655,8 @@
             "subbedOut": true
           },
           {
-            "name": "Pedri",
-            "shortName": "Pedri",
+            "name": "Pedri ",
+            "shortName": "Pedri ",
             "num": "20",
             "pos": "LM",
             "position": "Left Midfielder",
@@ -6685,8 +6685,8 @@
             "subbedOut": false
           },
           {
-            "name": "Gavi",
-            "shortName": "Gavi",
+            "name": "Gavi ",
+            "shortName": "Gavi ",
             "num": "9",
             "pos": "LF",
             "position": "Left Forward",
@@ -7136,7 +7136,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Belgium",
         "espnTeam": "Belgium",
@@ -7675,7 +7675,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Saudi Arabia",
         "espnTeam": "Saudi Arabia",
@@ -8204,7 +8204,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Iran",
         "espnTeam": "Iran",
@@ -8743,7 +8743,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -9292,7 +9292,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Iraq",
         "espnTeam": "Iraq",
@@ -9841,7 +9841,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -10390,7 +10390,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T11:56:09.793Z",
+      "updatedAt": "2026-06-17T15:57:20.789Z",
       "home": {
         "team": "Austria",
         "espnTeam": "Austria",
