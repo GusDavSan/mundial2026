@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T04:23:32.525Z",
+  "updated": "2026-06-17T06:06:06.250Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2457,12 +2457,12 @@
           "away": 7
         },
         "possession": {
-          "home": 47.9,
-          "away": 52.1
+          "home": 47.8,
+          "away": 52.2
         },
         "passes": {
-          "home": 563,
-          "away": 608
+          "home": 561,
+          "away": 609
         },
         "fouls": {
           "home": 13,
@@ -2575,43 +2575,103 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T04:23:32.525Z",
+      "updatedAt": "2026-06-17T06:06:06.250Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 0,
-          "away": 2
+          "home": 3,
+          "away": 4
         },
         "shots": {
-          "home": 2,
-          "away": 3
+          "home": 10,
+          "away": 11
         },
         "possession": {
-          "home": 75.4,
-          "away": 24.6
+          "home": 63.4,
+          "away": 36.6
         },
         "passes": {
-          "home": 166,
-          "away": 54
+          "home": 580,
+          "away": 328
         },
         "fouls": {
+          "home": 12,
+          "away": 6
+        },
+        "corners": {
+          "home": 5,
+          "away": 3
+        },
+        "saves": {
           "home": 3,
           "away": 1
         },
-        "corners": {
-          "home": 1,
+        "offsides": {
+          "home": 3,
           "away": 1
         },
-        "saves": {
-          "home": 2,
-          "away": 0
-        },
-        "offsides": {
-          "home": 2,
+        "yellowCards": {
+          "home": 1,
           "away": 0
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49537647",
+          "minute": "21",
+          "period": 1,
+          "team": "Austria",
+          "player": "Romano Schmid",
+          "assist": "Xaver Schlager",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Austria 1, Jordan 0. Romano Schmid (Austria) right footed shot from outside the box to the top right corner. Assisted by Xaver Schlager.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49538122",
+          "minute": "50",
+          "period": 2,
+          "team": "Jordan",
+          "player": "Ali Olwan",
+          "assist": "Noor Al-Rawabdeh",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Austria 1, Jordan 1. Ali Olwan (Jordan) right footed shot from the left side of the box to the bottom right corner. Assisted by Noor Al Rawabdeh following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49538442",
+          "minute": "76",
+          "period": 2,
+          "team": "Austria",
+          "player": "Yazan Al-Arab",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": true,
+          "text": "Own Goal by Yazan Al Arab, Jordan. Austria 2, Jordan 1.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49537647",
+          "minute": "21",
+          "period": 1,
+          "team": "Austria",
+          "player": "Xaver Schlager",
+          "goal": "Romano Schmid",
+          "source": "ESPN"
+        },
+        {
+          "id": "49538122",
+          "minute": "50",
+          "period": 2,
+          "team": "Jordan",
+          "player": "Noor Al-Rawabdeh",
+          "goal": "Ali Olwan",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -2619,10 +2679,10 @@
           "name": "Alexander Schlager",
           "shortName": "A. Schlager",
           "number": "1",
-          "saves": 2,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 3,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -2632,12 +2692,12 @@
           "name": "Yazeed Abulaila",
           "shortName": "Y. Abulaila",
           "number": "1",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 1,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 33.3,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
