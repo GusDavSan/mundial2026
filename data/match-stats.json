@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T16:07:54.118Z",
+  "updated": "2026-06-17T18:36:40.305Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T16:07:54.118Z",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2710,6 +2710,127 @@
           "savePct": 25,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 21,
+      "espnEventId": "760435",
+      "date": "2026-06-17",
+      "homeTeam": "Portugal",
+      "awayTeam": "DR Congo",
+      "source": "ESPN",
+      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 2
+        },
+        "shots": {
+          "home": 3,
+          "away": 7
+        },
+        "possession": {
+          "home": 78,
+          "away": 22
+        },
+        "passes": {
+          "home": 654,
+          "away": 179
+        },
+        "fouls": {
+          "home": 5,
+          "away": 10
+        },
+        "corners": {
+          "home": 3,
+          "away": 4
+        },
+        "saves": {
+          "home": 1,
+          "away": 0
+        },
+        "offsides": {
+          "home": 2,
+          "away": 2
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49538978",
+          "minute": "6",
+          "period": 1,
+          "team": "Portugal",
+          "player": "João Neves",
+          "assist": "Pedro Neto",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Portugal 1, Congo DR 0. João Neves (Portugal) header from the centre of the box to the bottom right corner. Assisted by Pedro Neto with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49539666",
+          "minute": "45'+5",
+          "period": 1,
+          "team": "DR Congo",
+          "player": "Yoane Wissa",
+          "assist": "Arthur Masuaku",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Portugal 1, Congo DR 1. Yoane Wissa (Congo DR) header from very close range to the top left corner. Assisted by Arthur Masuaku with a cross following a corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49538978",
+          "minute": "6",
+          "period": 1,
+          "team": "Portugal",
+          "player": "Pedro Neto",
+          "goal": "João Neves",
+          "source": "ESPN"
+        },
+        {
+          "id": "49539666",
+          "minute": "45'+5",
+          "period": 1,
+          "team": "DR Congo",
+          "player": "Arthur Masuaku",
+          "goal": "Yoane Wissa",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Portugal",
+          "name": "Diogo Costa",
+          "shortName": "D. Costa",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "DR Congo",
+          "name": "Lionel Mpasi",
+          "shortName": "L. Mpasi",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
