@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T14:01:32.517Z",
+  "updated": "2026-06-17T17:24:47.531Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -243,10 +243,10 @@
       "away": "Algeria",
       "source": "DAZN ES",
       "title": "Argentina vs Argelia (3-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=oyxavRVRUV8",
-      "thumbnail": "https://i4.ytimg.com/vi/oyxavRVRUV8/hqdefault.jpg",
-      "videoId": "oyxavRVRUV8",
-      "publishedAt": "2026-06-17T05:34:58+00:00",
+      "url": "https://www.youtube.com/watch?v=Sg4kke5zSaI",
+      "thumbnail": "https://i.ytimg.com/vi/Sg4kke5zSaI/hqdefault.jpg",
+      "videoId": "Sg4kke5zSaI",
+      "publishedAt": "2026-06-17T05:33:07Z",
       "confidence": 20
     },
     {
@@ -261,6 +261,19 @@
       "videoId": "Aot82085daE",
       "publishedAt": "2026-06-17T08:00:17Z",
       "confidence": 20
+    },
+    {
+      "matchId": 21,
+      "date": "2026-06-17",
+      "home": "Portugal",
+      "away": "DR Congo",
+      "source": "DAZN ES",
+      "title": "Portugal vs RD Congo | FIFA World Cup | Copa Mundial en directo y en vivo",
+      "url": "https://www.youtube.com/watch?v=nmjBaEpWZtI",
+      "thumbnail": "https://i.ytimg.com/vi/nmjBaEpWZtI/hqdefault_live.jpg",
+      "videoId": "nmjBaEpWZtI",
+      "publishedAt": "2026-06-17T16:58:21Z",
+      "confidence": 12
     }
   ]
 }
