@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T23:44:50.527Z",
+  "updated": "2026-06-17T02:07:23.356Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2141,12 +2141,12 @@
           "away": 6
         },
         "possession": {
-          "home": 53.7,
-          "away": 46.3
+          "home": 53.4,
+          "away": 46.6
         },
         "passes": {
-          "home": 576,
-          "away": 497
+          "home": 575,
+          "away": 502
         },
         "fouls": {
           "home": 5,
@@ -2280,37 +2280,41 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-16T23:44:50.527Z",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
-          "away": 4
+          "away": 5
         },
         "shots": {
           "home": 11,
-          "away": 9
+          "away": 12
         },
         "possession": {
-          "home": 39.7,
-          "away": 60.3
+          "home": 38.7,
+          "away": 61.3
         },
         "passes": {
-          "home": 276,
-          "away": 427
+          "home": 333,
+          "away": 536
         },
         "fouls": {
-          "home": 8,
-          "away": 12
+          "home": 12,
+          "away": 13
         },
         "corners": {
           "home": 2,
           "away": 5
         },
         "saves": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "offsides": {
+          "home": 1,
+          "away": 0
+        },
+        "yellowCards": {
           "home": 1,
           "away": 0
         }
@@ -2363,6 +2367,18 @@
           "ownGoal": false,
           "text": "Goal! Iraq 1, Norway 3. Leo Østigård (Norway) header from very close range to the high centre of the goal. Assisted by Martin Ødegaard with a cross following a corner.",
           "source": "ESPN"
+        },
+        {
+          "id": "49534845",
+          "minute": "90'+6",
+          "period": 2,
+          "team": "Norway",
+          "player": "Aymen Hussein",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": true,
+          "text": "Own Goal by Aymen Hussein, Iraq. Iraq 1, Norway 4.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -2401,10 +2417,10 @@
           "name": "Jalal Hassan",
           "shortName": "J. Hassan",
           "number": "12",
-          "saves": 1,
-          "goalsAgainst": 3,
+          "saves": 2,
+          "goalsAgainst": 4,
           "cleanSheet": 0,
-          "savePct": 25,
+          "savePct": 33.3,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -2418,6 +2434,102 @@
           "goalsAgainst": 1,
           "cleanSheet": 0,
           "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        }
+      ]
+    },
+    {
+      "matchId": 19,
+      "espnEventId": "760433",
+      "date": "2026-06-17",
+      "homeTeam": "Argentina",
+      "awayTeam": "Algeria",
+      "source": "ESPN",
+      "updatedAt": "2026-06-17T02:07:23.356Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 1
+        },
+        "shots": {
+          "home": 4,
+          "away": 4
+        },
+        "possession": {
+          "home": 56.1,
+          "away": 43.9
+        },
+        "passes": {
+          "home": 323,
+          "away": 249
+        },
+        "fouls": {
+          "home": 7,
+          "away": 3
+        },
+        "corners": {
+          "home": 0,
+          "away": 2
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 3,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49535916",
+          "minute": "17",
+          "period": 1,
+          "team": "Argentina",
+          "player": "Lionel Messi",
+          "assist": "Rodrigo De Paul",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Argentina 1, Algeria 0. Lionel Messi (Argentina) left footed shot from outside the box to the top right corner. Assisted by Rodrigo De Paul.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49535916",
+          "minute": "17",
+          "period": 1,
+          "team": "Argentina",
+          "player": "Rodrigo De Paul",
+          "goal": "Lionel Messi",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Argentina",
+          "name": "Emiliano Martínez",
+          "shortName": "E. Martínez",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Algeria",
+          "name": "Luca Zidane",
+          "shortName": "L. Zidane",
+          "number": "23",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
           "source": "ESPN roster"
         }
