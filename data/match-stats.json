@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T18:36:40.305Z",
+  "updated": "2026-06-17T20:57:50.038Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2720,30 +2720,30 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-17T18:36:40.305Z",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
           "away": 2
         },
         "shots": {
-          "home": 3,
-          "away": 7
+          "home": 7,
+          "away": 8
         },
         "possession": {
-          "home": 78,
-          "away": 22
+          "home": 75.4,
+          "away": 24.6
         },
         "passes": {
-          "home": 654,
-          "away": 179
+          "home": 783,
+          "away": 250
         },
         "fouls": {
-          "home": 5,
+          "home": 9,
           "away": 10
         },
         "corners": {
-          "home": 3,
+          "home": 5,
           "away": 4
         },
         "saves": {
@@ -2751,11 +2751,11 @@
           "away": 0
         },
         "offsides": {
-          "home": 2,
+          "home": 3,
           "away": 2
         },
         "yellowCards": {
-          "home": 1,
+          "home": 3,
           "away": 1
         }
       },
@@ -2831,6 +2831,156 @@
           "savePct": 0,
           "penaltySaves": 0,
           "source": "ESPN roster"
+        }
+      ]
+    },
+    {
+      "matchId": 22,
+      "espnEventId": "760437",
+      "date": "2026-06-17",
+      "homeTeam": "England",
+      "awayTeam": "Croatia",
+      "source": "ESPN",
+      "updatedAt": "2026-06-17T20:57:50.038Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 2
+        },
+        "shots": {
+          "home": 9,
+          "away": 4
+        },
+        "possession": {
+          "home": 48.4,
+          "away": 51.6
+        },
+        "passes": {
+          "home": 219,
+          "away": 233
+        },
+        "fouls": {
+          "home": 6,
+          "away": 5
+        },
+        "corners": {
+          "home": 3,
+          "away": 1
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49540529",
+          "minute": "12",
+          "period": 1,
+          "team": "England",
+          "player": "Harry Kane",
+          "assist": "",
+          "penalty": true,
+          "ownGoal": false,
+          "text": "Goal! England 1, Croatia 0. Harry Kane (England) converts the penalty with a right footed shot to the bottom right corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49540900",
+          "minute": "36",
+          "period": 1,
+          "team": "Croatia",
+          "player": "Martin Baturina",
+          "assist": "Petar Sucic",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! England 1, Croatia 1. Martin Baturina (Croatia) right footed shot from outside the box to the top left corner. Assisted by Petar Sucic.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49540988",
+          "minute": "42",
+          "period": 1,
+          "team": "England",
+          "player": "Harry Kane",
+          "assist": "Declan Rice",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! England 2, Croatia 1. Harry Kane (England) header from the centre of the box to the bottom left corner. Assisted by Declan Rice with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49541091",
+          "minute": "45'+5",
+          "period": 1,
+          "team": "Croatia",
+          "player": "Petar Musa",
+          "assist": "Ivan Perisic",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! England 2, Croatia 2. Petar Musa (Croatia) right footed shot from the centre of the box to the centre of the goal. Assisted by Ivan Perisic with a headed pass.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49540900",
+          "minute": "36",
+          "period": 1,
+          "team": "Croatia",
+          "player": "Petar Sucic",
+          "goal": "Martin Baturina",
+          "source": "ESPN"
+        },
+        {
+          "id": "49540988",
+          "minute": "42",
+          "period": 1,
+          "team": "England",
+          "player": "Declan Rice",
+          "goal": "Harry Kane",
+          "source": "ESPN"
+        },
+        {
+          "id": "49541091",
+          "minute": "45'+5",
+          "period": 1,
+          "team": "Croatia",
+          "player": "Ivan Perisic",
+          "goal": "Petar Musa",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "England",
+          "name": "Jordan Pickford",
+          "shortName": "J. Pickford",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Croatia",
+          "name": "Dominik Livakovic",
+          "shortName": "D. Livakovic",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 33.3,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
         }
       ]
     }
