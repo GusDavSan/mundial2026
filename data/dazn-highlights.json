@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T05:17:18.463Z",
+  "updated": "2026-06-17T06:05:53.088Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -234,6 +234,19 @@
       "thumbnail": "https://i.ytimg.com/vi/69vqW26k1xQ/hqdefault.jpg",
       "videoId": "69vqW26k1xQ",
       "publishedAt": "2026-06-17T02:00:04Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 19,
+      "date": "2026-06-17",
+      "home": "Argentina",
+      "away": "Algeria",
+      "source": "DAZN ES",
+      "title": "Argentina vs Argelia (3-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Sg4kke5zSaI",
+      "thumbnail": "https://i.ytimg.com/vi/Sg4kke5zSaI/hqdefault.jpg",
+      "videoId": "Sg4kke5zSaI",
+      "publishedAt": "2026-06-17T05:33:07Z",
       "confidence": 20
     }
   ]
