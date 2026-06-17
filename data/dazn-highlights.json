@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T20:31:03.644Z",
+  "updated": "2026-06-17T22:15:45.416Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -268,11 +268,24 @@
       "home": "Portugal",
       "away": "DR Congo",
       "source": "DAZN ES",
-      "title": "Sorpresa en el debut de Cristiano Ronaldo😳😳Resumen de un minuto en el empate de Portugal y RD Congo🔥",
-      "url": "https://www.youtube.com/watch?v=Vcnpx2_E3Kk",
-      "thumbnail": "https://i3.ytimg.com/vi/Vcnpx2_E3Kk/hqdefault.jpg",
-      "videoId": "Vcnpx2_E3Kk",
-      "publishedAt": "2026-06-17T19:02:56+00:00",
+      "title": "Portugal vs RD Congo (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=mew5dE7rxls",
+      "thumbnail": "https://i2.ytimg.com/vi/mew5dE7rxls/hqdefault.jpg",
+      "videoId": "mew5dE7rxls",
+      "publishedAt": "2026-06-17T21:00:39+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 22,
+      "date": "2026-06-17",
+      "home": "England",
+      "away": "Croatia",
+      "source": "DAZN ES",
+      "title": "QUÉ AUTÉNTICO PARTIDAZO. El mejor resumen del Inglaterra - Croacia, en 1 minuto 🔥⚽",
+      "url": "https://www.youtube.com/watch?v=gfk0IbLuI3k",
+      "thumbnail": "https://i4.ytimg.com/vi/gfk0IbLuI3k/hqdefault.jpg",
+      "videoId": "gfk0IbLuI3k",
+      "publishedAt": "2026-06-17T22:13:11+00:00",
       "confidence": 17
     }
   ]
