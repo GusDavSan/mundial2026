@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T15:53:21.136Z",
+  "updated": "2026-06-18T18:36:17.022Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -269,10 +269,10 @@
       "away": "DR Congo",
       "source": "DAZN ES",
       "title": "Portugal vs RD Congo (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=mew5dE7rxls",
-      "thumbnail": "https://i2.ytimg.com/vi/mew5dE7rxls/hqdefault.jpg",
-      "videoId": "mew5dE7rxls",
-      "publishedAt": "2026-06-17T21:00:39+00:00",
+      "url": "https://www.youtube.com/watch?v=XF2JxCylSnI",
+      "thumbnail": "https://i.ytimg.com/vi/XF2JxCylSnI/hqdefault.jpg",
+      "videoId": "XF2JxCylSnI",
+      "publishedAt": "2026-06-17T21:00:18Z",
       "confidence": 20
     },
     {
@@ -313,6 +313,19 @@
       "videoId": "umYT9KIoVww",
       "publishedAt": "2026-06-18T05:57:26Z",
       "confidence": 20
+    },
+    {
+      "matchId": 25,
+      "date": "2026-06-18",
+      "home": "Czechia",
+      "away": "South Africa",
+      "source": "DAZN ES",
+      "title": "El mejor resumen del empate entre Chequia y Sudáfrica, en 1 MINUTO 🔥",
+      "url": "https://www.youtube.com/watch?v=e7Lppu3FIBM",
+      "thumbnail": "https://i.ytimg.com/vi/e7Lppu3FIBM/hqdefault.jpg",
+      "videoId": "e7Lppu3FIBM",
+      "publishedAt": "2026-06-18T18:29:33Z",
+      "confidence": 17
     }
   ]
 }
