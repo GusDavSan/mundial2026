@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:36:17.022Z",
+  "updated": "2026-06-18T21:29:08.413Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -8,12 +8,12 @@
       "home": "Mexico",
       "away": "South Africa",
       "source": "DAZN ES",
-      "title": "México vs Sudáfrica (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=x83kn09PJKg",
-      "thumbnail": "https://i.ytimg.com/vi/x83kn09PJKg/hqdefault.jpg",
-      "videoId": "x83kn09PJKg",
-      "publishedAt": "2026-06-11T23:00:03Z",
-      "confidence": 20
+      "title": "República Checa vs Sudáfrica  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BKu-TPhgi3A",
+      "thumbnail": "https://i3.ytimg.com/vi/BKu-TPhgi3A/hqdefault.jpg",
+      "videoId": "BKu-TPhgi3A",
+      "publishedAt": "2026-06-18T19:58:05+00:00",
+      "confidence": 12
     },
     {
       "matchId": 2,
@@ -21,12 +21,12 @@
       "home": "South Korea",
       "away": "Czechia",
       "source": "DAZN ES",
-      "title": "República de Corea vs Chequia (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=9ojbKBxau9Q",
-      "thumbnail": "https://i.ytimg.com/vi/9ojbKBxau9Q/hqdefault.jpg",
-      "videoId": "9ojbKBxau9Q",
-      "publishedAt": "2026-06-12T06:08:49Z",
-      "confidence": 20
+      "title": "República Checa vs Sudáfrica  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BKu-TPhgi3A",
+      "thumbnail": "https://i3.ytimg.com/vi/BKu-TPhgi3A/hqdefault.jpg",
+      "videoId": "BKu-TPhgi3A",
+      "publishedAt": "2026-06-18T19:58:05+00:00",
+      "confidence": 12
     },
     {
       "matchId": 3,
@@ -282,10 +282,10 @@
       "away": "Croatia",
       "source": "DAZN ES",
       "title": "Inglaterra vs Croacia (4-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=o2DRSjDZhkQ",
-      "thumbnail": "https://i4.ytimg.com/vi/o2DRSjDZhkQ/hqdefault.jpg",
-      "videoId": "o2DRSjDZhkQ",
-      "publishedAt": "2026-06-18T00:00:12+00:00",
+      "url": "https://www.youtube.com/watch?v=KUlR2yCkl24",
+      "thumbnail": "https://i.ytimg.com/vi/KUlR2yCkl24/hqdefault.jpg",
+      "videoId": "KUlR2yCkl24",
+      "publishedAt": "2026-06-18T00:00:12Z",
       "confidence": 20
     },
     {
@@ -295,10 +295,10 @@
       "away": "Panama",
       "source": "DAZN ES",
       "title": "Ghana vs Panamá (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=VY3mVP1Ngko",
-      "thumbnail": "https://i3.ytimg.com/vi/VY3mVP1Ngko/hqdefault.jpg",
-      "videoId": "VY3mVP1Ngko",
-      "publishedAt": "2026-06-18T03:13:58+00:00",
+      "url": "https://www.youtube.com/watch?v=Wt_tf-MknPo",
+      "thumbnail": "https://i.ytimg.com/vi/Wt_tf-MknPo/hqdefault.jpg",
+      "videoId": "Wt_tf-MknPo",
+      "publishedAt": "2026-06-18T03:12:49Z",
       "confidence": 20
     },
     {
@@ -320,12 +320,12 @@
       "home": "Czechia",
       "away": "South Africa",
       "source": "DAZN ES",
-      "title": "El mejor resumen del empate entre Chequia y Sudáfrica, en 1 MINUTO 🔥",
-      "url": "https://www.youtube.com/watch?v=e7Lppu3FIBM",
-      "thumbnail": "https://i.ytimg.com/vi/e7Lppu3FIBM/hqdefault.jpg",
-      "videoId": "e7Lppu3FIBM",
-      "publishedAt": "2026-06-18T18:29:33Z",
-      "confidence": 17
+      "title": "República Checa vs Sudáfrica  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BKu-TPhgi3A",
+      "thumbnail": "https://i3.ytimg.com/vi/BKu-TPhgi3A/hqdefault.jpg",
+      "videoId": "BKu-TPhgi3A",
+      "publishedAt": "2026-06-18T19:58:05+00:00",
+      "confidence": 20
     }
   ]
 }
