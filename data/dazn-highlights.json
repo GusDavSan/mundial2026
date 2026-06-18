@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T22:53:13.220Z",
+  "updated": "2026-06-18T01:43:11.427Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -281,12 +281,25 @@
       "home": "England",
       "away": "Croatia",
       "source": "DAZN ES",
-      "title": "QUÉ AUTÉNTICO PARTIDAZO. El mejor resumen del Inglaterra - Croacia, en 1 minuto 🔥⚽",
-      "url": "https://www.youtube.com/watch?v=gfk0IbLuI3k",
-      "thumbnail": "https://i4.ytimg.com/vi/gfk0IbLuI3k/hqdefault.jpg",
-      "videoId": "gfk0IbLuI3k",
-      "publishedAt": "2026-06-17T22:13:11+00:00",
-      "confidence": 17
+      "title": "Inglaterra vs Croacia (4-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=o2DRSjDZhkQ",
+      "thumbnail": "https://i4.ytimg.com/vi/o2DRSjDZhkQ/hqdefault.jpg",
+      "videoId": "o2DRSjDZhkQ",
+      "publishedAt": "2026-06-18T00:00:12+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 23,
+      "date": "2026-06-17",
+      "home": "Ghana",
+      "away": "Panama",
+      "source": "DAZN ES",
+      "title": "Lo típico en un minuto 16 de un Ghana - Panamá 🇬🇭 🇵🇦 #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=43zL75XCev8",
+      "thumbnail": "https://i.ytimg.com/vi/43zL75XCev8/hqdefault.jpg",
+      "videoId": "43zL75XCev8",
+      "publishedAt": "2026-06-17T23:35:22Z",
+      "confidence": 16
     }
   ]
 }
