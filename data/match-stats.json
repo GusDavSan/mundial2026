@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T00:22:51.011Z",
+  "updated": "2026-06-18T05:20:46.439Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9,7 +9,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -134,7 +134,7 @@
       "homeTeam": "South Korea",
       "awayTeam": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -276,7 +276,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -397,7 +397,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2720,7 +2720,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2841,7 +2841,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -2856,8 +2856,8 @@
           "away": 48.3
         },
         "passes": {
-          "home": 473,
-          "away": 442
+          "home": 474,
+          "away": 443
         },
         "fouls": {
           "home": 10,
@@ -3033,55 +3033,78 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-18T00:22:51.011Z",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 1
+          "home": 2,
+          "away": 4
         },
         "shots": {
-          "home": 3,
-          "away": 6
+          "home": 8,
+          "away": 11
         },
         "possession": {
-          "home": 34.1,
-          "away": 65.9
+          "home": 37.9,
+          "away": 62.1
         },
         "passes": {
-          "home": 218,
-          "away": 424
+          "home": 351,
+          "away": 583
         },
         "fouls": {
-          "home": 4,
-          "away": 8
+          "home": 9,
+          "away": 11
         },
         "corners": {
-          "home": 0,
-          "away": 1
+          "home": 2,
+          "away": 2
         },
         "saves": {
-          "home": 1,
-          "away": 1
+          "home": 4,
+          "away": 2
         },
         "offsides": {
-          "home": 3,
+          "home": 4,
           "away": 1
         },
         "yellowCards": {
           "home": 1,
-          "away": 0
+          "away": 2
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49543397",
+          "minute": "90'+5",
+          "period": 2,
+          "team": "Ghana",
+          "player": "Caleb Yirenkyi",
+          "assist": "Brandon Thomas-Asante",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Ghana 1, Panama 0. Caleb Yirenkyi (Ghana) right footed shot from very close range to the top right corner following a fast break.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49543397",
+          "minute": "90'+5",
+          "period": 2,
+          "team": "Ghana",
+          "player": "Brandon Thomas-Asante",
+          "goal": "Caleb Yirenkyi",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
           "team": "Ghana",
-          "name": "Lawrence Ati Zigi",
-          "shortName": "L. Zigi",
-          "number": "1",
-          "saves": 1,
+          "name": "Benjamin Asare",
+          "shortName": "B. Asare",
+          "number": "16",
+          "saves": 3,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
@@ -3094,10 +3117,164 @@
           "name": "Orlando Mosquera",
           "shortName": "O. Mosquera",
           "number": "22",
+          "saves": 2,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 24,
+      "espnEventId": "760436",
+      "date": "2026-06-18",
+      "homeTeam": "Uzbekistan",
+      "awayTeam": "Colombia",
+      "source": "ESPN",
+      "updatedAt": "2026-06-18T05:20:46.439Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 4
+        },
+        "shots": {
+          "home": 8,
+          "away": 15
+        },
+        "possession": {
+          "home": 38.5,
+          "away": 61.5
+        },
+        "passes": {
+          "home": 318,
+          "away": 521
+        },
+        "fouls": {
+          "home": 14,
+          "away": 11
+        },
+        "corners": {
+          "home": 3,
+          "away": 4
+        },
+        "saves": {
+          "home": 1,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 3
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49544004",
+          "minute": "40",
+          "period": 1,
+          "team": "Colombia",
+          "player": "Daniel Muñoz",
+          "assist": "Luis Díaz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Uzbekistan 0, Colombia 1. Daniel Muñoz (Colombia) right footed shot from the centre of the box to the high centre of the goal. Assisted by Luis Díaz with a through ball.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49544426",
+          "minute": "60",
+          "period": 2,
+          "team": "Uzbekistan",
+          "player": "Abbosbek Fayzullaev",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Uzbekistan 1, Colombia 1. Abbosbek Fayzullaev (Uzbekistan) header from very close range to the top left corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49544478",
+          "minute": "65",
+          "period": 2,
+          "team": "Colombia",
+          "player": "Luis Díaz",
+          "assist": "Gustavo Puerta",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Uzbekistan 1, Colombia 2. Luis Díaz (Colombia) right footed shot from the centre of the box to the bottom right corner. Assisted by Gustavo Puerta.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49544854",
+          "minute": "90'+9",
+          "period": 2,
+          "team": "Colombia",
+          "player": "Jáminton Campaz",
+          "assist": "Cucho Hernández",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Uzbekistan 1, Colombia 3. Jaminton Campaz (Colombia) header from the centre of the box to the bottom left corner. Assisted by Cucho Hernández with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49544004",
+          "minute": "40",
+          "period": 1,
+          "team": "Colombia",
+          "player": "Luis Díaz",
+          "goal": "Daniel Muñoz",
+          "source": "ESPN"
+        },
+        {
+          "id": "49544478",
+          "minute": "65",
+          "period": 2,
+          "team": "Colombia",
+          "player": "Gustavo Puerta",
+          "goal": "Luis Díaz",
+          "source": "ESPN"
+        },
+        {
+          "id": "49544854",
+          "minute": "90'+9",
+          "period": 2,
+          "team": "Colombia",
+          "player": "Cucho Hernández",
+          "goal": "Jáminton Campaz",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Uzbekistan",
+          "name": "Utkir Yusupov",
+          "shortName": "U. Yusupov",
+          "number": "1",
           "saves": 1,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 25,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Colombia",
+          "name": "Camilo Vargas",
+          "shortName": "C. Vargas",
+          "number": "12",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
