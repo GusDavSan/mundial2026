@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T01:43:11.427Z",
+  "updated": "2026-06-18T05:32:08.484Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -294,12 +294,25 @@
       "home": "Ghana",
       "away": "Panama",
       "source": "DAZN ES",
-      "title": "Lo típico en un minuto 16 de un Ghana - Panamá 🇬🇭 🇵🇦 #DAZNMundial #FIFAWorldCup",
-      "url": "https://www.youtube.com/watch?v=43zL75XCev8",
-      "thumbnail": "https://i.ytimg.com/vi/43zL75XCev8/hqdefault.jpg",
-      "videoId": "43zL75XCev8",
-      "publishedAt": "2026-06-17T23:35:22Z",
-      "confidence": 16
+      "title": "Ghana vs Panamá (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=VY3mVP1Ngko",
+      "thumbnail": "https://i3.ytimg.com/vi/VY3mVP1Ngko/hqdefault.jpg",
+      "videoId": "VY3mVP1Ngko",
+      "publishedAt": "2026-06-18T03:13:58+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 24,
+      "date": "2026-06-18",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "source": "DAZN ES",
+      "title": "GOLES Y EMOCIÓN HASTA EL FINAL Lo mejor del Uzbekistán - Colombia en un minuto #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=j9m9ESULrbU",
+      "thumbnail": "https://i.ytimg.com/vi/j9m9ESULrbU/hqdefault.jpg",
+      "videoId": "j9m9ESULrbU",
+      "publishedAt": "2026-06-18T04:23:47Z",
+      "confidence": 19
     }
   ]
 }
