@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T21:29:08.413Z",
+  "updated": "2026-06-19T00:00:36.917Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -60,12 +60,12 @@
       "home": "Qatar",
       "away": "Switzerland",
       "source": "DAZN ES",
-      "title": "Catar vs Suiza (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=izVd6GibW6g",
-      "thumbnail": "https://i.ytimg.com/vi/izVd6GibW6g/hqdefault.jpg",
-      "videoId": "izVd6GibW6g",
-      "publishedAt": "2026-06-13T23:00:15Z",
-      "confidence": 20
+      "title": "Suiza vs Bosnia (4-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=06A5HPbYPD8",
+      "thumbnail": "https://i.ytimg.com/vi/06A5HPbYPD8/hqdefault.jpg",
+      "videoId": "06A5HPbYPD8",
+      "publishedAt": "2026-06-18T22:55:59Z",
+      "confidence": 12
     },
     {
       "matchId": 6,
@@ -325,6 +325,19 @@
       "thumbnail": "https://i3.ytimg.com/vi/BKu-TPhgi3A/hqdefault.jpg",
       "videoId": "BKu-TPhgi3A",
       "publishedAt": "2026-06-18T19:58:05+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 26,
+      "date": "2026-06-18",
+      "home": "Switzerland",
+      "away": "Bosnia & Herzegovina",
+      "source": "DAZN ES",
+      "title": "Suiza vs Bosnia (4-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=06A5HPbYPD8",
+      "thumbnail": "https://i.ytimg.com/vi/06A5HPbYPD8/hqdefault.jpg",
+      "videoId": "06A5HPbYPD8",
+      "publishedAt": "2026-06-18T22:55:59Z",
       "confidence": 20
     }
   ]
