@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T21:35:13.025Z",
+  "updated": "2026-06-19T23:15:20.205Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -99,12 +99,12 @@
       "home": "Australia",
       "away": "Türkiye",
       "source": "DAZN ES",
-      "title": "Australia vs Turquía (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=QrMHQu2PDHE",
-      "thumbnail": "https://i.ytimg.com/vi/QrMHQu2PDHE/hqdefault.jpg",
-      "videoId": "QrMHQu2PDHE",
-      "publishedAt": "2026-06-14T10:56:13Z",
-      "confidence": 20
+      "title": "Estados Unidos vs Australia  (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=rA2ACzjjnKU",
+      "thumbnail": "https://i.ytimg.com/vi/rA2ACzjjnKU/hqdefault.jpg",
+      "videoId": "rA2ACzjjnKU",
+      "publishedAt": "2026-06-19T22:54:18Z",
+      "confidence": 12
     },
     {
       "matchId": 9,
@@ -364,6 +364,19 @@
       "thumbnail": "https://i1.ytimg.com/vi/tewc_d90ZqM/hqdefault.jpg",
       "videoId": "tewc_d90ZqM",
       "publishedAt": "2026-06-19T05:16:12+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 29,
+      "date": "2026-06-19",
+      "home": "United States",
+      "away": "Australia",
+      "source": "DAZN ES",
+      "title": "Estados Unidos vs Australia  (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=rA2ACzjjnKU",
+      "thumbnail": "https://i.ytimg.com/vi/rA2ACzjjnKU/hqdefault.jpg",
+      "videoId": "rA2ACzjjnKU",
+      "publishedAt": "2026-06-19T22:54:18Z",
       "confidence": 20
     }
   ]
