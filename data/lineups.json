@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T20:18:16.906Z",
+  "updated": "2026-06-19T21:37:31.403Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -1656,7 +1656,7 @@
       "homeTeam": "United States",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -2205,7 +2205,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Qatar",
         "espnTeam": "Qatar",
@@ -2754,7 +2754,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -3293,7 +3293,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Haiti",
         "espnTeam": "Haiti",
@@ -3842,7 +3842,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Australia",
         "espnTeam": "Australia",
@@ -4391,7 +4391,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Germany",
         "espnTeam": "Germany",
@@ -4940,7 +4940,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Netherlands",
         "espnTeam": "Netherlands",
@@ -5489,7 +5489,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Ivory Coast",
         "espnTeam": "Ivory Coast",
@@ -6038,7 +6038,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Sweden",
         "espnTeam": "Sweden",
@@ -6587,7 +6587,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -7136,7 +7136,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Belgium",
         "espnTeam": "Belgium",
@@ -7675,7 +7675,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Saudi Arabia",
         "espnTeam": "Saudi Arabia",
@@ -8204,7 +8204,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Iran",
         "espnTeam": "Iran",
@@ -8743,7 +8743,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -9292,7 +9292,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Iraq",
         "espnTeam": "Iraq",
@@ -9841,7 +9841,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -10390,7 +10390,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Austria",
         "espnTeam": "Austria",
@@ -10939,7 +10939,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -11488,7 +11488,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -12027,7 +12027,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Ghana",
         "espnTeam": "Ghana",
@@ -12566,7 +12566,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Uzbekistan",
         "espnTeam": "Uzbekistan",
@@ -13115,7 +13115,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Czechia",
         "espnTeam": "Czechia",
@@ -13634,7 +13634,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -14173,7 +14173,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -14712,7 +14712,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -15251,7 +15251,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-19T20:18:16.906Z",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -15316,7 +15316,7 @@
             "position": "Center Right Midfielder",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Tyler Adams",
@@ -15336,7 +15336,7 @@
             "position": "Left Midfielder",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Sergiño Dest",
@@ -15346,7 +15346,7 @@
             "position": "Right Midfielder",
             "formationPlace": "2",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Ricardo Pepi",
@@ -15356,7 +15356,7 @@
             "position": "Center Left Forward",
             "formationPlace": "9",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Folarin Balogun",
@@ -15366,7 +15366,7 @@
             "position": "Center Right Forward",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -15377,7 +15377,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -15417,7 +15417,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -15447,7 +15447,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -15477,7 +15477,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -15487,7 +15487,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -15586,7 +15586,7 @@
             "position": "Center Left Midfielder",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Aiden O'Neill",
@@ -15616,7 +15616,7 @@
             "position": "Right Midfielder",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Mohamed Toure",
@@ -15757,7 +15757,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -15777,8 +15777,557 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
+          }
+        ]
+      }
+    },
+    {
+      "matchId": 30,
+      "espnEventId": "760445",
+      "date": "2026-06-19",
+      "homeTeam": "Scotland",
+      "awayTeam": "Morocco",
+      "source": "ESPN",
+      "updatedAt": "2026-06-19T21:37:31.403Z",
+      "home": {
+        "team": "Scotland",
+        "espnTeam": "Scotland",
+        "formation": "3-4-2-1",
+        "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
+        "starters": [
+          {
+            "name": "Angus Gunn",
+            "shortName": "A. Gunn",
+            "num": "1",
+            "pos": "G",
+            "position": "Goalkeeper",
+            "formationPlace": "1",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Grant Hanley",
+            "shortName": "G. Hanley",
+            "num": "5",
+            "pos": "D",
+            "position": "Defender",
+            "formationPlace": "6",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Jack Hendry",
+            "shortName": "J. Hendry",
+            "num": "13",
+            "pos": "D",
+            "position": "Defender",
+            "formationPlace": "5",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Kieran Tierney",
+            "shortName": "K. Tierney",
+            "num": "6",
+            "pos": "D",
+            "position": "Defender",
+            "formationPlace": "4",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "John McGinn",
+            "shortName": "J. McGinn",
+            "num": "7",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "10",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Nathan Patterson",
+            "shortName": "N. Patterson",
+            "num": "22",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "2",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Andy Robertson",
+            "shortName": "A. Robertson",
+            "num": "3",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "3",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Lewis Ferguson",
+            "shortName": "L. Ferguson",
+            "num": "19",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "8",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Scott McTominay",
+            "shortName": "S. McTominay",
+            "num": "4",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "7",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ryan Christie",
+            "shortName": "R. Christie",
+            "num": "11",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "11",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ché Adams",
+            "shortName": "C. Adams",
+            "num": "10",
+            "pos": "F",
+            "position": "Forward",
+            "formationPlace": "9",
+            "subbedIn": true,
+            "subbedOut": true
+          }
+        ],
+        "bench": [
+          {
+            "name": "Aaron Hickey",
+            "shortName": "A. Hickey",
+            "num": "2",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Anthony Ralston",
+            "shortName": "A. Ralston",
+            "num": "24",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "John Souttar",
+            "shortName": "J. Souttar",
+            "num": "15",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Craig Gordon",
+            "shortName": "C. Gordon",
+            "num": "21",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Tyler Fletcher",
+            "shortName": "T. Fletcher",
+            "num": "8",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Kenny McLean",
+            "shortName": "K. McLean",
+            "num": "23",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Scott McKenna",
+            "shortName": "S. McKenna",
+            "num": "26",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Liam Kelly",
+            "shortName": "L. Kelly",
+            "num": "12",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ben Gannon-Doak",
+            "shortName": "B. Gannon-Doak",
+            "num": "17",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "George Hirst",
+            "shortName": "G. Hirst",
+            "num": "18",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ross Stewart",
+            "shortName": "R. Stewart",
+            "num": "14",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Lyndon Dykes",
+            "shortName": "L. Dykes",
+            "num": "9",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Dominic Hyam",
+            "shortName": "D. Hyam",
+            "num": "16",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Lawrence Shankland",
+            "shortName": "L. Shankland",
+            "num": "20",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Findlay Curtis",
+            "shortName": "F. Curtis",
+            "num": "25",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          }
+        ]
+      },
+      "away": {
+        "team": "Morocco",
+        "espnTeam": "Morocco",
+        "formation": "4-2-3-1",
+        "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+        "starters": [
+          {
+            "name": "Yassine Bounou",
+            "shortName": "Y. Bounou",
+            "num": "1",
+            "pos": "G",
+            "position": "Goalkeeper",
+            "formationPlace": "1",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Issa Diop",
+            "shortName": "I. Diop",
+            "num": "14",
+            "pos": "D",
+            "position": "Defender",
+            "formationPlace": "5",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Achraf Hakimi",
+            "shortName": "A. Hakimi",
+            "num": "2",
+            "pos": "D",
+            "position": "Defender",
+            "formationPlace": "2",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Chadi Riad",
+            "shortName": "C. Riad",
+            "num": "18",
+            "pos": "D",
+            "position": "Defender",
+            "formationPlace": "6",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Noussair Mazraoui",
+            "shortName": "N. Mazraoui",
+            "num": "3",
+            "pos": "D",
+            "position": "Defender",
+            "formationPlace": "3",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ayyoub Bouaddi",
+            "shortName": "A. Bouaddi",
+            "num": "6",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "4",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Brahim Díaz",
+            "shortName": "B. Díaz",
+            "num": "10",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "7",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Azzedine Ounahi",
+            "shortName": "A. Ounahi",
+            "num": "8",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "10",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Neil El Aynaoui",
+            "shortName": "N. El Aynaoui",
+            "num": "24",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "8",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Bilal El Khannouss",
+            "shortName": "B. El Khannouss",
+            "num": "23",
+            "pos": "M",
+            "position": "Midfielder",
+            "formationPlace": "11",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ismael Saibari",
+            "shortName": "I. Saibari",
+            "num": "11",
+            "pos": "F",
+            "position": "Forward",
+            "formationPlace": "9",
+            "subbedIn": true,
+            "subbedOut": true
+          }
+        ],
+        "bench": [
+          {
+            "name": "Ahmed Reda Tagnaouti",
+            "shortName": "A. Tagnaouti",
+            "num": "22",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ayoube Amaimouni",
+            "shortName": "A. Amaimouni",
+            "num": "21",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Amine Sbaï",
+            "shortName": "A. Sbaï",
+            "num": "17",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Ayoub El Kaabi",
+            "shortName": "A. El Kaabi",
+            "num": "20",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Anass Salah-Eddine",
+            "shortName": "A. Salah-Eddine",
+            "num": "26",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Munir El Kajoui",
+            "shortName": "M. El Kajoui",
+            "num": "12",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Chemsdine Talbi",
+            "shortName": "C. Talbi",
+            "num": "7",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Zakaria El Ouahdi",
+            "shortName": "Z. El Ouahdi",
+            "num": "13",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Marwane Saadane",
+            "shortName": "M. Saadane",
+            "num": "5",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Samir El Mourabet",
+            "shortName": "S. El Mourabet",
+            "num": "15",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Sofyan Amrabat",
+            "shortName": "S. Amrabat",
+            "num": "4",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Gessime Yassine",
+            "shortName": "G. Yassine",
+            "num": "16",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Redouane Halhal",
+            "shortName": "R. Halhal",
+            "num": "25",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Youssef Belammari",
+            "shortName": "Y. Belammari",
+            "num": "19",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
+          },
+          {
+            "name": "Soufiane Rahimi",
+            "shortName": "S. Rahimi",
+            "num": "9",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": true,
+            "subbedOut": true
           }
         ]
       }
