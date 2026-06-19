@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T00:00:36.917Z",
+  "updated": "2026-06-19T05:25:17.629Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -8,11 +8,11 @@
       "home": "Mexico",
       "away": "South Africa",
       "source": "DAZN ES",
-      "title": "República Checa vs Sudáfrica  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=BKu-TPhgi3A",
-      "thumbnail": "https://i3.ytimg.com/vi/BKu-TPhgi3A/hqdefault.jpg",
-      "videoId": "BKu-TPhgi3A",
-      "publishedAt": "2026-06-18T19:58:05+00:00",
+      "title": "México vs República de Corea (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=tewc_d90ZqM",
+      "thumbnail": "https://i1.ytimg.com/vi/tewc_d90ZqM/hqdefault.jpg",
+      "videoId": "tewc_d90ZqM",
+      "publishedAt": "2026-06-19T05:16:12+00:00",
       "confidence": 12
     },
     {
@@ -21,11 +21,11 @@
       "home": "South Korea",
       "away": "Czechia",
       "source": "DAZN ES",
-      "title": "República Checa vs Sudáfrica  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=BKu-TPhgi3A",
-      "thumbnail": "https://i3.ytimg.com/vi/BKu-TPhgi3A/hqdefault.jpg",
-      "videoId": "BKu-TPhgi3A",
-      "publishedAt": "2026-06-18T19:58:05+00:00",
+      "title": "México vs República de Corea (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=tewc_d90ZqM",
+      "thumbnail": "https://i1.ytimg.com/vi/tewc_d90ZqM/hqdefault.jpg",
+      "videoId": "tewc_d90ZqM",
+      "publishedAt": "2026-06-19T05:16:12+00:00",
       "confidence": 12
     },
     {
@@ -60,11 +60,11 @@
       "home": "Qatar",
       "away": "Switzerland",
       "source": "DAZN ES",
-      "title": "Suiza vs Bosnia (4-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=06A5HPbYPD8",
-      "thumbnail": "https://i.ytimg.com/vi/06A5HPbYPD8/hqdefault.jpg",
-      "videoId": "06A5HPbYPD8",
-      "publishedAt": "2026-06-18T22:55:59Z",
+      "title": "Canadá vs Qatar  (6-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=KExzdwvtk9w",
+      "thumbnail": "https://i4.ytimg.com/vi/KExzdwvtk9w/hqdefault.jpg",
+      "videoId": "KExzdwvtk9w",
+      "publishedAt": "2026-06-19T02:13:16+00:00",
       "confidence": 12
     },
     {
@@ -338,6 +338,32 @@
       "thumbnail": "https://i.ytimg.com/vi/06A5HPbYPD8/hqdefault.jpg",
       "videoId": "06A5HPbYPD8",
       "publishedAt": "2026-06-18T22:55:59Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 27,
+      "date": "2026-06-18",
+      "home": "Canada",
+      "away": "Qatar",
+      "source": "DAZN ES",
+      "title": "Canadá vs Qatar  (6-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=KExzdwvtk9w",
+      "thumbnail": "https://i4.ytimg.com/vi/KExzdwvtk9w/hqdefault.jpg",
+      "videoId": "KExzdwvtk9w",
+      "publishedAt": "2026-06-19T02:13:16+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 28,
+      "date": "2026-06-19",
+      "home": "Mexico",
+      "away": "South Korea",
+      "source": "DAZN ES",
+      "title": "México vs República de Corea (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=tewc_d90ZqM",
+      "thumbnail": "https://i1.ytimg.com/vi/tewc_d90ZqM/hqdefault.jpg",
+      "videoId": "tewc_d90ZqM",
+      "publishedAt": "2026-06-19T05:16:12+00:00",
       "confidence": 20
     }
   ]
