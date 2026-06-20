@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T06:41:22.047Z",
+  "updated": "2026-06-20T10:14:02.497Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -99,11 +99,11 @@
       "home": "Australia",
       "away": "Türkiye",
       "source": "DAZN ES",
-      "title": "Estados Unidos vs Australia (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=rA2ACzjjnKU",
-      "thumbnail": "https://i.ytimg.com/vi/rA2ACzjjnKU/hqdefault.jpg",
-      "videoId": "rA2ACzjjnKU",
-      "publishedAt": "2026-06-19T22:54:18Z",
+      "title": "Turquía vs Paraguay (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=CGz3XiceuCY",
+      "thumbnail": "https://i4.ytimg.com/vi/CGz3XiceuCY/hqdefault.jpg",
+      "videoId": "CGz3XiceuCY",
+      "publishedAt": "2026-06-20T07:57:52+00:00",
       "confidence": 12
     },
     {
@@ -411,12 +411,12 @@
       "home": "Türkiye",
       "away": "Paraguay",
       "source": "DAZN ES",
-      "title": "Lo de Iván Barton ES HISTÓRICO 😆 Momento surrealista en el Turquía vs Paraguay 😮",
-      "url": "https://www.youtube.com/watch?v=8qby_lxomB4",
-      "thumbnail": "https://i.ytimg.com/vi/8qby_lxomB4/hqdefault.jpg",
-      "videoId": "8qby_lxomB4",
-      "publishedAt": "2026-06-20T04:47:10Z",
-      "confidence": 14
+      "title": "Turquía vs Paraguay (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=CGz3XiceuCY",
+      "thumbnail": "https://i4.ytimg.com/vi/CGz3XiceuCY/hqdefault.jpg",
+      "videoId": "CGz3XiceuCY",
+      "publishedAt": "2026-06-20T07:57:52+00:00",
+      "confidence": 20
     }
   ]
 }
