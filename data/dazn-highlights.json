@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T01:32:06.926Z",
+  "updated": "2026-06-20T06:41:22.047Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -73,12 +73,12 @@
       "home": "Brazil",
       "away": "Morocco",
       "source": "DAZN ES",
-      "title": "Brasil vs Marruecos (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=dTo1wgNe3Qg",
-      "thumbnail": "https://i.ytimg.com/vi/dTo1wgNe3Qg/hqdefault.jpg",
-      "videoId": "dTo1wgNe3Qg",
-      "publishedAt": "2026-06-14T03:42:19Z",
-      "confidence": 20
+      "title": "Brasil vs Haití (3-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=46pM1jEzfPk",
+      "thumbnail": "https://i.ytimg.com/vi/46pM1jEzfPk/hqdefault.jpg",
+      "videoId": "46pM1jEzfPk",
+      "publishedAt": "2026-06-20T04:30:33Z",
+      "confidence": 12
     },
     {
       "matchId": 7,
@@ -86,12 +86,12 @@
       "home": "Haiti",
       "away": "Scotland",
       "source": "DAZN ES",
-      "title": "Haití vs Escocia (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=zYNRVDc9z_4",
-      "thumbnail": "https://i.ytimg.com/vi/zYNRVDc9z_4/hqdefault.jpg",
-      "videoId": "zYNRVDc9z_4",
-      "publishedAt": "2026-06-14T05:00:13Z",
-      "confidence": 20
+      "title": "Brasil vs Haití (3-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=46pM1jEzfPk",
+      "thumbnail": "https://i.ytimg.com/vi/46pM1jEzfPk/hqdefault.jpg",
+      "videoId": "46pM1jEzfPk",
+      "publishedAt": "2026-06-20T04:30:33Z",
+      "confidence": 12
     },
     {
       "matchId": 8,
@@ -380,16 +380,42 @@
       "confidence": 20
     },
     {
+      "matchId": 30,
+      "date": "2026-06-19",
+      "home": "Scotland",
+      "away": "Morocco",
+      "source": "DAZN ES",
+      "title": "Escocia vs Marruecos (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=0BNZuyJUHMk",
+      "thumbnail": "https://i.ytimg.com/vi/0BNZuyJUHMk/hqdefault.jpg",
+      "videoId": "0BNZuyJUHMk",
+      "publishedAt": "2026-06-20T02:00:32Z",
+      "confidence": 20
+    },
+    {
       "matchId": 31,
       "date": "2026-06-20",
       "home": "Brazil",
       "away": "Haiti",
       "source": "DAZN ES",
-      "title": "🚨🇧🇷 ¡SALTAN TODAS LAS ALARMAN EN BRASIL! 😳 Raphinha abandonó el partido contra Haití",
-      "url": "https://www.youtube.com/watch?v=5iY6jOyHpFU",
-      "thumbnail": "https://i2.ytimg.com/vi/5iY6jOyHpFU/hqdefault.jpg",
-      "videoId": "5iY6jOyHpFU",
-      "publishedAt": "2026-06-20T01:28:41+00:00",
+      "title": "Brasil vs Haití (3-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=46pM1jEzfPk",
+      "thumbnail": "https://i.ytimg.com/vi/46pM1jEzfPk/hqdefault.jpg",
+      "videoId": "46pM1jEzfPk",
+      "publishedAt": "2026-06-20T04:30:33Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 32,
+      "date": "2026-06-20",
+      "home": "Türkiye",
+      "away": "Paraguay",
+      "source": "DAZN ES",
+      "title": "Lo de Iván Barton ES HISTÓRICO 😆 Momento surrealista en el Turquía vs Paraguay 😮",
+      "url": "https://www.youtube.com/watch?v=8qby_lxomB4",
+      "thumbnail": "https://i.ytimg.com/vi/8qby_lxomB4/hqdefault.jpg",
+      "videoId": "8qby_lxomB4",
+      "publishedAt": "2026-06-20T04:47:10Z",
       "confidence": 14
     }
   ]
