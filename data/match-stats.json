@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T16:56:39.014Z",
+  "updated": "2026-06-20T18:20:42.044Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -576,7 +576,7 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -678,7 +678,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -799,7 +799,7 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -889,7 +889,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1001,7 +1001,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2720,7 +2720,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2841,7 +2841,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -3033,7 +3033,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3133,7 +3133,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3287,7 +3287,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -3399,7 +3399,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -3560,7 +3560,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -3724,7 +3724,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -3814,7 +3814,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3916,7 +3916,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4016,7 +4016,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4149,7 +4149,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-20T16:56:39.014Z",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4241,6 +4241,190 @@
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 33,
+      "espnEventId": "760447",
+      "date": "2026-06-20",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Sweden",
+      "source": "ESPN",
+      "updatedAt": "2026-06-20T18:20:42.044Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 6,
+          "away": 5
+        },
+        "shots": {
+          "home": 9,
+          "away": 12
+        },
+        "possession": {
+          "home": 55.9,
+          "away": 44.1
+        },
+        "passes": {
+          "home": 309,
+          "away": 244
+        },
+        "fouls": {
+          "home": 5,
+          "away": 6
+        },
+        "corners": {
+          "home": 1,
+          "away": 2
+        },
+        "saves": {
+          "home": 4,
+          "away": 2
+        },
+        "offsides": {
+          "home": 1,
+          "away": 3
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49561135",
+          "minute": "5",
+          "period": 1,
+          "team": "Netherlands",
+          "player": "Brian Brobbey",
+          "assist": "Cody Gakpo",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 1, Sweden 0. Brian Brobbey (Netherlands) right footed shot from very close range to the centre of the goal. Assisted by Cody Gakpo with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561282",
+          "minute": "17",
+          "period": 1,
+          "team": "Netherlands",
+          "player": "Brian Brobbey",
+          "assist": "Denzel Dumfries",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 2, Sweden 0. Brian Brobbey (Netherlands) right footed shot from very close range to the bottom left corner. Assisted by Denzel Dumfries with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561801",
+          "minute": "47",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Cody Gakpo",
+          "assist": "Denzel Dumfries",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 3, Sweden 0. Cody Gakpo (Netherlands) left footed shot from very close range to the centre of the goal. Assisted by Denzel Dumfries with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561910",
+          "minute": "54",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Cody Gakpo",
+          "assist": "Crysencio Summerville",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 4, Sweden 0. Cody Gakpo (Netherlands) right footed shot from the left side of the box to the bottom left corner. Assisted by Crysencio Summerville following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561972",
+          "minute": "59",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Anthony Elanga",
+          "assist": "Alexander Isak",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Netherlands 4, Sweden 1. Anthony Elanga (Sweden) left footed shot from the centre of the box following a fast break.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49561135",
+          "minute": "5",
+          "period": 1,
+          "team": "Netherlands",
+          "player": "Cody Gakpo",
+          "goal": "Brian Brobbey",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561282",
+          "minute": "17",
+          "period": 1,
+          "team": "Netherlands",
+          "player": "Denzel Dumfries",
+          "goal": "Brian Brobbey",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561801",
+          "minute": "47",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Denzel Dumfries",
+          "goal": "Cody Gakpo",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561910",
+          "minute": "54",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Crysencio Summerville",
+          "goal": "Cody Gakpo",
+          "source": "ESPN"
+        },
+        {
+          "id": "49561972",
+          "minute": "59",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Alexander Isak",
+          "goal": "Anthony Elanga",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Netherlands",
+          "name": "Bart Verbruggen",
+          "shortName": "B. Verbruggen",
+          "number": "1",
+          "saves": 4,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 80,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Sweden",
+          "name": "Kristoffer Nordfeldt",
+          "shortName": "K. Nordfeldt",
+          "number": "23",
+          "saves": 2,
+          "goalsAgainst": 4,
+          "cleanSheet": 0,
+          "savePct": 33.3,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
