@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T19:30:10.524Z",
+  "updated": "2026-06-20T20:42:06.483Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -164,12 +164,12 @@
       "home": "Spain",
       "away": "Cape Verde",
       "source": "DAZN ES",
-      "title": "España vs Cabo Verde (0-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=4Zbqxb3g58U",
-      "thumbnail": "https://i.ytimg.com/vi/4Zbqxb3g58U/hqdefault.jpg",
-      "videoId": "4Zbqxb3g58U",
-      "publishedAt": "2026-06-15T19:58:11Z",
-      "confidence": 20
+      "title": "¿PELIGRA ESPAÑA EN EL MUNDIAL? | VOZINHA, EL HÉROE DE CABO VERDE",
+      "url": "https://www.youtube.com/watch?v=TaUNL0eT-DE",
+      "thumbnail": "https://i.ytimg.com/vi/TaUNL0eT-DE/hqdefault.jpg",
+      "videoId": "TaUNL0eT-DE",
+      "publishedAt": "2026-06-16T12:38:22Z",
+      "confidence": 16
     },
     {
       "matchId": 14,
@@ -430,6 +430,19 @@
       "videoId": "OQlN2jA48gE",
       "publishedAt": "2026-06-20T19:18:32Z",
       "confidence": 17
+    },
+    {
+      "matchId": 34,
+      "date": "2026-06-20",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "source": "DAZN ES",
+      "title": "COMO ELEFANTE EN CACHARRERÍA🐘 Kessié y Costa de Marfil para la campanada ante Alemania #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=LqRbEn5XDx0",
+      "thumbnail": "https://i.ytimg.com/vi/LqRbEn5XDx0/hqdefault.jpg",
+      "videoId": "LqRbEn5XDx0",
+      "publishedAt": "2026-06-20T20:41:17Z",
+      "confidence": 16
     }
   ]
 }
