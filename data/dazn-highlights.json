@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T23:15:20.205Z",
+  "updated": "2026-06-20T01:32:06.926Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -99,7 +99,7 @@
       "home": "Australia",
       "away": "Türkiye",
       "source": "DAZN ES",
-      "title": "Estados Unidos vs Australia  (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "title": "Estados Unidos vs Australia (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
       "url": "https://www.youtube.com/watch?v=rA2ACzjjnKU",
       "thumbnail": "https://i.ytimg.com/vi/rA2ACzjjnKU/hqdefault.jpg",
       "videoId": "rA2ACzjjnKU",
@@ -372,12 +372,25 @@
       "home": "United States",
       "away": "Australia",
       "source": "DAZN ES",
-      "title": "Estados Unidos vs Australia  (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "title": "Estados Unidos vs Australia (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
       "url": "https://www.youtube.com/watch?v=rA2ACzjjnKU",
       "thumbnail": "https://i.ytimg.com/vi/rA2ACzjjnKU/hqdefault.jpg",
       "videoId": "rA2ACzjjnKU",
       "publishedAt": "2026-06-19T22:54:18Z",
       "confidence": 20
+    },
+    {
+      "matchId": 31,
+      "date": "2026-06-20",
+      "home": "Brazil",
+      "away": "Haiti",
+      "source": "DAZN ES",
+      "title": "🚨🇧🇷 ¡SALTAN TODAS LAS ALARMAN EN BRASIL! 😳 Raphinha abandonó el partido contra Haití",
+      "url": "https://www.youtube.com/watch?v=5iY6jOyHpFU",
+      "thumbnail": "https://i2.ytimg.com/vi/5iY6jOyHpFU/hqdefault.jpg",
+      "videoId": "5iY6jOyHpFU",
+      "publishedAt": "2026-06-20T01:28:41+00:00",
+      "confidence": 14
     }
   ]
 }
