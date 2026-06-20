@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T20:42:06.483Z",
+  "updated": "2026-06-20T22:35:25.939Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -125,12 +125,12 @@
       "home": "Netherlands",
       "away": "Japan",
       "source": "DAZN ES",
-      "title": "Países Bajos vs Japón (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=rmit7fK16AQ",
-      "thumbnail": "https://i.ytimg.com/vi/rmit7fK16AQ/hqdefault.jpg",
-      "videoId": "rmit7fK16AQ",
-      "publishedAt": "2026-06-15T00:00:00Z",
-      "confidence": 20
+      "title": "Países Bajos vs Suecia (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1b6ZGaqWr28",
+      "thumbnail": "https://i2.ytimg.com/vi/1b6ZGaqWr28/hqdefault.jpg",
+      "videoId": "1b6ZGaqWr28",
+      "publishedAt": "2026-06-20T21:00:30+00:00",
+      "confidence": 12
     },
     {
       "matchId": 11,
@@ -151,12 +151,12 @@
       "home": "Sweden",
       "away": "Tunisia",
       "source": "DAZN ES",
-      "title": "Suecia vs Túnez (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=dWEZs97hXaw",
-      "thumbnail": "https://i.ytimg.com/vi/dWEZs97hXaw/hqdefault.jpg",
-      "videoId": "dWEZs97hXaw",
-      "publishedAt": "2026-06-15T06:02:49Z",
-      "confidence": 20
+      "title": "Países Bajos vs Suecia (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1b6ZGaqWr28",
+      "thumbnail": "https://i2.ytimg.com/vi/1b6ZGaqWr28/hqdefault.jpg",
+      "videoId": "1b6ZGaqWr28",
+      "publishedAt": "2026-06-20T21:00:30+00:00",
+      "confidence": 12
     },
     {
       "matchId": 13,
@@ -424,12 +424,12 @@
       "home": "Netherlands",
       "away": "Sweden",
       "source": "DAZN ES",
-      "title": "APISONADORA ORANGE 🟠El mejor resumen del Países Bajos 🆚 Suecia en 1 minuto 🔥🇳🇱🇸🇪",
-      "url": "https://www.youtube.com/watch?v=OQlN2jA48gE",
-      "thumbnail": "https://i.ytimg.com/vi/OQlN2jA48gE/hqdefault.jpg",
-      "videoId": "OQlN2jA48gE",
-      "publishedAt": "2026-06-20T19:18:32Z",
-      "confidence": 17
+      "title": "Países Bajos vs Suecia (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1b6ZGaqWr28",
+      "thumbnail": "https://i2.ytimg.com/vi/1b6ZGaqWr28/hqdefault.jpg",
+      "videoId": "1b6ZGaqWr28",
+      "publishedAt": "2026-06-20T21:00:30+00:00",
+      "confidence": 20
     },
     {
       "matchId": 34,
