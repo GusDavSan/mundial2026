@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T18:45:47.349Z",
+  "updated": "2026-06-20T19:30:10.524Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -417,6 +417,19 @@
       "videoId": "zqiyUj-iwG0",
       "publishedAt": "2026-06-20T07:55:05Z",
       "confidence": 20
+    },
+    {
+      "matchId": 33,
+      "date": "2026-06-20",
+      "home": "Netherlands",
+      "away": "Sweden",
+      "source": "DAZN ES",
+      "title": "APISONADORA ORANGE 🟠El mejor resumen del Países Bajos 🆚 Suecia en 1 minuto 🔥🇳🇱🇸🇪",
+      "url": "https://www.youtube.com/watch?v=OQlN2jA48gE",
+      "thumbnail": "https://i.ytimg.com/vi/OQlN2jA48gE/hqdefault.jpg",
+      "videoId": "OQlN2jA48gE",
+      "publishedAt": "2026-06-20T19:18:32Z",
+      "confidence": 17
     }
   ]
 }
