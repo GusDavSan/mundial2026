@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T17:52:55.729Z",
+  "updated": "2026-06-21T20:03:17.470Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -164,12 +164,12 @@
       "home": "Spain",
       "away": "Cape Verde",
       "source": "DAZN ES",
-      "title": "¿PELIGRA ESPAÑA EN EL MUNDIAL? | VOZINHA, EL HÉROE DE CABO VERDE",
-      "url": "https://www.youtube.com/watch?v=TaUNL0eT-DE",
-      "thumbnail": "https://i.ytimg.com/vi/TaUNL0eT-DE/hqdefault.jpg",
-      "videoId": "TaUNL0eT-DE",
-      "publishedAt": "2026-06-16T12:38:22Z",
-      "confidence": 16
+      "title": "España vs Arabia Saudí (4-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=ButTe5wlnNE",
+      "thumbnail": "https://i.ytimg.com/vi/ButTe5wlnNE/hqdefault.jpg",
+      "videoId": "ButTe5wlnNE",
+      "publishedAt": "2026-06-21T20:00:36Z",
+      "confidence": 12
     },
     {
       "matchId": 14,
@@ -190,12 +190,12 @@
       "home": "Saudi Arabia",
       "away": "Uruguay",
       "source": "DAZN ES",
-      "title": "Arabia Saudí vs Uruguay (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=NfOeo5KLvis",
-      "thumbnail": "https://i.ytimg.com/vi/NfOeo5KLvis/hqdefault.jpg",
-      "videoId": "NfOeo5KLvis",
-      "publishedAt": "2026-06-16T02:13:16Z",
-      "confidence": 20
+      "title": "España vs Arabia Saudí (4-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=ButTe5wlnNE",
+      "thumbnail": "https://i.ytimg.com/vi/ButTe5wlnNE/hqdefault.jpg",
+      "videoId": "ButTe5wlnNE",
+      "publishedAt": "2026-06-21T20:00:36Z",
+      "confidence": 12
     },
     {
       "matchId": 16,
@@ -468,6 +468,19 @@
       "thumbnail": "https://i.ytimg.com/vi/gHFv8WJNEBI/hqdefault.jpg",
       "videoId": "gHFv8WJNEBI",
       "publishedAt": "2026-06-21T08:00:36Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 37,
+      "date": "2026-06-21",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "source": "DAZN ES",
+      "title": "España vs Arabia Saudí (4-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=ButTe5wlnNE",
+      "thumbnail": "https://i.ytimg.com/vi/ButTe5wlnNE/hqdefault.jpg",
+      "videoId": "ButTe5wlnNE",
+      "publishedAt": "2026-06-21T20:00:36Z",
       "confidence": 20
     }
   ]
