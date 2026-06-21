@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T07:09:10.467Z",
+  "updated": "2026-06-21T10:47:11.139Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -125,11 +125,11 @@
       "home": "Netherlands",
       "away": "Japan",
       "source": "DAZN ES",
-      "title": "Países Bajos vs Suecia (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=1b6ZGaqWr28",
-      "thumbnail": "https://i2.ytimg.com/vi/1b6ZGaqWr28/hqdefault.jpg",
-      "videoId": "1b6ZGaqWr28",
-      "publishedAt": "2026-06-20T21:00:30+00:00",
+      "title": "Túnez vs Japón (0-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=gHFv8WJNEBI",
+      "thumbnail": "https://i.ytimg.com/vi/gHFv8WJNEBI/hqdefault.jpg",
+      "videoId": "gHFv8WJNEBI",
+      "publishedAt": "2026-06-21T08:00:36Z",
       "confidence": 12
     },
     {
@@ -151,11 +151,11 @@
       "home": "Sweden",
       "away": "Tunisia",
       "source": "DAZN ES",
-      "title": "Países Bajos vs Suecia (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=1b6ZGaqWr28",
-      "thumbnail": "https://i2.ytimg.com/vi/1b6ZGaqWr28/hqdefault.jpg",
-      "videoId": "1b6ZGaqWr28",
-      "publishedAt": "2026-06-20T21:00:30+00:00",
+      "title": "Túnez vs Japón (0-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=gHFv8WJNEBI",
+      "thumbnail": "https://i.ytimg.com/vi/gHFv8WJNEBI/hqdefault.jpg",
+      "videoId": "gHFv8WJNEBI",
+      "publishedAt": "2026-06-21T08:00:36Z",
       "confidence": 12
     },
     {
@@ -456,6 +456,19 @@
       "videoId": "KvQHMje4jNE",
       "publishedAt": "2026-06-21T06:03:21+00:00",
       "confidence": 14
+    },
+    {
+      "matchId": 36,
+      "date": "2026-06-21",
+      "home": "Tunisia",
+      "away": "Japan",
+      "source": "DAZN ES",
+      "title": "Túnez vs Japón (0-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=gHFv8WJNEBI",
+      "thumbnail": "https://i.ytimg.com/vi/gHFv8WJNEBI/hqdefault.jpg",
+      "videoId": "gHFv8WJNEBI",
+      "publishedAt": "2026-06-21T08:00:36Z",
+      "confidence": 20
     }
   ]
 }
