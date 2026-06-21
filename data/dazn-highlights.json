@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T22:35:25.939Z",
+  "updated": "2026-06-21T01:39:59.988Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -112,12 +112,12 @@
       "home": "Germany",
       "away": "Curaçao",
       "source": "DAZN ES",
-      "title": "Alemania vs Curazao (7-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=BjeaepHDZcM",
-      "thumbnail": "https://i.ytimg.com/vi/BjeaepHDZcM/hqdefault.jpg",
-      "videoId": "BjeaepHDZcM",
-      "publishedAt": "2026-06-14T21:00:26Z",
-      "confidence": 14
+      "title": "Alemania vs Costa de Marfil (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=-l9V2Lgb2hw",
+      "thumbnail": "https://i.ytimg.com/vi/-l9V2Lgb2hw/hqdefault.jpg",
+      "videoId": "-l9V2Lgb2hw",
+      "publishedAt": "2026-06-21T00:00:33Z",
+      "confidence": 12
     },
     {
       "matchId": 10,
@@ -138,12 +138,12 @@
       "home": "Ivory Coast",
       "away": "Ecuador",
       "source": "DAZN ES",
-      "title": "Costa de Marfil vs Ecuador (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=MTCy-d68T34",
-      "thumbnail": "https://i.ytimg.com/vi/MTCy-d68T34/hqdefault.jpg",
-      "videoId": "MTCy-d68T34",
-      "publishedAt": "2026-06-15T03:00:12Z",
-      "confidence": 20
+      "title": "Alemania vs Costa de Marfil (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=-l9V2Lgb2hw",
+      "thumbnail": "https://i.ytimg.com/vi/-l9V2Lgb2hw/hqdefault.jpg",
+      "videoId": "-l9V2Lgb2hw",
+      "publishedAt": "2026-06-21T00:00:33Z",
+      "confidence": 12
     },
     {
       "matchId": 12,
@@ -437,12 +437,12 @@
       "home": "Germany",
       "away": "Ivory Coast",
       "source": "DAZN ES",
-      "title": "COMO ELEFANTE EN CACHARRERÍA🐘 Kessié y Costa de Marfil para la campanada ante Alemania #FIFAWorldCup",
-      "url": "https://www.youtube.com/watch?v=LqRbEn5XDx0",
-      "thumbnail": "https://i.ytimg.com/vi/LqRbEn5XDx0/hqdefault.jpg",
-      "videoId": "LqRbEn5XDx0",
-      "publishedAt": "2026-06-20T20:41:17Z",
-      "confidence": 16
+      "title": "Alemania vs Costa de Marfil (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=-l9V2Lgb2hw",
+      "thumbnail": "https://i.ytimg.com/vi/-l9V2Lgb2hw/hqdefault.jpg",
+      "videoId": "-l9V2Lgb2hw",
+      "publishedAt": "2026-06-21T00:00:33Z",
+      "confidence": 20
     }
   ]
 }
