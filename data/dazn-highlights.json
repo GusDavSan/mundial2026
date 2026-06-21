@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T01:39:59.988Z",
+  "updated": "2026-06-21T07:09:10.467Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -138,11 +138,11 @@
       "home": "Ivory Coast",
       "away": "Ecuador",
       "source": "DAZN ES",
-      "title": "Alemania vs Costa de Marfil (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-l9V2Lgb2hw",
-      "thumbnail": "https://i.ytimg.com/vi/-l9V2Lgb2hw/hqdefault.jpg",
-      "videoId": "-l9V2Lgb2hw",
-      "publishedAt": "2026-06-21T00:00:33Z",
+      "title": "Ecuador vs Curazao (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=KvQHMje4jNE",
+      "thumbnail": "https://i4.ytimg.com/vi/KvQHMje4jNE/hqdefault.jpg",
+      "videoId": "KvQHMje4jNE",
+      "publishedAt": "2026-06-21T06:03:21+00:00",
       "confidence": 12
     },
     {
@@ -443,6 +443,19 @@
       "videoId": "-l9V2Lgb2hw",
       "publishedAt": "2026-06-21T00:00:33Z",
       "confidence": 20
+    },
+    {
+      "matchId": 35,
+      "date": "2026-06-21",
+      "home": "Ecuador",
+      "away": "Curaçao",
+      "source": "DAZN ES",
+      "title": "Ecuador vs Curazao (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=KvQHMje4jNE",
+      "thumbnail": "https://i4.ytimg.com/vi/KvQHMje4jNE/hqdefault.jpg",
+      "videoId": "KvQHMje4jNE",
+      "publishedAt": "2026-06-21T06:03:21+00:00",
+      "confidence": 14
     }
   ]
 }
