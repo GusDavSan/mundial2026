@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T11:49:35.930Z",
+  "updated": "2026-06-21T13:27:02.545Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -3842,7 +3842,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Australia",
         "espnTeam": "Australia",
@@ -4391,7 +4391,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Germany",
         "espnTeam": "Germany",
@@ -4940,7 +4940,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Netherlands",
         "espnTeam": "Netherlands",
@@ -5489,7 +5489,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Ivory Coast",
         "espnTeam": "Ivory Coast",
@@ -6038,7 +6038,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Sweden",
         "espnTeam": "Sweden",
@@ -6587,7 +6587,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -7136,7 +7136,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Belgium",
         "espnTeam": "Belgium",
@@ -7675,7 +7675,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Saudi Arabia",
         "espnTeam": "Saudi Arabia",
@@ -8204,7 +8204,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Iran",
         "espnTeam": "Iran",
@@ -8743,7 +8743,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -9292,7 +9292,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Iraq",
         "espnTeam": "Iraq",
@@ -9841,7 +9841,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -10390,7 +10390,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Austria",
         "espnTeam": "Austria",
@@ -10939,7 +10939,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -11488,7 +11488,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -12027,7 +12027,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Ghana",
         "espnTeam": "Ghana",
@@ -12566,7 +12566,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Uzbekistan",
         "espnTeam": "Uzbekistan",
@@ -13115,7 +13115,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Czechia",
         "espnTeam": "Czechia",
@@ -13634,7 +13634,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -14173,7 +14173,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -14712,7 +14712,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -15251,7 +15251,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -15790,7 +15790,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Scotland",
         "espnTeam": "Scotland",
@@ -16339,7 +16339,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -16878,7 +16878,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Türkiye",
         "espnTeam": "Türkiye",
@@ -17427,7 +17427,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Netherlands",
         "espnTeam": "Netherlands",
@@ -17966,7 +17966,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Germany",
         "espnTeam": "Germany",
@@ -18515,7 +18515,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Ecuador",
         "espnTeam": "Ecuador",
@@ -19064,7 +19064,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T11:49:35.930Z",
+      "updatedAt": "2026-06-21T13:27:02.545Z",
       "home": {
         "team": "Tunisia",
         "espnTeam": "Tunisia",
