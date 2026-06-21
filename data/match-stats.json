@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T16:16:08.615Z",
+  "updated": "2026-06-21T17:58:01.880Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -1226,7 +1226,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -1389,7 +1389,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Ecuador",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -1489,7 +1489,7 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2720,7 +2720,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2841,7 +2841,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -3033,7 +3033,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3133,7 +3133,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3287,7 +3287,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -3399,7 +3399,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -3560,7 +3560,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -3724,7 +3724,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -3814,7 +3814,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3916,7 +3916,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4016,7 +4016,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4149,7 +4149,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4253,7 +4253,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4458,7 +4458,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4587,7 +4587,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4664,7 +4664,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4823,39 +4823,43 @@
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T16:16:08.615Z",
+      "updatedAt": "2026-06-21T17:58:01.880Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 0
-        },
-        "shots": {
-          "home": 6,
-          "away": 0
-        },
-        "possession": {
-          "home": 80.8,
-          "away": 19.2
-        },
-        "passes": {
-          "home": 108,
-          "away": 27
-        },
-        "fouls": {
-          "home": 0,
+          "home": 9,
           "away": 1
         },
+        "shots": {
+          "home": 22,
+          "away": 3
+        },
+        "possession": {
+          "home": 66.5,
+          "away": 33.5
+        },
+        "passes": {
+          "home": 691,
+          "away": 356
+        },
+        "fouls": {
+          "home": 10,
+          "away": 2
+        },
         "corners": {
-          "home": 2,
-          "away": 0
+          "home": 6,
+          "away": 1
         },
         "saves": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 5
         },
         "offsides": {
+          "home": 1,
+          "away": 3
+        },
+        "yellowCards": {
           "home": 0,
-          "away": 0
+          "away": 2
         }
       },
       "goals": [
@@ -4870,6 +4874,42 @@
           "ownGoal": false,
           "text": "Goal! Spain 1, Saudi Arabia 0. Lamine Yamal (Spain) right footed shot from the right side of the six yard box to the bottom right corner. Assisted by Mikel Oyarzabal with a cross following a fast break.",
           "source": "ESPN"
+        },
+        {
+          "id": "49572355",
+          "minute": "21",
+          "period": 1,
+          "team": "Spain",
+          "player": "Mikel Oyarzabal",
+          "assist": "Aymeric Laporte",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Spain 2, Saudi Arabia 0. Mikel Oyarzabal (Spain) left footed shot from the left side of the six yard box to the bottom right corner. Assisted by Aymeric Laporte with a headed pass following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49572378",
+          "minute": "24",
+          "period": 1,
+          "team": "Spain",
+          "player": "Mikel Oyarzabal",
+          "assist": "Dani Olmo",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Spain 3, Saudi Arabia 0. Mikel Oyarzabal (Spain) left footed shot from very close range to the top right corner. Assisted by Dani Olmo with a headed pass.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49572906",
+          "minute": "49",
+          "period": 2,
+          "team": "Spain",
+          "player": "Hassan Al-Tambakti",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": true,
+          "text": "Own Goal by Hassan Al Tambakti, Saudi Arabia. Spain 4, Saudi Arabia 0.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -4881,6 +4921,24 @@
           "player": "Mikel Oyarzabal",
           "goal": "Lamine Yamal",
           "source": "ESPN"
+        },
+        {
+          "id": "49572355",
+          "minute": "21",
+          "period": 1,
+          "team": "Spain",
+          "player": "Aymeric Laporte",
+          "goal": "Mikel Oyarzabal",
+          "source": "ESPN"
+        },
+        {
+          "id": "49572378",
+          "minute": "24",
+          "period": 1,
+          "team": "Spain",
+          "player": "Dani Olmo",
+          "goal": "Mikel Oyarzabal",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -4890,12 +4948,12 @@
           "name": "Unai Simón",
           "shortName": "U. Simón",
           "number": "23",
-          "saves": 0,
+          "saves": 1,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -4903,12 +4961,12 @@
           "name": "Mohammed Al-Owais",
           "shortName": "M. Al-Owais",
           "number": "21",
-          "saves": 0,
-          "goalsAgainst": 1,
+          "saves": 5,
+          "goalsAgainst": 5,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
