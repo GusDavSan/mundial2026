@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T21:42:50.977Z",
+  "updated": "2026-06-21T23:44:52.655Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -177,12 +177,12 @@
       "home": "Belgium",
       "away": "Egypt",
       "source": "DAZN ES",
-      "title": "Bélgica vs Egipto (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=8LTO1-E2DJg",
-      "thumbnail": "https://i.ytimg.com/vi/8LTO1-E2DJg/hqdefault.jpg",
-      "videoId": "8LTO1-E2DJg",
-      "publishedAt": "2026-06-15T23:00:21Z",
-      "confidence": 20
+      "title": "Bélgica vs RI de Irán (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=almiuFZ79U0",
+      "thumbnail": "https://i2.ytimg.com/vi/almiuFZ79U0/hqdefault.jpg",
+      "videoId": "almiuFZ79U0",
+      "publishedAt": "2026-06-21T23:00:25+00:00",
+      "confidence": 12
     },
     {
       "matchId": 15,
@@ -203,12 +203,12 @@
       "home": "Iran",
       "away": "New Zealand",
       "source": "DAZN ES",
-      "title": "Irán vs Nueva Zelanda (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=PFKJiSSfGXM",
-      "thumbnail": "https://i.ytimg.com/vi/PFKJiSSfGXM/hqdefault.jpg",
-      "videoId": "PFKJiSSfGXM",
-      "publishedAt": "2026-06-16T05:16:02Z",
-      "confidence": 20
+      "title": "Bélgica vs RI de Irán (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=almiuFZ79U0",
+      "thumbnail": "https://i2.ytimg.com/vi/almiuFZ79U0/hqdefault.jpg",
+      "videoId": "almiuFZ79U0",
+      "publishedAt": "2026-06-21T23:00:25+00:00",
+      "confidence": 12
     },
     {
       "matchId": 17,
@@ -482,6 +482,32 @@
       "videoId": "ButTe5wlnNE",
       "publishedAt": "2026-06-21T20:00:36Z",
       "confidence": 20
+    },
+    {
+      "matchId": 38,
+      "date": "2026-06-21",
+      "home": "Belgium",
+      "away": "Iran",
+      "source": "DAZN ES",
+      "title": "Bélgica vs RI de Irán (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=almiuFZ79U0",
+      "thumbnail": "https://i2.ytimg.com/vi/almiuFZ79U0/hqdefault.jpg",
+      "videoId": "almiuFZ79U0",
+      "publishedAt": "2026-06-21T23:00:25+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 39,
+      "date": "2026-06-21",
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "source": "DAZN ES",
+      "title": "Cabo Verde marca el primer gol de su historia en el Mundial PARA PONER A URUGUAY CONTRA LAS CUERDAS",
+      "url": "https://www.youtube.com/watch?v=kR35xccuPc4",
+      "thumbnail": "https://i.ytimg.com/vi/kR35xccuPc4/hqdefault.jpg",
+      "videoId": "kR35xccuPc4",
+      "publishedAt": "2026-06-21T22:42:46Z",
+      "confidence": 16
     }
   ]
 }
