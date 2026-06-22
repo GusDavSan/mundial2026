@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T16:04:25.106Z",
+  "updated": "2026-06-22T19:48:53.896Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2720,7 +2720,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2841,7 +2841,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -3033,7 +3033,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3133,7 +3133,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3287,7 +3287,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -3399,7 +3399,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -3560,7 +3560,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -3724,7 +3724,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -3814,7 +3814,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3916,7 +3916,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4016,7 +4016,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4149,7 +4149,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4253,7 +4253,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4458,7 +4458,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4587,7 +4587,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4664,7 +4664,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4823,7 +4823,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -4977,7 +4977,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5058,7 +5058,7 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5194,7 +5194,7 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T16:04:25.106Z",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5345,6 +5345,118 @@
           "goalsAgainst": 1,
           "cleanSheet": 0,
           "savePct": 80,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 41,
+      "espnEventId": "760456",
+      "date": "2026-06-22",
+      "homeTeam": "Argentina",
+      "awayTeam": "Austria",
+      "source": "ESPN",
+      "updatedAt": "2026-06-22T19:48:53.896Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 5,
+          "away": 1
+        },
+        "shots": {
+          "home": 12,
+          "away": 6
+        },
+        "possession": {
+          "home": 53.6,
+          "away": 46.4
+        },
+        "passes": {
+          "home": 553,
+          "away": 468
+        },
+        "fouls": {
+          "home": 13,
+          "away": 13
+        },
+        "corners": {
+          "home": 1,
+          "away": 3
+        },
+        "saves": {
+          "home": 1,
+          "away": 2
+        },
+        "offsides": {
+          "home": 2,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 2
+        }
+      },
+      "goals": [
+        {
+          "id": "49583440",
+          "minute": "38",
+          "period": 1,
+          "team": "Argentina",
+          "player": "Lionel Messi",
+          "assist": "Facundo Medina",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Argentina 1, Austria 0. Lionel Messi (Argentina) left footed shot from the centre of the box to the bottom left corner. Assisted by Facundo Medina following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49584483",
+          "minute": "90'+5",
+          "period": 2,
+          "team": "Argentina",
+          "player": "Lionel Messi",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Argentina 2, Austria 0. Lionel Messi (Argentina) left footed shot from the left side of the six yard box to the centre of the goal following a fast break.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49583440",
+          "minute": "38",
+          "period": 1,
+          "team": "Argentina",
+          "player": "Facundo Medina",
+          "goal": "Lionel Messi",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Argentina",
+          "name": "Emiliano Martínez",
+          "shortName": "E. Martínez",
+          "number": "23",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Austria",
+          "name": "Alexander Schlager",
+          "shortName": "A. Schlager",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
