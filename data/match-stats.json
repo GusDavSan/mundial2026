@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T23:59:29.579Z",
+  "updated": "2026-06-22T05:23:31.974Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -1685,7 +1685,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -1762,7 +1762,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1874,7 +1874,7 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -1976,7 +1976,7 @@
       "homeTeam": "Iran",
       "awayTeam": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2720,7 +2720,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2841,7 +2841,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -3033,7 +3033,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3133,7 +3133,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3287,7 +3287,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -3399,7 +3399,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -3560,7 +3560,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -3724,7 +3724,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -3814,7 +3814,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3916,7 +3916,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4016,7 +4016,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4149,7 +4149,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4253,7 +4253,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4458,7 +4458,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4587,7 +4587,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4664,7 +4664,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4823,7 +4823,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -4977,7 +4977,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4988,12 +4988,12 @@
           "away": 7
         },
         "possession": {
-          "home": 70.3,
-          "away": 29.7
+          "home": 70.1,
+          "away": 29.9
         },
         "passes": {
-          "home": 622,
-          "away": 268
+          "home": 621,
+          "away": 270
         },
         "fouls": {
           "home": 7,
@@ -5058,34 +5058,34 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-21T23:59:29.579Z",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
-          "away": 2
+          "away": 4
         },
         "shots": {
           "home": 17,
-          "away": 9
+          "away": 12
         },
         "possession": {
-          "home": 66.5,
-          "away": 33.5
+          "home": 65.2,
+          "away": 34.8
         },
         "passes": {
-          "home": 499,
-          "away": 256
+          "home": 511,
+          "away": 278
         },
         "fouls": {
-          "home": 8,
+          "home": 11,
           "away": 4
         },
         "corners": {
-          "home": 12,
-          "away": 3
+          "home": 11,
+          "away": 4
         },
         "saves": {
-          "home": 0,
+          "home": 2,
           "away": 0
         },
         "offsides": {
@@ -5127,7 +5127,7 @@
           "minute": "45'+6",
           "period": 1,
           "team": "Uruguay",
-          "player": "Agustín Cano",
+          "player": "Agustín Canobbio",
           "assist": "Maxi Araújo",
           "penalty": false,
           "ownGoal": false,
@@ -5154,7 +5154,7 @@
           "period": 1,
           "team": "Uruguay",
           "player": "Maxi Araújo",
-          "goal": "Agustín Cano",
+          "goal": "Agustín Canobbio",
           "source": "ESPN"
         }
       ],
@@ -5165,12 +5165,12 @@
           "name": "Fernando Muslera",
           "shortName": "F. Muslera",
           "number": "23",
-          "saves": 0,
+          "saves": 2,
           "goalsAgainst": 2,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -5184,6 +5184,169 @@
           "savePct": 0,
           "penaltySaves": 0,
           "source": "ESPN roster"
+        }
+      ]
+    },
+    {
+      "matchId": 40,
+      "espnEventId": "760452",
+      "date": "2026-06-22",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Egypt",
+      "source": "ESPN",
+      "updatedAt": "2026-06-22T05:23:31.974Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 5,
+          "away": 7
+        },
+        "shots": {
+          "home": 11,
+          "away": 19
+        },
+        "possession": {
+          "home": 44.4,
+          "away": 55.6
+        },
+        "passes": {
+          "home": 421,
+          "away": 526
+        },
+        "fouls": {
+          "home": 14,
+          "away": 8
+        },
+        "corners": {
+          "home": 4,
+          "away": 4
+        },
+        "saves": {
+          "home": 4,
+          "away": 4
+        },
+        "offsides": {
+          "home": 3,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49581424",
+          "minute": "15",
+          "period": 1,
+          "team": "New Zealand",
+          "player": "Finn Surman",
+          "assist": "Tim Payne",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 1, Egypt 0. Finn Surman (New Zealand) header from the centre of the box to the top left corner. Assisted by Tim Payne with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49582192",
+          "minute": "58",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Mostafa Zico",
+          "assist": "Mohamed Hany",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 1, Egypt 1. Mostafa Zico (Egypt) header from the centre of the box to the high centre of the goal. Assisted by Mohamed Hany with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49582331",
+          "minute": "67",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Mohamed Salah",
+          "assist": "Mostafa Zico",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 1, Egypt 2. Mohamed Salah (Egypt) left footed shot from the centre of the box to the bottom left corner. Assisted by Mostafa Zico.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49582496",
+          "minute": "82",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Trézéguet",
+          "assist": "Mohamed Salah",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 1, Egypt 3. Trezeguet (Egypt) header from the centre of the box to the bottom left corner. Assisted by Mohamed Salah with a cross following a corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49581424",
+          "minute": "15",
+          "period": 1,
+          "team": "New Zealand",
+          "player": "Tim Payne",
+          "goal": "Finn Surman",
+          "source": "ESPN"
+        },
+        {
+          "id": "49582192",
+          "minute": "58",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Mohamed Hany",
+          "goal": "Mostafa Zico",
+          "source": "ESPN"
+        },
+        {
+          "id": "49582331",
+          "minute": "67",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Mostafa Zico",
+          "goal": "Mohamed Salah",
+          "source": "ESPN"
+        },
+        {
+          "id": "49582496",
+          "minute": "82",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Mohamed Salah",
+          "goal": "Trézéguet",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "New Zealand",
+          "name": "Max Crocombe",
+          "shortName": "M. Crocombe",
+          "number": "1",
+          "saves": 4,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 57.1,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Egypt",
+          "name": "Mostafa Shoubir",
+          "shortName": "M. Shoubir",
+          "number": "23",
+          "saves": 4,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 80,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
         }
       ]
     }
