@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T05:31:19.115Z",
+  "updated": "2026-06-22T12:26:24.128Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -177,11 +177,11 @@
       "home": "Belgium",
       "away": "Egypt",
       "source": "DAZN ES",
-      "title": "Bélgica vs RI de Irán (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=almiuFZ79U0",
-      "thumbnail": "https://i2.ytimg.com/vi/almiuFZ79U0/hqdefault.jpg",
-      "videoId": "almiuFZ79U0",
-      "publishedAt": "2026-06-21T23:00:25+00:00",
+      "title": "Nueva Zelanda vs Egipto (1-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9tJ7vlN3o-Y",
+      "thumbnail": "https://i2.ytimg.com/vi/9tJ7vlN3o-Y/hqdefault.jpg",
+      "videoId": "9tJ7vlN3o-Y",
+      "publishedAt": "2026-06-22T05:36:22+00:00",
       "confidence": 12
     },
     {
@@ -203,11 +203,11 @@
       "home": "Iran",
       "away": "New Zealand",
       "source": "DAZN ES",
-      "title": "Bélgica vs RI de Irán (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=almiuFZ79U0",
-      "thumbnail": "https://i2.ytimg.com/vi/almiuFZ79U0/hqdefault.jpg",
-      "videoId": "almiuFZ79U0",
-      "publishedAt": "2026-06-21T23:00:25+00:00",
+      "title": "Nueva Zelanda vs Egipto (1-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9tJ7vlN3o-Y",
+      "thumbnail": "https://i2.ytimg.com/vi/9tJ7vlN3o-Y/hqdefault.jpg",
+      "videoId": "9tJ7vlN3o-Y",
+      "publishedAt": "2026-06-22T05:36:22+00:00",
       "confidence": 12
     },
     {
@@ -507,6 +507,19 @@
       "thumbnail": "https://i.ytimg.com/vi/m_KNKnRFPzY/hqdefault.jpg",
       "videoId": "m_KNKnRFPzY",
       "publishedAt": "2026-06-22T02:00:23Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 40,
+      "date": "2026-06-22",
+      "home": "New Zealand",
+      "away": "Egypt",
+      "source": "DAZN ES",
+      "title": "Nueva Zelanda vs Egipto (1-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9tJ7vlN3o-Y",
+      "thumbnail": "https://i2.ytimg.com/vi/9tJ7vlN3o-Y/hqdefault.jpg",
+      "videoId": "9tJ7vlN3o-Y",
+      "publishedAt": "2026-06-22T05:36:22+00:00",
       "confidence": 20
     }
   ]
