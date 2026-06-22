@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T23:44:52.655Z",
+  "updated": "2026-06-22T05:31:19.115Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -164,11 +164,11 @@
       "home": "Spain",
       "away": "Cape Verde",
       "source": "DAZN ES",
-      "title": "España vs Arabia Saudí (4-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=ButTe5wlnNE",
-      "thumbnail": "https://i.ytimg.com/vi/ButTe5wlnNE/hqdefault.jpg",
-      "videoId": "ButTe5wlnNE",
-      "publishedAt": "2026-06-21T20:00:36Z",
+      "title": "Uruguay vs Cabo Verde (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=m_KNKnRFPzY",
+      "thumbnail": "https://i.ytimg.com/vi/m_KNKnRFPzY/hqdefault.jpg",
+      "videoId": "m_KNKnRFPzY",
+      "publishedAt": "2026-06-22T02:00:23Z",
       "confidence": 12
     },
     {
@@ -190,11 +190,11 @@
       "home": "Saudi Arabia",
       "away": "Uruguay",
       "source": "DAZN ES",
-      "title": "España vs Arabia Saudí (4-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=ButTe5wlnNE",
-      "thumbnail": "https://i.ytimg.com/vi/ButTe5wlnNE/hqdefault.jpg",
-      "videoId": "ButTe5wlnNE",
-      "publishedAt": "2026-06-21T20:00:36Z",
+      "title": "Uruguay vs Cabo Verde (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=m_KNKnRFPzY",
+      "thumbnail": "https://i.ytimg.com/vi/m_KNKnRFPzY/hqdefault.jpg",
+      "videoId": "m_KNKnRFPzY",
+      "publishedAt": "2026-06-22T02:00:23Z",
       "confidence": 12
     },
     {
@@ -502,12 +502,12 @@
       "home": "Uruguay",
       "away": "Cape Verde",
       "source": "DAZN ES",
-      "title": "Cabo Verde marca el primer gol de su historia en el Mundial PARA PONER A URUGUAY CONTRA LAS CUERDAS",
-      "url": "https://www.youtube.com/watch?v=kR35xccuPc4",
-      "thumbnail": "https://i.ytimg.com/vi/kR35xccuPc4/hqdefault.jpg",
-      "videoId": "kR35xccuPc4",
-      "publishedAt": "2026-06-21T22:42:46Z",
-      "confidence": 16
+      "title": "Uruguay vs Cabo Verde (2-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=m_KNKnRFPzY",
+      "thumbnail": "https://i.ytimg.com/vi/m_KNKnRFPzY/hqdefault.jpg",
+      "videoId": "m_KNKnRFPzY",
+      "publishedAt": "2026-06-22T02:00:23Z",
+      "confidence": 20
     }
   ]
 }
