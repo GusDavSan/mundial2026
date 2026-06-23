@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T23:44:46.488Z",
+  "updated": "2026-06-23T01:49:52.914Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -2130,7 +2130,7 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -2280,7 +2280,7 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2446,7 +2446,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -2575,7 +2575,7 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -2720,7 +2720,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2841,7 +2841,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -3033,7 +3033,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3133,7 +3133,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3287,7 +3287,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -3399,7 +3399,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -3560,7 +3560,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -3724,7 +3724,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -3814,7 +3814,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3916,7 +3916,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4016,7 +4016,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4149,7 +4149,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4253,7 +4253,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4458,7 +4458,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4587,7 +4587,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4664,7 +4664,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4823,7 +4823,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -4977,7 +4977,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5058,7 +5058,7 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5194,7 +5194,7 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5357,7 +5357,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5469,38 +5469,38 @@
       "homeTeam": "France",
       "awayTeam": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-22T23:44:46.488Z",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
+          "home": 5,
           "away": 0
         },
         "shots": {
-          "home": 7,
-          "away": 2
+          "home": 19,
+          "away": 4
         },
         "possession": {
-          "home": 58.1,
-          "away": 41.9
+          "home": 55.5,
+          "away": 44.5
         },
         "passes": {
-          "home": 316,
-          "away": 233
+          "home": 602,
+          "away": 483
         },
         "fouls": {
-          "home": 5,
-          "away": 2
+          "home": 8,
+          "away": 4
         },
         "corners": {
-          "home": 1,
-          "away": 1
+          "home": 4,
+          "away": 2
         },
         "saves": {
           "home": 0,
-          "away": 0
+          "away": 2
         },
         "offsides": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "yellowCards": {
@@ -5520,6 +5520,30 @@
           "ownGoal": false,
           "text": "Goal! France 1, Iraq 0. Kylian Mbappé (France) left footed shot from outside the box to the bottom left corner. Assisted by Michael Olise.",
           "source": "ESPN"
+        },
+        {
+          "id": "49586302",
+          "minute": "54",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "assist": "Ousmane Dembélé",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 2, Iraq 0. Kylian Mbappé (France) right footed shot from the centre of the box to the bottom right corner. Assisted by Ousmane Dembélé.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49586814",
+          "minute": "66",
+          "period": 2,
+          "team": "France",
+          "player": "Ousmane Dembélé",
+          "assist": "Michael Olise",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 3, Iraq 0. Ousmane Dembélé (France) right footed shot from the centre of the box to the bottom left corner. Assisted by Michael Olise with a through ball.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -5530,6 +5554,24 @@
           "team": "France",
           "player": "Michael Olise",
           "goal": "Kylian Mbappé",
+          "source": "ESPN"
+        },
+        {
+          "id": "49586302",
+          "minute": "54",
+          "period": 2,
+          "team": "France",
+          "player": "Ousmane Dembélé",
+          "goal": "Kylian Mbappé",
+          "source": "ESPN"
+        },
+        {
+          "id": "49586814",
+          "minute": "66",
+          "period": 2,
+          "team": "France",
+          "player": "Michael Olise",
+          "goal": "Ousmane Dembélé",
           "source": "ESPN"
         }
       ],
@@ -5553,12 +5595,162 @@
           "name": "Ahmed Basil",
           "shortName": "A. Basil",
           "number": "22",
-          "saves": 0,
+          "saves": 2,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 40,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 43,
+      "espnEventId": "760454",
+      "date": "2026-06-23",
+      "homeTeam": "Norway",
+      "awayTeam": "Senegal",
+      "source": "ESPN",
+      "updatedAt": "2026-06-23T01:49:52.914Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 6,
+          "away": 3
+        },
+        "shots": {
+          "home": 12,
+          "away": 12
+        },
+        "possession": {
+          "home": 44.4,
+          "away": 55.6
+        },
+        "passes": {
+          "home": 344,
+          "away": 429
+        },
+        "fouls": {
+          "home": 10,
+          "away": 4
+        },
+        "corners": {
+          "home": 4,
+          "away": 2
+        },
+        "saves": {
+          "home": 2,
+          "away": 3
+        },
+        "offsides": {
+          "home": 0,
+          "away": 4
+        }
+      },
+      "goals": [
+        {
+          "id": "49587783",
+          "minute": "43",
+          "period": 1,
+          "team": "Norway",
+          "player": "Marcus Holmgren Pedersen",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Norway 1, Senegal 0. Marcus Pedersen (Norway) right footed shot from the right side of the box to the high centre of the goal.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49588273",
+          "minute": "48",
+          "period": 2,
+          "team": "Norway",
+          "player": "Erling Haaland",
+          "assist": "Martin Ødegaard",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Norway 2, Senegal 0. Erling Haaland (Norway) left footed shot from the centre of the box to the top right corner. Assisted by Martin Ødegaard following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49588357",
+          "minute": "53",
+          "period": 2,
+          "team": "Senegal",
+          "player": "Ismaïla Sarr",
+          "assist": "Sadio Mané",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Norway 2, Senegal 1. Ismaïla Sarr (Senegal) right footed shot from the centre of the box to the top right corner. Assisted by Sadio Mané.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49588416",
+          "minute": "58",
+          "period": 2,
+          "team": "Norway",
+          "player": "Erling Haaland",
+          "assist": "Patrick Berg",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Norway 3, Senegal 1. Erling Haaland (Norway) right footed shot from the centre of the box to the high centre of the goal. Assisted by Patrick Berg.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49588273",
+          "minute": "48",
+          "period": 2,
+          "team": "Norway",
+          "player": "Martin Ødegaard",
+          "goal": "Erling Haaland",
+          "source": "ESPN"
+        },
+        {
+          "id": "49588357",
+          "minute": "53",
+          "period": 2,
+          "team": "Senegal",
+          "player": "Sadio Mané",
+          "goal": "Ismaïla Sarr",
+          "source": "ESPN"
+        },
+        {
+          "id": "49588416",
+          "minute": "58",
+          "period": 2,
+          "team": "Norway",
+          "player": "Patrick Berg",
+          "goal": "Erling Haaland",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Norway",
+          "name": "Ørjan Nyland",
+          "shortName": "Ø. Nyland",
+          "number": "1",
+          "saves": 2,
           "goalsAgainst": 1,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 66.7,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Senegal",
+          "name": "Édouard Mendy",
+          "shortName": "É. Mendy",
+          "number": "16",
+          "saves": 3,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
         }
       ]
     }
