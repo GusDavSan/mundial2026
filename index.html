@@ -361,9 +361,9 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .event-title{font-size:14px;font-weight:650;color:var(--text);line-height:1.25}
 .event-meta{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
 .event-empty{padding:12px;color:var(--muted);font-size:13px;text-align:center}
-.sub-row{display:grid;grid-template-columns:42px minmax(120px,210px) minmax(0,1fr);gap:12px;align-items:center;padding:10px 11px;border-top:1px solid var(--border)}
+.sub-row{display:grid;grid-template-columns:42px 38px minmax(0,1fr);gap:12px;align-items:center;padding:10px 11px;border-top:1px solid var(--border)}
 .sub-row:first-of-type{border-top:none}
-.sub-team{font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub-team{font-size:21px;line-height:1;text-align:center}
 .sub-flow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:center}
 .sub-player{min-width:0}
 .sub-line{display:flex;align-items:center;gap:7px;min-width:0}
@@ -371,9 +371,6 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .sub-in .sub-mark{color:var(--live)}
 .sub-out .sub-mark{color:#ff7a62}
 .sub-name{font-size:14px;font-weight:750;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sub-action{font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.sub-in .sub-action{color:var(--live)}
-.sub-out .sub-action{color:#ff9a7a}
 .lineup-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .detail-body-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,380px);gap:14px;align-items:start}
 .detail-side{position:sticky;top:58px}
@@ -461,9 +458,9 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .kit-number{top:20px;font-size:19px}
   .kit-name{max-width:64px;font-size:10px;padding:2px 5px}
   .event-row{grid-template-columns:36px 24px 1fr;padding:9px 10px}
-  .sub-row{grid-template-columns:36px 1fr;gap:8px;padding:10px}
-  .sub-flow{grid-column:2;grid-template-columns:1fr;gap:7px}
-  .sub-team{grid-column:2}
+  .sub-row{grid-template-columns:36px 30px 1fr;gap:8px;padding:10px}
+  .sub-team{font-size:19px}
+  .sub-flow{grid-template-columns:1fr;gap:7px}
   .live-mini-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .live-insight-top{align-items:flex-start}
   .live-momentum-bar{max-width:150px}
@@ -3480,6 +3477,10 @@ function cleanSubstitutionName(name){
     .replace(/\s+replaces\b.*$/i,'')
     .replace(/\s+sustituye\b.*$/i,'')
     .replace(/\s+entra\b.*$/i,'')
+    .replace(/\s+because\s+of\b.*$/i,'')
+    .replace(/\s+due\s+to\b.*$/i,'')
+    .replace(/\s+por\s+lesi[oó]n\b.*$/i,'')
+    .replace(/\s+por\s+molestias\b.*$/i,'')
     .trim();
 }
 function substitutionParts(ev){
@@ -3510,10 +3511,10 @@ function renderSubstitutionBlock(title,events,home,away){
     const teamFlag=FLAGS[normName(team)]||FLAGS[team]||'🏳️';
     html+='<div class="sub-row">'+
       '<div class="event-minute">'+escHtml(row.minute)+'</div>'+
-      '<div class="sub-team">'+teamFlag+' '+escHtml(team||'')+'</div>'+
+      '<div class="sub-team" title="'+escHtml(team||'')+'">'+teamFlag+'</div>'+
       '<div class="sub-flow">'+
-        '<div class="sub-player sub-in"><div class="sub-line"><span class="sub-mark">↑</span><span class="sub-name">'+escHtml(row.inName||'—')+'</span></div><div class="sub-action">'+t('subIn')+'</div></div>'+
-        (row.outName?'<div class="sub-player sub-out"><div class="sub-line"><span class="sub-mark">↓</span><span class="sub-name">'+escHtml(row.outName)+'</span></div><div class="sub-action">'+t('subOut')+'</div></div>':'')+
+        '<div class="sub-player sub-in"><div class="sub-line"><span class="sub-mark">↑</span><span class="sub-name">'+escHtml(row.inName||'—')+'</span></div></div>'+
+        (row.outName?'<div class="sub-player sub-out"><div class="sub-line"><span class="sub-mark">↓</span><span class="sub-name">'+escHtml(row.outName)+'</span></div></div>':'')+
       '</div>'+
     '</div>';
   });
