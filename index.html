@@ -650,9 +650,7 @@ window.addEventListener('unhandledrejection',e=>showLocalModeNotice(e.reason&&e.
 // ══════════════════════════════════════════════
 // CONFIG
 // ══════════════════════════════════════════════
-const API_KEY='0408418988', LEAGUE_ID='4429', TZ='Europe/Madrid';
-const B1=`https://www.thesportsdb.com/api/v1/json/${API_KEY}`;
-const B2='https://www.thesportsdb.com/api/v2/json';
+const TZ='Europe/Madrid';
 const API_TIMEOUT=3500;
 async function fetchJson(url,opts={},timeoutMs=API_TIMEOUT){
   const ctrl=new AbortController();
@@ -663,8 +661,6 @@ async function fetchJson(url,opts={},timeoutMs=API_TIMEOUT){
     return r.json();
   }finally{clearTimeout(timer);}
 }
-const v1=(p,timeoutMs)=>fetchJson(B1+p,{},timeoutMs);
-const v2=(p,timeoutMs)=>fetchJson(B2+p,{headers:{'X-API-KEY':API_KEY}},timeoutMs);
 
 function storageGet(key,fallback=''){
   try{return localStorage.getItem(key)||fallback;}catch{return fallback;}
@@ -707,9 +703,9 @@ const I18N={
     shots:'Tiros',shotsOnGoal:'Tiros a puerta',possession:'Posesión',passes:'Pases',fouls:'Faltas',yellowCards:'Tarjetas amarillas',redCards:'Tarjetas rojas',corners:'Córners',
     shotsShort:'Tiros',shotsOnTargetShort:'A puerta',cardsShort:'🟨🟥',
     chooseTeam:'Selecciona un equipo para ver su plantilla para el Mundial 2026.',allTeams:'Todas las selecciones',loadingTeam:'Cargando {team}...',squadLoading:'Cargando convocados...',
-    teamNotFound:'Equipo no encontrado en TheSportsDB.',viewSquadsFifa:'Ver plantillas en FIFA.com',officialSquad:'Ver convocatoria oficial en FIFA.com',officialSquadSource:'Convocatoria validada',viewTsdb:'Ver en TheSportsDB',
-    noSquad:'TheSportsDB no tiene la plantilla convocada de {team} para el Mundial 2026.',squad:'CONVOCADOS',goalkeepers:'Porteros',defenders:'Defensas',midfielders:'Medio campo',forwards:'Delanteros',manager:'Manager',others:'Otros',
-    noPlayersInBlock:'Sin jugadores en esta demarcación todavía.',managerMissing:'Manager no disponible en TheSportsDB.',years:'años',error:'Error',playersLoadError:'Error cargando jugadores',
+    teamNotFound:'Selección no encontrada en los datos locales.',viewSquadsFifa:'Ver plantillas en FIFA.com',officialSquad:'Ver convocatoria oficial en FIFA.com',officialSquadSource:'Convocatoria validada',
+    noSquad:'No tengo la convocatoria local de {team} para el Mundial 2026.',squad:'CONVOCADOS',goalkeepers:'Porteros',defenders:'Defensas',midfielders:'Medio campo',forwards:'Delanteros',manager:'Manager',others:'Otros',
+    noPlayersInBlock:'Sin jugadores en esta demarcación todavía.',managerMissing:'Manager no disponible en la convocatoria local.',years:'años',error:'Error',playersLoadError:'Error cargando jugadores',
     playerDetails:'Ficha del jugador',shirtNumber:'Dorsal',position:'Posición',squadRole:'Rol convocatoria',usualPosition:'Posición habitual',club:'Club',age:'Edad',height:'Altura',weight:'Peso',born:'Nacimiento',birthplace:'Lugar',nationality:'Nacionalidad',bio:'Bio',noBio:'Sin bio disponible',
     highlights:'Highlights',watchHighlight:'Ver resumen',daznHighlights:'Resumen DAZN'
     ,momentum:'Momentum',balancedMatch:'Partido igualado',controlsMatch:'controla el partido',lastEvent:'Último',dataSource:'Fuente',updatedAgo:'actualizado {time}',justNow:'ahora',
@@ -755,9 +751,9 @@ const I18N={
     shots:'Shots',shotsOnGoal:'Shots on goal',possession:'Possession',passes:'Passes',fouls:'Fouls',yellowCards:'Yellow cards',redCards:'Red cards',corners:'Corners',
     shotsShort:'Shots',shotsOnTargetShort:'On target',cardsShort:'🟨🟥',
     chooseTeam:'Select a team to see its World Cup 2026 squad.',allTeams:'All teams',loadingTeam:'Loading {team}...',squadLoading:'Loading squad...',
-    teamNotFound:'Team not found in TheSportsDB.',viewSquadsFifa:'View squads on FIFA.com',officialSquad:'View official squad on FIFA.com',officialSquadSource:'Validated squad',viewTsdb:'View on TheSportsDB',
-    noSquad:'TheSportsDB does not have the World Cup 2026 squad for {team}.',squad:'SQUAD',goalkeepers:'Goalkeepers',defenders:'Defenders',midfielders:'Midfield',forwards:'Forwards',manager:'Manager',others:'Others',
-    noPlayersInBlock:'No players listed in this block yet.',managerMissing:'Manager not available in TheSportsDB.',years:'years',error:'Error',playersLoadError:'Error loading players',
+    teamNotFound:'Team not found in local data.',viewSquadsFifa:'View squads on FIFA.com',officialSquad:'View official squad on FIFA.com',officialSquadSource:'Validated squad',
+    noSquad:'No local World Cup 2026 squad is available for {team}.',squad:'SQUAD',goalkeepers:'Goalkeepers',defenders:'Defenders',midfielders:'Midfield',forwards:'Forwards',manager:'Manager',others:'Others',
+    noPlayersInBlock:'No players listed in this block yet.',managerMissing:'Manager not available in the local squad.',years:'years',error:'Error',playersLoadError:'Error loading players',
     playerDetails:'Player profile',shirtNumber:'Number',position:'Position',squadRole:'Squad role',usualPosition:'Usual position',club:'Club',age:'Age',height:'Height',weight:'Weight',born:'Born',birthplace:'Place',nationality:'Nationality',bio:'Bio',noBio:'No bio available',
     highlights:'Highlights',watchHighlight:'Watch highlights',daznHighlights:'DAZN highlights'
     ,momentum:'Momentum',balancedMatch:'Balanced match',controlsMatch:'controls the match',lastEvent:'Last',dataSource:'Source',updatedAgo:'updated {time}',justNow:'now',
@@ -1424,24 +1420,7 @@ async function loadLive(){
   el.innerHTML=liveFallbackHtml(today,todayFx);
   rt.textContent=t('loadingShort');
   let liveNow=[],upcoming=[],finished=[];
-  // Try V2 livescore
-  try{
-    const d=await v2(`/livescore/${LEAGUE_ID}`);
-    liveNow=d.events||[];
-  }catch{}
-  // Fill from schedule
-  const apiById={};
-  liveNow.forEach(e=>{if(e.idEvent)apiById[e.idEvent]=e});
-  // Also try eventsday for today
-  try{
-    const d=await v1(`/eventsday.php?d=${today}&l=${LEAGUE_ID}`);
-    (d.events||[]).forEach(e=>{
-      if(isLive(e.strStatus)&&!apiById[e.idEvent])liveNow.push(e);
-      else if(isFin(e.strStatus))finished.push(e);
-      else upcoming.push(e);
-    });
-  }catch{}
-  // Merge with local fixtures for time/venue
+  // Merge ESPN rows with local fixtures for time/venue.
   const matchFx=m=>{
     const h=normName(String(m.strHomeTeam||m.home||m.homeTeam||'').trim()),a=normName(String(m.strAwayTeam||m.away||m.awayTeam||'').trim());
     return FIXTURES.find(f=>sameTeam(f.home,h)&&sameTeam(f.away,a))||
@@ -1614,60 +1593,67 @@ async function loadLive(){
 // TAB: CALENDARIO
 // ══════════════════════════════════════════════
 let calRound='all',apiResults={};
-// Name normalization: TheSportsDB uses different names than our FIXTURES
-const TSDB_NAMES={'USA':'United States','Turkey':'Türkiye','Czech Republic':'Czechia',
+// Name normalization for external feeds.
+const ALT_TEAM_NAMES={'USA':'United States','Turkey':'Türkiye','Czech Republic':'Czechia',
   'Bosnia-Herzegovina':'Bosnia & Herzegovina','Congo DR':'DR Congo','Curacao':'Curaçao'};
-function normName(n){return TSDB_NAMES[n]||n;}
-const API_SEARCH_NAMES={
-  'Czechia':['Czech Republic','Czechia'],
-  'Bosnia & Herzegovina':['Bosnia-Herzegovina','Bosnia & Herzegovina','Bosnia Herzegovina'],
-  'United States':['USA','United States'],
-  'Türkiye':['Turkey','Türkiye'],
-  'Curaçao':['Curacao','Curaçao'],
-  'DR Congo':['Congo DR','DR Congo']
-};
-function eventSearchNames(team){
-  return API_SEARCH_NAMES[team]||[team];
-}
+function normName(n){return ALT_TEAM_NAMES[n]||n;}
 async function findEventIdForFixture(f){
-  const tried=new Set();
-  const homes=eventSearchNames(f.home),aways=eventSearchNames(f.away);
-  for(const h of homes){
-    for(const a of aways){
-      const q=h+'_vs_'+a;
-      if(tried.has(q))continue;
-      tried.add(q);
-      try{
-        const d=await v1(`/searchevents.php?e=${encodeURIComponent(q)}&s=2026`,2500);
-        const evs=d.events||d.event||[];
-        const ev=Array.isArray(evs)?evs.find(x=>String(x.idLeague)===LEAGUE_ID)||evs[0]:evs;
-        if(ev&&ev.idEvent)return ev.idEvent;
-      }catch{}
-    }
+  const ev=await findEspnEventForFixture(f).catch(()=>null);
+  return ev&&ev.id||null;
+}
+function scoreFromStoredMatch(item,fx){
+  const out={home:null,away:null};
+  if(!item||!fx)return out;
+  if(item.homeScore!==undefined&&item.awayScore!==undefined){
+    out.home=parseInt(item.homeScore,10);
+    out.away=parseInt(item.awayScore,10);
+    return out;
   }
-  return null;
+  let home=0,away=0,hasGoal=false;
+  (item.goals||[]).forEach(function(goal){
+    const team=goal&&goal.team;
+    if(!team)return;
+    hasGoal=true;
+    if(sameTeam(team,fx.home))home++;
+    else if(sameTeam(team,fx.away))away++;
+  });
+  if(hasGoal||item.stats){out.home=home;out.away=away;}
+  return out;
+}
+async function hydrateResultsFromStoredStats(){
+  const items=await ensureStoredMatchStats().catch(()=>[]);
+  (items||[]).forEach(function(item){
+    const fx=fixtureByStoredMatch(item);
+    if(!fx)return;
+    const score=scoreFromStoredMatch(item,fx);
+    mergeMatchResultKey(matchResultKey(fx.home,fx.away),{
+      id:item.espnEventId||item.matchId||fx.id,
+      date:item.date||fx.date,
+      time:fx.time,
+      status:'FT',
+      homeScore:score.home,
+      awayScore:score.away
+    });
+  });
 }
 
 async function loadCal(){
   buildRoundTabs();
-  renderCal();
-  try{
-    const d=await v1('/eventsseason.php?id='+LEAGUE_ID+'&s=2026');
-    (d.events||[]).forEach(e=>{
-      const key=normName(e.strHomeTeam)+'|'+normName(e.strAwayTeam);
-      mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
-    });
-  }catch{}
+  await hydrateResultsFromStoredStats();
   renderCal();
   renderMyTeamPage();
 }
 async function calStandRefresh(){
+  await hydrateResultsFromStoredStats();
   try{
-    const today=new Date().toISOString().slice(0,10);
-    const d=await v1('/eventsday.php?d='+today+'&l='+LEAGUE_ID);
-    (d.events||[]).forEach(e=>{
-      const key=normName(e.strHomeTeam)+'|'+normName(e.strAwayTeam);
-      mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
+    const today=tzDateKey(new Date());
+    const events=await loadEspnScoreboardsAround(today);
+    events.forEach(function(event){
+      const teams=espnEventTeams(event);
+      const fx=FIXTURES.find(f=>sameEspnTeam(f.home,teams.home)&&sameEspnTeam(f.away,teams.away));
+      if(!fx)return;
+      const patch=resultPatchFromEspnEvent(event,fx);
+      storeMatchResult(fx,patch);
     });
   }catch{}
   renderCal();
@@ -1808,47 +1794,9 @@ function switchGruposSub(sub){
   if(sub==='terceros')renderTerceros();
 }
 async function loadGrupos(){
-  const el=document.getElementById('standingsContent');
-  // Step 1: Build standings from FIXTURES (always works, shows all 12 groups)
+  await hydrateResultsFromStoredStats();
+  // Build standings from FIXTURES plus stored/live ESPN results.
   computeStandingsFromFixtures();
-  // Step 2: Try to enrich with live API results (scores overlay)
-  try{
-    // Load today's finished matches to get live scores
-    const today=new Date().toISOString().slice(0,10);
-    const d=await v1(`/eventsday.php?d=${today}&l=${LEAGUE_ID}`);
-    (d.events||[]).forEach(e=>{
-      if(isFin(e.strStatus)||isLive(e.strStatus)){
-        const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
-        mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
-      }
-    });
-    // Also try the full season results for all past days
-    const d2=await v1(`/eventsseason.php?id=${LEAGUE_ID}&s=2026`);
-    (d2.events||[]).forEach(e=>{
-      if(isFin(e.strStatus)){
-        const key=`${e.strHomeTeam}|${e.strAwayTeam}`;
-        mergeMatchResultKey(key,{status:e.strStatus,homeScore:e.intHomeScore,awayScore:e.intAwayScore,id:e.idEvent});
-      }
-    });
-    // Try API table — only trust it if it has proper group assignments (A-L)
-    const d3=await v1(`/lookuptable.php?l=${LEAGUE_ID}&s=2026`);
-    const tbl=d3.table||[];
-    if(tbl.length>0){
-      const tmp={};
-      tbl.forEach(r=>{const g=r.strGroup||'';if(g&&g!=='?')({tmp}[g]=(tmp[g]||[]).push(r));});
-      const hasProperGroups=Object.keys(tmp).length>=2;
-      if(hasProperGroups){
-        standingsData=tmp;
-        el.innerHTML=renderStandingsHTML(standingsData);
-        return;
-      }
-    }
-    // Recompute with newly loaded apiResults
-    computeStandingsFromFixtures();
-  }catch(e){
-    // Already showing fixture-based standings from Step 1 — no action needed
-    console.warn('Groups API load error:',e);
-  }
 }
 function computeStandingsFromFixtures(){
   const teams={};
@@ -1860,7 +1808,7 @@ function computeStandingsFromFixtures(){
     });
     // Overlay scores from apiResults if match is finished
     const k1=`${f.home}|${f.away}`;
-    // TheSportsDB sometimes uses different team names — try both directions
+    // External feeds can use alternate team names, so try both directions.
     const r=apiResults[k1]||apiResults[`${f.away}|${f.home}`]||{};
     if(isFin(r.status)&&r.homeScore!==null&&r.homeScore!==undefined){
       const isSwapped=!!apiResults[`${f.away}|${f.home}`]&&!apiResults[k1];
@@ -2288,51 +2236,10 @@ async function loadGoleadores(){
     renderStats(el);
     return;
   }
-  // Build stats from cache
   renderStats(el);
-  // Load missing matches
-  const missing=finishedFx.filter(f=>{const k=`${f.home}|${f.away}`;return!statsCache[k];});
-  if(missing.length>0){
-    el.innerHTML+=`<div id="statsProgress" style="font-size:12px;color:var(--muted);text-align:center;margin-top:14px">${t('statsProgress',{done:0,total:missing.length})}</div>`;
-    await fetchMissingStats(missing,el);
-  }
 }
 async function fetchMissingStats(missing,el){
-  let done=0;
-  const delay=ms=>new Promise(r=>setTimeout(r,ms));
-  for(const f of missing){
-    try{
-      // Find event ID from API results
-      const k=`${f.home}|${f.away}`;
-      let eid=apiResults[k]?.id;
-      if(!eid){
-        eid=await findEventIdForFixture(f);
-      }
-      if(eid){
-        const[evD,tlD,luD]=await Promise.allSettled([
-          v1(`/lookupevent.php?id=${eid}`),
-          v1(`/lookuptimeline.php?id=${eid}`),
-          v1(`/lookuplineup.php?id=${eid}`)
-        ]);
-        const ev=evD.value&&evD.value.events&&evD.value.events[0];
-        statsCache[k]={
-          eid,
-          timeline:(tlD.value&&tlD.value.timeline)||[],
-          lineup:(luD.value&&luD.value.lineup)||[],
-          event:ev?{
-            idEvent:ev.idEvent,dateEvent:ev.dateEvent,strStatus:ev.strStatus,strHomeTeam:ev.strHomeTeam,strAwayTeam:ev.strAwayTeam,
-            intHomeScore:ev.intHomeScore,intAwayScore:ev.intAwayScore
-          }:null
-        };
-        storageSet(STATS_KEY,JSON.stringify({_v:STATS_VERSION,items:statsCache}));
-      }
-      done++;
-      const p=document.getElementById('statsProgress');
-      if(p)p.textContent=t('statsProgress',{done,total:missing.length});
-      if(done%5===0)renderStats(el,true);
-      await delay(700); // respect rate limit
-    }catch(e){done++;await delay(500);}
-  }
+  await ensureStoredMatchStats();
   renderStats(el);
   const p=document.getElementById('statsProgress');
   if(p)p.remove();
@@ -2495,7 +2402,7 @@ function renderStats(el,append){
         if(!likely||!likely.strPlayer)return;
         addKeeperAggregate(keepers,{
           name:likely.strPlayer,team,cleanSheets:1,saves:0,goalsAgainst:0,
-          tentative:!!likely.tentative,confirmed:!!confirmed,source:confirmed?'TheSportsDB':'Squad fallback'
+          tentative:!!likely.tentative,confirmed:!!confirmed,source:confirmed?'Lineups':'Squad fallback'
         });
       }
       if(Number.isFinite(hs)&&hs===0)addKeeper(away);
@@ -2789,34 +2696,7 @@ const CONFS=[
   {name:'AFC',icon:'🌏',label:'Asia / Oceanía (10)',teams:['Japan','South Korea','Saudi Arabia','Iran','Uzbekistan','Jordan','Iraq','Qatar','Australia','New Zealand']}
 ];
 
-// VERIFIED TheSportsDB team IDs — extracted from thesportsdb.com/season/4429-fifa-world-cup/2026
-const TEAM_DB_IDS={
-  // UEFA
-  'Spain':133909,'France':133913,'Germany':133907,'Netherlands':133905,
-  'Belgium':134515,'Portugal':133908,'England':133914,'Croatia':133912,
-  'Switzerland':134506,'Austria':135986,'Scotland':136450,'Sweden':133916,
-  'Czechia':133904,'Bosnia & Herzegovina':134510,'Türkiye':135985,
-  // Norway: not found on TheSportsDB season page — will use name search fallback
-  // CONMEBOL
-  'Brazil':134496,'Argentina':134509,'Colombia':134501,'Uruguay':134504,
-  'Ecuador':134507,'Paraguay':136471,
-  // CONCACAF
-  'United States':134514,'Mexico':134497,'Canada':140073,'Panama':136141,
-  'Haiti':140175,'Curaçao':140271,
-  // CAF
-  'Morocco':136139,'South Africa':136482,'Ivory Coast':134502,'Egypt':136138,
-  'Senegal':136143,'Ghana':134513,'Algeria':134516,'DR Congo':136475,
-  'Cape Verde':136477,'Tunisia':136142,
-  // AFC
-  'Japan':134503,'South Korea':134517,'Saudi Arabia':136137,'Iran':134511,
-  'Uzbekistan':140151,'Jordan':140145,'Iraq':140148,'Qatar':136472,
-  // OFC
-  'Australia':134500,'New Zealand':137449
-};
-
-// Alternate search names
-// Alternate search names matching TheSportsDB strTeam exactly
-const TEAM_ALIASES={
+const EXTERNAL_TEAM_ALIASES={
   'United States':'USA',
   'Czechia':'Czech Republic',
   'Bosnia & Herzegovina':'Bosnia-Herzegovina',
@@ -2885,37 +2765,15 @@ async function loadTeamByName(name){
   const back='<button class="btn btn-sm" style="margin-bottom:12px" onclick="initEquipos()">← '+t('allTeams')+'</button>';
   el.innerHTML=back+'<div class="loading"><div class="spinner"></div><span class="loading-text">'+t('loadingTeam',{team:name})+'</span></div>';
   try{
-    let team=null;
-    // Strategy 1: use known team ID directly
-    const knownId=TEAM_DB_IDS[name];
-    if(knownId){
-      try{
-        const d=await v1('/lookupteam.php?id='+knownId);
-        team=(d.teams||[])[0]||null;
-      }catch(e2){console.warn('Direct ID lookup failed:',e2);}
-    }
-    // Strategy 2: search by name
-    if(!team){
-      const searchNames=[name,TEAM_ALIASES[name]].filter(Boolean);
-      for(const sn of searchNames){
-        if(team)break;
-        try{
-          const d=await v1('/searchteams.php?t='+encodeURIComponent(sn));
-          const results=(d.teams||[]).filter(function(t){
-            return t.strSport==='Soccer'||t.strSport==='Football';
-          });
-          team=results.find(function(t){return t.strTeam===name||t.strTeam===sn;})||
-               results.find(function(t){return(t.strCountry||'').toLowerCase()===(name||'').toLowerCase();})||
-               results[0]||null;
-        }catch(e3){console.warn('Search failed for',sn,e3);}
-      }
-    }
-    if(!team){
+    await loadLocalSquads();
+    const squad=getLocalSquad(name);
+    if(!squad){
       el.innerHTML=back+'<div class="empty"><div class="empty-icon">🔍</div>'+
         '<div class="empty-text">'+t('teamNotFound')+'<br><br>'+
         '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">'+t('viewSquadsFifa')+' →</a></div></div>';
       return;
     }
+    const team={strTeam:name,strCountry:name,strBadge:'',strManager:squad.coach||squad.manager||''};
     showTeamSquad(team,name,el,back);
   }catch(e){
     el.innerHTML=back+'<div class="empty"><div class="empty-icon">⚠️</div>'+
@@ -2958,23 +2816,14 @@ async function showTeamSquad(team,name,el,back){
   try{
     await Promise.all([loadLocalSquads(),loadPlayerRoles()]);
     const officialSquad=getLocalSquad(name);
-    let tsdbPlayers=[];
-    try{
-      const d=await v1('/lookup_all_players.php?id='+team.idTeam);
-      tsdbPlayers=d.player||[];
-    }catch(e){
-      if(!officialSquad)throw e;
-    }
     const players=officialSquad&&Array.isArray(officialSquad.players)?
-      officialSquad.players.map(p=>officialSquadDisplayPlayer(name,p,tsdbPlayers)):
-      tsdbPlayers;
+      officialSquad.players.map(p=>officialSquadDisplayPlayer(name,p,[])):
+      [];
     if(!players.length){
-      // No players in DB — show FIFA link
       el.innerHTML=back+profile+
         '<div class="empty"><div class="empty-icon">👤</div>'+
         '<div class="empty-text">'+t('noSquad',{team:name})+'<br><br>'+
-        '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">'+t('officialSquad')+' →</a><br><br>'+
-        '<a href="https://www.thesportsdb.com/team/'+team.idTeam+'" target="_blank" rel="noopener" style="color:var(--muted);font-size:11px">'+t('viewTsdb')+'</a>'+
+        '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="color:var(--gold)">'+t('officialSquad')+' →</a>'+
         '</div></div>';
       return;
     }
@@ -3011,7 +2860,7 @@ async function showTeamSquad(team,name,el,back){
         (club?'<div class="player-chip-club">'+escHtml(club)+'</div>':'')+'</div>'+
         '</button>';
     }
-    const squadSource=officialSquad?t('officialSquadSource'):'TheSportsDB';
+    const squadSource=t('officialSquadSource');
     let ph='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'+
       '<div class="sec-ttl">'+t('squad')+' ('+players.length+')</div>'+
       '<a href="https://www.fifa.com/en/tournament/2026/teams" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold)">FIFA.com →</a></div>';
@@ -3084,7 +2933,6 @@ function renderPlayerDetail(record,espn,loadingEspn){
   const bio=p.strDescriptionES||p.strDescriptionEN||'';
   const espnUrl=playerLink(espn&&espn.links,'playercard')||(p.idESPN?'https://www.espn.com/soccer/player/_/id/'+p.idESPN:'');
   const links=[
-    p.idPlayer?'<a class="btn btn-sm" href="https://www.thesportsdb.com/player/'+escHtml(p.idPlayer)+'" target="_blank" rel="noopener">TheSportsDB</a>':'',
     espnUrl?'<a class="btn btn-sm" href="'+escHtml(espnUrl)+'" target="_blank" rel="noopener">ESPN</a>':'',
     p.idTransferMkt?'<a class="btn btn-sm" href="https://www.transfermarkt.com/-/profil/spieler/'+escHtml(p.idTransferMkt)+'" target="_blank" rel="noopener">Transfermarkt</a>':'',
     p.idWikidata?'<a class="btn btn-sm" href="https://www.wikidata.org/wiki/'+escHtml(p.idWikidata)+'" target="_blank" rel="noopener">Wikidata</a>':''
@@ -3375,7 +3223,7 @@ function squadPlayerMeta(team,p){
     block,
     role,
     official,
-    source:refinedRole?'override':officialRole?'convocatoria':official?'convocatoria':'TheSportsDB',
+    source:refinedRole?'override':officialRole?'convocatoria':official?'convocatoria':'datos locales',
     club:official&&official.club||p&&p.strTeam||'',
     number:official&&official.num||p&&p.strNumber||''
   };
@@ -3475,7 +3323,7 @@ function cleanEventPlayerName(name){
   let txt=String(name||'').trim();
   const conceded=txt.match(/penalty\s+conceded\s+by\s+(.+)/i)||txt.match(/penalti\s+cometido\s+por\s+(.+)/i);
   if(conceded)txt=conceded[1].trim();
-  return txt.replace(/\s+following\b.*$/i,'').replace(/\s+with\b.*$/i,'').trim();
+  return txt.replace(/\s+following\b.*$/i,'').replace(/\s+with\b.*$/i,'').replace(/\s*\([^)]*\)\s*$/,'').trim();
 }
 function eventPlayer(ev){
   const vals=[ev.strPlayer,ev.strPlayer1,ev.strPlayer2,ev.strTimelinePlayer];
@@ -3501,7 +3349,10 @@ function isPenaltyConceded(ev){
 function penaltyAwardedTeamFromEvent(ev){
   const txt=String(ev.strComment||ev.strEvent||'').trim();
   const m=txt.match(/^Penalty\s+(.+?)\./i)||txt.match(/^Penalti\s+(.+?)\./i);
-  return m?normName(m[1].trim()):'';
+  if(!m)return '';
+  const candidate=m[1].trim();
+  if(/^(conceded|missed|saved|scored|converted|won by|cometido|fallado|parado|marcado)\b/i.test(candidate))return '';
+  return normName(candidate);
 }
 function teamSide(team,home,away){
   if(sameTeam(team,home))return 'home';
@@ -3543,19 +3394,25 @@ function sameTimelineEvent(a,b){
   const ka=timelineKind(a),kb=timelineKind(b);
   if(ka!==kb)return false;
   const pa=squadPlayerKey(eventPlayer(a)||''),pb=squadPlayerKey(eventPlayer(b)||'');
-  const ta=stripText(normName(a.strTeam||'')),tb=stripText(normName(b.strTeam||''));
+  const teamA=normName(a.strTeam||''),teamB=normName(b.strTeam||'');
+  const ta=stripText(teamA),tb=stripText(teamB);
+  const sameTimelineTeam=!!(teamA&&teamB&&(
+    (typeof sameEspnTeam==='function'&&sameEspnTeam(teamA,teamB))||
+    (typeof sameTeam==='function'&&sameTeam(teamA,teamB))||
+    ta===tb
+  ));
   const ca=eventCommentKey(a),cb=eventCommentKey(b);
   const ma=minuteScore(eventMinute(a)),mb=minuteScore(eventMinute(b));
   if(ma>=0&&mb>=0&&Math.abs(ma-mb)>0)return false;
   if(ka==='penalty'){
-    if(ta&&tb&&ta===tb)return true;
+    if(sameTimelineTeam)return true;
     if(pa&&pb&&(pa===pb||pa.includes(pb)||pb.includes(pa)))return true;
   }
-  if((ka==='yellow'||ka==='red')&&pa&&pb&&pa===pb&&(!ta||!tb||ta===tb))return true;
+  if((ka==='yellow'||ka==='red')&&pa&&pb&&pa===pb&&(!ta||!tb||sameTimelineTeam))return true;
   const sameComment=!ca||!cb||ca===cb||ca.includes(cb)||cb.includes(ca);
-  if(pa&&pb&&pa===pb&&ta&&tb&&ta===tb&&sameComment)return true;
+  if(pa&&pb&&pa===pb&&sameTimelineTeam&&sameComment)return true;
   if(pa&&pb&&pa===pb&&(!ta||!tb)&&sameComment)return true;
-  if(ta&&tb&&ta===tb&&ca&&cb&&ca===cb)return true;
+  if(sameTimelineTeam&&ca&&cb&&ca===cb)return true;
   return !pa&&!pb&&ca&&cb&&ca===cb;
 }
 function mergeTimelineEvent(a,b){
@@ -3701,12 +3558,12 @@ function renderMatchStats(stats,ev,timeline,espnMatch){
     {key:'corners',keys:['Corners','Corner Kicks'],label:'corners',icon:'◿'}
   ];
   let html='<div style="margin-top:12px"><div class="sec-ttl" style="margin-bottom:8px">'+t('matchStats')+'</div>';
-  let rendered=0,usedEspn=false,usedTsdb=false;
+  let rendered=0,usedEspn=false,usedExternalStats=false;
   rows.forEach(function(def){
     const s=findStat(stats,def.keys);
     const eh=def.noEspn?null:espnStatNum(espnMatch,def.key,'home'),ea=def.noEspn?null:espnStatNum(espnMatch,def.key,'away');
     const th=s?statNum(s,'home'):null,ta=s?statNum(s,'away'):null;
-    if(s)usedTsdb=true;
+    if(s)usedExternalStats=true;
     if(eh!==null||ea!==null)usedEspn=true;
     if(!s&&eh===null&&ea===null&&!def.override)return;
     let h=eh!==null?eh:(th!==null?th:0);
@@ -3725,7 +3582,7 @@ function renderMatchStats(stats,ev,timeline,espnMatch){
     rendered++;
   });
   if(!rendered)return'';
-  const sources=[usedEspn?'ESPN':'',usedTsdb?'TheSportsDB':'',timeline&&timeline.length?'Timeline':''].filter(Boolean);
+  const sources=[usedEspn?'ESPN':'',usedExternalStats?'Datos guardados':'',timeline&&timeline.length?'Timeline':''].filter(Boolean);
   if(sources.length)html+='<div class="stat-source">'+t('lineupsSource')+': '+sources.join(' + ')+'</div>';
   return html+'</div>';
 }
@@ -3958,12 +3815,7 @@ async function loadDaznHighlights(eventId,ev){
 async function loadEventHighlights(eventId,dateEvent,seed){
   let hls=normalizeHighlightsData(seed);
   if(hls.length)return hls;
-  if(!dateEvent)return[];
-  try{
-    const d=await v1(`/eventshighlights.php?d=${dateEvent}&l=${LEAGUE_ID}`,2500);
-    hls=normalizeHighlightsData(d).filter(h=>String(h.idEvent||'')===String(eventId));
-  }catch{}
-  return hls;
+  return [];
 }
 function renderHighlightsSection(hls){
   if(!hls.length)return'';
@@ -4019,14 +3871,15 @@ const ESPN_TEAM_ALIASES={
   'Ivory Coast':['ivory coast','cote d ivoire','costa de marfil'],
   'Cape Verde':['cape verde','cabo verde'],
   'Saudi Arabia':['saudi arabia','arabia saudi','arabia saudí'],
-  'New Zealand':['new zealand','nueva zelanda']
+  'New Zealand':['new zealand','nueva zelanda'],
+  'Iran':['iran','ir iran','i r iran']
 };
 function espnNorm(s){
   return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').trim();
 }
 function espnAliases(team){
   const base=normName(team||'');
-  return [...new Set([team,base,TEAM_ALIASES&&TEAM_ALIASES[base],...(ESPN_TEAM_ALIASES[base]||[])].filter(Boolean).map(espnNorm))];
+  return [...new Set([team,base,EXTERNAL_TEAM_ALIASES&&EXTERNAL_TEAM_ALIASES[base],...(ESPN_TEAM_ALIASES[base]||[])].filter(Boolean).map(espnNorm))];
 }
 function sameEspnTeam(a,b){
   const aa=espnAliases(a),bb=espnAliases(b);
@@ -4520,127 +4373,35 @@ async function openDetail(eid,date,home,away){
   panel.classList.add('open');close.style.display='flex';
   document.body.style.overflow='hidden';
   inner.innerHTML='<div class="loading" style="min-height:200px"><div class="spinner"></div><span class="loading-text">Cargando detalles...</span></div>';
-  let eventId=eid;
-  if(eventId&&Number(eventId)<100000)eventId=null;
-  if(!eventId||eventId===0){
-    try{
-      const k=`${home}|${away}`;
-      eventId=apiResults[k]&&apiResults[k].id;
-      if(!eventId){
-        const fx=FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away)&&(!date||f.date===date))||
-          FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away));
-        eventId=fx?await findEventIdForFixture(fx):null;
-      }
-    }catch{}
-  }
   const fxDetail=FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away)&&(!date||f.date===date))||
     FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away));
-  const espnLivePromise=fxDetail?loadEspnLiveData(fxDetail):Promise.resolve(null);
-  if(!eventId){
-    const espnLive=await espnLivePromise;
+  try{
+    const espnLive=fxDetail?await loadEspnLiveData(fxDetail):null;
     if(espnLive&&fxDetail){
       inner.innerHTML=await renderEspnOnlyDetail(fxDetail,espnLive);
       return;
     }
-    const fx=FIXTURES.find(f=>f.home===home&&f.away===away&&f.date===date);
-    if(fx){
-      const es=toES(fx.date,fx.time);
-      inner.innerHTML=`<div style="padding:20px;text-align:center">
-        <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:10px">${fx.group}</div>
-        <div style="display:flex;justify-content:center;gap:20px;align-items:center;margin:12px 0">
-          <div style="text-align:center"><span style="font-size:36px">${fx.homeFlag}</span><div style="font-family:var(--disp);font-size:16px;margin-top:5px">${fx.home}</div></div>
-          <div style="font-family:var(--mono);font-size:18px;color:var(--muted)">VS</div>
-          <div style="text-align:center"><span style="font-size:36px">${fx.awayFlag}</span><div style="font-family:var(--disp);font-size:16px;margin-top:5px">${fx.away}</div></div>
-        </div>
-        ${es?`<div style="background:rgba(201,162,39,.06);border:1px solid var(--border);border-radius:8px;padding:9px 14px;display:inline-flex;align-items:center;gap:8px;margin-top:6px">
-          <span style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--gold)">${es.time}</span>
-          <span style="font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--muted)">${fx.time} UTC</span>
-        </div>`:''}
-        <div style="font-size:13px;color:var(--muted);margin-top:8px">📍 ${fx.venue}, ${fx.city}</div>
-        ${detailConfidenceHtml(fx,{sources:['Calendario'],updatedAt:null})}
-        ${renderMatchPreview(fx,null)}
-      </div>`;
-    }else inner.innerHTML='<div class="empty" style="padding:40px"><div class="empty-icon">📅</div><div class="empty-text">Partido no encontrado</div></div>';
-    return;
-  }
-  try{
-    const[evD,tlD,stD,hlD,luD,espnD]=await Promise.allSettled([
-      v1(`/lookupevent.php?id=${eventId}`),
-      v1(`/lookuptimeline.php?id=${eventId}`),
-      v1(`/lookupeventstats.php?id=${eventId}`),
-      v2(`/lookup/event_highlights/${eventId}`),
-      v1(`/lookuplineup.php?id=${eventId}`),
-      espnLivePromise
-    ]);
-    const espnLive=espnD.status==='fulfilled'?espnD.value:null;
-    const ev=(evD.value&&evD.value.events&&evD.value.events[0]);
-    if(!ev){inner.innerHTML='<div class="empty" style="padding:40px"><div class="empty-icon">❌</div><div class="empty-text">Sin datos API</div></div>';return;}
-    const es=toES(ev.dateEvent,ev.strTime&&ev.strTime.slice(0,5));
-    const espnStatus=espnLive&&espnLive.event?espnEventStatus(espnLive.event):null;
-    const espnState=espnStatus&&espnStatus.type&&espnStatus.type.state;
-    const espnStatusDetail=espnStatus&&(espnStatus.displayClock||espnStatus.type&&espnStatus.type.shortDetail||espnStatus.type&&espnStatus.type.detail);
-    const espnLiveScore=espnLive&&fxDetail?espnScore(espnLive.event,fxDetail):null;
-    const displayHomeScore=espnLiveScore&&espnLiveScore.home!==null?espnLiveScore.home:ev.intHomeScore;
-    const displayAwayScore=espnLiveScore&&espnLiveScore.away!==null?espnLiveScore.away:ev.intAwayScore;
-    const fin=espnState==='post'||isFin(ev.strStatus),live2=espnState==='in'||isLive(ev.strStatus);
-    const hasScore=displayHomeScore!==null&&displayHomeScore!==undefined;
-    const tsdbHls=await loadEventHighlights(eventId,ev.dateEvent,hlD.value);
-    const daznHls=await loadDaznHighlights(eventId,ev);
-    const espnHls=espnLive&&espnLive.highlights||[];
-    const seenHls={};
-    const hls=daznHls.concat(espnHls,tsdbHls).filter(function(h){
-      const key=h.strVideo||h.url||h.videoId||h.strFilename;
-      if(!key||seenHls[key])return false;
-      seenHls[key]=true;
-      return true;
-    });
-    let html=`<div style="padding:16px">
-      <div style="text-align:center;margin-bottom:12px">
-        <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:7px">${ev.strRound||''}</div>
-        <div style="display:flex;justify-content:center;gap:14px;align-items:center">
-          <div style="text-align:center">
-            ${ev.strHomeTeamBadge?`<img src="${ev.strHomeTeamBadge}/medium" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:
-            `<div style="font-size:32px;margin-bottom:4px">${FLAGS[ev.strHomeTeam]||'🏳️'}</div>`}
-            <div style="font-family:var(--disp);font-size:14px">${ev.strHomeTeam}</div>
-          </div>
-          <div style="text-align:center;min-width:65px">
-            ${(fin||live2)&&hasScore?`<div style="font-family:var(--mono);font-size:30px;font-weight:700;color:${live2?'var(--live)':'var(--text)'}">${displayHomeScore} – ${displayAwayScore}</div>`:
-            `<div style="font-family:var(--mono);font-size:16px;color:var(--muted)">VS</div>`}
-            ${live2?livePhaseTagsHtml(espnStatusDetail||ev.strProgress,espnStatus?espnPeriodLabel(espnStatus):''):''}
-          </div>
-          <div style="text-align:center">
-            ${ev.strAwayTeamBadge?`<img src="${ev.strAwayTeamBadge}/medium" style="width:42px;height:42px;object-fit:contain;display:block;margin:0 auto 4px">`:
-            `<div style="font-size:32px;margin-bottom:4px">${FLAGS[ev.strAwayTeam]||'🏳️'}</div>`}
-            <div style="font-family:var(--disp);font-size:14px">${ev.strAwayTeam}</div>
-          </div>
-        </div>
-        ${es?`<div style="background:rgba(201,162,39,.06);border:1px solid var(--border);border-radius:8px;padding:7px 12px;display:inline-flex;align-items:center;gap:8px;margin-top:8px">
-          <span style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--gold)">${es.time}</span>
-          <span style="font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--muted)">${ev.strTime&&ev.strTime.slice(0,5)||''} UTC</span>
-        </div>`:''}
-        ${ev.strVenue?`<div style="font-size:13px;color:var(--muted);margin-top:6px">📍 ${ev.strVenue}${ev.strCity?', '+ev.strCity:''}</div>`:''}
-      </div>`;
-    html+=detailConfidenceHtml(fxDetail,{sources:[espnLive?'ESPN directo':'',ev?'TheSportsDB':''],updatedAt:espnLive&&espnLive.fetchedAt});
-    html+=renderMatchPreview(fxDetail,espnLive);
-    html+=renderHighlightsSection(hls);
-    // Stats
-    const stats=(stD.value&&stD.value.eventstats)||[];
-    const tl=(tlD.value&&tlD.value.timeline)||[];
-    const espnStoredStats=await loadStoredMatchStats(eventId,ev);
-    const espnMatchStats=(espnLive&&espnLive.stats)||espnStoredStats;
-    const liveTimeline=(espnLive&&espnLive.timeline&&espnLive.timeline.length)?espnLive.timeline:tl;
-    const statsHtml=renderMatchStats(stats,ev,liveTimeline,espnMatchStats);
-    const timelineHtml=liveTimeline.length?renderSplitTimeline(liveTimeline,ev.strHomeTeam,ev.strAwayTeam):'';
-    const storedLineup=await loadStoredLineups(eventId,ev);
-    const lineupHtml=renderLineupsSection((espnLive&&espnLive.lineup)||storedLineup||((luD.value&&luD.value.lineup)||[]),ev.strHomeTeam,ev.strAwayTeam);
-    const detailState=espnState||(live2?'in':fin?'post':'pre');
-    const pendingHtml=pendingMainHtml(!!statsHtml,!!timelineHtml,detailState);
-    html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+pendingHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
-    html+='</div>';
-    inner.innerHTML=html;
-  }catch(e){inner.innerHTML=`<div class="empty" style="padding:40px"><div class="empty-icon">⚠️</div><div class="empty-text">${e.message}</div></div>`;}
+  }catch(e){console.warn('ESPN detail failed',e);}
+  const fx=fxDetail;
+  if(fx){
+    const es=toES(fx.date,fx.time);
+    inner.innerHTML=`<div style="padding:20px;text-align:center">
+      <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:10px">${fx.group}</div>
+      <div style="display:flex;justify-content:center;gap:20px;align-items:center;margin:12px 0">
+        <div style="text-align:center"><span style="font-size:36px">${fx.homeFlag}</span><div style="font-family:var(--disp);font-size:16px;margin-top:5px">${fx.home}</div></div>
+        <div style="font-family:var(--mono);font-size:18px;color:var(--muted)">VS</div>
+        <div style="text-align:center"><span style="font-size:36px">${fx.awayFlag}</span><div style="font-family:var(--disp);font-size:16px;margin-top:5px">${fx.away}</div></div>
+      </div>
+      ${es?`<div style="background:rgba(201,162,39,.06);border:1px solid var(--border);border-radius:8px;padding:9px 14px;display:inline-flex;align-items:center;gap:8px;margin-top:6px">
+        <span style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--gold)">${es.time}</span>
+        <span style="font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:1px">🇪🇸 hora España</span>
+        <span style="font-family:var(--mono);font-size:12px;color:var(--muted)">${fx.time} UTC</span>
+      </div>`:''}
+      <div style="font-size:13px;color:var(--muted);margin-top:8px">📍 ${fx.venue}, ${fx.city}</div>
+      ${detailConfidenceHtml(fx,{sources:['Calendario'],updatedAt:null})}
+      ${renderMatchPreview(fx,null)}
+    </div>`;
+  }else inner.innerHTML='<div class="empty" style="padding:40px"><div class="empty-icon">📅</div><div class="empty-text">Partido no encontrado</div></div>';
 }
 function forceRefreshDetail(date,home,away){
   const btn=document.getElementById('detailRefreshBtn');
