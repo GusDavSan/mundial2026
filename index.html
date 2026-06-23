@@ -361,6 +361,19 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .event-title{font-size:14px;font-weight:650;color:var(--text);line-height:1.25}
 .event-meta{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
 .event-empty{padding:12px;color:var(--muted);font-size:13px;text-align:center}
+.sub-row{display:grid;grid-template-columns:42px minmax(120px,210px) minmax(0,1fr);gap:12px;align-items:center;padding:10px 11px;border-top:1px solid var(--border)}
+.sub-row:first-of-type{border-top:none}
+.sub-team{font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub-flow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:center}
+.sub-player{min-width:0}
+.sub-line{display:flex;align-items:center;gap:7px;min-width:0}
+.sub-mark{font-family:var(--mono);font-size:20px;font-weight:900;line-height:1;flex-shrink:0}
+.sub-in .sub-mark{color:var(--live)}
+.sub-out .sub-mark{color:#ff7a62}
+.sub-name{font-size:14px;font-weight:750;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub-action{font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.sub-in .sub-action{color:var(--live)}
+.sub-out .sub-action{color:#ff9a7a}
 .lineup-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .detail-body-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,380px);gap:14px;align-items:start}
 .detail-side{position:sticky;top:58px}
@@ -448,6 +461,9 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .kit-number{top:20px;font-size:19px}
   .kit-name{max-width:64px;font-size:10px;padding:2px 5px}
   .event-row{grid-template-columns:36px 24px 1fr;padding:9px 10px}
+  .sub-row{grid-template-columns:36px 1fr;gap:8px;padding:10px}
+  .sub-flow{grid-column:2;grid-template-columns:1fr;gap:7px}
+  .sub-team{grid-column:2}
   .live-mini-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .live-insight-top{align-items:flex-start}
   .live-momentum-bar{max-width:150px}
@@ -698,7 +714,7 @@ const I18N={
     keeperEstimated:'Ranking estimado',keeperSaves:'Paradas',keeperSavePct:'% paradas',keeperGoalsAgainst:'GC',keeperCleanSheets:'P0',keeperPenaltySaves:'Pen.',
     matchStats:'ESTADÍSTICAS',timeline:'TIMELINE',timelineGoals:'GOLES',timelineCards:'TARJETAS',timelineSubs:'CAMBIOS',timelineOther:'OTROS',
     goalEvent:'Gol',penaltyGoal:'Penalti',penaltyEvent:'Penalti',penalties:'Penaltis',penaltyFor:'A favor de',noMinute:'s/min',yellowCard:'Tarjeta amarilla',redCard:'Tarjeta roja',cardEvent:'Tarjeta',substitutionEvent:'Cambio',varEvent:'VAR',otherEvent:'Evento',assistLabel:'Asistencia',
-    noEventsInBlock:'Sin eventos en este bloque.',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
+    noEventsInBlock:'Sin eventos en este bloque.',subIn:'entra',subOut:'sale',lineups:'ALINEACIONES',lineupsUnavailable:'La API todavía no ha publicado las alineaciones de este partido.',
     starters:'Titulares',bench:'Banquillo',formation:'Formación',lineupsSource:'Fuente',
     shots:'Tiros',shotsOnGoal:'Tiros a puerta',possession:'Posesión',passes:'Pases',fouls:'Faltas',yellowCards:'Tarjetas amarillas',redCards:'Tarjetas rojas',corners:'Córners',
     shotsShort:'Tiros',shotsOnTargetShort:'A puerta',cardsShort:'🟨🟥',
@@ -746,7 +762,7 @@ const I18N={
     keeperEstimated:'Estimated ranking',keeperSaves:'Saves',keeperSavePct:'Save %',keeperGoalsAgainst:'GA',keeperCleanSheets:'CS',keeperPenaltySaves:'Pen.',
     matchStats:'STATS',timeline:'TIMELINE',timelineGoals:'GOALS',timelineCards:'CARDS',timelineSubs:'SUBSTITUTIONS',timelineOther:'OTHER',
     goalEvent:'Goal',penaltyGoal:'Penalty',penaltyEvent:'Penalty',penalties:'Penalties',penaltyFor:'For',noMinute:'no min',yellowCard:'Yellow card',redCard:'Red card',cardEvent:'Card',substitutionEvent:'Substitution',varEvent:'VAR',otherEvent:'Event',assistLabel:'Assist',
-    noEventsInBlock:'No events in this block.',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
+    noEventsInBlock:'No events in this block.',subIn:'enters',subOut:'leaves',lineups:'LINEUPS',lineupsUnavailable:'The API has not published lineups for this match yet.',
     starters:'Starters',bench:'Bench',formation:'Formation',lineupsSource:'Source',
     shots:'Shots',shotsOnGoal:'Shots on goal',possession:'Possession',passes:'Passes',fouls:'Fouls',yellowCards:'Yellow cards',redCards:'Red cards',corners:'Corners',
     shotsShort:'Shots',shotsOnTargetShort:'On target',cardsShort:'🟨🟥',
@@ -3451,6 +3467,58 @@ function timelineCounts(timeline,home,away){
   });
   return counts;
 }
+function rawEventText(ev){
+  return [
+    ev&&ev.strComment,ev&&ev.strEvent,ev&&ev.strTimelineDetail,ev&&ev.strTimelineType,
+    ev&&ev.strPlayer,ev&&ev.strPlayer1,ev&&ev.strPlayer2
+  ].filter(Boolean).join(' ');
+}
+function cleanSubstitutionName(name){
+  return cleanEventPlayerName(name)
+    .replace(/^substitution,\s*/i,'')
+    .replace(/^cambio,\s*/i,'')
+    .replace(/\s+replaces\b.*$/i,'')
+    .replace(/\s+sustituye\b.*$/i,'')
+    .replace(/\s+entra\b.*$/i,'')
+    .trim();
+}
+function substitutionParts(ev){
+  const raw=rawEventText(ev);
+  let team=normName(ev&&ev.strTeam||'');
+  const teamMatch=raw.match(/(?:Substitution|Cambio),\s*([^.;]+)[.;]/i);
+  if(!team&&teamMatch)team=normName(teamMatch[1].trim());
+  let inName='',outName='';
+  if(ev&&ev.strPlayer1&&ev.strPlayer2){
+    inName=cleanSubstitutionName(ev.strPlayer1);
+    outName=cleanSubstitutionName(ev.strPlayer2);
+  }
+  const replaceMatch=raw.match(/(?:Substitution|Cambio),\s*[^.]+\.\s*([^.;]+?)\s+(?:replaces|sustituye a|entra por)\s+([^.;]+?)(?:[.;]|$)/i)||
+    raw.match(/([^.;]+?)\s+(?:replaces|sustituye a|entra por)\s+([^.;]+?)(?:[.;]|$)/i);
+  if(replaceMatch){
+    inName=cleanSubstitutionName(replaceMatch[1]);
+    outName=cleanSubstitutionName(replaceMatch[2]);
+  }
+  if(!inName)inName=eventPlayer(ev)||timelineLabel(ev);
+  return {minute:eventMinute(ev)||t('noMinute'),team,inName,outName,raw,ev};
+}
+function renderSubstitutionBlock(title,events,home,away){
+  const rows=(events||[]).map(substitutionParts);
+  let html='<div class="event-block"><div class="event-block-hdr"><span class="event-block-title">'+title+'</span><span class="event-count">'+rows.length+'</span></div>';
+  if(!rows.length)return html+'<div class="event-empty">'+t('noEventsInBlock')+'</div></div>';
+  rows.forEach(function(row){
+    const team=row.team||'';
+    const teamFlag=FLAGS[normName(team)]||FLAGS[team]||'🏳️';
+    html+='<div class="sub-row">'+
+      '<div class="event-minute">'+escHtml(row.minute)+'</div>'+
+      '<div class="sub-team">'+teamFlag+' '+escHtml(team||'')+'</div>'+
+      '<div class="sub-flow">'+
+        '<div class="sub-player sub-in"><div class="sub-line"><span class="sub-mark">↑</span><span class="sub-name">'+escHtml(row.inName||'—')+'</span></div><div class="sub-action">'+t('subIn')+'</div></div>'+
+        (row.outName?'<div class="sub-player sub-out"><div class="sub-line"><span class="sub-mark">↓</span><span class="sub-name">'+escHtml(row.outName)+'</span></div><div class="sub-action">'+t('subOut')+'</div></div>':'')+
+      '</div>'+
+    '</div>';
+  });
+  return html+'</div>';
+}
 function renderTimelineBlock(title,events,home,away){
   let html='<div class="event-block"><div class="event-block-hdr"><span class="event-block-title">'+title+'</span><span class="event-count">'+events.length+'</span></div>';
   if(!events.length)return html+'<div class="event-empty">'+t('noEventsInBlock')+'</div></div>';
@@ -3491,7 +3559,7 @@ function renderSplitTimeline(timeline,home,away){
   html+=renderTimelineBlock('⚽ '+t('timelineGoals'),groups.goals,home,away);
   if(groups.penalties.length)html+=renderTimelineBlock(t('penalties'),groups.penalties,home,away);
   html+=renderTimelineBlock('🟨 '+t('timelineCards'),groups.cards,home,away);
-  if(groups.subs.length)html+=renderTimelineBlock('🔄 '+t('timelineSubs'),groups.subs,home,away);
+  if(groups.subs.length)html+=renderSubstitutionBlock(t('timelineSubs'),groups.subs,home,away);
   if(groups.other.length)html+=renderTimelineBlock(t('timelineOther'),groups.other,home,away);
   return html+'</div></div>';
 }
