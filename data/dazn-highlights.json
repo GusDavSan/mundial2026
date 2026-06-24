@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T23:31:26.701Z",
+  "updated": "2026-06-24T04:36:42.395Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -269,10 +269,10 @@
       "away": "DR Congo",
       "source": "DAZN ES",
       "title": "Portugal vs Uzbekistán (5-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Vxuz1k1MI3M",
-      "thumbnail": "https://i3.ytimg.com/vi/Vxuz1k1MI3M/hqdefault.jpg",
-      "videoId": "Vxuz1k1MI3M",
-      "publishedAt": "2026-06-23T21:06:28+00:00",
+      "url": "https://www.youtube.com/watch?v=9IhrhB278tw",
+      "thumbnail": "https://i.ytimg.com/vi/9IhrhB278tw/hqdefault.jpg",
+      "videoId": "9IhrhB278tw",
+      "publishedAt": "2026-06-23T21:06:14Z",
       "confidence": 12
     },
     {
@@ -281,12 +281,12 @@
       "home": "England",
       "away": "Croatia",
       "source": "DAZN ES",
-      "title": "Inglaterra vs Croacia (4-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=KUlR2yCkl24",
-      "thumbnail": "https://i.ytimg.com/vi/KUlR2yCkl24/hqdefault.jpg",
-      "videoId": "KUlR2yCkl24",
-      "publishedAt": "2026-06-18T00:00:12Z",
-      "confidence": 20
+      "title": "Panamá vs Croacia (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=V8aaT76J584",
+      "thumbnail": "https://i.ytimg.com/vi/V8aaT76J584/hqdefault.jpg",
+      "videoId": "V8aaT76J584",
+      "publishedAt": "2026-06-24T03:16:54Z",
+      "confidence": 12
     },
     {
       "matchId": 23,
@@ -294,12 +294,12 @@
       "home": "Ghana",
       "away": "Panama",
       "source": "DAZN ES",
-      "title": "Ghana vs Panamá (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Wt_tf-MknPo",
-      "thumbnail": "https://i.ytimg.com/vi/Wt_tf-MknPo/hqdefault.jpg",
-      "videoId": "Wt_tf-MknPo",
-      "publishedAt": "2026-06-18T03:12:49Z",
-      "confidence": 20
+      "title": "Panamá vs Croacia (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=V8aaT76J584",
+      "thumbnail": "https://i.ytimg.com/vi/V8aaT76J584/hqdefault.jpg",
+      "videoId": "V8aaT76J584",
+      "publishedAt": "2026-06-24T03:16:54Z",
+      "confidence": 12
     },
     {
       "matchId": 24,
@@ -308,10 +308,10 @@
       "away": "Colombia",
       "source": "DAZN ES",
       "title": "Portugal vs Uzbekistán (5-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Vxuz1k1MI3M",
-      "thumbnail": "https://i3.ytimg.com/vi/Vxuz1k1MI3M/hqdefault.jpg",
-      "videoId": "Vxuz1k1MI3M",
-      "publishedAt": "2026-06-23T21:06:28+00:00",
+      "url": "https://www.youtube.com/watch?v=9IhrhB278tw",
+      "thumbnail": "https://i.ytimg.com/vi/9IhrhB278tw/hqdefault.jpg",
+      "videoId": "9IhrhB278tw",
+      "publishedAt": "2026-06-23T21:06:14Z",
       "confidence": 12
     },
     {
@@ -581,10 +581,36 @@
       "away": "Uzbekistan",
       "source": "DAZN ES",
       "title": "Portugal vs Uzbekistán (5-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Vxuz1k1MI3M",
-      "thumbnail": "https://i3.ytimg.com/vi/Vxuz1k1MI3M/hqdefault.jpg",
-      "videoId": "Vxuz1k1MI3M",
-      "publishedAt": "2026-06-23T21:06:28+00:00",
+      "url": "https://www.youtube.com/watch?v=9IhrhB278tw",
+      "thumbnail": "https://i.ytimg.com/vi/9IhrhB278tw/hqdefault.jpg",
+      "videoId": "9IhrhB278tw",
+      "publishedAt": "2026-06-23T21:06:14Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 46,
+      "date": "2026-06-23",
+      "home": "England",
+      "away": "Ghana",
+      "source": "DAZN ES",
+      "title": "Inglaterra vs Ghana (0-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=xTfPWbu31iw",
+      "thumbnail": "https://i.ytimg.com/vi/xTfPWbu31iw/hqdefault.jpg",
+      "videoId": "xTfPWbu31iw",
+      "publishedAt": "2026-06-24T00:00:07Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 47,
+      "date": "2026-06-23",
+      "home": "Panama",
+      "away": "Croatia",
+      "source": "DAZN ES",
+      "title": "Panamá vs Croacia (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=V8aaT76J584",
+      "thumbnail": "https://i.ytimg.com/vi/V8aaT76J584/hqdefault.jpg",
+      "videoId": "V8aaT76J584",
+      "publishedAt": "2026-06-24T03:16:54Z",
       "confidence": 20
     }
   ]
