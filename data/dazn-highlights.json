@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T21:46:23.737Z",
+  "updated": "2026-06-24T23:34:49.327Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -60,11 +60,11 @@
       "home": "Qatar",
       "away": "Switzerland",
       "source": "DAZN ES",
-      "title": "Canadá vs Qatar  (6-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=iPakdfKDqpM",
-      "thumbnail": "https://i.ytimg.com/vi/iPakdfKDqpM/hqdefault.jpg",
-      "videoId": "iPakdfKDqpM",
-      "publishedAt": "2026-06-19T02:11:56Z",
+      "title": "Suiza vs Canadá  (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9h99goY_6lg",
+      "thumbnail": "https://i2.ytimg.com/vi/9h99goY_6lg/hqdefault.jpg",
+      "videoId": "9h99goY_6lg",
+      "publishedAt": "2026-06-24T22:57:46+00:00",
       "confidence": 12
     },
     {
@@ -333,12 +333,12 @@
       "home": "Switzerland",
       "away": "Bosnia & Herzegovina",
       "source": "DAZN ES",
-      "title": "Suiza vs Bosnia (4-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=06A5HPbYPD8",
-      "thumbnail": "https://i.ytimg.com/vi/06A5HPbYPD8/hqdefault.jpg",
-      "videoId": "06A5HPbYPD8",
-      "publishedAt": "2026-06-18T22:55:59Z",
-      "confidence": 20
+      "title": "Suiza vs Canadá  (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9h99goY_6lg",
+      "thumbnail": "https://i2.ytimg.com/vi/9h99goY_6lg/hqdefault.jpg",
+      "videoId": "9h99goY_6lg",
+      "publishedAt": "2026-06-24T22:57:46+00:00",
+      "confidence": 12
     },
     {
       "matchId": 27,
@@ -346,12 +346,12 @@
       "home": "Canada",
       "away": "Qatar",
       "source": "DAZN ES",
-      "title": "Canadá vs Qatar  (6-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=iPakdfKDqpM",
-      "thumbnail": "https://i.ytimg.com/vi/iPakdfKDqpM/hqdefault.jpg",
-      "videoId": "iPakdfKDqpM",
-      "publishedAt": "2026-06-19T02:11:56Z",
-      "confidence": 20
+      "title": "Suiza vs Canadá  (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9h99goY_6lg",
+      "thumbnail": "https://i2.ytimg.com/vi/9h99goY_6lg/hqdefault.jpg",
+      "videoId": "9h99goY_6lg",
+      "publishedAt": "2026-06-24T22:57:46+00:00",
+      "confidence": 12
     },
     {
       "matchId": 28,
@@ -624,6 +624,45 @@
       "thumbnail": "https://i.ytimg.com/vi/egmSFb7aWuY/hqdefault.jpg",
       "videoId": "egmSFb7aWuY",
       "publishedAt": "2026-06-24T06:16:52Z",
+      "confidence": 14
+    },
+    {
+      "matchId": 49,
+      "date": "2026-06-24",
+      "home": "Switzerland",
+      "away": "Canada",
+      "source": "DAZN ES",
+      "title": "Suiza vs Canadá  (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=9h99goY_6lg",
+      "thumbnail": "https://i2.ytimg.com/vi/9h99goY_6lg/hqdefault.jpg",
+      "videoId": "9h99goY_6lg",
+      "publishedAt": "2026-06-24T22:57:46+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 50,
+      "date": "2026-06-24",
+      "home": "Bosnia & Herzegovina",
+      "away": "Qatar",
+      "source": "DAZN ES",
+      "title": "Bosnia vs Qatar (3-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=xeUEYwZfImo",
+      "thumbnail": "https://i1.ytimg.com/vi/xeUEYwZfImo/hqdefault.jpg",
+      "videoId": "xeUEYwZfImo",
+      "publishedAt": "2026-06-24T22:57:41+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 51,
+      "date": "2026-06-24",
+      "home": "Scotland",
+      "away": "Brazil",
+      "source": "DAZN ES",
+      "title": "🚨 ÚLTIMA HORA: De momento, no han llegado los ovnis a Miami. Tiembla el Escocia - Brasil 🛸",
+      "url": "https://www.youtube.com/watch?v=thaV1QCg6lw",
+      "thumbnail": "https://i1.ytimg.com/vi/thaV1QCg6lw/hqdefault.jpg",
+      "videoId": "thaV1QCg6lw",
+      "publishedAt": "2026-06-24T21:22:56+00:00",
       "confidence": 14
     }
   ]
