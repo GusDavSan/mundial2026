@@ -2827,7 +2827,7 @@ async function showTeamSquad(team,name,el,back){
   const profile=buildProfile(initialManager,initialManager?t('manager'):'');
   el.innerHTML=back+profile+'<div class="loading"><div class="spinner"></div><span class="loading-text">'+t('squadLoading')+'</span></div>';
   try{
-    await Promise.all([loadLocalSquads(),loadPlayerRoles()]);
+    await Promise.all([loadLocalSquads(),loadPlayerRoles(),loadPlayerProfiles()]);
     const officialSquad=getLocalSquad(name);
     const players=officialSquad&&Array.isArray(officialSquad.players)?
       officialSquad.players.map(p=>officialSquadDisplayPlayer(name,p,[])):
@@ -2903,8 +2903,10 @@ async function openPlayerDetail(id){
   const close=document.getElementById('dClose');
   panel.classList.add('open');close.style.display='flex';
   document.body.style.overflow='hidden';
-  inner.innerHTML=renderPlayerDetail(record,null,true);
-  const espnId=record.player&&record.player.idESPN;
+  await loadPlayerProfiles();
+  const profile=playerProfileForRecord(record);
+  const espnId=(profile&&(profile.idESPN||profile.espnId))||(record.player&&record.player.idESPN);
+  inner.innerHTML=renderPlayerDetail(record,null,!!espnId);
   if(espnId){
     try{
       const espn=await fetchJson('https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/athletes/'+encodeURIComponent(espnId)+'?lang=en&region=us',{},2500);
@@ -2934,21 +2936,25 @@ function playerDetailCell(label,value){
 function renderPlayerDetail(record,espn,loadingEspn){
   const p=record.player||{};
   const meta=record.meta||squadPlayerMeta(record.teamName,p);
-  const img=p.strCutout||p.strRender||p.strThumb||p.strPoster||'';
-  const age=ageFromDate(p.dateBorn)||espn&&espn.age||'';
-  const height=p.strHeight||espn&&espn.displayHeight||'';
-  const weight=p.strWeight||espn&&espn.displayWeight||'';
-  const born=playerDate(p.dateBorn||espn&&espn.dateOfBirth);
-  const position=p.strPosition||espn&&espn.position&&espn.position.displayName||'';
-  const club=meta.club||p.strTeam||'';
-  const nationality=p.strNationality||record.teamName||espn&&espn.citizenship||'';
-  const birthPlace=p.strBirthLocation||espn&&espn.birthPlace&&[espn.birthPlace.city,espn.birthPlace.country].filter(Boolean).join(', ')||'';
-  const bio=p.strDescriptionES||p.strDescriptionEN||'';
-  const espnUrl=playerLink(espn&&espn.links,'playercard')||(p.idESPN?'https://www.espn.com/soccer/player/_/id/'+p.idESPN:'');
+  const profile=playerProfileForRecord(record)||{};
+  const profileLinks=profile.links||{};
+  const img=profile.photo||profile.image||profile.headshot||profile.thumbnail||p.strCutout||p.strRender||p.strThumb||p.strPoster||'';
+  const age=ageFromDate(p.dateBorn||profile.dateBorn||profile.birthDate)||profile.age||espn&&espn.age||'';
+  const height=profile.height||p.strHeight||espn&&espn.displayHeight||'';
+  const weight=profile.weight||p.strWeight||espn&&espn.displayWeight||'';
+  const born=playerDate(p.dateBorn||profile.dateBorn||profile.birthDate||espn&&espn.dateOfBirth);
+  const position=profile.position||p.strPosition||espn&&espn.position&&espn.position.displayName||'';
+  const club=profile.club||meta.club||p.strTeam||'';
+  const nationality=profile.nationality||p.strNationality||record.teamName||espn&&espn.citizenship||'';
+  const birthPlace=profile.birthplace||profile.birthPlace||p.strBirthLocation||espn&&espn.birthPlace&&[espn.birthPlace.city,espn.birthPlace.country].filter(Boolean).join(', ')||'';
+  const bio=(lang==='es'&&(profile.bio_es||profile.bioES))||(lang==='en'&&(profile.bio_en||profile.bioEN))||profile.bio||p.strDescriptionES||p.strDescriptionEN||'';
+  const espnUrl=profile.espnUrl||profileLinks.espn||playerLink(espn&&espn.links,'playercard')||(profile.idESPN||profile.espnId||p.idESPN?'https://www.espn.com/soccer/player/_/id/'+(profile.idESPN||profile.espnId||p.idESPN):'');
+  const transfermarktUrl=profile.transfermarktUrl||profileLinks.transfermarkt||(p.idTransferMkt?'https://www.transfermarkt.com/-/profil/spieler/'+p.idTransferMkt:'');
+  const wikidataUrl=profile.wikidataUrl||profileLinks.wikidata||(p.idWikidata?'https://www.wikidata.org/wiki/'+p.idWikidata:'');
   const links=[
     espnUrl?'<a class="btn btn-sm" href="'+escHtml(espnUrl)+'" target="_blank" rel="noopener">ESPN</a>':'',
-    p.idTransferMkt?'<a class="btn btn-sm" href="https://www.transfermarkt.com/-/profil/spieler/'+escHtml(p.idTransferMkt)+'" target="_blank" rel="noopener">Transfermarkt</a>':'',
-    p.idWikidata?'<a class="btn btn-sm" href="https://www.wikidata.org/wiki/'+escHtml(p.idWikidata)+'" target="_blank" rel="noopener">Wikidata</a>':''
+    transfermarktUrl?'<a class="btn btn-sm" href="'+escHtml(transfermarktUrl)+'" target="_blank" rel="noopener">Transfermarkt</a>':'',
+    wikidataUrl?'<a class="btn btn-sm" href="'+escHtml(wikidataUrl)+'" target="_blank" rel="noopener">Wikidata</a>':''
   ].filter(Boolean).join('');
   return '<div class="player-modal">'+
     '<div class="player-modal-head">'+
@@ -3115,7 +3121,7 @@ const PLAYER_ROLES_FALLBACK={
     }
   }
 };
-let localSquads=null,localSquadsLoaded=false,playerRoles=null,playerRolesLoaded=false;
+let localSquads=null,localSquadsLoaded=false,playerRoles=null,playerRolesLoaded=false,playerProfiles=null,playerProfilesLoaded=false;
 async function loadLocalSquads(){
   if(localSquadsLoaded)return localSquads;
   localSquadsLoaded=true;
@@ -3159,6 +3165,40 @@ async function loadPlayerRoles(){
   }catch{}
   playerRoles=filterRolesToLocalSquads(playerRoles);
   return playerRoles;
+}
+async function loadPlayerProfiles(){
+  if(playerProfilesLoaded)return playerProfiles;
+  playerProfilesLoaded=true;
+  playerProfiles={};
+  const paths=['data/player-profiles.json','player-profiles.json'];
+  for(const path of paths){
+    try{
+      const d=await fetchJson(path,{},1500);
+      if(d){
+        playerProfiles=d.players||d.profiles||d;
+        break;
+      }
+    }catch{}
+  }
+  return playerProfiles;
+}
+function getPlayerProfile(team,playerName){
+  if(!playerProfiles||!playerName)return null;
+  const players=playerProfiles.players||playerProfiles;
+  const teamMap=players[team]||players[normName(team)]||players[Object.keys(players).find(k=>sameTeam(k,team))];
+  if(teamMap){
+    const hit=Object.keys(teamMap).find(k=>squadPlayerMatches(k,playerName));
+    if(hit)return teamMap[hit];
+  }
+  const flatKey=Object.keys(players).find(function(k){
+    const parts=k.split('|');
+    return parts.length>=2&&sameTeam(parts[0],team)&&squadPlayerMatches(parts.slice(1).join('|'),playerName);
+  });
+  return flatKey?players[flatKey]:null;
+}
+function playerProfileForRecord(record){
+  const p=record&&record.player||{};
+  return getPlayerProfile(record&&record.teamName,p.strPlayer||p.name||'');
 }
 function getLocalSquad(team){
   if(!localSquads)return null;
