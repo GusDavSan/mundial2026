@@ -1,4 +1,4 @@
-{
+window.PLAYER_PROFILES_DATA = {
   "updated": "2026-06-24T19:01:17.858Z",
   "source": "Generated from squad.json plus Wikidata/Wikipedia public metadata. squad.json remains the official squad source.",
   "players": {
@@ -10992,4 +10992,4 @@
       }
     }
   }
-}
+};
