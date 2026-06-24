@@ -647,6 +647,7 @@ body{font-size:16px}
 </div>
 <div class="d-close" id="dClose" onclick="closeDetail()">✕</div>
 
+<script src="data/player-profiles.js"></script>
 <script>
 function showLocalModeNotice(msg){
   const rt=document.getElementById('refTxt');
@@ -3169,6 +3170,10 @@ async function loadPlayerRoles(){
 async function loadPlayerProfiles(){
   if(playerProfilesLoaded)return playerProfiles;
   playerProfilesLoaded=true;
+  if(window.PLAYER_PROFILES_DATA){
+    playerProfiles=window.PLAYER_PROFILES_DATA.players||window.PLAYER_PROFILES_DATA.profiles||window.PLAYER_PROFILES_DATA;
+    return playerProfiles;
+  }
   playerProfiles={};
   const paths=['data/player-profiles.json','player-profiles.json'];
   for(const path of paths){
