@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T00:14:37.830Z",
+  "updated": "2026-06-24T04:41:19.637Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -2720,7 +2720,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -2841,7 +2841,7 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -3033,7 +3033,7 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3133,7 +3133,7 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3287,7 +3287,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -3399,7 +3399,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia & Herzegovina",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -3560,7 +3560,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -3724,7 +3724,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -3814,7 +3814,7 @@
       "homeTeam": "United States",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3916,7 +3916,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4016,7 +4016,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4149,7 +4149,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4253,7 +4253,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4458,7 +4458,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4587,7 +4587,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4664,7 +4664,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4823,7 +4823,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -4977,7 +4977,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5058,7 +5058,7 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5194,7 +5194,7 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5357,7 +5357,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5469,7 +5469,7 @@
       "homeTeam": "France",
       "awayTeam": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5611,7 +5611,7 @@
       "homeTeam": "Norway",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5782,7 +5782,7 @@
       "homeTeam": "Jordan",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5915,7 +5915,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6072,7 +6072,7 @@
       "homeTeam": "England",
       "awayTeam": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6083,12 +6083,12 @@
           "away": 2
         },
         "possession": {
-          "home": 78.8,
-          "away": 21.2
+          "home": 78.9,
+          "away": 21.1
         },
         "passes": {
           "home": 633,
-          "away": 173
+          "away": 172
         },
         "fouls": {
           "home": 14,
@@ -6149,38 +6149,42 @@
       "homeTeam": "Panama",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-24T00:14:37.830Z",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 1,
-          "away": 3
+          "home": 8,
+          "away": 6
         },
         "possession": {
-          "home": 36.1,
-          "away": 63.9
+          "home": 42,
+          "away": 58
         },
         "passes": {
-          "home": 201,
-          "away": 362
+          "home": 352,
+          "away": 512
         },
         "fouls": {
-          "home": 12,
-          "away": 5
+          "home": 19,
+          "away": 12
         },
         "corners": {
-          "home": 1,
-          "away": 1
+          "home": 7,
+          "away": 2
         },
         "saves": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "offsides": {
-          "home": 0,
+          "home": 1,
+          "away": 2
+        },
+        "yellowCards": {
+          "home": 1,
           "away": 1
         }
       },
@@ -6221,7 +6225,7 @@
           "cleanSheet": 0,
           "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -6229,12 +6233,112 @@
           "name": "Dominik Livakovic",
           "shortName": "D. Livakovic",
           "number": "1",
-          "saves": 0,
+          "saves": 1,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 48,
+      "espnEventId": "760459",
+      "date": "2026-06-24",
+      "homeTeam": "Colombia",
+      "awayTeam": "DR Congo",
+      "source": "ESPN",
+      "updatedAt": "2026-06-24T04:41:19.637Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 9,
+          "away": 1
+        },
+        "shots": {
+          "home": 20,
+          "away": 7
+        },
+        "possession": {
+          "home": 63.5,
+          "away": 36.5
+        },
+        "passes": {
+          "home": 540,
+          "away": 299
+        },
+        "fouls": {
+          "home": 12,
+          "away": 16
+        },
+        "corners": {
+          "home": 5,
+          "away": 4
+        },
+        "saves": {
+          "home": 1,
+          "away": 8
+        },
+        "offsides": {
+          "home": 7,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49597544",
+          "minute": "76",
+          "period": 2,
+          "team": "Colombia",
+          "player": "Daniel Muñoz",
+          "assist": "Juan Fernando Quintero",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Colombia 1, Congo DR 0. Daniel Muñoz (Colombia) left footed shot from the right side of the box to the bottom right corner. Assisted by Juan Fernando Quintero.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49597544",
+          "minute": "76",
+          "period": 2,
+          "team": "Colombia",
+          "player": "Juan Fernando Quintero",
+          "goal": "Daniel Muñoz",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Colombia",
+          "name": "Camilo Vargas",
+          "shortName": "C. Vargas",
+          "number": "12",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "DR Congo",
+          "name": "Lionel Mpasi",
+          "shortName": "L. Mpasi",
+          "number": "1",
+          "saves": 8,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 88.9,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
         }
       ]
     }
