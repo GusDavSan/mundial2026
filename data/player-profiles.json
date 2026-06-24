@@ -1,0 +1,27 @@
+{
+  "updated": "2026-06-24",
+  "source": "Optional local player profile enrichment. squad.json remains the official squad source.",
+  "schema": {
+    "players": {
+      "Team name": {
+        "Player name": {
+          "photo": "https://example.com/player-photo.jpg",
+          "bio_es": "Biografia en espanol.",
+          "bio_en": "English biography.",
+          "height": "1.80 m",
+          "weight": "75 kg",
+          "dateBorn": "2000-01-01",
+          "birthplace": "City, Country",
+          "nationality": "Country",
+          "espnId": "12345",
+          "links": {
+            "espn": "https://www.espn.com/soccer/player/_/id/12345",
+            "transfermarkt": "https://www.transfermarkt.com/",
+            "wikidata": "https://www.wikidata.org/"
+          }
+        }
+      }
+    }
+  },
+  "players": {}
+}
