@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T04:36:42.395Z",
+  "updated": "2026-06-24T08:34:18.023Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -269,10 +269,10 @@
       "away": "DR Congo",
       "source": "DAZN ES",
       "title": "Portugal vs Uzbekistán (5-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=9IhrhB278tw",
-      "thumbnail": "https://i.ytimg.com/vi/9IhrhB278tw/hqdefault.jpg",
-      "videoId": "9IhrhB278tw",
-      "publishedAt": "2026-06-23T21:06:14Z",
+      "url": "https://www.youtube.com/watch?v=Vxuz1k1MI3M",
+      "thumbnail": "https://i3.ytimg.com/vi/Vxuz1k1MI3M/hqdefault.jpg",
+      "videoId": "Vxuz1k1MI3M",
+      "publishedAt": "2026-06-23T21:06:28+00:00",
       "confidence": 12
     },
     {
@@ -307,11 +307,11 @@
       "home": "Uzbekistan",
       "away": "Colombia",
       "source": "DAZN ES",
-      "title": "Portugal vs Uzbekistán (5-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=9IhrhB278tw",
-      "thumbnail": "https://i.ytimg.com/vi/9IhrhB278tw/hqdefault.jpg",
-      "videoId": "9IhrhB278tw",
-      "publishedAt": "2026-06-23T21:06:14Z",
+      "title": "Colombia vs Congo (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=B-PnZAKFhGY",
+      "thumbnail": "https://i3.ytimg.com/vi/B-PnZAKFhGY/hqdefault.jpg",
+      "videoId": "B-PnZAKFhGY",
+      "publishedAt": "2026-06-24T06:18:14+00:00",
       "confidence": 12
     },
     {
@@ -581,10 +581,10 @@
       "away": "Uzbekistan",
       "source": "DAZN ES",
       "title": "Portugal vs Uzbekistán (5-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=9IhrhB278tw",
-      "thumbnail": "https://i.ytimg.com/vi/9IhrhB278tw/hqdefault.jpg",
-      "videoId": "9IhrhB278tw",
-      "publishedAt": "2026-06-23T21:06:14Z",
+      "url": "https://www.youtube.com/watch?v=Vxuz1k1MI3M",
+      "thumbnail": "https://i3.ytimg.com/vi/Vxuz1k1MI3M/hqdefault.jpg",
+      "videoId": "Vxuz1k1MI3M",
+      "publishedAt": "2026-06-23T21:06:28+00:00",
       "confidence": 20
     },
     {
@@ -594,10 +594,10 @@
       "away": "Ghana",
       "source": "DAZN ES",
       "title": "Inglaterra vs Ghana (0-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=xTfPWbu31iw",
-      "thumbnail": "https://i.ytimg.com/vi/xTfPWbu31iw/hqdefault.jpg",
-      "videoId": "xTfPWbu31iw",
-      "publishedAt": "2026-06-24T00:00:07Z",
+      "url": "https://www.youtube.com/watch?v=fJyQFoy08vY",
+      "thumbnail": "https://i3.ytimg.com/vi/fJyQFoy08vY/hqdefault.jpg",
+      "videoId": "fJyQFoy08vY",
+      "publishedAt": "2026-06-24T00:00:33+00:00",
       "confidence": 20
     },
     {
@@ -612,6 +612,19 @@
       "videoId": "V8aaT76J584",
       "publishedAt": "2026-06-24T03:16:54Z",
       "confidence": 20
+    },
+    {
+      "matchId": 48,
+      "date": "2026-06-24",
+      "home": "Colombia",
+      "away": "DR Congo",
+      "source": "DAZN ES",
+      "title": "Colombia vs Congo (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=B-PnZAKFhGY",
+      "thumbnail": "https://i3.ytimg.com/vi/B-PnZAKFhGY/hqdefault.jpg",
+      "videoId": "B-PnZAKFhGY",
+      "publishedAt": "2026-06-24T06:18:14+00:00",
+      "confidence": 14
     }
   ]
 }
