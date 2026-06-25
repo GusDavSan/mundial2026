@@ -122,6 +122,15 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .es-note{font-size:10px;font-weight:700;letter-spacing:.4px;color:var(--muted)}
 .utc-val{font-family:var(--mono);font-size:10px;color:var(--muted)}
 .mc-venue{font-size:10px;color:var(--muted);text-align:right;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ko-info{margin-top:10px;padding-top:9px;border-top:1px solid var(--border);display:grid;gap:7px;font-size:11px;color:var(--muted);line-height:1.45}
+.ko-line{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.ko-state{font-family:var(--mono);font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--border);border-radius:999px;padding:2px 7px;color:var(--muted);background:rgba(232,237,245,.035)}
+.ko-state.ok{color:var(--live);border-color:rgba(0,230,118,.3);background:rgba(0,230,118,.08)}
+.ko-state.warn{color:var(--gold);border-color:var(--border2);background:rgba(201,162,39,.08)}
+.ko-cands{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.ko-cand{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--border);border-radius:999px;padding:2px 7px;background:rgba(232,237,245,.035);font-size:10px;color:var(--muted)}
+.ko-cand.in{color:var(--text);border-color:rgba(201,162,39,.3);background:rgba(201,162,39,.06)}
+.ko-cand.done{color:var(--live);border-color:rgba(0,230,118,.25);background:rgba(0,230,118,.06)}
 /* GROUPS TABLE */
 .groups-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
 .gc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
@@ -1340,17 +1349,18 @@ function matchCard(m,overrides={}){
     `<div class="score${live?' live':''}">${om.homeScore}&nbsp;–&nbsp;${om.awayScore}</div>${liveTags}`
     :`<div class="vs">VS</div>`;
   const insightHtml=live&&om.liveInsight?renderLiveInsight(om.liveInsight):'';
+  const koInfoHtml=om.koInfoHtml||'';
   const timeBlock=es?`<div class="mc-time">
     <div class="es-block"><div class="es-time"><span class="es-val">${es.time}</span><span class="es-lbl">🇪🇸 ${t('spainTime')}</span></div>${om.timeNote?`<div class="es-note">${escHtml(om.timeNote)}</div>`:''}</div>
     <div style="text-align:right"><div class="utc-val">${om.time} UTC</div><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>
   </div>`:`<div class="mc-time" style="justify-content:flex-end"><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>`;
-  return`<div class="mc${live?' live':''}" onclick="openDetail(${om.id||0},'${om.date}','${om.home}','${om.away}')">
+  return`<div class="mc${live?' live':''}" onclick="openDetail(${om.id||0},'${om.date}','${om.detailHome||om.home}','${om.detailAway||om.away}')">
     <div class="mc-meta"><span class="mc-round">${rndHtml}</span>${statusHtml}</div>
     <div class="mc-body">
       <div class="t-side">${hBadge}<span class="t-name">${om.home||'Por definir'}</span></div>
       <div class="score-c">${scoreHtml}</div>
       <div class="t-side away"><span class="t-name">${om.away||'Por definir'}</span>${aBadge}</div>
-    </div>${insightHtml}${timeBlock}</div>`;
+    </div>${insightHtml}${timeBlock}${koInfoHtml}</div>`;
 }
 function matchResultKey(home,away){
   return normName(home||'')+'|'+normName(away||'');
@@ -1751,6 +1761,118 @@ function renderCalMejorTercero(){
   document.getElementById('calContent').innerHTML=h;
 }
 
+const REAL_R32_SLOTS=[
+  {id:73,a:'2A',b:'2B'},
+  {id:74,a:'1E',b:{third:['A','B','C','D','F']}},
+  {id:75,a:'1F',b:'2C'},
+  {id:76,a:'1C',b:'2F'},
+  {id:77,a:'1I',b:{third:['C','D','F','G','H']}},
+  {id:78,a:'2E',b:'2I'},
+  {id:79,a:'1A',b:{third:['C','E','F','H','I']}},
+  {id:80,a:'1L',b:{third:['E','H','I','J','K']}},
+  {id:81,a:'1D',b:{third:['B','E','F','I','J']}},
+  {id:82,a:'1G',b:{third:['A','E','H','I','J']}},
+  {id:83,a:'2K',b:'2L'},
+  {id:84,a:'1H',b:'2J'},
+  {id:85,a:'1B',b:{third:['E','F','G','I','J']}},
+  {id:86,a:'1J',b:'2H'},
+  {id:87,a:'1K',b:{third:['D','E','I','J','L']}},
+  {id:88,a:'2D',b:'2G'}
+];
+function groupFinishedCount(g){
+  return FIXTURES.filter(f=>f.group==='Group '+g).filter(function(m){
+    const r=apiResults[matchResultKey(m.home,m.away)]||apiResults[m.home+'|'+m.away]||{};
+    return isFin(r.status);
+  }).length;
+}
+function groupClosed(g){return groupFinishedCount(g)>=6;}
+function slotLabel(code){
+  if(!code)return '';
+  const pos=code[0],g=code[1];
+  const ord=pos==='1'?(lang==='es'?'1º':'1st'):(lang==='es'?'2º':'2nd');
+  return ord+' '+t('group')+' '+g;
+}
+function resolveDirectSlot(code){
+  const g=code&&code[1],idx=(parseInt(code&&code[0],10)||1)-1;
+  const rows=g&&GROUPS[g]?computeRealGroupStandings(g):[];
+  const row=rows[idx]||null;
+  const started=!!row&&row.p>0;
+  const closed=g?groupClosed(g):false;
+  if(started){
+    return {name:row.name,label:row.name,flag:FLAGS[row.name]||'🏳️',confirmed:closed,provisional:!closed,slot:slotLabel(code)};
+  }
+  return {name:null,label:slotLabel(code),flag:'🏳️',confirmed:false,provisional:true,slot:slotLabel(code)};
+}
+function currentThirdRows(){
+  const rows=[];
+  Object.keys(GROUPS).sort().forEach(function(g){
+    const st=computeRealGroupStandings(g);
+    if(!st[2])return;
+    const r=st[2];
+    rows.push({group:g,name:r.name,p:r.p,pts:r.pts,gd:r.gf-r.ga,gf:r.gf,closed:groupClosed(g)});
+  });
+  return rows.sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf||a.group.localeCompare(b.group));
+}
+function resolveThirdSlot(def){
+  const groups=def&&def.third||[];
+  const thirdRank={};
+  currentThirdRows().forEach(function(r,i){thirdRank[r.group]=i+1;});
+  const cands=groups.map(function(g){
+    const st=computeRealGroupStandings(g);
+    const row=st[2]||null;
+    const started=!!row&&row.p>0;
+    return {
+      group:g,
+      name:started?row.name:null,
+      rank:thirdRank[g]||null,
+      closed:groupClosed(g),
+      active:started&&thirdRank[g]<=8
+    };
+  });
+  const confirmed=cands.filter(c=>c.closed&&c.active).length===1&&cands.filter(c=>!c.closed).length===0;
+  const fixed=confirmed?cands.find(c=>c.closed&&c.active):null;
+  const label=fixed&&fixed.name?fixed.name:(lang==='es'?'3º ':'3rd ')+groups.join('/');
+  return {name:fixed&&fixed.name||null,label,flag:fixed&&fixed.name?(FLAGS[fixed.name]||'🏳️'):'🏳️',confirmed,provisional:!confirmed,slot:label,candidates:cands};
+}
+function resolveR32Side(side){
+  return typeof side==='string'?resolveDirectSlot(side):resolveThirdSlot(side);
+}
+function knockoutInfoHtml(slot,a,b){
+  if(!slot)return '';
+  const confirmed=a.confirmed&&b.confirmed;
+  const state=confirmed?(lang==='es'?'Confirmado':'Confirmed'):(lang==='es'?'Provisional':'Provisional');
+  const stateCls=confirmed?'ok':'warn';
+  let html='<div class="ko-info"><div class="ko-line"><span class="ko-state '+stateCls+'">'+state+'</span><span>'+
+    (confirmed?(lang==='es'?'Cruce cerrado por clasificación de grupo.':'Fixture locked by group standings.'):(lang==='es'?'Se actualiza con la clasificación de grupos.':'Updates from group standings.'))+
+    '</span></div>';
+  [a,b].filter(s=>s.candidates&&s.candidates.length).forEach(function(s){
+    html+='<div class="ko-cands"><span>'+(lang==='es'?'Posibles terceros:':'Possible thirds:')+'</span>';
+    s.candidates.forEach(function(c){
+      const label=c.name?(FLAGS[c.name]||'')+' '+c.name+' · '+c.group:(t('group')+' '+c.group);
+      const cls=c.closed?' done':c.active?' in':'';
+      html+='<span class="ko-cand'+cls+'">'+escHtml(label)+(c.rank?' #'+c.rank:'')+'</span>';
+    });
+    html+='</div>';
+  });
+  return html+'</div>';
+}
+function decorateCalendarFixture(f){
+  if(!f||f.group!=='Ronda de 32')return f;
+  const slot=REAL_R32_SLOTS.find(s=>s.id===f.id);
+  if(!slot)return f;
+  const a=resolveR32Side(slot.a);
+  const b=resolveR32Side(slot.b);
+  return Object.assign({},f,{
+    home:a.name||a.label,
+    away:b.name||b.label,
+    homeFlag:a.flag||'🏳️',
+    awayFlag:b.flag||'🏳️',
+    detailHome:f.home,
+    detailAway:f.away,
+    koInfoHtml:knockoutInfoHtml(slot,a,b)
+  });
+}
+
 function buildMatchesHtml(fx){
   if(!fx.length)return'<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">'+t('noPhaseMatches')+'</div></div>';
   const byDate={};
@@ -1760,14 +1882,14 @@ function buildMatchesHtml(fx){
     const lbl=fmtDay(dt)+(isToday(dt)?'<span class="today-mark"> · '+t('today')+'</span>':'');
     html+='<div class="day-lbl">'+lbl+'</div>';
     byDate[dt].forEach(f=>{
-      const k=f.home+'|'+f.away;
-      const r=apiResults[k]||{};
-      const resolved=cardDateTimeFromData(r,f,f.date);
+      const displayF=decorateCalendarFixture(f);
+      const r=apiResults[matchResultKey(displayF.home,displayF.away)]||apiResults[matchResultKey(f.home,f.away)]||apiResults[f.home+'|'+f.away]||{};
+      const resolved=cardDateTimeFromData(r,displayF,displayF.date);
       const status=r.status;
       const upcoming=!isLive(status)&&!isFin(status)&&!isPast(resolved.date,resolved.time);
-      html+=matchCard(Object.assign({},f,{
+      html+=matchCard(Object.assign({},displayF,{
         date:resolved.date,time:resolved.time,status,
-        homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||f.id,
+        homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||displayF.id,
         progress:r.progress,periodLabel:r.periodLabel,liveInsight:r.liveInsight,
         timeNote:upcoming?upcomingDawnNote(resolved.date,resolved.time):''
       }));
@@ -1782,6 +1904,14 @@ function renderCal(){
   if(calRound==='M3'){renderCalMejorTercero();return;}
   const fx=calRound==='all'?FIXTURES:FIXTURES.filter(f=>f.group===calRound);
   const matchesHtml=buildMatchesHtml(fx);
+  if(calRound==='Ronda de 32'){
+    el.innerHTML='<div class="info-box">'+
+      (lang==='es'
+        ?'Los cruces de primeros y segundos se rellenan con la clasificación actual y se marcan como confirmados cuando se cierre el grupo. En los cruces contra terceros se muestran los posibles grupos candidatos hasta que FIFA cierre la asignación exacta.'
+        :'First and second-place slots use the current standings and become confirmed when the group is complete. Third-place slots show candidate groups until FIFA locks the exact allocation.')+
+      '</div>'+matchesHtml;
+    return;
+  }
   // Group tab: split view (matches left, standings right)
   if(calRound.startsWith('Group')){
     const g=calRound.slice(-1);
