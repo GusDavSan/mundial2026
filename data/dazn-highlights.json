@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T17:24:36.119Z",
+  "updated": "2026-06-25T20:22:55.312Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -703,6 +703,19 @@
       "videoId": "sM5AANg72rM",
       "publishedAt": "2026-06-25T05:00:04Z",
       "confidence": 20
+    },
+    {
+      "matchId": 56,
+      "date": "2026-06-25",
+      "home": "Ecuador",
+      "away": "Germany",
+      "source": "DAZN ES",
+      "title": "🚨 POLÉMICA EN ECUADOR CON EL 0-1 DE ALEMANIA",
+      "url": "https://www.youtube.com/watch?v=AC-xzoq1Nqk",
+      "thumbnail": "https://i2.ytimg.com/vi/AC-xzoq1Nqk/hqdefault.jpg",
+      "videoId": "AC-xzoq1Nqk",
+      "publishedAt": "2026-06-25T20:19:21+00:00",
+      "confidence": 14
     }
   ]
 }
