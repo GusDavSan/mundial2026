@@ -72,6 +72,44 @@ const STAT_MAP = {
   offsides: ["offsides"]
 };
 
+const R32_SLOTS = [
+  { id: 73, a: "2A", b: "2B" },
+  { id: 74, a: "1E", b: { third: ["A", "B", "C", "D", "F"] } },
+  { id: 75, a: "1F", b: "2C" },
+  { id: 76, a: "1C", b: "2F" },
+  { id: 77, a: "1I", b: { third: ["C", "D", "F", "G", "H"] } },
+  { id: 78, a: "2E", b: "2I" },
+  { id: 79, a: "1A", b: { third: ["C", "E", "F", "H", "I"] } },
+  { id: 80, a: "1L", b: { third: ["E", "H", "I", "J", "K"] } },
+  { id: 81, a: "1D", b: { third: ["B", "E", "F", "I", "J"] } },
+  { id: 82, a: "1G", b: { third: ["A", "E", "H", "I", "J"] } },
+  { id: 83, a: "2K", b: "2L" },
+  { id: 84, a: "1H", b: "2J" },
+  { id: 85, a: "1B", b: { third: ["E", "F", "G", "I", "J"] } },
+  { id: 86, a: "1J", b: "2H" },
+  { id: 87, a: "1K", b: { third: ["D", "E", "I", "J", "L"] } },
+  { id: 88, a: "2D", b: "2G" }
+];
+
+const KNOCKOUT_SLOTS = R32_SLOTS.concat([
+  { id: 89, a: { winner: 73 }, b: { winner: 75 } },
+  { id: 90, a: { winner: 74 }, b: { winner: 77 } },
+  { id: 91, a: { winner: 76 }, b: { winner: 78 } },
+  { id: 92, a: { winner: 79 }, b: { winner: 80 } },
+  { id: 93, a: { winner: 83 }, b: { winner: 84 } },
+  { id: 94, a: { winner: 81 }, b: { winner: 82 } },
+  { id: 95, a: { winner: 86 }, b: { winner: 88 } },
+  { id: 96, a: { winner: 85 }, b: { winner: 87 } },
+  { id: 97, a: { winner: 89 }, b: { winner: 90 } },
+  { id: 98, a: { winner: 93 }, b: { winner: 94 } },
+  { id: 99, a: { winner: 91 }, b: { winner: 92 } },
+  { id: 100, a: { winner: 95 }, b: { winner: 96 } },
+  { id: 101, a: { winner: 97 }, b: { winner: 98 } },
+  { id: 102, a: { winner: 99 }, b: { winner: 100 } },
+  { id: 103, a: { loser: 101 }, b: { loser: 102 } },
+  { id: 104, a: { winner: 101 }, b: { winner: 102 } }
+]);
+
 function normalize(text) {
   return String(text || "")
     .normalize("NFD")
@@ -163,7 +201,7 @@ async function getSummary(eventId) {
 }
 
 function fixtureInWindow(fixture) {
-  if (fixture.home === "TBD" || fixture.away === "TBD") return false;
+  if (fixture.home === "TBD" && fixture.away === "TBD") return false;
   const start = new Date(`${fixture.date}T${fixture.time || "00:00"}:00Z`);
   const min = addDays(NOW, -LOOKBACK_DAYS);
   const max = addDays(NOW, LOOKAHEAD_DAYS);
@@ -188,6 +226,13 @@ function matchLabel(fixture) {
 }
 
 function matchEventForFixture(fixture, events) {
+  const known = [fixture.home, fixture.away].filter((team) => team && team !== "TBD");
+  if (known.length === 1) {
+    return events.find((event) => {
+      const t = eventTeams(event);
+      return sameTeam(t.home, known[0]) || sameTeam(t.away, known[0]);
+    });
+  }
   const direct = events.find((event) => {
     const t = eventTeams(event);
     return sameTeam(t.home, fixture.home) && sameTeam(t.away, fixture.away);
@@ -197,6 +242,131 @@ function matchEventForFixture(fixture, events) {
     const t = eventTeams(event);
     return sameTeam(t.home, fixture.away) && sameTeam(t.away, fixture.home);
   });
+}
+
+function groupFromRound(round = "") {
+  const m = String(round).match(/Group\s+([A-L])/i);
+  return m ? m[1].toUpperCase() : "";
+}
+
+function scoreFromItemForTeams(item, home, away) {
+  if (!item) return null;
+  if (item.homeScore !== undefined && item.awayScore !== undefined) {
+    const h = Number.parseInt(item.homeScore, 10);
+    const a = Number.parseInt(item.awayScore, 10);
+    if (Number.isFinite(h) && Number.isFinite(a)) return { home: h, away: a };
+  }
+  let h = 0;
+  let a = 0;
+  let hasGoal = false;
+  for (const goal of item.goals || []) {
+    if (!goal?.team) continue;
+    hasGoal = true;
+    if (sameTeam(goal.team, home)) h++;
+    else if (sameTeam(goal.team, away)) a++;
+  }
+  return hasGoal || item.stats ? { home: h, away: a } : null;
+}
+
+function groupStandings(fixtures, byMatch, group) {
+  const rows = new Map();
+  for (const fixture of fixtures.filter((f) => groupFromRound(f.round) === group)) {
+    for (const team of [fixture.home, fixture.away]) {
+      if (!rows.has(team)) rows.set(team, { name: team, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0 });
+    }
+    const item = byMatch.get(String(fixture.id));
+    const score = scoreFromItemForTeams(item, fixture.home, fixture.away);
+    if (!score) continue;
+    const home = rows.get(fixture.home);
+    const away = rows.get(fixture.away);
+    home.p++; away.p++;
+    home.gf += score.home; home.ga += score.away;
+    away.gf += score.away; away.ga += score.home;
+    if (score.home > score.away) { home.w++; away.l++; home.pts += 3; }
+    else if (score.home < score.away) { away.w++; home.l++; away.pts += 3; }
+    else { home.d++; away.d++; home.pts++; away.pts++; }
+  }
+  return [...rows.values()].sort((a, b) => b.pts - a.pts || (b.gf - b.ga) - (a.gf - a.ga) || b.gf - a.gf || a.name.localeCompare(b.name));
+}
+
+function groupClosed(fixtures, byMatch, group) {
+  return fixtures.filter((f) => groupFromRound(f.round) === group).filter((f) => byMatch.has(String(f.id))).length >= 6;
+}
+
+function resolveDirectSlot(code, fixtures, byMatch) {
+  const group = code?.[1];
+  const idx = (Number.parseInt(code?.[0], 10) || 1) - 1;
+  const row = groupStandings(fixtures, byMatch, group)[idx];
+  return row && row.p > 0 ? { name: row.name, confirmed: groupClosed(fixtures, byMatch, group) } : null;
+}
+
+function thirdRows(fixtures, byMatch) {
+  const groups = unique(fixtures.map((f) => groupFromRound(f.round)).filter(Boolean)).sort();
+  return groups.map((group) => {
+    const row = groupStandings(fixtures, byMatch, group)[2];
+    return row ? { group, name: row.name, p: row.p, pts: row.pts, gd: row.gf - row.ga, gf: row.gf, closed: groupClosed(fixtures, byMatch, group) } : null;
+  }).filter(Boolean).sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gf - a.gf || a.group.localeCompare(b.group));
+}
+
+function resolveThirdSlot(def, fixtures, byMatch) {
+  const ranks = new Map(thirdRows(fixtures, byMatch).map((row, idx) => [row.group, idx + 1]));
+  const candidates = (def.third || []).map((group) => {
+    const row = groupStandings(fixtures, byMatch, group)[2];
+    return row && row.p > 0 ? { group, name: row.name, rank: ranks.get(group), closed: groupClosed(fixtures, byMatch, group) } : null;
+  }).filter(Boolean);
+  const confirmed = candidates.filter((c) => c.closed && c.rank <= 8);
+  const open = candidates.filter((c) => !c.closed);
+  return confirmed.length === 1 && open.length === 0 ? { name: confirmed[0].name, confirmed: true } : null;
+}
+
+function outcomeFromItem(item, sideA, sideB, wantLoser) {
+  if (!item || !sideA?.name || !sideB?.name) return null;
+  const winnerName = item.winner || item.winnerTeam || item.penaltyWinner || "";
+  const loserName = item.loser || item.loserTeam || "";
+  if (winnerName) {
+    if (!wantLoser) return sameTeam(winnerName, sideA.name) ? sideA : sameTeam(winnerName, sideB.name) ? sideB : { name: winnerName, confirmed: true };
+    if (loserName) return sameTeam(loserName, sideA.name) ? sideA : sameTeam(loserName, sideB.name) ? sideB : { name: loserName, confirmed: true };
+  }
+  const score = scoreFromItemForTeams(item, sideA.name, sideB.name);
+  if (!score || score.home === score.away) return null;
+  const winner = score.home > score.away ? sideA : sideB;
+  const loser = score.home > score.away ? sideB : sideA;
+  return wantLoser ? loser : winner;
+}
+
+function resolveKnockoutSide(side, fixtures, byMatch) {
+  if (typeof side === "string") return resolveDirectSlot(side, fixtures, byMatch);
+  if (side?.third) return resolveThirdSlot(side, fixtures, byMatch);
+  if (side?.winner || side?.loser) {
+    const matchId = side.winner || side.loser;
+    const slot = KNOCKOUT_SLOTS.find((s) => s.id === Number(matchId));
+    if (!slot) return null;
+    const a = resolveKnockoutSide(slot.a, fixtures, byMatch);
+    const b = resolveKnockoutSide(slot.b, fixtures, byMatch);
+    return outcomeFromItem(byMatch.get(String(matchId)), a, b, !!side.loser);
+  }
+  return null;
+}
+
+function resolveKnockoutFixtures(fixtures, byMatch) {
+  for (const fixture of fixtures) {
+    if (fixture.home !== "TBD" && fixture.away !== "TBD") continue;
+    const slot = KNOCKOUT_SLOTS.find((s) => s.id === Number(fixture.id));
+    if (!slot) continue;
+    const a = resolveKnockoutSide(slot.a, fixtures, byMatch);
+    const b = resolveKnockoutSide(slot.b, fixtures, byMatch);
+    if (a?.name) fixture.home = a.name;
+    if (b?.name) fixture.away = b.name;
+  }
+}
+
+function eventOutcome(event, fixture) {
+  const competitors = event.competitions?.[0]?.competitors || [];
+  const home = competitors.find((c) => sameTeam(c.team?.displayName, fixture.home));
+  const away = competitors.find((c) => sameTeam(c.team?.displayName, fixture.away));
+  const winner = home?.winner ? fixture.home : away?.winner ? fixture.away : "";
+  const loser = winner ? (sameTeam(winner, fixture.home) ? fixture.away : fixture.home) : "";
+  return { winner, loser };
 }
 
 function statMap(stats = []) {
@@ -439,6 +609,8 @@ function statsFromSummary(summary, fixture, event) {
     goal: goal.player,
     source: "ESPN"
   }));
+  const score = scoreFromEvent(event, fixture);
+  const outcome = eventOutcome(event, fixture);
 
   return {
     matchId: fixture.id,
@@ -446,6 +618,10 @@ function statsFromSummary(summary, fixture, event) {
     date: fixture.date,
     homeTeam: fixture.home,
     awayTeam: fixture.away,
+    homeScore: score.home,
+    awayScore: score.away,
+    winner: outcome.winner,
+    loser: outcome.loser,
     source: "ESPN",
     updatedAt: NOW.toISOString(),
     stats,
@@ -461,6 +637,7 @@ async function buildMatchStats(fixtures, existing) {
     const key = String(item.matchId || `${item.homeTeam}|${item.awayTeam}|${item.date}`);
     if (key) byMatch.set(key, item);
   }
+  resolveKnockoutFixtures(fixtures, byMatch);
 
   const events = [];
   for (const dateKey of dateKeysForWindow()) {
@@ -482,6 +659,9 @@ async function buildMatchStats(fixtures, existing) {
       console.log(`${matchLabel(fixture)} -> ESPN no encontrado`);
       continue;
     }
+    const teams = eventTeams(event);
+    if (fixture.home === "TBD" && teams.home) fixture.home = teams.home;
+    if (fixture.away === "TBD" && teams.away) fixture.away = teams.away;
     const state = event.status?.type?.state || "unknown";
     console.log(`${matchLabel(fixture)} -> ESPN ${event.id} (${state})`);
     try {
@@ -492,6 +672,7 @@ async function buildMatchStats(fixtures, existing) {
         continue;
       }
       byMatch.set(matchKey, item);
+      resolveKnockoutFixtures(fixtures, byMatch);
       console.log(`${matchLabel(fixture)} -> stats actualizadas (${Object.keys(item.stats).join(", ")}; goles ${item.goals.length}; asistencias ${item.assists.length})`);
     } catch (e) {
       console.warn(`${matchLabel(fixture)} -> error summary ESPN ${event.id}: ${e.message}`);
