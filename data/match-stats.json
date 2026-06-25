@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T18:27:45.193Z",
+  "updated": "2026-06-25T20:33:09.480Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -3559,8 +3559,12 @@
       "date": "2026-06-18",
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
+      "homeScore": 6,
+      "awayScore": 0,
+      "winner": "Canada",
+      "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -3723,8 +3727,12 @@
       "date": "2026-06-19",
       "homeTeam": "Mexico",
       "awayTeam": "South Korea",
+      "homeScore": 1,
+      "awayScore": 0,
+      "winner": "Mexico",
+      "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -3813,8 +3821,12 @@
       "date": "2026-06-19",
       "homeTeam": "United States",
       "awayTeam": "Australia",
+      "homeScore": 2,
+      "awayScore": 0,
+      "winner": "United States",
+      "loser": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3915,8 +3927,12 @@
       "date": "2026-06-19",
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
+      "homeScore": 0,
+      "awayScore": 1,
+      "winner": "Morocco",
+      "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4015,8 +4031,12 @@
       "date": "2026-06-20",
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
+      "homeScore": 3,
+      "awayScore": 0,
+      "winner": "Brazil",
+      "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4148,8 +4168,12 @@
       "date": "2026-06-20",
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
+      "homeScore": 0,
+      "awayScore": 1,
+      "winner": "Paraguay",
+      "loser": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4252,8 +4276,12 @@
       "date": "2026-06-20",
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
+      "homeScore": 5,
+      "awayScore": 1,
+      "winner": "Netherlands",
+      "loser": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4457,8 +4485,12 @@
       "date": "2026-06-20",
       "homeTeam": "Germany",
       "awayTeam": "Ivory Coast",
+      "homeScore": 2,
+      "awayScore": 1,
+      "winner": "Germany",
+      "loser": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4586,8 +4618,12 @@
       "date": "2026-06-21",
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4663,8 +4699,12 @@
       "date": "2026-06-21",
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
+      "homeScore": 0,
+      "awayScore": 4,
+      "winner": "Japan",
+      "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4822,8 +4862,12 @@
       "date": "2026-06-21",
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
+      "homeScore": 4,
+      "awayScore": 0,
+      "winner": "Spain",
+      "loser": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -4976,8 +5020,12 @@
       "date": "2026-06-21",
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5057,8 +5105,12 @@
       "date": "2026-06-21",
       "homeTeam": "Uruguay",
       "awayTeam": "Cape Verde",
+      "homeScore": 2,
+      "awayScore": 2,
+      "winner": "",
+      "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5193,8 +5245,12 @@
       "date": "2026-06-22",
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
+      "homeScore": 1,
+      "awayScore": 3,
+      "winner": "Egypt",
+      "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5356,8 +5412,12 @@
       "date": "2026-06-22",
       "homeTeam": "Argentina",
       "awayTeam": "Austria",
+      "homeScore": 2,
+      "awayScore": 0,
+      "winner": "Argentina",
+      "loser": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5468,8 +5528,12 @@
       "date": "2026-06-22",
       "homeTeam": "France",
       "awayTeam": "Iraq",
+      "homeScore": 3,
+      "awayScore": 0,
+      "winner": "France",
+      "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5610,8 +5674,12 @@
       "date": "2026-06-23",
       "homeTeam": "Norway",
       "awayTeam": "Senegal",
+      "homeScore": 3,
+      "awayScore": 2,
+      "winner": "Norway",
+      "loser": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5781,8 +5849,12 @@
       "date": "2026-06-23",
       "homeTeam": "Jordan",
       "awayTeam": "Algeria",
+      "homeScore": 1,
+      "awayScore": 2,
+      "winner": "Algeria",
+      "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5914,8 +5986,12 @@
       "date": "2026-06-23",
       "homeTeam": "Portugal",
       "awayTeam": "Uzbekistan",
+      "homeScore": 5,
+      "awayScore": 0,
+      "winner": "Portugal",
+      "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6071,8 +6147,12 @@
       "date": "2026-06-23",
       "homeTeam": "England",
       "awayTeam": "Ghana",
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6148,8 +6228,12 @@
       "date": "2026-06-23",
       "homeTeam": "Panama",
       "awayTeam": "Croatia",
+      "homeScore": 0,
+      "awayScore": 1,
+      "winner": "Croatia",
+      "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6248,8 +6332,12 @@
       "date": "2026-06-24",
       "homeTeam": "Colombia",
       "awayTeam": "DR Congo",
+      "homeScore": 1,
+      "awayScore": 0,
+      "winner": "Colombia",
+      "loser": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6348,8 +6436,12 @@
       "date": "2026-06-24",
       "homeTeam": "Switzerland",
       "awayTeam": "Canada",
+      "homeScore": 2,
+      "awayScore": 1,
+      "winner": "Switzerland",
+      "loser": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6490,8 +6582,12 @@
       "date": "2026-06-24",
       "homeTeam": "Bosnia & Herzegovina",
       "awayTeam": "Qatar",
+      "homeScore": 3,
+      "awayScore": 1,
+      "winner": "Bosnia & Herzegovina",
+      "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6644,8 +6740,12 @@
       "date": "2026-06-24",
       "homeTeam": "Scotland",
       "awayTeam": "Brazil",
+      "homeScore": 0,
+      "awayScore": 3,
+      "winner": "Brazil",
+      "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6786,8 +6886,12 @@
       "date": "2026-06-24",
       "homeTeam": "Morocco",
       "awayTeam": "Haiti",
+      "homeScore": 4,
+      "awayScore": 2,
+      "winner": "Morocco",
+      "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -6973,8 +7077,12 @@
       "date": "2026-06-25",
       "homeTeam": "Czechia",
       "awayTeam": "Mexico",
+      "homeScore": 0,
+      "awayScore": 3,
+      "winner": "Mexico",
+      "loser": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7115,8 +7223,12 @@
       "date": "2026-06-25",
       "homeTeam": "South Africa",
       "awayTeam": "South Korea",
+      "homeScore": 1,
+      "awayScore": 0,
+      "winner": "South Africa",
+      "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T18:27:45.193Z",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7206,6 +7318,227 @@
           "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 55,
+      "espnEventId": "760473",
+      "date": "2026-06-25",
+      "homeTeam": "Curaçao",
+      "awayTeam": "Ivory Coast",
+      "homeScore": 0,
+      "awayScore": 1,
+      "winner": "",
+      "loser": "",
+      "source": "ESPN",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 1
+        },
+        "shots": {
+          "home": 2,
+          "away": 4
+        },
+        "possession": {
+          "home": 26.4,
+          "away": 73.6
+        },
+        "passes": {
+          "home": 89,
+          "away": 252
+        },
+        "fouls": {
+          "home": 4,
+          "away": 1
+        },
+        "corners": {
+          "home": 1,
+          "away": 1
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49607162",
+          "minute": "7",
+          "period": 1,
+          "team": "Ivory Coast",
+          "player": "Nicolas Pépé",
+          "assist": "Yan Diomande",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Curaçao 0, Côte d'Ivoire 1. Nicolas Pépé (Côte d'Ivoire) left footed shot from very close range to the centre of the goal. Assisted by Yan Diomande.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49607162",
+          "minute": "7",
+          "period": 1,
+          "team": "Ivory Coast",
+          "player": "Yan Diomande",
+          "goal": "Nicolas Pépé",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Curaçao",
+          "name": "Eloy Room",
+          "shortName": "E. Room",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Ivory Coast",
+          "name": "Yahia Fofana",
+          "shortName": "Y. Fofana",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 56,
+      "espnEventId": "760468",
+      "date": "2026-06-25",
+      "homeTeam": "Ecuador",
+      "awayTeam": "Germany",
+      "homeScore": 1,
+      "awayScore": 1,
+      "winner": "",
+      "loser": "",
+      "source": "ESPN",
+      "updatedAt": "2026-06-25T20:33:09.480Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 2
+        },
+        "shots": {
+          "home": 1,
+          "away": 4
+        },
+        "possession": {
+          "home": 46.2,
+          "away": 53.8
+        },
+        "passes": {
+          "home": 149,
+          "away": 172
+        },
+        "fouls": {
+          "home": 8,
+          "away": 2
+        },
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "saves": {
+          "home": 1,
+          "away": 0
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49606989",
+          "minute": "2",
+          "period": 1,
+          "team": "Germany",
+          "player": "Leroy Sané",
+          "assist": "Florian Wirtz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Ecuador 0, Germany 1. Leroy Sané (Germany) left footed shot from the centre of the box to the bottom left corner. Assisted by Florian Wirtz.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49607208",
+          "minute": "9",
+          "period": 1,
+          "team": "Ecuador",
+          "player": "Nilson Angulo",
+          "assist": "Pedro Vite",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Ecuador 1, Germany 1. Nilson Angulo (Ecuador) right footed shot from outside the box to the bottom right corner. Assisted by Pedro Vite.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49606989",
+          "minute": "2",
+          "period": 1,
+          "team": "Germany",
+          "player": "Florian Wirtz",
+          "goal": "Leroy Sané",
+          "source": "ESPN"
+        },
+        {
+          "id": "49607208",
+          "minute": "9",
+          "period": 1,
+          "team": "Ecuador",
+          "player": "Pedro Vite",
+          "goal": "Nilson Angulo",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Ecuador",
+          "name": "Hernán Galíndez",
+          "shortName": "H. Galíndez",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Germany",
+          "name": "Manuel Neuer",
+          "shortName": "M. Neuer",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
