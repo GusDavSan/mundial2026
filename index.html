@@ -1616,7 +1616,7 @@ async function loadLive(){
 // ══════════════════════════════════════════════
 // TAB: CALENDARIO
 // ══════════════════════════════════════════════
-let calRound='all',apiResults={};
+let calRound='all',apiResults={},apiResultsByFixtureId={};
 // Name normalization for external feeds.
 const ALT_TEAM_NAMES={'USA':'United States','Turkey':'Türkiye','Czech Republic':'Czechia',
   'Bosnia-Herzegovina':'Bosnia & Herzegovina','Congo DR':'DR Congo','Curacao':'Curaçao'};
@@ -1633,13 +1633,15 @@ function scoreFromStoredMatch(item,fx){
     out.away=parseInt(item.awayScore,10);
     return out;
   }
+  const homeRef=fx.home==='TBD'&&item.homeTeam?item.homeTeam:fx.home;
+  const awayRef=fx.away==='TBD'&&item.awayTeam?item.awayTeam:fx.away;
   let home=0,away=0,hasGoal=false;
   (item.goals||[]).forEach(function(goal){
     const team=goal&&goal.team;
     if(!team)return;
     hasGoal=true;
-    if(sameTeam(team,fx.home))home++;
-    else if(sameTeam(team,fx.away))away++;
+    if(sameTeam(team,homeRef))home++;
+    else if(sameTeam(team,awayRef))away++;
   });
   if(hasGoal||item.stats){out.home=home;out.away=away;}
   return out;
@@ -1650,14 +1652,21 @@ async function hydrateResultsFromStoredStats(){
     const fx=fixtureByStoredMatch(item);
     if(!fx)return;
     const score=scoreFromStoredMatch(item,fx);
-    mergeMatchResultKey(matchResultKey(fx.home,fx.away),{
+    const patch={
       id:item.espnEventId||item.matchId||fx.id,
       date:item.date||fx.date,
       time:fx.time,
       status:'FT',
       homeScore:score.home,
-      awayScore:score.away
-    });
+      awayScore:score.away,
+      homeTeam:item.homeTeam,
+      awayTeam:item.awayTeam,
+      winner:item.winner||item.winnerTeam||item.penaltyWinner||'',
+      loser:item.loser||item.loserTeam||''
+    };
+    apiResultsByFixtureId[fx.id]=Object.assign({},apiResultsByFixtureId[fx.id]||{},patch);
+    if(fx.home!=='TBD'&&fx.away!=='TBD')mergeMatchResultKey(matchResultKey(fx.home,fx.away),patch);
+    if(item.homeTeam&&item.awayTeam)mergeMatchResultKey(matchResultKey(item.homeTeam,item.awayTeam),patch);
   });
 }
 
@@ -1779,6 +1788,24 @@ const REAL_R32_SLOTS=[
   {id:87,a:'1K',b:{third:['D','E','I','J','L']}},
   {id:88,a:'2D',b:'2G'}
 ];
+const REAL_KNOCKOUT_SLOTS=REAL_R32_SLOTS.concat([
+  {id:89,a:{winner:73},b:{winner:75}},
+  {id:90,a:{winner:74},b:{winner:77}},
+  {id:91,a:{winner:76},b:{winner:78}},
+  {id:92,a:{winner:79},b:{winner:80}},
+  {id:93,a:{winner:83},b:{winner:84}},
+  {id:94,a:{winner:81},b:{winner:82}},
+  {id:95,a:{winner:86},b:{winner:88}},
+  {id:96,a:{winner:85},b:{winner:87}},
+  {id:97,a:{winner:89},b:{winner:90}},
+  {id:98,a:{winner:93},b:{winner:94}},
+  {id:99,a:{winner:91},b:{winner:92}},
+  {id:100,a:{winner:95},b:{winner:96}},
+  {id:101,a:{winner:97},b:{winner:98}},
+  {id:102,a:{winner:99},b:{winner:100}},
+  {id:103,a:{loser:101},b:{loser:102}},
+  {id:104,a:{winner:101},b:{winner:102}}
+]);
 function groupFinishedCount(g){
   return FIXTURES.filter(f=>f.group==='Group '+g).filter(function(m){
     const r=apiResults[matchResultKey(m.home,m.away)]||apiResults[m.home+'|'+m.away]||{};
@@ -1837,13 +1864,56 @@ function resolveThirdSlot(def){
 function resolveR32Side(side){
   return typeof side==='string'?resolveDirectSlot(side):resolveThirdSlot(side);
 }
+function fixtureLabel(id){return (lang==='es'?'P':'M')+id;}
+function resultForMatchId(id,a,b){
+  return apiResultsByFixtureId[id]||
+    (a&&b&&a.name&&b.name?apiResults[matchResultKey(a.name,b.name)]:null)||
+    {};
+}
+function sideMatchesName(side,name){
+  return !!(side&&side.name&&name&&sameTeam(side.name,name));
+}
+function matchOutcomeSide(matchId,wantLoser){
+  const slot=REAL_KNOCKOUT_SLOTS.find(s=>s.id===Number(matchId));
+  if(!slot)return null;
+  const a=resolveKnockoutSide(slot.a);
+  const b=resolveKnockoutSide(slot.b);
+  const r=resultForMatchId(matchId,a,b);
+  const winnerName=r.winner||r.winnerTeam||r.penaltyWinner||'';
+  const loserName=r.loser||r.loserTeam||'';
+  let winner=null,loser=null;
+  if(winnerName){
+    winner=sideMatchesName(a,winnerName)?a:sideMatchesName(b,winnerName)?b:{name:winnerName,label:winnerName,flag:FLAGS[normName(winnerName)]||FLAGS[winnerName]||'🏳️',confirmed:true};
+  }
+  if(loserName){
+    loser=sideMatchesName(a,loserName)?a:sideMatchesName(b,loserName)?b:{name:loserName,label:loserName,flag:FLAGS[normName(loserName)]||FLAGS[loserName]||'🏳️',confirmed:true};
+  }
+  if(!winner&&isFin(r.status)&&r.homeScore!==null&&r.homeScore!==undefined&&r.awayScore!==null&&r.awayScore!==undefined){
+    const hs=Number(r.homeScore),as=Number(r.awayScore);
+    if(Number.isFinite(hs)&&Number.isFinite(as)&&hs!==as){
+      winner=hs>as?a:b;
+      loser=hs>as?b:a;
+    }
+  }
+  const picked=wantLoser?loser:winner;
+  if(picked&&picked.name)return Object.assign({},picked,{confirmed:true,provisional:false,slot:(wantLoser?(lang==='es'?'Perdedor ':'Loser '):(lang==='es'?'Ganador ':'Winner '))+fixtureLabel(matchId)});
+  const label=(wantLoser?(lang==='es'?'Perdedor ':'Loser '):(lang==='es'?'Ganador ':'Winner '))+fixtureLabel(matchId);
+  return {name:null,label,flag:'🏳️',confirmed:false,provisional:true,slot:label};
+}
+function resolveKnockoutSide(side){
+  if(typeof side==='string')return resolveDirectSlot(side);
+  if(side&&side.third)return resolveThirdSlot(side);
+  if(side&&side.winner)return matchOutcomeSide(side.winner,false);
+  if(side&&side.loser)return matchOutcomeSide(side.loser,true);
+  return {name:null,label:'TBD',flag:'🏳️',confirmed:false,provisional:true,slot:'TBD'};
+}
 function knockoutInfoHtml(slot,a,b){
   if(!slot)return '';
   const confirmed=a.confirmed&&b.confirmed;
   const state=confirmed?(lang==='es'?'Confirmado':'Confirmed'):(lang==='es'?'Provisional':'Provisional');
   const stateCls=confirmed?'ok':'warn';
   let html='<div class="ko-info"><div class="ko-line"><span class="ko-state '+stateCls+'">'+state+'</span><span>'+
-    (confirmed?(lang==='es'?'Cruce cerrado por clasificación de grupo.':'Fixture locked by group standings.'):(lang==='es'?'Se actualiza con la clasificación de grupos.':'Updates from group standings.'))+
+    (confirmed?(lang==='es'?'Cruce cerrado por resultados anteriores.':'Fixture locked by previous results.'):(lang==='es'?'Se actualiza conforme se cierran los partidos previos.':'Updates as previous matches finish.'))+
     '</span></div>';
   [a,b].filter(s=>s.candidates&&s.candidates.length).forEach(function(s){
     html+='<div class="ko-cands"><span>'+(lang==='es'?'Posibles terceros:':'Possible thirds:')+'</span>';
@@ -1857,11 +1927,11 @@ function knockoutInfoHtml(slot,a,b){
   return html+'</div>';
 }
 function decorateCalendarFixture(f){
-  if(!f||f.group!=='Ronda de 32')return f;
-  const slot=REAL_R32_SLOTS.find(s=>s.id===f.id);
+  if(!f||!['Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL'].includes(f.group))return f;
+  const slot=REAL_KNOCKOUT_SLOTS.find(s=>s.id===f.id);
   if(!slot)return f;
-  const a=resolveR32Side(slot.a);
-  const b=resolveR32Side(slot.b);
+  const a=resolveKnockoutSide(slot.a);
+  const b=resolveKnockoutSide(slot.b);
   return Object.assign({},f,{
     home:a.name||a.label,
     away:b.name||b.label,
@@ -1883,7 +1953,7 @@ function buildMatchesHtml(fx){
     html+='<div class="day-lbl">'+lbl+'</div>';
     byDate[dt].forEach(f=>{
       const displayF=decorateCalendarFixture(f);
-      const r=apiResults[matchResultKey(displayF.home,displayF.away)]||apiResults[matchResultKey(f.home,f.away)]||apiResults[f.home+'|'+f.away]||{};
+      const r=apiResultsByFixtureId[f.id]||apiResults[matchResultKey(displayF.home,displayF.away)]||apiResults[matchResultKey(f.home,f.away)]||apiResults[f.home+'|'+f.away]||{};
       const resolved=cardDateTimeFromData(r,displayF,displayF.date);
       const status=r.status;
       const upcoming=!isLive(status)&&!isFin(status)&&!isPast(resolved.date,resolved.time);
