@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T20:55:50.535Z",
+  "updated": "2026-06-26T22:37:08.049Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -788,12 +788,12 @@
       "home": "Norway",
       "away": "France",
       "source": "DAZN ES",
-      "title": "¡Se lo dibujó Larsen y lo paró Maignan! ❌El penalti que falló Noruega contra Francia #DAZNMundial",
-      "url": "https://www.youtube.com/watch?v=F0yV4hGd-as",
-      "thumbnail": "https://i.ytimg.com/vi/F0yV4hGd-as/hqdefault.jpg",
-      "videoId": "F0yV4hGd-as",
-      "publishedAt": "2026-06-26T20:25:40Z",
-      "confidence": 16
+      "title": "Resumen del Noruega 1-4 Francia en un minuto 🇳🇴🇫🇷 Goles y mejores jugadas #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=ukl8QSIVVU8",
+      "thumbnail": "https://i.ytimg.com/vi/ukl8QSIVVU8/hqdefault.jpg",
+      "videoId": "ukl8QSIVVU8",
+      "publishedAt": "2026-06-26T21:13:35Z",
+      "confidence": 19
     },
     {
       "matchId": 62,
@@ -801,11 +801,11 @@
       "home": "Senegal",
       "away": "Iraq",
       "source": "DAZN ES",
-      "title": "SENEGAL QUIERE CREER 🇸🇳 ¿Qué necesita? Marcar muchos goles #DAZNMundial #FIFAWorldCup",
-      "url": "https://www.youtube.com/watch?v=mq0eAQMMT3Y",
-      "thumbnail": "https://i.ytimg.com/vi/mq0eAQMMT3Y/hqdefault.jpg",
-      "videoId": "mq0eAQMMT3Y",
-      "publishedAt": "2026-06-26T19:27:59Z",
+      "title": "Senegal necesitaba goles. NDIAYE FIRMA LA MANITA #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=e6T0cVo7I0I",
+      "thumbnail": "https://i.ytimg.com/vi/e6T0cVo7I0I/hqdefault.jpg",
+      "videoId": "e6T0cVo7I0I",
+      "publishedAt": "2026-06-26T21:06:24Z",
       "confidence": 13
     }
   ]
