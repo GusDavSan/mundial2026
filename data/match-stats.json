@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T22:20:54.086Z",
+  "updated": "2026-06-26T23:44:31.369Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -4036,7 +4036,7 @@
       "winner": "Brazil",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4173,7 +4173,7 @@
       "winner": "Paraguay",
       "loser": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4281,7 +4281,7 @@
       "winner": "Netherlands",
       "loser": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4490,7 +4490,7 @@
       "winner": "Germany",
       "loser": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4623,7 +4623,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4704,7 +4704,7 @@
       "winner": "Japan",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4867,7 +4867,7 @@
       "winner": "Spain",
       "loser": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -5025,7 +5025,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5110,7 +5110,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5250,7 +5250,7 @@
       "winner": "Egypt",
       "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5417,7 +5417,7 @@
       "winner": "Argentina",
       "loser": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5533,7 +5533,7 @@
       "winner": "France",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5679,7 +5679,7 @@
       "winner": "Norway",
       "loser": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5854,7 +5854,7 @@
       "winner": "Algeria",
       "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5991,7 +5991,7 @@
       "winner": "Portugal",
       "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6152,7 +6152,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6233,7 +6233,7 @@
       "winner": "Croatia",
       "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6337,7 +6337,7 @@
       "winner": "Colombia",
       "loser": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6441,7 +6441,7 @@
       "winner": "Switzerland",
       "loser": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6587,7 +6587,7 @@
       "winner": "Bosnia & Herzegovina",
       "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6745,7 +6745,7 @@
       "winner": "Brazil",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6891,7 +6891,7 @@
       "winner": "Morocco",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -7082,7 +7082,7 @@
       "winner": "Mexico",
       "loser": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7228,7 +7228,7 @@
       "winner": "South Africa",
       "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7332,7 +7332,7 @@
       "winner": "Ivory Coast",
       "loser": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7457,7 +7457,7 @@
       "winner": "Ecuador",
       "loser": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7603,7 +7603,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7728,7 +7728,7 @@
       "winner": "Netherlands",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7882,7 +7882,7 @@
       "winner": "Türkiye",
       "loser": "United States",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8052,7 +8052,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8133,7 +8133,7 @@
       "winner": "France",
       "loser": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8144,12 +8144,12 @@
           "away": 18
         },
         "possession": {
-          "home": 43.2,
-          "away": 56.8
+          "home": 43.3,
+          "away": 56.7
         },
         "passes": {
-          "home": 420,
-          "away": 557
+          "home": 421,
+          "away": 555
         },
         "fouls": {
           "home": 9,
@@ -8321,7 +8321,7 @@
       "winner": "Senegal",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T22:20:54.086Z",
+      "updatedAt": "2026-06-26T23:44:31.369Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8332,12 +8332,12 @@
           "away": 6
         },
         "possession": {
-          "home": 69.3,
-          "away": 30.7
+          "home": 69.2,
+          "away": 30.8
         },
         "passes": {
           "home": 590,
-          "away": 265
+          "away": 266
         },
         "fouls": {
           "home": 10,
@@ -8386,7 +8386,7 @@
           "assist": "Lamine Camara",
           "penalty": false,
           "ownGoal": false,
-          "text": "Goal! Senegal 2, Iraq 0. Ismaïla Sarr (Senegal) right footed shot from very close range to the high centre of the goal. Assisted by Lamine Camara.",
+          "text": "Goal! Senegal 2, Iraq 0. Ismaïla Sarr (Senegal) right footed shot from very close range to the top left corner. Assisted by Lamine Camara.",
           "source": "ESPN"
         },
         {
