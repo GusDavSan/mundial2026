@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T23:47:18.912Z",
+  "updated": "2026-06-26T01:55:01.003Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -3826,7 +3826,7 @@
       "winner": "United States",
       "loser": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3932,7 +3932,7 @@
       "winner": "Morocco",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4036,7 +4036,7 @@
       "winner": "Brazil",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4173,7 +4173,7 @@
       "winner": "Paraguay",
       "loser": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4281,7 +4281,7 @@
       "winner": "Netherlands",
       "loser": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4490,7 +4490,7 @@
       "winner": "Germany",
       "loser": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4623,7 +4623,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4704,7 +4704,7 @@
       "winner": "Japan",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4867,7 +4867,7 @@
       "winner": "Spain",
       "loser": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -5025,7 +5025,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5110,7 +5110,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5250,7 +5250,7 @@
       "winner": "Egypt",
       "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5417,7 +5417,7 @@
       "winner": "Argentina",
       "loser": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5533,7 +5533,7 @@
       "winner": "France",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5679,7 +5679,7 @@
       "winner": "Norway",
       "loser": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5854,7 +5854,7 @@
       "winner": "Algeria",
       "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5991,7 +5991,7 @@
       "winner": "Portugal",
       "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6152,7 +6152,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6233,7 +6233,7 @@
       "winner": "Croatia",
       "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6337,7 +6337,7 @@
       "winner": "Colombia",
       "loser": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6441,7 +6441,7 @@
       "winner": "Switzerland",
       "loser": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6587,7 +6587,7 @@
       "winner": "Bosnia & Herzegovina",
       "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6745,7 +6745,7 @@
       "winner": "Brazil",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6891,7 +6891,7 @@
       "winner": "Morocco",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -7082,7 +7082,7 @@
       "winner": "Mexico",
       "loser": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7228,7 +7228,7 @@
       "winner": "South Africa",
       "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7332,7 +7332,7 @@
       "winner": "Ivory Coast",
       "loser": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7343,12 +7343,12 @@
           "away": 7
         },
         "possession": {
-          "home": 36.6,
-          "away": 63.4
+          "home": 36.7,
+          "away": 63.3
         },
         "passes": {
-          "home": 354,
-          "away": 623
+          "home": 355,
+          "away": 624
         },
         "fouls": {
           "home": 11,
@@ -7457,7 +7457,7 @@
       "winner": "Ecuador",
       "loser": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7472,7 +7472,7 @@
           "away": 61.1
         },
         "passes": {
-          "home": 379,
+          "home": 378,
           "away": 592
         },
         "fouls": {
@@ -7598,52 +7598,96 @@
       "date": "2026-06-25",
       "homeTeam": "Japan",
       "awayTeam": "Sweden",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 2,
-          "away": 1
+          "home": 3,
+          "away": 5
         },
         "shots": {
-          "home": 4,
-          "away": 1
+          "home": 8,
+          "away": 11
         },
         "possession": {
-          "home": 56.8,
-          "away": 43.2
+          "home": 52.3,
+          "away": 47.7
         },
         "passes": {
-          "home": 245,
-          "away": 183
+          "home": 446,
+          "away": 395
         },
         "fouls": {
-          "home": 10,
-          "away": 6
+          "home": 20,
+          "away": 11
         },
         "corners": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 8
         },
         "saves": {
-          "home": 1,
+          "home": 4,
           "away": 2
         },
         "offsides": {
-          "home": 1,
-          "away": 1
+          "home": 3,
+          "away": 2
         },
         "yellowCards": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49612506",
+          "minute": "56",
+          "period": 2,
+          "team": "Japan",
+          "player": "Daizen Maeda",
+          "assist": "Ritsu Doan",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Japan 1, Sweden 0. Daizen Maeda (Japan) right footed shot from the centre of the box to the bottom left corner. Assisted by Ritsu Doan with a through ball.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49612729",
+          "minute": "62",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Anthony Elanga",
+          "assist": "Viktor Gyökeres",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Japan 1, Sweden 1. Anthony Elanga (Sweden) left footed shot from outside the box to the bottom left corner. Assisted by Viktor Gyökeres.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49612506",
+          "minute": "56",
+          "period": 2,
+          "team": "Japan",
+          "player": "Ritsu Doan",
+          "goal": "Daizen Maeda",
+          "source": "ESPN"
+        },
+        {
+          "id": "49612729",
+          "minute": "62",
+          "period": 2,
+          "team": "Sweden",
+          "player": "Viktor Gyökeres",
+          "goal": "Anthony Elanga",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -7651,10 +7695,10 @@
           "name": "Zion Suzuki",
           "shortName": "Z. Suzuki",
           "number": "1",
-          "saves": 1,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 4,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 80,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -7665,9 +7709,9 @@
           "shortName": "J. Widell Zetterström",
           "number": "1",
           "saves": 2,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
@@ -7679,44 +7723,44 @@
       "date": "2026-06-25",
       "homeTeam": "Tunisia",
       "awayTeam": "Netherlands",
-      "homeScore": 0,
-      "awayScore": 2,
-      "winner": "",
-      "loser": "",
+      "homeScore": 1,
+      "awayScore": 3,
+      "winner": "Netherlands",
+      "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-25T23:47:18.912Z",
+      "updatedAt": "2026-06-26T01:55:01.003Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 3
+          "home": 4,
+          "away": 7
         },
         "shots": {
-          "home": 4,
-          "away": 12
+          "home": 10,
+          "away": 20
         },
         "possession": {
-          "home": 29.7,
-          "away": 70.3
+          "home": 28.4,
+          "away": 71.6
         },
         "passes": {
-          "home": 126,
-          "away": 302
+          "home": 258,
+          "away": 652
         },
         "fouls": {
-          "home": 5,
-          "away": 4
+          "home": 11,
+          "away": 10
         },
         "corners": {
-          "home": 1,
-          "away": 3
+          "home": 4,
+          "away": 6
         },
         "saves": {
-          "home": 2,
-          "away": 1
+          "home": 4,
+          "away": 3
         },
         "offsides": {
-          "home": 1,
-          "away": 0
+          "home": 2,
+          "away": 1
         }
       },
       "goals": [
@@ -7743,6 +7787,30 @@
           "ownGoal": false,
           "text": "Goal! Tunisia 0, Netherlands 2. Brian Brobbey (Netherlands) right footed shot from the centre of the box to the top right corner. Assisted by Virgil van Dijk with a headed pass following a set piece situation.",
           "source": "ESPN"
+        },
+        {
+          "id": "49612363",
+          "minute": "54",
+          "period": 2,
+          "team": "Tunisia",
+          "player": "Hazem Mastouri",
+          "assist": "Hannibal Mejbri",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Tunisia 1, Netherlands 2. Hazem Mastouri (Tunisia) header from the centre of the box to the bottom left corner. Assisted by Hannibal Mejbri with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49612690",
+          "minute": "62",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Jan Paul van Hecke",
+          "assist": "Tijjani Reijnders",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Tunisia 1, Netherlands 3. Jan Paul van Hecke (Netherlands) header from the left side of the six yard box to the top right corner. Assisted by Tijjani Reijnders with a cross following a corner.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -7754,6 +7822,24 @@
           "player": "Virgil van Dijk",
           "goal": "Brian Brobbey",
           "source": "ESPN"
+        },
+        {
+          "id": "49612363",
+          "minute": "54",
+          "period": 2,
+          "team": "Tunisia",
+          "player": "Hannibal Mejbri",
+          "goal": "Hazem Mastouri",
+          "source": "ESPN"
+        },
+        {
+          "id": "49612690",
+          "minute": "62",
+          "period": 2,
+          "team": "Netherlands",
+          "player": "Tijjani Reijnders",
+          "goal": "Jan Paul van Hecke",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -7763,10 +7849,10 @@
           "name": "Aymen Dahmen",
           "shortName": "A. Dahmen",
           "number": "16",
-          "saves": 2,
-          "goalsAgainst": 2,
+          "saves": 4,
+          "goalsAgainst": 3,
           "cleanSheet": 0,
-          "savePct": 50,
+          "savePct": 57.1,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -7776,10 +7862,10 @@
           "name": "Bart Verbruggen",
           "shortName": "B. Verbruggen",
           "number": "1",
-          "saves": 1,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 3,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
