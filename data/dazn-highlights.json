@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T22:46:46.113Z",
+  "updated": "2026-06-26T01:30:27.515Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -112,11 +112,11 @@
       "home": "Germany",
       "away": "Curaçao",
       "source": "DAZN ES",
-      "title": "Alemania vs Costa de Marfil (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-l9V2Lgb2hw",
-      "thumbnail": "https://i.ytimg.com/vi/-l9V2Lgb2hw/hqdefault.jpg",
-      "videoId": "-l9V2Lgb2hw",
-      "publishedAt": "2026-06-21T00:00:33Z",
+      "title": "Ecuador vs Alemania (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=hR_Hp_qWpsg",
+      "thumbnail": "https://i1.ytimg.com/vi/hR_Hp_qWpsg/hqdefault.jpg",
+      "videoId": "hR_Hp_qWpsg",
+      "publishedAt": "2026-06-26T00:00:25+00:00",
       "confidence": 12
     },
     {
@@ -125,12 +125,12 @@
       "home": "Netherlands",
       "away": "Japan",
       "source": "DAZN ES",
-      "title": "Túnez vs Japón (0-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=gHFv8WJNEBI",
-      "thumbnail": "https://i.ytimg.com/vi/gHFv8WJNEBI/hqdefault.jpg",
-      "videoId": "gHFv8WJNEBI",
-      "publishedAt": "2026-06-21T08:00:36Z",
-      "confidence": 12
+      "title": "Países Bajos vence 🟠🙌 Líder del grupo F y a dieciseisavos junto a Japón y Suecia #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=Q56PX2FLxCg",
+      "thumbnail": "https://i.ytimg.com/vi/Q56PX2FLxCg/hqdefault.jpg",
+      "videoId": "Q56PX2FLxCg",
+      "publishedAt": "2026-06-26T01:09:55Z",
+      "confidence": 14
     },
     {
       "matchId": 11,
@@ -138,11 +138,11 @@
       "home": "Ivory Coast",
       "away": "Ecuador",
       "source": "DAZN ES",
-      "title": "Ecuador vs Curazao (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=BkQKgZ6PoTs",
-      "thumbnail": "https://i.ytimg.com/vi/BkQKgZ6PoTs/hqdefault.jpg",
-      "videoId": "BkQKgZ6PoTs",
-      "publishedAt": "2026-06-21T06:01:10Z",
+      "title": "Ecuador vs Alemania (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=hR_Hp_qWpsg",
+      "thumbnail": "https://i1.ytimg.com/vi/hR_Hp_qWpsg/hqdefault.jpg",
+      "videoId": "hR_Hp_qWpsg",
+      "publishedAt": "2026-06-26T00:00:25+00:00",
       "confidence": 12
     },
     {
@@ -424,12 +424,12 @@
       "home": "Netherlands",
       "away": "Sweden",
       "source": "DAZN ES",
-      "title": "Países Bajos vs Suecia (5-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=hEmjMyYKjSE",
-      "thumbnail": "https://i.ytimg.com/vi/hEmjMyYKjSE/hqdefault.jpg",
-      "videoId": "hEmjMyYKjSE",
-      "publishedAt": "2026-06-20T21:00:11Z",
-      "confidence": 20
+      "title": "Países Bajos vence 🟠🙌 Líder del grupo F y a dieciseisavos junto a Japón y Suecia #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=Q56PX2FLxCg",
+      "thumbnail": "https://i.ytimg.com/vi/Q56PX2FLxCg/hqdefault.jpg",
+      "videoId": "Q56PX2FLxCg",
+      "publishedAt": "2026-06-26T01:09:55Z",
+      "confidence": 14
     },
     {
       "matchId": 34,
@@ -437,12 +437,12 @@
       "home": "Germany",
       "away": "Ivory Coast",
       "source": "DAZN ES",
-      "title": "Alemania vs Costa de Marfil (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-l9V2Lgb2hw",
-      "thumbnail": "https://i.ytimg.com/vi/-l9V2Lgb2hw/hqdefault.jpg",
-      "videoId": "-l9V2Lgb2hw",
-      "publishedAt": "2026-06-21T00:00:33Z",
-      "confidence": 20
+      "title": "Ecuador vs Alemania (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=hR_Hp_qWpsg",
+      "thumbnail": "https://i1.ytimg.com/vi/hR_Hp_qWpsg/hqdefault.jpg",
+      "videoId": "hR_Hp_qWpsg",
+      "publishedAt": "2026-06-26T00:00:25+00:00",
+      "confidence": 12
     },
     {
       "matchId": 35,
@@ -450,12 +450,12 @@
       "home": "Ecuador",
       "away": "Curaçao",
       "source": "DAZN ES",
-      "title": "Ecuador vs Curazao (0-0) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=BkQKgZ6PoTs",
-      "thumbnail": "https://i.ytimg.com/vi/BkQKgZ6PoTs/hqdefault.jpg",
-      "videoId": "BkQKgZ6PoTs",
-      "publishedAt": "2026-06-21T06:01:10Z",
-      "confidence": 14
+      "title": "Ecuador vs Alemania (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=hR_Hp_qWpsg",
+      "thumbnail": "https://i1.ytimg.com/vi/hR_Hp_qWpsg/hqdefault.jpg",
+      "videoId": "hR_Hp_qWpsg",
+      "publishedAt": "2026-06-26T00:00:25+00:00",
+      "confidence": 12
     },
     {
       "matchId": 36,
@@ -705,17 +705,56 @@
       "confidence": 20
     },
     {
+      "matchId": 55,
+      "date": "2026-06-25",
+      "home": "Curaçao",
+      "away": "Ivory Coast",
+      "source": "DAZN ES",
+      "title": "Curazao vs Costa de Marfil (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=_u76yBOatu4",
+      "thumbnail": "https://i.ytimg.com/vi/_u76yBOatu4/hqdefault.jpg",
+      "videoId": "_u76yBOatu4",
+      "publishedAt": "2026-06-26T00:00:21Z",
+      "confidence": 14
+    },
+    {
       "matchId": 56,
       "date": "2026-06-25",
       "home": "Ecuador",
       "away": "Germany",
       "source": "DAZN ES",
-      "title": "🚨 POLÉMICA EN ECUADOR CON EL 0-1 DE ALEMANIA",
-      "url": "https://www.youtube.com/watch?v=AC-xzoq1Nqk",
-      "thumbnail": "https://i2.ytimg.com/vi/AC-xzoq1Nqk/hqdefault.jpg",
-      "videoId": "AC-xzoq1Nqk",
-      "publishedAt": "2026-06-25T20:19:21+00:00",
-      "confidence": 14
+      "title": "Ecuador vs Alemania (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=hR_Hp_qWpsg",
+      "thumbnail": "https://i1.ytimg.com/vi/hR_Hp_qWpsg/hqdefault.jpg",
+      "videoId": "hR_Hp_qWpsg",
+      "publishedAt": "2026-06-26T00:00:25+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 57,
+      "date": "2026-06-25",
+      "home": "Japan",
+      "away": "Sweden",
+      "source": "DAZN ES",
+      "title": "Países Bajos vence 🟠🙌 Líder del grupo F y a dieciseisavos junto a Japón y Suecia #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=Q56PX2FLxCg",
+      "thumbnail": "https://i.ytimg.com/vi/Q56PX2FLxCg/hqdefault.jpg",
+      "videoId": "Q56PX2FLxCg",
+      "publishedAt": "2026-06-26T01:09:55Z",
+      "confidence": 16
+    },
+    {
+      "matchId": 58,
+      "date": "2026-06-25",
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "source": "DAZN ES",
+      "title": "😕 El Mundial de Túnez es... Países Bajos pone rumbo a la primera plaza #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=nHdcSMDrXFk",
+      "thumbnail": "https://i.ytimg.com/vi/nHdcSMDrXFk/hqdefault.jpg",
+      "videoId": "nHdcSMDrXFk",
+      "publishedAt": "2026-06-25T23:21:28Z",
+      "confidence": 16
     }
   ]
 }
