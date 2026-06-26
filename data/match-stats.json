@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T01:55:01.003Z",
+  "updated": "2026-06-26T06:18:19.519Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -3826,7 +3826,7 @@
       "winner": "United States",
       "loser": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -3932,7 +3932,7 @@
       "winner": "Morocco",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4036,7 +4036,7 @@
       "winner": "Brazil",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4173,7 +4173,7 @@
       "winner": "Paraguay",
       "loser": "Türkiye",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -4281,7 +4281,7 @@
       "winner": "Netherlands",
       "loser": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4490,7 +4490,7 @@
       "winner": "Germany",
       "loser": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4623,7 +4623,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4704,7 +4704,7 @@
       "winner": "Japan",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4867,7 +4867,7 @@
       "winner": "Spain",
       "loser": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -5025,7 +5025,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5110,7 +5110,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5250,7 +5250,7 @@
       "winner": "Egypt",
       "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5417,7 +5417,7 @@
       "winner": "Argentina",
       "loser": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5533,7 +5533,7 @@
       "winner": "France",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5679,7 +5679,7 @@
       "winner": "Norway",
       "loser": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5854,7 +5854,7 @@
       "winner": "Algeria",
       "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5991,7 +5991,7 @@
       "winner": "Portugal",
       "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6152,7 +6152,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6233,7 +6233,7 @@
       "winner": "Croatia",
       "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6337,7 +6337,7 @@
       "winner": "Colombia",
       "loser": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6441,7 +6441,7 @@
       "winner": "Switzerland",
       "loser": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6587,7 +6587,7 @@
       "winner": "Bosnia & Herzegovina",
       "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6745,7 +6745,7 @@
       "winner": "Brazil",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6891,7 +6891,7 @@
       "winner": "Morocco",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -7082,7 +7082,7 @@
       "winner": "Mexico",
       "loser": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7228,7 +7228,7 @@
       "winner": "South Africa",
       "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7332,7 +7332,7 @@
       "winner": "Ivory Coast",
       "loser": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7457,7 +7457,7 @@
       "winner": "Ecuador",
       "loser": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7603,7 +7603,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7618,7 +7618,7 @@
           "away": 47.7
         },
         "passes": {
-          "home": 446,
+          "home": 445,
           "away": 395
         },
         "fouls": {
@@ -7728,7 +7728,7 @@
       "winner": "Netherlands",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-26T01:55:01.003Z",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7739,12 +7739,12 @@
           "away": 20
         },
         "possession": {
-          "home": 28.4,
-          "away": 71.6
+          "home": 28.6,
+          "away": 71.4
         },
         "passes": {
           "home": 258,
-          "away": 652
+          "away": 647
         },
         "fouls": {
           "home": 11,
@@ -7866,6 +7866,257 @@
           "goalsAgainst": 1,
           "cleanSheet": 0,
           "savePct": 75,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 59,
+      "espnEventId": "760470",
+      "date": "2026-06-26",
+      "homeTeam": "Türkiye",
+      "awayTeam": "United States",
+      "homeScore": 3,
+      "awayScore": 2,
+      "winner": "Türkiye",
+      "loser": "United States",
+      "source": "ESPN",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 3,
+          "away": 7
+        },
+        "shots": {
+          "home": 9,
+          "away": 18
+        },
+        "possession": {
+          "home": 47.5,
+          "away": 52.5
+        },
+        "passes": {
+          "home": 435,
+          "away": 469
+        },
+        "fouls": {
+          "home": 13,
+          "away": 13
+        },
+        "corners": {
+          "home": 2,
+          "away": 9
+        },
+        "saves": {
+          "home": 5,
+          "away": 1
+        },
+        "offsides": {
+          "home": 2,
+          "away": 5
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49614444",
+          "minute": "3",
+          "period": 1,
+          "team": "United States",
+          "player": "Auston Trusty",
+          "assist": "Sebastian Berhalter",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Türkiye 0, USA 1. Auston Trusty (USA) left footed shot from a difficult angle on the right to the bottom right corner. Assisted by Sebastian Berhalter with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49614701",
+          "minute": "10",
+          "period": 1,
+          "team": "Türkiye",
+          "player": "Arda Güler",
+          "assist": "Baris Alper Yilmaz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Türkiye 1, USA 1. Arda Güler (Türkiye) left footed shot from the centre of the box to the centre of the goal. Assisted by Baris Alper Yilmaz.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49615262",
+          "minute": "31",
+          "period": 1,
+          "team": "Türkiye",
+          "player": "Baris Alper Yilmaz",
+          "assist": "Orkun Kökçü",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Türkiye 2, USA 1. Baris Alper Yilmaz (Türkiye) right footed shot from very close range to the bottom right corner. Assisted by Orkun Kökçü.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49616083",
+          "minute": "49",
+          "period": 2,
+          "team": "United States",
+          "player": "Sebastian Berhalter",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Türkiye 2, USA 2. Sebastian Berhalter (USA) right footed shot from outside the box to the bottom left corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49617570",
+          "minute": "90'+8",
+          "period": 2,
+          "team": "Türkiye",
+          "player": "Kaan Ayhan",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Türkiye 3, USA 2. Kaan Ayhan (Türkiye) right footed shot from very close range to the bottom right corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49614444",
+          "minute": "3",
+          "period": 1,
+          "team": "United States",
+          "player": "Sebastian Berhalter",
+          "goal": "Auston Trusty",
+          "source": "ESPN"
+        },
+        {
+          "id": "49614701",
+          "minute": "10",
+          "period": 1,
+          "team": "Türkiye",
+          "player": "Baris Alper Yilmaz",
+          "goal": "Arda Güler",
+          "source": "ESPN"
+        },
+        {
+          "id": "49615262",
+          "minute": "31",
+          "period": 1,
+          "team": "Türkiye",
+          "player": "Orkun Kökçü",
+          "goal": "Baris Alper Yilmaz",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Türkiye",
+          "name": "Ugurcan Çakir",
+          "shortName": "U. Çakir",
+          "number": "23",
+          "saves": 5,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 71.4,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "United States",
+          "name": "Matt Turner",
+          "shortName": "M. Turner",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 25,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        }
+      ]
+    },
+    {
+      "matchId": 60,
+      "espnEventId": "760469",
+      "date": "2026-06-26",
+      "homeTeam": "Paraguay",
+      "awayTeam": "Australia",
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "source": "ESPN",
+      "updatedAt": "2026-06-26T06:18:19.519Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 5
+        },
+        "shots": {
+          "home": 7,
+          "away": 12
+        },
+        "possession": {
+          "home": 44.1,
+          "away": 55.9
+        },
+        "passes": {
+          "home": 427,
+          "away": 536
+        },
+        "fouls": {
+          "home": 9,
+          "away": 6
+        },
+        "corners": {
+          "home": 1,
+          "away": 3
+        },
+        "saves": {
+          "home": 5,
+          "away": 2
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Paraguay",
+          "name": "Orlando Gil",
+          "shortName": "O. Gil",
+          "number": "12",
+          "saves": 5,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Australia",
+          "name": "Patrick Beach",
+          "shortName": "P. Beach",
+          "number": "18",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
