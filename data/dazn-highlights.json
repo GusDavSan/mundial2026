@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T19:03:48.128Z",
+  "updated": "2026-06-26T20:55:50.535Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -781,6 +781,32 @@
       "videoId": "zXNrM3LFYmo",
       "publishedAt": "2026-06-26T05:56:56+00:00",
       "confidence": 20
+    },
+    {
+      "matchId": 61,
+      "date": "2026-06-26",
+      "home": "Norway",
+      "away": "France",
+      "source": "DAZN ES",
+      "title": "¡Se lo dibujó Larsen y lo paró Maignan! ❌El penalti que falló Noruega contra Francia #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=F0yV4hGd-as",
+      "thumbnail": "https://i.ytimg.com/vi/F0yV4hGd-as/hqdefault.jpg",
+      "videoId": "F0yV4hGd-as",
+      "publishedAt": "2026-06-26T20:25:40Z",
+      "confidence": 16
+    },
+    {
+      "matchId": 62,
+      "date": "2026-06-26",
+      "home": "Senegal",
+      "away": "Iraq",
+      "source": "DAZN ES",
+      "title": "SENEGAL QUIERE CREER 🇸🇳 ¿Qué necesita? Marcar muchos goles #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=mq0eAQMMT3Y",
+      "thumbnail": "https://i.ytimg.com/vi/mq0eAQMMT3Y/hqdefault.jpg",
+      "videoId": "mq0eAQMMT3Y",
+      "publishedAt": "2026-06-26T19:27:59Z",
+      "confidence": 13
     }
   ]
 }
