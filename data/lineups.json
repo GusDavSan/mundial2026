@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T22:39:20.179Z",
+  "updated": "2026-06-27T23:44:15.681Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -18515,7 +18515,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Ecuador",
         "espnTeam": "Ecuador",
@@ -19064,7 +19064,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Tunisia",
         "espnTeam": "Tunisia",
@@ -19593,7 +19593,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -20142,7 +20142,7 @@
       "homeTeam": "Belgium",
       "awayTeam": "Iran",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Belgium",
         "espnTeam": "Belgium",
@@ -20671,7 +20671,7 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Uruguay",
         "espnTeam": "Uruguay",
@@ -21200,7 +21200,7 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "New Zealand",
         "espnTeam": "New Zealand",
@@ -21749,7 +21749,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -22298,7 +22298,7 @@
       "homeTeam": "France",
       "awayTeam": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -22847,7 +22847,7 @@
       "homeTeam": "Norway",
       "awayTeam": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Norway",
         "espnTeam": "Norway",
@@ -23396,7 +23396,7 @@
       "homeTeam": "Jordan",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Jordan",
         "espnTeam": "Jordan",
@@ -23935,7 +23935,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -24484,7 +24484,7 @@
       "homeTeam": "England",
       "awayTeam": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -25033,7 +25033,7 @@
       "homeTeam": "Panama",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Panama",
         "espnTeam": "Panama",
@@ -25582,7 +25582,7 @@
       "homeTeam": "Colombia",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Colombia",
         "espnTeam": "Colombia",
@@ -26131,7 +26131,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -26650,7 +26650,7 @@
       "homeTeam": "Bosnia & Herzegovina",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Bosnia & Herzegovina",
         "espnTeam": "Bosnia-Herzegovina",
@@ -27169,7 +27169,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Brazil",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Scotland",
         "espnTeam": "Scotland",
@@ -27708,7 +27708,7 @@
       "homeTeam": "Morocco",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Morocco",
         "espnTeam": "Morocco",
@@ -28257,7 +28257,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "Mexico",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Czechia",
         "espnTeam": "Czechia",
@@ -28796,7 +28796,7 @@
       "homeTeam": "South Africa",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "South Africa",
         "espnTeam": "South Africa",
@@ -29325,7 +29325,7 @@
       "homeTeam": "Curaçao",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Curaçao",
         "espnTeam": "Curaçao",
@@ -29874,7 +29874,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Ecuador",
         "espnTeam": "Ecuador",
@@ -30403,7 +30403,7 @@
       "homeTeam": "Japan",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Japan",
         "espnTeam": "Japan",
@@ -30942,7 +30942,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Netherlands",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Tunisia",
         "espnTeam": "Tunisia",
@@ -31471,7 +31471,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "United States",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Türkiye",
         "espnTeam": "Türkiye",
@@ -32010,7 +32010,7 @@
       "homeTeam": "Paraguay",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Paraguay",
         "espnTeam": "Paraguay",
@@ -32529,7 +32529,7 @@
       "homeTeam": "Norway",
       "awayTeam": "France",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Norway",
         "espnTeam": "Norway",
@@ -33078,7 +33078,7 @@
       "homeTeam": "Senegal",
       "awayTeam": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Senegal",
         "espnTeam": "Senegal",
@@ -33617,7 +33617,7 @@
       "homeTeam": "Cape Verde",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Cape Verde",
         "espnTeam": "Cape Verde",
@@ -34146,7 +34146,7 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Uruguay",
         "espnTeam": "Uruguay",
@@ -34695,7 +34695,7 @@
       "homeTeam": "Egypt",
       "awayTeam": "Iran",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Egypt",
         "espnTeam": "Egypt",
@@ -35224,7 +35224,7 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "New Zealand",
         "espnTeam": "New Zealand",
@@ -35753,7 +35753,7 @@
       "homeTeam": "Panama",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Panama",
         "espnTeam": "Panama",
@@ -35808,7 +35808,7 @@
             "position": "Left Back",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Amir Murillo",
@@ -35838,7 +35838,7 @@
             "position": "Center Right Midfielder",
             "formationPlace": "8",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "José Luis Rodríguez",
@@ -35909,7 +35909,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -35969,7 +35969,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -36068,7 +36068,7 @@
             "position": "Defensive Midfielder",
             "formationPlace": "4",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Nico O'Reilly",
@@ -36138,7 +36138,7 @@
             "position": "Forward",
             "formationPlace": "9",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -36269,7 +36269,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -36279,7 +36279,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           }
         ]
@@ -36292,7 +36292,7 @@
       "homeTeam": "Croatia",
       "awayTeam": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Croatia",
         "espnTeam": "Croatia",
@@ -36397,7 +36397,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Nikola Vlasic",
@@ -36407,7 +36407,7 @@
             "position": "Attacking Midfielder Right",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -36448,7 +36448,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -36518,7 +36518,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -36637,7 +36637,7 @@
             "position": "Center Left Midfielder",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Elisha Owusu",
@@ -36738,7 +36738,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -36841,7 +36841,7 @@
       "homeTeam": "Colombia",
       "awayTeam": "Portugal",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T22:39:20.179Z",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
       "home": {
         "team": "Colombia",
         "espnTeam": "Colombia",
@@ -36855,98 +36855,78 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Santiago Arias",
-            "shortName": "S. Arias",
-            "num": "4",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Deiver Machado",
-            "shortName": "D. Machado",
-            "num": "22",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Davinson Sánchez",
-            "shortName": "D. Sánchez",
-            "num": "23",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jhon Lucumí",
             "shortName": "J. Lucumí",
             "num": "3",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Gustavo Puerta",
-            "shortName": "G. Puerta",
-            "num": "14",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Davinson Sánchez",
+            "shortName": "D. Sánchez",
+            "num": "23",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Jhon Arias",
-            "shortName": "J. Arias",
-            "num": "11",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Deiver Machado",
+            "shortName": "D. Machado",
+            "num": "22",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Santiago Arias",
+            "shortName": "S. Arias",
+            "num": "4",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jefferson Lerma",
             "shortName": "J. Lerma",
             "num": "16",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "CM",
+            "position": "Center Midfielder",
             "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Luis Díaz",
-            "shortName": "L. Díaz",
-            "num": "7",
-            "pos": "F",
-            "position": "Forward",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Gustavo Puerta",
+            "shortName": "G. Puerta",
+            "num": "14",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "James Rodríguez",
-            "shortName": "J. Rodríguez",
-            "num": "10",
-            "pos": "F",
-            "position": "Forward",
-            "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Jhon Arias",
+            "shortName": "J. Arias",
+            "num": "11",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jhon Córdoba",
@@ -36955,8 +36935,28 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Luis Díaz",
+            "shortName": "L. Díaz",
+            "num": "7",
+            "pos": "LF",
+            "position": "Left Forward",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "James Rodríguez",
+            "shortName": "J. Rodríguez",
+            "num": "10",
+            "pos": "RF",
+            "position": "Right Forward",
+            "formationPlace": "10",
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -36967,8 +36967,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Luis Suárez",
@@ -36977,8 +36977,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jáminton Campaz",
@@ -36987,8 +36987,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Cucho Hernández",
@@ -36997,8 +36997,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "David Ospina",
@@ -37007,8 +37007,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Kevin Castaño",
@@ -37017,8 +37017,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Willer Ditta",
@@ -37027,8 +37027,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Andrés Gómez",
@@ -37037,8 +37037,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Álvaro Montero",
@@ -37047,8 +37047,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jorge Carrascal",
@@ -37057,8 +37057,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Yerry Mina",
@@ -37067,8 +37067,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Juan Portilla",
@@ -37077,8 +37077,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Johan Mojica",
@@ -37087,8 +37087,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Juan Fernando Quintero",
@@ -37097,8 +37097,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Richard Ríos",
@@ -37107,8 +37107,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       },
@@ -37125,98 +37125,78 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Nuno Mendes",
-            "shortName": "N. Mendes",
-            "num": "25",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Rúben Dias",
-            "shortName": "R. Dias",
-            "num": "3",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Renato Veiga",
             "shortName": "R. Veiga",
             "num": "13",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Rúben Dias",
+            "shortName": "R. Dias",
+            "num": "3",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Nuno Mendes",
+            "shortName": "N. Mendes",
+            "num": "25",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "João Cancelo",
             "shortName": "J. Cancelo",
             "num": "20",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "RB",
+            "position": "Right Back",
             "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Vitinha ",
-            "shortName": "Vitinha ",
-            "num": "23",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Rúben Neves",
-            "shortName": "R. Neves",
-            "num": "21",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Pedro Neto",
-            "shortName": "P. Neto",
-            "num": "18",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Bruno Fernandes",
             "shortName": "B. Fernandes",
             "num": "8",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "AM",
+            "position": "Attacking Midfielder",
             "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "João Félix",
-            "shortName": "J. Félix",
-            "num": "11",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Vitinha ",
+            "shortName": "Vitinha ",
+            "num": "23",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Rúben Neves",
+            "shortName": "R. Neves",
+            "num": "21",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Cristiano Ronaldo",
@@ -37225,8 +37205,28 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "João Félix",
+            "shortName": "J. Félix",
+            "num": "11",
+            "pos": "AM-L",
+            "position": "Attacking Midfielder Left",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Pedro Neto",
+            "shortName": "P. Neto",
+            "num": "18",
+            "pos": "AM-R",
+            "position": "Attacking Midfielder Right",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -37237,8 +37237,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "João Neves",
@@ -37247,8 +37247,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Gonçalo Ramos",
@@ -37257,8 +37257,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Nélson Semedo",
@@ -37267,8 +37267,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Gonçalo Guedes",
@@ -37277,8 +37277,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Rafael Leão",
@@ -37287,8 +37287,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Rui Silva",
@@ -37297,8 +37297,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Samú Costa",
@@ -37307,8 +37307,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Diogo Dalot",
@@ -37317,8 +37317,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Bernardo Silva",
@@ -37327,8 +37327,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Tomás Araújo",
@@ -37337,8 +37337,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Gonçalo Inácio",
@@ -37347,8 +37347,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Matheus Nunes",
@@ -37357,8 +37357,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "José Sá",
@@ -37367,8 +37367,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Francisco Conceição",
@@ -37377,8 +37377,557 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ]
+      }
+    },
+    {
+      "matchId": 70,
+      "espnEventId": "760482",
+      "date": "2026-06-27",
+      "homeTeam": "DR Congo",
+      "awayTeam": "Uzbekistan",
+      "source": "ESPN",
+      "updatedAt": "2026-06-27T23:44:15.681Z",
+      "home": {
+        "team": "DR Congo",
+        "espnTeam": "Congo DR",
+        "formation": "4-4-2",
+        "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png",
+        "starters": [
+          {
+            "name": "Lionel Mpasi",
+            "shortName": "L. Mpasi",
+            "num": "1",
+            "pos": "G",
+            "position": "Goalkeeper",
+            "formationPlace": "1",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Axel Tuanzebe",
+            "shortName": "A. Tuanzebe",
+            "num": "4",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
+            "formationPlace": "6",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Chancel Mbemba",
+            "shortName": "C. Mbemba",
+            "num": "22",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Arthur Masuaku",
+            "shortName": "A. Masuaku",
+            "num": "26",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Aaron Wan-Bissaka",
+            "shortName": "A. Wan-Bissaka",
+            "num": "2",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Noah Sadiki",
+            "shortName": "N. Sadiki",
+            "num": "14",
+            "pos": "CM-L",
+            "position": "Center Left Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Samuel Moutoussamy",
+            "shortName": "S. Moutoussamy",
+            "num": "8",
+            "pos": "CM-R",
+            "position": "Center Right Midfielder",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Brian Cipenga",
+            "shortName": "B. Cipenga",
+            "num": "9",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Nathanaël Mbuku",
+            "shortName": "N. Mbuku",
+            "num": "7",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Yoane Wissa",
+            "shortName": "Y. Wissa",
+            "num": "20",
+            "pos": "CF-L",
+            "position": "Center Left Forward",
+            "formationPlace": "9",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Cédric Bakambu",
+            "shortName": "C. Bakambu",
+            "num": "17",
+            "pos": "CF-R",
+            "position": "Center Right Forward",
+            "formationPlace": "10",
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ],
+        "bench": [
+          {
+            "name": "Gaël Kakuta",
+            "shortName": "G. Kakuta",
+            "num": "11",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ngal'ayel Mukau",
+            "shortName": "N. Mukau",
+            "num": "6",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Fiston Mayele",
+            "shortName": "F. Mayele",
+            "num": "19",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Gédéon Kalulu",
+            "shortName": "G. Kalulu",
+            "num": "24",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Edo Kayembe",
+            "shortName": "E. Kayembe",
+            "num": "25",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Simon Banza",
+            "shortName": "S. Banza",
+            "num": "23",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Matthieu Epolo",
+            "shortName": "M. Epolo",
+            "num": "21",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Joris Kayembe",
+            "shortName": "J. Kayembe",
+            "num": "12",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Meschack Elia",
+            "shortName": "M. Elia",
+            "num": "13",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Théo Bongonda",
+            "shortName": "T. Bongonda",
+            "num": "10",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Steve Kapuadi",
+            "shortName": "S. Kapuadi",
+            "num": "3",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Timothy Fayulu",
+            "shortName": "T. Fayulu",
+            "num": "16",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Dylan Batubinsika",
+            "shortName": "D. Batubinsika",
+            "num": "5",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Charles Pickel",
+            "shortName": "C. Pickel",
+            "num": "18",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Aaron Tshibola",
+            "shortName": "A. Tshibola",
+            "num": "15",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ]
+      },
+      "away": {
+        "team": "Uzbekistan",
+        "espnTeam": "Uzbekistan",
+        "formation": "3-4-2-1",
+        "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+        "starters": [
+          {
+            "name": "Abduvohid Nematov",
+            "shortName": "A. Nematov",
+            "num": "12",
+            "pos": "G",
+            "position": "Goalkeeper",
+            "formationPlace": "1",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Abdukodir Khusanov",
+            "shortName": "A. Khusanov",
+            "num": "2",
+            "pos": "CD",
+            "position": "Center Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jakhongir Urozov",
+            "shortName": "J. Urozov",
+            "num": "26",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Rustam Ashurmatov",
+            "shortName": "R. Ashurmatov",
+            "num": "5",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "6",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Otabek Shukurov",
+            "shortName": "O. Shukurov",
+            "num": "7",
+            "pos": "CM-L",
+            "position": "Center Left Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Akmal Mozgovoy",
+            "shortName": "A. Mozgovoy",
+            "num": "6",
+            "pos": "CM-R",
+            "position": "Center Right Midfielder",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Sherzod Nasrullaev",
+            "shortName": "S. Nasrullaev",
+            "num": "13",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Khojiakbar Alijonov",
+            "shortName": "K. Alijonov",
+            "num": "3",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Eldor Shomurodov",
+            "shortName": "E. Shomurodov",
+            "num": "14",
+            "pos": "F",
+            "position": "Forward",
+            "formationPlace": "9",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Abbosbek Fayzullaev",
+            "shortName": "A. Fayzullaev",
+            "num": "22",
+            "pos": "CF-L",
+            "position": "Center Left Forward",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Dostonbek Khamdamov",
+            "shortName": "D. Khamdamov",
+            "num": "17",
+            "pos": "CF-R",
+            "position": "Center Right Forward",
+            "formationPlace": "10",
+            "subbedIn": false,
+            "subbedOut": false
+          }
+        ],
+        "bench": [
+          {
+            "name": "Azizjon Ganiev",
+            "shortName": "A. Ganiev",
+            "num": "19",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Ruslanbek Jiyanov",
+            "shortName": "R. Jiyanov",
+            "num": "10",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Abdulla Abdullaev",
+            "shortName": "A. Abdullaev",
+            "num": "18",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Avazbek Ulmasaliyev",
+            "shortName": "A. Ulmasaliyev",
+            "num": "25",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Azizbek Amonov",
+            "shortName": "A. Amonov",
+            "num": "20",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Farrukh Sayfiev",
+            "shortName": "F. Sayfiev",
+            "num": "4",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Oston Urunov",
+            "shortName": "O. Urunov",
+            "num": "11",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Botirali Ergashev",
+            "shortName": "B. Ergashev",
+            "num": "16",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jamshid Iskanderov",
+            "shortName": "J. Iskanderov",
+            "num": "8",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Igor Sergeev",
+            "shortName": "I. Sergeev",
+            "num": "21",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Utkir Yusupov",
+            "shortName": "U. Yusupov",
+            "num": "1",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Behruzjon Karimov",
+            "shortName": "B. Karimov",
+            "num": "24",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Odiljon Xamrobekov",
+            "shortName": "O. Xamrobekov",
+            "num": "9",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Sherzod Esanov",
+            "shortName": "S. Esanov",
+            "num": "23",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Umar Eshmurodov",
+            "shortName": "U. Eshmurodov",
+            "num": "15",
+            "pos": "SUB",
+            "position": "Substitute",
+            "formationPlace": "0",
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       }
