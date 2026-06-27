@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T01:46:52.263Z",
+  "updated": "2026-06-27T05:41:03.549Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -4281,7 +4281,7 @@
       "winner": "Netherlands",
       "loser": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4490,7 +4490,7 @@
       "winner": "Germany",
       "loser": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -4623,7 +4623,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4704,7 +4704,7 @@
       "winner": "Japan",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4867,7 +4867,7 @@
       "winner": "Spain",
       "loser": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -5025,7 +5025,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5110,7 +5110,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5250,7 +5250,7 @@
       "winner": "Egypt",
       "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5417,7 +5417,7 @@
       "winner": "Argentina",
       "loser": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5533,7 +5533,7 @@
       "winner": "France",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5679,7 +5679,7 @@
       "winner": "Norway",
       "loser": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5854,7 +5854,7 @@
       "winner": "Algeria",
       "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5991,7 +5991,7 @@
       "winner": "Portugal",
       "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6152,7 +6152,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6233,7 +6233,7 @@
       "winner": "Croatia",
       "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6337,7 +6337,7 @@
       "winner": "Colombia",
       "loser": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6441,7 +6441,7 @@
       "winner": "Switzerland",
       "loser": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6587,7 +6587,7 @@
       "winner": "Bosnia & Herzegovina",
       "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6745,7 +6745,7 @@
       "winner": "Brazil",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6891,7 +6891,7 @@
       "winner": "Morocco",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -7082,7 +7082,7 @@
       "winner": "Mexico",
       "loser": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7228,7 +7228,7 @@
       "winner": "South Africa",
       "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7332,7 +7332,7 @@
       "winner": "Ivory Coast",
       "loser": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7457,7 +7457,7 @@
       "winner": "Ecuador",
       "loser": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7603,7 +7603,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7728,7 +7728,7 @@
       "winner": "Netherlands",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7882,7 +7882,7 @@
       "winner": "Türkiye",
       "loser": "United States",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8052,7 +8052,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8133,7 +8133,7 @@
       "winner": "France",
       "loser": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8321,7 +8321,7 @@
       "winner": "Senegal",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8513,43 +8513,43 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
-          "away": 2
+          "away": 3
         },
         "shots": {
-          "home": 12,
-          "away": 5
+          "home": 15,
+          "away": 7
         },
         "possession": {
-          "home": 52.5,
-          "away": 47.5
+          "home": 51.1,
+          "away": 48.9
         },
         "passes": {
-          "home": 394,
-          "away": 367
+          "home": 451,
+          "away": 442
         },
         "fouls": {
           "home": 10,
-          "away": 14
+          "away": 16
         },
         "corners": {
           "home": 4,
           "away": 2
         },
         "saves": {
-          "home": 2,
+          "home": 3,
           "away": 2
         },
         "offsides": {
-          "home": 0,
+          "home": 2,
           "away": 0
         },
         "yellowCards": {
           "home": 1,
-          "away": 2
+          "away": 3
         }
       },
       "goals": [],
@@ -8561,7 +8561,7 @@
           "name": "Vozinha",
           "shortName": "Vozinha",
           "number": "1",
-          "saves": 2,
+          "saves": 3,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
@@ -8591,46 +8591,50 @@
       "awayTeam": "Spain",
       "homeScore": 0,
       "awayScore": 1,
-      "winner": "",
-      "loser": "",
+      "winner": "Spain",
+      "loser": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T01:46:52.263Z",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "shots": {
-          "home": 4,
-          "away": 5
+          "home": 5,
+          "away": 6
         },
         "possession": {
-          "home": 30.3,
-          "away": 69.7
+          "home": 33.1,
+          "away": 66.9
         },
         "passes": {
-          "home": 244,
-          "away": 568
+          "home": 301,
+          "away": 622
         },
         "fouls": {
-          "home": 10,
+          "home": 14,
           "away": 14
         },
         "corners": {
-          "home": 0,
+          "home": 1,
           "away": 6
         },
         "saves": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "offsides": {
-          "home": 4,
-          "away": 1
+          "home": 5,
+          "away": 2
         },
         "yellowCards": {
-          "home": 2,
+          "home": 3,
           "away": 1
+        },
+        "redCards": {
+          "home": 1,
+          "away": 0
         }
       },
       "goals": [
@@ -8678,10 +8682,308 @@
           "name": "Unai Simón",
           "shortName": "U. Simón",
           "number": "23",
-          "saves": 1,
+          "saves": 2,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 65,
+      "espnEventId": "760476",
+      "date": "2026-06-27",
+      "homeTeam": "Egypt",
+      "awayTeam": "Iran",
+      "homeScore": 1,
+      "awayScore": 1,
+      "winner": "",
+      "loser": "",
+      "source": "ESPN",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 3,
+          "away": 4
+        },
+        "shots": {
+          "home": 15,
+          "away": 13
+        },
+        "possession": {
+          "home": 61.3,
+          "away": 38.7
+        },
+        "passes": {
+          "home": 587,
+          "away": 367
+        },
+        "fouls": {
+          "home": 11,
+          "away": 16
+        },
+        "corners": {
+          "home": 8,
+          "away": 2
+        },
+        "saves": {
+          "home": 2,
+          "away": 2
+        },
+        "offsides": {
+          "home": 0,
+          "away": 3
+        },
+        "yellowCards": {
+          "home": 3,
+          "away": 4
+        }
+      },
+      "goals": [
+        {
+          "id": "49626724",
+          "minute": "5",
+          "period": 1,
+          "team": "Egypt",
+          "player": "Mahmoud Saber",
+          "assist": "Trézéguet",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Egypt 1, IR Iran 0. Mahmoud Saber (Egypt) left footed shot from the left side of the box to the bottom left corner. Assisted by Trezeguet.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49626965",
+          "minute": "14",
+          "period": 1,
+          "team": "Iran",
+          "player": "Ramin Rezaeian",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Egypt 1, IR Iran 1. Ramin Rezaeian (IR Iran) right footed shot from the right side of the six yard box to the bottom right corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49626724",
+          "minute": "5",
+          "period": 1,
+          "team": "Egypt",
+          "player": "Trézéguet",
+          "goal": "Mahmoud Saber",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Egypt",
+          "name": "Mostafa Shoubir",
+          "shortName": "M. Shoubir",
+          "number": "23",
+          "saves": 2,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Iran",
+          "name": "Alireza Beiranvand",
+          "shortName": "A. Beiranvand",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 66,
+      "espnEventId": "760477",
+      "date": "2026-06-27",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Belgium",
+      "homeScore": 1,
+      "awayScore": 5,
+      "winner": "Belgium",
+      "loser": "New Zealand",
+      "source": "ESPN",
+      "updatedAt": "2026-06-27T05:41:03.549Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 10
+        },
+        "shots": {
+          "home": 6,
+          "away": 35
+        },
+        "possession": {
+          "home": 45.4,
+          "away": 54.6
+        },
+        "passes": {
+          "home": 435,
+          "away": 526
+        },
+        "fouls": {
+          "home": 10,
+          "away": 7
+        },
+        "corners": {
+          "home": 5,
+          "away": 8
+        },
+        "saves": {
+          "home": 5,
+          "away": 1
+        },
+        "offsides": {
+          "home": 1,
+          "away": 1
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49627289",
+          "minute": "28",
+          "period": 1,
+          "team": "Belgium",
+          "player": "Leandro Trossard",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 0, Belgium 1. Leandro Trossard (Belgium) right footed shot from very close range to the bottom right corner following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49628266",
+          "minute": "50",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Leandro Trossard",
+          "assist": "Hans Vanaken",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 0, Belgium 2. Leandro Trossard (Belgium) right footed shot from the centre of the box to the top left corner. Assisted by Hans Vanaken.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49628749",
+          "minute": "66",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Kevin De Bruyne",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 0, Belgium 3. Kevin De Bruyne (Belgium) left footed shot from outside the box to the bottom right corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49629246",
+          "minute": "84",
+          "period": 2,
+          "team": "New Zealand",
+          "player": "Elijah Just",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 1, Belgium 3. Elijah Just (New Zealand) left footed shot from the centre of the box to the high centre of the goal following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49629301",
+          "minute": "86",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Romelu Lukaku",
+          "assist": "Nicolas Raskin",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 1, Belgium 4. Romelu Lukaku (Belgium) header from very close range to the centre of the goal. Assisted by Nicolas Raskin with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49629569",
+          "minute": "90'+4",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Alexis Saelemaekers",
+          "assist": "Romelu Lukaku",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! New Zealand 1, Belgium 5. Alexis Saelemaekers (Belgium) right footed shot from the centre of the box to the bottom left corner. Assisted by Romelu Lukaku following a fast break.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49628266",
+          "minute": "50",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Hans Vanaken",
+          "goal": "Leandro Trossard",
+          "source": "ESPN"
+        },
+        {
+          "id": "49629301",
+          "minute": "86",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Nicolas Raskin",
+          "goal": "Romelu Lukaku",
+          "source": "ESPN"
+        },
+        {
+          "id": "49629569",
+          "minute": "90'+4",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Romelu Lukaku",
+          "goal": "Alexis Saelemaekers",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "New Zealand",
+          "name": "Max Crocombe",
+          "shortName": "M. Crocombe",
+          "number": "1",
+          "saves": 5,
+          "goalsAgainst": 5,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Belgium",
+          "name": "Thibaut Courtois",
+          "shortName": "T. Courtois",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
