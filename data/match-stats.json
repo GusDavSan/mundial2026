@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T21:46:50.662Z",
+  "updated": "2026-06-27T22:46:45.831Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -4623,7 +4623,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 15,
@@ -4704,7 +4704,7 @@
       "winner": "Japan",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
@@ -4867,7 +4867,7 @@
       "winner": "Spain",
       "loser": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -5025,7 +5025,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5110,7 +5110,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -5250,7 +5250,7 @@
       "winner": "Egypt",
       "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5417,7 +5417,7 @@
       "winner": "Argentina",
       "loser": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5533,7 +5533,7 @@
       "winner": "France",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -5679,7 +5679,7 @@
       "winner": "Norway",
       "loser": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5854,7 +5854,7 @@
       "winner": "Algeria",
       "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5991,7 +5991,7 @@
       "winner": "Portugal",
       "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6152,7 +6152,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6233,7 +6233,7 @@
       "winner": "Croatia",
       "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6337,7 +6337,7 @@
       "winner": "Colombia",
       "loser": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6441,7 +6441,7 @@
       "winner": "Switzerland",
       "loser": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6587,7 +6587,7 @@
       "winner": "Bosnia & Herzegovina",
       "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6745,7 +6745,7 @@
       "winner": "Brazil",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6891,7 +6891,7 @@
       "winner": "Morocco",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -7082,7 +7082,7 @@
       "winner": "Mexico",
       "loser": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7228,7 +7228,7 @@
       "winner": "South Africa",
       "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7332,7 +7332,7 @@
       "winner": "Ivory Coast",
       "loser": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7457,7 +7457,7 @@
       "winner": "Ecuador",
       "loser": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7603,7 +7603,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7728,7 +7728,7 @@
       "winner": "Netherlands",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7882,7 +7882,7 @@
       "winner": "Türkiye",
       "loser": "United States",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8052,7 +8052,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8133,7 +8133,7 @@
       "winner": "France",
       "loser": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8321,7 +8321,7 @@
       "winner": "Senegal",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8513,7 +8513,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8594,7 +8594,7 @@
       "winner": "Spain",
       "loser": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -8702,7 +8702,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8818,7 +8818,7 @@
       "winner": "Belgium",
       "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8996,47 +8996,95 @@
       "homeTeam": "Panama",
       "awayTeam": "England",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 2,
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
-          "away": 2
-        },
-        "shots": {
-          "home": 3,
-          "away": 8
-        },
-        "possession": {
-          "home": 28.2,
-          "away": 71.8
-        },
-        "passes": {
-          "home": 115,
-          "away": 304
-        },
-        "fouls": {
-          "home": 8,
-          "away": 3
-        },
-        "corners": {
-          "home": 1,
           "away": 5
         },
-        "saves": {
+        "shots": {
+          "home": 10,
+          "away": 14
+        },
+        "possession": {
+          "home": 33.2,
+          "away": 66.8
+        },
+        "passes": {
+          "home": 246,
+          "away": 506
+        },
+        "fouls": {
+          "home": 14,
+          "away": 10
+        },
+        "corners": {
           "home": 2,
+          "away": 6
+        },
+        "saves": {
+          "home": 3,
           "away": 2
         },
         "offsides": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 4
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 1
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49641027",
+          "minute": "62",
+          "period": 2,
+          "team": "England",
+          "player": "Jude Bellingham",
+          "assist": "Bukayo Saka",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Panama 0, England 1. Jude Bellingham (England) left footed shot from the centre of the box to the bottom left corner. Assisted by Bukayo Saka with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49641198",
+          "minute": "67",
+          "period": 2,
+          "team": "England",
+          "player": "Harry Kane",
+          "assist": "Jude Bellingham",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Panama 0, England 2. Harry Kane (England) header from the centre of the box to the top left corner. Assisted by Jude Bellingham with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49641027",
+          "minute": "62",
+          "period": 2,
+          "team": "England",
+          "player": "Bukayo Saka",
+          "goal": "Jude Bellingham",
+          "source": "ESPN"
+        },
+        {
+          "id": "49641198",
+          "minute": "67",
+          "period": 2,
+          "team": "England",
+          "player": "Jude Bellingham",
+          "goal": "Harry Kane",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -9044,10 +9092,10 @@
           "name": "Orlando Mosquera",
           "shortName": "O. Mosquera",
           "number": "22",
-          "saves": 2,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 3,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 60,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -9072,43 +9120,47 @@
       "date": "2026-06-27",
       "homeTeam": "Croatia",
       "awayTeam": "Ghana",
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 1,
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-27T21:46:50.662Z",
+      "updatedAt": "2026-06-27T22:46:45.831Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 2,
-          "away": 0
-        },
-        "shots": {
-          "home": 5,
+          "home": 4,
           "away": 1
         },
+        "shots": {
+          "home": 7,
+          "away": 4
+        },
         "possession": {
-          "home": 52,
-          "away": 48
+          "home": 53.1,
+          "away": 46.9
         },
         "passes": {
-          "home": 271,
-          "away": 249
+          "home": 472,
+          "away": 412
         },
         "fouls": {
-          "home": 2,
-          "away": 6
+          "home": 8,
+          "away": 10
         },
         "corners": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 2
         },
         "saves": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "offsides": {
           "home": 0,
+          "away": 1
+        },
+        "yellowCards": {
+          "home": 1,
           "away": 0
         }
       },
@@ -9124,6 +9176,30 @@
           "ownGoal": false,
           "text": "Goal! Croatia 1, Ghana 0. Petar Sucic (Croatia) right footed shot from outside the box to the bottom left corner. Assisted by Mateo Kovacic.",
           "source": "ESPN"
+        },
+        {
+          "id": "49641474",
+          "minute": "73",
+          "period": 2,
+          "team": "Ghana",
+          "player": "Derrick Luckassen",
+          "assist": "Ernest Nuamah",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Croatia 1, Ghana 1. Derrick Luckassen (Ghana) left footed shot from very close range to the bottom right corner. Assisted by Ernest Nuamah with a cross following a set piece situation.Goal awarded following VAR Review.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49641627",
+          "minute": "83",
+          "period": 2,
+          "team": "Croatia",
+          "player": "Nikola Vlasic",
+          "assist": "Luka Modric",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Croatia 2, Ghana 1. Nikola Vlasic (Croatia) header from the centre of the box to the bottom left corner. Assisted by Luka Modric with a cross following a corner.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -9135,6 +9211,24 @@
           "player": "Mateo Kovacic",
           "goal": "Petar Sucic",
           "source": "ESPN"
+        },
+        {
+          "id": "49641474",
+          "minute": "73",
+          "period": 2,
+          "team": "Ghana",
+          "player": "Ernest Nuamah",
+          "goal": "Derrick Luckassen",
+          "source": "ESPN"
+        },
+        {
+          "id": "49641627",
+          "minute": "83",
+          "period": 2,
+          "team": "Croatia",
+          "player": "Luka Modric",
+          "goal": "Nikola Vlasic",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -9145,9 +9239,9 @@
           "shortName": "D. Livakovic",
           "number": "1",
           "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
           "penaltySaves": 0,
           "source": "ESPN roster"
         },
@@ -9157,8 +9251,8 @@
           "name": "Benjamin Asare",
           "shortName": "B. Asare",
           "number": "16",
-          "saves": 1,
-          "goalsAgainst": 1,
+          "saves": 2,
+          "goalsAgainst": 2,
           "cleanSheet": 0,
           "savePct": 50,
           "penaltySaves": 0,
