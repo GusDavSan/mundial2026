@@ -774,7 +774,7 @@ const I18N={
     selectTeam:'Selecciona equipo',nextMatch:'Próximo partido',noNextMatch:'Sin próximos partidos',viewCalendar:'Ver calendario',viewTeam:'Ver equipo',clearSelection:'Quitar',
     mySelectionSchedule:'Calendario de mi selección',mySelectionStandings:'Clasificación del grupo',chooseSelectionEmpty:'Elige una selección para ver aquí su calendario y grupo.',
     fifaRank:'Ranking FIFA',rankingSource:'FIFA 11 jun 2026',ptsShort:'Pts',gdShort:'DG',
-    matchPreview:'Previa',recentForm:'Forma reciente',h2h:'Cara a cara',favorite:'Favorito',keyData:'Claves',playerToWatch:'Jugador a seguir',playerToWatchPending:'Pendiente de ESPN',
+    matchPreview:'Previa',recentForm:'Forma reciente',h2h:'Cara a cara',favorite:'Favorito',keyData:'Claves',playerToWatch:'Jugador en foco',playerToWatchPending:'Pendiente de datos del torneo',
     squadRankingSource:'ranking interno',squadConfirmedWatch:'convocado',rankedFallbackWatch:'referente del equipo',
     noPreviewData:'ESPN aún no ha publicado forma, cuotas o cara a cara suficiente.',formUnavailable:'Forma no disponible',noH2H:'Sin enfrentamientos recientes',marketUnavailable:'Favorito no disponible',
     oddsImplied:'prob. implícita',rankingAdvantage:'Ventaja ranking',groupPosition:'Posición de grupo'
@@ -823,7 +823,7 @@ const I18N={
     selectTeam:'Select team',nextMatch:'Next match',noNextMatch:'No upcoming matches',viewCalendar:'View schedule',viewTeam:'View team',clearSelection:'Clear',
     mySelectionSchedule:'My team schedule',mySelectionStandings:'Group standings',chooseSelectionEmpty:'Choose a team to see its schedule and group here.',
     fifaRank:'FIFA Ranking',rankingSource:'FIFA 11 Jun 2026',ptsShort:'Pts',gdShort:'GD',
-    matchPreview:'Preview',recentForm:'Recent form',h2h:'Head to head',favorite:'Favorite',keyData:'Key notes',playerToWatch:'Player to watch',playerToWatchPending:'Pending ESPN data',
+    matchPreview:'Preview',recentForm:'Recent form',h2h:'Head to head',favorite:'Favorite',keyData:'Key notes',playerToWatch:'Player in focus',playerToWatchPending:'Pending tournament data',
     squadRankingSource:'internal ranking',squadConfirmedWatch:'in squad',rankedFallbackWatch:'team reference',
     noPreviewData:'ESPN has not published enough form, odds or head-to-head data yet.',formUnavailable:'Form unavailable',noH2H:'No recent meetings',marketUnavailable:'Favorite unavailable',
     oddsImplied:'implied prob.',rankingAdvantage:'Ranking edge',groupPosition:'Group position'
@@ -2964,7 +2964,7 @@ function setCompareTeam(side,value){
   renderCompare();
 }
 function comparePlayerNote(team){
-  const p=rankedSquadPlayerToWatch(team);
+  const p=tournamentPlayerToWatch(team)||rankedSquadPlayerToWatch(team);
   if(!p)return t('playerToWatchPending');
   return '⭐ '+p.name+(p.detail?' · '+p.detail:'');
 }
@@ -2983,7 +2983,7 @@ async function renderCompare(){
   if(!el)return;
   el.innerHTML='<div class="loading"><div class="spinner"></div><span class="loading-text">'+t('loadingStats')+'</span></div>';
   const items=await ensureStoredMatchStats();
-  await loadLocalSquads();
+  await Promise.all([loadLocalSquads(),ensureStoredLineups()]);
   const rows=compareRowsWithRadar(aggregateTournamentTeamStats(items));
   if(!rows.length){
     el.innerHTML='<div class="empty"><div class="empty-icon">⚖️</div><div class="empty-text">'+t('comparePending')+'</div></div>';
@@ -3651,6 +3651,98 @@ function rankedSquadPlayerToWatch(team){
     return null;
   }
   return {name:ranking[0],source:t('squadRankingSource'),detail:t('rankedFallbackWatch')};
+}
+function focusPlayerKey(team,name){
+  return stripText(normName(team||''))+'|'+squadPlayerKey(name||'');
+}
+function focusPlayerName(row){
+  return row&&row.name||row&&row.shortName||row&&row.strPlayer||'';
+}
+function focusAdd(map,team,name,patch){
+  const clean=String(name||'').trim();
+  if(!team||!clean||!isValidWatchPlayerName(clean))return null;
+  const normalizedTeam=normName(team);
+  if(localSquads&&getLocalSquad(normalizedTeam)&&!localSquadPlayer(normalizedTeam,clean))return null;
+  const key=focusPlayerKey(normalizedTeam,clean);
+  if(!map[key])map[key]={team:normalizedTeam,name:clean,score:0,goals:0,assists:0,starts:0,bench:0,appearances:0,saves:0,cleanSheets:0,goalsAgainst:0,latestRoster:false,sources:[]};
+  const row=map[key];
+  Object.keys(patch||{}).forEach(function(k){
+    if(k==='source'){if(patch[k]&&!row.sources.includes(patch[k]))row.sources.push(patch[k]);}
+    else row[k]=(row[k]||0)+Number(patch[k]||0);
+  });
+  return row;
+}
+function focusApplyLineup(map,lineup,team,latest){
+  if(!lineup)return;
+  const side=sameTeam(lineup.home&&lineup.home.team,team)?lineup.home:sameTeam(lineup.away&&lineup.away.team,team)?lineup.away:null;
+  if(!side)return;
+  (side.starters||[]).forEach(function(p){
+    const row=focusAdd(map,team,focusPlayerName(p),{starts:1,appearances:1,score:2.1,source:'lineup'});
+    if(row&&latest)row.latestRoster=true;
+  });
+  (side.bench||[]).forEach(function(p){
+    const row=focusAdd(map,team,focusPlayerName(p),{bench:1,score:.45,source:'lineup'});
+    if(row&&latest)row.latestRoster=true;
+  });
+}
+function latestStoredLineupForTeam(team){
+  const items=(storedLineupsCache||[]).filter(function(item){
+    return sameTeam(item.homeTeam||item.home&&item.home.team,team)||sameTeam(item.awayTeam||item.away&&item.away.team,team);
+  }).sort(function(a,b){
+    const da=String(a.date||'')+'|'+String(a.matchId||0).padStart(3,'0');
+    const db=String(b.date||'')+'|'+String(b.matchId||0).padStart(3,'0');
+    return db.localeCompare(da);
+  });
+  return items[0]||null;
+}
+function tournamentPlayerToWatch(team,liveLineup){
+  const map={};
+  const normalizedTeam=normName(team);
+  const ranking=watchRankingForTeam(normalizedTeam);
+  (storedMatchStatsCache||[]).forEach(function(item){
+    if(!item||!(sameTeam(item.homeTeam||item.home,normalizedTeam)||sameTeam(item.awayTeam||item.away,normalizedTeam)))return;
+    (item.goals||[]).forEach(function(goal){
+      if(goal.ownGoal||!sameTeam(goal.team,normalizedTeam))return;
+      focusAdd(map,normalizedTeam,goal.player||goal.name,{goals:1,score:9,source:'Mundial 2026'});
+    });
+    (item.assists||[]).forEach(function(assist){
+      if(!sameTeam(assist.team,normalizedTeam))return;
+      focusAdd(map,normalizedTeam,assist.player||assist.name,{assists:1,score:6,source:'Mundial 2026'});
+    });
+    (item.keepers||[]).forEach(function(k){
+      if(!sameTeam(k.team,normalizedTeam))return;
+      focusAdd(map,normalizedTeam,k.name||k.shortName,{
+        saves:Number(k.saves||0),
+        cleanSheets:Number(k.cleanSheet||0),
+        goalsAgainst:Number(k.goalsAgainst||0),
+        score:(Number(k.cleanSheet||0)*4)+(Number(k.saves||0)*.55)-Math.max(0,Number(k.goalsAgainst||0)-1),
+        source:'Mundial 2026'
+      });
+    });
+  });
+  const latest=latestStoredLineupForTeam(normalizedTeam);
+  (storedLineupsCache||[]).forEach(function(item){focusApplyLineup(map,item,normalizedTeam,latest&&item.matchId===latest.matchId);});
+  if(liveLineup)focusApplyLineup(map,liveLineup,normalizedTeam,true);
+  Object.values(map).forEach(function(row){
+    const idx=ranking.findIndex(name=>squadPlayerMatches(row.name,name));
+    if(idx>=0)row.score+=Math.max(.2,(ranking.length-idx)*.18);
+    if(latest&&row.latestRoster===false&&row.appearances>0)row.score*=.55;
+  });
+  const rows=Object.values(map).filter(function(row){
+    const contribution=row.goals+row.assists+row.saves+row.cleanSheets;
+    return row.score>0&&(contribution>0||row.starts>0);
+  }).sort(function(a,b){
+    return b.score-a.score||(b.goals+b.assists)-(a.goals+a.assists)||b.starts-a.starts||a.name.localeCompare(b.name,'es');
+  });
+  const best=rows[0];
+  if(!best)return null;
+  const facts=[];
+  if(best.goals)facts.push(best.goals+' '+t('goals'));
+  if(best.assists)facts.push(best.assists+' '+t('assistCount'));
+  if(best.cleanSheets)facts.push(best.cleanSheets+' '+t('cleanSheetCount'));
+  if(best.saves)facts.push(best.saves+' '+t('keeperSaves').toLowerCase());
+  if(!facts.length&&best.starts)facts.push(best.starts+' '+(lang==='es'?'titularidad':'starts'));
+  return {name:best.name,source:'Mundial 2026',detail:facts.slice(0,2).join(' · ')};
 }
 function eventText(ev){
   return stripText([
@@ -4665,8 +4757,8 @@ function isValidWatchPlayerName(name){
   return !['total shots','shots','shots on goal','shots on target','goalkeeper saves','saves','fouls','yellow cards','red cards','corner kicks','corners','possession','passes','offsides','goals against','goals for','assists'].includes(n);
 }
 function espnPlayerToWatch(summary,lineup,team){
-  const ranked=rankedSquadPlayerToWatch(team);
-  if(ranked)return ranked;
+  const tournament=tournamentPlayerToWatch(team,lineup);
+  if(tournament)return tournament;
   const leaders=summary&&summary.leaders;
   const buckets=Array.isArray(leaders)?leaders:Object.values(leaders||{});
   for(const group of buckets){
@@ -4685,6 +4777,8 @@ function espnPlayerToWatch(summary,lineup,team){
   const preferred=starters.find(p=>/(^f$|fw|st|cf|wing|forward|attacking|am|lw|rw)/i.test([p.pos,p.position,p.formationPlace].join(' ')))||
     starters.find(p=>/(^m$|cm|lm|rm|mid)/i.test([p.pos,p.position,p.formationPlace].join(' ')))||starters[0];
   if(preferred&&preferred.name)return {name:preferred.name,source:t('lineupsSource')+' ESPN',detail:preferred.pos||preferred.position||''};
+  const ranked=rankedSquadPlayerToWatch(team);
+  if(ranked)return ranked;
   return null;
 }
 function watchPlayerHtml(player){
@@ -4765,6 +4859,7 @@ function espnDetailEvent(fx,espnLive){
   };
 }
 async function renderEspnOnlyDetail(fx,espnLive){
+  await Promise.all([loadLocalSquads(),ensureStoredMatchStats(),ensureStoredLineups()]);
   const ev=espnDetailEvent(fx,espnLive);
   const event=espnLive&&espnLive.event||{};
   const st=espnEventStatus(event);
@@ -4834,6 +4929,7 @@ async function openDetail(eid,date,home,away){
   }catch(e){console.warn('ESPN detail failed',e);}
   const fx=fxDetail;
   if(fx){
+    await Promise.all([loadLocalSquads(),ensureStoredMatchStats(),ensureStoredLineups()]);
     const es=toES(fx.date,fx.time);
     inner.innerHTML=`<div style="padding:20px;text-align:center">
       <div style="font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--muted);margin-bottom:10px">${fx.group}</div>
