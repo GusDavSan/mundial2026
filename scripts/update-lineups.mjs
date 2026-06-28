@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import vm from "node:vm";
 
 const OUT_FILE = process.env.LINEUPS_OUT_FILE || "data/lineups.json";
+const MATCH_STATS_FILE = process.env.MATCH_STATS_FILE || "data/match-stats.json";
 const DEBUG = process.env.DEBUG_LINEUPS === "1";
 const NOW = process.env.NOW ? new Date(process.env.NOW) : new Date();
 const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS || 7);
@@ -60,6 +61,44 @@ const TEAM_ALIASES = {
   "Jordan": ["jordan", "jordania"],
   "Uzbekistan": ["uzbekistan", "uzbekistán"]
 };
+
+const R32_SLOTS = [
+  { id: 73, a: { team: "South Africa" }, b: { team: "Canada" } },
+  { id: 74, a: { team: "Brazil" }, b: { team: "Japan" } },
+  { id: 75, a: { team: "Germany" }, b: { team: "Paraguay" } },
+  { id: 76, a: { team: "Netherlands" }, b: { team: "Morocco" } },
+  { id: 77, a: { team: "Ivory Coast" }, b: { team: "Norway" } },
+  { id: 78, a: { team: "France" }, b: { team: "Sweden" } },
+  { id: 79, a: { team: "Mexico" }, b: { team: "Ecuador" } },
+  { id: 80, a: { team: "England" }, b: { team: "DR Congo" } },
+  { id: 81, a: { team: "Belgium" }, b: { team: "Senegal" } },
+  { id: 82, a: { team: "United States" }, b: { team: "Bosnia & Herzegovina" } },
+  { id: 83, a: { team: "Spain" }, b: { team: "Austria" } },
+  { id: 84, a: { team: "Portugal" }, b: { team: "Croatia" } },
+  { id: 85, a: { team: "Switzerland" }, b: { team: "Algeria" } },
+  { id: 86, a: { team: "Australia" }, b: { team: "Egypt" } },
+  { id: 87, a: { team: "Argentina" }, b: { team: "Cape Verde" } },
+  { id: 88, a: { team: "Colombia" }, b: { team: "Ghana" } }
+];
+
+const KNOCKOUT_SLOTS = R32_SLOTS.concat([
+  { id: 89, a: { winner: 75 }, b: { winner: 78 } },
+  { id: 90, a: { winner: 73 }, b: { winner: 76 } },
+  { id: 91, a: { winner: 74 }, b: { winner: 77 } },
+  { id: 92, a: { winner: 79 }, b: { winner: 80 } },
+  { id: 93, a: { winner: 84 }, b: { winner: 83 } },
+  { id: 94, a: { winner: 82 }, b: { winner: 81 } },
+  { id: 95, a: { winner: 87 }, b: { winner: 86 } },
+  { id: 96, a: { winner: 85 }, b: { winner: 88 } },
+  { id: 97, a: { winner: 89 }, b: { winner: 90 } },
+  { id: 98, a: { winner: 93 }, b: { winner: 94 } },
+  { id: 99, a: { winner: 91 }, b: { winner: 92 } },
+  { id: 100, a: { winner: 95 }, b: { winner: 96 } },
+  { id: 101, a: { winner: 97 }, b: { winner: 98 } },
+  { id: 102, a: { winner: 99 }, b: { winner: 100 } },
+  { id: 103, a: { loser: 101 }, b: { loser: 102 } },
+  { id: 104, a: { winner: 101 }, b: { winner: 102 } }
+]);
 
 function normalize(text) {
   return String(text || "")
@@ -127,6 +166,17 @@ async function readExisting() {
   }
 }
 
+async function readMatchStats() {
+  try {
+    const raw = await fs.readFile(MATCH_STATS_FILE, "utf8");
+    const json = JSON.parse(raw);
+    const items = Array.isArray(json) ? json : json.items || [];
+    return new Map(items.map((item) => [String(item.matchId), item]));
+  } catch {
+    return new Map();
+  }
+}
+
 async function fetchJson(url) {
   const r = await fetch(url);
   if (!r.ok) throw new Error(`${r.status}: ${await r.text()}`);
@@ -184,6 +234,61 @@ function matchEventForFixture(fixture, events) {
     const t = eventTeams(event);
     return sameTeam(t.home, fixture.away) && sameTeam(t.away, fixture.home);
   });
+}
+
+function scoreFromItem(item) {
+  if (!item) return null;
+  const h = Number.parseInt(item.homeScore, 10);
+  const a = Number.parseInt(item.awayScore, 10);
+  if (Number.isFinite(h) && Number.isFinite(a)) return { home: h, away: a };
+  let home = 0, away = 0, hasGoal = false;
+  for (const goal of item.goals || []) {
+    if (!goal?.team || goal.ownGoal) continue;
+    hasGoal = true;
+    if (sameTeam(goal.team, item.homeTeam || item.home)) home++;
+    else if (sameTeam(goal.team, item.awayTeam || item.away)) away++;
+  }
+  return hasGoal ? { home, away } : null;
+}
+
+function outcomeFromItem(item, sideA, sideB, wantLoser) {
+  if (!item || !sideA?.name || !sideB?.name) return null;
+  const winnerName = item.winner || item.winnerTeam || item.penaltyWinner || "";
+  const loserName = item.loser || item.loserTeam || "";
+  if (winnerName) {
+    if (!wantLoser) return sameTeam(winnerName, sideA.name) ? sideA : sameTeam(winnerName, sideB.name) ? sideB : { name: winnerName };
+    if (loserName) return sameTeam(loserName, sideA.name) ? sideA : sameTeam(loserName, sideB.name) ? sideB : { name: loserName };
+  }
+  const score = scoreFromItem(item);
+  if (!score || score.home === score.away) return null;
+  const winner = score.home > score.away ? sideA : sideB;
+  const loser = score.home > score.away ? sideB : sideA;
+  return wantLoser ? loser : winner;
+}
+
+function resolveKnockoutSide(side, byStats) {
+  if (side?.team) return { name: side.team };
+  if (side?.winner || side?.loser) {
+    const matchId = side.winner || side.loser;
+    const slot = KNOCKOUT_SLOTS.find((s) => s.id === Number(matchId));
+    if (!slot) return null;
+    const a = resolveKnockoutSide(slot.a, byStats);
+    const b = resolveKnockoutSide(slot.b, byStats);
+    return outcomeFromItem(byStats.get(String(matchId)), a, b, !!side.loser);
+  }
+  return null;
+}
+
+function resolveKnockoutFixtures(fixtures, byStats) {
+  for (const fixture of fixtures) {
+    if (fixture.home !== "TBD" && fixture.away !== "TBD") continue;
+    const slot = KNOCKOUT_SLOTS.find((s) => s.id === Number(fixture.id));
+    if (!slot) continue;
+    const a = resolveKnockoutSide(slot.a, byStats);
+    const b = resolveKnockoutSide(slot.b, byStats);
+    if (a?.name) fixture.home = a.name;
+    if (b?.name) fixture.away = b.name;
+  }
 }
 
 function playerFromRosterEntry(entry) {
@@ -283,7 +388,8 @@ async function buildLineups(fixtures, existing) {
   };
 }
 
-const [fixtures, existing] = await Promise.all([readFixtures(), readExisting()]);
+const [fixtures, existing, matchStats] = await Promise.all([readFixtures(), readExisting(), readMatchStats()]);
+resolveKnockoutFixtures(fixtures, matchStats);
 const output = await buildLineups(fixtures, existing);
 await fs.mkdir("data", { recursive: true });
 await fs.writeFile(OUT_FILE, `${JSON.stringify(output, null, 2)}\n`);

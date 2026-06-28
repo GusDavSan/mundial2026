@@ -73,33 +73,33 @@ const STAT_MAP = {
 };
 
 const R32_SLOTS = [
-  { id: 73, a: "2A", b: "2B" },
-  { id: 74, a: "1E", b: { third: ["A", "B", "C", "D", "F"] } },
-  { id: 75, a: "1F", b: "2C" },
-  { id: 76, a: "1C", b: "2F" },
-  { id: 77, a: "1I", b: { third: ["C", "D", "F", "G", "H"] } },
-  { id: 78, a: "2E", b: "2I" },
-  { id: 79, a: "1A", b: { third: ["C", "E", "F", "H", "I"] } },
-  { id: 80, a: "1L", b: { third: ["E", "H", "I", "J", "K"] } },
-  { id: 81, a: "1D", b: { third: ["B", "E", "F", "I", "J"] } },
-  { id: 82, a: "1G", b: { third: ["A", "E", "H", "I", "J"] } },
-  { id: 83, a: "2K", b: "2L" },
-  { id: 84, a: "1H", b: "2J" },
-  { id: 85, a: "1B", b: { third: ["E", "F", "G", "I", "J"] } },
-  { id: 86, a: "1J", b: "2H" },
-  { id: 87, a: "1K", b: { third: ["D", "E", "I", "J", "L"] } },
-  { id: 88, a: "2D", b: "2G" }
+  { id: 73, a: { team: "South Africa" }, b: { team: "Canada" } },
+  { id: 74, a: { team: "Brazil" }, b: { team: "Japan" } },
+  { id: 75, a: { team: "Germany" }, b: { team: "Paraguay" } },
+  { id: 76, a: { team: "Netherlands" }, b: { team: "Morocco" } },
+  { id: 77, a: { team: "Ivory Coast" }, b: { team: "Norway" } },
+  { id: 78, a: { team: "France" }, b: { team: "Sweden" } },
+  { id: 79, a: { team: "Mexico" }, b: { team: "Ecuador" } },
+  { id: 80, a: { team: "England" }, b: { team: "DR Congo" } },
+  { id: 81, a: { team: "Belgium" }, b: { team: "Senegal" } },
+  { id: 82, a: { team: "United States" }, b: { team: "Bosnia & Herzegovina" } },
+  { id: 83, a: { team: "Spain" }, b: { team: "Austria" } },
+  { id: 84, a: { team: "Portugal" }, b: { team: "Croatia" } },
+  { id: 85, a: { team: "Switzerland" }, b: { team: "Algeria" } },
+  { id: 86, a: { team: "Australia" }, b: { team: "Egypt" } },
+  { id: 87, a: { team: "Argentina" }, b: { team: "Cape Verde" } },
+  { id: 88, a: { team: "Colombia" }, b: { team: "Ghana" } }
 ];
 
 const KNOCKOUT_SLOTS = R32_SLOTS.concat([
-  { id: 89, a: { winner: 73 }, b: { winner: 75 } },
-  { id: 90, a: { winner: 74 }, b: { winner: 77 } },
-  { id: 91, a: { winner: 76 }, b: { winner: 78 } },
+  { id: 89, a: { winner: 75 }, b: { winner: 78 } },
+  { id: 90, a: { winner: 73 }, b: { winner: 76 } },
+  { id: 91, a: { winner: 74 }, b: { winner: 77 } },
   { id: 92, a: { winner: 79 }, b: { winner: 80 } },
-  { id: 93, a: { winner: 83 }, b: { winner: 84 } },
-  { id: 94, a: { winner: 81 }, b: { winner: 82 } },
-  { id: 95, a: { winner: 86 }, b: { winner: 88 } },
-  { id: 96, a: { winner: 85 }, b: { winner: 87 } },
+  { id: 93, a: { winner: 84 }, b: { winner: 83 } },
+  { id: 94, a: { winner: 82 }, b: { winner: 81 } },
+  { id: 95, a: { winner: 87 }, b: { winner: 86 } },
+  { id: 96, a: { winner: 85 }, b: { winner: 88 } },
   { id: 97, a: { winner: 89 }, b: { winner: 90 } },
   { id: 98, a: { winner: 93 }, b: { winner: 94 } },
   { id: 99, a: { winner: 91 }, b: { winner: 92 } },
@@ -336,6 +336,7 @@ function outcomeFromItem(item, sideA, sideB, wantLoser) {
 
 function resolveKnockoutSide(side, fixtures, byMatch) {
   if (typeof side === "string") return resolveDirectSlot(side, fixtures, byMatch);
+  if (side?.team) return { name: side.team, confirmed: true };
   if (side?.third) return resolveThirdSlot(side, fixtures, byMatch);
   if (side?.winner || side?.loser) {
     const matchId = side.winner || side.loser;
