@@ -238,10 +238,40 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .radar-pct{font-family:var(--mono);font-size:22px;font-weight:800;color:var(--text);text-align:right;min-width:74px}
 .radar-bar{grid-column:2/4;height:5px;background:var(--bg3);border-radius:999px;overflow:hidden}
 .radar-fill{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#00E676);border-radius:999px}
+.compare-grid{display:grid;gap:14px}
+.compare-head{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end}
+.compare-pick{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px}
+.compare-label{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.compare-select{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:var(--sans);font-size:14px;font-weight:700;padding:9px 10px;outline:none}
+.compare-vs{font-family:var(--disp);font-size:22px;letter-spacing:2px;color:var(--gold);padding:0 2px 10px}
+.compare-summary{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.compare-team-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;min-width:0}
+.compare-team-name{display:flex;align-items:center;gap:9px;font-size:18px;font-weight:900;min-width:0}
+.compare-team-name span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.compare-score{font-family:var(--mono);font-size:28px;font-weight:900;color:var(--gold);text-align:right}
+.compare-comment{grid-column:1/3;color:var(--muted);font-size:12px;line-height:1.4}
+.compare-metrics{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.compare-row{display:grid;grid-template-columns:78px 1fr 78px;gap:10px;align-items:center;padding:10px 14px;border-top:1px solid var(--border)}
+.compare-row:first-child{border-top:none}
+.compare-value{font-family:var(--mono);font-weight:900;color:var(--text)}
+.compare-value.right{text-align:right}
+.compare-mid{min-width:0}
+.compare-metric-label{text-align:center;font-size:10px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.compare-track{height:5px;background:var(--bg3);border-radius:999px;display:flex;overflow:hidden}
+.compare-fill-a{height:100%;background:var(--gold)}
+.compare-fill-b{height:100%;background:var(--live)}
+.compare-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.compare-note-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px}
+.compare-note-title{font-family:var(--disp);font-size:14px;letter-spacing:1.5px;color:var(--gold);margin-bottom:7px}
+.compare-note-body{font-size:13px;color:var(--muted);line-height:1.45}
 @media(max-width:520px){
   .radar-row{grid-template-columns:auto minmax(0,1fr);gap:9px}
   .radar-pct{grid-column:2;text-align:left;font-size:18px;min-width:0}
   .radar-bar{grid-column:1/3}
+  .compare-head{grid-template-columns:1fr}
+  .compare-vs{text-align:center;padding:0}
+  .compare-summary{grid-template-columns:1fr}
+  .compare-row{grid-template-columns:54px 1fr 54px;gap:7px;padding:10px}
 }
 /* DETAIL PANEL */
 .detail-panel{display:none;position:fixed;inset:0;z-index:200;background:rgba(6,11,24,.93);backdrop-filter:blur(4px);overflow-y:auto;padding:20px 14px;align-items:flex-start;justify-content:center}
@@ -592,6 +622,7 @@ body{font-size:16px}
     <div class="tab" onclick="switchTab('goles')">📊 <span data-i18n="tabStats">Top jugadores</span></div>
     <div class="tab" onclick="switchTab('rachas')">📈 <span data-i18n="tabTrends">Racha torneo</span></div>
     <div class="tab" onclick="switchTab('radar')">📡 <span data-i18n="tabRadar">Radar Campeón</span></div>
+    <div class="tab" onclick="switchTab('comparador')">⚖️ <span data-i18n="tabCompare">Comparador</span></div>
     <div class="tab" onclick="switchTab('equipos')">👥 <span data-i18n="tabTeams">Equipos</span></div>
     <div class="tab" onclick="switchTab('miseleccion')">⭐ <span data-i18n="tabMySelection">Mi Selección</span></div>
   </nav>
@@ -641,6 +672,9 @@ body{font-size:16px}
   </div>
   <div id="tab-radar" style="display:none">
     <div id="radarContent"><div class="loading"><div class="spinner"></div><span class="loading-text" data-i18n="loadingStats">Cargando estadísticas...</span></div></div>
+  </div>
+  <div id="tab-comparador" style="display:none">
+    <div id="compareContent"><div class="loading"><div class="spinner"></div><span class="loading-text" data-i18n="loadingStats">Cargando estadísticas...</span></div></div>
   </div>
   <div id="tab-equipos" style="display:none">
     <div id="teamContent"></div>
@@ -697,7 +731,7 @@ function storageRemove(key){
 let lang=storageGet('mw26_lang','es');
 const I18N={
   es:{
-    langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabMySelection:'Mi Selección',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Top jugadores',tabTrends:'Racha torneo',tabRadar:'Radar Campeón',tabTeams:'Equipos',
+    langBtn:'EN',liveBadge:'EN JUEGO',tabLive:'En Vivo',tabMySelection:'Mi Selección',tabCalendar:'Calendario',tabPool:'Quiniela',tabStats:'Top jugadores',tabTrends:'Racha torneo',tabRadar:'Radar Campeón',tabCompare:'Comparador',tabTeams:'Equipos',
     loadingShort:'Cargando...',loadingMatches:'Buscando partidos...',loadingStats:'Cargando estadísticas...',refresh:'Actualizar',
     liveStatus:'EN JUEGO',finishedShort:'FIN',upcoming:'PRÓXIMO',group:'Grupo',spainTime:'España',
     dawnOfDay:'madrugada del {day}',
@@ -713,6 +747,7 @@ const I18N={
     topScoringTeams:'Selecciones más goleadoras',bestGoalDifference:'Mejor diferencia de goles',topShotTeams:'Más tiros a puerta',topPossessionTeams:'Más posesión media',topAssistTeams:'Más asistencias',topCardsTeams:'Más tarjetas',
     playedMatches:'partidos',goalsForShort:'GF',goalsAgainstShort:'GC',perMatch:'por partido',avgShort:'media',
     radarPending:'El radar se activará cuando haya partidos jugados.',
+    compareA:'Equipo A',compareB:'Equipo B',comparePending:'El comparador se activará cuando haya estadísticas del torneo.',compareRadar:'Radar',compareGoals:'Goles',compareGoalDiff:'Diferencia',compareShotsOnGoal:'A puerta',comparePossession:'Posesión',compareAssists:'Asistencias',compareCards:'Tarjetas',compareCleanSheets:'P. a cero',comparePlayed:'Partidos',compareWatch:'Jugador a seguir',compareForm:'Lectura',
     scorers:'Máximos Goleadores',assists:'Máximos Asistentes',keepers:'Candidatos al Guante de Oro',cleanSheets:'Porterías a cero',
     goals:'goles',assistCount:'asistencias',cleanSheetCount:'porterías a cero',
     noScorers:'Aún no hay goles registrados.',noAssists:'Aún no hay asistencias registradas.',noKeepers:'Aún no hay datos de porteros registrados.',
@@ -745,7 +780,7 @@ const I18N={
     oddsImplied:'prob. implícita',rankingAdvantage:'Ventaja ranking',groupPosition:'Posición de grupo'
   },
   en:{
-    langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabMySelection:'My Team',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Top players',tabTrends:'Tournament form',tabRadar:'Champion Radar',tabTeams:'Teams',
+    langBtn:'ES',liveBadge:'LIVE',tabLive:'Live',tabMySelection:'My Team',tabCalendar:'Schedule',tabPool:'Prediction',tabStats:'Top players',tabTrends:'Tournament form',tabRadar:'Champion Radar',tabCompare:'Compare',tabTeams:'Teams',
     loadingShort:'Loading...',loadingMatches:'Looking for matches...',loadingStats:'Loading stats...',refresh:'Refresh',
     liveStatus:'LIVE',finishedShort:'FT',upcoming:'UPCOMING',group:'Group',spainTime:'Spain',
     dawnOfDay:'early {day}',
@@ -761,6 +796,7 @@ const I18N={
     topScoringTeams:'Top scoring teams',bestGoalDifference:'Best goal difference',topShotTeams:'Most shots on target',topPossessionTeams:'Highest average possession',topAssistTeams:'Most assists',topCardsTeams:'Most cards',
     playedMatches:'matches',goalsForShort:'GF',goalsAgainstShort:'GA',perMatch:'per match',avgShort:'avg',
     radarPending:'The radar will activate once matches have been played.',
+    compareA:'Team A',compareB:'Team B',comparePending:'The comparison will activate once tournament stats are available.',compareRadar:'Radar',compareGoals:'Goals',compareGoalDiff:'Goal diff',compareShotsOnGoal:'On target',comparePossession:'Possession',compareAssists:'Assists',compareCards:'Cards',compareCleanSheets:'Clean sheets',comparePlayed:'Matches',compareWatch:'Player to watch',compareForm:'Read',
     scorers:'Top Scorers',assists:'Top Assists',keepers:'Golden Glove Candidates',cleanSheets:'Clean sheets',
     goals:'goals',assistCount:'assists',cleanSheetCount:'clean sheets',
     noScorers:'No goals recorded yet.',noAssists:'No assists recorded yet.',noKeepers:'No goalkeeper data recorded yet.',
@@ -821,6 +857,7 @@ function rerenderActiveTab(){
   if(activeTab==='goles')renderStats(document.getElementById('golesContent'));
   if(activeTab==='rachas')renderTournamentTrends();
   if(activeTab==='radar')renderChampionRadar();
+  if(activeTab==='comparador')renderCompare();
   if(activeTab==='equipos'){
     if(typeof selectedTeamName!=='undefined'&&selectedTeamName)loadTeamByName(selectedTeamName);
     else initEquipos();
@@ -1020,22 +1057,22 @@ const FX=[
   [71,'2026-06-28','02:00','Algeria','Austria','Group J','Arrowhead Stadium','Kansas City'],
   [72,'2026-06-28','02:00','Jordan','Argentina','Group J','AT&T Stadium','Arlington'],
   // Round of 32
-  [73,'2026-06-28','19:00','TBD','TBD','Ronda de 32','SoFi Stadium','Inglewood'],
-  [74,'2026-06-29','17:00','TBD','TBD','Ronda de 32','NRG Stadium','Houston'],
-  [75,'2026-06-29','20:30','TBD','TBD','Ronda de 32','Gillette Stadium','Foxborough'],
-  [76,'2026-06-30','01:00','TBD','TBD','Ronda de 32','Estadio BBVA','Monterrey'],
-  [77,'2026-06-30','17:00','TBD','TBD','Ronda de 32','AT&T Stadium','Arlington'],
-  [78,'2026-06-30','21:00','TBD','TBD','Ronda de 32','MetLife Stadium','East Rutherford'],
-  [79,'2026-07-01','01:00','TBD','TBD','Ronda de 32','Estadio Azteca','Mexico City'],
-  [80,'2026-07-01','16:00','TBD','TBD','Ronda de 32','Mercedes-Benz Stadium','Atlanta'],
-  [81,'2026-07-01','20:00','TBD','TBD','Ronda de 32','Lumen Field','Seattle'],
-  [82,'2026-07-02','00:00','TBD','TBD','Ronda de 32','Levi\'s Stadium','Santa Clara'],
-  [83,'2026-07-02','19:00','TBD','TBD','Ronda de 32','SoFi Stadium','Inglewood'],
-  [84,'2026-07-02','23:00','TBD','TBD','Ronda de 32','BMO Field','Toronto'],
-  [85,'2026-07-03','03:00','TBD','TBD','Ronda de 32','BC Place','Vancouver'],
-  [86,'2026-07-03','17:00','TBD','TBD','Ronda de 32','Hard Rock Stadium','Miami Gardens'],
-  [87,'2026-07-03','21:00','TBD','TBD','Ronda de 32','Arrowhead Stadium','Kansas City'],
-  [88,'2026-07-04','01:00','TBD','TBD','Ronda de 32','Lincoln Financial Field','Philadelphia'],
+  [73,'2026-06-28','19:00','South Africa','Canada','Ronda de 32','SoFi Stadium','Inglewood'],
+  [74,'2026-06-29','17:00','Brazil','Japan','Ronda de 32','NRG Stadium','Houston'],
+  [75,'2026-06-29','20:30','Germany','Paraguay','Ronda de 32','Gillette Stadium','Foxborough'],
+  [76,'2026-06-30','01:00','Netherlands','Morocco','Ronda de 32','Estadio BBVA','Monterrey'],
+  [77,'2026-06-30','17:00','Ivory Coast','Norway','Ronda de 32','AT&T Stadium','Arlington'],
+  [78,'2026-06-30','21:00','France','Sweden','Ronda de 32','MetLife Stadium','East Rutherford'],
+  [79,'2026-07-01','01:00','Mexico','Ecuador','Ronda de 32','Estadio Azteca','Mexico City'],
+  [80,'2026-07-01','16:00','England','DR Congo','Ronda de 32','Mercedes-Benz Stadium','Atlanta'],
+  [81,'2026-07-01','20:00','Belgium','Senegal','Ronda de 32','Lumen Field','Seattle'],
+  [82,'2026-07-02','00:00','United States','Bosnia & Herzegovina','Ronda de 32','Levi\'s Stadium','Santa Clara'],
+  [83,'2026-07-02','19:00','Spain','Austria','Ronda de 32','SoFi Stadium','Inglewood'],
+  [84,'2026-07-02','23:00','Portugal','Croatia','Ronda de 32','BMO Field','Toronto'],
+  [85,'2026-07-03','03:00','Switzerland','Algeria','Ronda de 32','BC Place','Vancouver'],
+  [86,'2026-07-03','17:00','Australia','Egypt','Ronda de 32','Hard Rock Stadium','Miami Gardens'],
+  [87,'2026-07-03','21:00','Argentina','Cape Verde','Ronda de 32','Arrowhead Stadium','Kansas City'],
+  [88,'2026-07-04','01:00','Colombia','Ghana','Ronda de 32','Lincoln Financial Field','Philadelphia'],
   // Round of 16
   [89,'2026-07-05','19:00','TBD','TBD','Octavos','AT&T Stadium','Arlington'],
   [90,'2026-07-05','23:00','TBD','TBD','Octavos','MetLife Stadium','East Rutherford'],
@@ -1771,32 +1808,32 @@ function renderCalMejorTercero(){
 }
 
 const REAL_R32_SLOTS=[
-  {id:73,a:'2A',b:'2B'},
-  {id:74,a:'1E',b:{third:['A','B','C','D','F']}},
-  {id:75,a:'1F',b:'2C'},
-  {id:76,a:'1C',b:'2F'},
-  {id:77,a:'1I',b:{third:['C','D','F','G','H']}},
-  {id:78,a:'2E',b:'2I'},
-  {id:79,a:'1A',b:{third:['C','E','F','H','I']}},
-  {id:80,a:'1L',b:{third:['E','H','I','J','K']}},
-  {id:81,a:'1D',b:{third:['B','E','F','I','J']}},
-  {id:82,a:'1G',b:{third:['A','E','H','I','J']}},
-  {id:83,a:'2K',b:'2L'},
-  {id:84,a:'1H',b:'2J'},
-  {id:85,a:'1B',b:{third:['E','F','G','I','J']}},
-  {id:86,a:'1J',b:'2H'},
-  {id:87,a:'1K',b:{third:['D','E','I','J','L']}},
-  {id:88,a:'2D',b:'2G'}
+  {id:73,a:{team:'South Africa'},b:{team:'Canada'}},
+  {id:74,a:{team:'Brazil'},b:{team:'Japan'}},
+  {id:75,a:{team:'Germany'},b:{team:'Paraguay'}},
+  {id:76,a:{team:'Netherlands'},b:{team:'Morocco'}},
+  {id:77,a:{team:'Ivory Coast'},b:{team:'Norway'}},
+  {id:78,a:{team:'France'},b:{team:'Sweden'}},
+  {id:79,a:{team:'Mexico'},b:{team:'Ecuador'}},
+  {id:80,a:{team:'England'},b:{team:'DR Congo'}},
+  {id:81,a:{team:'Belgium'},b:{team:'Senegal'}},
+  {id:82,a:{team:'United States'},b:{team:'Bosnia & Herzegovina'}},
+  {id:83,a:{team:'Spain'},b:{team:'Austria'}},
+  {id:84,a:{team:'Portugal'},b:{team:'Croatia'}},
+  {id:85,a:{team:'Switzerland'},b:{team:'Algeria'}},
+  {id:86,a:{team:'Australia'},b:{team:'Egypt'}},
+  {id:87,a:{team:'Argentina'},b:{team:'Cape Verde'}},
+  {id:88,a:{team:'Colombia'},b:{team:'Ghana'}}
 ];
 const REAL_KNOCKOUT_SLOTS=REAL_R32_SLOTS.concat([
-  {id:89,a:{winner:73},b:{winner:75}},
-  {id:90,a:{winner:74},b:{winner:77}},
-  {id:91,a:{winner:76},b:{winner:78}},
+  {id:89,a:{winner:75},b:{winner:78}},
+  {id:90,a:{winner:73},b:{winner:76}},
+  {id:91,a:{winner:74},b:{winner:77}},
   {id:92,a:{winner:79},b:{winner:80}},
-  {id:93,a:{winner:83},b:{winner:84}},
-  {id:94,a:{winner:81},b:{winner:82}},
-  {id:95,a:{winner:86},b:{winner:88}},
-  {id:96,a:{winner:85},b:{winner:87}},
+  {id:93,a:{winner:84},b:{winner:83}},
+  {id:94,a:{winner:82},b:{winner:81}},
+  {id:95,a:{winner:87},b:{winner:86}},
+  {id:96,a:{winner:85},b:{winner:88}},
   {id:97,a:{winner:89},b:{winner:90}},
   {id:98,a:{winner:93},b:{winner:94}},
   {id:99,a:{winner:91},b:{winner:92}},
@@ -1902,6 +1939,10 @@ function matchOutcomeSide(matchId,wantLoser){
 }
 function resolveKnockoutSide(side){
   if(typeof side==='string')return resolveDirectSlot(side);
+  if(side&&side.team){
+    const name=normName(side.team);
+    return {name,label:name,flag:FLAGS[name]||FLAGS[side.team]||'🏳️',confirmed:true,provisional:false,slot:name};
+  }
   if(side&&side.third)return resolveThirdSlot(side);
   if(side&&side.winner)return matchOutcomeSide(side.winner,false);
   if(side&&side.loser)return matchOutcomeSide(side.loser,true);
@@ -2897,6 +2938,101 @@ async function renderChampionRadar(){
   ranked.forEach(function(r){r.pct=r.raw/total*100;});
   ranked.sort(function(a,b){return b.pct-a.pct||b.gd-a.gd||b.gf-a.gf||a.team.localeCompare(b.team,'es');});
   el.innerHTML='<div class="radar-card">'+renderRadarRows(ranked.slice(0,16))+'</div>';
+}
+
+const COMPARE_A_KEY='mw26_compare_a';
+const COMPARE_B_KEY='mw26_compare_b';
+function compareRowsWithRadar(rows){
+  const ranked=(rows||[]).filter(r=>r.played>0).map(function(r){
+    return Object.assign({},r,{raw:championRadarScore(r)});
+  });
+  const total=ranked.reduce((sum,r)=>sum+r.raw,0)||1;
+  ranked.forEach(function(r){r.pct=r.raw/total*100;});
+  ranked.sort(function(a,b){return b.pct-a.pct||b.gd-a.gd||b.gf-a.gf||a.team.localeCompare(b.team,'es');});
+  return ranked;
+}
+function blankCompareRow(team){
+  return {team,played:0,w:0,d:0,l:0,pts:0,gf:0,ga:0,gd:0,assists:0,sog:0,shots:0,passes:0,corners:0,fouls:0,saves:0,yellowCards:0,redCards:0,cleanSheets:0,avgPoss:0,cardTotal:0,cardPoints:0,gfPer:0,gaPer:0,raw:0,pct:0};
+}
+function compareTeamOptions(value){
+  return worldCupTeams().map(function(team){
+    return '<option value="'+escHtml(team)+'" '+(sameTeam(team,value)?'selected':'')+'>'+escHtml((FLAGS[team]||'')+' '+team)+'</option>';
+  }).join('');
+}
+function setCompareTeam(side,value){
+  storageSet(side==='b'?COMPARE_B_KEY:COMPARE_A_KEY,value);
+  renderCompare();
+}
+function comparePlayerNote(team){
+  const p=rankedSquadPlayerToWatch(team);
+  if(!p)return t('playerToWatchPending');
+  return '⭐ '+p.name+(p.detail?' · '+p.detail:'');
+}
+function compareMetricRow(label,aVal,bVal,fmt){
+  const av=Number(aVal)||0,bv=Number(bVal)||0,total=av+bv;
+  const ap=total>0?av/total*100:50,bp=100-ap;
+  return '<div class="compare-row">'+
+    '<div class="compare-value">'+escHtml(fmt(av))+'</div>'+
+    '<div class="compare-mid"><div class="compare-metric-label">'+escHtml(label)+'</div>'+
+      '<div class="compare-track"><span class="compare-fill-a" style="width:'+ap+'%"></span><span class="compare-fill-b" style="width:'+bp+'%"></span></div></div>'+
+    '<div class="compare-value right">'+escHtml(fmt(bv))+'</div>'+
+  '</div>';
+}
+async function renderCompare(){
+  const el=document.getElementById('compareContent');
+  if(!el)return;
+  el.innerHTML='<div class="loading"><div class="spinner"></div><span class="loading-text">'+t('loadingStats')+'</span></div>';
+  const items=await ensureStoredMatchStats();
+  await loadLocalSquads();
+  const rows=compareRowsWithRadar(aggregateTournamentTeamStats(items));
+  if(!rows.length){
+    el.innerHTML='<div class="empty"><div class="empty-icon">⚖️</div><div class="empty-text">'+t('comparePending')+'</div></div>';
+    return;
+  }
+  const defaultA=(myTeam&&worldCupTeams().some(team=>sameTeam(team,myTeam)))?myTeam:rows[0].team;
+  const defaultB=rows.find(r=>!sameTeam(r.team,defaultA))?.team||worldCupTeams().find(team=>!sameTeam(team,defaultA))||rows[0].team;
+  const teamA=storageGet(COMPARE_A_KEY,defaultA);
+  const teamB=storageGet(COMPARE_B_KEY,defaultB);
+  const byTeam={};
+  rows.forEach(function(r){byTeam[normName(r.team)]=r;});
+  const a=byTeam[normName(teamA)]||blankCompareRow(teamA);
+  const b=byTeam[normName(teamB)]||blankCompareRow(teamB);
+  const fmtInt=v=>String(Math.round(Number(v)||0));
+  const fmtPct=v=>(Number(v)||0).toFixed(1)+'%';
+  const fmtSigned=v=>(Number(v)>0?'+':'')+String(Math.round(Number(v)||0));
+  let html='<div class="compare-grid">';
+  html+='<div class="compare-head">'+
+    '<div class="compare-pick"><div class="compare-label">'+t('compareA')+'</div><select class="compare-select" onchange="setCompareTeam(\'a\',this.value)">'+compareTeamOptions(teamA)+'</select></div>'+
+    '<div class="compare-vs">VS</div>'+
+    '<div class="compare-pick"><div class="compare-label">'+t('compareB')+'</div><select class="compare-select" onchange="setCompareTeam(\'b\',this.value)">'+compareTeamOptions(teamB)+'</select></div>'+
+  '</div>';
+  html+='<div class="compare-summary">'+[a,b].map(function(r){
+    return '<div class="compare-team-card">'+
+      '<div class="compare-team-name">'+flagHtml(r.team)+'<span>'+escHtml(r.team)+'</span></div>'+
+      '<div class="compare-score">'+(r.pct||0).toFixed(1)+'%</div>'+
+      '<div class="compare-comment">'+escHtml(championRadarComment(r))+'</div>'+
+    '</div>';
+  }).join('')+'</div>';
+  html+='<div class="compare-metrics">'+
+    compareMetricRow(t('compareRadar'),a.pct,b.pct,fmtPct)+
+    compareMetricRow(t('comparePlayed'),a.played,b.played,fmtInt)+
+    compareMetricRow(t('compareGoals'),a.gf,b.gf,fmtInt)+
+    compareMetricRow(t('compareGoalDiff'),a.gd,b.gd,fmtSigned)+
+    compareMetricRow(t('compareShotsOnGoal'),a.sog,b.sog,fmtInt)+
+    compareMetricRow(t('comparePossession'),a.avgPoss,b.avgPoss,fmtPct)+
+    compareMetricRow(t('compareAssists'),a.assists,b.assists,fmtInt)+
+    compareMetricRow(t('compareCleanSheets'),a.cleanSheets,b.cleanSheets,fmtInt)+
+    compareMetricRow(t('compareCards'),a.cardTotal,b.cardTotal,fmtInt)+
+  '</div>';
+  html+='<div class="compare-notes">'+[a,b].map(function(r){
+    return '<div class="compare-note-card">'+
+      '<div class="compare-note-title">'+flagHtml(r.team)+' '+escHtml(r.team)+'</div>'+
+      '<div class="compare-note-body"><strong>'+t('compareWatch')+':</strong> '+escHtml(comparePlayerNote(r.team))+'</div>'+
+      '<div class="compare-note-body" style="margin-top:6px"><strong>'+t('compareForm')+':</strong> '+escHtml(championRadarComment(r))+'</div>'+
+    '</div>';
+  }).join('')+'</div>';
+  html+='</div>';
+  el.innerHTML=html;
 }
 
 // ══════════════════════════════════════════════
@@ -4732,14 +4868,14 @@ function closeDetail(){
 document.getElementById('detailPanel').addEventListener('click',e=>{if(e.target===document.getElementById('detailPanel'))closeDetail();});
 
 // TAB SWITCHING
-let activeTab='live',calLoaded=false,golesLoaded=false,trendsLoaded=false,radarLoaded=false;
+let activeTab='live',calLoaded=false,golesLoaded=false,trendsLoaded=false,radarLoaded=false,compareLoaded=false;
 function switchTab(tab){
   clearInterval(liveTimer);
   activeTab=tab;
   document.querySelectorAll('.tab').forEach((t,i)=>{
-    t.classList.toggle('active',['live','cal','quiniela','goles','rachas','radar','equipos','miseleccion'][i]===tab);
+    t.classList.toggle('active',['live','cal','quiniela','goles','rachas','radar','comparador','equipos','miseleccion'][i]===tab);
   });
-  ['live','cal','quiniela','goles','rachas','radar','equipos','miseleccion'].forEach(id=>{
+  ['live','cal','quiniela','goles','rachas','radar','comparador','equipos','miseleccion'].forEach(id=>{
     document.getElementById('tab-'+id).style.display=id===tab?'block':'none';
   });
   if(tab==='live')loadLive();
@@ -4750,6 +4886,7 @@ function switchTab(tab){
   if(tab==='goles'&&!golesLoaded){loadGoleadores();golesLoaded=true;}
   if(tab==='rachas'){renderTournamentTrends();trendsLoaded=true;}
   if(tab==='radar'){renderChampionRadar();radarLoaded=true;}
+  if(tab==='comparador'){renderCompare();compareLoaded=true;}
   if(tab==='equipos')initEquipos();
 }
 
