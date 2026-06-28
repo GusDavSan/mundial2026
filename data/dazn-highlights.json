@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T22:17:30.155Z",
+  "updated": "2026-06-28T23:33:25.928Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -320,11 +320,11 @@
       "home": "Czechia",
       "away": "South Africa",
       "source": "DAZN ES",
-      "title": "Sudáfrica vs República de Corea (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=sM5AANg72rM",
-      "thumbnail": "https://i.ytimg.com/vi/sM5AANg72rM/hqdefault.jpg",
-      "videoId": "sM5AANg72rM",
-      "publishedAt": "2026-06-25T05:00:04Z",
+      "title": "Sudáfrica vs Canadá  (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1lYgBzOi_vU",
+      "thumbnail": "https://i.ytimg.com/vi/1lYgBzOi_vU/hqdefault.jpg",
+      "videoId": "1lYgBzOi_vU",
+      "publishedAt": "2026-06-28T22:53:49Z",
       "confidence": 12
     },
     {
@@ -346,11 +346,11 @@
       "home": "Canada",
       "away": "Qatar",
       "source": "DAZN ES",
-      "title": "Suiza vs Canadá  (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=KgB1af0RLRw",
-      "thumbnail": "https://i.ytimg.com/vi/KgB1af0RLRw/hqdefault.jpg",
-      "videoId": "KgB1af0RLRw",
-      "publishedAt": "2026-06-24T22:57:35Z",
+      "title": "Sudáfrica vs Canadá  (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1lYgBzOi_vU",
+      "thumbnail": "https://i.ytimg.com/vi/1lYgBzOi_vU/hqdefault.jpg",
+      "videoId": "1lYgBzOi_vU",
+      "publishedAt": "2026-06-28T22:53:49Z",
       "confidence": 12
     },
     {
@@ -632,12 +632,12 @@
       "home": "Switzerland",
       "away": "Canada",
       "source": "DAZN ES",
-      "title": "Suiza vs Canadá  (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=KgB1af0RLRw",
-      "thumbnail": "https://i.ytimg.com/vi/KgB1af0RLRw/hqdefault.jpg",
-      "videoId": "KgB1af0RLRw",
-      "publishedAt": "2026-06-24T22:57:35Z",
-      "confidence": 20
+      "title": "Sudáfrica vs Canadá  (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1lYgBzOi_vU",
+      "thumbnail": "https://i.ytimg.com/vi/1lYgBzOi_vU/hqdefault.jpg",
+      "videoId": "1lYgBzOi_vU",
+      "publishedAt": "2026-06-28T22:53:49Z",
+      "confidence": 12
     },
     {
       "matchId": 50,
@@ -697,12 +697,12 @@
       "home": "South Africa",
       "away": "South Korea",
       "source": "DAZN ES",
-      "title": "Sudáfrica vs República de Corea (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=sM5AANg72rM",
-      "thumbnail": "https://i.ytimg.com/vi/sM5AANg72rM/hqdefault.jpg",
-      "videoId": "sM5AANg72rM",
-      "publishedAt": "2026-06-25T05:00:04Z",
-      "confidence": 20
+      "title": "Sudáfrica vs Canadá  (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1lYgBzOi_vU",
+      "thumbnail": "https://i.ytimg.com/vi/1lYgBzOi_vU/hqdefault.jpg",
+      "videoId": "1lYgBzOi_vU",
+      "publishedAt": "2026-06-28T22:53:49Z",
+      "confidence": 14
     },
     {
       "matchId": 55,
@@ -936,6 +936,19 @@
       "thumbnail": "https://i.ytimg.com/vi/KIyvKhghtjw/hqdefault.jpg",
       "videoId": "KIyvKhghtjw",
       "publishedAt": "2026-06-28T06:22:06Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 73,
+      "date": "2026-06-28",
+      "home": "South Africa",
+      "away": "Canada",
+      "source": "DAZN ES",
+      "title": "Sudáfrica vs Canadá  (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=1lYgBzOi_vU",
+      "thumbnail": "https://i.ytimg.com/vi/1lYgBzOi_vU/hqdefault.jpg",
+      "videoId": "1lYgBzOi_vU",
+      "publishedAt": "2026-06-28T22:53:49Z",
       "confidence": 20
     }
   ]
