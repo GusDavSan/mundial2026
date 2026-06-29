@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T17:50:15.148Z",
+  "updated": "2026-06-29T19:14:54.799Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -950,6 +950,19 @@
       "videoId": "1lYgBzOi_vU",
       "publishedAt": "2026-06-28T22:53:49Z",
       "confidence": 20
+    },
+    {
+      "matchId": 74,
+      "date": "2026-06-29",
+      "home": "Brazil",
+      "away": "Japan",
+      "source": "DAZN ES",
+      "title": "Triple rebote de Japón para evitar el gol de Brasil... ¡INCREÍBLE! 😳",
+      "url": "https://www.youtube.com/watch?v=cHqja-vcmGA",
+      "thumbnail": "https://i4.ytimg.com/vi/cHqja-vcmGA/hqdefault.jpg",
+      "videoId": "cHqja-vcmGA",
+      "publishedAt": "2026-06-29T18:31:40+00:00",
+      "confidence": 14
     }
   ]
 }
