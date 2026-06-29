@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T20:18:08.092Z",
+  "updated": "2026-06-29T21:47:22.048Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -398,11 +398,11 @@
       "home": "Brazil",
       "away": "Haiti",
       "source": "DAZN ES",
-      "title": "Marruecos vs Haití (4-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=OYgLP76fie0",
-      "thumbnail": "https://i.ytimg.com/vi/OYgLP76fie0/hqdefault.jpg",
-      "videoId": "OYgLP76fie0",
-      "publishedAt": "2026-06-25T02:35:04Z",
+      "title": "Brasil vs Japón (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BDLrslSBikw",
+      "thumbnail": "https://i3.ytimg.com/vi/BDLrslSBikw/hqdefault.jpg",
+      "videoId": "BDLrslSBikw",
+      "publishedAt": "2026-06-29T21:32:35+00:00",
       "confidence": 12
     },
     {
@@ -463,11 +463,11 @@
       "home": "Tunisia",
       "away": "Japan",
       "source": "DAZN ES",
-      "title": "Túnez vs Países Bajos  (1-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=3wERR_fbXkA",
-      "thumbnail": "https://i.ytimg.com/vi/3wERR_fbXkA/hqdefault.jpg",
-      "videoId": "3wERR_fbXkA",
-      "publishedAt": "2026-06-26T02:59:16Z",
+      "title": "Brasil vs Japón (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BDLrslSBikw",
+      "thumbnail": "https://i3.ytimg.com/vi/BDLrslSBikw/hqdefault.jpg",
+      "videoId": "BDLrslSBikw",
+      "publishedAt": "2026-06-29T21:32:35+00:00",
       "confidence": 12
     },
     {
@@ -658,12 +658,12 @@
       "home": "Scotland",
       "away": "Brazil",
       "source": "DAZN ES",
-      "title": "Escocia vs Brasil (0-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=iHt-2YSoOVc",
-      "thumbnail": "https://i.ytimg.com/vi/iHt-2YSoOVc/hqdefault.jpg",
-      "videoId": "iHt-2YSoOVc",
-      "publishedAt": "2026-06-25T02:20:36Z",
-      "confidence": 20
+      "title": "Brasil vs Japón (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BDLrslSBikw",
+      "thumbnail": "https://i3.ytimg.com/vi/BDLrslSBikw/hqdefault.jpg",
+      "videoId": "BDLrslSBikw",
+      "publishedAt": "2026-06-29T21:32:35+00:00",
+      "confidence": 12
     },
     {
       "matchId": 52,
@@ -736,12 +736,12 @@
       "home": "Japan",
       "away": "Sweden",
       "source": "DAZN ES",
-      "title": "Japón vs Suecia (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=mrNAWmRYstA",
-      "thumbnail": "https://i.ytimg.com/vi/mrNAWmRYstA/hqdefault.jpg",
-      "videoId": "mrNAWmRYstA",
-      "publishedAt": "2026-06-26T02:59:13Z",
-      "confidence": 20
+      "title": "Brasil vs Japón (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BDLrslSBikw",
+      "thumbnail": "https://i3.ytimg.com/vi/BDLrslSBikw/hqdefault.jpg",
+      "videoId": "BDLrslSBikw",
+      "publishedAt": "2026-06-29T21:32:35+00:00",
+      "confidence": 14
     },
     {
       "matchId": 58,
@@ -957,12 +957,25 @@
       "home": "Brazil",
       "away": "Japan",
       "source": "DAZN ES",
-      "title": "LA REMONTADA DE BRASIL A JAPÓN EN EL 95' 🙌 Resumen en 1 MINUTO de este partidazo ⏰🔥",
-      "url": "https://www.youtube.com/watch?v=pqodn3LhH84",
-      "thumbnail": "https://i.ytimg.com/vi/pqodn3LhH84/hqdefault.jpg",
-      "videoId": "pqodn3LhH84",
-      "publishedAt": "2026-06-29T19:27:09Z",
-      "confidence": 17
+      "title": "Brasil vs Japón (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BDLrslSBikw",
+      "thumbnail": "https://i3.ytimg.com/vi/BDLrslSBikw/hqdefault.jpg",
+      "videoId": "BDLrslSBikw",
+      "publishedAt": "2026-06-29T21:32:35+00:00",
+      "confidence": 20
+    },
+    {
+      "matchId": 75,
+      "date": "2026-06-29",
+      "home": "Germany",
+      "away": "Paraguay",
+      "source": "DAZN ES",
+      "title": "🇵🇾 ORGULLO GUARANÍ 🇵🇾Lo de Paraguay poniendo contra las cuerdas a Alemania... ¡EL FÚTBOL ESTÁ LOCO!🔥",
+      "url": "https://www.youtube.com/watch?v=Kx_MkXV5GHk",
+      "thumbnail": "https://i.ytimg.com/vi/Kx_MkXV5GHk/hqdefault.jpg",
+      "videoId": "Kx_MkXV5GHk",
+      "publishedAt": "2026-06-29T21:23:04Z",
+      "confidence": 14
     }
   ]
 }
