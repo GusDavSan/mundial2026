@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T20:27:50.435Z",
+  "updated": "2026-06-29T21:54:54.160Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -5679,7 +5679,7 @@
       "winner": "Norway",
       "loser": "Senegal",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -5854,7 +5854,7 @@
       "winner": "Algeria",
       "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -5991,7 +5991,7 @@
       "winner": "Portugal",
       "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6152,7 +6152,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -6233,7 +6233,7 @@
       "winner": "Croatia",
       "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6337,7 +6337,7 @@
       "winner": "Colombia",
       "loser": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6441,7 +6441,7 @@
       "winner": "Switzerland",
       "loser": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6587,7 +6587,7 @@
       "winner": "Bosnia & Herzegovina",
       "loser": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6745,7 +6745,7 @@
       "winner": "Brazil",
       "loser": "Scotland",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6891,7 +6891,7 @@
       "winner": "Morocco",
       "loser": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -7082,7 +7082,7 @@
       "winner": "Mexico",
       "loser": "Czechia",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7228,7 +7228,7 @@
       "winner": "South Africa",
       "loser": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7332,7 +7332,7 @@
       "winner": "Ivory Coast",
       "loser": "Curaçao",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7457,7 +7457,7 @@
       "winner": "Ecuador",
       "loser": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7603,7 +7603,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7728,7 +7728,7 @@
       "winner": "Netherlands",
       "loser": "Tunisia",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7882,7 +7882,7 @@
       "winner": "Türkiye",
       "loser": "United States",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8052,7 +8052,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8133,7 +8133,7 @@
       "winner": "France",
       "loser": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8321,7 +8321,7 @@
       "winner": "Senegal",
       "loser": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8513,7 +8513,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8594,7 +8594,7 @@
       "winner": "Spain",
       "loser": "Uruguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -8702,7 +8702,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8818,7 +8818,7 @@
       "winner": "Belgium",
       "loser": "New Zealand",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9000,7 +9000,7 @@
       "winner": "England",
       "loser": "Panama",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9125,7 +9125,7 @@
       "winner": "Croatia",
       "loser": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9271,7 +9271,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9352,7 +9352,7 @@
       "winner": "DR Congo",
       "loser": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9501,7 +9501,7 @@
       "winner": "",
       "loser": "",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9701,7 +9701,7 @@
       "winner": "Argentina",
       "loser": "Jordan",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -9841,7 +9841,7 @@
       "winner": "Canada",
       "loser": "South Africa",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -9935,7 +9935,7 @@
       "winner": "Brazil",
       "loser": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-29T20:27:50.435Z",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10058,6 +10058,127 @@
           "savePct": 66.7,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 75,
+      "espnEventId": "760489",
+      "date": "2026-06-29",
+      "homeTeam": "Germany",
+      "awayTeam": "Paraguay",
+      "homeScore": 1,
+      "awayScore": 1,
+      "winner": "",
+      "loser": "",
+      "source": "ESPN",
+      "updatedAt": "2026-06-29T21:54:54.160Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 4
+        },
+        "shots": {
+          "home": 8,
+          "away": 5
+        },
+        "possession": {
+          "home": 77.7,
+          "away": 22.3
+        },
+        "passes": {
+          "home": 462,
+          "away": 132
+        },
+        "fouls": {
+          "home": 9,
+          "away": 3
+        },
+        "corners": {
+          "home": 6,
+          "away": 2
+        },
+        "saves": {
+          "home": 3,
+          "away": 1
+        },
+        "offsides": {
+          "home": 3,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49661929",
+          "minute": "42",
+          "period": 1,
+          "team": "Paraguay",
+          "player": "Julio Enciso",
+          "assist": "Matías Galarza",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 0, Paraguay 1. Julio Enciso (Paraguay) header from the centre of the box to the bottom left corner. Assisted by Matías Galarza with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49662217",
+          "minute": "54",
+          "period": 2,
+          "team": "Germany",
+          "player": "Kai Havertz",
+          "assist": "Florian Wirtz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Germany 1, Paraguay 1. Kai Havertz (Germany) header from the centre of the box to the bottom right corner. Assisted by Florian Wirtz with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49661929",
+          "minute": "42",
+          "period": 1,
+          "team": "Paraguay",
+          "player": "Matías Galarza",
+          "goal": "Julio Enciso",
+          "source": "ESPN"
+        },
+        {
+          "id": "49662217",
+          "minute": "54",
+          "period": 2,
+          "team": "Germany",
+          "player": "Florian Wirtz",
+          "goal": "Kai Havertz",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Germany",
+          "name": "Manuel Neuer",
+          "shortName": "M. Neuer",
+          "number": "1",
+          "saves": 3,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 75,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Paraguay",
+          "name": "Orlando Gil",
+          "shortName": "O. Gil",
+          "number": "12",
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
