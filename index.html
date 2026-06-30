@@ -152,8 +152,9 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
 .real-match-meta{border-top:1px solid var(--border);padding:7px 9px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted);font-size:10px;line-height:1.35}
 .real-match-note{padding:0 9px 8px;color:var(--muted);font-size:10px;line-height:1.35}
 .real-match-pen{color:var(--gold);font-family:var(--mono);font-weight:800;font-size:10px}
-.group-stage-standings{margin-top:20px}
+.group-stage-standings{margin:0 0 20px}
 .group-stage-standings .gc{position:static}
+.group-stage-matches{margin-top:18px}
 /* GROUPS TABLE */
 .groups-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
 .gc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
@@ -569,12 +570,15 @@ header{background:linear-gradient(180deg,#0A1020,var(--bg));border-bottom:1px so
   .cal-stand-sticky{position:static;margin-bottom:14px}
   .cal-standings-col{order:-1;padding-top:0}
 }
-.gc-compact th{font-size:10px;padding:7px 6px;letter-spacing:.35px}
-.gc-compact td{font-size:12px;padding:7px 6px}
+.gtbl.gc-compact{table-layout:fixed}
+.gc-compact th{font-size:10px;padding:7px 5px;letter-spacing:.25px}
+.gc-compact td{font-size:12px;padding:7px 5px}
+.gc-compact th:first-child,.gc-compact td:first-child{width:42%;text-align:left}
+.gc-compact th:not(:first-child),.gc-compact td:not(:first-child){width:7.25%;text-align:center}
 .gc-compact th:first-child,.gc-compact td:first-child{padding-left:10px}
 .gc-compact th:last-child,.gc-compact td:last-child{padding-right:10px}
-.gc-compact .tcell{gap:5px}
-.gc-compact .tcell span:last-child{white-space:nowrap;overflow:visible;text-overflow:clip;max-width:none}
+.gc-compact .tcell{gap:5px;min-width:0}
+.gc-compact .tcell span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 
 /* READABILITY PASS */
 body{font-size:16px}
@@ -1923,7 +1927,7 @@ function renderGroupStandingsCard(g){
     const cls=i<2?'q'+(i+1):'';
     const dot=i<2?'<span class="qdot g"></span>':i===2?'<span class="qdot y"></span>':'';
     const gd=t.gf-t.ga;
-    h+='<tr class="'+cls+'"><td><div class="tcell">'+dot+'<span style="font-size:11px">'+(FLAGS[t.name]||'🏳️')+'</span><span>'+t.name+'</span></div></td>';
+    h+='<tr class="'+cls+'"><td><div class="tcell">'+dot+'<span style="font-size:11px">'+(FLAGS[t.name]||'🏳️')+'</span><span title="'+escHtml(t.name)+'">'+t.name+'</span></div></td>';
     h+='<td>'+t.p+'</td><td>'+t.w+'</td><td>'+t.d+'</td><td>'+t.l+'</td>';
     h+='<td>'+t.gf+'</td><td>'+t.ga+'</td><td>'+(gd>0?'+':'')+gd+'</td><td class="ptscell">'+t.pts+'</td></tr>';
   });
@@ -2178,7 +2182,11 @@ function renderGroupStandingsGrid(){
 }
 function renderGroupStageView(){
   const matches=FIXTURES.filter(f=>String(f.group||'').startsWith('Group'));
-  return buildMatchesHtml(matches)+'<div class="divider"></div>'+renderGroupStandingsGrid();
+  const matchTitle=lang==='es'?'PARTIDOS DE GRUPO':'GROUP MATCHES';
+  return renderGroupStandingsGrid()+
+    '<div class="divider"></div>'+
+    '<div class="group-stage-matches"><div class="sec-hdr"><span class="sec-ttl">'+matchTitle+'</span></div>'+
+    buildMatchesHtml(matches)+'</div>';
 }
 const REAL_BRACKET_ROUNDS=[
   {key:'Ronda de 32',label:()=>lang==='es'?'Dieciseisavos':'Round of 32',ids:[73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88]},
