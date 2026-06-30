@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T18:16:54.384Z",
+  "updated": "2026-06-30T20:22:34.911Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -989,6 +989,19 @@
       "videoId": "mgod1gbXqrA",
       "publishedAt": "2026-06-30T06:20:56+00:00",
       "confidence": 20
+    },
+    {
+      "matchId": 77,
+      "date": "2026-06-30",
+      "home": "Ivory Coast",
+      "away": "Norway",
+      "source": "DAZN ES",
+      "title": "Lo mejor del Costa de Marfil - Noruega en 1 minuto. Haaland estará en octavos #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=GfoEVJG9rPk",
+      "thumbnail": "https://i.ytimg.com/vi/GfoEVJG9rPk/hqdefault.jpg",
+      "videoId": "GfoEVJG9rPk",
+      "publishedAt": "2026-06-30T19:33:05Z",
+      "confidence": 16
     }
   ]
 }
