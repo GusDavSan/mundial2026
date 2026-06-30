@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T23:17:55.834Z",
+  "updated": "2026-06-30T01:28:59.054Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -970,12 +970,25 @@
       "home": "Germany",
       "away": "Paraguay",
       "source": "DAZN ES",
-      "title": "GOL ANULADO A ALEMANIA. GOL ANULADO A TAHEl árbitro señaló falta al portero de Paraguay 👀",
-      "url": "https://www.youtube.com/watch?v=76XBdp44rpU",
-      "thumbnail": "https://i.ytimg.com/vi/76XBdp44rpU/hqdefault.jpg",
-      "videoId": "76XBdp44rpU",
-      "publishedAt": "2026-06-29T23:00:35Z",
-      "confidence": 14
+      "title": "ES LA BOMBA DEL MUNDIAL. ES PARAGUAY HACIENDO HISTORIA. ES LA ALBIRROJA CARGÁNDOSE A ALEMANIA 💣💥",
+      "url": "https://www.youtube.com/watch?v=k98q3VaKOfk",
+      "thumbnail": "https://i.ytimg.com/vi/k98q3VaKOfk/hqdefault.jpg",
+      "videoId": "k98q3VaKOfk",
+      "publishedAt": "2026-06-29T23:40:59Z",
+      "confidence": 16
+    },
+    {
+      "matchId": 76,
+      "date": "2026-06-30",
+      "home": "Netherlands",
+      "away": "Morocco",
+      "source": "DAZN ES",
+      "title": "La casa de ‘Rayados’ de Monterrey hoy recibe su último partido del mundial:Países Bajos vs Marruecos",
+      "url": "https://www.youtube.com/watch?v=Sn2S_BU5Nts",
+      "thumbnail": "https://i4.ytimg.com/vi/Sn2S_BU5Nts/hqdefault.jpg",
+      "videoId": "Sn2S_BU5Nts",
+      "publishedAt": "2026-06-30T00:45:02+00:00",
+      "confidence": 16
     }
   ]
 }
