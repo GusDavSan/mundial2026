@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T21:17:06.654Z",
+  "updated": "2026-06-30T22:44:37.474Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -6240,7 +6240,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -6351,7 +6351,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -6462,7 +6462,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -6615,7 +6615,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6780,7 +6780,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -6933,7 +6933,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 11,
@@ -7131,7 +7131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -7284,7 +7284,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7395,7 +7395,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7527,7 +7527,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7680,7 +7680,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7812,7 +7812,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7973,7 +7973,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8150,7 +8150,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8238,7 +8238,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8433,7 +8433,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8632,7 +8632,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8720,7 +8720,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -8835,7 +8835,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8958,7 +8958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9147,7 +9147,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9279,7 +9279,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10683,7 +10683,7 @@
       "status": "Live",
       "statusState": "in",
       "completed": false,
-      "homeScore": 0,
+      "homeScore": 3,
       "awayScore": 0,
       "winner": "",
       "loser": "",
@@ -10692,43 +10692,108 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-06-30T21:17:06.654Z",
+      "updatedAt": "2026-06-30T22:44:37.474Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 2,
+          "home": 12,
           "away": 1
         },
         "shots": {
-          "home": 2,
-          "away": 1
+          "home": 24,
+          "away": 4
         },
         "possession": {
-          "home": 66.1,
-          "away": 33.9
+          "home": 65.4,
+          "away": 34.6
         },
         "passes": {
-          "home": 117,
-          "away": 60
+          "home": 530,
+          "away": 278
         },
         "fouls": {
-          "home": 2,
-          "away": 5
+          "home": 10,
+          "away": 10
         },
         "corners": {
-          "home": 1,
-          "away": 0
+          "home": 9,
+          "away": 1
         },
         "saves": {
           "home": 1,
-          "away": 1
+          "away": 9
         },
         "offsides": {
-          "home": 0,
-          "away": 0
+          "home": 2,
+          "away": 1
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49667350",
+          "minute": "45",
+          "period": 1,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "assist": "Ousmane Dembélé",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 1, Sweden 0. Kylian Mbappé (France) right footed shot from the centre of the box to the top right corner. Assisted by Ousmane Dembélé following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49667506",
+          "minute": "53",
+          "period": 2,
+          "team": "France",
+          "player": "Bradley Barcola",
+          "assist": "Michael Olise",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 2, Sweden 0. Bradley Barcola (France) right footed shot from the centre of the box to the top left corner. Assisted by Michael Olise with a through ball following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49667819",
+          "minute": "74",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "assist": "Michael Olise",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 3, Sweden 0. Kylian Mbappé (France) right footed shot from the left side of the box to the bottom right corner. Assisted by Michael Olise with a through ball.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49667350",
+          "minute": "45",
+          "period": 1,
+          "team": "France",
+          "player": "Ousmane Dembélé",
+          "goal": "Kylian Mbappé",
+          "source": "ESPN"
+        },
+        {
+          "id": "49667506",
+          "minute": "53",
+          "period": 2,
+          "team": "France",
+          "player": "Michael Olise",
+          "goal": "Bradley Barcola",
+          "source": "ESPN"
+        },
+        {
+          "id": "49667819",
+          "minute": "74",
+          "period": 2,
+          "team": "France",
+          "player": "Michael Olise",
+          "goal": "Kylian Mbappé",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -10749,10 +10814,10 @@
           "name": "Jacob Widell Zetterström",
           "shortName": "J. Widell Zetterström",
           "number": "1",
-          "saves": 1,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 9,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
