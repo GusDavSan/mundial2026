@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T16:08:45.012Z",
+  "updated": "2026-06-30T18:17:09.749Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -24484,7 +24484,7 @@
       "homeTeam": "England",
       "awayTeam": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -25033,7 +25033,7 @@
       "homeTeam": "Panama",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Panama",
         "espnTeam": "Panama",
@@ -25582,7 +25582,7 @@
       "homeTeam": "Colombia",
       "awayTeam": "DR Congo",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Colombia",
         "espnTeam": "Colombia",
@@ -26131,7 +26131,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -26650,7 +26650,7 @@
       "homeTeam": "Bosnia & Herzegovina",
       "awayTeam": "Qatar",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Bosnia & Herzegovina",
         "espnTeam": "Bosnia-Herzegovina",
@@ -27169,7 +27169,7 @@
       "homeTeam": "Scotland",
       "awayTeam": "Brazil",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Scotland",
         "espnTeam": "Scotland",
@@ -27708,7 +27708,7 @@
       "homeTeam": "Morocco",
       "awayTeam": "Haiti",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Morocco",
         "espnTeam": "Morocco",
@@ -28257,7 +28257,7 @@
       "homeTeam": "Czechia",
       "awayTeam": "Mexico",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Czechia",
         "espnTeam": "Czechia",
@@ -28796,7 +28796,7 @@
       "homeTeam": "South Africa",
       "awayTeam": "South Korea",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "South Africa",
         "espnTeam": "South Africa",
@@ -29325,7 +29325,7 @@
       "homeTeam": "Curaçao",
       "awayTeam": "Ivory Coast",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Curaçao",
         "espnTeam": "Curaçao",
@@ -29756,7 +29756,7 @@
           },
           {
             "name": "Christ Inao Oulaï",
-            "shortName": "C. Oulaï",
+            "shortName": "C. Inao Oulaï",
             "num": "26",
             "pos": "SUB",
             "position": "Substitute",
@@ -29874,7 +29874,7 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Germany",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Ecuador",
         "espnTeam": "Ecuador",
@@ -30403,7 +30403,7 @@
       "homeTeam": "Japan",
       "awayTeam": "Sweden",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Japan",
         "espnTeam": "Japan",
@@ -30942,7 +30942,7 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Netherlands",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Tunisia",
         "espnTeam": "Tunisia",
@@ -31471,7 +31471,7 @@
       "homeTeam": "Türkiye",
       "awayTeam": "United States",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Türkiye",
         "espnTeam": "Türkiye",
@@ -32010,7 +32010,7 @@
       "homeTeam": "Paraguay",
       "awayTeam": "Australia",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Paraguay",
         "espnTeam": "Paraguay",
@@ -32529,7 +32529,7 @@
       "homeTeam": "Norway",
       "awayTeam": "France",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Norway",
         "espnTeam": "Norway",
@@ -33078,7 +33078,7 @@
       "homeTeam": "Senegal",
       "awayTeam": "Iraq",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Senegal",
         "espnTeam": "Senegal",
@@ -33617,7 +33617,7 @@
       "homeTeam": "Cape Verde",
       "awayTeam": "Saudi Arabia",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Cape Verde",
         "espnTeam": "Cape Verde",
@@ -34146,7 +34146,7 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Uruguay",
         "espnTeam": "Uruguay",
@@ -34695,7 +34695,7 @@
       "homeTeam": "Egypt",
       "awayTeam": "Iran",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Egypt",
         "espnTeam": "Egypt",
@@ -35224,7 +35224,7 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "New Zealand",
         "espnTeam": "New Zealand",
@@ -35753,7 +35753,7 @@
       "homeTeam": "Panama",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Panama",
         "espnTeam": "Panama",
@@ -36292,7 +36292,7 @@
       "homeTeam": "Croatia",
       "awayTeam": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Croatia",
         "espnTeam": "Croatia",
@@ -36841,7 +36841,7 @@
       "homeTeam": "Colombia",
       "awayTeam": "Portugal",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Colombia",
         "espnTeam": "Colombia",
@@ -37390,7 +37390,7 @@
       "homeTeam": "DR Congo",
       "awayTeam": "Uzbekistan",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "DR Congo",
         "espnTeam": "Congo DR",
@@ -37939,7 +37939,7 @@
       "homeTeam": "Algeria",
       "awayTeam": "Austria",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Algeria",
         "espnTeam": "Algeria",
@@ -38478,7 +38478,7 @@
       "homeTeam": "Jordan",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Jordan",
         "espnTeam": "Jordan",
@@ -39027,7 +39027,7 @@
       "homeTeam": "South Africa",
       "awayTeam": "Canada",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "South Africa",
         "espnTeam": "South Africa",
@@ -39556,7 +39556,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Japan",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -40095,7 +40095,7 @@
       "homeTeam": "Germany",
       "awayTeam": "Paraguay",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Germany",
         "espnTeam": "Germany",
@@ -40624,7 +40624,7 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Netherlands",
         "espnTeam": "Netherlands",
@@ -41173,7 +41173,7 @@
       "homeTeam": "Ivory Coast",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-06-30T16:08:45.012Z",
+      "updatedAt": "2026-06-30T18:17:09.749Z",
       "home": {
         "team": "Ivory Coast",
         "espnTeam": "Ivory Coast",
@@ -41187,8 +41187,8 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Emmanuel Agbadou",
@@ -41197,8 +41197,8 @@
             "pos": "CD-L",
             "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Odilon Kossounou",
@@ -41207,8 +41207,8 @@
             "pos": "CD-R",
             "position": "Center Right Defender",
             "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ibrahim Sangaré",
@@ -41217,8 +41217,8 @@
             "pos": "DM",
             "position": "Defensive Midfielder",
             "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ghislain Konan",
@@ -41227,8 +41227,8 @@
             "pos": "LB",
             "position": "Left Back",
             "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Guela Doué",
@@ -41237,18 +41237,18 @@
             "pos": "RB",
             "position": "Right Back",
             "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Christ Inao Oulaï",
-            "shortName": "C. Oulaï",
+            "shortName": "C. Inao Oulaï",
             "num": "26",
             "pos": "CM-L",
             "position": "Center Left Midfielder",
             "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Franck Kessié",
@@ -41257,8 +41257,8 @@
             "pos": "CM-R",
             "position": "Center Right Midfielder",
             "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Yan Diomande",
@@ -41267,8 +41267,8 @@
             "pos": "LM",
             "position": "Left Midfielder",
             "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Nicolas Pépé",
@@ -41277,8 +41277,8 @@
             "pos": "RM",
             "position": "Right Midfielder",
             "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ange-Yoan Bonny",
@@ -41287,8 +41287,8 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -41299,8 +41299,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Alban Lafont",
@@ -41309,8 +41309,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Seko Fofana",
@@ -41319,8 +41319,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Mohamed Koné",
@@ -41329,8 +41329,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Evann Guessand",
@@ -41339,8 +41339,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Christopher Operi",
@@ -41349,8 +41349,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Evan Ndicka",
@@ -41359,8 +41359,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Bazoumana Touré",
@@ -41369,8 +41369,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ousmane Diomande",
@@ -41379,8 +41379,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Elye Wahi",
@@ -41389,8 +41389,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Oumar Diakité",
@@ -41399,8 +41399,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Wilfried Singo",
@@ -41409,8 +41409,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Parfait Guiagon",
@@ -41419,8 +41419,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Simon Adingra",
@@ -41429,8 +41429,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Amad Diallo",
@@ -41439,8 +41439,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       },
@@ -41457,8 +41457,8 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Torbjørn Heggem",
@@ -41467,8 +41467,8 @@
             "pos": "CD-L",
             "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Kristoffer Ajer",
@@ -41477,8 +41477,8 @@
             "pos": "CD-R",
             "position": "Center Right Defender",
             "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "David Møller Wolfe",
@@ -41487,8 +41487,8 @@
             "pos": "LB",
             "position": "Left Back",
             "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marcus Holmgren Pedersen",
@@ -41497,8 +41497,8 @@
             "pos": "RB",
             "position": "Right Back",
             "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Sander Berge",
@@ -41507,8 +41507,8 @@
             "pos": "CM",
             "position": "Center Midfielder",
             "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Patrick Berg",
@@ -41517,8 +41517,8 @@
             "pos": "LM",
             "position": "Left Midfielder",
             "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Martin Ødegaard",
@@ -41527,8 +41527,8 @@
             "pos": "RM",
             "position": "Right Midfielder",
             "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Erling Haaland",
@@ -41537,8 +41537,8 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Antonio Nusa",
@@ -41547,8 +41547,8 @@
             "pos": "LF",
             "position": "Left Forward",
             "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Alexander Sørloth",
@@ -41557,8 +41557,8 @@
             "pos": "RF",
             "position": "Right Forward",
             "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -41569,8 +41569,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Sander Tangvik",
@@ -41579,8 +41579,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jens Petter Hauge",
@@ -41589,8 +41589,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Oscar Bobb",
@@ -41599,8 +41599,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Fredrik Aursnes",
@@ -41609,8 +41609,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Leo Østigard",
@@ -41619,8 +41619,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Egil Selvik",
@@ -41629,8 +41629,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Fredrik André Bjørkan",
@@ -41639,8 +41639,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Morten Thorsby",
@@ -41649,8 +41649,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Andreas Schjelderup",
@@ -41659,8 +41659,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jørgen Strand Larsen",
@@ -41669,8 +41669,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Julian Ryerson",
@@ -41679,8 +41679,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Thelo Aasgaard",
@@ -41689,8 +41689,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Henrik Falchener",
@@ -41699,8 +41699,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Kristian Thorstvedt",
@@ -41709,8 +41709,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       }
