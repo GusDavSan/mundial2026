@@ -365,9 +365,58 @@ function eventOutcome(event, fixture) {
   const competitors = event.competitions?.[0]?.competitors || [];
   const home = competitors.find((c) => sameTeam(c.team?.displayName, fixture.home));
   const away = competitors.find((c) => sameTeam(c.team?.displayName, fixture.away));
-  const winner = home?.winner ? fixture.home : away?.winner ? fixture.away : "";
+  const score = scoreFromEvent(event, fixture);
+  const state = event.status?.type?.state || "";
+  let winner = home?.winner ? fixture.home : away?.winner ? fixture.away : "";
+  if (!winner && state === "post" && score.home !== null && score.away !== null && score.home !== score.away) {
+    winner = score.home > score.away ? fixture.home : fixture.away;
+  }
   const loser = winner ? (sameTeam(winner, fixture.home) ? fixture.away : fixture.home) : "";
-  return { winner, loser };
+  const homePen = shootoutNumber(home);
+  const awayPen = shootoutNumber(away);
+  const statusText = normalize([
+    event.status?.type?.detail,
+    event.status?.type?.shortDetail,
+    event.status?.type?.description,
+    event.status?.type?.name,
+    event.name,
+    event.shortName,
+    event.note
+  ].filter(Boolean).join(" "));
+  const tiedScore = score.home !== null && score.away !== null && score.home === score.away;
+  const decidedBy = (homePen !== null || awayPen !== null || statusText.includes("penalt") || statusText.includes("shootout") || (winner && tiedScore)) ? "penalties" : "";
+  return {
+    winner,
+    loser,
+    decidedBy,
+    penaltyWinner: decidedBy ? winner : "",
+    penaltyHomeScore: homePen,
+    penaltyAwayScore: awayPen
+  };
+}
+
+function firstFiniteNumber(...values) {
+  for (const value of values) {
+    const n = Number.parseInt(value, 10);
+    if (Number.isFinite(n)) return n;
+  }
+  return null;
+}
+
+function shootoutNumber(row) {
+  if (!row) return null;
+  return firstFiniteNumber(
+    row.shootoutScore,
+    row.penaltyScore,
+    row.penaltyShootoutScore,
+    row.shootout,
+    row.penalties,
+    row.penaltyKicks,
+    row.pkScore,
+    row.pks,
+    row.linescores?.penalties,
+    row.scoreBreakdown?.penalties
+  );
 }
 
 function statMap(stats = []) {
@@ -612,6 +661,8 @@ function statsFromSummary(summary, fixture, event) {
   }));
   const score = scoreFromEvent(event, fixture);
   const outcome = eventOutcome(event, fixture);
+  const statusState = event.status?.type?.state || "";
+  const statusName = event.status?.type?.name || event.status?.type?.description || "";
 
   return {
     matchId: fixture.id,
@@ -619,10 +670,17 @@ function statsFromSummary(summary, fixture, event) {
     date: fixture.date,
     homeTeam: fixture.home,
     awayTeam: fixture.away,
+    status: statusState === "in" ? "Live" : statusState === "post" ? "FT" : (statusName || "Scheduled"),
+    statusState,
+    completed: statusState === "post",
     homeScore: score.home,
     awayScore: score.away,
     winner: outcome.winner,
     loser: outcome.loser,
+    decidedBy: outcome.decidedBy,
+    penaltyWinner: outcome.penaltyWinner,
+    penaltyHomeScore: outcome.penaltyHomeScore,
+    penaltyAwayScore: outcome.penaltyAwayScore,
     source: "ESPN",
     updatedAt: NOW.toISOString(),
     stats,
