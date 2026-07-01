@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T19:14:07.135Z",
+  "updated": "2026-07-01T20:55:59.131Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -593,11 +593,11 @@
       "home": "England",
       "away": "Ghana",
       "source": "DAZN ES",
-      "title": "Croacia-Ghana (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=hRDHF1UvaOM",
-      "thumbnail": "https://i.ytimg.com/vi/hRDHF1UvaOM/hqdefault.jpg",
-      "videoId": "hRDHF1UvaOM",
-      "publishedAt": "2026-06-28T02:25:26Z",
+      "title": "Inglaterra vs RD Congo (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=eUr1MXzPjDk",
+      "thumbnail": "https://i.ytimg.com/vi/eUr1MXzPjDk/hqdefault.jpg",
+      "videoId": "eUr1MXzPjDk",
+      "publishedAt": "2026-07-01T20:00:36Z",
       "confidence": 12
     },
     {
@@ -905,11 +905,11 @@
       "home": "DR Congo",
       "away": "Uzbekistan",
       "source": "DAZN ES",
-      "title": "Congo vs Uzbekistán (3-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=BMjUiPtLkTo",
-      "thumbnail": "https://i.ytimg.com/vi/BMjUiPtLkTo/hqdefault.jpg",
-      "videoId": "BMjUiPtLkTo",
-      "publishedAt": "2026-06-28T03:30:39Z",
+      "title": "Inglaterra vs RD Congo (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=eUr1MXzPjDk",
+      "thumbnail": "https://i.ytimg.com/vi/eUr1MXzPjDk/hqdefault.jpg",
+      "videoId": "eUr1MXzPjDk",
+      "publishedAt": "2026-07-01T20:00:36Z",
       "confidence": 14
     },
     {
@@ -1035,11 +1035,24 @@
       "home": "England",
       "away": "DR Congo",
       "source": "DAZN ES",
-      "title": "LA REPÚBLICA DEMOCRÁTICA DEL CONGO NO VINO DE PASEO 🇨🇩Cipenga pone en alerta a Inglaterra... 😱",
-      "url": "https://www.youtube.com/watch?v=HIjRM3AJcQQ",
-      "thumbnail": "https://i.ytimg.com/vi/HIjRM3AJcQQ/hqdefault.jpg",
-      "videoId": "HIjRM3AJcQQ",
-      "publishedAt": "2026-07-01T16:20:21Z",
+      "title": "Inglaterra vs RD Congo (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=eUr1MXzPjDk",
+      "thumbnail": "https://i.ytimg.com/vi/eUr1MXzPjDk/hqdefault.jpg",
+      "videoId": "eUr1MXzPjDk",
+      "publishedAt": "2026-07-01T20:00:36Z",
+      "confidence": 20
+    },
+    {
+      "matchId": 81,
+      "date": "2026-07-01",
+      "home": "Belgium",
+      "away": "Senegal",
+      "source": "DAZN ES",
+      "title": "RUGE SENEGAL 🦁🇸🇳 El palo eligió aliarse contra Bélgica 💥",
+      "url": "https://www.youtube.com/watch?v=NUaL9nplzBQ",
+      "thumbnail": "https://i.ytimg.com/vi/NUaL9nplzBQ/hqdefault.jpg",
+      "videoId": "NUaL9nplzBQ",
+      "publishedAt": "2026-07-01T20:52:43Z",
       "confidence": 14
     }
   ]
