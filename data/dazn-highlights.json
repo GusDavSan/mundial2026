@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T22:41:53.141Z",
+  "updated": "2026-07-02T01:26:11.857Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -489,11 +489,11 @@
       "home": "Belgium",
       "away": "Iran",
       "source": "DAZN ES",
-      "title": "Egipto vs Irán  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=LWRgrssYd9k",
-      "thumbnail": "https://i.ytimg.com/vi/LWRgrssYd9k/hqdefault.jpg",
-      "videoId": "LWRgrssYd9k",
-      "publishedAt": "2026-06-27T07:09:37Z",
+      "title": "Bélgica vs Senegal (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=D-a1bgnzjtA",
+      "thumbnail": "https://i.ytimg.com/vi/D-a1bgnzjtA/hqdefault.jpg",
+      "videoId": "D-a1bgnzjtA",
+      "publishedAt": "2026-07-01T23:53:39Z",
       "confidence": 12
     },
     {
@@ -554,11 +554,11 @@
       "home": "Norway",
       "away": "Senegal",
       "source": "DAZN ES",
-      "title": "Costa de Marfil vs Noruega (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=FEBDwzAXSmk",
-      "thumbnail": "https://i.ytimg.com/vi/FEBDwzAXSmk/hqdefault.jpg",
-      "videoId": "FEBDwzAXSmk",
-      "publishedAt": "2026-06-30T21:29:14Z",
+      "title": "Bélgica vs Senegal (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=D-a1bgnzjtA",
+      "thumbnail": "https://i.ytimg.com/vi/D-a1bgnzjtA/hqdefault.jpg",
+      "videoId": "D-a1bgnzjtA",
+      "publishedAt": "2026-07-01T23:53:39Z",
       "confidence": 12
     },
     {
@@ -801,12 +801,12 @@
       "home": "Senegal",
       "away": "Iraq",
       "source": "DAZN ES",
-      "title": "Senegal vs Irak (5-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=9D3feSLguQI",
-      "thumbnail": "https://i.ytimg.com/vi/9D3feSLguQI/hqdefault.jpg",
-      "videoId": "9D3feSLguQI",
-      "publishedAt": "2026-06-26T22:58:30Z",
-      "confidence": 20
+      "title": "Bélgica vs Senegal (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=D-a1bgnzjtA",
+      "thumbnail": "https://i.ytimg.com/vi/D-a1bgnzjtA/hqdefault.jpg",
+      "videoId": "D-a1bgnzjtA",
+      "publishedAt": "2026-07-01T23:53:39Z",
+      "confidence": 12
     },
     {
       "matchId": 63,
@@ -853,12 +853,12 @@
       "home": "New Zealand",
       "away": "Belgium",
       "source": "DAZN ES",
-      "title": "Nueva Zelanda vs Bélgica (1-5) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=WskZten1ZPQ",
-      "thumbnail": "https://i.ytimg.com/vi/WskZten1ZPQ/hqdefault.jpg",
-      "videoId": "WskZten1ZPQ",
-      "publishedAt": "2026-06-27T07:01:21Z",
-      "confidence": 20
+      "title": "Bélgica vs Senegal (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=D-a1bgnzjtA",
+      "thumbnail": "https://i.ytimg.com/vi/D-a1bgnzjtA/hqdefault.jpg",
+      "videoId": "D-a1bgnzjtA",
+      "publishedAt": "2026-07-01T23:53:39Z",
+      "confidence": 12
     },
     {
       "matchId": 67,
@@ -1048,12 +1048,12 @@
       "home": "Belgium",
       "away": "Senegal",
       "source": "DAZN ES",
-      "title": "RUGE SENEGAL 🦁🇸🇳 El palo eligió aliarse contra Bélgica 💥",
-      "url": "https://www.youtube.com/watch?v=NUaL9nplzBQ",
-      "thumbnail": "https://i.ytimg.com/vi/NUaL9nplzBQ/hqdefault.jpg",
-      "videoId": "NUaL9nplzBQ",
-      "publishedAt": "2026-07-01T20:52:43Z",
-      "confidence": 14
+      "title": "Bélgica vs Senegal (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=D-a1bgnzjtA",
+      "thumbnail": "https://i.ytimg.com/vi/D-a1bgnzjtA/hqdefault.jpg",
+      "videoId": "D-a1bgnzjtA",
+      "publishedAt": "2026-07-01T23:53:39Z",
+      "confidence": 20
     }
   ]
 }
