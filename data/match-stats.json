@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T18:16:35.638Z",
+  "updated": "2026-07-02T19:56:53.964Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -7395,7 +7395,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7527,7 +7527,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7680,7 +7680,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7812,7 +7812,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7973,7 +7973,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8150,7 +8150,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8238,7 +8238,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8433,7 +8433,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8632,7 +8632,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8720,7 +8720,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -8835,7 +8835,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8958,7 +8958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9147,7 +9147,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9279,7 +9279,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-02T18:16:35.638Z",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11403,6 +11403,113 @@
           "savePct": 0,
           "penaltySaves": 0,
           "source": "ESPN roster"
+        }
+      ]
+    },
+    {
+      "matchId": 83,
+      "espnEventId": "760497",
+      "date": "2026-07-02",
+      "homeTeam": "Spain",
+      "awayTeam": "Austria",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 1,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-02T19:56:53.964Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 6,
+          "away": 0
+        },
+        "shots": {
+          "home": 11,
+          "away": 2
+        },
+        "possession": {
+          "home": 64,
+          "away": 36
+        },
+        "passes": {
+          "home": 308,
+          "away": 178
+        },
+        "fouls": {
+          "home": 4,
+          "away": 5
+        },
+        "corners": {
+          "home": 6,
+          "away": 0
+        },
+        "saves": {
+          "home": 0,
+          "away": 5
+        },
+        "offsides": {
+          "home": 1,
+          "away": 2
+        }
+      },
+      "goals": [
+        {
+          "id": "49676791",
+          "minute": "36",
+          "period": 1,
+          "team": "Spain",
+          "player": "Mikel Oyarzabal",
+          "assist": "Marc Cucurella",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Spain 1, Austria 0. Mikel Oyarzabal (Spain) left footed shot from the centre of the box to the centre of the goal. Assisted by Marc Cucurella with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49676791",
+          "minute": "36",
+          "period": 1,
+          "team": "Spain",
+          "player": "Marc Cucurella",
+          "goal": "Mikel Oyarzabal",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Spain",
+          "name": "Unai Simón",
+          "shortName": "U. Simón",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Austria",
+          "name": "Alexander Schlager",
+          "shortName": "A. Schlager",
+          "number": "1",
+          "saves": 5,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 83.3,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
         }
       ]
     }
