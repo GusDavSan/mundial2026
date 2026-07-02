@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T19:53:50.572Z",
+  "updated": "2026-07-02T21:33:41.145Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -619,12 +619,12 @@
       "home": "Colombia",
       "away": "DR Congo",
       "source": "DAZN ES",
-      "title": "Resumen en un minuto del Colombia vs Portugal 🎥#DAZNMundial #FIFAWorldCup",
-      "url": "https://www.youtube.com/watch?v=mu-t17uI6C0",
-      "thumbnail": "https://i.ytimg.com/vi/mu-t17uI6C0/hqdefault.jpg",
-      "videoId": "mu-t17uI6C0",
-      "publishedAt": "2026-06-28T01:53:12Z",
-      "confidence": 13
+      "title": "Inglaterra vs RD Congo (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=eUr1MXzPjDk",
+      "thumbnail": "https://i.ytimg.com/vi/eUr1MXzPjDk/hqdefault.jpg",
+      "videoId": "eUr1MXzPjDk",
+      "publishedAt": "2026-07-01T20:00:36Z",
+      "confidence": 12
     },
     {
       "matchId": 49,
@@ -866,12 +866,12 @@
       "home": "Panama",
       "away": "England",
       "source": "DAZN ES",
-      "title": "Panamá vs Inglaterra  (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=73pTiophywA",
-      "thumbnail": "https://i.ytimg.com/vi/73pTiophywA/hqdefault.jpg",
-      "videoId": "73pTiophywA",
-      "publishedAt": "2026-06-28T00:58:10Z",
-      "confidence": 20
+      "title": "Inglaterra vs RD Congo (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=eUr1MXzPjDk",
+      "thumbnail": "https://i.ytimg.com/vi/eUr1MXzPjDk/hqdefault.jpg",
+      "videoId": "eUr1MXzPjDk",
+      "publishedAt": "2026-07-01T20:00:36Z",
+      "confidence": 14
     },
     {
       "matchId": 68,
@@ -1067,6 +1067,19 @@
       "videoId": "Vfj6fARRuCY",
       "publishedAt": "2026-07-02T04:30:14Z",
       "confidence": 20
+    },
+    {
+      "matchId": 83,
+      "date": "2026-07-02",
+      "home": "Spain",
+      "away": "Austria",
+      "source": "DAZN ES",
+      "title": "ESPAÑA YA ESTÁ EN OCTAVOS TRAS VENCER A AUSTRIA #DAZNMundial #FIFAWorldCup",
+      "url": "https://www.youtube.com/watch?v=Nv65cXaWdZI",
+      "thumbnail": "https://i.ytimg.com/vi/Nv65cXaWdZI/hqdefault.jpg",
+      "videoId": "Nv65cXaWdZI",
+      "publishedAt": "2026-07-02T21:21:00Z",
+      "confidence": 16
     }
   ]
 }
