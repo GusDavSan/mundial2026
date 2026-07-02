@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T23:46:59.574Z",
+  "updated": "2026-07-02T01:52:49.756Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -7395,7 +7395,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -7527,7 +7527,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7680,7 +7680,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -7812,7 +7812,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -7973,7 +7973,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8150,7 +8150,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8238,7 +8238,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8433,7 +8433,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8632,7 +8632,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8720,7 +8720,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -8835,7 +8835,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8958,7 +8958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9147,7 +9147,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9279,7 +9279,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-01T23:46:59.574Z",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11286,6 +11286,123 @@
           "savePct": 50,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 82,
+      "espnEventId": "760494",
+      "date": "2026-07-02",
+      "homeTeam": "United States",
+      "awayTeam": "Bosnia & Herzegovina",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 2,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-02T01:52:49.756Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 3
+        },
+        "shots": {
+          "home": 7,
+          "away": 6
+        },
+        "possession": {
+          "home": 50.7,
+          "away": 49.3
+        },
+        "passes": {
+          "home": 369,
+          "away": 369
+        },
+        "fouls": {
+          "home": 5,
+          "away": 10
+        },
+        "corners": {
+          "home": 4,
+          "away": 3
+        },
+        "saves": {
+          "home": 3,
+          "away": 0
+        },
+        "offsides": {
+          "home": 2,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
+        },
+        "redCards": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49675351",
+          "minute": "45",
+          "period": 1,
+          "team": "United States",
+          "player": "Folarin Balogun",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! USA 1, Bosnia and Herzegovina 0. Folarin Balogun (USA) left footed shot from the centre of the box to the centre of the goal.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49675883",
+          "minute": "82",
+          "period": 2,
+          "team": "United States",
+          "player": "Malik Tillman",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! USA 2, Bosnia and Herzegovina 0. Malik Tillman (USA) from a free kick with a right footed shot to the top left corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "United States",
+          "name": "Matt Freese",
+          "shortName": "M. Freese",
+          "number": "24",
+          "saves": 3,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Bosnia & Herzegovina",
+          "name": "Nikola Vasilj",
+          "shortName": "N. Vasilj",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
