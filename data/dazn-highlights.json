@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T21:33:30.175Z",
+  "updated": "2026-07-03T23:19:44.536Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -515,11 +515,11 @@
       "home": "New Zealand",
       "away": "Egypt",
       "source": "DAZN ES",
-      "title": "Egipto vs Irán  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=LWRgrssYd9k",
-      "thumbnail": "https://i.ytimg.com/vi/LWRgrssYd9k/hqdefault.jpg",
-      "videoId": "LWRgrssYd9k",
-      "publishedAt": "2026-06-27T07:09:37Z",
+      "title": "Australia vs Egipto (1-1) (Penaltis 2-4) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=ADaQn2yTcss",
+      "thumbnail": "https://i2.ytimg.com/vi/ADaQn2yTcss/hqdefault.jpg",
+      "videoId": "ADaQn2yTcss",
+      "publishedAt": "2026-07-03T22:59:24+00:00",
       "confidence": 12
     },
     {
@@ -840,12 +840,12 @@
       "home": "Egypt",
       "away": "Iran",
       "source": "DAZN ES",
-      "title": "Egipto vs Irán  (1-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=LWRgrssYd9k",
-      "thumbnail": "https://i.ytimg.com/vi/LWRgrssYd9k/hqdefault.jpg",
-      "videoId": "LWRgrssYd9k",
-      "publishedAt": "2026-06-27T07:09:37Z",
-      "confidence": 20
+      "title": "Australia vs Egipto (1-1) (Penaltis 2-4) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=ADaQn2yTcss",
+      "thumbnail": "https://i2.ytimg.com/vi/ADaQn2yTcss/hqdefault.jpg",
+      "videoId": "ADaQn2yTcss",
+      "publishedAt": "2026-07-03T22:59:24+00:00",
+      "confidence": 12
     },
     {
       "matchId": 66,
@@ -1113,12 +1113,12 @@
       "home": "Australia",
       "away": "Egypt",
       "source": "DAZN ES",
-      "title": "EL FARAÓN SALAH SE APUNTA A OCTAVOS DE FINAL 🇪🇬Egipto elimina a Australia en la tanda de penaltis🔥",
-      "url": "https://www.youtube.com/watch?v=vATdEfjlDLo",
-      "thumbnail": "https://i.ytimg.com/vi/vATdEfjlDLo/hqdefault.jpg",
-      "videoId": "vATdEfjlDLo",
-      "publishedAt": "2026-07-03T21:03:18Z",
-      "confidence": 14
+      "title": "Australia vs Egipto (1-1) (Penaltis 2-4) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=ADaQn2yTcss",
+      "thumbnail": "https://i2.ytimg.com/vi/ADaQn2yTcss/hqdefault.jpg",
+      "videoId": "ADaQn2yTcss",
+      "publishedAt": "2026-07-03T22:59:24+00:00",
+      "confidence": 20
     }
   ]
 }
