@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T19:51:10.181Z",
+  "updated": "2026-07-03T21:33:30.175Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1106,6 +1106,19 @@
       "videoId": "G9rnLOcMyNc",
       "publishedAt": "2026-07-03T07:23:25+00:00",
       "confidence": 20
+    },
+    {
+      "matchId": 86,
+      "date": "2026-07-03",
+      "home": "Australia",
+      "away": "Egypt",
+      "source": "DAZN ES",
+      "title": "EL FARAÓN SALAH SE APUNTA A OCTAVOS DE FINAL 🇪🇬Egipto elimina a Australia en la tanda de penaltis🔥",
+      "url": "https://www.youtube.com/watch?v=vATdEfjlDLo",
+      "thumbnail": "https://i.ytimg.com/vi/vATdEfjlDLo/hqdefault.jpg",
+      "videoId": "vATdEfjlDLo",
+      "publishedAt": "2026-07-03T21:03:18Z",
+      "confidence": 14
     }
   ]
 }
