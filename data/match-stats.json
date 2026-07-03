@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T01:22:13.852Z",
+  "updated": "2026-07-03T05:32:32.976Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -8238,7 +8238,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -8433,7 +8433,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -8632,7 +8632,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -8720,7 +8720,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -8835,7 +8835,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8958,7 +8958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9147,7 +9147,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9279,7 +9279,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T01:22:13.852Z",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11588,12 +11588,12 @@
           "away": 13
         },
         "possession": {
-          "home": 60.5,
-          "away": 39.5
+          "home": 60.4,
+          "away": 39.6
         },
         "passes": {
-          "home": 584,
-          "away": 368
+          "home": 585,
+          "away": 370
         },
         "fouls": {
           "home": 6,
@@ -11685,6 +11685,129 @@
           "name": "Dominik Livakovic",
           "shortName": "D. Livakovic",
           "number": "1",
+          "saves": 2,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 85,
+      "espnEventId": "760498",
+      "date": "2026-07-03",
+      "homeTeam": "Switzerland",
+      "awayTeam": "Algeria",
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 0,
+      "winner": "Switzerland",
+      "loser": "Algeria",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-03T05:32:32.976Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 5,
+          "away": 2
+        },
+        "shots": {
+          "home": 11,
+          "away": 8
+        },
+        "possession": {
+          "home": 44.6,
+          "away": 55.4
+        },
+        "passes": {
+          "home": 437,
+          "away": 561
+        },
+        "fouls": {
+          "home": 10,
+          "away": 12
+        },
+        "corners": {
+          "home": 4,
+          "away": 2
+        },
+        "saves": {
+          "home": 2,
+          "away": 2
+        },
+        "offsides": {
+          "home": 0,
+          "away": 2
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 2
+        }
+      },
+      "goals": [
+        {
+          "id": "49682284",
+          "minute": "10",
+          "period": 1,
+          "team": "Switzerland",
+          "player": "Breel Embolo",
+          "assist": "Johan Manzambi",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Switzerland 1, Algeria 0. Breel Embolo (Switzerland) left footed shot from very close range to the bottom left corner. Assisted by Johan Manzambi following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49682927",
+          "minute": "46",
+          "period": 2,
+          "team": "Switzerland",
+          "player": "Dan Ndoye",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Switzerland 2, Algeria 0. Dan Ndoye (Switzerland) right footed shot from the centre of the box to the bottom left corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49682284",
+          "minute": "10",
+          "period": 1,
+          "team": "Switzerland",
+          "player": "Johan Manzambi",
+          "goal": "Breel Embolo",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Switzerland",
+          "name": "Gregor Kobel",
+          "shortName": "G. Kobel",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Algeria",
+          "name": "Luca Zidane",
+          "shortName": "L. Zidane",
+          "number": "23",
           "saves": 2,
           "goalsAgainst": 2,
           "cleanSheet": 0,
