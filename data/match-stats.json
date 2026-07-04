@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T05:26:18.146Z",
+  "updated": "2026-07-04T08:12:02.121Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9147,7 +9147,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9279,7 +9279,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "updatedAt": "2026-07-04T08:12:02.121Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
