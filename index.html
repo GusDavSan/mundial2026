@@ -1428,7 +1428,9 @@ function matchCard(m,overrides={}){
     <div class="es-block"><div class="es-time"><span class="es-val">${es.time}</span><span class="es-lbl">🇪🇸 ${t('spainTime')}</span></div>${om.timeNote?`<div class="es-note">${escHtml(om.timeNote)}</div>`:''}</div>
     <div style="text-align:right"><div class="utc-val">${om.time} UTC</div><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>
   </div>`:`<div class="mc-time" style="justify-content:flex-end"><div class="mc-venue">${om.venue||''}${om.city?', '+om.city:''}</div></div>`;
-  return`<div class="mc${live?' live':''}" onclick="openDetail(${om.id||0},'${om.date}','${om.detailHome||om.home}','${om.detailAway||om.away}')">
+  const detailHome=!isTbdTeamName(om.detailHome)?om.detailHome:om.home;
+  const detailAway=!isTbdTeamName(om.detailAway)?om.detailAway:om.away;
+  return`<div class="mc${live?' live':''}" onclick="openDetail(${om.id||0},'${escQ(om.date)}','${escQ(detailHome)}','${escQ(detailAway)}')">
     <div class="mc-meta"><span class="mc-round">${rndHtml}</span>${statusHtml}</div>
     <div class="mc-body">
       <div class="t-side">${hBadge}<span class="t-name">${om.home||'Por definir'}</span></div>
@@ -1578,6 +1580,7 @@ async function loadLive(){
   const todayFx=FIXTURES.filter(f=>fixtureLocalDateKey(f)===today);
   el.innerHTML=liveFallbackHtml(today,todayFx);
   rt.textContent=t('loadingShort');
+  await hydrateResultsFromStoredStats().catch(()=>{});
   let liveNow=[],upcoming=[],finished=[];
   // Merge ESPN rows with local fixtures for time/venue.
   const matchFx=m=>{
@@ -1603,9 +1606,12 @@ async function loadLive(){
     espnEvents.forEach(function(event){
       const teams=espnEventTeams(event);
       const fx=findFixtureForEspnTeams(teams);
-      if(!fx||fixtureLocalDateKey(fx)!==today||seenFx.has(fx.id))return;
+      if(!fx||seenFx.has(fx.id))return;
       const displayF=decorateCalendarFixture(fx);
       const patch=resultPatchFromEspnEvent(event,displayF);
+      const eventIsLive=patch.status==='Live';
+      const eventIsToday=fixtureLocalDateKey(fx)===today||fixtureLocalDateKey(displayF)===today;
+      if(!eventIsLive&&!eventIsToday)return;
       storeMatchResult(Object.assign({},fx,{home:displayF.home,away:displayF.away}),patch);
       const row={
         id:fx.id,date:patch.date||fx.date,time:patch.time||fx.time,home:displayF.home,away:displayF.away,group:fx.group,
@@ -1690,11 +1696,13 @@ async function loadLive(){
       const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
+      const cardHome=!isTbdTeamName(fx.home)?fx.home:homeName;
+      const cardAway=!isTbdTeamName(fx.away)?fx.away:awayName;
       return matchCard({
         id:e.idEvent||e.id,date:dt.date,time:dt.time,
-        home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
+        home:cardHome,away:cardAway,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
+        homeFlag:FLAGS[cardHome]||'🏳️',awayFlag:FLAGS[cardAway]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
         periodLabel:e.strPeriodLabel||e.periodLabel,
@@ -1711,11 +1719,13 @@ async function loadLive(){
       const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
+      const cardHome=!isTbdTeamName(fx.home)?fx.home:homeName;
+      const cardAway=!isTbdTeamName(fx.away)?fx.away:awayName;
       return matchCard({
         id:e.idEvent||e.id,date:dt.date,time:dt.time,
-        home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
+        home:cardHome,away:cardAway,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
+        homeFlag:FLAGS[cardHome]||'🏳️',awayFlag:FLAGS[cardAway]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
         winner:e.winner,loser:e.loser,decidedBy:e.decidedBy,penaltyWinner:e.penaltyWinner,penaltyHomeScore:e.penaltyHomeScore,penaltyAwayScore:e.penaltyAwayScore,
@@ -1731,11 +1741,13 @@ async function loadLive(){
       const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
+      const cardHome=!isTbdTeamName(fx.home)?fx.home:homeName;
+      const cardAway=!isTbdTeamName(fx.away)?fx.away:awayName;
       return matchCard({
         id:e.idEvent||e.id,date:dt.date,time:dt.time,
-        home:fx.home||homeName,away:fx.away||awayName,group:fx.group||e.strRound||e.group,
+        home:cardHome,away:cardAway,group:fx.group||e.strRound||e.group,
         venue:fx.venue||e.strVenue||'',city:fx.city||'',
-        homeFlag:FLAGS[fx.home||homeName]||'🏳️',awayFlag:FLAGS[fx.away||awayName]||'🏳️',
+        homeFlag:FLAGS[cardHome]||'🏳️',awayFlag:FLAGS[cardAway]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
         winner:e.winner,loser:e.loser,decidedBy:e.decidedBy,penaltyWinner:e.penaltyWinner,penaltyHomeScore:e.penaltyHomeScore,penaltyAwayScore:e.penaltyAwayScore
@@ -2247,7 +2259,7 @@ function renderRealBracketMatch(f){
       '<div class="real-score">'+(scoreReady?escHtml(bracketScoreValue(score)):'')+'</div>'+
     '</div>';
   };
-  return '<div class="real-match'+(live?' live':'')+'" onclick="openDetail('+(r.id||displayF.id||0)+',\''+escQ(resolved.date||displayF.date)+'\',\''+escQ(displayF.detailHome||displayF.home)+'\',\''+escQ(displayF.detailAway||displayF.away)+'\')">'+
+  return '<div class="real-match'+(live?' live':'')+'" onclick="openDetail('+(r.id||displayF.id||0)+',\''+escQ(resolved.date||displayF.date)+'\',\''+escQ(displayF.home)+'\',\''+escQ(displayF.away)+'\')">'+
     '<div class="real-match-head"><span class="real-match-id">'+fixtureLabel(f.id)+'</span>'+statusHtml+'</div>'+
     teamRow('home',displayF.home,displayF.homeFlag||'🏳️',r.homeScore)+
     teamRow('away',displayF.away,displayF.awayFlag||'🏳️',r.awayScore)+
@@ -3725,6 +3737,10 @@ function escHtml(s){
 }
 function stripText(s){
   return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+}
+function isTbdTeamName(name){
+  const txt=stripText(name);
+  return !txt||txt==='tbd'||txt==='por definir'||txt==='pendiente'||txt.includes('winner ')||txt.includes('ganador ')||txt.includes('perdedor ')||txt.includes('loser ');
 }
 function sameTeam(a,b){
   if(!a||!b)return false;
@@ -5309,6 +5325,48 @@ async function renderEspnOnlyDetail(fx,espnLive){
   html+='<div class="detail-body-grid"><div class="detail-main">'+statsHtml+timelineHtml+pendingHtml+'</div><aside class="detail-side">'+lineupHtml+'</aside></div>';
   return html+'</div>';
 }
+function resolvedFixtureForDetail(base){
+  if(!base)return null;
+  const d=decorateCalendarFixture(base);
+  return Object.assign({},base,d);
+}
+function fixtureFromStoredEspnId(eid){
+  const id=String(eid||'');
+  if(!id)return null;
+  const byResult=Object.keys(apiResultsByFixtureId||{}).find(function(fid){
+    const r=apiResultsByFixtureId[fid]||{};
+    return String(r.id||r.espnEventId||'')===id;
+  });
+  if(byResult){
+    return resolvedFixtureForDetail(FIXTURES.find(f=>String(f.id)===String(byResult)));
+  }
+  const byStored=(storedMatchStatsCache||[]).find(function(item){
+    return String(item.espnEventId||'')===id||String(item.matchId||'')===id;
+  });
+  if(byStored){
+    return resolvedFixtureForDetail(fixtureByStoredMatch(byStored)||FIXTURES.find(f=>Number(f.id)===Number(byStored.matchId)));
+  }
+  if(Number.isFinite(Number(id))){
+    const byFixture=FIXTURES.find(f=>Number(f.id)===Number(id));
+    if(byFixture)return resolvedFixtureForDetail(byFixture);
+  }
+  return null;
+}
+function findDetailFixture(eid,date,home,away){
+  const byId=fixtureFromStoredEspnId(eid);
+  if(byId&&!isTbdTeamName(byId.home)&&!isTbdTeamName(byId.away))return byId;
+  const candidates=FIXTURES.map(resolvedFixtureForDetail).filter(Boolean);
+  const named=candidates.filter(function(f){
+    return sameTeam(f.home,home)&&sameTeam(f.away,away);
+  });
+  if(named.length){
+    return named.find(function(f){return !date||String(f.date)===String(date)||fixtureLocalDateKey(f)===String(date);})||named[0];
+  }
+  if(byId)return byId;
+  return candidates.find(function(f){
+    return sameTeam(f.detailHome||f.home,home)&&sameTeam(f.detailAway||f.away,away)&&(!date||String(f.date)===String(date));
+  })||null;
+}
 async function openDetail(eid,date,home,away){
   const panel=document.getElementById('detailPanel');
   const inner=document.getElementById('detailInner');
@@ -5316,8 +5374,8 @@ async function openDetail(eid,date,home,away){
   panel.classList.add('open');close.style.display='flex';
   document.body.style.overflow='hidden';
   inner.innerHTML='<div class="loading" style="min-height:200px"><div class="spinner"></div><span class="loading-text">Cargando detalles...</span></div>';
-  const fxDetail=FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away)&&(!date||f.date===date))||
-    FIXTURES.find(f=>sameTeam(f.home,home)&&sameTeam(f.away,away));
+  await hydrateResultsFromStoredStats().catch(()=>{});
+  const fxDetail=findDetailFixture(eid,date,home,away);
   try{
     const espnLive=fxDetail?await loadEspnLiveData(fxDetail):null;
     if(espnLive&&fxDetail){
