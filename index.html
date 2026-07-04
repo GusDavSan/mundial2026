@@ -1584,6 +1584,8 @@ async function loadLive(){
   let liveNow=[],upcoming=[],finished=[];
   // Merge ESPN rows with local fixtures for time/venue.
   const matchFx=m=>{
+    const byId=m&&m.id!==undefined?FIXTURES.find(f=>Number(f.id)===Number(m.id)):null;
+    if(byId)return byId;
     const h=normName(String(m.strHomeTeam||m.home||m.homeTeam||'').trim()),a=normName(String(m.strAwayTeam||m.away||m.awayTeam||'').trim());
     return findFixtureForEspnTeams({home:h,away:a})||
       FIXTURES.find(f=>sameTeam(f.home,h)&&sameTeam(f.away,a))||
@@ -1604,25 +1606,24 @@ async function loadLive(){
     }
     markSeen(liveNow);markSeen(upcoming);markSeen(finished);
     espnEvents.forEach(function(event){
-      const teams=espnEventTeams(event);
-      const fx=findFixtureForEspnTeams(teams);
-      if(!fx||seenFx.has(fx.id))return;
-      const displayF=decorateCalendarFixture(fx);
+      const fx=findFixtureForEspnEvent(event);
+      const displayF=fx?displayFixtureForEspnEvent(fx,event):espnFixtureFromEvent(event);
       const patch=resultPatchFromEspnEvent(event,displayF);
+      if(fx&&seenFx.has(fx.id))return;
       const eventIsLive=patch.status==='Live';
-      const eventIsToday=fixtureLocalDateKey(fx)===today||fixtureLocalDateKey(displayF)===today;
+      const eventIsToday=fixtureLocalDateKey(displayF)===today||String(displayF.date)===today;
       if(!eventIsLive&&!eventIsToday)return;
-      storeMatchResult(Object.assign({},fx,{home:displayF.home,away:displayF.away}),patch);
+      if(fx)storeMatchResult(Object.assign({},fx,{home:displayF.home,away:displayF.away}),patch);
       const row={
-        id:fx.id,date:patch.date||fx.date,time:patch.time||fx.time,home:displayF.home,away:displayF.away,group:fx.group,
-        venue:fx.venue,city:fx.city,homeFlag:displayF.homeFlag,awayFlag:displayF.awayFlag,
+        id:fx&&fx.id||event.id,date:patch.date||displayF.date,time:patch.time||displayF.time,home:displayF.home,away:displayF.away,group:displayF.group,
+        venue:displayF.venue,city:displayF.city,homeFlag:displayF.homeFlag,awayFlag:displayF.awayFlag,
         status:patch.status,homeScore:patch.homeScore,awayScore:patch.awayScore,progress:patch.progress,periodLabel:patch.periodLabel,
         winner:patch.winner,loser:patch.loser,decidedBy:patch.decidedBy,penaltyWinner:patch.penaltyWinner,penaltyHomeScore:patch.penaltyHomeScore,penaltyAwayScore:patch.penaltyAwayScore
       };
       if(patch.status==='Live')liveNow.push(row);
       else if(patch.status==='FT')finished.push(row);
       else upcoming.push(row);
-      seenFx.add(fx.id);
+      if(fx)seenFx.add(fx.id);
     });
   }catch(e){console.warn('ESPN live load failed',e);}
   if(liveNow.length){
@@ -1696,12 +1697,12 @@ async function loadLive(){
       const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
-      const cardHome=!isTbdTeamName(fx.home)?fx.home:homeName;
-      const cardAway=!isTbdTeamName(fx.away)?fx.away:awayName;
+      const cardHome=!isTbdTeamName(homeName)?homeName:(!isTbdTeamName(fx.home)?fx.home:homeName);
+      const cardAway=!isTbdTeamName(awayName)?awayName:(!isTbdTeamName(fx.away)?fx.away:awayName);
       return matchCard({
         id:e.idEvent||e.id,date:dt.date,time:dt.time,
         home:cardHome,away:cardAway,group:fx.group||e.strRound||e.group,
-        venue:fx.venue||e.strVenue||'',city:fx.city||'',
+        venue:e.venue||fx.venue||e.strVenue||'',city:e.city||fx.city||'',
         homeFlag:FLAGS[cardHome]||'🏳️',awayFlag:FLAGS[cardAway]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
@@ -1719,12 +1720,12 @@ async function loadLive(){
       const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
-      const cardHome=!isTbdTeamName(fx.home)?fx.home:homeName;
-      const cardAway=!isTbdTeamName(fx.away)?fx.away:awayName;
+      const cardHome=!isTbdTeamName(homeName)?homeName:(!isTbdTeamName(fx.home)?fx.home:homeName);
+      const cardAway=!isTbdTeamName(awayName)?awayName:(!isTbdTeamName(fx.away)?fx.away:awayName);
       return matchCard({
         id:e.idEvent||e.id,date:dt.date,time:dt.time,
         home:cardHome,away:cardAway,group:fx.group||e.strRound||e.group,
-        venue:fx.venue||e.strVenue||'',city:fx.city||'',
+        venue:e.venue||fx.venue||e.strVenue||'',city:e.city||fx.city||'',
         homeFlag:FLAGS[cardHome]||'🏳️',awayFlag:FLAGS[cardAway]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
@@ -1741,12 +1742,12 @@ async function loadLive(){
       const dt=cardDateTimeFromData(e,fx,today);
       const homeName=e.home||normName(e.strHomeTeam)||e.strHomeTeam;
       const awayName=e.away||normName(e.strAwayTeam)||e.strAwayTeam;
-      const cardHome=!isTbdTeamName(fx.home)?fx.home:homeName;
-      const cardAway=!isTbdTeamName(fx.away)?fx.away:awayName;
+      const cardHome=!isTbdTeamName(homeName)?homeName:(!isTbdTeamName(fx.home)?fx.home:homeName);
+      const cardAway=!isTbdTeamName(awayName)?awayName:(!isTbdTeamName(fx.away)?fx.away:awayName);
       return matchCard({
         id:e.idEvent||e.id,date:dt.date,time:dt.time,
         home:cardHome,away:cardAway,group:fx.group||e.strRound||e.group,
-        venue:fx.venue||e.strVenue||'',city:fx.city||'',
+        venue:e.venue||fx.venue||e.strVenue||'',city:e.city||fx.city||'',
         homeFlag:FLAGS[cardHome]||'🏳️',awayFlag:FLAGS[cardAway]||'🏳️',
         strHomeTeamBadge:e.strHomeTeamBadge,strAwayTeamBadge:e.strAwayTeamBadge,
         status:e.strStatus||e.status,homeScore:e.intHomeScore??e.homeScore,awayScore:e.intAwayScore??e.awayScore,progress:e.strProgress||e.progress,
@@ -1860,6 +1861,43 @@ function findFixtureForEspnTeams(teams){
     return sameEspnTeam(d.home,teams.away)&&sameEspnTeam(d.away,teams.home);
   })||null;
 }
+function fixtureUtcMs(f){
+  if(!f||!f.date||!f.time)return NaN;
+  return new Date(f.date+'T'+String(f.time).replace(/\+.*/,'')+':00Z').getTime();
+}
+function eventUtcMs(event){
+  const ms=event&&event.date?new Date(event.date).getTime():NaN;
+  return Number.isFinite(ms)?ms:NaN;
+}
+function findFixtureForEspnEvent(event){
+  const teams=espnEventTeams(event);
+  const byTeams=findFixtureForEspnTeams(teams);
+  if(byTeams)return byTeams;
+  const ms=eventUtcMs(event);
+  if(!Number.isFinite(ms))return null;
+  const candidates=FIXTURES.filter(function(f){return isKnockoutRound(f.group)||String(f.group||'').startsWith('Group');})
+    .map(function(f){return {f,delta:Math.abs(fixtureUtcMs(f)-ms)};})
+    .filter(function(x){return Number.isFinite(x.delta);})
+    .sort(function(a,b){return a.delta-b.delta;});
+  return candidates.length&&candidates[0].delta<=1000*60*120?candidates[0].f:null;
+}
+function displayFixtureForEspnEvent(fx,event){
+  const displayF=decorateCalendarFixture(fx);
+  const teams=espnEventTeams(event);
+  const home=teams.home?normName(teams.home):displayF.home;
+  const away=teams.away?normName(teams.away):displayF.away;
+  if(!teams.home&&!teams.away)return displayF;
+  const shouldUseEspn=isTbdTeamName(displayF.home)||isTbdTeamName(displayF.away)||
+    !sameEspnTeam(displayF.home,home)||!sameEspnTeam(displayF.away,away);
+  if(!shouldUseEspn)return displayF;
+  return Object.assign({},displayF,{
+    home,away,
+    homeFlag:FLAGS[home]||displayF.homeFlag||'🏳️',
+    awayFlag:FLAGS[away]||displayF.awayFlag||'🏳️',
+    detailHome:home,
+    detailAway:away
+  });
+}
 function isKnockoutRound(round){
   return ['Ronda de 32','Octavos','Cuartos','Semifinal','Tercer Puesto','FINAL'].includes(round);
 }
@@ -1888,10 +1926,9 @@ async function refreshCalendarLiveResults(){
       return true;
     });
     events.forEach(function(event){
-      const teams=espnEventTeams(event);
-      const fx=findFixtureForEspnTeams(teams);
+      const fx=findFixtureForEspnEvent(event);
       if(!fx)return;
-      const displayF=decorateCalendarFixture(fx);
+      const displayF=displayFixtureForEspnEvent(fx,event);
       const patch=resultPatchFromEspnEvent(event,displayF);
       storeMatchResult(Object.assign({},fx,{home:displayF.home,away:displayF.away}),patch);
     });
@@ -4885,6 +4922,42 @@ function espnEventTeams(event){
     away:(competitors.find(c=>c.homeAway==='away')||{}).team&&competitors.find(c=>c.homeAway==='away').team.displayName
   };
 }
+function espnRoundLabel(event){
+  const comp=event&&event.competitions&&event.competitions[0]||{};
+  const note=String(comp.altGameNote||event&&event.season&&event.season.slug||'').replace(/^FIFA World Cup,\s*/i,'').trim();
+  const txt=espnNorm(note);
+  if(txt.includes('round of 16')||txt.includes('rd of 16'))return 'Octavos';
+  if(txt.includes('round of 32'))return 'Ronda de 32';
+  if(txt.includes('quarter'))return 'Cuartos';
+  if(txt.includes('semi'))return 'Semifinal';
+  if(txt.includes('3rd')||txt.includes('third'))return 'Tercer Puesto';
+  if(txt.includes('final'))return 'FINAL';
+  return note||'ESPN';
+}
+function espnFixtureFromEvent(event){
+  const teams=espnEventTeams(event);
+  const kickoff=espnUtcKickoffParts(event);
+  const comp=event&&event.competitions&&event.competitions[0]||{};
+  const venue=comp.venue||event&&event.venue||{};
+  const address=venue.address||{};
+  const home=teams.home?normName(teams.home):'TBD';
+  const away=teams.away?normName(teams.away):'TBD';
+  return {
+    id:Number(event&&event.id)||0,
+    espnEventId:event&&event.id,
+    date:kickoff.date||String(event&&event.date||'').slice(0,10),
+    time:kickoff.time||'',
+    home,away,
+    group:espnRoundLabel(event),
+    venue:venue.fullName||venue.displayName||'',
+    city:[address.city,address.state||address.country].filter(Boolean).join(', '),
+    homeFlag:FLAGS[home]||'🏳️',
+    awayFlag:FLAGS[away]||'🏳️',
+    detailHome:home,
+    detailAway:away,
+    espnOnly:true
+  };
+}
 const espnScoreboardCache={};
 async function loadEspnScoreboard(dateStr){
   const key=espnDateKey(dateStr);
@@ -4915,10 +4988,24 @@ async function findEspnEventForFixture(fx){
     const teams=espnEventTeams(event);
     return sameEspnTeam(teams.home,fx.away)&&sameEspnTeam(teams.away,fx.home);
   }));
-  return matches.find(function(event){
+  const byName=matches.find(function(event){
     const iso=event&&event.date?String(event.date).slice(0,16):'';
     return iso.startsWith(fx.date+'T'+fx.time);
   })||matches[0]||null;
+  if(byName)return byName;
+  const target=fixtureUtcMs(fx);
+  if(!Number.isFinite(target))return null;
+  const byTime=events.map(function(event){return {event,delta:Math.abs(eventUtcMs(event)-target)};})
+    .filter(function(x){return Number.isFinite(x.delta);})
+    .sort(function(a,b){return a.delta-b.delta;});
+  return byTime.length&&byTime[0].delta<=1000*60*120?byTime[0].event:null;
+}
+async function findEspnEventById(eid,date){
+  const id=String(eid||'').replace(/^espn-/,'');
+  if(!id)return null;
+  const base=date||tzDateKey(new Date());
+  const events=await loadEspnScoreboardsAround(base);
+  return events.find(function(event){return String(event&&event.id)===id;})||null;
 }
 function espnStatMap(stats){
   const out={};
@@ -5244,6 +5331,23 @@ async function loadEspnLiveData(fx){
     return null;
   }
 }
+async function loadEspnLiveDataForEvent(event,fx){
+  try{
+    await loadLocalSquads();
+    if(!event||!event.id)return null;
+    const summary=await fetchJson(ESPN_BASE+'/summary?event='+encodeURIComponent(event.id),{},5000);
+    return {
+      event,summary,fetchedAt:new Date().toISOString(),
+      stats:espnStatsFromSummary(summary,fx,event),
+      lineup:espnLineupFromSummary(summary,fx,event),
+      timeline:espnTimelineFromSummary(summary),
+      highlights:espnHighlightsFromSummary(summary)
+    };
+  }catch(e){
+    console.warn('ESPN direct detail failed',e);
+    return null;
+  }
+}
 function espnLogo(event,team){
   const competitors=event&&event.competitions&&event.competitions[0]&&event.competitions[0].competitors||[];
   const row=competitors.find(c=>sameEspnTeam(c.team&&c.team.displayName,team));
@@ -5381,6 +5485,17 @@ async function openDetail(eid,date,home,away){
     if(espnLive&&fxDetail){
       inner.innerHTML=await renderEspnOnlyDetail(fxDetail,espnLive);
       return;
+    }
+    if(!fxDetail&&eid){
+      const event=await findEspnEventById(eid,date);
+      if(event){
+        const espnFx=espnFixtureFromEvent(event);
+        const direct=await loadEspnLiveDataForEvent(event,espnFx);
+        if(direct){
+          inner.innerHTML=await renderEspnOnlyDetail(espnFx,direct);
+          return;
+        }
+      }
     }
   }catch(e){console.warn('ESPN detail failed',e);}
   const fx=fxDetail;
