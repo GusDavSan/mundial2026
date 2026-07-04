@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T21:08:17.189Z",
+  "updated": "2026-07-04T22:15:04.899Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,31 +12255,31 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T21:08:17.189Z",
+      "updatedAt": "2026-07-04T22:15:04.899Z",
       "stats": {
         "shotsOnGoal": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "shots": {
-          "home": 0,
-          "away": 0
+          "home": 2,
+          "away": 6
         },
         "possession": {
-          "home": 25,
-          "away": 75
+          "home": 20.1,
+          "away": 79.9
         },
         "passes": {
-          "home": 1,
-          "away": 3
+          "home": 90,
+          "away": 343
         },
         "fouls": {
-          "home": 0,
-          "away": 0
+          "home": 5,
+          "away": 7
         },
         "corners": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 7
         },
         "saves": {
           "home": 0,
@@ -12288,6 +12288,10 @@
         "offsides": {
           "home": 0,
           "away": 0
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
         }
       },
       "goals": [],
