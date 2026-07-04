@@ -2988,9 +2988,21 @@ function renderStats(el,append){
     }
     return sorted.filter(function(row){return (row[key]||0)>=floor;});
   }
-  const topScorers=topDynamicWithTies(Object.values(scorers),15,'goals',1);
-  const topAssists=topDynamicWithTies(Object.values(assists),10,'ast',1);
-  const rankedKeepers=Object.values(keepers).map(finishKeeperRanking).sort(function(a,b){
+  const aliveTeamsForStats=aliveTournamentTeams(storedMatchStatsCache||[]);
+  const scorerDisplayMin=4;
+  const assistDisplayMin=3;
+  const visibleScorers=Object.values(scorers).filter(function(p){
+    return (p.goals||0)>=scorerDisplayMin;
+  });
+  const visibleAssists=Object.values(assists).filter(function(p){
+    return (p.ast||0)>=assistDisplayMin;
+  });
+  const visibleKeepers=Object.values(keepers).filter(function(p){
+    return isTeamAliveInTournament(p.team,aliveTeamsForStats);
+  });
+  const topScorers=topDynamicWithTies(visibleScorers,15,'goals',scorerDisplayMin);
+  const topAssists=topDynamicWithTies(visibleAssists,10,'ast',assistDisplayMin);
+  const rankedKeepers=visibleKeepers.map(finishKeeperRanking).sort(function(a,b){
     return b.score-a.score||b.cleanSheets-a.cleanSheets||b.savePct-a.savePct||b.saves-a.saves||a.goalsAgainst-b.goalsAgainst;
   });
   const keeperLimit=15;
