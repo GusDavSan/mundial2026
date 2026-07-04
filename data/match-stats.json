@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T22:15:04.899Z",
+  "updated": "2026-07-04T23:17:02.960Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12243,47 +12243,47 @@
       "date": "2026-07-05",
       "homeTeam": "Paraguay",
       "awayTeam": "France",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
       "homeScore": 0,
-      "awayScore": 0,
-      "winner": "",
-      "loser": "",
+      "awayScore": 1,
+      "winner": "France",
+      "loser": "Paraguay",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T22:15:04.899Z",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 5
         },
         "shots": {
-          "home": 2,
-          "away": 6
+          "home": 5,
+          "away": 15
         },
         "possession": {
-          "home": 20.1,
-          "away": 79.9
+          "home": 24,
+          "away": 76
         },
         "passes": {
-          "home": 90,
-          "away": 343
+          "home": 183,
+          "away": 568
         },
         "fouls": {
-          "home": 5,
-          "away": 7
+          "home": 13,
+          "away": 11
         },
         "corners": {
-          "home": 1,
-          "away": 7
+          "home": 2,
+          "away": 12
         },
         "saves": {
-          "home": 0,
-          "away": 0
+          "home": 4,
+          "away": 1
         },
         "offsides": {
           "home": 0,
@@ -12291,10 +12291,23 @@
         },
         "yellowCards": {
           "home": 0,
-          "away": 1
+          "away": 3
         }
       },
-      "goals": [],
+      "goals": [
+        {
+          "id": "49708338",
+          "minute": "70",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "assist": "",
+          "penalty": true,
+          "ownGoal": false,
+          "text": "Goal! Paraguay 0, France 1. Kylian Mbappé (France) converts the penalty with a right footed shot to the bottom right corner.",
+          "source": "ESPN"
+        }
+      ],
       "assists": [],
       "keepers": [
         {
@@ -12303,12 +12316,12 @@
           "name": "Orlando Gill",
           "shortName": "O. Gill",
           "number": "12",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 4,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 80,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -12316,12 +12329,165 @@
           "name": "Mike Maignan",
           "shortName": "M. Maignan",
           "number": "16",
-          "saves": 0,
+          "saves": 1,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 90,
+      "espnEventId": "760502",
+      "date": "2026-07-05",
+      "homeTeam": "Canada",
+      "awayTeam": "Morocco",
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 0,
+      "awayScore": 3,
+      "winner": "Morocco",
+      "loser": "Canada",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-04T23:17:02.960Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 3,
+          "away": 4
+        },
+        "shots": {
+          "home": 10,
+          "away": 5
+        },
+        "possession": {
+          "home": 44.7,
+          "away": 55.3
+        },
+        "passes": {
+          "home": 359,
+          "away": 473
+        },
+        "fouls": {
+          "home": 24,
+          "away": 14
+        },
+        "corners": {
+          "home": 11,
+          "away": 1
+        },
+        "saves": {
+          "home": 1,
+          "away": 3
+        },
+        "offsides": {
+          "home": 2,
+          "away": 3
+        },
+        "yellowCards": {
+          "home": 4,
+          "away": 4
+        }
+      },
+      "goals": [
+        {
+          "id": "49702398",
+          "minute": "50",
+          "period": 2,
+          "team": "Morocco",
+          "player": "Azzedine Ounahi",
+          "assist": "Achraf Hakimi",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Canada 0, Morocco 1. Azzedine Ounahi (Morocco) right footed shot from outside the box to the bottom right corner. Assisted by Achraf Hakimi following a set piece situation.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49702813",
+          "minute": "82",
+          "period": 2,
+          "team": "Morocco",
+          "player": "Azzedine Ounahi",
+          "assist": "Brahim Díaz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Canada 0, Morocco 2. Azzedine Ounahi (Morocco) right footed shot from the centre of the box to the top right corner. Assisted by Brahim Díaz following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49703081",
+          "minute": "90'+8",
+          "period": 2,
+          "team": "Morocco",
+          "player": "Soufiane Rahimi",
+          "assist": "Brahim Díaz",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Canada 0, Morocco 3. Soufiane Rahimi (Morocco) left footed shot from the centre of the box to the bottom right corner. Assisted by Brahim Díaz following a fast break.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49702398",
+          "minute": "50",
+          "period": 2,
+          "team": "Morocco",
+          "player": "Achraf Hakimi",
+          "goal": "Azzedine Ounahi",
+          "source": "ESPN"
+        },
+        {
+          "id": "49702813",
+          "minute": "82",
+          "period": 2,
+          "team": "Morocco",
+          "player": "Brahim Díaz",
+          "goal": "Azzedine Ounahi",
+          "source": "ESPN"
+        },
+        {
+          "id": "49703081",
+          "minute": "90'+8",
+          "period": 2,
+          "team": "Morocco",
+          "player": "Brahim Díaz",
+          "goal": "Soufiane Rahimi",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Canada",
+          "name": "Maxime Crépeau",
+          "shortName": "M. Crépeau",
+          "number": "16",
+          "saves": 1,
+          "goalsAgainst": 3,
+          "cleanSheet": 0,
+          "savePct": 25,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Morocco",
+          "name": "Yassine Bounou",
+          "shortName": "Y. Bounou",
+          "number": "1",
+          "saves": 3,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
         }
       ]
     }
