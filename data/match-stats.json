@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T01:22:09.869Z",
+  "updated": "2026-07-04T05:26:18.146Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -9147,7 +9147,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9279,7 +9279,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-04T01:22:09.869Z",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11969,11 +11969,11 @@
           "away": 16
         },
         "possession": {
-          "home": 63.5,
-          "away": 36.5
+          "home": 63.6,
+          "away": 36.4
         },
         "passes": {
-          "home": 849,
+          "home": 850,
           "away": 476
         },
         "fouls": {
@@ -12121,6 +12121,117 @@
           "goalsAgainst": 3,
           "cleanSheet": 0,
           "savePct": 72.7,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 88,
+      "espnEventId": "760501",
+      "date": "2026-07-04",
+      "homeTeam": "Colombia",
+      "awayTeam": "Ghana",
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 0,
+      "winner": "Colombia",
+      "loser": "Ghana",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-04T05:26:18.146Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 8,
+          "away": 0
+        },
+        "shots": {
+          "home": 20,
+          "away": 8
+        },
+        "possession": {
+          "home": 60.7,
+          "away": 39.3
+        },
+        "passes": {
+          "home": 586,
+          "away": 376
+        },
+        "fouls": {
+          "home": 14,
+          "away": 10
+        },
+        "corners": {
+          "home": 3,
+          "away": 2
+        },
+        "saves": {
+          "home": 0,
+          "away": 7
+        },
+        "offsides": {
+          "home": 2,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 2,
+          "away": 3
+        }
+      },
+      "goals": [
+        {
+          "id": "49690543",
+          "minute": "14",
+          "period": 1,
+          "team": "Colombia",
+          "player": "Jhon Arias",
+          "assist": "Luis Suárez",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Colombia 1, Ghana 0. Jhon Arias (Colombia) right footed shot from the centre of the box to the bottom right corner. Assisted by Luis Suárez with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49690543",
+          "minute": "14",
+          "period": 1,
+          "team": "Colombia",
+          "player": "Luis Suárez",
+          "goal": "Jhon Arias",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Colombia",
+          "name": "Camilo Vargas",
+          "shortName": "C. Vargas",
+          "number": "12",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Ghana",
+          "name": "Lawrence Ati Zigi",
+          "shortName": "L. Zigi",
+          "number": "1",
+          "saves": 7,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 87.5,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
