@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T23:47:31.701Z",
+  "updated": "2026-07-04T01:22:09.869Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -8835,7 +8835,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -8958,7 +8958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9147,7 +9147,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -9279,7 +9279,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9432,7 +9432,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -9520,7 +9520,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -9676,7 +9676,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -9883,7 +9883,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10030,7 +10030,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -10131,7 +10131,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -10275,7 +10275,7 @@
       "penaltyHomeScore": 3,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 6,
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11946,54 +11946,54 @@
       "date": "2026-07-03",
       "homeTeam": "Argentina",
       "awayTeam": "Cape Verde",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
-      "homeScore": 1,
-      "awayScore": 1,
-      "winner": "",
-      "loser": "",
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 3,
+      "awayScore": 2,
+      "winner": "Argentina",
+      "loser": "Cape Verde",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-03T23:47:31.701Z",
+      "updatedAt": "2026-07-04T01:22:09.869Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 5,
-          "away": 2
+          "home": 10,
+          "away": 5
         },
         "shots": {
-          "home": 10,
-          "away": 6
+          "home": 22,
+          "away": 16
         },
         "possession": {
-          "home": 66.5,
-          "away": 33.5
+          "home": 63.5,
+          "away": 36.5
         },
         "passes": {
-          "home": 629,
-          "away": 310
+          "home": 849,
+          "away": 476
         },
         "fouls": {
-          "home": 10,
-          "away": 8
+          "home": 13,
+          "away": 12
         },
         "corners": {
-          "home": 4,
-          "away": 2
+          "home": 8,
+          "away": 8
         },
         "saves": {
-          "home": 1,
-          "away": 4
+          "home": 3,
+          "away": 8
         },
         "offsides": {
-          "home": 2,
-          "away": 0
+          "home": 3,
+          "away": 2
         },
         "yellowCards": {
-          "home": 0,
+          "home": 1,
           "away": 1
         }
       },
@@ -12021,6 +12021,42 @@
           "ownGoal": false,
           "text": "Goal! Argentina 1, Cabo Verde 1. Deroy Duarte (Cabo Verde) right footed shot from a difficult angle on the right to the bottom left corner. Assisted by Ryan Mendes.",
           "source": "ESPN"
+        },
+        {
+          "id": "49688681",
+          "minute": "92",
+          "period": 3,
+          "team": "Argentina",
+          "player": "Lisandro Martínez",
+          "assist": "Alexis Mac Allister",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Argentina 2, Cabo Verde 1. Lisandro Martínez (Argentina) left footed shot from the right side of the box to the top right corner. Assisted by Alexis Mac Allister with a headed pass following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49688979",
+          "minute": "103",
+          "period": 3,
+          "team": "Cape Verde",
+          "player": "Sidny Lopes Cabral",
+          "assist": "Yannick Semedo",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Argentina 2, Cabo Verde 2. Sidny Cabral (Cabo Verde) right footed shot from the left side of the box to the top right corner. Assisted by Yannick Semedo.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49689366",
+          "minute": "111",
+          "period": 4,
+          "team": "Argentina",
+          "player": "Diney Borges",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": true,
+          "text": "Own Goal by Diney Borges, Cabo Verde. Argentina 3, Cabo Verde 2.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -12041,6 +12077,24 @@
           "player": "Ryan Mendes",
           "goal": "Deroy Duarte",
           "source": "ESPN"
+        },
+        {
+          "id": "49688681",
+          "minute": "92",
+          "period": 3,
+          "team": "Argentina",
+          "player": "Alexis Mac Allister",
+          "goal": "Lisandro Martínez",
+          "source": "ESPN"
+        },
+        {
+          "id": "49688979",
+          "minute": "103",
+          "period": 3,
+          "team": "Cape Verde",
+          "player": "Yannick Semedo",
+          "goal": "Sidny Lopes Cabral",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -12050,10 +12104,10 @@
           "name": "Emiliano Martínez",
           "shortName": "E. Martínez",
           "number": "23",
-          "saves": 1,
-          "goalsAgainst": 1,
+          "saves": 3,
+          "goalsAgainst": 2,
           "cleanSheet": 0,
-          "savePct": 50,
+          "savePct": 60,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -12063,10 +12117,10 @@
           "name": "Vozinha",
           "shortName": "Vozinha",
           "number": "1",
-          "saves": 4,
-          "goalsAgainst": 1,
+          "saves": 8,
+          "goalsAgainst": 3,
           "cleanSheet": 0,
-          "savePct": 80,
+          "savePct": 72.7,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
