@@ -1615,7 +1615,7 @@ async function loadLive(){
       if(!eventIsLive&&!eventIsToday)return;
       if(fx)storeMatchResult(Object.assign({},fx,{home:displayF.home,away:displayF.away}),patch);
       const row={
-        id:fx&&fx.id||event.id,date:patch.date||displayF.date,time:patch.time||displayF.time,home:displayF.home,away:displayF.away,group:displayF.group,
+        id:event.id||fx&&fx.id,espnEventId:event.id,date:patch.date||displayF.date,time:patch.time||displayF.time,home:displayF.home,away:displayF.away,group:displayF.group,
         venue:displayF.venue,city:displayF.city,homeFlag:displayF.homeFlag,awayFlag:displayF.awayFlag,
         status:patch.status,homeScore:patch.homeScore,awayScore:patch.awayScore,progress:patch.progress,periodLabel:patch.periodLabel,
         winner:patch.winner,loser:patch.loser,decidedBy:patch.decidedBy,penaltyWinner:patch.penaltyWinner,penaltyHomeScore:patch.penaltyHomeScore,penaltyAwayScore:patch.penaltyAwayScore
@@ -1629,20 +1629,30 @@ async function loadLive(){
   if(liveNow.length){
     await Promise.all(liveNow.map(async function(e){
       const fx=matchFx(e);
-      if(!fx)return;
       try{
-        const espnLive=await loadEspnLiveData(fx);
+        const rowFx=Object.assign({},fx||{},{
+          id:fx&&fx.id||e.id,
+          date:e.dateEvent||e.date||(fx&&fx.date)||today,
+          time:e.strTime||e.time||(fx&&fx.time)||'',
+          home:e.home||e.strHomeTeam||(fx&&fx.home)||'',
+          away:e.away||e.strAwayTeam||(fx&&fx.away)||'',
+          group:e.group||e.strRound||(fx&&fx.group)||'',
+          venue:e.venue||e.strVenue||(fx&&fx.venue)||'',
+          city:e.city||(fx&&fx.city)||''
+        });
+        const event=e.espnEventId?await findEspnEventById(e.espnEventId,rowFx.date).catch(()=>null):null;
+        const espnLive=event?await loadEspnLiveDataForEvent(event,rowFx):fx?await loadEspnLiveData(fx):null;
         if(!espnLive)return;
-        const insight=buildLiveInsight(fx,espnLive);
+        const insight=buildLiveInsight(rowFx,espnLive);
         if(insight)e.liveInsight=insight;
-        const score=espnScore(espnLive.event,fx);
+        const score=espnScore(espnLive.event,rowFx);
         if(score.home!==null&&score.away!==null){
           e.homeScore=score.home;e.awayScore=score.away;
           e.intHomeScore=score.home;e.intAwayScore=score.away;
         }
         const st=espnEventStatus(espnLive.event);
         const state=st&&st.type&&st.type.state;
-        const outcomePatch=resultPatchFromEspnEvent(espnLive.event,Object.assign({},fx,{home:e.home||fx.home,away:e.away||fx.away}));
+        const outcomePatch=resultPatchFromEspnEvent(espnLive.event,rowFx);
         ['winner','loser','decidedBy','penaltyWinner','penaltyHomeScore','penaltyAwayScore'].forEach(function(k){if(outcomePatch[k]!==undefined)e[k]=outcomePatch[k];});
         if(state==='in')e.status=e.strStatus='Live';
         else if(state==='post')e.status=e.strStatus='FT';
@@ -1651,7 +1661,7 @@ async function loadLive(){
         const kickoff=espnUtcKickoffParts(espnLive.event);
         if(kickoff.date){e.date=e.dateEvent=kickoff.date;}
         if(kickoff.time){e.time=e.strTime=kickoff.time;}
-        storeMatchResult(fx,{
+        if(fx)storeMatchResult(fx,{
           id:espnLive.event&&espnLive.event.id||e.idEvent||e.id,
           date:e.dateEvent||e.date,
           time:e.strTime||e.time,
