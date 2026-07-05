@@ -1441,8 +1441,22 @@ function matchCard(m,overrides={}){
 function matchResultKey(home,away){
   return normName(home||'')+'|'+normName(away||'');
 }
+function patchTeamsMatchFixture(fx,patch){
+  if(!fx||!patch)return true;
+  const h=patch.homeTeam||patch.home||patch.strHomeTeam||'';
+  const a=patch.awayTeam||patch.away||patch.strAwayTeam||'';
+  if(!h&&!a)return true;
+  const d=decorateCalendarFixture(fx);
+  if(!fixtureHasResolvedTeams(d))return false;
+  if(h&&a){
+    return (sameEspnTeam(d.home,h)&&sameEspnTeam(d.away,a))||
+      (sameEspnTeam(d.home,a)&&sameEspnTeam(d.away,h));
+  }
+  return !h||sameEspnTeam(d.home,h)||sameEspnTeam(d.away,h);
+}
 function storeMatchResult(fx,patch){
   if(!fx)return;
+  if(!patchTeamsMatchFixture(fx,patch))return;
   if(fx.id!==undefined){
     apiResultsByFixtureId[fx.id]=Object.assign({},apiResultsByFixtureId[fx.id]||{},patch||{});
   }
@@ -1543,6 +1557,8 @@ function resultPatchFromEspnEvent(event,fx){
     date:kickoff.date,
     time:kickoff.time,
     status:state==='in'?'Live':state==='post'?'FT':'Scheduled',
+    homeTeam:fx&&fx.home,
+    awayTeam:fx&&fx.away,
     homeScore:Number.isFinite(score.home)?score.home:(h&&h.score),
     awayScore:Number.isFinite(score.away)?score.away:(a&&a.score),
     progress:detail,
@@ -1917,6 +1933,28 @@ function eventUtcMs(event){
   const ms=event&&event.date?new Date(event.date).getTime():NaN;
   return Number.isFinite(ms)?ms:NaN;
 }
+function fixtureHasResolvedTeams(f){
+  if(!f)return false;
+  const d=decorateCalendarFixture(f);
+  return !!(d&&d.home&&d.away&&!isTbdTeamName(d.home)&&!isTbdTeamName(d.away));
+}
+function canTimeMatchEspnEventToFixture(event,f,ms){
+  if(!event||!f||!Number.isFinite(ms))return false;
+  const d=decorateCalendarFixture(f);
+  if(!fixtureHasResolvedTeams(d))return false;
+  const teams=espnEventTeams(event);
+  if(teams.home&&teams.away){
+    const sameOrder=sameEspnTeam(d.home,teams.home)&&sameEspnTeam(d.away,teams.away);
+    const swapped=sameEspnTeam(d.home,teams.away)&&sameEspnTeam(d.away,teams.home);
+    if(sameOrder||swapped)return true;
+    return false;
+  }
+  const st=espnEventStatus(event);
+  const state=st&&st.type&&st.type.state;
+  if(state!=='in')return false;
+  const delta=Math.abs(fixtureUtcMs(f)-ms);
+  return Number.isFinite(delta)&&delta<=1000*60*20&&fixtureLocalDateKey(d)===tzDateKey(new Date());
+}
 function findFixtureForEspnEvent(event){
   const teams=espnEventTeams(event);
   const byTeams=findFixtureForEspnTeams(teams);
@@ -1925,9 +1963,9 @@ function findFixtureForEspnEvent(event){
   if(!Number.isFinite(ms))return null;
   const candidates=FIXTURES.filter(function(f){return isKnockoutRound(f.group)||String(f.group||'').startsWith('Group');})
     .map(function(f){return {f,delta:Math.abs(fixtureUtcMs(f)-ms)};})
-    .filter(function(x){return Number.isFinite(x.delta);})
+    .filter(function(x){return Number.isFinite(x.delta)&&canTimeMatchEspnEventToFixture(event,x.f,ms);})
     .sort(function(a,b){return a.delta-b.delta;});
-  return candidates.length&&candidates[0].delta<=1000*60*120?candidates[0].f:null;
+  return candidates.length?candidates[0].f:null;
 }
 function displayFixtureForEspnEvent(fx,event){
   const displayF=decorateCalendarFixture(fx);
@@ -5056,9 +5094,9 @@ async function findEspnEventForFixture(fx){
   const target=fixtureUtcMs(fx);
   if(!Number.isFinite(target))return null;
   const byTime=events.map(function(event){return {event,delta:Math.abs(eventUtcMs(event)-target)};})
-    .filter(function(x){return Number.isFinite(x.delta);})
+    .filter(function(x){return Number.isFinite(x.delta)&&canTimeMatchEspnEventToFixture(x.event,fx,eventUtcMs(x.event));})
     .sort(function(a,b){return a.delta-b.delta;});
-  return byTime.length&&byTime[0].delta<=1000*60*120?byTime[0].event:null;
+  return byTime.length?byTime[0].event:null;
 }
 async function findEspnEventById(eid,date){
   const id=String(eid||'').replace(/^espn-/,'');
