@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T18:20:25.403Z",
+  "updated": "2026-07-05T19:49:44.931Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1145,6 +1145,19 @@
       "videoId": "HUwwcW8XM3k",
       "publishedAt": "2026-07-04T06:13:44Z",
       "confidence": 20
+    },
+    {
+      "matchId": 89,
+      "date": "2026-07-05",
+      "home": "Paraguay",
+      "away": "France",
+      "source": "DAZN ES",
+      "title": "Paraguay vs Francia (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=jSK-abupr24",
+      "thumbnail": "https://i.ytimg.com/vi/jSK-abupr24/hqdefault.jpg",
+      "videoId": "jSK-abupr24",
+      "publishedAt": "2026-07-05T01:00:38Z",
+      "confidence": 14
     }
   ]
 }
