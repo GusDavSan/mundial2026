@@ -1694,6 +1694,18 @@ async function loadLive(){
     else pushUniqueMatch(upcoming,e);
   });
   liveNow=stillLive;
+  const seenTodayFixtureIds=new Set();
+  [liveNow,upcoming,finished].forEach(function(list){
+    (list||[]).forEach(function(row){
+      const fx=matchFx(row);
+      if(fx&&fx.id!==undefined)seenTodayFixtureIds.add(Number(fx.id));
+    });
+  });
+  todayFx.forEach(function(f){
+    if(seenTodayFixtureIds.has(Number(f.id))||isPast(f.date,f.time))return;
+    upcoming.push(Object.assign({},f,{timeNote:upcomingDawnNote(f.date,f.time)}));
+    seenTodayFixtureIds.add(Number(f.id));
+  });
   const cardTimeMs=function(e){
     return cardTimeMsFromData(e,matchFx(e)||{},today);
   };
