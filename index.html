@@ -1560,15 +1560,31 @@ function resultPatchFromEspnEvent(event,fx){
 // TAB: EN VIVO
 // ══════════════════════════════════════════════
 let liveTimer=null,liveCountdown=60;
+function liveUpcomingRowFromFixture(f){
+  if(!f)return null;
+  const displayF=decorateCalendarFixture(f);
+  const r=calendarResultForFixture(f,displayF);
+  const status=r.status||'';
+  const resolved=cardDateTimeFromData(r,displayF,displayF.date);
+  if(isLive(status)||isFin(status)||isPast(resolved.date,resolved.time))return null;
+  return Object.assign({},displayF,{
+    date:resolved.date,time:resolved.time,status,
+    homeScore:r.homeScore,awayScore:r.awayScore,id:r.id||displayF.id,
+    progress:r.progress,periodLabel:r.periodLabel,liveInsight:r.liveInsight,
+    winner:r.winner,loser:r.loser,decidedBy:r.decidedBy,penaltyWinner:r.penaltyWinner,penaltyHomeScore:r.penaltyHomeScore,penaltyAwayScore:r.penaltyAwayScore,
+    timeNote:upcomingDawnNote(resolved.date,resolved.time)
+  });
+}
 function liveFallbackHtml(today,todayFx){
-  if(todayFx.length>0){
+  const todayRows=todayFx.map(liveUpcomingRowFromFixture).filter(Boolean);
+  if(todayRows.length>0){
     return `<div class="sec-hdr"><span class="sec-ttl">📅 ${t('todayMatches')}</span></div>`+
-      todayFx.map(f=>matchCard(Object.assign({},f,{timeNote:!isPast(f.date,f.time)?upcomingDawnNote(f.date,f.time):''}))).join('');
+      todayRows.map(f=>matchCard(f)).join('');
   }
-  const next=FIXTURES.filter(f=>f.date>today).slice(0,8);
+  const next=FIXTURES.map(liveUpcomingRowFromFixture).filter(Boolean).filter(f=>fixtureLocalDateKey(f)>today).slice(0,8);
   if(next.length){
     return `<div class="sec-hdr"><span class="sec-ttl">⏭ ${t('nextMatches')}</span></div>`+
-      next.map(f=>matchCard(Object.assign({},f,{timeNote:upcomingDawnNote(f.date,f.time)}))).join('');
+      next.map(f=>matchCard(f)).join('');
   }
   return `<div class="empty"><div class="empty-icon">🏟️</div><div class="empty-text">${t('noLive')}<br>${t('worldCupStarts')} <strong style="color:var(--gold)">11 de junio</strong>.</div></div>`;
 }
@@ -1703,13 +1719,23 @@ async function loadLive(){
   });
   todayFx.forEach(function(f){
     if(seenTodayFixtureIds.has(Number(f.id))||isPast(f.date,f.time))return;
-    upcoming.push(Object.assign({},f,{timeNote:upcomingDawnNote(f.date,f.time)}));
+    const row=liveUpcomingRowFromFixture(f);
+    if(!row)return;
+    upcoming.push(row);
     seenTodayFixtureIds.add(Number(f.id));
   });
   const cardTimeMs=function(e){
     return cardTimeMsFromData(e,matchFx(e)||{},today);
   };
   upcoming.sort((a,b)=>cardTimeMs(a)-cardTimeMs(b));
+  let upcomingTitle=t('todayUpcoming');
+  if(!upcoming.length){
+    upcoming=FIXTURES.map(liveUpcomingRowFromFixture).filter(Boolean).filter(function(row){
+      const fx=matchFx(row);
+      return !(fx&&seenTodayFixtureIds.has(Number(fx.id)));
+    }).sort((a,b)=>cardTimeMs(a)-cardTimeMs(b)).slice(0,8);
+    if(upcoming.length)upcomingTitle=t('nextMatches');
+  }
   let html='';
   if(liveNow.length>0){
     document.getElementById('liveBadge').style.display='flex';
@@ -1736,7 +1762,7 @@ async function loadLive(){
     html+='<div class="divider"></div>';
   }else{document.getElementById('liveBadge').style.display='none';}
   if(upcoming.length>0){
-    html+=`<div class="sec-hdr"><span class="sec-ttl">📅 ${t('todayUpcoming')}</span><span class="sec-cnt">${upcoming.length}</span></div>`;
+    html+=`<div class="sec-hdr"><span class="sec-ttl">📅 ${upcomingTitle}</span><span class="sec-cnt">${upcoming.length}</span></div>`;
     html+=upcoming.map(e=>{
       const fx=matchFx(e)||{};
       const dt=cardDateTimeFromData(e,fx,today);
