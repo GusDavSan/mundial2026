@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T21:23:52.813Z",
+  "updated": "2026-07-05T23:22:56.140Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1157,6 +1157,19 @@
       "thumbnail": "https://i.ytimg.com/vi/jSK-abupr24/hqdefault.jpg",
       "videoId": "jSK-abupr24",
       "publishedAt": "2026-07-05T01:00:38Z",
+      "confidence": 14
+    },
+    {
+      "matchId": 90,
+      "date": "2026-07-05",
+      "home": "Canada",
+      "away": "Morocco",
+      "source": "DAZN ES",
+      "title": "Canadá vs Marruecos (0-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=260dw3azIyE",
+      "thumbnail": "https://i.ytimg.com/vi/260dw3azIyE/hqdefault.jpg",
+      "videoId": "260dw3azIyE",
+      "publishedAt": "2026-07-04T21:05:53Z",
       "confidence": 14
     }
   ]
