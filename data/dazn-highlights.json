@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T04:43:35.110Z",
+  "updated": "2026-07-06T09:14:32.873Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -593,11 +593,11 @@
       "home": "England",
       "away": "Ghana",
       "source": "DAZN ES",
-      "title": "Colombia vs Ghana (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=HUwwcW8XM3k",
-      "thumbnail": "https://i.ytimg.com/vi/HUwwcW8XM3k/hqdefault.jpg",
-      "videoId": "HUwwcW8XM3k",
-      "publishedAt": "2026-07-04T06:13:44Z",
+      "title": "México vs Inglaterra (2-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=fHsb8dI8i8g",
+      "thumbnail": "https://i.ytimg.com/vi/fHsb8dI8i8g/hqdefault.jpg",
+      "videoId": "fHsb8dI8i8g",
+      "publishedAt": "2026-07-06T05:29:22Z",
       "confidence": 12
     },
     {
@@ -684,11 +684,11 @@
       "home": "Czechia",
       "away": "Mexico",
       "source": "DAZN ES",
-      "title": "México vs Ecuador  (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=XAK3OYCwGik",
-      "thumbnail": "https://i.ytimg.com/vi/XAK3OYCwGik/hqdefault.jpg",
-      "videoId": "XAK3OYCwGik",
-      "publishedAt": "2026-07-01T05:18:38Z",
+      "title": "México vs Inglaterra (2-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=fHsb8dI8i8g",
+      "thumbnail": "https://i.ytimg.com/vi/fHsb8dI8i8g/hqdefault.jpg",
+      "videoId": "fHsb8dI8i8g",
+      "publishedAt": "2026-07-06T05:29:22Z",
       "confidence": 12
     },
     {
@@ -866,12 +866,12 @@
       "home": "Panama",
       "away": "England",
       "source": "DAZN ES",
-      "title": "Inglaterra vs RD Congo (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=eUr1MXzPjDk",
-      "thumbnail": "https://i.ytimg.com/vi/eUr1MXzPjDk/hqdefault.jpg",
-      "videoId": "eUr1MXzPjDk",
-      "publishedAt": "2026-07-01T20:00:36Z",
-      "confidence": 14
+      "title": "México vs Inglaterra (2-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=fHsb8dI8i8g",
+      "thumbnail": "https://i.ytimg.com/vi/fHsb8dI8i8g/hqdefault.jpg",
+      "videoId": "fHsb8dI8i8g",
+      "publishedAt": "2026-07-06T05:29:22Z",
+      "confidence": 12
     },
     {
       "matchId": 68,
@@ -1022,12 +1022,12 @@
       "home": "Mexico",
       "away": "Ecuador",
       "source": "DAZN ES",
-      "title": "México vs Ecuador  (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=XAK3OYCwGik",
-      "thumbnail": "https://i.ytimg.com/vi/XAK3OYCwGik/hqdefault.jpg",
-      "videoId": "XAK3OYCwGik",
-      "publishedAt": "2026-07-01T05:18:38Z",
-      "confidence": 20
+      "title": "México vs Inglaterra (2-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=fHsb8dI8i8g",
+      "thumbnail": "https://i.ytimg.com/vi/fHsb8dI8i8g/hqdefault.jpg",
+      "videoId": "fHsb8dI8i8g",
+      "publishedAt": "2026-07-06T05:29:22Z",
+      "confidence": 12
     },
     {
       "matchId": 80,
@@ -1035,12 +1035,12 @@
       "home": "England",
       "away": "DR Congo",
       "source": "DAZN ES",
-      "title": "Inglaterra vs RD Congo (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=eUr1MXzPjDk",
-      "thumbnail": "https://i.ytimg.com/vi/eUr1MXzPjDk/hqdefault.jpg",
-      "videoId": "eUr1MXzPjDk",
-      "publishedAt": "2026-07-01T20:00:36Z",
-      "confidence": 20
+      "title": "México vs Inglaterra (2-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=fHsb8dI8i8g",
+      "thumbnail": "https://i.ytimg.com/vi/fHsb8dI8i8g/hqdefault.jpg",
+      "videoId": "fHsb8dI8i8g",
+      "publishedAt": "2026-07-06T05:29:22Z",
+      "confidence": 12
     },
     {
       "matchId": 81,
