@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T19:09:07.111Z",
+  "updated": "2026-07-06T21:05:28.085Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1184,6 +1184,19 @@
       "videoId": "2zV2AYVTeKE",
       "publishedAt": "2026-07-06T12:03:11Z",
       "confidence": 16
+    },
+    {
+      "matchId": 92,
+      "date": "2026-07-06",
+      "home": "Mexico",
+      "away": "England",
+      "source": "DAZN ES",
+      "title": "México vs Inglaterra (2-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=fHsb8dI8i8g",
+      "thumbnail": "https://i.ytimg.com/vi/fHsb8dI8i8g/hqdefault.jpg",
+      "videoId": "fHsb8dI8i8g",
+      "publishedAt": "2026-07-06T05:29:22Z",
+      "confidence": 14
     }
   ]
 }
