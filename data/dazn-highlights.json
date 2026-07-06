@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T16:34:53.435Z",
+  "updated": "2026-07-06T19:09:07.111Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -555,10 +555,10 @@
       "away": "Senegal",
       "source": "DAZN ES",
       "title": "Brasil vs Noruega  (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-MNdqbsv_oc",
-      "thumbnail": "https://i2.ytimg.com/vi/-MNdqbsv_oc/hqdefault.jpg",
-      "videoId": "-MNdqbsv_oc",
-      "publishedAt": "2026-07-06T00:00:37+00:00",
+      "url": "https://www.youtube.com/watch?v=mOqTxn1YAe0",
+      "thumbnail": "https://i.ytimg.com/vi/mOqTxn1YAe0/hqdefault.jpg",
+      "videoId": "mOqTxn1YAe0",
+      "publishedAt": "2026-07-06T00:00:03Z",
       "confidence": 12
     },
     {
@@ -659,10 +659,10 @@
       "away": "Brazil",
       "source": "DAZN ES",
       "title": "Brasil vs Noruega  (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-MNdqbsv_oc",
-      "thumbnail": "https://i2.ytimg.com/vi/-MNdqbsv_oc/hqdefault.jpg",
-      "videoId": "-MNdqbsv_oc",
-      "publishedAt": "2026-07-06T00:00:37+00:00",
+      "url": "https://www.youtube.com/watch?v=mOqTxn1YAe0",
+      "thumbnail": "https://i.ytimg.com/vi/mOqTxn1YAe0/hqdefault.jpg",
+      "videoId": "mOqTxn1YAe0",
+      "publishedAt": "2026-07-06T00:00:03Z",
       "confidence": 12
     },
     {
@@ -789,10 +789,10 @@
       "away": "France",
       "source": "DAZN ES",
       "title": "Brasil vs Noruega  (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-MNdqbsv_oc",
-      "thumbnail": "https://i2.ytimg.com/vi/-MNdqbsv_oc/hqdefault.jpg",
-      "videoId": "-MNdqbsv_oc",
-      "publishedAt": "2026-07-06T00:00:37+00:00",
+      "url": "https://www.youtube.com/watch?v=mOqTxn1YAe0",
+      "thumbnail": "https://i.ytimg.com/vi/mOqTxn1YAe0/hqdefault.jpg",
+      "videoId": "mOqTxn1YAe0",
+      "publishedAt": "2026-07-06T00:00:03Z",
       "confidence": 12
     },
     {
@@ -958,10 +958,10 @@
       "away": "Japan",
       "source": "DAZN ES",
       "title": "Brasil vs Noruega  (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-MNdqbsv_oc",
-      "thumbnail": "https://i2.ytimg.com/vi/-MNdqbsv_oc/hqdefault.jpg",
-      "videoId": "-MNdqbsv_oc",
-      "publishedAt": "2026-07-06T00:00:37+00:00",
+      "url": "https://www.youtube.com/watch?v=mOqTxn1YAe0",
+      "thumbnail": "https://i.ytimg.com/vi/mOqTxn1YAe0/hqdefault.jpg",
+      "videoId": "mOqTxn1YAe0",
+      "publishedAt": "2026-07-06T00:00:03Z",
       "confidence": 12
     },
     {
@@ -997,10 +997,10 @@
       "away": "Norway",
       "source": "DAZN ES",
       "title": "Brasil vs Noruega  (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=-MNdqbsv_oc",
-      "thumbnail": "https://i2.ytimg.com/vi/-MNdqbsv_oc/hqdefault.jpg",
-      "videoId": "-MNdqbsv_oc",
-      "publishedAt": "2026-07-06T00:00:37+00:00",
+      "url": "https://www.youtube.com/watch?v=mOqTxn1YAe0",
+      "thumbnail": "https://i.ytimg.com/vi/mOqTxn1YAe0/hqdefault.jpg",
+      "videoId": "mOqTxn1YAe0",
+      "publishedAt": "2026-07-06T00:00:03Z",
       "confidence": 12
     },
     {
@@ -1171,6 +1171,19 @@
       "videoId": "260dw3azIyE",
       "publishedAt": "2026-07-04T21:05:53Z",
       "confidence": 14
+    },
+    {
+      "matchId": 91,
+      "date": "2026-07-06",
+      "home": "Brazil",
+      "away": "Norway",
+      "source": "DAZN ES",
+      "title": "NORUEGA, LA BESTIA NEGRA DE BRASIL Los escandinavos NUNCA han perdido contra Brasil en un Mundial.",
+      "url": "https://www.youtube.com/watch?v=2zV2AYVTeKE",
+      "thumbnail": "https://i.ytimg.com/vi/2zV2AYVTeKE/hqdefault.jpg",
+      "videoId": "2zV2AYVTeKE",
+      "publishedAt": "2026-07-06T12:03:11Z",
+      "confidence": 16
     }
   ]
 }
