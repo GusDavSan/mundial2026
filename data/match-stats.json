@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T19:20:21.398Z",
+  "updated": "2026-07-06T21:12:45.498Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -10407,7 +10407,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12813,55 +12813,82 @@
       "date": "2026-07-07",
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
       "homeScore": 0,
-      "awayScore": 0,
-      "winner": "",
-      "loser": "",
+      "awayScore": 1,
+      "winner": "Spain",
+      "loser": "Portugal",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-06T19:20:21.398Z",
+      "updatedAt": "2026-07-06T21:12:45.498Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 3
+          "home": 2,
+          "away": 6
         },
         "shots": {
-          "home": 3,
-          "away": 5
+          "home": 10,
+          "away": 15
         },
         "possession": {
-          "home": 39.9,
-          "away": 60.1
+          "home": 44.5,
+          "away": 55.5
         },
         "passes": {
-          "home": 84,
-          "away": 127
+          "home": 426,
+          "away": 531
         },
         "fouls": {
-          "home": 1,
-          "away": 2
+          "home": 9,
+          "away": 13
         },
         "corners": {
+          "home": 3,
+          "away": 7
+        },
+        "saves": {
+          "home": 5,
+          "away": 2
+        },
+        "offsides": {
           "home": 2,
           "away": 1
         },
-        "saves": {
-          "home": 3,
+        "yellowCards": {
+          "home": 2,
           "away": 1
-        },
-        "offsides": {
-          "home": 0,
-          "away": 0
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49726216",
+          "minute": "90'+1",
+          "period": 2,
+          "team": "Spain",
+          "player": "Mikel Merino",
+          "assist": "Ferran Torres",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Portugal 0, Spain 1. Mikel Merino (Spain) left footed shot from the centre of the box to the bottom left corner. Assisted by Ferran Torres with a through ball.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49726216",
+          "minute": "90'+1",
+          "period": 2,
+          "team": "Spain",
+          "player": "Ferran Torres",
+          "goal": "Mikel Merino",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -12869,10 +12896,10 @@
           "name": "Diogo Costa",
           "shortName": "D. Costa",
           "number": "1",
-          "saves": 3,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 5,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 83.3,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -12882,7 +12909,7 @@
           "name": "Unai Simón",
           "shortName": "U. Simón",
           "number": "23",
-          "saves": 1,
+          "saves": 2,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
