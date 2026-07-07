@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T17:31:24.574Z",
+  "updated": "2026-07-07T20:18:46.721Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -840,11 +840,11 @@
       "home": "Egypt",
       "away": "Iran",
       "source": "DAZN ES",
-      "title": "Australia vs Egipto (1-1) (Penaltis 2-4) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=PDBdIP_9VtI",
-      "thumbnail": "https://i.ytimg.com/vi/PDBdIP_9VtI/hqdefault.jpg",
-      "videoId": "PDBdIP_9VtI",
-      "publishedAt": "2026-07-03T22:57:30Z",
+      "title": "Argentina vs Egipto (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=twMGMGcN7jE",
+      "thumbnail": "https://i.ytimg.com/vi/twMGMGcN7jE/hqdefault.jpg",
+      "videoId": "twMGMGcN7jE",
+      "publishedAt": "2026-07-07T20:00:31Z",
       "confidence": 12
     },
     {
@@ -931,11 +931,11 @@
       "home": "Jordan",
       "away": "Argentina",
       "source": "DAZN ES",
-      "title": "Argentina vs Cabo Verde (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=vfdXSs5yi2Y",
-      "thumbnail": "https://i.ytimg.com/vi/vfdXSs5yi2Y/hqdefault.jpg",
-      "videoId": "vfdXSs5yi2Y",
-      "publishedAt": "2026-07-04T02:45:03Z",
+      "title": "Argentina vs Egipto (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=twMGMGcN7jE",
+      "thumbnail": "https://i.ytimg.com/vi/twMGMGcN7jE/hqdefault.jpg",
+      "videoId": "twMGMGcN7jE",
+      "publishedAt": "2026-07-07T20:00:31Z",
       "confidence": 12
     },
     {
@@ -1113,12 +1113,12 @@
       "home": "Australia",
       "away": "Egypt",
       "source": "DAZN ES",
-      "title": "Australia vs Egipto (1-1) (Penaltis 2-4) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=PDBdIP_9VtI",
-      "thumbnail": "https://i.ytimg.com/vi/PDBdIP_9VtI/hqdefault.jpg",
-      "videoId": "PDBdIP_9VtI",
-      "publishedAt": "2026-07-03T22:57:30Z",
-      "confidence": 20
+      "title": "Argentina vs Egipto (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=twMGMGcN7jE",
+      "thumbnail": "https://i.ytimg.com/vi/twMGMGcN7jE/hqdefault.jpg",
+      "videoId": "twMGMGcN7jE",
+      "publishedAt": "2026-07-07T20:00:31Z",
+      "confidence": 12
     },
     {
       "matchId": 87,
@@ -1126,12 +1126,12 @@
       "home": "Argentina",
       "away": "Cape Verde",
       "source": "DAZN ES",
-      "title": "Argentina vs Cabo Verde (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=vfdXSs5yi2Y",
-      "thumbnail": "https://i.ytimg.com/vi/vfdXSs5yi2Y/hqdefault.jpg",
-      "videoId": "vfdXSs5yi2Y",
-      "publishedAt": "2026-07-04T02:45:03Z",
-      "confidence": 20
+      "title": "Argentina vs Egipto (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=twMGMGcN7jE",
+      "thumbnail": "https://i.ytimg.com/vi/twMGMGcN7jE/hqdefault.jpg",
+      "videoId": "twMGMGcN7jE",
+      "publishedAt": "2026-07-07T20:00:31Z",
+      "confidence": 14
     },
     {
       "matchId": 88,
