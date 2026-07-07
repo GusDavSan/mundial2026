@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T20:18:46.721Z",
+  "updated": "2026-07-07T21:47:15.855Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1209,6 +1209,19 @@
       "thumbnail": "https://i.ytimg.com/vi/BWtoBIhoL7Q/hqdefault.jpg",
       "videoId": "BWtoBIhoL7Q",
       "publishedAt": "2026-07-06T22:55:14Z",
+      "confidence": 14
+    },
+    {
+      "matchId": 94,
+      "date": "2026-07-07",
+      "home": "United States",
+      "away": "Belgium",
+      "source": "DAZN ES",
+      "title": "Estados Unidos vs Bélgica (1-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=N1Z2NAKJxV8",
+      "thumbnail": "https://i.ytimg.com/vi/N1Z2NAKJxV8/hqdefault.jpg",
+      "videoId": "N1Z2NAKJxV8",
+      "publishedAt": "2026-07-07T05:45:38Z",
       "confidence": 14
     }
   ]
