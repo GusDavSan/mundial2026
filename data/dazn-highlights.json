@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T22:42:25.084Z",
+  "updated": "2026-07-07T00:24:24.224Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -580,11 +580,11 @@
       "home": "Portugal",
       "away": "Uzbekistan",
       "source": "DAZN ES",
-      "title": "Portugal vs Croacia (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=oSgvDsRNFUo",
-      "thumbnail": "https://i.ytimg.com/vi/oSgvDsRNFUo/hqdefault.jpg",
-      "videoId": "oSgvDsRNFUo",
-      "publishedAt": "2026-07-03T03:29:55Z",
+      "title": "Portugal vs España (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BWtoBIhoL7Q",
+      "thumbnail": "https://i.ytimg.com/vi/BWtoBIhoL7Q/hqdefault.jpg",
+      "videoId": "BWtoBIhoL7Q",
+      "publishedAt": "2026-07-06T22:55:14Z",
       "confidence": 12
     },
     {
@@ -827,11 +827,11 @@
       "home": "Uruguay",
       "away": "Spain",
       "source": "DAZN ES",
-      "title": "España vs Austria (3-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=QwWhf-V80fE",
-      "thumbnail": "https://i.ytimg.com/vi/QwWhf-V80fE/hqdefault.jpg",
-      "videoId": "QwWhf-V80fE",
-      "publishedAt": "2026-07-02T23:00:25Z",
+      "title": "Portugal vs España (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BWtoBIhoL7Q",
+      "thumbnail": "https://i.ytimg.com/vi/BWtoBIhoL7Q/hqdefault.jpg",
+      "videoId": "BWtoBIhoL7Q",
+      "publishedAt": "2026-07-06T22:55:14Z",
       "confidence": 12
     },
     {
@@ -892,11 +892,11 @@
       "home": "Colombia",
       "away": "Portugal",
       "source": "DAZN ES",
-      "title": "Colombia vs Ghana (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=HUwwcW8XM3k",
-      "thumbnail": "https://i.ytimg.com/vi/HUwwcW8XM3k/hqdefault.jpg",
-      "videoId": "HUwwcW8XM3k",
-      "publishedAt": "2026-07-04T06:13:44Z",
+      "title": "Portugal vs España (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BWtoBIhoL7Q",
+      "thumbnail": "https://i.ytimg.com/vi/BWtoBIhoL7Q/hqdefault.jpg",
+      "videoId": "BWtoBIhoL7Q",
+      "publishedAt": "2026-07-06T22:55:14Z",
       "confidence": 12
     },
     {
@@ -1074,12 +1074,12 @@
       "home": "Spain",
       "away": "Austria",
       "source": "DAZN ES",
-      "title": "España vs Austria (3-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=QwWhf-V80fE",
-      "thumbnail": "https://i.ytimg.com/vi/QwWhf-V80fE/hqdefault.jpg",
-      "videoId": "QwWhf-V80fE",
-      "publishedAt": "2026-07-02T23:00:25Z",
-      "confidence": 20
+      "title": "Portugal vs España (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BWtoBIhoL7Q",
+      "thumbnail": "https://i.ytimg.com/vi/BWtoBIhoL7Q/hqdefault.jpg",
+      "videoId": "BWtoBIhoL7Q",
+      "publishedAt": "2026-07-06T22:55:14Z",
+      "confidence": 12
     },
     {
       "matchId": 84,
@@ -1087,12 +1087,12 @@
       "home": "Portugal",
       "away": "Croatia",
       "source": "DAZN ES",
-      "title": "Portugal vs Croacia (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=oSgvDsRNFUo",
-      "thumbnail": "https://i.ytimg.com/vi/oSgvDsRNFUo/hqdefault.jpg",
-      "videoId": "oSgvDsRNFUo",
-      "publishedAt": "2026-07-03T03:29:55Z",
-      "confidence": 20
+      "title": "Portugal vs España (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BWtoBIhoL7Q",
+      "thumbnail": "https://i.ytimg.com/vi/BWtoBIhoL7Q/hqdefault.jpg",
+      "videoId": "BWtoBIhoL7Q",
+      "publishedAt": "2026-07-06T22:55:14Z",
+      "confidence": 14
     },
     {
       "matchId": 85,
