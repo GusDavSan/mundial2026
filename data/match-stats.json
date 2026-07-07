@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T19:26:44.509Z",
+  "updated": "2026-07-07T21:08:36.285Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T19:26:44.509Z",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13294,6 +13294,90 @@
           "goalsAgainst": 3,
           "cleanSheet": 0,
           "savePct": 57.1,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 96,
+      "espnEventId": "760508",
+      "date": "2026-07-08",
+      "homeTeam": "Switzerland",
+      "awayTeam": "Colombia",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-07T21:08:36.285Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 1
+        },
+        "shots": {
+          "home": 3,
+          "away": 5
+        },
+        "possession": {
+          "home": 50.2,
+          "away": 49.8
+        },
+        "passes": {
+          "home": 268,
+          "away": 264
+        },
+        "fouls": {
+          "home": 6,
+          "away": 6
+        },
+        "corners": {
+          "home": 1,
+          "away": 4
+        },
+        "saves": {
+          "home": 1,
+          "away": 2
+        },
+        "offsides": {
+          "home": 3,
+          "away": 1
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Switzerland",
+          "name": "Gregor Kobel",
+          "shortName": "G. Kobel",
+          "number": "1",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        },
+        {
+          "side": "away",
+          "team": "Colombia",
+          "name": "Camilo Vargas",
+          "shortName": "C. Vargas",
+          "number": "12",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
