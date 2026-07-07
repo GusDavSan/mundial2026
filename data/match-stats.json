@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T01:29:08.723Z",
+  "updated": "2026-07-07T05:48:06.645Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -10539,7 +10539,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12924,54 +12924,54 @@
       "date": "2026-07-07",
       "homeTeam": "United States",
       "awayTeam": "Belgium",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
       "homeScore": 1,
-      "awayScore": 3,
-      "winner": "",
-      "loser": "",
+      "awayScore": 4,
+      "winner": "Belgium",
+      "loser": "United States",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T01:29:08.723Z",
+      "updatedAt": "2026-07-07T05:48:06.645Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 6
+          "home": 2,
+          "away": 7
         },
         "shots": {
-          "home": 3,
-          "away": 13
+          "home": 7,
+          "away": 15
         },
         "possession": {
-          "home": 54,
-          "away": 46
+          "home": 55.9,
+          "away": 44.1
         },
         "passes": {
-          "home": 356,
-          "away": 298
+          "home": 527,
+          "away": 414
         },
         "fouls": {
-          "home": 5,
-          "away": 5
+          "home": 11,
+          "away": 9
         },
         "corners": {
-          "home": 1,
+          "home": 3,
           "away": 5
         },
         "saves": {
           "home": 3,
-          "away": 0
+          "away": 1
         },
         "offsides": {
           "home": 0,
           "away": 1
         },
         "yellowCards": {
-          "home": 1,
+          "home": 2,
           "away": 0
         }
       },
@@ -13023,6 +13023,18 @@
           "ownGoal": false,
           "text": "Goal! USA 1, Belgium 3. Hans Vanaken (Belgium) right footed shot from outside the box to the bottom right corner. Assisted by Charles De Ketelaere.",
           "source": "ESPN"
+        },
+        {
+          "id": "49730641",
+          "minute": "90'+3",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Romelu Lukaku",
+          "assist": "Hans Vanaken",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! USA 1, Belgium 4. Romelu Lukaku (Belgium) right footed shot from the left side of the box to the bottom right corner. Assisted by Hans Vanaken.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -13052,6 +13064,15 @@
           "player": "Charles De Ketelaere",
           "goal": "Hans Vanaken",
           "source": "ESPN"
+        },
+        {
+          "id": "49730641",
+          "minute": "90'+3",
+          "period": 2,
+          "team": "Belgium",
+          "player": "Hans Vanaken",
+          "goal": "Romelu Lukaku",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -13062,9 +13083,9 @@
           "shortName": "M. Freese",
           "number": "24",
           "saves": 3,
-          "goalsAgainst": 3,
+          "goalsAgainst": 4,
           "cleanSheet": 0,
-          "savePct": 50,
+          "savePct": 42.9,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -13074,12 +13095,12 @@
           "name": "Thibaut Courtois",
           "shortName": "T. Courtois",
           "number": "1",
-          "saves": 0,
+          "saves": 1,
           "goalsAgainst": 1,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
