@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T15:19:39.280Z",
+  "updated": "2026-07-07T17:34:07.455Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -10692,7 +10692,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
@@ -10841,7 +10841,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -10977,7 +10977,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -11130,7 +11130,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11307,7 +11307,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -11424,7 +11424,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-07T15:19:39.280Z",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13099,6 +13099,138 @@
           "goalsAgainst": 1,
           "cleanSheet": 0,
           "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 95,
+      "espnEventId": "760509",
+      "date": "2026-07-08",
+      "homeTeam": "Argentina",
+      "awayTeam": "Egypt",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 2,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-07T17:34:07.455Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 4,
+          "away": 2
+        },
+        "shots": {
+          "home": 12,
+          "away": 3
+        },
+        "possession": {
+          "home": 62.9,
+          "away": 37.1
+        },
+        "passes": {
+          "home": 460,
+          "away": 271
+        },
+        "fouls": {
+          "home": 11,
+          "away": 9
+        },
+        "corners": {
+          "home": 4,
+          "away": 1
+        },
+        "saves": {
+          "home": 0,
+          "away": 4
+        },
+        "offsides": {
+          "home": 2,
+          "away": 0
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49730975",
+          "minute": "15",
+          "period": 1,
+          "team": "Egypt",
+          "player": "Yasser Ibrahim",
+          "assist": "Marawan Attia",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Argentina 0, Egypt 1. Yasser Ibrahim (Egypt) header from the centre of the box to the bottom right corner. Assisted by Marwan Attia with a cross following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49731888",
+          "minute": "67",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Mostafa Zico",
+          "assist": "Haissem Hassan",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Argentina 0, Egypt 2. Mostafa Zico (Egypt) right footed shot from the centre of the box to the centre of the goal. Assisted by Haissem Hassan following a fast break.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49730975",
+          "minute": "15",
+          "period": 1,
+          "team": "Egypt",
+          "player": "Marawan Attia",
+          "goal": "Yasser Ibrahim",
+          "source": "ESPN"
+        },
+        {
+          "id": "49731888",
+          "minute": "67",
+          "period": 2,
+          "team": "Egypt",
+          "player": "Haissem Hassan",
+          "goal": "Mostafa Zico",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Argentina",
+          "name": "Emiliano Martínez",
+          "shortName": "E. Martínez",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Egypt",
+          "name": "Mostafa Shoubir",
+          "shortName": "M. Shoubir",
+          "number": "23",
+          "saves": 4,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
