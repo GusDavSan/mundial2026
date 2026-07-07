@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T05:10:58.038Z",
+  "updated": "2026-07-07T08:46:49.068Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -762,11 +762,11 @@
       "home": "Türkiye",
       "away": "United States",
       "source": "DAZN ES",
-      "title": "Estados Unidos vs Bosnia   (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Vfj6fARRuCY",
-      "thumbnail": "https://i.ytimg.com/vi/Vfj6fARRuCY/hqdefault.jpg",
-      "videoId": "Vfj6fARRuCY",
-      "publishedAt": "2026-07-02T04:30:14Z",
+      "title": "Estados Unidos vs Bélgica (1-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Mg47pVT5X7s",
+      "thumbnail": "https://i2.ytimg.com/vi/Mg47pVT5X7s/hqdefault.jpg",
+      "videoId": "Mg47pVT5X7s",
+      "publishedAt": "2026-07-07T05:47:27+00:00",
       "confidence": 12
     },
     {
@@ -853,11 +853,11 @@
       "home": "New Zealand",
       "away": "Belgium",
       "source": "DAZN ES",
-      "title": "Bélgica vs Senegal (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=D-a1bgnzjtA",
-      "thumbnail": "https://i.ytimg.com/vi/D-a1bgnzjtA/hqdefault.jpg",
-      "videoId": "D-a1bgnzjtA",
-      "publishedAt": "2026-07-01T23:53:39Z",
+      "title": "Estados Unidos vs Bélgica (1-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Mg47pVT5X7s",
+      "thumbnail": "https://i2.ytimg.com/vi/Mg47pVT5X7s/hqdefault.jpg",
+      "videoId": "Mg47pVT5X7s",
+      "publishedAt": "2026-07-07T05:47:27+00:00",
       "confidence": 12
     },
     {
@@ -1048,12 +1048,12 @@
       "home": "Belgium",
       "away": "Senegal",
       "source": "DAZN ES",
-      "title": "Bélgica vs Senegal (3-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=D-a1bgnzjtA",
-      "thumbnail": "https://i.ytimg.com/vi/D-a1bgnzjtA/hqdefault.jpg",
-      "videoId": "D-a1bgnzjtA",
-      "publishedAt": "2026-07-01T23:53:39Z",
-      "confidence": 20
+      "title": "Estados Unidos vs Bélgica (1-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Mg47pVT5X7s",
+      "thumbnail": "https://i2.ytimg.com/vi/Mg47pVT5X7s/hqdefault.jpg",
+      "videoId": "Mg47pVT5X7s",
+      "publishedAt": "2026-07-07T05:47:27+00:00",
+      "confidence": 12
     },
     {
       "matchId": 82,
@@ -1061,12 +1061,12 @@
       "home": "United States",
       "away": "Bosnia & Herzegovina",
       "source": "DAZN ES",
-      "title": "Estados Unidos vs Bosnia   (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Vfj6fARRuCY",
-      "thumbnail": "https://i.ytimg.com/vi/Vfj6fARRuCY/hqdefault.jpg",
-      "videoId": "Vfj6fARRuCY",
-      "publishedAt": "2026-07-02T04:30:14Z",
-      "confidence": 20
+      "title": "Estados Unidos vs Bélgica (1-4) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Mg47pVT5X7s",
+      "thumbnail": "https://i2.ytimg.com/vi/Mg47pVT5X7s/hqdefault.jpg",
+      "videoId": "Mg47pVT5X7s",
+      "publishedAt": "2026-07-07T05:47:27+00:00",
+      "confidence": 12
     },
     {
       "matchId": 83,
