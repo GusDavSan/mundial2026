@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T00:17:57.623Z",
+  "updated": "2026-07-08T03:49:31.856Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -619,11 +619,11 @@
       "home": "Colombia",
       "away": "DR Congo",
       "source": "DAZN ES",
-      "title": "Colombia vs Ghana (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=HUwwcW8XM3k",
-      "thumbnail": "https://i.ytimg.com/vi/HUwwcW8XM3k/hqdefault.jpg",
-      "videoId": "HUwwcW8XM3k",
-      "publishedAt": "2026-07-04T06:13:44Z",
+      "title": "Suiza vs Colombia (0-0) (Penaltis 4-3) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=AHahHoaWbP8",
+      "thumbnail": "https://i.ytimg.com/vi/AHahHoaWbP8/hqdefault.jpg",
+      "videoId": "AHahHoaWbP8",
+      "publishedAt": "2026-07-08T00:45:02Z",
       "confidence": 12
     },
     {
@@ -632,11 +632,11 @@
       "home": "Switzerland",
       "away": "Canada",
       "source": "DAZN ES",
-      "title": "Canadá vs Marruecos (0-3) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=260dw3azIyE",
-      "thumbnail": "https://i.ytimg.com/vi/260dw3azIyE/hqdefault.jpg",
-      "videoId": "260dw3azIyE",
-      "publishedAt": "2026-07-04T21:05:53Z",
+      "title": "Suiza vs Colombia (0-0) (Penaltis 4-3) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=AHahHoaWbP8",
+      "thumbnail": "https://i.ytimg.com/vi/AHahHoaWbP8/hqdefault.jpg",
+      "videoId": "AHahHoaWbP8",
+      "publishedAt": "2026-07-08T00:45:02Z",
       "confidence": 12
     },
     {
@@ -892,11 +892,11 @@
       "home": "Colombia",
       "away": "Portugal",
       "source": "DAZN ES",
-      "title": "Portugal vs España (0-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=BWtoBIhoL7Q",
-      "thumbnail": "https://i.ytimg.com/vi/BWtoBIhoL7Q/hqdefault.jpg",
-      "videoId": "BWtoBIhoL7Q",
-      "publishedAt": "2026-07-06T22:55:14Z",
+      "title": "Suiza vs Colombia (0-0) (Penaltis 4-3) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=AHahHoaWbP8",
+      "thumbnail": "https://i.ytimg.com/vi/AHahHoaWbP8/hqdefault.jpg",
+      "videoId": "AHahHoaWbP8",
+      "publishedAt": "2026-07-08T00:45:02Z",
       "confidence": 12
     },
     {
@@ -1100,12 +1100,12 @@
       "home": "Switzerland",
       "away": "Algeria",
       "source": "DAZN ES",
-      "title": "Suiza vs Argelia (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=S4U68vx1akc",
-      "thumbnail": "https://i.ytimg.com/vi/S4U68vx1akc/hqdefault.jpg",
-      "videoId": "S4U68vx1akc",
-      "publishedAt": "2026-07-03T07:23:19Z",
-      "confidence": 20
+      "title": "Suiza vs Colombia (0-0) (Penaltis 4-3) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=AHahHoaWbP8",
+      "thumbnail": "https://i.ytimg.com/vi/AHahHoaWbP8/hqdefault.jpg",
+      "videoId": "AHahHoaWbP8",
+      "publishedAt": "2026-07-08T00:45:02Z",
+      "confidence": 12
     },
     {
       "matchId": 86,
@@ -1139,12 +1139,12 @@
       "home": "Colombia",
       "away": "Ghana",
       "source": "DAZN ES",
-      "title": "Colombia vs Ghana (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=HUwwcW8XM3k",
-      "thumbnail": "https://i.ytimg.com/vi/HUwwcW8XM3k/hqdefault.jpg",
-      "videoId": "HUwwcW8XM3k",
-      "publishedAt": "2026-07-04T06:13:44Z",
-      "confidence": 20
+      "title": "Suiza vs Colombia (0-0) (Penaltis 4-3) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=AHahHoaWbP8",
+      "thumbnail": "https://i.ytimg.com/vi/AHahHoaWbP8/hqdefault.jpg",
+      "videoId": "AHahHoaWbP8",
+      "publishedAt": "2026-07-08T00:45:02Z",
+      "confidence": 14
     },
     {
       "matchId": 89,
