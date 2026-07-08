@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T20:42:13.543Z",
+  "updated": "2026-07-08T22:21:43.795Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1236,6 +1236,19 @@
       "videoId": "pJ_fUJwHaLs",
       "publishedAt": "2026-07-08T15:15:33Z",
       "confidence": 16
+    },
+    {
+      "matchId": 96,
+      "date": "2026-07-08",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "source": "DAZN ES",
+      "title": "Suiza vs Colombia (0-0) (Penaltis 4-3) | Resumen | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=YUrtYJyKLoU",
+      "thumbnail": "https://i2.ytimg.com/vi/YUrtYJyKLoU/hqdefault.jpg",
+      "videoId": "YUrtYJyKLoU",
+      "publishedAt": "2026-07-08T00:45:35+00:00",
+      "confidence": 14
     }
   ]
 }
