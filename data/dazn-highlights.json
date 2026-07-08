@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T16:54:25.630Z",
+  "updated": "2026-07-08T18:50:19.339Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1223,6 +1223,19 @@
       "videoId": "N1Z2NAKJxV8",
       "publishedAt": "2026-07-07T05:45:38Z",
       "confidence": 14
+    },
+    {
+      "matchId": 95,
+      "date": "2026-07-08",
+      "home": "Argentina",
+      "away": "Egypt",
+      "source": "DAZN ES",
+      "title": "Las dos imágenes que marcaron el Argentina-Egipto #TrendingMundial #DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=pJ_fUJwHaLs",
+      "thumbnail": "https://i.ytimg.com/vi/pJ_fUJwHaLs/hqdefault.jpg",
+      "videoId": "pJ_fUJwHaLs",
+      "publishedAt": "2026-07-08T15:15:33Z",
+      "confidence": 16
     }
   ]
 }
