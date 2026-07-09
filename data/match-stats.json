@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T20:25:26.584Z",
+  "updated": "2026-07-09T22:05:02.963Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13393,55 +13393,103 @@
       "date": "2026-07-09",
       "homeTeam": "France",
       "awayTeam": "Morocco",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
-      "homeScore": 0,
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 2,
       "awayScore": 0,
-      "winner": "",
-      "loser": "",
+      "winner": "France",
+      "loser": "Morocco",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "updatedAt": "2026-07-09T22:05:02.963Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 0
+          "home": 8,
+          "away": 1
         },
         "shots": {
-          "home": 6,
-          "away": 0
+          "home": 22,
+          "away": 5
         },
         "possession": {
-          "home": 61.9,
-          "away": 38.1
+          "home": 48.1,
+          "away": 51.9
         },
         "passes": {
-          "home": 180,
-          "away": 113
+          "home": 485,
+          "away": 524
         },
         "fouls": {
-          "home": 2,
-          "away": 3
+          "home": 10,
+          "away": 13
         },
         "corners": {
-          "home": 2,
-          "away": 0
+          "home": 5,
+          "away": 5
         },
         "saves": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 6
         },
         "offsides": {
           "home": 0,
           "away": 0
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49742002",
+          "minute": "60",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "assist": "Désiré Doué",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 1, Morocco 0. Kylian Mbappé (France) right footed shot from the left side of the box to the top right corner. Assisted by Désiré Doué.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49742073",
+          "minute": "66",
+          "period": 2,
+          "team": "France",
+          "player": "Ousmane Dembélé",
+          "assist": "Kylian Mbappé",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 2, Morocco 0. Ousmane Dembélé (France) right footed shot from outside the box to the bottom right corner. Assisted by Kylian Mbappé.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49742002",
+          "minute": "60",
+          "period": 2,
+          "team": "France",
+          "player": "Désiré Doué",
+          "goal": "Kylian Mbappé",
+          "source": "ESPN"
+        },
+        {
+          "id": "49742073",
+          "minute": "66",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "goal": "Ousmane Dembélé",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -13449,12 +13497,12 @@
           "name": "Mike Maignan",
           "shortName": "M. Maignan",
           "number": "16",
-          "saves": 0,
+          "saves": 1,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -13462,11 +13510,11 @@
           "name": "Yassine Bounou",
           "shortName": "Y. Bounou",
           "number": "1",
-          "saves": 1,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
-          "penaltySaves": 0,
+          "saves": 6,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 75,
+          "penaltySaves": 2,
           "source": "ESPN leaders"
         }
       ]
