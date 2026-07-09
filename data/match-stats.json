@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T18:29:55.673Z",
+  "updated": "2026-07-09T20:25:26.584Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -11577,7 +11577,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -11712,7 +11712,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -11835,7 +11835,7 @@
       "penaltyHomeScore": 2,
       "penaltyAwayScore": 4,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-09T18:29:55.673Z",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13379,6 +13379,90 @@
           "shortName": "C. Vargas",
           "number": "12",
           "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 97,
+      "espnEventId": "760510",
+      "date": "2026-07-09",
+      "homeTeam": "France",
+      "awayTeam": "Morocco",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-09T20:25:26.584Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 0
+        },
+        "shots": {
+          "home": 6,
+          "away": 0
+        },
+        "possession": {
+          "home": 61.9,
+          "away": 38.1
+        },
+        "passes": {
+          "home": 180,
+          "away": 113
+        },
+        "fouls": {
+          "home": 2,
+          "away": 3
+        },
+        "corners": {
+          "home": 2,
+          "away": 0
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "France",
+          "name": "Mike Maignan",
+          "shortName": "M. Maignan",
+          "number": "16",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Morocco",
+          "name": "Yassine Bounou",
+          "shortName": "Y. Bounou",
+          "number": "1",
+          "saves": 1,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
