@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T20:24:07.779Z",
+  "updated": "2026-07-09T22:05:17.640Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -44966,7 +44966,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "Croatia",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -45515,7 +45515,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Algeria",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -46034,7 +46034,7 @@
       "homeTeam": "Australia",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Australia",
         "espnTeam": "Australia",
@@ -46533,7 +46533,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -47082,7 +47082,7 @@
       "homeTeam": "Colombia",
       "awayTeam": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Colombia",
         "espnTeam": "Colombia",
@@ -47631,7 +47631,7 @@
       "homeTeam": "Paraguay",
       "awayTeam": "France",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Paraguay",
         "espnTeam": "Paraguay",
@@ -48180,7 +48180,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -48719,7 +48719,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -49248,7 +49248,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -49797,7 +49797,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -50346,7 +50346,7 @@
       "homeTeam": "United States",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -50885,7 +50885,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -51414,7 +51414,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -51933,7 +51933,7 @@
       "homeTeam": "France",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-09T20:24:07.779Z",
+      "updatedAt": "2026-07-09T22:05:17.640Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -51988,7 +51988,7 @@
             "position": "Right Back",
             "formationPlace": "2",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Michael Olise",
@@ -52018,7 +52018,7 @@
             "position": "Right Midfielder",
             "formationPlace": "8",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Kylian Mbappé",
@@ -52028,7 +52028,7 @@
             "position": "Forward",
             "formationPlace": "9",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Désiré Doué",
@@ -52038,7 +52038,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Ousmane Dembélé",
@@ -52119,7 +52119,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52179,7 +52179,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52189,7 +52189,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52199,7 +52199,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           }
         ]
@@ -52248,7 +52248,7 @@
             "position": "Left Back",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Achraf Hakimi",
@@ -52288,7 +52288,7 @@
             "position": "Right Midfielder",
             "formationPlace": "8",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Bilal El Khannouss",
@@ -52298,7 +52298,7 @@
             "position": "Forward",
             "formationPlace": "9",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Chemsdine Talbi",
@@ -52308,7 +52308,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Brahim Díaz",
@@ -52318,7 +52318,7 @@
             "position": "Attacking Midfielder Right",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -52369,7 +52369,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52399,7 +52399,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52419,7 +52419,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52429,7 +52429,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52459,7 +52459,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
