@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T19:47:41.631Z",
+  "updated": "2026-07-10T20:56:10.951Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13528,7 +13528,7 @@
       "status": "Live",
       "statusState": "in",
       "completed": false,
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
       "winner": "",
       "loser": "",
@@ -13537,43 +13537,43 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "updatedAt": "2026-07-10T20:56:10.951Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 3,
-          "away": 1
+          "home": 7,
+          "away": 2
         },
         "shots": {
-          "home": 8,
-          "away": 2
+          "home": 16,
+          "away": 5
         },
         "possession": {
-          "home": 62.6,
-          "away": 37.4
+          "home": 67.6,
+          "away": 32.4
         },
         "passes": {
-          "home": 296,
-          "away": 174
+          "home": 644,
+          "away": 308
         },
         "fouls": {
-          "home": 5,
-          "away": 6
+          "home": 13,
+          "away": 16
         },
         "corners": {
-          "home": 3,
-          "away": 0
+          "home": 5,
+          "away": 1
         },
         "saves": {
-          "home": 0,
-          "away": 2
+          "home": 1,
+          "away": 5
         },
         "offsides": {
-          "home": 1,
+          "home": 3,
           "away": 1
         },
         "yellowCards": {
-          "home": 1,
-          "away": 0
+          "home": 2,
+          "away": 1
         }
       },
       "goals": [
@@ -13600,6 +13600,18 @@
           "ownGoal": false,
           "text": "Goal! Spain 1, Belgium 1. Charles De Ketelaere (Belgium) header from the centre of the box to the centre of the goal. Assisted by Timothy Castagne with a cross.",
           "source": "ESPN"
+        },
+        {
+          "id": "49748447",
+          "minute": "88",
+          "period": 2,
+          "team": "Spain",
+          "player": "Mikel Merino",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Spain 2, Belgium 1. Mikel Merino (Spain) left footed shot from very close range to the top left corner.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -13620,12 +13632,12 @@
           "name": "Unai Simón",
           "shortName": "U. Simón",
           "number": "23",
-          "saves": 0,
+          "saves": 1,
           "goalsAgainst": 1,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -13633,8 +13645,8 @@
           "name": "Thibaut Courtois",
           "shortName": "T. Courtois",
           "number": "1",
-          "saves": 2,
-          "goalsAgainst": 1,
+          "saves": 4,
+          "goalsAgainst": 2,
           "cleanSheet": 0,
           "savePct": 66.7,
           "penaltySaves": 0,
