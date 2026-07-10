@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T20:47:35.786Z",
+  "updated": "2026-07-10T22:21:12.731Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1262,6 +1262,19 @@
       "videoId": "yWhei5hUyME",
       "publishedAt": "2026-07-10T00:00:21Z",
       "confidence": 20
+    },
+    {
+      "matchId": 98,
+      "date": "2026-07-10",
+      "home": "Spain",
+      "away": "Belgium",
+      "source": "DAZN ES",
+      "title": "Speed, con el corazón dividido en el España vs Bélgica 😬",
+      "url": "https://www.youtube.com/watch?v=4C61IP1O4J4",
+      "thumbnail": "https://i.ytimg.com/vi/4C61IP1O4J4/hqdefault.jpg",
+      "videoId": "4C61IP1O4J4",
+      "publishedAt": "2026-07-10T19:34:58Z",
+      "confidence": 14
     }
   ]
 }
