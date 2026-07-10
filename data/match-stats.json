@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T18:02:41.713Z",
+  "updated": "2026-07-10T19:47:41.631Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -11958,7 +11958,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 10,
@@ -12144,7 +12144,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-10T18:02:41.713Z",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13515,6 +13515,129 @@
           "cleanSheet": 0,
           "savePct": 75,
           "penaltySaves": 2,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 98,
+      "espnEventId": "760511",
+      "date": "2026-07-10",
+      "homeTeam": "Spain",
+      "awayTeam": "Belgium",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 1,
+      "awayScore": 1,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-10T19:47:41.631Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 3,
+          "away": 1
+        },
+        "shots": {
+          "home": 8,
+          "away": 2
+        },
+        "possession": {
+          "home": 62.6,
+          "away": 37.4
+        },
+        "passes": {
+          "home": 296,
+          "away": 174
+        },
+        "fouls": {
+          "home": 5,
+          "away": 6
+        },
+        "corners": {
+          "home": 3,
+          "away": 0
+        },
+        "saves": {
+          "home": 0,
+          "away": 2
+        },
+        "offsides": {
+          "home": 1,
+          "away": 1
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      "goals": [
+        {
+          "id": "49747537",
+          "minute": "30",
+          "period": 1,
+          "team": "Spain",
+          "player": "Fabián Ruiz",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Spain 1, Belgium 0. Fabián Ruiz (Spain) right footed shot from the centre of the box to the high centre of the goal.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49747686",
+          "minute": "41",
+          "period": 1,
+          "team": "Belgium",
+          "player": "Charles De Ketelaere",
+          "assist": "Timothy Castagne",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Spain 1, Belgium 1. Charles De Ketelaere (Belgium) header from the centre of the box to the centre of the goal. Assisted by Timothy Castagne with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49747686",
+          "minute": "41",
+          "period": 1,
+          "team": "Belgium",
+          "player": "Timothy Castagne",
+          "goal": "Charles De Ketelaere",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Spain",
+          "name": "Unai Simón",
+          "shortName": "U. Simón",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Belgium",
+          "name": "Thibaut Courtois",
+          "shortName": "T. Courtois",
+          "number": "1",
+          "saves": 2,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 66.7,
+          "penaltySaves": 0,
           "source": "ESPN leaders"
         }
       ]
