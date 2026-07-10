@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T19:45:58.587Z",
+  "updated": "2026-07-10T20:54:28.974Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -46533,7 +46533,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Cape Verde",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -47082,7 +47082,7 @@
       "homeTeam": "Colombia",
       "awayTeam": "Ghana",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Colombia",
         "espnTeam": "Colombia",
@@ -47631,7 +47631,7 @@
       "homeTeam": "Paraguay",
       "awayTeam": "France",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Paraguay",
         "espnTeam": "Paraguay",
@@ -48180,7 +48180,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -48719,7 +48719,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -49248,7 +49248,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -49797,7 +49797,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -50346,7 +50346,7 @@
       "homeTeam": "United States",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -50885,7 +50885,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -51414,7 +51414,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -51933,7 +51933,7 @@
       "homeTeam": "France",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -52482,7 +52482,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-10T19:45:58.587Z",
+      "updatedAt": "2026-07-10T20:54:28.974Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -52547,7 +52547,7 @@
             "position": "Attacking Midfielder",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Fabián Ruiz",
@@ -52557,7 +52557,7 @@
             "position": "Left Midfielder",
             "formationPlace": "4",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Rodri",
@@ -52577,7 +52577,7 @@
             "position": "Forward",
             "formationPlace": "9",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Álex Baena",
@@ -52587,7 +52587,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Lamine Yamal",
@@ -52608,7 +52608,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52648,7 +52648,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52718,7 +52718,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52738,7 +52738,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52767,7 +52767,7 @@
             "position": "Goalkeeper",
             "formationPlace": "1",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Brandon Mechele",
@@ -52797,7 +52797,7 @@
             "position": "Left Back",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Timothy Castagne",
@@ -52817,7 +52817,7 @@
             "position": "Attacking Midfielder",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Nicolas Raskin",
@@ -52837,7 +52837,7 @@
             "position": "Right Midfielder",
             "formationPlace": "8",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Charles De Ketelaere",
@@ -52867,7 +52867,7 @@
             "position": "Attacking Midfielder Right",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -52878,7 +52878,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52898,7 +52898,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52918,7 +52918,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52968,7 +52968,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -52988,7 +52988,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           }
         ]
