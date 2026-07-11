@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T21:25:55.300Z",
+  "updated": "2026-07-11T22:26:33.331Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -47631,7 +47631,7 @@
       "homeTeam": "Paraguay",
       "awayTeam": "France",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Paraguay",
         "espnTeam": "Paraguay",
@@ -48180,7 +48180,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -48719,7 +48719,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -49248,7 +49248,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -49797,7 +49797,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -50346,7 +50346,7 @@
       "homeTeam": "United States",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -50885,7 +50885,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -51414,7 +51414,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -51933,7 +51933,7 @@
       "homeTeam": "France",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -52482,7 +52482,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -53001,7 +53001,7 @@
       "homeTeam": "Norway",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T21:25:55.300Z",
+      "updatedAt": "2026-07-11T22:26:33.331Z",
       "home": {
         "team": "Norway",
         "espnTeam": "Norway",
@@ -53056,7 +53056,7 @@
             "position": "Right Back",
             "formationPlace": "2",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Sander Berge",
@@ -53147,7 +53147,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -53356,7 +53356,7 @@
             "position": "Right Midfielder",
             "formationPlace": "8",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Harry Kane",
@@ -53386,7 +53386,7 @@
             "position": "Attacking Midfielder Right",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           }
         ],
         "bench": [
@@ -53427,7 +53427,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -53517,7 +53517,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
