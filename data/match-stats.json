@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T22:26:17.776Z",
+  "updated": "2026-07-11T23:31:48.983Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13664,7 +13664,7 @@
       "statusState": "in",
       "completed": false,
       "homeScore": 1,
-      "awayScore": 1,
+      "awayScore": 2,
       "winner": "",
       "loser": "",
       "decidedBy": "",
@@ -13672,39 +13672,39 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T22:26:17.776Z",
+      "updatedAt": "2026-07-11T23:31:48.983Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 3,
-          "away": 2
+          "home": 4,
+          "away": 5
         },
         "shots": {
-          "home": 6,
-          "away": 6
+          "home": 10,
+          "away": 11
         },
         "possession": {
-          "home": 39.8,
-          "away": 60.2
+          "home": 45.1,
+          "away": 54.9
         },
         "passes": {
-          "home": 257,
-          "away": 385
+          "home": 489,
+          "away": 589
         },
         "fouls": {
-          "home": 6,
-          "away": 3
+          "home": 10,
+          "away": 6
         },
         "corners": {
-          "home": 3,
-          "away": 2
+          "home": 6,
+          "away": 4
         },
         "saves": {
-          "home": 1,
-          "away": 2
+          "home": 3,
+          "away": 3
         },
         "offsides": {
           "home": 1,
-          "away": 3
+          "away": 4
         }
       },
       "goals": [
@@ -13729,7 +13729,19 @@
           "assist": "Anthony Gordon",
           "penalty": false,
           "ownGoal": false,
-          "text": "Goal! Norway 1, England 1. Jude Bellingham (England) left footed shot from the left side of the box to the bottom right corner. Assisted by Anthony Gordon following a fast break.",
+          "text": "Goal! Norway 1, England 1. Jude Bellingham (England) left footed shot from the left side of the box to the bottom right corner. Assisted by Anthony Gordon.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49767779",
+          "minute": "93",
+          "period": 3,
+          "team": "England",
+          "player": "Jude Bellingham",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Norway 1, England 2. Jude Bellingham (England) right footed shot from the centre of the box to the bottom left corner.",
           "source": "ESPN"
         }
       ],
@@ -13760,10 +13772,10 @@
           "name": "Ørjan Nyland",
           "shortName": "Ø. Nyland",
           "number": "1",
-          "saves": 1,
-          "goalsAgainst": 1,
+          "saves": 3,
+          "goalsAgainst": 2,
           "cleanSheet": 0,
-          "savePct": 50,
+          "savePct": 60,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -13773,10 +13785,10 @@
           "name": "Jordan Pickford",
           "shortName": "J. Pickford",
           "number": "1",
-          "saves": 2,
+          "saves": 3,
           "goalsAgainst": 1,
           "cleanSheet": 0,
-          "savePct": 66.7,
+          "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
