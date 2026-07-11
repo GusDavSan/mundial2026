@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T20:25:13.587Z",
+  "updated": "2026-07-11T21:25:55.300Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -47631,7 +47631,7 @@
       "homeTeam": "Paraguay",
       "awayTeam": "France",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Paraguay",
         "espnTeam": "Paraguay",
@@ -48180,7 +48180,7 @@
       "homeTeam": "Canada",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Canada",
         "espnTeam": "Canada",
@@ -48719,7 +48719,7 @@
       "homeTeam": "Brazil",
       "awayTeam": "Norway",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Brazil",
         "espnTeam": "Brazil",
@@ -49248,7 +49248,7 @@
       "homeTeam": "Mexico",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Mexico",
         "espnTeam": "Mexico",
@@ -49797,7 +49797,7 @@
       "homeTeam": "Portugal",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Portugal",
         "espnTeam": "Portugal",
@@ -50346,7 +50346,7 @@
       "homeTeam": "United States",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "United States",
         "espnTeam": "United States",
@@ -50885,7 +50885,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Egypt",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -51414,7 +51414,7 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Colombia",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Switzerland",
         "espnTeam": "Switzerland",
@@ -51933,7 +51933,7 @@
       "homeTeam": "France",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -52482,7 +52482,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -53001,7 +53001,7 @@
       "homeTeam": "Norway",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-11T20:25:13.587Z",
+      "updatedAt": "2026-07-11T21:25:55.300Z",
       "home": {
         "team": "Norway",
         "espnTeam": "Norway",
@@ -53015,98 +53015,78 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Julian Ryerson",
-            "shortName": "J. Ryerson",
-            "num": "26",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Kristoffer Ajer",
-            "shortName": "K. Ajer",
-            "num": "3",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Torbjørn Heggem",
             "shortName": "T. Heggem",
             "num": "17",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Kristoffer Ajer",
+            "shortName": "K. Ajer",
+            "num": "3",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "David Møller Wolfe",
             "shortName": "D. Møller Wolfe",
             "num": "5",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "LB",
+            "position": "Left Back",
             "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Julian Ryerson",
+            "shortName": "J. Ryerson",
+            "num": "26",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Sander Berge",
             "shortName": "S. Berge",
             "num": "8",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "CM",
+            "position": "Center Midfielder",
             "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Martin Ødegaard",
-            "shortName": "M. Ødegaard",
-            "num": "10",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Patrick Berg",
             "shortName": "P. Berg",
             "num": "6",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "LM",
+            "position": "Left Midfielder",
             "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Andreas Schjelderup",
-            "shortName": "A. Schjelderup",
-            "num": "21",
-            "pos": "F",
-            "position": "Forward",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Alexander Sørloth",
-            "shortName": "A. Sørloth",
-            "num": "7",
-            "pos": "F",
-            "position": "Forward",
-            "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Martin Ødegaard",
+            "shortName": "M. Ødegaard",
+            "num": "10",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Erling Haaland",
@@ -53115,8 +53095,28 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Andreas Schjelderup",
+            "shortName": "A. Schjelderup",
+            "num": "21",
+            "pos": "LF",
+            "position": "Left Forward",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Alexander Sørloth",
+            "shortName": "A. Sørloth",
+            "num": "7",
+            "pos": "RF",
+            "position": "Right Forward",
+            "formationPlace": "10",
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -53127,8 +53127,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jens Petter Hauge",
@@ -53137,8 +53137,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Fredrik Aursnes",
@@ -53147,8 +53147,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Antonio Nusa",
@@ -53157,8 +53157,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Henrik Falchener",
@@ -53167,8 +53167,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jørgen Strand Larsen",
@@ -53177,8 +53177,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Sondre Langas",
@@ -53187,8 +53187,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Leo Østigard",
@@ -53197,8 +53197,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Oscar Bobb",
@@ -53207,8 +53207,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Kristian Thorstvedt",
@@ -53217,8 +53217,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Morten Thorsby",
@@ -53227,8 +53227,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marcus Holmgren Pedersen",
@@ -53237,8 +53237,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Sander Tangvik",
@@ -53247,8 +53247,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Egil Selvik",
@@ -53257,8 +53257,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Fredrik André Bjørkan",
@@ -53267,8 +53267,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       },
@@ -53285,98 +53285,78 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "John Stones",
-            "shortName": "J. Stones",
-            "num": "5",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Ezri Konsa",
-            "shortName": "E. Konsa",
-            "num": "2",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Nico O'Reilly",
-            "shortName": "N. O'Reilly",
-            "num": "3",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marc Guéhi",
             "shortName": "M. Guéhi",
             "num": "6",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Noni Madueke",
-            "shortName": "N. Madueke",
-            "num": "20",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "John Stones",
+            "shortName": "J. Stones",
+            "num": "5",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Anthony Gordon",
-            "shortName": "A. Gordon",
-            "num": "18",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Nico O'Reilly",
+            "shortName": "N. O'Reilly",
+            "num": "3",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Declan Rice",
-            "shortName": "D. Rice",
-            "num": "4",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Elliot Anderson",
-            "shortName": "E. Anderson",
-            "num": "8",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Ezri Konsa",
+            "shortName": "E. Konsa",
+            "num": "2",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jude Bellingham",
             "shortName": "J. Bellingham",
             "num": "10",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "AM",
+            "position": "Attacking Midfielder",
             "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Elliot Anderson",
+            "shortName": "E. Anderson",
+            "num": "8",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Declan Rice",
+            "shortName": "D. Rice",
+            "num": "4",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Harry Kane",
@@ -53385,8 +53365,28 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Anthony Gordon",
+            "shortName": "A. Gordon",
+            "num": "18",
+            "pos": "AM-L",
+            "position": "Attacking Midfielder Left",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Noni Madueke",
+            "shortName": "N. Madueke",
+            "num": "20",
+            "pos": "AM-R",
+            "position": "Attacking Midfielder Right",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -53397,8 +53397,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marcus Rashford",
@@ -53407,8 +53407,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Morgan Rogers",
@@ -53417,8 +53417,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Eberechi Eze",
@@ -53427,8 +53427,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ollie Watkins",
@@ -53437,8 +53437,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Dan Burn",
@@ -53447,8 +53447,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "James Trafford",
@@ -53457,8 +53457,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Trevoh Chalobah",
@@ -53467,8 +53467,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ivan Toney",
@@ -53477,8 +53477,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Djed Spence",
@@ -53487,8 +53487,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jordan Henderson",
@@ -53497,8 +53497,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Kobbie Mainoo",
@@ -53507,8 +53507,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Bukayo Saka",
@@ -53517,8 +53517,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Reece James",
@@ -53527,8 +53527,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       }
