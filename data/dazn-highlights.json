@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T19:36:59.600Z",
+  "updated": "2026-07-12T21:12:26.980Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1288,6 +1288,19 @@
       "videoId": "zRRHQPLVX8I",
       "publishedAt": "2026-07-12T01:21:38Z",
       "confidence": 20
+    },
+    {
+      "matchId": 100,
+      "date": "2026-07-12",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "source": "DAZN ES",
+      "title": "Argentina vs Suiza  (3-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=BFEMWCtjyu0",
+      "thumbnail": "https://i3.ytimg.com/vi/BFEMWCtjyu0/hqdefault.jpg",
+      "videoId": "BFEMWCtjyu0",
+      "publishedAt": "2026-07-12T05:14:32+00:00",
+      "confidence": 14
     }
   ]
 }
