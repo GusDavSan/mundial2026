@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T23:31:48.983Z",
+  "updated": "2026-07-12T01:09:49.077Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -12255,7 +12255,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 1,
@@ -12356,7 +12356,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -12509,7 +12509,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -12653,7 +12653,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 5,
@@ -12825,7 +12825,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13660,51 +13660,55 @@
       "date": "2026-07-11",
       "homeTeam": "Norway",
       "awayTeam": "England",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
       "homeScore": 1,
       "awayScore": 2,
-      "winner": "",
-      "loser": "",
+      "winner": "England",
+      "loser": "Norway",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-11T23:31:48.983Z",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
-          "away": 5
+          "away": 8
         },
         "shots": {
-          "home": 10,
-          "away": 11
+          "home": 13,
+          "away": 14
         },
         "possession": {
-          "home": 45.1,
-          "away": 54.9
+          "home": 47.6,
+          "away": 52.4
         },
         "passes": {
-          "home": 489,
-          "away": 589
+          "home": 576,
+          "away": 628
         },
         "fouls": {
           "home": 10,
-          "away": 6
+          "away": 8
         },
         "corners": {
-          "home": 6,
+          "home": 7,
           "away": 4
         },
         "saves": {
-          "home": 3,
+          "home": 6,
           "away": 3
         },
         "offsides": {
           "home": 1,
-          "away": 4
+          "away": 5
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 0
         }
       },
       "goals": [
@@ -13741,7 +13745,7 @@
           "assist": "",
           "penalty": false,
           "ownGoal": false,
-          "text": "Goal! Norway 1, England 2. Jude Bellingham (England) right footed shot from the centre of the box to the bottom left corner.",
+          "text": "Goal! Norway 1, England 2. Jude Bellingham (England) right footed shot from the centre of the box to the bottom left corner following a corner.",
           "source": "ESPN"
         }
       ],
@@ -13772,10 +13776,10 @@
           "name": "Ørjan Nyland",
           "shortName": "Ø. Nyland",
           "number": "1",
-          "saves": 3,
+          "saves": 6,
           "goalsAgainst": 2,
           "cleanSheet": 0,
-          "savePct": 60,
+          "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -13791,6 +13795,90 @@
           "savePct": 75,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 100,
+      "espnEventId": "760513",
+      "date": "2026-07-12",
+      "homeTeam": "Argentina",
+      "awayTeam": "Switzerland",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-12T01:09:49.077Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 0,
+          "away": 0
+        },
+        "shots": {
+          "home": 0,
+          "away": 2
+        },
+        "possession": {
+          "home": 41.1,
+          "away": 58.9
+        },
+        "passes": {
+          "home": 39,
+          "away": 53
+        },
+        "fouls": {
+          "home": 1,
+          "away": 2
+        },
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "saves": {
+          "home": 0,
+          "away": 0
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Argentina",
+          "name": "Emiliano Martínez",
+          "shortName": "E. Martínez",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Switzerland",
+          "name": "Gregor Kobel",
+          "shortName": "G. Kobel",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
