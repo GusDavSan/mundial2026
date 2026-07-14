@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T22:21:14.620Z",
+  "updated": "2026-07-14T23:19:02.650Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1074,11 +1074,11 @@
       "home": "Spain",
       "away": "Austria",
       "source": "DAZN ES",
-      "title": "España vs Bélgica (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Q9zQv4nQHck",
-      "thumbnail": "https://i.ytimg.com/vi/Q9zQv4nQHck/hqdefault.jpg",
-      "videoId": "Q9zQv4nQHck",
-      "publishedAt": "2026-07-10T22:55:49Z",
+      "title": "Francia vs España (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=2h3L4vtICwE",
+      "thumbnail": "https://i.ytimg.com/vi/2h3L4vtICwE/hqdefault.jpg",
+      "videoId": "2h3L4vtICwE",
+      "publishedAt": "2026-07-14T23:00:38Z",
       "confidence": 12
     },
     {
@@ -1152,11 +1152,11 @@
       "home": "Paraguay",
       "away": "France",
       "source": "DAZN ES",
-      "title": "Francia vs Marruecos (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=yWhei5hUyME",
-      "thumbnail": "https://i.ytimg.com/vi/yWhei5hUyME/hqdefault.jpg",
-      "videoId": "yWhei5hUyME",
-      "publishedAt": "2026-07-10T00:00:21Z",
+      "title": "Francia vs España (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=2h3L4vtICwE",
+      "thumbnail": "https://i.ytimg.com/vi/2h3L4vtICwE/hqdefault.jpg",
+      "videoId": "2h3L4vtICwE",
+      "publishedAt": "2026-07-14T23:00:38Z",
       "confidence": 12
     },
     {
@@ -1256,12 +1256,12 @@
       "home": "France",
       "away": "Morocco",
       "source": "DAZN ES",
-      "title": "Francia vs Marruecos (2-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=yWhei5hUyME",
-      "thumbnail": "https://i.ytimg.com/vi/yWhei5hUyME/hqdefault.jpg",
-      "videoId": "yWhei5hUyME",
-      "publishedAt": "2026-07-10T00:00:21Z",
-      "confidence": 20
+      "title": "Francia vs España (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=2h3L4vtICwE",
+      "thumbnail": "https://i.ytimg.com/vi/2h3L4vtICwE/hqdefault.jpg",
+      "videoId": "2h3L4vtICwE",
+      "publishedAt": "2026-07-14T23:00:38Z",
+      "confidence": 12
     },
     {
       "matchId": 98,
@@ -1308,12 +1308,12 @@
       "home": "France",
       "away": "Spain",
       "source": "DAZN ES",
-      "title": "🗣️ Aitana Bonmatí: \"Mucha gente pensaba que Francia era favorita..está España para demostrar que no\"",
-      "url": "https://www.youtube.com/watch?v=3bYqm6kFDLU",
-      "thumbnail": "https://i4.ytimg.com/vi/3bYqm6kFDLU/hqdefault.jpg",
-      "videoId": "3bYqm6kFDLU",
-      "publishedAt": "2026-07-14T21:41:39+00:00",
-      "confidence": 14
+      "title": "Francia vs España (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=2h3L4vtICwE",
+      "thumbnail": "https://i.ytimg.com/vi/2h3L4vtICwE/hqdefault.jpg",
+      "videoId": "2h3L4vtICwE",
+      "publishedAt": "2026-07-14T23:00:38Z",
+      "confidence": 20
     }
   ]
 }
