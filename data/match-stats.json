@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T19:58:29.329Z",
+  "updated": "2026-07-14T21:08:15.312Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "updatedAt": "2026-07-14T21:08:15.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "updatedAt": "2026-07-14T21:08:15.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "updatedAt": "2026-07-14T21:08:15.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "updatedAt": "2026-07-14T21:08:15.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13672,7 +13672,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "updatedAt": "2026-07-14T21:08:15.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "updatedAt": "2026-07-14T21:08:15.312Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13973,54 +13973,54 @@
       "date": "2026-07-14",
       "homeTeam": "France",
       "awayTeam": "Spain",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
       "homeScore": 0,
-      "awayScore": 1,
-      "winner": "",
-      "loser": "",
+      "awayScore": 2,
+      "winner": "Spain",
+      "loser": "France",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "updatedAt": "2026-07-14T21:08:15.312Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 0,
-          "away": 1
+          "home": 3,
+          "away": 2
         },
         "shots": {
-          "home": 2,
-          "away": 5
+          "home": 10,
+          "away": 10
         },
         "possession": {
-          "home": 44.5,
-          "away": 55.5
+          "home": 49.1,
+          "away": 50.9
         },
         "passes": {
-          "home": 195,
-          "away": 252
+          "home": 472,
+          "away": 500
         },
         "fouls": {
-          "home": 5,
-          "away": 5
+          "home": 11,
+          "away": 12
         },
         "corners": {
-          "home": 3,
+          "home": 7,
           "away": 1
         },
         "saves": {
           "home": 0,
-          "away": 0
+          "away": 3
         },
         "offsides": {
-          "home": 3,
-          "away": 1
+          "home": 4,
+          "away": 5
         },
         "yellowCards": {
-          "home": 1,
+          "home": 2,
           "away": 1
         }
       },
@@ -14036,9 +14036,31 @@
           "ownGoal": false,
           "text": "Goal! France 0, Spain 1. Mikel Oyarzabal (Spain) converts the penalty with a left footed shot to the top right corner.",
           "source": "ESPN"
+        },
+        {
+          "id": "49793380",
+          "minute": "58",
+          "period": 2,
+          "team": "Spain",
+          "player": "Pedro Porro",
+          "assist": "Dani Olmo",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 0, Spain 2. Pedro Porro (Spain) right footed shot from the centre of the box to the bottom right corner. Assisted by Dani Olmo.",
+          "source": "ESPN"
         }
       ],
-      "assists": [],
+      "assists": [
+        {
+          "id": "49793380",
+          "minute": "58",
+          "period": 2,
+          "team": "Spain",
+          "player": "Dani Olmo",
+          "goal": "Pedro Porro",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -14047,7 +14069,7 @@
           "shortName": "M. Maignan",
           "number": "16",
           "saves": 0,
-          "goalsAgainst": 1,
+          "goalsAgainst": 2,
           "cleanSheet": 0,
           "savePct": 0,
           "penaltySaves": 0,
@@ -14059,12 +14081,12 @@
           "name": "Unai Simón",
           "shortName": "U. Simón",
           "number": "23",
-          "saves": 0,
+          "saves": 3,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
