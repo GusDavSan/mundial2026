@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T21:21:20.166Z",
+  "updated": "2026-07-14T22:21:14.620Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1300,6 +1300,19 @@
       "thumbnail": "https://i.ytimg.com/vi/6wDzD1LoFXQ/hqdefault.jpg",
       "videoId": "6wDzD1LoFXQ",
       "publishedAt": "2026-07-12T05:12:40Z",
+      "confidence": 14
+    },
+    {
+      "matchId": 101,
+      "date": "2026-07-14",
+      "home": "France",
+      "away": "Spain",
+      "source": "DAZN ES",
+      "title": "🗣️ Aitana Bonmatí: \"Mucha gente pensaba que Francia era favorita..está España para demostrar que no\"",
+      "url": "https://www.youtube.com/watch?v=3bYqm6kFDLU",
+      "thumbnail": "https://i4.ytimg.com/vi/3bYqm6kFDLU/hqdefault.jpg",
+      "videoId": "3bYqm6kFDLU",
+      "publishedAt": "2026-07-14T21:41:39+00:00",
       "confidence": 14
     }
   ]
