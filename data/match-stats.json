@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T18:42:38.844Z",
+  "updated": "2026-07-14T19:58:29.329Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -12936,7 +12936,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T18:42:38.844Z",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T18:42:38.844Z",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T18:42:38.844Z",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T18:42:38.844Z",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T18:42:38.844Z",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13672,7 +13672,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T18:42:38.844Z",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-14T18:42:38.844Z",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13964,6 +13964,107 @@
           "savePct": 57.1,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 101,
+      "espnEventId": "760514",
+      "date": "2026-07-14",
+      "homeTeam": "France",
+      "awayTeam": "Spain",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 1,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-14T19:58:29.329Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 0,
+          "away": 1
+        },
+        "shots": {
+          "home": 2,
+          "away": 5
+        },
+        "possession": {
+          "home": 44.5,
+          "away": 55.5
+        },
+        "passes": {
+          "home": 195,
+          "away": 252
+        },
+        "fouls": {
+          "home": 5,
+          "away": 5
+        },
+        "corners": {
+          "home": 3,
+          "away": 1
+        },
+        "saves": {
+          "home": 0,
+          "away": 0
+        },
+        "offsides": {
+          "home": 3,
+          "away": 1
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      "goals": [
+        {
+          "id": "49792518",
+          "minute": "22",
+          "period": 1,
+          "team": "Spain",
+          "player": "Mikel Oyarzabal",
+          "assist": "",
+          "penalty": true,
+          "ownGoal": false,
+          "text": "Goal! France 0, Spain 1. Mikel Oyarzabal (Spain) converts the penalty with a left footed shot to the top right corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "France",
+          "name": "Mike Maignan",
+          "shortName": "M. Maignan",
+          "number": "16",
+          "saves": 0,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Spain",
+          "name": "Unai Simón",
+          "shortName": "U. Simón",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
