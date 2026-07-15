@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T19:42:54.918Z",
+  "updated": "2026-07-15T21:21:45.495Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1204,12 +1204,12 @@
       "home": "Portugal",
       "away": "Spain",
       "source": "DAZN ES",
-      "title": "España vs Bélgica (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Q9zQv4nQHck",
-      "thumbnail": "https://i.ytimg.com/vi/Q9zQv4nQHck/hqdefault.jpg",
-      "videoId": "Q9zQv4nQHck",
-      "publishedAt": "2026-07-10T22:55:49Z",
-      "confidence": 14
+      "title": "Francia vs España (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=2h3L4vtICwE",
+      "thumbnail": "https://i.ytimg.com/vi/2h3L4vtICwE/hqdefault.jpg",
+      "videoId": "2h3L4vtICwE",
+      "publishedAt": "2026-07-14T23:00:38Z",
+      "confidence": 12
     },
     {
       "matchId": 94,
@@ -1269,12 +1269,12 @@
       "home": "Spain",
       "away": "Belgium",
       "source": "DAZN ES",
-      "title": "España vs Bélgica (2-1) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Q9zQv4nQHck",
-      "thumbnail": "https://i.ytimg.com/vi/Q9zQv4nQHck/hqdefault.jpg",
-      "videoId": "Q9zQv4nQHck",
-      "publishedAt": "2026-07-10T22:55:49Z",
-      "confidence": 20
+      "title": "Francia vs España (0-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=2h3L4vtICwE",
+      "thumbnail": "https://i.ytimg.com/vi/2h3L4vtICwE/hqdefault.jpg",
+      "videoId": "2h3L4vtICwE",
+      "publishedAt": "2026-07-14T23:00:38Z",
+      "confidence": 12
     },
     {
       "matchId": 99,
@@ -1314,6 +1314,19 @@
       "videoId": "2h3L4vtICwE",
       "publishedAt": "2026-07-14T23:00:38Z",
       "confidence": 20
+    },
+    {
+      "matchId": 102,
+      "date": "2026-07-15",
+      "home": "England",
+      "away": "Argentina",
+      "source": "DAZN ES",
+      "title": "¡ARGENTINA REPITE FINAL!🇦🇷🔥🔥El resumen de la remontada de los campeones del mundo ante Inglaterra 💥",
+      "url": "https://www.youtube.com/watch?v=IBQTX0MgzhU",
+      "thumbnail": "https://i2.ytimg.com/vi/IBQTX0MgzhU/hqdefault.jpg",
+      "videoId": "IBQTX0MgzhU",
+      "publishedAt": "2026-07-15T21:06:52+00:00",
+      "confidence": 17
     }
   ]
 }
