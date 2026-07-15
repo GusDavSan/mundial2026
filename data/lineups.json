@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T19:55:04.455Z",
+  "updated": "2026-07-15T21:10:02.555Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -51933,7 +51933,7 @@
       "homeTeam": "France",
       "awayTeam": "Morocco",
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:04.455Z",
+      "updatedAt": "2026-07-15T21:10:02.555Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -52482,7 +52482,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Belgium",
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:04.455Z",
+      "updatedAt": "2026-07-15T21:10:02.555Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -53001,7 +53001,7 @@
       "homeTeam": "Norway",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:04.455Z",
+      "updatedAt": "2026-07-15T21:10:02.555Z",
       "home": {
         "team": "Norway",
         "espnTeam": "Norway",
@@ -53540,7 +53540,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:04.455Z",
+      "updatedAt": "2026-07-15T21:10:02.555Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -54079,7 +54079,7 @@
       "homeTeam": "France",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:04.455Z",
+      "updatedAt": "2026-07-15T21:10:02.555Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -54628,7 +54628,7 @@
       "homeTeam": "England",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:04.455Z",
+      "updatedAt": "2026-07-15T21:10:02.555Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -54663,7 +54663,7 @@
             "position": "Center Right Defender",
             "formationPlace": "5",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Djed Spence",
@@ -54673,7 +54673,7 @@
             "position": "Left Back",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Reece James",
@@ -54683,7 +54683,7 @@
             "position": "Right Back",
             "formationPlace": "2",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Jude Bellingham",
@@ -54713,7 +54713,7 @@
             "position": "Right Midfielder",
             "formationPlace": "8",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Harry Kane",
@@ -54733,7 +54733,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Morgan Rogers",
@@ -54824,7 +54824,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -54844,7 +54844,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -54854,7 +54854,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -54864,7 +54864,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -54884,7 +54884,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           }
         ]
@@ -54913,7 +54913,7 @@
             "position": "Center Left Defender",
             "formationPlace": "6",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Cristian Romero",
@@ -54933,7 +54933,7 @@
             "position": "Defensive Midfielder",
             "formationPlace": "4",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Nicolás Tagliafico",
@@ -54943,7 +54943,7 @@
             "position": "Left Back",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Nahuel Molina",
@@ -54953,7 +54953,7 @@
             "position": "Right Back",
             "formationPlace": "2",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Alexis Mac Allister",
@@ -54993,7 +54993,7 @@
             "position": "Right Midfielder",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Lionel Messi",
@@ -55014,7 +55014,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55024,7 +55024,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55054,7 +55054,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55104,7 +55104,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55144,7 +55144,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
