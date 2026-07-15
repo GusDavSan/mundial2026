@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T18:40:37.990Z",
+  "updated": "2026-07-15T19:55:18.730Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T18:40:37.990Z",
+      "updatedAt": "2026-07-15T19:55:18.730Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T18:40:37.990Z",
+      "updatedAt": "2026-07-15T19:55:18.730Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T18:40:37.990Z",
+      "updatedAt": "2026-07-15T19:55:18.730Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13672,7 +13672,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T18:40:37.990Z",
+      "updatedAt": "2026-07-15T19:55:18.730Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T18:40:37.990Z",
+      "updatedAt": "2026-07-15T19:55:18.730Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T18:40:37.990Z",
+      "updatedAt": "2026-07-15T19:55:18.730Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14087,6 +14087,94 @@
           "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 102,
+      "espnEventId": "760515",
+      "date": "2026-07-15",
+      "homeTeam": "England",
+      "awayTeam": "Argentina",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-15T19:55:18.730Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 0,
+          "away": 0
+        },
+        "shots": {
+          "home": 1,
+          "away": 2
+        },
+        "possession": {
+          "home": 44.5,
+          "away": 55.5
+        },
+        "passes": {
+          "home": 198,
+          "away": 251
+        },
+        "fouls": {
+          "home": 7,
+          "away": 12
+        },
+        "corners": {
+          "home": 2,
+          "away": 1
+        },
+        "saves": {
+          "home": 0,
+          "away": 0
+        },
+        "offsides": {
+          "home": 1,
+          "away": 2
+        },
+        "yellowCards": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "England",
+          "name": "Jordan Pickford",
+          "shortName": "J. Pickford",
+          "number": "1",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Argentina",
+          "name": "Emiliano Martínez",
+          "shortName": "E. Martínez",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
         }
       ]
     }
