@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T06:00:54.889Z",
+  "updated": "2026-07-15T08:31:21.628Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13122,7 +13122,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T06:00:54.889Z",
+      "updatedAt": "2026-07-15T08:31:21.628Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13317,7 +13317,7 @@
       "penaltyHomeScore": 4,
       "penaltyAwayScore": 3,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T06:00:54.889Z",
+      "updatedAt": "2026-07-15T08:31:21.628Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T06:00:54.889Z",
+      "updatedAt": "2026-07-15T08:31:21.628Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T06:00:54.889Z",
+      "updatedAt": "2026-07-15T08:31:21.628Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13672,7 +13672,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T06:00:54.889Z",
+      "updatedAt": "2026-07-15T08:31:21.628Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T06:00:54.889Z",
+      "updatedAt": "2026-07-15T08:31:21.628Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T06:00:54.889Z",
+      "updatedAt": "2026-07-15T08:31:21.628Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
