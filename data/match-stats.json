@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T19:55:18.730Z",
+  "updated": "2026-07-15T21:09:46.202Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:18.730Z",
+      "updatedAt": "2026-07-15T21:09:46.202Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:18.730Z",
+      "updatedAt": "2026-07-15T21:09:46.202Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13672,7 +13672,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:18.730Z",
+      "updatedAt": "2026-07-15T21:09:46.202Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:18.730Z",
+      "updatedAt": "2026-07-15T21:09:46.202Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:18.730Z",
+      "updatedAt": "2026-07-15T21:09:46.202Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14096,59 +14096,124 @@
       "date": "2026-07-15",
       "homeTeam": "England",
       "awayTeam": "Argentina",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
-      "homeScore": 0,
-      "awayScore": 0,
-      "winner": "",
-      "loser": "",
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 2,
+      "winner": "Argentina",
+      "loser": "England",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T19:55:18.730Z",
+      "updatedAt": "2026-07-15T21:09:46.202Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 0,
-          "away": 0
+          "home": 2,
+          "away": 5
         },
         "shots": {
-          "home": 1,
-          "away": 2
+          "home": 5,
+          "away": 15
         },
         "possession": {
-          "home": 44.5,
-          "away": 55.5
+          "home": 35.7,
+          "away": 64.3
         },
         "passes": {
-          "home": 198,
-          "away": 251
+          "home": 325,
+          "away": 590
         },
         "fouls": {
-          "home": 7,
-          "away": 12
+          "home": 11,
+          "away": 15
         },
         "corners": {
           "home": 2,
-          "away": 1
+          "away": 6
         },
         "saves": {
-          "home": 0,
-          "away": 0
+          "home": 3,
+          "away": 1
         },
         "offsides": {
           "home": 1,
-          "away": 2
+          "away": 3
         },
         "yellowCards": {
           "home": 1,
-          "away": 1
+          "away": 3
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49797120",
+          "minute": "55",
+          "period": 2,
+          "team": "England",
+          "player": "Anthony Gordon",
+          "assist": "Morgan Rogers",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! England 1, Argentina 0. Anthony Gordon (England) right footed shot from very close range to the bottom left corner. Assisted by Morgan Rogers with a cross.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49797604",
+          "minute": "85",
+          "period": 2,
+          "team": "Argentina",
+          "player": "Enzo Fernández",
+          "assist": "Lionel Messi",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! England 1, Argentina 1. Enzo Fernández (Argentina) right footed shot from outside the box to the bottom left corner. Assisted by Lionel Messi following a corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49797667",
+          "minute": "90'+2",
+          "period": 2,
+          "team": "Argentina",
+          "player": "Lautaro Martínez",
+          "assist": "Lionel Messi",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! England 1, Argentina 2. Lautaro Martínez (Argentina) header from very close range to the top left corner. Assisted by Lionel Messi with a cross.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49797120",
+          "minute": "55",
+          "period": 2,
+          "team": "England",
+          "player": "Morgan Rogers",
+          "goal": "Anthony Gordon",
+          "source": "ESPN"
+        },
+        {
+          "id": "49797604",
+          "minute": "85",
+          "period": 2,
+          "team": "Argentina",
+          "player": "Lionel Messi",
+          "goal": "Enzo Fernández",
+          "source": "ESPN"
+        },
+        {
+          "id": "49797667",
+          "minute": "90'+2",
+          "period": 2,
+          "team": "Argentina",
+          "player": "Lionel Messi",
+          "goal": "Lautaro Martínez",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -14156,12 +14221,12 @@
           "name": "Jordan Pickford",
           "shortName": "J. Pickford",
           "number": "1",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 3,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 60,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -14169,12 +14234,12 @@
           "name": "Emiliano Martínez",
           "shortName": "E. Martínez",
           "number": "23",
-          "saves": 0,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 1,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         }
       ]
     }
