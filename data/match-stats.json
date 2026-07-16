@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T23:21:13.886Z",
+  "updated": "2026-07-16T00:18:10.923Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13405,7 +13405,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T23:21:13.886Z",
+      "updatedAt": "2026-07-16T00:18:10.923Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13537,7 +13537,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T23:21:13.886Z",
+      "updatedAt": "2026-07-16T00:18:10.923Z",
       "stats": {
         "shotsOnGoal": {
           "home": 8,
@@ -13672,7 +13672,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T23:21:13.886Z",
+      "updatedAt": "2026-07-16T00:18:10.923Z",
       "stats": {
         "shotsOnGoal": {
           "home": 4,
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T23:21:13.886Z",
+      "updatedAt": "2026-07-16T00:18:10.923Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T23:21:13.886Z",
+      "updatedAt": "2026-07-16T00:18:10.923Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14108,7 +14108,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-15T23:21:13.886Z",
+      "updatedAt": "2026-07-16T00:18:10.923Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -14119,12 +14119,12 @@
           "away": 15
         },
         "possession": {
-          "home": 35.7,
-          "away": 64.3
+          "home": 35.8,
+          "away": 64.2
         },
         "passes": {
           "home": 325,
-          "away": 590
+          "away": 588
         },
         "fouls": {
           "home": 11,
