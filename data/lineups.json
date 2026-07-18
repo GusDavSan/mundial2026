@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T20:23:18.407Z",
+  "updated": "2026-07-18T21:27:44.754Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -53540,7 +53540,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T20:23:18.407Z",
+      "updatedAt": "2026-07-18T21:27:44.754Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -54079,7 +54079,7 @@
       "homeTeam": "France",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T20:23:18.407Z",
+      "updatedAt": "2026-07-18T21:27:44.754Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -54628,7 +54628,7 @@
       "homeTeam": "England",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T20:23:18.407Z",
+      "updatedAt": "2026-07-18T21:27:44.754Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -55167,7 +55167,7 @@
       "homeTeam": "France",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T20:23:18.407Z",
+      "updatedAt": "2026-07-18T21:27:44.754Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -55181,98 +55181,78 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Ibrahima Konaté",
-            "shortName": "I. Konaté",
-            "num": "15",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Maxence Lacroix",
             "shortName": "M. Lacroix",
             "num": "26",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Malo Gusto",
-            "shortName": "M. Gusto",
-            "num": "2",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Ibrahima Konaté",
+            "shortName": "I. Konaté",
+            "num": "15",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
+            "formationPlace": "5",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Theo Hernández",
             "shortName": "T. Hernández",
             "num": "19",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "LB",
+            "position": "Left Back",
             "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Michael Olise",
-            "shortName": "M. Olise",
-            "num": "11",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Adrien Rabiot",
-            "shortName": "A. Rabiot",
-            "num": "14",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Warren Zaïre-Emery",
-            "shortName": "W. Zaïre-Emery",
-            "num": "18",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Désiré Doué",
-            "shortName": "D. Doué",
-            "num": "20",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Malo Gusto",
+            "shortName": "M. Gusto",
+            "num": "2",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Rayan Cherki",
             "shortName": "R. Cherki",
             "num": "24",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "AM",
+            "position": "Attacking Midfielder",
             "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Adrien Rabiot",
+            "shortName": "A. Rabiot",
+            "num": "14",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Warren Zaïre-Emery",
+            "shortName": "W. Zaïre-Emery",
+            "num": "18",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Kylian Mbappé",
@@ -55281,8 +55261,28 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Désiré Doué",
+            "shortName": "D. Doué",
+            "num": "20",
+            "pos": "AM-L",
+            "position": "Attacking Midfielder Left",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Michael Olise",
+            "shortName": "M. Olise",
+            "num": "11",
+            "pos": "AM-R",
+            "position": "Attacking Midfielder Right",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -55293,8 +55293,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Robin Risser",
@@ -55303,8 +55303,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Manu Koné",
@@ -55313,8 +55313,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Maghnes Akliouche",
@@ -55323,8 +55323,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Bradley Barcola",
@@ -55333,8 +55333,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jean-Philippe Mateta",
@@ -55343,8 +55343,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jules Koundé",
@@ -55353,8 +55353,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Brice Samba",
@@ -55363,8 +55363,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "William Saliba",
@@ -55373,8 +55373,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Dayot Upamecano",
@@ -55383,8 +55383,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ousmane Dembélé",
@@ -55393,8 +55393,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "N'Golo Kanté",
@@ -55403,8 +55403,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Lucas Digne",
@@ -55413,8 +55413,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Lucas Hernández",
@@ -55423,8 +55423,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Aurélien Tchouaméni",
@@ -55433,8 +55433,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       },
@@ -55451,98 +55451,98 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Jarell Quansah",
-            "shortName": "J. Quansah",
-            "num": "26",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Djed Spence",
-            "shortName": "D. Spence",
-            "num": "25",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marc Guéhi",
             "shortName": "M. Guéhi",
             "num": "6",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ezri Konsa",
             "shortName": "E. Konsa",
             "num": "2",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
             "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Morgan Rogers",
-            "shortName": "M. Rogers",
-            "num": "17",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Marcus Rashford",
-            "shortName": "M. Rashford",
-            "num": "11",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Eberechi Eze",
-            "shortName": "E. Eze",
-            "num": "21",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Bukayo Saka",
-            "shortName": "B. Saka",
-            "num": "7",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Declan Rice",
             "shortName": "D. Rice",
             "num": "4",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "DM",
+            "position": "Defensive Midfielder",
             "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Djed Spence",
+            "shortName": "D. Spence",
+            "num": "25",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Jarell Quansah",
+            "shortName": "J. Quansah",
+            "num": "26",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Eberechi Eze",
+            "shortName": "E. Eze",
+            "num": "21",
+            "pos": "CM-L",
+            "position": "Center Left Midfielder",
+            "formationPlace": "10",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Morgan Rogers",
+            "shortName": "M. Rogers",
+            "num": "17",
+            "pos": "CM-R",
+            "position": "Center Right Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Marcus Rashford",
+            "shortName": "M. Rashford",
+            "num": "11",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Bukayo Saka",
+            "shortName": "B. Saka",
+            "num": "7",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ivan Toney",
@@ -55551,8 +55551,8 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -55563,8 +55563,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jude Bellingham",
@@ -55573,8 +55573,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Harry Kane",
@@ -55583,8 +55583,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Nico O'Reilly",
@@ -55593,8 +55593,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Trevoh Chalobah",
@@ -55603,8 +55603,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Elliot Anderson",
@@ -55613,8 +55613,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "James Trafford",
@@ -55623,8 +55623,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "John Stones",
@@ -55633,8 +55633,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Dan Burn",
@@ -55643,8 +55643,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Jordan Henderson",
@@ -55653,8 +55653,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Noni Madueke",
@@ -55663,8 +55663,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Anthony Gordon",
@@ -55673,8 +55673,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Reece James",
@@ -55683,8 +55683,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ollie Watkins",
@@ -55693,8 +55693,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       }
