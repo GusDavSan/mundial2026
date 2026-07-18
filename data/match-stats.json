@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T21:29:23.019Z",
+  "updated": "2026-07-18T22:27:11.008Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:29:23.019Z",
+      "updatedAt": "2026-07-18T22:27:11.008Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:29:23.019Z",
+      "updatedAt": "2026-07-18T22:27:11.008Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14108,7 +14108,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:29:23.019Z",
+      "updatedAt": "2026-07-18T22:27:11.008Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -14252,8 +14252,8 @@
       "status": "Live",
       "statusState": "in",
       "completed": false,
-      "homeScore": 0,
-      "awayScore": 2,
+      "homeScore": 2,
+      "awayScore": 4,
       "winner": "",
       "loser": "",
       "decidedBy": "",
@@ -14261,39 +14261,39 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:29:23.019Z",
+      "updatedAt": "2026-07-18T22:27:11.008Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 1,
-          "away": 2
+          "home": 4,
+          "away": 8
         },
         "shots": {
-          "home": 4,
-          "away": 5
+          "home": 9,
+          "away": 14
         },
         "possession": {
-          "home": 49.1,
-          "away": 50.9
+          "home": 42.6,
+          "away": 57.4
         },
         "passes": {
-          "home": 139,
-          "away": 140
+          "home": 308,
+          "away": 408
         },
         "fouls": {
-          "home": 3,
-          "away": 2
+          "home": 7,
+          "away": 7
         },
         "corners": {
           "home": 2,
-          "away": 2
+          "away": 4
         },
         "saves": {
-          "home": 0,
-          "away": 1
+          "home": 3,
+          "away": 2
         },
         "offsides": {
-          "home": 0,
-          "away": 2
+          "home": 2,
+          "away": 3
         }
       },
       "goals": [
@@ -14320,6 +14320,54 @@
           "ownGoal": false,
           "text": "Goal! France 0, England 2. Ezri Konsa (England) header from the centre of the box to the bottom right corner. Assisted by Declan Rice with a cross following a corner.",
           "source": "ESPN"
+        },
+        {
+          "id": "49866393",
+          "minute": "37",
+          "period": 1,
+          "team": "England",
+          "player": "Bukayo Saka",
+          "assist": "Marcus Rashford",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 0, England 3. Bukayo Saka (England) left footed shot from the left side of the box to the high centre of the goal. Assisted by Marcus Rashford following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49866797",
+          "minute": "45'+1",
+          "period": 1,
+          "team": "England",
+          "player": "Bukayo Saka",
+          "assist": "Eberechi Eze",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 0, England 4. Bukayo Saka (England) left footed shot from the centre of the box to the bottom right corner. Assisted by Eberechi Eze with a through ball.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49867337",
+          "minute": "48",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "assist": "Michael Olise",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 1, England 4. Kylian Mbappé (France) left footed shot from the centre of the box to the bottom right corner. Assisted by Michael Olise with a through ball following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49867589",
+          "minute": "54",
+          "period": 2,
+          "team": "France",
+          "player": "Bradley Barcola",
+          "assist": "Kylian Mbappé",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 2, England 4. Bradley Barcola (France) right footed shot from the centre of the box to the bottom left corner. Assisted by Kylian Mbappé with a through ball.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -14331,6 +14379,42 @@
           "player": "Declan Rice",
           "goal": "Ezri Konsa",
           "source": "ESPN"
+        },
+        {
+          "id": "49866393",
+          "minute": "37",
+          "period": 1,
+          "team": "England",
+          "player": "Marcus Rashford",
+          "goal": "Bukayo Saka",
+          "source": "ESPN"
+        },
+        {
+          "id": "49866797",
+          "minute": "45'+1",
+          "period": 1,
+          "team": "England",
+          "player": "Eberechi Eze",
+          "goal": "Bukayo Saka",
+          "source": "ESPN"
+        },
+        {
+          "id": "49867337",
+          "minute": "48",
+          "period": 2,
+          "team": "France",
+          "player": "Michael Olise",
+          "goal": "Kylian Mbappé",
+          "source": "ESPN"
+        },
+        {
+          "id": "49867589",
+          "minute": "54",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "goal": "Bradley Barcola",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -14340,12 +14424,12 @@
           "name": "Mike Maignan",
           "shortName": "M. Maignan",
           "number": "16",
-          "saves": 0,
-          "goalsAgainst": 2,
+          "saves": 3,
+          "goalsAgainst": 4,
           "cleanSheet": 0,
-          "savePct": 0,
+          "savePct": 42.9,
           "penaltySaves": 0,
-          "source": "ESPN roster"
+          "source": "ESPN leaders"
         },
         {
           "side": "away",
@@ -14353,10 +14437,10 @@
           "name": "Dean Henderson",
           "shortName": "D. Henderson",
           "number": "13",
-          "saves": 1,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "saves": 2,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 50,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
