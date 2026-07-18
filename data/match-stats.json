@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T20:31:19.758Z",
+  "updated": "2026-07-18T21:29:23.019Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T20:31:19.758Z",
+      "updatedAt": "2026-07-18T21:29:23.019Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T20:31:19.758Z",
+      "updatedAt": "2026-07-18T21:29:23.019Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14108,7 +14108,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T20:31:19.758Z",
+      "updatedAt": "2026-07-18T21:29:23.019Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -14238,6 +14238,125 @@
           "goalsAgainst": 1,
           "cleanSheet": 0,
           "savePct": 50,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 103,
+      "espnEventId": "760516",
+      "date": "2026-07-18",
+      "homeTeam": "France",
+      "awayTeam": "England",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 2,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-18T21:29:23.019Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 1,
+          "away": 2
+        },
+        "shots": {
+          "home": 4,
+          "away": 5
+        },
+        "possession": {
+          "home": 49.1,
+          "away": 50.9
+        },
+        "passes": {
+          "home": 139,
+          "away": 140
+        },
+        "fouls": {
+          "home": 3,
+          "away": 2
+        },
+        "corners": {
+          "home": 2,
+          "away": 2
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 2
+        }
+      },
+      "goals": [
+        {
+          "id": "49865115",
+          "minute": "3",
+          "period": 1,
+          "team": "England",
+          "player": "Declan Rice",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 0, England 1. Declan Rice (England) right footed shot from outside the box to the bottom right corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49865676",
+          "minute": "18",
+          "period": 1,
+          "team": "England",
+          "player": "Ezri Konsa",
+          "assist": "Declan Rice",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 0, England 2. Ezri Konsa (England) header from the centre of the box to the bottom right corner. Assisted by Declan Rice with a cross following a corner.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49865676",
+          "minute": "18",
+          "period": 1,
+          "team": "England",
+          "player": "Declan Rice",
+          "goal": "Ezri Konsa",
+          "source": "ESPN"
+        }
+      ],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "France",
+          "name": "Mike Maignan",
+          "shortName": "M. Maignan",
+          "number": "16",
+          "saves": 0,
+          "goalsAgainst": 2,
+          "cleanSheet": 0,
+          "savePct": 0,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "England",
+          "name": "Dean Henderson",
+          "shortName": "D. Henderson",
+          "number": "13",
+          "saves": 1,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
