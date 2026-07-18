@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T21:27:44.754Z",
+  "updated": "2026-07-18T22:26:35.705Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -53540,7 +53540,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:27:44.754Z",
+      "updatedAt": "2026-07-18T22:26:35.705Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -54079,7 +54079,7 @@
       "homeTeam": "France",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:27:44.754Z",
+      "updatedAt": "2026-07-18T22:26:35.705Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -54628,7 +54628,7 @@
       "homeTeam": "England",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:27:44.754Z",
+      "updatedAt": "2026-07-18T22:26:35.705Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -55167,7 +55167,7 @@
       "homeTeam": "France",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-18T21:27:44.754Z",
+      "updatedAt": "2026-07-18T22:26:35.705Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -55202,7 +55202,7 @@
             "position": "Center Right Defender",
             "formationPlace": "5",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Theo Hernández",
@@ -55212,7 +55212,7 @@
             "position": "Left Back",
             "formationPlace": "3",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Malo Gusto",
@@ -55232,7 +55232,7 @@
             "position": "Attacking Midfielder",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Adrien Rabiot",
@@ -55272,7 +55272,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Michael Olise",
@@ -55333,7 +55333,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55383,7 +55383,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55393,7 +55393,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55413,7 +55413,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55532,7 +55532,7 @@
             "position": "Left Midfielder",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Bukayo Saka",
@@ -55693,7 +55693,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           }
         ]
