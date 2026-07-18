@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T22:27:11.008Z",
+  "updated": "2026-07-18T23:30:12.116Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T22:27:11.008Z",
+      "updatedAt": "2026-07-18T23:30:12.116Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T22:27:11.008Z",
+      "updatedAt": "2026-07-18T23:30:12.116Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14108,7 +14108,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T22:27:11.008Z",
+      "updatedAt": "2026-07-18T23:30:12.116Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -14249,50 +14249,50 @@
       "date": "2026-07-18",
       "homeTeam": "France",
       "awayTeam": "England",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
-      "homeScore": 2,
-      "awayScore": 4,
-      "winner": "",
-      "loser": "",
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 6,
+      "winner": "England",
+      "loser": "France",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-18T22:27:11.008Z",
+      "updatedAt": "2026-07-18T23:30:12.116Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 4,
-          "away": 8
+          "home": 9,
+          "away": 11
         },
         "shots": {
-          "home": 9,
-          "away": 14
+          "home": 19,
+          "away": 19
         },
         "possession": {
-          "home": 42.6,
-          "away": 57.4
+          "home": 45.9,
+          "away": 54.1
         },
         "passes": {
-          "home": 308,
-          "away": 408
+          "home": 444,
+          "away": 517
         },
         "fouls": {
-          "home": 7,
-          "away": 7
+          "home": 14,
+          "away": 8
         },
         "corners": {
-          "home": 2,
+          "home": 3,
           "away": 4
         },
         "saves": {
-          "home": 3,
-          "away": 2
+          "home": 4,
+          "away": 5
         },
         "offsides": {
-          "home": 2,
+          "home": 3,
           "away": 3
         }
       },
@@ -14368,6 +14368,54 @@
           "ownGoal": false,
           "text": "Goal! France 2, England 4. Bradley Barcola (France) right footed shot from the centre of the box to the bottom left corner. Assisted by Kylian Mbappé with a through ball.",
           "source": "ESPN"
+        },
+        {
+          "id": "49867945",
+          "minute": "66",
+          "period": 2,
+          "team": "France",
+          "player": "Kylian Mbappé",
+          "assist": "Michael Olise",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 3, England 4. Kylian Mbappé (France) left footed shot from the centre of the box to the bottom right corner. Assisted by Michael Olise.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49868711",
+          "minute": "87",
+          "period": 2,
+          "team": "England",
+          "player": "Bukayo Saka",
+          "assist": "",
+          "penalty": true,
+          "ownGoal": false,
+          "text": "Goal! France 3, England 5. Bukayo Saka (England) converts the penalty with a left footed shot to the bottom right corner.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49869018",
+          "minute": "90'+6",
+          "period": 2,
+          "team": "France",
+          "player": "Ousmane Dembélé",
+          "assist": "Dayot Upamecano",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 4, England 5. Ousmane Dembélé (France) left footed shot from the centre of the box to the bottom left corner. Assisted by Dayot Upamecano following a fast break.",
+          "source": "ESPN"
+        },
+        {
+          "id": "49869058",
+          "minute": "90'+8",
+          "period": 2,
+          "team": "England",
+          "player": "Jude Bellingham",
+          "assist": "",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! France 4, England 6. Jude Bellingham (England) right footed shot from the centre of the box to the bottom right corner following a fast break.",
+          "source": "ESPN"
         }
       ],
       "assists": [
@@ -14415,6 +14463,24 @@
           "player": "Kylian Mbappé",
           "goal": "Bradley Barcola",
           "source": "ESPN"
+        },
+        {
+          "id": "49867945",
+          "minute": "66",
+          "period": 2,
+          "team": "France",
+          "player": "Michael Olise",
+          "goal": "Kylian Mbappé",
+          "source": "ESPN"
+        },
+        {
+          "id": "49869018",
+          "minute": "90'+6",
+          "period": 2,
+          "team": "France",
+          "player": "Dayot Upamecano",
+          "goal": "Ousmane Dembélé",
+          "source": "ESPN"
         }
       ],
       "keepers": [
@@ -14424,10 +14490,10 @@
           "name": "Mike Maignan",
           "shortName": "M. Maignan",
           "number": "16",
-          "saves": 3,
-          "goalsAgainst": 4,
+          "saves": 4,
+          "goalsAgainst": 6,
           "cleanSheet": 0,
-          "savePct": 42.9,
+          "savePct": 40,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         },
@@ -14437,10 +14503,10 @@
           "name": "Dean Henderson",
           "shortName": "D. Henderson",
           "number": "13",
-          "saves": 2,
-          "goalsAgainst": 2,
+          "saves": 5,
+          "goalsAgainst": 4,
           "cleanSheet": 0,
-          "savePct": 50,
+          "savePct": 55.6,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
