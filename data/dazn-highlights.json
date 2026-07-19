@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T23:17:48.841Z",
+  "updated": "2026-07-19T00:16:59.288Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1282,12 +1282,12 @@
       "home": "Norway",
       "away": "England",
       "source": "DAZN ES",
-      "title": "Si hay una gran cita, ahí está Bellingham: 7 de sus 12 goles con Inglaterra han llegado en Mundiales",
-      "url": "https://www.youtube.com/watch?v=Uls2DtmhlbU",
-      "thumbnail": "https://i.ytimg.com/vi/Uls2DtmhlbU/hqdefault.jpg",
-      "videoId": "Uls2DtmhlbU",
-      "publishedAt": "2026-07-12T15:19:08Z",
-      "confidence": 13
+      "title": "Inglaterra vs Argentina (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Gm_UDRU1OGQ",
+      "thumbnail": "https://i.ytimg.com/vi/Gm_UDRU1OGQ/hqdefault.jpg",
+      "videoId": "Gm_UDRU1OGQ",
+      "publishedAt": "2026-07-15T22:59:03Z",
+      "confidence": 12
     },
     {
       "matchId": 100,
@@ -1327,6 +1327,19 @@
       "videoId": "Gm_UDRU1OGQ",
       "publishedAt": "2026-07-15T22:59:03Z",
       "confidence": 20
+    },
+    {
+      "matchId": 103,
+      "date": "2026-07-18",
+      "home": "France",
+      "away": "England",
+      "source": "DAZN ES",
+      "title": "🤯 ¿Quién dijo que el tercer y cuarto puesto no importa? MENUDO PARTIDAZO entre Francia e Inglaterra🔥",
+      "url": "https://www.youtube.com/watch?v=SnmLZ6QNrfI",
+      "thumbnail": "https://i4.ytimg.com/vi/SnmLZ6QNrfI/hqdefault.jpg",
+      "videoId": "SnmLZ6QNrfI",
+      "publishedAt": "2026-07-18T23:23:39+00:00",
+      "confidence": 14
     }
   ]
 }
