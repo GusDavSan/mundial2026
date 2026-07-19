@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T19:44:28.292Z",
+  "updated": "2026-07-19T20:31:34.595Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -53540,7 +53540,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:44:28.292Z",
+      "updatedAt": "2026-07-19T20:31:34.595Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -54079,7 +54079,7 @@
       "homeTeam": "France",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:44:28.292Z",
+      "updatedAt": "2026-07-19T20:31:34.595Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -54628,7 +54628,7 @@
       "homeTeam": "England",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:44:28.292Z",
+      "updatedAt": "2026-07-19T20:31:34.595Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -55167,7 +55167,7 @@
       "homeTeam": "France",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:44:28.292Z",
+      "updatedAt": "2026-07-19T20:31:34.595Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -55706,7 +55706,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:44:28.292Z",
+      "updatedAt": "2026-07-19T20:31:34.595Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -56001,7 +56001,7 @@
             "position": "Center Left Defender",
             "formationPlace": "6",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Cristian Romero",
@@ -56061,7 +56061,7 @@
             "position": "Left Midfielder",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Rodrigo De Paul",
@@ -56112,7 +56112,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -56142,7 +56142,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
