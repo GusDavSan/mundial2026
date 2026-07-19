@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T18:31:28.938Z",
+  "updated": "2026-07-19T19:44:28.292Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -53540,7 +53540,7 @@
       "homeTeam": "Argentina",
       "awayTeam": "Switzerland",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:28.938Z",
+      "updatedAt": "2026-07-19T19:44:28.292Z",
       "home": {
         "team": "Argentina",
         "espnTeam": "Argentina",
@@ -54079,7 +54079,7 @@
       "homeTeam": "France",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:28.938Z",
+      "updatedAt": "2026-07-19T19:44:28.292Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -54628,7 +54628,7 @@
       "homeTeam": "England",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:28.938Z",
+      "updatedAt": "2026-07-19T19:44:28.292Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -55167,7 +55167,7 @@
       "homeTeam": "France",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:28.938Z",
+      "updatedAt": "2026-07-19T19:44:28.292Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -55706,7 +55706,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:28.938Z",
+      "updatedAt": "2026-07-19T19:44:28.292Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -55720,98 +55720,78 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Pedro Porro",
-            "shortName": "P. Porro",
-            "num": "12",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Aymeric Laporte",
             "shortName": "A. Laporte",
             "num": "14",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Pau Cubarsí",
             "shortName": "P. Cubarsí",
             "num": "22",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
             "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marc Cucurella",
             "shortName": "M. Cucurella",
             "num": "24",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "LB",
+            "position": "Left Back",
             "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
-            "name": "Lamine Yamal",
-            "shortName": "L. Yamal",
-            "num": "19",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Rodri",
-            "shortName": "Rodri",
-            "num": "16",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Álex Baena",
-            "shortName": "Á. Baena",
-            "num": "15",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "name": "Pedro Porro",
+            "shortName": "P. Porro",
+            "num": "12",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Dani Olmo",
             "shortName": "D. Olmo",
             "num": "10",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "AM",
+            "position": "Attacking Midfielder",
             "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Fabián Ruiz",
             "shortName": "F. Ruiz",
             "num": "8",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "LM",
+            "position": "Left Midfielder",
             "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Rodri",
+            "shortName": "Rodri",
+            "num": "16",
+            "pos": "RM",
+            "position": "Right Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Mikel Oyarzabal",
@@ -55820,8 +55800,28 @@
             "pos": "F",
             "position": "Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Álex Baena",
+            "shortName": "Á. Baena",
+            "num": "15",
+            "pos": "AM-L",
+            "position": "Attacking Midfielder Left",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Lamine Yamal",
+            "shortName": "L. Yamal",
+            "num": "19",
+            "pos": "AM-R",
+            "position": "Attacking Midfielder Right",
+            "formationPlace": "7",
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -55832,8 +55832,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Martín Zubimendi",
@@ -55842,8 +55842,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Nico Williams",
@@ -55852,8 +55852,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Borja Iglesias",
@@ -55862,8 +55862,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Ferran Torres",
@@ -55872,8 +55872,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Víctor Muñoz",
@@ -55882,8 +55882,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Pedri",
@@ -55892,8 +55892,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Mikel Merino",
@@ -55902,8 +55902,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marc Pubill",
@@ -55912,8 +55912,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Gavi",
@@ -55922,8 +55922,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "David Raya",
@@ -55932,8 +55932,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marcos Llorente",
@@ -55942,8 +55942,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Yéremy Pino",
@@ -55952,8 +55952,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Joan García",
@@ -55962,8 +55962,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Eric García",
@@ -55972,8 +55972,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       },
@@ -55990,108 +55990,108 @@
             "pos": "G",
             "position": "Goalkeeper",
             "formationPlace": "1",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Gonzalo Montiel",
-            "shortName": "G. Montiel",
-            "num": "4",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "2",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Lisandro Martínez",
             "shortName": "L. Martínez",
             "num": "6",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-L",
+            "position": "Center Left Defender",
             "formationPlace": "6",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Nicolás Tagliafico",
-            "shortName": "N. Tagliafico",
-            "num": "3",
-            "pos": "D",
-            "position": "Defender",
-            "formationPlace": "3",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Cristian Romero",
             "shortName": "C. Romero",
             "num": "13",
-            "pos": "D",
-            "position": "Defender",
+            "pos": "CD-R",
+            "position": "Center Right Defender",
             "formationPlace": "5",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Nicolás Tagliafico",
+            "shortName": "N. Tagliafico",
+            "num": "3",
+            "pos": "LB",
+            "position": "Left Back",
+            "formationPlace": "3",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Gonzalo Montiel",
+            "shortName": "G. Montiel",
+            "num": "4",
+            "pos": "RB",
+            "position": "Right Back",
+            "formationPlace": "2",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Alexis Mac Allister",
             "shortName": "A. Mac Allister",
             "num": "20",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "4",
-            "subbedIn": true,
-            "subbedOut": true
-          },
-          {
-            "name": "Nico González",
-            "shortName": "N. González",
-            "num": "15",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "11",
-            "subbedIn": true,
-            "subbedOut": true
+            "pos": "CM-L",
+            "position": "Center Left Midfielder",
+            "formationPlace": "8",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Enzo Fernández",
             "shortName": "E. Fernández",
             "num": "24",
-            "pos": "M",
-            "position": "Midfielder",
-            "formationPlace": "8",
-            "subbedIn": true,
-            "subbedOut": true
+            "pos": "CM-R",
+            "position": "Center Right Midfielder",
+            "formationPlace": "4",
+            "subbedIn": false,
+            "subbedOut": false
+          },
+          {
+            "name": "Nico González",
+            "shortName": "N. González",
+            "num": "15",
+            "pos": "LM",
+            "position": "Left Midfielder",
+            "formationPlace": "11",
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Rodrigo De Paul",
             "shortName": "R. De Paul",
             "num": "7",
-            "pos": "M",
-            "position": "Midfielder",
+            "pos": "RM",
+            "position": "Right Midfielder",
             "formationPlace": "7",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Julián Álvarez",
             "shortName": "J. Álvarez",
             "num": "9",
-            "pos": "F",
-            "position": "Forward",
+            "pos": "CF-L",
+            "position": "Center Left Forward",
             "formationPlace": "9",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Lionel Messi",
             "shortName": "L. Messi",
             "num": "10",
-            "pos": "F",
-            "position": "Forward",
+            "pos": "CF-R",
+            "position": "Center Right Forward",
             "formationPlace": "10",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ],
         "bench": [
@@ -56102,8 +56102,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Leandro Paredes",
@@ -56112,8 +56112,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Valentín Barco",
@@ -56122,8 +56122,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Gerónimo Rulli",
@@ -56132,8 +56132,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Nicolás Otamendi",
@@ -56142,8 +56142,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Nahuel Molina",
@@ -56152,8 +56152,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Giovani Lo Celso",
@@ -56162,8 +56162,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Giuliano Simeone",
@@ -56172,8 +56172,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "José Manuel López",
@@ -56182,8 +56182,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Thiago Almada",
@@ -56192,8 +56192,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Marcos Senesi",
@@ -56202,8 +56202,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Lautaro Martínez",
@@ -56212,8 +56212,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Juan Musso",
@@ -56222,8 +56222,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Facundo Medina",
@@ -56232,8 +56232,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           },
           {
             "name": "Nico Paz",
@@ -56242,8 +56242,8 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": true,
-            "subbedOut": true
+            "subbedIn": false,
+            "subbedOut": false
           }
         ]
       }
