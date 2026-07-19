@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T21:36:28.005Z",
+  "updated": "2026-07-19T22:35:59.294Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T21:36:28.005Z",
+      "updatedAt": "2026-07-19T22:35:59.294Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14108,7 +14108,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T21:36:28.005Z",
+      "updatedAt": "2026-07-19T22:35:59.294Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -14261,7 +14261,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T21:36:28.005Z",
+      "updatedAt": "2026-07-19T22:35:59.294Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -14518,63 +14518,86 @@
       "date": "2026-07-19",
       "homeTeam": "Spain",
       "awayTeam": "Argentina",
-      "status": "Live",
-      "statusState": "in",
-      "completed": false,
-      "homeScore": 0,
+      "status": "FT",
+      "statusState": "post",
+      "completed": true,
+      "homeScore": 1,
       "awayScore": 0,
-      "winner": "",
-      "loser": "",
+      "winner": "Spain",
+      "loser": "Argentina",
       "decidedBy": "",
       "penaltyWinner": "",
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T21:36:28.005Z",
+      "updatedAt": "2026-07-19T22:35:59.294Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 11,
+          "home": 12,
           "away": 0
         },
         "shots": {
-          "home": 19,
-          "away": 0
+          "home": 20,
+          "away": 2
         },
         "possession": {
-          "home": 68.3,
-          "away": 31.7
+          "home": 65.1,
+          "away": 34.9
         },
         "passes": {
-          "home": 762,
-          "away": 362
+          "home": 852,
+          "away": 464
         },
         "fouls": {
-          "home": 16,
-          "away": 21
+          "home": 21,
+          "away": 25
         },
         "corners": {
           "home": 9,
-          "away": 1
+          "away": 4
         },
         "saves": {
           "home": 0,
           "away": 11
         },
         "offsides": {
-          "home": 2,
+          "home": 4,
           "away": 1
         },
         "yellowCards": {
           "home": 0,
-          "away": 4
+          "away": 5
         },
         "redCards": {
           "home": 0,
           "away": 1
         }
       },
-      "goals": [],
-      "assists": [],
+      "goals": [
+        {
+          "id": "49880522",
+          "minute": "106",
+          "period": 4,
+          "team": "Spain",
+          "player": "Ferran Torres",
+          "assist": "Nico Williams",
+          "penalty": false,
+          "ownGoal": false,
+          "text": "Goal! Spain 1, Argentina 0. Ferran Torres (Spain) left footed shot from the centre of the box to the high centre of the goal. Assisted by Nico Williams with a headed pass.",
+          "source": "ESPN"
+        }
+      ],
+      "assists": [
+        {
+          "id": "49880522",
+          "minute": "106",
+          "period": 4,
+          "team": "Spain",
+          "player": "Nico Williams",
+          "goal": "Ferran Torres",
+          "source": "ESPN"
+        }
+      ],
       "keepers": [
         {
           "side": "home",
@@ -14596,9 +14619,9 @@
           "shortName": "E. Martínez",
           "number": "23",
           "saves": 11,
-          "goalsAgainst": 0,
-          "cleanSheet": 1,
-          "savePct": 100,
+          "goalsAgainst": 1,
+          "cleanSheet": 0,
+          "savePct": 91.7,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
