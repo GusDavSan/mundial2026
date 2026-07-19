@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T20:31:34.595Z",
+  "updated": "2026-07-19T21:27:37.362Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -54079,7 +54079,7 @@
       "homeTeam": "France",
       "awayTeam": "Spain",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T20:31:34.595Z",
+      "updatedAt": "2026-07-19T21:27:37.362Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -54628,7 +54628,7 @@
       "homeTeam": "England",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T20:31:34.595Z",
+      "updatedAt": "2026-07-19T21:27:37.362Z",
       "home": {
         "team": "England",
         "espnTeam": "England",
@@ -55167,7 +55167,7 @@
       "homeTeam": "France",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T20:31:34.595Z",
+      "updatedAt": "2026-07-19T21:27:37.362Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -55706,7 +55706,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-19T20:31:34.595Z",
+      "updatedAt": "2026-07-19T21:27:37.362Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
@@ -55771,7 +55771,7 @@
             "position": "Attacking Midfielder",
             "formationPlace": "10",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Fabián Ruiz",
@@ -55781,7 +55781,7 @@
             "position": "Left Midfielder",
             "formationPlace": "4",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Rodri",
@@ -55801,7 +55801,7 @@
             "position": "Forward",
             "formationPlace": "9",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Álex Baena",
@@ -55811,7 +55811,7 @@
             "position": "Attacking Midfielder Left",
             "formationPlace": "11",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Lamine Yamal",
@@ -55852,7 +55852,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55872,7 +55872,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55892,7 +55892,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -55902,7 +55902,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -56011,7 +56011,7 @@
             "position": "Center Right Defender",
             "formationPlace": "5",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Nicolás Tagliafico",
@@ -56031,7 +56031,7 @@
             "position": "Right Back",
             "formationPlace": "2",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Alexis Mac Allister",
@@ -56071,7 +56071,7 @@
             "position": "Right Midfielder",
             "formationPlace": "7",
             "subbedIn": false,
-            "subbedOut": false
+            "subbedOut": true
           },
           {
             "name": "Julián Álvarez",
@@ -56152,7 +56152,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -56172,7 +56172,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
@@ -56232,7 +56232,7 @@
             "pos": "SUB",
             "position": "Substitute",
             "formationPlace": "0",
-            "subbedIn": false,
+            "subbedIn": true,
             "subbedOut": false
           },
           {
