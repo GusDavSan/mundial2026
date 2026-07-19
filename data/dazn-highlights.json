@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T19:39:31.055Z",
+  "updated": "2026-07-19T21:14:15.364Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1308,12 +1308,12 @@
       "home": "France",
       "away": "Spain",
       "source": "DAZN ES",
-      "title": "¡EXHIBICIÓN DE ESPAÑA CONTRA FRANCIA! | ¿FAVORITOS PARA GANAR EL MUNDIAL 2026?",
-      "url": "https://www.youtube.com/watch?v=uYk7IqocWk4",
-      "thumbnail": "https://i.ytimg.com/vi/uYk7IqocWk4/hqdefault.jpg",
-      "videoId": "uYk7IqocWk4",
-      "publishedAt": "2026-07-15T12:38:06Z",
-      "confidence": 16
+      "title": "Francia vs Inglaterra (4-6) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=AuehQ5vp_Hw",
+      "thumbnail": "https://i.ytimg.com/vi/AuehQ5vp_Hw/hqdefault.jpg",
+      "videoId": "AuehQ5vp_Hw",
+      "publishedAt": "2026-07-19T01:00:04Z",
+      "confidence": 12
     },
     {
       "matchId": 102,
@@ -1347,11 +1347,11 @@
       "home": "Spain",
       "away": "Argentina",
       "source": "DAZN ES",
-      "title": "🇪🇸 Ander Herrera, con muchos amigos en Argentina, pero a muerte con España#DAZNMundial #FIFAWorldCup",
-      "url": "https://www.youtube.com/watch?v=xuuSz7A82UM",
-      "thumbnail": "https://i1.ytimg.com/vi/xuuSz7A82UM/hqdefault.jpg",
-      "videoId": "xuuSz7A82UM",
-      "publishedAt": "2026-07-19T17:26:43+00:00",
+      "title": "¡SALTARON CHISPAS ENTRE LOS JUGADORES DE ESPAÑA Y ARGENTINA! 😱🔥🔥#DAZNMundial",
+      "url": "https://www.youtube.com/watch?v=QUOybrmQ4vo",
+      "thumbnail": "https://i2.ytimg.com/vi/QUOybrmQ4vo/hqdefault.jpg",
+      "videoId": "QUOybrmQ4vo",
+      "publishedAt": "2026-07-19T20:38:59+00:00",
       "confidence": 16
     }
   ]
