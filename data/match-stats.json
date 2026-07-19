@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T19:47:18.956Z",
+  "updated": "2026-07-19T20:33:51.331Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:47:18.956Z",
+      "updatedAt": "2026-07-19T20:33:51.331Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:47:18.956Z",
+      "updatedAt": "2026-07-19T20:33:51.331Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14108,7 +14108,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:47:18.956Z",
+      "updatedAt": "2026-07-19T20:33:51.331Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -14261,7 +14261,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:47:18.956Z",
+      "updatedAt": "2026-07-19T20:33:51.331Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -14530,35 +14530,35 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T19:47:18.956Z",
+      "updatedAt": "2026-07-19T20:33:51.331Z",
       "stats": {
         "shotsOnGoal": {
-          "home": 2,
+          "home": 3,
           "away": 0
         },
         "shots": {
-          "home": 2,
+          "home": 4,
           "away": 0
         },
         "possession": {
-          "home": 62.7,
-          "away": 37.3
+          "home": 61.3,
+          "away": 38.7
         },
         "passes": {
-          "home": 271,
-          "away": 166
+          "home": 402,
+          "away": 260
         },
         "fouls": {
-          "home": 6,
-          "away": 9
+          "home": 11,
+          "away": 11
         },
         "corners": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
         "saves": {
           "home": 0,
-          "away": 2
+          "away": 3
         },
         "offsides": {
           "home": 2,
@@ -14566,7 +14566,7 @@
         },
         "yellowCards": {
           "home": 0,
-          "away": 1
+          "away": 2
         }
       },
       "goals": [],
@@ -14591,7 +14591,7 @@
           "name": "Emiliano Martínez",
           "shortName": "E. Martínez",
           "number": "23",
-          "saves": 2,
+          "saves": 3,
           "goalsAgainst": 0,
           "cleanSheet": 1,
           "savePct": 100,
