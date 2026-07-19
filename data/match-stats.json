@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T18:31:12.363Z",
+  "updated": "2026-07-19T19:47:18.956Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -13816,7 +13816,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:12.363Z",
+      "updatedAt": "2026-07-19T19:47:18.956Z",
       "stats": {
         "shotsOnGoal": {
           "home": 7,
@@ -13985,7 +13985,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:12.363Z",
+      "updatedAt": "2026-07-19T19:47:18.956Z",
       "stats": {
         "shotsOnGoal": {
           "home": 3,
@@ -14108,7 +14108,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:12.363Z",
+      "updatedAt": "2026-07-19T19:47:18.956Z",
       "stats": {
         "shotsOnGoal": {
           "home": 2,
@@ -14261,7 +14261,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-19T18:31:12.363Z",
+      "updatedAt": "2026-07-19T19:47:18.956Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -14507,6 +14507,94 @@
           "goalsAgainst": 4,
           "cleanSheet": 0,
           "savePct": 55.6,
+          "penaltySaves": 0,
+          "source": "ESPN leaders"
+        }
+      ]
+    },
+    {
+      "matchId": 104,
+      "espnEventId": "760517",
+      "date": "2026-07-19",
+      "homeTeam": "Spain",
+      "awayTeam": "Argentina",
+      "status": "Live",
+      "statusState": "in",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
+      "winner": "",
+      "loser": "",
+      "decidedBy": "",
+      "penaltyWinner": "",
+      "penaltyHomeScore": null,
+      "penaltyAwayScore": null,
+      "source": "ESPN",
+      "updatedAt": "2026-07-19T19:47:18.956Z",
+      "stats": {
+        "shotsOnGoal": {
+          "home": 2,
+          "away": 0
+        },
+        "shots": {
+          "home": 2,
+          "away": 0
+        },
+        "possession": {
+          "home": 62.7,
+          "away": 37.3
+        },
+        "passes": {
+          "home": 271,
+          "away": 166
+        },
+        "fouls": {
+          "home": 6,
+          "away": 9
+        },
+        "corners": {
+          "home": 2,
+          "away": 0
+        },
+        "saves": {
+          "home": 0,
+          "away": 2
+        },
+        "offsides": {
+          "home": 2,
+          "away": 1
+        },
+        "yellowCards": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      "goals": [],
+      "assists": [],
+      "keepers": [
+        {
+          "side": "home",
+          "team": "Spain",
+          "name": "Unai Simón",
+          "shortName": "U. Simón",
+          "number": "23",
+          "saves": 0,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
+          "penaltySaves": 0,
+          "source": "ESPN roster"
+        },
+        {
+          "side": "away",
+          "team": "Argentina",
+          "name": "Emiliano Martínez",
+          "shortName": "E. Martínez",
+          "number": "23",
+          "saves": 2,
+          "goalsAgainst": 0,
+          "cleanSheet": 1,
+          "savePct": 100,
           "penaltySaves": 0,
           "source": "ESPN leaders"
         }
