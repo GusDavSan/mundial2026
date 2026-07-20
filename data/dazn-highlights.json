@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T00:19:22.912Z",
+  "updated": "2026-07-20T04:11:14.079Z",
   "source": "DAZN ES YouTube highlights via GitHub Actions",
   "items": [
     {
@@ -1295,12 +1295,12 @@
       "home": "Argentina",
       "away": "Switzerland",
       "source": "DAZN ES",
-      "title": "Inglaterra vs Argentina (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Gm_UDRU1OGQ",
-      "thumbnail": "https://i.ytimg.com/vi/Gm_UDRU1OGQ/hqdefault.jpg",
-      "videoId": "Gm_UDRU1OGQ",
-      "publishedAt": "2026-07-15T22:59:03Z",
-      "confidence": 14
+      "title": "España vs Argentina (1-0) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=Mmc-fIgfD-U",
+      "thumbnail": "https://i.ytimg.com/vi/Mmc-fIgfD-U/hqdefault.jpg",
+      "videoId": "Mmc-fIgfD-U",
+      "publishedAt": "2026-07-20T00:00:25Z",
+      "confidence": 12
     },
     {
       "matchId": 101,
@@ -1321,12 +1321,12 @@
       "home": "England",
       "away": "Argentina",
       "source": "DAZN ES",
-      "title": "Inglaterra vs Argentina (1-2) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
-      "url": "https://www.youtube.com/watch?v=Gm_UDRU1OGQ",
-      "thumbnail": "https://i.ytimg.com/vi/Gm_UDRU1OGQ/hqdefault.jpg",
-      "videoId": "Gm_UDRU1OGQ",
-      "publishedAt": "2026-07-15T22:59:03Z",
-      "confidence": 20
+      "title": "Francia vs Inglaterra (4-6) | Resumen y goles | Highlights Copa Mundial de la FIFA 2026™",
+      "url": "https://www.youtube.com/watch?v=AuehQ5vp_Hw",
+      "thumbnail": "https://i.ytimg.com/vi/AuehQ5vp_Hw/hqdefault.jpg",
+      "videoId": "AuehQ5vp_Hw",
+      "publishedAt": "2026-07-19T01:00:04Z",
+      "confidence": 14
     },
     {
       "matchId": 103,
