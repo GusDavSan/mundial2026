@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T16:09:41.275Z",
+  "updated": "2026-07-23T17:49:00.331Z",
   "source": "ESPN match stats via GitHub Actions",
   "items": [
     {
@@ -14261,7 +14261,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-23T16:09:41.275Z",
+      "updatedAt": "2026-07-23T17:49:00.331Z",
       "stats": {
         "shotsOnGoal": {
           "home": 9,
@@ -14530,7 +14530,7 @@
       "penaltyHomeScore": null,
       "penaltyAwayScore": null,
       "source": "ESPN",
-      "updatedAt": "2026-07-23T16:09:41.275Z",
+      "updatedAt": "2026-07-23T17:49:00.331Z",
       "stats": {
         "shotsOnGoal": {
           "home": 12,
