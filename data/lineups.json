@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T21:46:11.734Z",
+  "updated": "2026-07-23T22:40:04.526Z",
   "source": "ESPN lineups via GitHub Actions",
   "items": [
     {
@@ -55167,7 +55167,7 @@
       "homeTeam": "France",
       "awayTeam": "England",
       "source": "ESPN",
-      "updatedAt": "2026-07-23T21:46:11.734Z",
+      "updatedAt": "2026-07-23T22:40:04.526Z",
       "home": {
         "team": "France",
         "espnTeam": "France",
@@ -55706,7 +55706,7 @@
       "homeTeam": "Spain",
       "awayTeam": "Argentina",
       "source": "ESPN",
-      "updatedAt": "2026-07-23T21:46:11.734Z",
+      "updatedAt": "2026-07-23T22:40:04.526Z",
       "home": {
         "team": "Spain",
         "espnTeam": "Spain",
